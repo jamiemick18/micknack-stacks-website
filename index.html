@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Micknack Stacks — Handmade Chain Jewelry</title>
+  <meta name="description" content="Micknack Stacks — draped chain ear cuffs and stacking jewelry, mirrored from our Etsy shop." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top">Micknack Stacks</a>
+      <nav>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a class="nav-etsy" href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Visit Etsy Shop</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="logo" src="assets/logo-banner.png" alt="Micknack Stacks" />
+      <p class="tagline">Draped chain ear cuffs &amp; stacking jewelry, handmade in small batches.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#shop">Shop the Collection</a>
+        <a class="btn btn-secondary" href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Shop on Etsy</a>
+      </div>
+    </section>
+
+    <div class="divider">
+      <img src="assets/divider-mountain.png" alt="" />
+    </div>
+
+    <section class="shop-section" id="shop">
+      <div class="wrap">
+        <h2 class="section-heading">The Collection</h2>
+        <p class="section-sub">Every piece here is also listed on our Etsy shop — tap any item to buy.</p>
+        <div class="sync-note-row">
+          <span class="sync-note" id="sync-note"></span>
+        </div>
+        <div class="product-grid" id="product-grid">
+          <!-- Product cards injected by js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="shop-section" style="padding-top:0;">
+      <div class="wrap" style="max-width:640px; text-align:center;">
+        <h2 class="section-heading" style="margin-bottom:18px;">Dark Alpine, Softly Told</h2>
+        <p style="color:#555; font-size:0.95rem;">
+          Micknack Stacks blends elevated feminine jewelry details with dark alpine
+          and soft gothic imagery — mountain lines, moon charms, and hand-set stones,
+          designed to be layered and stacked your own way.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <img class="emblem" src="assets/emblem-bear-moon.png" alt="" />
+      <h2>Find Us on Etsy</h2>
+      <p>New pieces and restocks post to our Etsy shop first — this site mirrors it automatically.</p>
+      <div class="foot-links">
+        <a href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Etsy Shop</a>
+        <a href="#shop">Shop This Site</a>
+        <a href="#top">Back to Top</a>
+      </div>
+      <p class="fine-print">© <span id="year"></span> Micknack Stacks. All designs handmade to order.</p>
+    </div>
+  </footer>
+
+  <script src="data/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap");
+
+:root {
+  --ink: #0a0a0a;
+  --cream: #f8eee3;
+  --cream-dim: #f0e4d5;
+  --gold: #b78436;
+  --gold-light: #d1a862;
+  --blush: #e7ccc7;
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(248, 238, 227, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.site-header .brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.site-header nav a:hover {
+  opacity: 1;
+}
+
+.nav-etsy {
+  border: 1px solid var(--ink);
+  padding: 8px 18px !important;
+  opacity: 1 !important;
+  border-radius: 999px;
+}
+
+.nav-etsy:hover {
+  background: var(--ink);
+  color: var(--cream) !important;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  text-align: center;
+  padding: 64px 24px 40px;
+}
+
+.hero img.logo {
+  max-width: 460px;
+  width: 80%;
+  margin: 0 auto 8px;
+}
+
+.hero p.tagline {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.hero .cta-row {
+  margin-top: 28px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--cream);
+  border: 1px solid var(--ink);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--gold);
+}
+
+.btn-secondary:hover {
+  background: var(--gold);
+  color: var(--cream);
+}
+
+/* ---------- Divider ---------- */
+
+.divider {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 32px;
+}
+
+.divider img {
+  width: 320px;
+  max-width: 70%;
+  opacity: 0.9;
+}
+
+/* ---------- Shop grid ---------- */
+
+.shop-section {
+  padding: 16px 0 80px;
+}
+
+.shop-section .section-heading {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 2.2rem;
+}
+
+.shop-section .section-sub {
+  text-align: center;
+  color: #5c5c5c;
+  font-size: 0.95rem;
+  margin-bottom: 48px;
+}
+
+.sync-note {
+  text-align: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  background: var(--blush);
+  border-radius: 999px;
+  padding: 8px 18px;
+  display: inline-block;
+  margin: 0 auto 40px;
+}
+
+.sync-note-row {
+  display: flex;
+  justify-content: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 36px 28px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid rgba(10, 10, 10, 0.07);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px -18px rgba(10, 10, 10, 0.35);
+}
+
+.product-card .thumb {
+  aspect-ratio: 1 / 1;
+  background: var(--cream-dim);
+  overflow: hidden;
+}
+
+.product-card .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card .card-body {
+  padding: 20px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
+
+.product-card .price {
+  font-family: "Jost", sans-serif;
+  color: var(--gold);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.product-card .desc {
+  font-size: 0.88rem;
+  color: #555;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.product-card .btn {
+  align-self: flex-start;
+  padding: 10px 22px;
+  font-size: 0.75rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 56px 0 32px;
+  text-align: center;
+}
+
+.site-footer img.emblem {
+  width: 120px;
+  margin: 0 auto 20px;
+  filter: brightness(0) invert(1) opacity(0.92);
+}
+
+.site-footer h2 {
+  color: var(--cream);
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.site-footer p {
+  color: rgba(250, 246, 239, 0.65);
+  font-size: 0.85rem;
+  max-width: 420px;
+  margin: 0 auto 26px;
+}
+
+.site-footer .foot-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.site-footer .foot-links a {
+  text-decoration: none;
+  color: var(--gold-light);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.site-footer .foot-links a:hover {
+  color: var(--cream);
+}
+
+.site-footer .fine-print {
+  color: rgba(250, 246, 239, 0.35);
+  font-size: 0.72rem;
+}
+
+@media (max-width: 560px) {
+  .hero {
+    padding: 44px 20px 28px;
+  }
+  .site-header nav {
+    gap: 14px;
+  }
+  .site-header nav a {
+    font-size: 0.72rem;
+  }
+}

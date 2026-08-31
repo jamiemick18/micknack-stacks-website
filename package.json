@@ -1,0 +1,14 @@
+{
+  "name": "micknack-stacks-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static storefront for Micknack Stacks, synced from the Etsy Open API.",
+  "scripts": {
+    "sync": "node scripts/sync-etsy.js",
+    "serve": "node scripts/serve.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

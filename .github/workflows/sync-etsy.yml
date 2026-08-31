@@ -1,0 +1,39 @@
+name: Sync Etsy listings
+
+on:
+  schedule:
+    # Runs once a day at 13:00 UTC (~9am Eastern / 6am Pacific).
+    # Change the cron expression to adjust — https://crontab.guru helps.
+    - cron: "0 13 * * *"
+  workflow_dispatch: {} # lets you click "Run workflow" in the Actions tab anytime
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch latest Etsy listings
+        env:
+          ETSY_API_KEY: ${{ secrets.ETSY_API_KEY }}
+          ETSY_SHOP_NAME: ${{ vars.ETSY_SHOP_NAME }}
+        run: node scripts/sync-etsy.js
+
+      - name: Commit and push if listings changed
+        run: |
+          git config user.name "micknack-stacks-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet -- data/products.js; then
+            echo "No listing changes — nothing to commit."
+          else
+            git add data/products.js
+            git commit -m "Sync Etsy listings"
+            git push
+          fi
