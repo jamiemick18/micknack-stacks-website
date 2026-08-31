@@ -29,7 +29,7 @@ function renderProducts(data) {
       day: "numeric",
     })}`;
   } else {
-    syncNote.textContent = "Showing sample layout — run the Etsy sync to load your real listings";
+    syncNote.textContent = "Showing sample layout. Run the Etsy sync to load your real listings";
   }
 
   if (listings.length === 0) {
