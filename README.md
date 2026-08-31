@@ -36,14 +36,17 @@ Then, get a free Etsy developer API key — about 5 minutes:
 1. Go to **https://www.etsy.com/developers/register** and sign in with your
    Etsy account (the same one that owns the MicknackStacks shop).
 2. Create a new app (any name/description is fine, e.g. "Micknack Stacks Website").
-3. Etsy gives you a **Keystring** — that's your API key.
+3. Etsy gives you a **Keystring** and a **Shared Secret** on the app's page.
+   Your API key is both of these joined with a colon:
+   `yourkeystring:yoursharedsecret` — the Keystring alone will fail with a
+   403 "Invalid API key" error.
 4. In this `Website` folder, copy `.env.example` to `.env`:
    ```bash
    cp .env.example .env
    ```
 5. Open `.env` and paste your key:
    ```
-   ETSY_API_KEY=your-keystring-here
+   ETSY_API_KEY=yourkeystring:yoursharedsecret
    ETSY_SHOP_NAME=MicknackStacks
    ```
 6. Run the sync script (no extra installs needed, it only uses Node's
