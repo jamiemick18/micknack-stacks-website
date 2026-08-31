@@ -80,7 +80,7 @@ async function fetchAllActiveListings(shopId) {
   let offset = 0;
   while (true) {
     const page = await etsyGet(
-      `/shops/${shopId}/listings/active?limit=${limit}&offset=${offset}&includes=Images`
+      `/shops/${shopId}/listings/active?limit=${limit}&offset=${offset}`
     );
     listings.push(...page.results);
     if (page.results.length < limit) break;
@@ -89,11 +89,22 @@ async function fetchAllActiveListings(shopId) {
   return listings;
 }
 
-function normalizeListing(listing) {
-  const images = (listing.images || [])
-    .sort((a, b) => a.rank - b.rank)
-    .map((img) => img.url_fullxfull || img.url_570xN);
+// The bulk active-listings endpoint ignores `includes=Images`, so photos have
+// to be fetched per listing.
+async function fetchListingImages(listingId) {
+  try {
+    const data = await etsyGet(`/listings/${listingId}/images`);
+    return (data.results || [])
+      .sort((a, b) => a.rank - b.rank)
+      .map((img) => img.url_fullxfull || img.url_570xN)
+      .filter(Boolean);
+  } catch (err) {
+    console.warn(`Could not fetch images for listing ${listingId}: ${err.message}`);
+    return [];
+  }
+}
 
+function normalizeListing(listing, images) {
   return {
     listing_id: String(listing.listing_id),
     title: listing.title,
@@ -114,11 +125,18 @@ async function main() {
   const rawListings = await fetchAllActiveListings(shopId);
   console.log(`Found ${rawListings.length} active listing(s).`);
 
+  console.log("Fetching listing images...");
+  const listings = [];
+  for (const listing of rawListings) {
+    const images = await fetchListingImages(listing.listing_id);
+    listings.push(normalizeListing(listing, images));
+  }
+
   const output = {
     shop_name: SHOP_NAME,
     shop_url: `https://www.etsy.com/shop/${SHOP_NAME}`,
     synced_at: new Date().toISOString(),
-    listings: rawListings.map(normalizeListing),
+    listings,
   };
 
   const outPath = join(ROOT, "data", "products.js");
