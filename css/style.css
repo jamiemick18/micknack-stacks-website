@@ -205,22 +205,6 @@ img {
   opacity: 0.92;
 }
 
-.accent-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 22px;
-  margin: 0 auto 20px;
-}
-
-.accent-row img {
-  width: 64px;
-  opacity: 0.9;
-}
-
-.accent-row img:nth-child(2) {
-  width: 78px;
-}
 
 /* ---------- Shop grid ---------- */
 
