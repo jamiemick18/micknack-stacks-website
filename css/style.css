@@ -117,8 +117,8 @@ img {
 }
 
 .hero img.logo {
-  max-width: 460px;
-  width: 80%;
+  max-width: 900px;
+  width: 92%;
   margin: 0 auto 8px;
 }
 
@@ -205,37 +205,21 @@ img {
   opacity: 0.92;
 }
 
-.about-section {
-  position: relative;
-  overflow: hidden;
+.accent-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 22px;
+  margin: 0 auto 20px;
 }
 
-.about-flank {
-  position: absolute;
-  bottom: -12px;
-  width: 190px;
-  opacity: 0.85;
-  z-index: 0;
-  pointer-events: none;
+.accent-row img {
+  width: 64px;
+  opacity: 0.9;
 }
 
-.about-flank-left {
-  left: -30px;
-}
-
-.about-flank-right {
-  right: -30px;
-}
-
-.about-section .wrap {
-  position: relative;
-  z-index: 1;
-}
-
-@media (max-width: 860px) {
-  .about-flank {
-    display: none;
-  }
+.accent-row img:nth-child(2) {
+  width: 78px;
 }
 
 /* ---------- Shop grid ---------- */
