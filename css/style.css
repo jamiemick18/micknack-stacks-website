@@ -2,8 +2,8 @@
 
 :root {
   --ink: #0a0a0a;
-  --cream: #f8eee3;
-  --cream-dim: #f0e4d5;
+  --cream: #f0e2d4;
+  --cream-dim: #e9d8c7;
   --gold: #b78436;
   --gold-light: #d1a862;
   --blush: #e7ccc7;
@@ -56,7 +56,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(248, 238, 227, 0.92);
+  background: rgba(240, 226, 212, 0.92);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(10, 10, 10, 0.08);
 }
@@ -117,8 +117,8 @@ img {
 }
 
 .hero img.logo {
-  max-width: 460px;
-  width: 80%;
+  max-width: 1000px;
+  width: 94%;
   margin: 0 auto 8px;
 }
 
