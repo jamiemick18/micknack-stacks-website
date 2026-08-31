@@ -199,6 +199,12 @@ img {
   fill: var(--gold);
 }
 
+.about-accent {
+  width: 92px;
+  margin: 0 auto 20px;
+  opacity: 0.92;
+}
+
 /* ---------- Shop grid ---------- */
 
 .shop-section {
