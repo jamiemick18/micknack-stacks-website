@@ -176,14 +176,27 @@ img {
 
 .divider {
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 18px;
   padding: 8px 0 32px;
 }
 
-.divider img {
-  width: 320px;
-  max-width: 70%;
-  opacity: 0.9;
+.divider-line {
+  width: 96px;
+  max-width: 22vw;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.divider-mark {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.divider-mark path {
+  fill: var(--gold);
 }
 
 /* ---------- Shop grid ---------- */
