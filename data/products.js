@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-08-31T22:35:02.451Z",
+  "synced_at": "2026-08-31T22:40:46.060Z",
   "listings": [
     {
       "listing_id": "4566277207",
@@ -12,7 +12,8 @@ window.MICKNACK_PRODUCTS = {
       "url": "https://www.etsy.com/listing/4566277207/18k-gold-plated-earring-connecting-chain",
       "description": "The little detail that makes your ear stack even more fun. ✨ This 50mm gold earring connecting chain is designed to connect two earrings, piercings, or pieces in your existing stack for an easy layered look. The petite 4mm end loops are intentionally sized to easily hook onto the front or back of threadless flatback earrings, giving you more ways to connect and style your ear stack.\n\nFinished in 18K gold plating, the delicate chain has a 4mm jump ring on each end, making it easy to mix, match, connect, and switch up your jewelry whenever you want.\n\nDETAILS\n• 50mm connecting chain\n• 4mm jump ring on each end\n• 18K gold plated\n• Lightweight, delicate chain\n• Jewelry/earrings shown with chain are not included\n\nWear it between two flatbacks, connect a stud to a hoop, or use it to add a little movement to a curated ear. There’s no single “right” way to stack it, that’s the whole point.\n\nMIX IT. CONNECT IT. MAKE IT YOURS. ♡\n\nEach Micknack Stacks piece is made for building an ear stack that feels completely your own.",
       "images": [
-        "assets/products/placeholder.svg"
+        "https://i.etsystatic.com/67609393/r/il/cbb91b/8506632817/il_fullxfull.8506632817_j6xi.jpg",
+        "https://i.etsystatic.com/67609393/r/il/4b37f0/8506633955/il_fullxfull.8506633955_3p3y.jpg"
       ],
       "tags": [
         "earring chain",
@@ -38,7 +39,8 @@ window.MICKNACK_PRODUCTS = {
       "url": "https://www.etsy.com/listing/4566265762/double-earring-connector-chain-18k-gold",
       "description": "Add a little movement to your stack ✨\n\nOur Double Connecting Chain is an easy way to add dimension to your ear stack without adding another piercing. Designed with two delicate draping chains, it connects between two earrings to create a layered look that can be styled across your lobe, helix, or other piercings.\n\nThe two different chain lengths create a soft double-drape effect while the 4mm jump rings make it easy to slip the connector onto your existing earrings.\n\nDETAILS\n\n18K gold plated\nNon-tarnish finish\nDouble connecting chain\nShort chain: 40mm\nLong chain: 55mm\n2mm chain width\n4mm jump rings on each end\nChain measurements exclude jump rings\nDesigned to connect between two earrings\nEarrings shown in styling photos are not included\n\nHOW TO WEAR\n\nSimply slide a jump ring onto the post or hoop of each earring before securing your jewelry. Try it between two lobe piercings, from lobe to cartilage, or mix it into your existing stack for a look that&#39;s completely your own.\n\nBecause every ear and piercing placement is different, the amount of drape will vary from person to person. Please reference the measurements before ordering.\n\nMICKNACK STACKS ♡\n\nJewelry made for mixing, connecting, and creating a stack that feels like you.",
       "images": [
-        "assets/products/placeholder.svg"
+        "https://i.etsystatic.com/67609393/r/il/b06e56/8458524386/il_fullxfull.8458524386_jjwp.jpg",
+        "https://i.etsystatic.com/67609393/r/il/f6d571/8458524598/il_fullxfull.8458524598_6c87.jpg"
       ],
       "tags": [
         "earring connector",
@@ -64,7 +66,8 @@ window.MICKNACK_PRODUCTS = {
       "url": "https://www.etsy.com/listing/4566134771/gold-earring-connecting-chain-40mm-ear",
       "description": "The little detail that makes your ear stack even more fun. ✨ This 40mm gold earring connecting chain is designed to connect two earrings, piercings, or pieces in your existing stack for an easy layered look. The petite 4mm end loops are intentionally sized to easily hook onto the front or back of threadless flatback earrings, giving you more ways to connect and style your ear stack.\n\nFinished in 18K gold plating, the delicate chain has a 4mm jump ring on each end, making it easy to mix, match, connect, and switch up your jewelry whenever you want.\n\nDETAILS\n• 40mm connecting chain\n• Approx. 1.57 inches long\n• 4mm jump ring on each end\n• 18K gold plated\n• Lightweight, delicate chain\n• Jewelry/earrings shown with chain are not included\n\nWear it between two flatbacks, connect a stud to a hoop, or use it to add a little movement to a curated ear. There’s no single “right” way to stack it, that’s the whole point.\n\nMIX IT. CONNECT IT. MAKE IT YOURS. ♡\n\nEach Micknack Stacks piece is made for building an ear stack that feels completely your own.",
       "images": [
-        "assets/products/placeholder.svg"
+        "https://i.etsystatic.com/67609393/r/il/b262a8/8505702539/il_fullxfull.8505702539_ozqv.jpg",
+        "https://i.etsystatic.com/67609393/r/il/20927a/8457759610/il_fullxfull.8457759610_7twv.jpg"
       ],
       "tags": [
         "earring chain",
