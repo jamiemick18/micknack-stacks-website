@@ -35,5 +35,8 @@ jobs:
           else
             git add data/products.js
             git commit -m "Sync Etsy listings"
+            # Rebase onto anything pushed while this run was in flight, so a
+            # concurrent commit doesn't fail the sync.
+            git pull --rebase origin main
             git push
           fi
