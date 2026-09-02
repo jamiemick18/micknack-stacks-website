@@ -2,8 +2,34 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-01T13:12:30.695Z",
+  "synced_at": "2026-09-02T13:12:52.063Z",
   "listings": [
+    {
+      "listing_id": "4566919003",
+      "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4566919003/triple-drip-earring-connector-chain-18k",
+      "description": "This dainty gold chain features a unique flattened lip-link texture with a soft drape and three cascading chain dangles on one end for a little extra detail. The 4mm hoops make it easy to connect between earrings, hoops, or compatible flatback jewelry to create a stack that feels completely your own.\n\nDETAILS • 40mm main connector chain\n• Approx. 2mm wide lip-link chain\n• 4mm connecting hoop on each end\n• Three cascading dangle chains on one end\n• 18K gold plated\n• Non-tarnish + water resistant\n• Lightweight for comfortable stacking\n\nEach chain is sold individually so you can style it however you want — connect two piercings, add it to a hoop, layer it with other chains, or use it as the statement piece in your current stack.\nBecause ear anatomy and piercing placement vary, the way the chain drapes will be unique to you.\n\n✨ MIX. CONNECT. STACK.\nBuild an ear stack that feels like you.\nPlease note: “Lip Link” refers to the style/shape of the chain links — this piece is designed as an earring connector chain.\n\nMicknack Stacks\nDesigned for creative ears + unapologetically personal stacks.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ]
+    },
     {
       "listing_id": "4566277207",
       "title": "18K Gold Plated Earring Connecting Chain, 50mm Ear Stack Connector (4mm Jump Rings)",
