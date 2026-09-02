@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+
+# Publishes the site to GitHub Pages. Runs on every push to main, and is
+# also called directly by sync-etsy.yml after it commits new listings.
+#
+# Why sync-etsy.yml calls this instead of relying on the push trigger:
+# pushes made by a workflow using GITHUB_TOKEN do NOT trigger other
+# workflows, so the sync bot's commits would never deploy on their own.
+
+on:
+  push:
+    branches: [main]
+  workflow_call: {}
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it, so a sync and a
+# manual push can't clobber each other mid-publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

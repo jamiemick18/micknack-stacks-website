@@ -9,6 +9,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   sync:
@@ -40,3 +42,14 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+  # The sync job's push uses GITHUB_TOKEN, which by design does not trigger
+  # other workflows — so publish explicitly here instead of hoping the push
+  # trigger fires.
+  publish:
+    needs: sync
+    uses: ./.github/workflows/deploy-pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
