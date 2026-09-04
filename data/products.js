@@ -2,8 +2,62 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-03T13:12:52.138Z",
+  "synced_at": "2026-09-04T13:12:01.569Z",
   "listings": [
+    {
+      "listing_id": "4568279074",
+      "title": "Double Dewdrop, 30mm earring connector with 2 CZ stones, minimal styled chain 2mm",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4568279074/double-dewdrop-30mm-earring-connector",
+      "description": "Double Dewdrop Earring Connector Chain \n\nA little extra drip, without losing the dainty feel. The Double Dewdrop Chain features a delicate 2mm gold chain finished with two sparkling 4mm CZ drops that move freely and catch the light.\nEach CZ is single-drilled, meaning there’s no bezel or prong setting around the stone, keeping just a clean, floating gemstone look.\n\nDetails\n2mm dainty connector chain\nTwo 4mm clear cubic zirconia drops\nSingle-drilled CZ stones\n4mm jump ring on each end\n\nLightweight, delicate design\nDesigned to connect between compatible hoops, flatbacks, or other ear jewelry\n\nSold as one connector chain.\nThe double drop adds just enough sparkle while keeping your stack soft, minimal, and easy to layer.\n\nPerfect for adding movement to a curated ear without overpowering the rest of your stack. ✨\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacking.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/0ef10e/8520941987/il_fullxfull.8520941987_qdsu.jpg",
+        "https://i.etsystatic.com/67609393/r/il/a4a844/8520941985/il_fullxfull.8520941985_u6c4.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ]
+    },
+    {
+      "listing_id": "4568140253",
+      "title": "Dewdrop Chain, 30mm dainty box chain dangle, 4mm Gemstone",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4568140253/dewdrop-chain-30mm-dainty-box-chain",
+      "description": "Dewdrop Chain ✨\n\nTiny details, delicate... the Dewdrop Chain was inspired by that little glimmer of morning dew catching the light.\nThis dainty earring connector features a delicate 30mm box chain finished with a sparkling 4mm gemstone drop. The subtle dangle adds just the right amount of movement and shimmer without overwhelming your stack.\nDesigned to mix, match, and layer with your favorite flatbacks and hoops for a customized ear stack that feels completely your own.\n\nDetails\n30mm chain length\n2mm dainty box chain\n4mm gemstone drop\n\nLightweight, delicate design\nConnector rings for easy styling\nSold as one chain connector\nEarrings shown with styling are not included unless otherwise stated\nPerfect for connecting two piercings, adding a delicate dangle to a hoop, or bringing a little extra sparkle to your everyday stack.\n\nWith love from Colorado,\nMicknack Stacks 🤍",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/09bda9/8472248730/il_fullxfull.8472248730_9joq.jpg",
+        "https://i.etsystatic.com/67609393/r/il/410e70/8472787092/il_fullxfull.8472787092_gfwm.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ]
+    },
     {
       "listing_id": "4566919003",
       "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
@@ -92,8 +146,7 @@ window.MICKNACK_PRODUCTS = {
       "url": "https://www.etsy.com/listing/4566134771/gold-earring-connecting-chain-40mm-ear",
       "description": "The little detail that makes your ear stack even more fun. ✨ This 40mm gold earring connecting chain is designed to connect two earrings, piercings, or pieces in your existing stack for an easy layered look. The petite 4mm end loops are intentionally sized to easily hook onto the front or back of threadless flatback earrings, giving you more ways to connect and style your ear stack.\n\nFinished in 18K gold plating, the delicate chain has a 4mm jump ring on each end, making it easy to mix, match, connect, and switch up your jewelry whenever you want.\n\nDETAILS\n• 40mm connecting chain\n• Approx. 1.57 inches long\n• 4mm jump ring on each end\n• 18K gold plated\n• Lightweight, delicate chain\n• Jewelry/earrings shown with chain are not included\n\nWear it between two flatbacks, connect a stud to a hoop, or use it to add a little movement to a curated ear. There’s no single “right” way to stack it, that’s the whole point.\n\nMIX IT. CONNECT IT. MAKE IT YOURS. ♡\n\nEach Micknack Stacks piece is made for building an ear stack that feels completely your own.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/b262a8/8505702539/il_fullxfull.8505702539_ozqv.jpg",
-        "https://i.etsystatic.com/67609393/r/il/20927a/8457759610/il_fullxfull.8457759610_7twv.jpg"
+        "assets/products/placeholder.svg"
       ],
       "tags": [
         "earring chain",
