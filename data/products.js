@@ -2,8 +2,65 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-08T13:14:25.379Z",
+  "synced_at": "2026-09-09T13:13:21.552Z",
   "listings": [
+    {
+      "listing_id": "4571571883",
+      "title": "Sprinkle Chain | 3×5mm Pear CZ Ear Connector Chain | 2mm Dainty Gold Earring Chain | Helix Conch Lobe Ear Stack Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4571571883/sprinkle-chain-o-35mm-pear-cz-ear",
+      "description": "Light, delicate, and just a little playful..\n\nThis dainty ear connector features a 2mm chain accented with three 3×5mm pear shaped CZ gemstones, giving your ear stack a soft little cascade of sparkle without feeling heavy or overdone.\n\nDetails\n2mm dainty chain\n3 pear-shaped CZ gemstones\nGemstone size: 3×5mm\nClear sparkling CZ\n\nLightweight, delicate design\nConnector loops at each end\nDesigned to pair with compatible studs, hoops, helix, conch, or lobe jewelry\n\nStyle it between two piercings, connect it to a hoop, or layer it into a curated stack for a little movement and sparkle.\n\nPlease note: Listing is for the Sprinkle Chain only. Earrings shown in styling photos are not included\n\n**Non-returnable due to sanitary concern",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/b6fe06/8496164574/il_fullxfull.8496164574_o4lp.jpg",
+        "https://i.etsystatic.com/67609393/r/il/e20641/8544053133/il_fullxfull.8544053133_hlvc.jpg",
+        "https://i.etsystatic.com/67609393/r/il/7cb97f/8496165540/il_fullxfull.8496165540_coun.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ]
+    },
+    {
+      "listing_id": "4571494427",
+      "title": "Drizzle Chain Ear Connector | 5A CZ Raindrop Earring Chain | Dainty Gold Ear Chain | Ear Stack Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4571494427/drizzle-chain-ear-connector-5a-cz",
+      "description": "Drizzle Chain \nInspired by that fresh rain feeling after a light shower moves through the pine trees, the Drizzle Chain is all about soft sparkle, delicate movement, and a little bit of mountain air.\n\nFive 3 × 5 mm raindrop-shaped 5A CZ stones shimmer along a dainty 2 mm chain, catching the light like tiny drops of rain clinging to pine needles after a storm.\nFinished with petite 3 mm connecting loops on each end, Drizzle is intentionally lightweight and delicate, designed to add movement to your ear stack without looking bulky.\n\nDetails\nFive 3 × 5 mm raindrop-shaped 5A CZ stones\nDainty 2 mm chain, 30mm in length\nPetite 3 mm connecting loops on each end\nFive individual crystal drops\nLightweight, delicate design\n\nMade to connect between compatible earrings, hoops, or piercing jewelry\nBeautiful for conch, helix, cartilage, and other curated ear-stack combinations.\n\nThe stones move freely with the chain, creating a soft little shimmer with every turn like fresh rain sparkling on the pines.\n\nStyling idea: Drape it between two piercings for a subtle cascading look, or use it to add a little movement to an otherwise minimal stack.\n\nPlease note: This listing is for one Drizzle Chain. Earrings shown in styled photos are not included.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/51e709/8495611182/il_fullxfull.8495611182_5rxg.jpg",
+        "https://i.etsystatic.com/67609393/r/il/fe62ea/8543501357/il_fullxfull.8543501357_9jj1.jpg",
+        "https://i.etsystatic.com/67609393/r/il/46e35b/8495611180/il_fullxfull.8495611180_qab4.jpg",
+        "https://i.etsystatic.com/67609393/r/il/42d529/8495611174/il_fullxfull.8495611174_3smz.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ]
+    },
     {
       "listing_id": "4568279074",
       "title": "Double Dewdrop, 30mm earring connector with 2 CZ stones, minimal styled chain 2mm",
@@ -92,7 +149,7 @@ window.MICKNACK_PRODUCTS = {
       "url": "https://www.etsy.com/listing/4566277207/18k-gold-plated-earring-connecting-chain",
       "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\nDetails:\nChain length: 33mm\nChain width: 2mm\nEnd jump hoops: 3mm\nStones: 3mm pear-shaped CZ\nTwo dangling gemstone drops\nLightweight, dainty design\nMade for mixing and styling with flatbacks and hoops\nEarrings shown separately unless otherwise noted\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/f5e586/8477015756/il_fullxfull.8477015756_phwu.jpg"
+        "assets/products/placeholder.svg"
       ],
       "tags": [
         "earring chain",
@@ -118,8 +175,7 @@ window.MICKNACK_PRODUCTS = {
       "url": "https://www.etsy.com/listing/4566265762/double-earring-connector-chain-18k-gold",
       "description": "Add a little movement to your stack ✨\n\nOur Double Connecting Chain is an easy way to add dimension to your ear stack without adding another piercing. Designed with two delicate draping chains, it connects between two earrings to create a layered look that can be styled across your lobe, helix, or other piercings.\n\nThe two different chain lengths create a soft double-drape effect while the 4mm jump rings make it easy to slip the connector onto your existing earrings.\n\nDETAILS\n\n18K gold plated\nNon-tarnish finish\nDouble connecting chain\nShort chain: 40mm\nLong chain: 55mm\n2mm chain width\n4mm jump rings on each end\nChain measurements exclude jump rings\nDesigned to connect between two earrings\nEarrings shown in styling photos are not included\n\nHOW TO WEAR\n\nSimply slide a jump ring onto the post or hoop of each earring before securing your jewelry. Try it between two lobe piercings, from lobe to cartilage, or mix it into your existing stack for a look that&#39;s completely your own.\n\nBecause every ear and piercing placement is different, the amount of drape will vary from person to person. Please reference the measurements before ordering.\n\nMICKNACK STACKS ♡\n\nJewelry made for mixing, connecting, and creating a stack that feels like you.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/b06e56/8458524386/il_fullxfull.8458524386_jjwp.jpg",
-        "https://i.etsystatic.com/67609393/r/il/f6d571/8458524598/il_fullxfull.8458524598_6c87.jpg"
+        "assets/products/placeholder.svg"
       ],
       "tags": [
         "earring connector",
@@ -145,8 +201,7 @@ window.MICKNACK_PRODUCTS = {
       "url": "https://www.etsy.com/listing/4566134771/gold-earring-connecting-chain-40mm-ear",
       "description": "The little detail that makes your ear stack even more fun. ✨ This 40mm or 50mm gold earring connecting chain is designed to connect two earrings, piercings, or pieces in your existing stack for an easy layered look. The petite 4mm end loops are intentionally sized to easily hook onto the front or back of threadless flatback earrings, giving you more ways to connect and style your ear stack.\n\nFinished in 18K gold plating, the delicate chain has a 4mm jump ring on each end, making it easy to mix, match, connect, and switch up your jewelry whenever you want.\n\nDETAILS\n• 40mm connecting chain\n• Approx. 1.57 inches long\n• 4mm jump ring on each end\n• 18K gold plated\n• Lightweight, delicate chain\n• Jewelry/earrings shown with chain are not included\n\nWear it between two flatbacks, connect a stud to a hoop, or use it to add a little movement to a curated ear. There’s no single “right” way to stack it, that’s the whole point.\n\nMIX IT. CONNECT IT. MAKE IT YOURS. ♡\n\nEach Micknack Stacks piece is made for building an ear stack that feels completely your own.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/3da003/8476997676/il_fullxfull.8476997676_3qz0.jpg",
-        "https://i.etsystatic.com/67609393/r/il/20927a/8457759610/il_fullxfull.8457759610_7twv.jpg"
+        "assets/products/placeholder.svg"
       ],
       "tags": [
         "earring chain",
