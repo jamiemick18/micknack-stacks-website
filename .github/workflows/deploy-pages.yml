@@ -31,7 +31,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # Check out the current tip of main, not github.sha. When sync-etsy.yml
+      # calls this workflow, github.sha is the commit the sync run STARTED on,
+      # before it pushed the freshly synced listings, so deploying it would
+      # publish stale data (always one sync behind).
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/configure-pages@v5
 
