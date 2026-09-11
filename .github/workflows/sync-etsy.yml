@@ -12,11 +12,21 @@ permissions:
   pages: write
   id-token: write
 
+# Queue overlapping syncs (e.g. the daily schedule and a manual run) instead of
+# letting them race to commit data/products.js on top of each other.
+concurrency:
+  group: sync-etsy
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      # Start from the current tip of main, not the commit the run was created
+      # on, so the sync always uses the latest script and the latest listings.
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
@@ -39,7 +49,9 @@ jobs:
             git commit -m "Sync Etsy listings"
             # Rebase onto anything pushed while this run was in flight, so a
             # concurrent commit doesn't fail the sync.
-            git pull --rebase origin main
+            # products.js is fully regenerated from Etsy on every run, so if it
+            # conflicts with a newer commit, this run's fresh copy wins.
+            git pull --rebase -X theirs origin main
             git push
           fi
 
