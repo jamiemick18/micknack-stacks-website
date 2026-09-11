@@ -2,8 +2,34 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-11T23:21:39.650Z",
+  "synced_at": "2026-09-11T23:34:33.009Z",
   "listings": [
+    {
+      "listing_id": "4573623947",
+      "title": "Honey Bear Threadless Flatback Earring | Gold Bear Cartilage Stud | Titanium Labret Post | Dainty Cute Ear Jewelry",
+      "price": "15.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4573623947/honey-bear-threadless-flatback-earring",
+      "description": "Honey Bear 🍯🐻\n\nSweet, tiny, and full of charm.\n\nHoney Bear features a petite gold bear outline with a soft pink sparkling center stone for the cutest little pop of color. It’s playful, dainty, and easy to mix into a curated ear stack without feeling too busy.\n\nThis one has just enough personality to stand out while still keeping that soft, minimal look.\n\nWhy you’ll love it:\nPetite gold bear design\nSoft pink sparkling center stone\nCute without feeling overly juvenile\nDainty and lightweight look\nEasy to mix into curated ear stacks\nPerfect for everyday wear\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the cute, detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nPink sparkling center stone\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nSweet little bear. Tiny pink sparkle. Maximum charm. 🍯🐻\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/d66115/8559014997/il_fullxfull.8559014997_qk6j.jpg"
+      ],
+      "tags": [
+        "threadless earring",
+        "push pin earring",
+        "titanium labret",
+        "flatback earring",
+        "cartilage earring",
+        "dainty gold earring",
+        "cute ear stack",
+        "curated ear",
+        "minimalist stud",
+        "woodland jewelry",
+        "Bear Earring",
+        "Bear Flatback",
+        "Dainty Bear"
+      ]
+    },
     {
       "listing_id": "4573621679",
       "title": "Itsy Bitsy Crawler Threadless Flatback Earring | Gold Spider Cartilage Stud | Titanium Labret Post | Gothic Ear Jewelry",
@@ -84,13 +110,13 @@ window.MICKNACK_PRODUCTS = {
     },
     {
       "listing_id": "4573613361",
-      "title": "Pinkie Bow Threadless Flatback Earring | Pink CZ Bow Stud | Titanium Labret Post | Dainty Gold Cartilage Jewelry",
+      "title": "Cherry Crush Threadless Flatback Earring | Pink & Clear Heart CZ Stud | Gold Bow Cartilage Earring | Titanium Labret Post",
       "price": "15.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573613361/pinkie-bow-threadless-flatback-earring",
-      "description": "A bow with a pop of strawberry sparkle.🎀💗\n\nPinkie Bow features a petite gold bow accented with bright pink CZ stones for a sweet, polished look that adds just enough color to your ear stack.\n\nDainty, feminine, and easy to style, this piece is perfect for anyone who wants a playful little detail without overwhelming the rest of their stack.\n\nWhy you’ll love it:\nPetite gold bow design\nBright pink CZ accents\nDainty and feminine\nAdds a soft pop of color\nEasy to mix into curated ear stacks\nPerfect for everyday wear\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the cute, detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nPink CZ stones\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nTiny bow. Pink sparkle. Maximum cute. 🎀💗\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "description": "Cherry Crush 🍒\n\nCherry Crush features two heart-shaped CZ stones styled like a tiny pair of cherries, with one sparkling clear CZ and one pink CZ for a fun mismatched pop of color. Finished with a petite gold bow detail, it gives your ear stack a cute romantic touch without feeling overdone.\n\nIt’s dainty, feminine, and perfect for anyone who likes their jewelry to be a little sweet treat.\n\nWhy you’ll love it:\nTwo heart-shaped CZ “cherries”\nOne clear CZ and one pink CZ\nPetite gold bow detail\nDainty, playful design\nAdds a soft pop of color\nEasy to mix into curated ear stacks\nPerfect for everyday wear\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the cute, detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nOne pink heart-shaped CZ\nOne clear heart-shaped CZ\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nTwo little hearts. One serious crush. 🍒💗\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/fda42a/8558940195/il_fullxfull.8558940195_tfo7.jpg"
+        "https://i.etsystatic.com/67609393/r/il/0dd077/8559046031/il_fullxfull.8559046031_qz6r.jpg"
       ],
       "tags": [
         "gold bow earring",
@@ -103,9 +129,9 @@ window.MICKNACK_PRODUCTS = {
         "helix earring",
         "tragus earring",
         "dainty gold earring",
-        "cute ear stack",
-        "curated ear",
-        "gold cartilage"
+        "gold cartilage",
+        "cherry earring",
+        "cherry flatback"
       ]
     },
     {
