@@ -57,13 +57,36 @@ if (!API_KEY) {
 const BASE = "https://openapi.etsy.com/v3/application";
 const headers = { "x-api-key": API_KEY };
 
+// Etsy caps this app at 5 requests/second. Space calls out and retry throttled
+// or transient failures; otherwise the burst of per-listing image requests gets
+// rejected and those listings silently lose their photos.
+const MIN_INTERVAL_MS = 300;
+const MAX_ATTEMPTS = 4;
+let lastRequestAt = 0;
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 async function etsyGet(path) {
-  const res = await fetch(`${BASE}${path}`, { headers });
-  if (!res.ok) {
+  for (let attempt = 1; ; attempt++) {
+    const wait = lastRequestAt + MIN_INTERVAL_MS - Date.now();
+    if (wait > 0) await sleep(wait);
+    lastRequestAt = Date.now();
+
+    const res = await fetch(`${BASE}${path}`, { headers });
+    if (res.ok) return res.json();
+
     const body = await res.text();
-    throw new Error(`Etsy API ${res.status} on ${path}: ${body}`);
+    const retryable = res.status === 429 || res.status >= 500;
+    if (!retryable || attempt === MAX_ATTEMPTS) {
+      throw new Error(`Etsy API ${res.status} on ${path}: ${body}`);
+    }
+    const retryAfter = Number(res.headers.get("retry-after"));
+    const backoff = retryAfter > 0 ? retryAfter * 1000 : 1000 * 2 ** (attempt - 1);
+    console.warn(
+      `Etsy API ${res.status} on ${path}, retrying in ${backoff}ms (attempt ${attempt}/${MAX_ATTEMPTS})`
+    );
+    await sleep(backoff);
   }
-  return res.json();
 }
 
 async function findShopId(shopName) {
@@ -90,7 +113,8 @@ async function fetchAllActiveListings(shopId) {
 }
 
 // The bulk active-listings endpoint ignores `includes=Images`, so photos have
-// to be fetched per listing.
+// to be fetched per listing. Returns null (not []) when the request fails, so
+// the caller can tell "has no photos" apart from "couldn't fetch photos".
 async function fetchListingImages(listingId) {
   try {
     const data = await etsyGet(`/listings/${listingId}/images`);
@@ -100,8 +124,27 @@ async function fetchListingImages(listingId) {
       .filter(Boolean);
   } catch (err) {
     console.warn(`Could not fetch images for listing ${listingId}: ${err.message}`);
-    return [];
+    return null;
   }
+}
+
+// Photos from the last sync, keyed by listing id. Placeholders are dropped so a
+// past failure is never carried forward as if it were real data.
+function loadPreviousImages() {
+  const previous = new Map();
+  const path = join(ROOT, "data", "products.js");
+  if (!existsSync(path)) return previous;
+  try {
+    const text = readFileSync(path, "utf8");
+    const data = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1));
+    for (const listing of data.listings || []) {
+      const real = (listing.images || []).filter((src) => !src.includes("placeholder"));
+      if (real.length) previous.set(String(listing.listing_id), real);
+    }
+  } catch (err) {
+    console.warn(`Could not read previous products.js: ${err.message}`);
+  }
+  return previous;
 }
 
 function normalizeListing(listing, images) {
@@ -126,10 +169,22 @@ async function main() {
   console.log(`Found ${rawListings.length} active listing(s).`);
 
   console.log("Fetching listing images...");
+  const previousImages = loadPreviousImages();
   const listings = [];
+  let failed = 0;
   for (const listing of rawListings) {
-    const images = await fetchListingImages(listing.listing_id);
+    let images = await fetchListingImages(listing.listing_id);
+    if (images === null) {
+      failed++;
+      // Keep the last sync's photos rather than downgrading to the placeholder.
+      images = previousImages.get(String(listing.listing_id)) || [];
+    }
     listings.push(normalizeListing(listing, images));
+  }
+  if (failed) {
+    console.warn(
+      `Image fetch failed for ${failed} listing(s); reused previous photos where available.`
+    );
   }
 
   const output = {
