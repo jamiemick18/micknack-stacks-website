@@ -2,8 +2,60 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-11T23:49:48.183Z",
+  "synced_at": "2026-09-12T00:07:46.262Z",
   "listings": [
+    {
+      "listing_id": "4573638523",
+      "title": "Snow Bunnies Threadless Flatback Earring | Gold Snowflake Cartilage Stud | Titanium Labret Post | Winter",
+      "price": "15.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4573638523/snow-bunnies-threadless-flatback-earring",
+      "description": "Snow Bunnies ❄️✨\n\nFor the girls who would rather be chasing pow.\n\nSnow Bunnies features an intricate gold snowflake design accented with sparkling marquise and round CZ stones, giving it that fresh-snow-catching-the-light kind of shine.\n\nDetailed without feeling heavy, this piece brings a little alpine energy to your stack while still staying polished and feminine. Perfect for ski girls, snowboarders, mountain lovers, and anyone who thinks winter jewelry should be cute enough to wear year-round.\n\nWhy you’ll love it:\nSnowflake-inspired design\nSparkling marquise and round CZ stones\nDainty but eye-catching\nPerfect for ski and mountain lovers\nEasy to mix into curated ear stacks\nWintery without feeling holiday-only\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nClear marquise and round CZ stones\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Cartilage • Ski-Inspired Stacks • Curated Ear Stacks\n\nFresh snow. Golden sparkle. Mountain-girl energy. ❄️✨",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/d3330b/8559109725/il_fullxfull.8559109725_bxm1.jpg"
+      ],
+      "tags": [
+        "threadless earring",
+        "push pin earring",
+        "titanium labret",
+        "flatback earring",
+        "cartilage earring",
+        "dainty gold earring",
+        "cute ear stack",
+        "curated ear",
+        "minimalist stud",
+        "snowboard jewelry",
+        "snowflake earring",
+        "ski earrings",
+        "mountain snow"
+      ]
+    },
+    {
+      "listing_id": "4573651300",
+      "title": "Feeling Crabby Threadless Flatback Earring | Gold Crab Cartilage Stud | Titanium Labret Post | Coastal Ear Jewelry",
+      "price": "15.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4573651300/feeling-crabby-threadless-flatback",
+      "description": "Feeling crabby? Same. This will help. 🦀\n\nFeeling Crabby features a petite gold crab with a sparkling clear CZ body and tiny dark eye accents for just the right mix of cute, quirky, and polished.\n\nIt’s playful enough to show some personality, but still dainty enough to work into an everyday ear stack. Perfect for beach lovers, coastal girls, or anyone who appreciates a tiny bit of attitude in their jewelry.\n\nWhy you’ll love it:\nPetite gold crab design\nSparkling clear CZ body\nTiny dark eye accents\nPlayful without feeling novelty-only\nDainty enough for everyday wear\nEasy to mix into curated ear stacks\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the cute, detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nClear CZ center stone\nDark eye accents\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nTiny claws. Big mood. 🦀✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/47dd75/8559082937/il_fullxfull.8559082937_5evd.jpg"
+      ],
+      "tags": [
+        "threadless earring",
+        "push pin earring",
+        "titanium labret",
+        "flatback earring",
+        "cartilage earring",
+        "dainty gold earring",
+        "cute ear stack",
+        "curated ear",
+        "minimalist stud",
+        "crab flatback",
+        "beach flatback",
+        "beach earring",
+        "coastal earring"
+      ]
+    },
     {
       "listing_id": "4573631273",
       "title": "Soft Bow Threadless Flatback Earring | Minimal Gold Bow Stud | Titanium Labret Post | Dainty Cartilage Jewelry",
