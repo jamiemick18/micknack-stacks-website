@@ -2,8 +2,31 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-14T13:14:53.151Z",
+  "synced_at": "2026-09-15T13:13:44.097Z",
   "listings": [
+    {
+      "listing_id": "4575212975",
+      "title": "G23 Titanium Clicker Hoop, 18G 6mm Silver Cartilage Ring, Tiny Hinged Hoop for Helix, Tragus, Daith or Septum Piercing",
+      "price": "14.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4575212975/g23-titanium-clicker-hoop-18g-6mm-silver",
+      "description": "Small, simple and made for a snug fit. This minimalist clicker hoop is crafted from lightweight G23 titanium with a smooth silver finish. The hinged closure clicks securely into place, making it easy to open and close without tools.\n\nPerfect for creating a clean, minimal ear stack or adding one of our connector chains and charms.\n\nDetails\nMaterial: G23 titanium\nColor: Silver\nGauge: 18G, approximately 1 mm thick\nInner diameter: 6 mm\nStyle: Hinged clicker hoop\nLightweight and corrosion resistant\nSold individually\n\nJewelry only; chains and charms sold separately\n\nPossible Placements\nHelix, forward helix, tragus, rook, daith, septum and other cartilage piercings, depending on your anatomy and healed piercing placement.\n\nBecause 6 mm is a petite diameter, please measure your current jewelry or consult your piercer before ordering. Suitable placement and fit vary by anatomy",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/89cd3e/8570981975/il_fullxfull.8570981975_bgd0.jpg"
+      ],
+      "tags": [
+        "g23 titanium",
+        "clicker",
+        "18g clicker hoop",
+        "6mm hoop",
+        "cartilage hoop",
+        "dainty hoop",
+        "minimalost hoop",
+        "ear stack jewelry",
+        "hinged hoop",
+        "tragus hoop"
+      ]
+    },
     {
       "listing_id": "4574722466",
       "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink 5A CZ Connector Chain | Dainty Gold Ear Stack Jewelry",
