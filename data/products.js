@@ -2,8 +2,63 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-15T13:13:44.097Z",
+  "synced_at": "2026-09-16T13:13:55.385Z",
   "listings": [
+    {
+      "listing_id": "4576033359",
+      "title": "Lilac Drop Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+      "price": "24.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4576033359/lilac-drop-ear-chain-30mm-gold-connector",
+      "description": "A little drape, a little sparkle, and a soft pop of lilac.\n\nLilac Drop features a delicate 2 mm wide / 18K Gold PVD Plated gold lip chain with a 30 mm center chain length There are 4 mm amethyst purple colored CZ stones arranged for a cascading look. Three stones dangle from the upper section, while a single stone drops from the lower end for an asymmetrical finish that gives the piece extra movement.\n\nIt’s feminine, lightweight-looking, and just different enough to make your ear stack feel styled without looking too busy.\n\nWhy you’ll love it:\n2 mm dainty gold chain\n30 mm center chain length\nFour 4 mm amethyst-colored CZ stones\nThree CZ dangles at the top\nOne CZ dangle at the bottom\nSoft draped movement\nEasy to style across multiple piercings\nAdds color without overwhelming your stack\nStyle it your way\n\nLilac Drop is designed to drape between compatible earrings, hoops, or flatback posts, giving you a soft layered look with movement and sparkle.\n\nThe lilac stones add just enough color to stand out while still pairing easily with gold, clear CZ, and other minimal pieces.\n\nMaterials\n2 mm gold chain\n30 mm center chain\nFour 4 mm amethyst-colored CZ stones\nGold-tone connecting loops\nMulti-point draped design\n\nPerfect for:\nHelix-to-lobe styling • Curated ear stacks • Dainty chain looks • Purple jewelry lovers\n\nSoft lilac sparkle with a little movement in every angle. 💜",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/3f3f24/8577000729/il_fullxfull.8577000729_f2zn.jpg",
+        "https://i.etsystatic.com/67609393/r/il/691bb5/8529138852/il_fullxfull.8529138852_d91y.jpg",
+        "https://i.etsystatic.com/67609393/r/il/1ffb9c/8529138842/il_fullxfull.8529138842_d4k6.jpg",
+        "https://i.etsystatic.com/67609393/r/il/abf4d8/8529138840/il_fullxfull.8529138840_7k0o.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ]
+    },
+    {
+      "listing_id": "4573651300",
+      "title": "Feeling Crabby Threadless Flatback Earring | Gold Crab Cartilage Stud | Titanium Labret Post | Coastal Ear Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4573651300/feeling-crabby-threadless-flatback",
+      "description": "Feeling crabby? Same. This will help. 🦀\n\nFeeling Crabby features a petite gold crab with a sparkling clear CZ body and tiny dark eye accents for just the right mix of cute, quirky, and polished.\n\nIt’s playful enough to show some personality, but still dainty enough to work into an everyday ear stack. Perfect for beach lovers, coastal girls, or anyone who appreciates a tiny bit of attitude in their jewelry.\n\nWhy you’ll love it:\nPetite gold crab design\nSparkling clear CZ body\nTiny dark eye accents\nPlayful without feeling novelty-only\nDainty enough for everyday wear\nEasy to mix into curated ear stacks\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the cute, detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nClear CZ center stone\nDark eye accents\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nTiny claws. Big mood. 🦀✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/47dd75/8559082937/il_fullxfull.8559082937_5evd.jpg"
+      ],
+      "tags": [
+        "threadless earring",
+        "push pin earring",
+        "titanium labret",
+        "flatback earring",
+        "cartilage earring",
+        "dainty gold earring",
+        "cute ear stack",
+        "curated ear",
+        "minimalist stud",
+        "crab flatback",
+        "beach flatback",
+        "beach earring",
+        "coastal earring"
+      ]
+    },
     {
       "listing_id": "4575212975",
       "title": "G23 Titanium Clicker Hoop, 18G 6mm Silver Cartilage Ring, Tiny Hinged Hoop for Helix, Tragus, Daith or Septum Piercing",
@@ -131,32 +186,6 @@ window.MICKNACK_PRODUCTS = {
         "snowflake earring",
         "ski earrings",
         "mountain snow"
-      ]
-    },
-    {
-      "listing_id": "4573651300",
-      "title": "Feeling Crabby Threadless Flatback Earring | Gold Crab Cartilage Stud | Titanium Labret Post | Coastal Ear Jewelry",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4573651300/feeling-crabby-threadless-flatback",
-      "description": "Feeling crabby? Same. This will help. 🦀\n\nFeeling Crabby features a petite gold crab with a sparkling clear CZ body and tiny dark eye accents for just the right mix of cute, quirky, and polished.\n\nIt’s playful enough to show some personality, but still dainty enough to work into an everyday ear stack. Perfect for beach lovers, coastal girls, or anyone who appreciates a tiny bit of attitude in their jewelry.\n\nWhy you’ll love it:\nPetite gold crab design\nSparkling clear CZ body\nTiny dark eye accents\nPlayful without feeling novelty-only\nDainty enough for everyday wear\nEasy to mix into curated ear stacks\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the cute, detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nClear CZ center stone\nDark eye accents\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nTiny claws. Big mood. 🦀✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/47dd75/8559082937/il_fullxfull.8559082937_5evd.jpg"
-      ],
-      "tags": [
-        "threadless earring",
-        "push pin earring",
-        "titanium labret",
-        "flatback earring",
-        "cartilage earring",
-        "dainty gold earring",
-        "cute ear stack",
-        "curated ear",
-        "minimalist stud",
-        "crab flatback",
-        "beach flatback",
-        "beach earring",
-        "coastal earring"
       ]
     },
     {
