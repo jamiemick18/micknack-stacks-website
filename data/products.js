@@ -2,8 +2,63 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-16T13:13:55.385Z",
+  "synced_at": "2026-09-17T13:13:48.580Z",
   "listings": [
+    {
+      "listing_id": "4576742876",
+      "title": "Alpenglow Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+      "price": "24.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4576742876/alpenglow-ear-chain-30mm-gold-connector",
+      "description": "Soft pink, lavender, and a flash of clear sparkle inspired by alpenglow. Alpenglow is that dreamy wash of pink and purple light that hits the mountains right before sunrise or just after sunset. 🏔️✨\n\nAlpenglow is delicate but definitely not shy. Four petite round gemstones drape along a super-fine chain, finished with a clear pear-cut stone in the center for just a little extra drama. The mix of lavender, blush pink, and crystal clear gives it that icy meets girly glow that looks ridiculously pretty in an ear stack.\n\nPerfect between two lobe piercings, lobe-to-helix, conch-to-lobe, or wherever your piercing setup lets you get creative.\n\nDETAILS\n1.5 mm dainty chain\n4 mm round pink + lavender gemstones\nCenter stone: 3 × 5 mm clear pear-cut gemstone\n5 dangling stones total\nConnector loops on both ends, 3mm\nLightweight + designed for layering\nSold as one ear chain\n\nEarrings shown with the chain are for styling inspiration and are not included unless otherwise stated\n\n✨ The vibe: Colorado sunset",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/af4b6c/8534298038/il_fullxfull.8534298038_jq78.jpg",
+        "https://i.etsystatic.com/67609393/r/il/9d487c/8582162945/il_fullxfull.8582162945_7kut.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ]
+    },
+    {
+      "listing_id": "4576665382",
+      "title": "Sugar Sweet Baby Pink Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+      "price": "24.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4576665382/sugar-sweet-baby-pink-ear-chain-30mm",
+      "description": "Sugar Sweet Baby Pink Ear Chain 💕✨\n\nSoft pink sparkle with a little extra attitude.\nSugar Sweet features a dainty gold chain with baby pink CZ drops that catch the light as they move. The draped design adds depth, texture, and a soft pop of color to your ear stack without feeling heavy or overdone.\n\nMaterials\n2 mm gold chain\n30 mm center chain\nFour 5 mm amethyst-colored CZ stones\nGold-tone 3mm connecting loops\nMulti-point draped design\n\nPerfect for:\nHelix-to-lobe styling • Curated ear stacks • Dainty chain looks • Purple jewelry lovers\n\nSoft lilac sparkle with a little movement in every angle. 💜",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/74a9f5/8533758408/il_fullxfull.8533758408_s7uv.jpg",
+        "https://i.etsystatic.com/67609393/r/il/9fe69a/8533758412/il_fullxfull.8533758412_fxey.jpg",
+        "https://i.etsystatic.com/67609393/r/il/c8b461/8533758406/il_fullxfull.8533758406_hob2.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ]
+    },
     {
       "listing_id": "4576033359",
       "title": "Lilac Drop Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
