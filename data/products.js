@@ -2,8 +2,116 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-21T13:12:00.529Z",
+  "synced_at": "2026-09-22T13:13:12.610Z",
   "listings": [
+    {
+      "listing_id": "4579868601",
+      "title": "Unicorn Chaos Labret to Earring Connector | G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
+      "price": "29.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4579868601/unicorn-chaos-labret-to-earring",
+      "description": "Unicorn Chaos 🦄✨\n\nTiny rainbows. Maximum ear-stack refraction chaos.\n\nUnicorn Chaos is a playful labret-to-earring connector featuring a delicate 30 mm 18k PVD gold chain and five 3 mm AB stones that flash pink, blue, lavender, and gold depending on the light.\n\nIt’s sparkly, a little magical, and just chaotic enough to make your stack way more fun. Perfect for anyone who likes their jewelry cute, flashy, and impossible to ignore.\n\nWhy you’ll love it:\n30 mm dainty connector chain\nFive 3 mm AB sparkling stones\nIridescent rainbow flash in different lighting\nLabret-to-earring connector design\nAdds movement, texture, and shimmer to your stack\n\nPlayful, colorful, and easy to style\nPerfect for curated ears that need a little extra chaos\n\nWhy the G23 Titanium Labret?\nThe included flatback post is made from G23 titanium, chosen for its lightweight feel and popularity in body jewelry.\n✨ Lightweight comfort: Titanium is much lighter than many traditional jewelry metals, helping it feel comfortable for everyday wear.\n✨ Popular for sensitive ears: G23 titanium is a go-to choice for people who are mindful about the materials sitting inside the piercing channel.\n✨ Corrosion resistant: Titanium holds up well against moisture and regular wear.\n✨ Smooth flatback design: The flat disk sits comfortably against the back of the piercing without the bulk of a traditional butterfly backing.\n✨ Threadless pushpin style: No exposed external threads pass through the piercing channel during insertion, helping keep the jewelry smooth and easy to wear.\n\nMaterials\nFlatback labret post: G23 titanium\nFinish: 18K Gold PVD\n30 mm gold-tone chain\nFive 3 mm AB stones\nThreadless / pushpin labret\nLabret-to-earring connector design\n\nPerfect for\nHelix-to-lobe styling • Cartilage-to-hoop styling • Curated ear stacks • Colorful chain looks • Statement stacks\n\nCute, chaotic, and catching rainbows from every angle. 🦄✨",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/56c92a/8605662947/il_fullxfull.8605662947_tovz.jpg",
+        "https://i.etsystatic.com/67609393/r/il/8841bd/8557802610/il_fullxfull.8557802610_oea8.jpg",
+        "https://i.etsystatic.com/67609393/r/il/3a6072/8557802612/il_fullxfull.8557802612_9huu.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ]
+    },
+    {
+      "listing_id": "4579820434",
+      "title": "Alpenglow Labret to Earring Connector | Gold CZ Ear Chain | G23 Titanium Flatback Connector | Pink Lavender Cartilage Chain",
+      "price": "29.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4579820434/alpenglow-labret-to-earring-connector",
+      "description": "Inspired by the rosy pink and violet light that washes over mountain peaks at sunrise and sunset, Alpenglow brings that same soft color shift to your ear stack.\n\nThis dainty labret-to-earring connector features a 30 mm PVD gold plated chain accented with four 3 mm CZ stones in soft pink and lavender, finished with a 3 × 5 mm clear pear-shaped CZ at the center for one brighter drop of sparkle.\n\nOne end connects to a flatback labret post while the other attaches to a compatible hoop or earring, creating a delicate drape between two piercings with movement, color, and just enough shine.\n\nWhy you’ll love it:\n30 mm dainty connector chain\nFour 3 mm pink and lavender CZ stones\nOne 3 × 5 mm clear pear-shaped CZ\nDesigned to connect a labret to a hoop or earring.\n\nAdds depth and movement to your ear stack\nSoft, colorful sparkle without feeling bulky\nEasy to mix with gold and clear-stone jewelry\n\nWhy the G23 Titanium Labret?\nThe included flatback post is made from G23 titanium, chosen for its lightweight feel and popularity in body jewelry.\n✨ Lightweight comfort: Titanium is much lighter than many traditional jewelry metals, helping the post feel comfortable for everyday wear.\n✨ Sensitive-ear friendly: Titanium is a popular choice for people who are sensitive to nickel-containing jewelry.\n✨ Corrosion resistant: Titanium holds up well against moisture and everyday wear.\n✨ Smooth flatback design: The flat disk sits flush against the back of the piercing, avoiding the poking and bulk of a traditional butterfly backing.\n✨ Threadless pushpin style: No exposed external threads pass through the piercing channel during insertion, helping keep the jewelry smooth and easy to wear.\n\nMaterials\nFlatback labret post: G23 titanium\nGold finish: 18k PVD coating\n30 mm chain\nFour 3 mm pink and lavender CZ stones\nOne 3 × 5 mm clear pear-shaped CZ\nThreadless / pushpin labret\nLabret-to-earring connector design\n\nPerfect for:\nHelix-to-lobe styling • Cartilage-to-hoop styling • Multi-piercing ear stacks • Dainty chain looks • Curated ear styling\n\nSoft mountain color. A little movement. A whole lot of sparkle. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/949235/8557324058/il_fullxfull.8557324058_npvr.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ]
+    },
+    {
+      "listing_id": "4576742876",
+      "title": "Alpenglow Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4576742876/alpenglow-ear-chain-30mm-gold-connector",
+      "description": "Soft pink, lavender, and a flash of clear sparkle inspired by alpenglow. Alpenglow is that dreamy wash of pink and purple light that hits the mountains right before sunrise or just after sunset. 🏔️✨\n\nAlpenglow is delicate but definitely not shy. Four petite round gemstones drape along a super-fine chain, finished with a clear pear-cut stone in the center for just a little extra drama. The mix of lavender, blush pink, and crystal clear gives it that icy meets girly glow that looks ridiculously pretty in an ear stack.\n\nPerfect between two lobe piercings, lobe-to-helix, conch-to-lobe, or wherever your piercing setup lets you get creative.\n\nDETAILS\n1.5 mm dainty chain\n4 mm round pink + lavender gemstones\nCenter stone: 3 × 5 mm clear pear-cut gemstone\n5 dangling stones total\nConnector loops on both ends, 3mm\nLightweight + designed for layering\nSold as one ear chain\n\nEarrings shown with the chain are for styling inspiration and are not included unless otherwise stated\n\n✨ The vibe: Colorado sunset",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/af4b6c/8534298038/il_fullxfull.8534298038_jq78.jpg",
+        "https://i.etsystatic.com/67609393/r/il/9d487c/8582162945/il_fullxfull.8582162945_7kut.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ]
+    },
+    {
+      "listing_id": "4579741852",
+      "title": "SLIMED | Apple Green CZ Ear Chain | G23 Titanium Threadless Flat Back | Marquise Drip Chain | Spooky Ear Stack",
+      "price": "29.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4579741852/slimed-apple-green-cz-ear-chain-g23",
+      "description": "SLIMED 💚👻\n\nDrippy. Gooey. Radioactive, and still cute.\nThree juicy 3×6mm apple green marquise CZ stones drip from a dainty 30mm gold chain, giving full-on freshly slimed ectoplasm energy. 🫠✨\n\nBright, weird, sparkly and just a little unhinged, SLIMED was made for the ear stack that refuses to behave.\n\nAnd the details are just as good from the back. SLIMED sits on a 6mm solid G23 titanium post with a star-shaped flat back and comfortable threadless pushpin closure.\n\n💚 Three 3×6mm apple green marquise CZ stones\n🫠 30mm drippy gold chain\n👻 6mm or 8mm solid G23 titanium post\n⭐ Star-shaped flat back\n✨ Threadless pushpin style\n🍏 Bright apple green sparkle\n🖤 Sold individually\n\nThe goo is fake. The sparkle is VERY real.\nGet SLIMED. Stay sparkly. 💚👻",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/60261b/8556752050/il_fullxfull.8556752050_5lnq.jpg",
+        "https://i.etsystatic.com/67609393/r/il/83621e/8604612151/il_fullxfull.8604612151_8yxk.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ]
+    },
     {
       "listing_id": "4573638523",
       "title": "Snow Bunnies Threadless Flatback Earring | Gold Snowflake Cartilage Stud | Titanium Labret Post | Winter",
@@ -40,33 +148,6 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/76221a/8538576258/il_fullxfull.8538576258_aqwo.jpg",
         "https://i.etsystatic.com/67609393/r/il/016f71/8538574230/il_fullxfull.8538574230_ne6z.jpg"
-      ],
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "gold ear chain",
-        "double drape chain",
-        "piercing chain",
-        "cartilage chain",
-        "non tarnish jewelry",
-        "multiple piercings"
-      ]
-    },
-    {
-      "listing_id": "4576742876",
-      "title": "Alpenglow Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4576742876/alpenglow-ear-chain-30mm-gold-connector",
-      "description": "Soft pink, lavender, and a flash of clear sparkle inspired by alpenglow. Alpenglow is that dreamy wash of pink and purple light that hits the mountains right before sunrise or just after sunset. 🏔️✨\n\nAlpenglow is delicate but definitely not shy. Four petite round gemstones drape along a super-fine chain, finished with a clear pear-cut stone in the center for just a little extra drama. The mix of lavender, blush pink, and crystal clear gives it that icy meets girly glow that looks ridiculously pretty in an ear stack.\n\nPerfect between two lobe piercings, lobe-to-helix, conch-to-lobe, or wherever your piercing setup lets you get creative.\n\nDETAILS\n1.5 mm dainty chain\n4 mm round pink + lavender gemstones\nCenter stone: 3 × 5 mm clear pear-cut gemstone\n5 dangling stones total\nConnector loops on both ends, 3mm\nLightweight + designed for layering\nSold as one ear chain\n\nEarrings shown with the chain are for styling inspiration and are not included unless otherwise stated\n\n✨ The vibe: Colorado sunset",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/af4b6c/8534298038/il_fullxfull.8534298038_jq78.jpg",
-        "https://i.etsystatic.com/67609393/r/il/9d487c/8582162945/il_fullxfull.8582162945_7kut.jpg"
       ],
       "tags": [
         "earring connector",
