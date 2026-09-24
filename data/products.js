@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-23T13:14:07.382Z",
+  "synced_at": "2026-09-24T13:13:56.811Z",
   "listings": [
     {
       "listing_id": "4579868601",
@@ -273,11 +273,11 @@ window.MICKNACK_PRODUCTS = {
     },
     {
       "listing_id": "4574722466",
-      "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink 5A CZ Connector Chain | Dainty Gold Ear Stack Jewelry",
+      "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
       "price": "19.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4574722466/sugarplum-sparkle-ear-chain-connector",
-      "description": "Pink Poppies 🌸\n\nA delicate 18K gold PVD-plated ear chain finished with five sparkling 5A cubic zirconia drops. The stones alternate between bright pink and soft blush, creating a dainty trail of color inspired by scattered poppy petals.\n\nDrape it between two flatback earrings, hoops, or cartilage piercings to add movement, color, and a little extra sparkle to your curated ear stack.\n\nDETAILS:\n• 18K gold PVD-plated finish\n• Approximately 42 mm long\n• Dainty 1.5 mm oval cable chain\n• Five 3 mm single-drilled 5A CZ stones\n• Alternating bright and light pink tones\n• 3 mm connecting loops on each end\n• Prong-free gemstone design\n• Sold as one connector chain\n\n\nWith love from Colorado ♡\nMicknack Stacks",
+      "description": "Pink Poppies 🌸\n\nA delicate 18K gold PVD-plated ear chain finished with five sparkling 5A cubic zirconia drops. The stones alternate between bright pink and soft blush, creating a dainty trail of color inspired by scattered poppy petals.\n\nDrape it between two flatback earrings, hoops, or cartilage piercings to add movement, color, and a little extra sparkle to your curated ear stack.\n\nDETAILS:\n• 18K gold PVD-plated finish\n• Approximately 42 mm long\n• Dainty 1.5 mm oval cable chain\n• Five 3 mm single-drilled Synthetic Corundum Sapphire stone\n• Alternating bright and light pink tones\n• 3 mm connecting loops on each end\n• Prong-free gemstone design\n• Sold as one connector chain\n\n\nWith love from Colorado ♡\nMicknack Stacks",
       "images": [
         "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
         "https://i.etsystatic.com/67609393/r/il/4d1be5/8567100197/il_fullxfull.8567100197_hn0o.jpg"
@@ -300,11 +300,11 @@ window.MICKNACK_PRODUCTS = {
     },
     {
       "listing_id": "4574696395",
-      "title": "Midnight Amethyst Ear Chain Connector | Purple 5A CZ Dangle Chain | Dainty Gold Earring Chain | Ear Stack Jewelry",
+      "title": "Midnight Amethyst Ear Chain Connector | Purple 5A Synthetic Corundum Sapphire Dangle Chain | Dainty Gold Earring Chain | Ear Stack Jewelry",
       "price": "19.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4574696395/grape-drizzle-chain-ear-connector-5a-cz",
-      "description": "Midnight Amethyst 💜\n\nA dainty gold connector chain finished with five sparkling 5A cubic zirconia drops in alternating shades of deep and medium amethyst purple. The mix of moody jewel tones gives this piece a little midnight magic while still feeling delicate enough for an everyday ear stack.\n\nDrape it between two flatback earrings, hoops, or cartilage piercings to add movement, color, and a little extra sparkle to your curation.\n\nDETAILS:\n• Approximately 42 mm long\n• Dainty 1.5 mm gold chain\n• Five 3 mm single-drilled 5A CZ stones\n• Alternating deep and light amethyst-purple tones\n• 3 mm connecting loops on each end\n\nMade to connect between earrings, hoops, or piercing jewelry.\n\nBeautiful for conch, helix, cartilage, and other curated ear-stack combinations.\n\nThe stones move freely with the chain, creating a soft little shimmer with every turn.\n\nPlease note: This listing is for one chain.",
+      "description": "Midnight Amethyst 💜\n\nA dainty gold connector chain finished with five sparkling 5A cubic zirconia drops in alternating shades of deep and medium amethyst purple. The mix of moody jewel tones gives this piece a little midnight magic while still feeling delicate enough for an everyday ear stack.\n\nDrape it between two flatback earrings, hoops, or cartilage piercings to add movement, color, and a little extra sparkle to your curation.\n\nDETAILS:\n• Approximately 42 mm long\n• Dainty 1.5 mm gold chain\n• Five 3 mm single-drilled Synthetic Corundum Sapphire stones\n• Alternating deep and light amethyst-purple tones\n• 3 mm connecting loops on each end\n\nMade to connect between earrings, hoops, or piercing jewelry.\n\nBeautiful for conch, helix, cartilage, and other curated ear-stack combinations.\n\nThe stones move freely with the chain, creating a soft little shimmer with every turn.\n\nPlease note: This listing is for one chain.",
       "images": [
         "https://i.etsystatic.com/67609393/r/il/fb151c/8519182858/il_fullxfull.8519182858_r6j8.jpg",
         "https://i.etsystatic.com/67609393/r/il/44be7f/8567054973/il_fullxfull.8567054973_ftoj.jpg"
