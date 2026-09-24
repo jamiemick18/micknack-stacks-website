@@ -2,8 +2,37 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-24T17:12:40.901Z",
+  "synced_at": "2026-09-24T18:02:30.721Z",
   "listings": [
+    {
+      "listing_id": "4581913102",
+      "title": "Prism Spell Double Draped Ear Chain | ASTM F136 G23 Titanium Flatback | Gold Labret to Earring Connector | Iridescent AB CZ Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4581913102/prism-spell-double-draped-ear-chain-astm",
+      "description": "Prism Spell ✨🔮\n\nPrism Spell features two delicate 1.5mm gold chain drapes accented with iridescent AB stones and a sparkling clear diamond shaped center stone. The AB stones catch the light and flash soft pink, lavender, aqua, and icy blue, creating a dreamy, color-shifting effect with every movement.\nThe layered design adds depth and dimension to your ear stack, while the dangling stones bring just enough sparkle to make this piece impossible to ignore.\n\nThe layered design adds depth and dimension to your ear stack, while the dangling stones bring just enough sparkle to make this piece impossible to ignore.\nPretty, a little mystical, and definitely not here to behave. ✨\n\nWhy you’ll love it:\nDouble-draped gold chain design\nTwo iridescent AB stones\nClear diamond-shaped center stone\nDelicate movement and layered sparkle\nLabret-to-earring connector design\nASTM F136 implant-grade titanium flatback post\nPerfect for curated ear stacks\n\nPerfect for:\nHelix-to-lobe styling • Cartilage-to-hoop styling • Multi-piercing ear stacks • Iridescent jewelry lovers • Curated ear styling\n\nA little prism magic for the girls who were never going to keep it simple anyway. 🔮✨\n\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/1b4eef/8573018016/il_fullxfull.8573018016_osqk.jpg",
+        "https://i.etsystatic.com/67609393/r/il/5d37e4/8573018014/il_fullxfull.8573018014_cdio.jpg",
+        "https://i.etsystatic.com/67609393/r/il/829ee4/8620858001/il_fullxfull.8620858001_1n3c.jpg",
+        "https://i.etsystatic.com/67609393/r/il/c66026/8573018020/il_fullxfull.8573018020_r9zy.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "piercing chain",
+        "ASTM F136",
+        "G23 Titanium",
+        "Threadless flatback",
+        "Pushpin",
+        "Flatback"
+      ]
+    },
     {
       "listing_id": "4579868601",
       "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
