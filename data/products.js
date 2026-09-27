@@ -2,8 +2,36 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-26T13:11:45.852Z",
+  "synced_at": "2026-09-27T13:11:53.642Z",
   "listings": [
+    {
+      "listing_id": "4579868601",
+      "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4579868601/unicorn-chaos-labret-to-earring",
+      "description": "Unicorn Chaos 🦄✨\n\nTiny rainbows. Maximum ear-stack refraction chaos.\n\nUnicorn Chaos is a playful labret-to-earring connector featuring a delicate 30 mm 18k PVD gold chain and five 3 mm AB stones that flash pink, blue, lavender, and gold depending on the light.\n\nIt’s sparkly, a little magical, and just chaotic enough to make your stack way more fun. Perfect for anyone who likes their jewelry cute, flashy, and impossible to ignore.\n\nWhy you’ll love it:\n30 mm dainty connector chain\nFive 3 mm AB sparkling stones\nIridescent rainbow flash in different lighting\nLabret-to-earring connector design\nAdds movement, texture, and shimmer to your stack\n\nPlayful, colorful, and easy to style\nPerfect for curated ears that need a little extra chaos\n\nWhy the G23 Titanium Labret?\nThe included flatback post is made from ASTM F136 G23 titanium, chosen for its lightweight feel and popularity in body jewelry.\n✨ Lightweight comfort: Titanium is much lighter than many traditional jewelry metals, helping it feel comfortable for everyday wear.\n✨ Popular for sensitive ears: G23 titanium is a go-to choice for people who are mindful about the materials sitting inside the piercing channel.\n✨ Corrosion resistant: Titanium holds up well against moisture and regular wear.\n✨ Smooth flatback design: The flat disk sits comfortably against the back of the piercing without the bulk of a traditional butterfly backing.\n✨ Threadless pushpin style: No exposed external threads pass through the piercing channel during insertion, helping keep the jewelry smooth and easy to wear.\n\nMaterials\nFlatback labret post: G23 titanium\nFinish: 18K Gold PVD\n30 mm gold-tone chain\nFive 3 mm AB stones\nThreadless / pushpin labret\nLabret-to-earring connector design\n\nPerfect for\nHelix-to-lobe styling • Cartilage-to-hoop styling • Curated ear stacks • Colorful chain looks • Statement stacks\n\nCute, chaotic, and catching rainbows from every angle. 🦄✨",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/8841bd/8557802610/il_fullxfull.8557802610_oea8.jpg",
+        "https://i.etsystatic.com/67609393/r/il/56c92a/8605662947/il_fullxfull.8605662947_tovz.jpg",
+        "https://i.etsystatic.com/67609393/r/il/3a6072/8557802612/il_fullxfull.8557802612_9huu.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "piercing chain",
+        "ASTM F136",
+        "G23 Titanium",
+        "Flatback",
+        "G23",
+        "CZ Earring",
+        "Threadless Flatback",
+        "Pushpin"
+      ]
+    },
     {
       "listing_id": "4581913102",
       "title": "Prism Spell Double Draped Ear Chain | ASTM F136 G23 Titanium Flatback | Gold Labret to Earring Connector | Iridescent AB CZ Jewelry",
@@ -31,34 +59,6 @@ window.MICKNACK_PRODUCTS = {
         "Threadless flatback",
         "Pushpin",
         "Flatback"
-      ]
-    },
-    {
-      "listing_id": "4579868601",
-      "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4579868601/unicorn-chaos-labret-to-earring",
-      "description": "Unicorn Chaos 🦄✨\n\nTiny rainbows. Maximum ear-stack refraction chaos.\n\nUnicorn Chaos is a playful labret-to-earring connector featuring a delicate 30 mm 18k PVD gold chain and five 3 mm AB stones that flash pink, blue, lavender, and gold depending on the light.\n\nIt’s sparkly, a little magical, and just chaotic enough to make your stack way more fun. Perfect for anyone who likes their jewelry cute, flashy, and impossible to ignore.\n\nWhy you’ll love it:\n30 mm dainty connector chain\nFive 3 mm AB sparkling stones\nIridescent rainbow flash in different lighting\nLabret-to-earring connector design\nAdds movement, texture, and shimmer to your stack\n\nPlayful, colorful, and easy to style\nPerfect for curated ears that need a little extra chaos\n\nWhy the G23 Titanium Labret?\nThe included flatback post is made from ASTM F136 G23 titanium, chosen for its lightweight feel and popularity in body jewelry.\n✨ Lightweight comfort: Titanium is much lighter than many traditional jewelry metals, helping it feel comfortable for everyday wear.\n✨ Popular for sensitive ears: G23 titanium is a go-to choice for people who are mindful about the materials sitting inside the piercing channel.\n✨ Corrosion resistant: Titanium holds up well against moisture and regular wear.\n✨ Smooth flatback design: The flat disk sits comfortably against the back of the piercing without the bulk of a traditional butterfly backing.\n✨ Threadless pushpin style: No exposed external threads pass through the piercing channel during insertion, helping keep the jewelry smooth and easy to wear.\n\nMaterials\nFlatback labret post: G23 titanium\nFinish: 18K Gold PVD\n30 mm gold-tone chain\nFive 3 mm AB stones\nThreadless / pushpin labret\nLabret-to-earring connector design\n\nPerfect for\nHelix-to-lobe styling • Cartilage-to-hoop styling • Curated ear stacks • Colorful chain looks • Statement stacks\n\nCute, chaotic, and catching rainbows from every angle. 🦄✨",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/8841bd/8557802610/il_fullxfull.8557802610_oea8.jpg",
-        "https://i.etsystatic.com/67609393/r/il/56c92a/8605662947/il_fullxfull.8605662947_tovz.jpg",
-        "https://i.etsystatic.com/67609393/r/il/3a6072/8557802612/il_fullxfull.8557802612_9huu.jpg"
-      ],
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "piercing chain",
-        "ASTM F136",
-        "G23 Titanium",
-        "Flatback",
-        "G23",
-        "CZ Earring",
-        "Threadless Flatback",
-        "Pushpin"
       ]
     },
     {
