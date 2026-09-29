@@ -2,8 +2,32 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-28T13:14:21.668Z",
+  "synced_at": "2026-09-29T13:15:57.336Z",
   "listings": [
+    {
+      "listing_id": "4584458361",
+      "title": "Checkered Black & Clear CZ Ear Chain | 30mm Gold Connector Chain | ASTM F136 Titanium Labret Option | 6mm or 8mm Flatback",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4584458361/checkered-black-clear-cz-ear-chain-30mm",
+      "description": "Checkered 🏁✨\n\nCheckered features a dainty gold chain accented with alternating 4 mm black and clear CZ stones, creating a bold black-and-white contrast with plenty of movement and shine.\n\nThe chain comes attached to a gold PVD ASTM F136 implant-grade titanium flatback labret, so the piece is ready to wear as a single piercing chain dangle. Choose between a 6 mm or 8 mm post depending on your preferred fit and anatomy.\n\nWhy you’ll love it\nFive 4 mm black and clear CZ stones\nAlternating checkered-inspired color pattern\nDainty gold chain with subtle movement\nEdgy without feeling heavy\nFlatback labret design\nAvailable with 6 mm or 8 mm post\nEasy statement piece for a curated ear stack\n\nWhy ASTM F136 titanium?\nThe post sitting inside your piercing is ASTM F136 implant-grade titanium with a gold PVD finish.\n✨ Implant-grade material: ASTM F136 is a recognized specification for titanium alloy used in surgical implants and quality body jewelry.\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear.\n✨ Nickel-conscious: Titanium is commonly chosen by people concerned about sensitivity to nickel-containing jewelry.\n✨ Corrosion resistant: Titanium is highly resistant to corrosion and holds up well against everyday moisture and wear.\n✨ Smooth flatback: No traditional butterfly backing poking behind your ear. The flat disk creates a clean, low-profile fit.\n✨ Threadless pushpin: No exposed external screw threads pass through the piercing channel during insertion.\n\nMaterials:\nFlatback labret: ASTM F136 implant-grade titanium\nStones: 4 mm black and clear CZ\nThreadless / pushpin design\nPost options: 6 mm or 8 mm\n\nPerfect for\nHelix • Flat • Lobe • Cartilage • Curated Ear Stacks\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/405dec/8592403532/il_fullxfull.8592403532_kp37.jpg",
+        "https://i.etsystatic.com/67609393/r/il/d315f5/8592403518/il_fullxfull.8592403518_loqn.jpg",
+        "https://i.etsystatic.com/67609393/r/il/8e41af/8640247141/il_fullxfull.8640247141_2zxl.jpg"
+      ],
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "ASTM F136",
+        "G23 Titanium"
+      ]
+    },
     {
       "listing_id": "4579868601",
       "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
