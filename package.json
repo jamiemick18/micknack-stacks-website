@@ -6,7 +6,8 @@
   "description": "Static storefront for Micknack Stacks, synced from the Etsy Open API.",
   "scripts": {
     "sync": "node scripts/sync-etsy.js",
-    "serve": "node scripts/serve.js"
+    "serve": "node scripts/serve.js",
+    "stripe-links": "node scripts/create-stripe-links.js"
   },
   "engines": {
     "node": ">=18"

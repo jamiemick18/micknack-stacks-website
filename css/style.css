@@ -291,6 +291,18 @@ img {
   border-radius: 999px;
 }
 
+/* Buy Now sits next to View on Etsy when both are available. */
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.card-actions .btn {
+  padding: 10px 20px;
+  font-size: 0.72rem;
+}
+
 /* Stands in for the button when an item has no link to send people to. */
 .btn-muted {
   align-self: flex-start;

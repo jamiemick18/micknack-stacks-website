@@ -2,6 +2,16 @@ const grid = document.getElementById("product-grid");
 const syncNote = document.getElementById("sync-note");
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// Stripe payment links, written by scripts/create-stripe-links.js.
+// Test links only accept Stripe's fake cards, so they're shown on localhost
+// only. Publishing them would give real shoppers a checkout that can't take
+// their money.
+const stripeData = window.MICKNACK_STRIPE_LINKS || {};
+const stripeLinks = stripeData.links || {};
+const isLocalhost = ["localhost", "127.0.0.1", "[::1]"].includes(location.hostname);
+const stripeEnabled =
+  stripeData.mode === "live" || (stripeData.mode === "test" && isLocalhost);
+
 function formatPrice(price, currency) {
   const symbols = { USD: "$", CAD: "CA$", GBP: "£", EUR: "€", AUD: "AU$" };
   const code = currency || "USD";
@@ -21,7 +31,8 @@ function escapeHtml(str) {
 
 // Etsy listings and hand-added pieces render identically; they only differ in
 // where they come from and what their button says.
-function toCard(item, { buttonLabel, badge }) {
+function toCard(item, { key, buttonLabel, badge }) {
+  const buyUrl = stripeEnabled ? stripeLinks[key]?.url : undefined;
   return {
     title: item.title,
     price: item.price,
@@ -32,22 +43,38 @@ function toCard(item, { buttonLabel, badge }) {
     // With no link there's nothing to buy yet, so don't promise a purchase.
     buttonLabel: item.button_label || (item.url ? buttonLabel : "Coming soon"),
     badge: item.badge || badge || "",
+    buyUrl: buyUrl || "",
   };
 }
 
 function renderCard(card) {
+  const thumbHref = card.buyUrl || card.url;
   const thumbInner = `<img src="${card.image}" alt="${escapeHtml(card.title)}" loading="lazy" />
             ${card.badge ? `<span class="card-badge">${escapeHtml(card.badge)}</span>` : ""}`;
 
   // Without a link there is nothing to click, so render a plain div instead of
   // a dead anchor.
-  const thumb = card.url
-    ? `<a class="thumb" href="${card.url}" target="_blank" rel="noopener">${thumbInner}</a>`
+  const thumb = thumbHref
+    ? `<a class="thumb" href="${thumbHref}" target="_blank" rel="noopener">${thumbInner}</a>`
     : `<div class="thumb">${thumbInner}</div>`;
 
-  const action = card.url
-    ? `<a class="btn btn-primary" href="${card.url}" target="_blank" rel="noopener">${escapeHtml(card.buttonLabel)}</a>`
-    : `<span class="btn btn-muted">${escapeHtml(card.buttonLabel)}</span>`;
+  const actions = [];
+  if (card.buyUrl) {
+    actions.push(
+      `<a class="btn btn-primary" href="${card.buyUrl}" target="_blank" rel="noopener">Buy Now</a>`
+    );
+    if (card.url) {
+      actions.push(
+        `<a class="btn btn-secondary" href="${card.url}" target="_blank" rel="noopener">View on Etsy</a>`
+      );
+    }
+  } else if (card.url) {
+    actions.push(
+      `<a class="btn btn-primary" href="${card.url}" target="_blank" rel="noopener">${escapeHtml(card.buttonLabel)}</a>`
+    );
+  } else {
+    actions.push(`<span class="btn btn-muted">${escapeHtml(card.buttonLabel)}</span>`);
+  }
 
   return `
     <article class="product-card">
@@ -56,7 +83,7 @@ function renderCard(card) {
         <h3>${escapeHtml(card.title)}</h3>
         ${card.price ? `<div class="price">${formatPrice(card.price, card.currency_code)}</div>` : ""}
         <p class="desc">${escapeHtml(truncate(card.description, 110))}</p>
-        ${action}
+        <div class="card-actions">${actions.join("")}</div>
       </div>
     </article>
   `;
@@ -67,8 +94,12 @@ function renderProducts(etsyData, extras) {
 
   const cards = [
     // Pieces only on this site go first: they can't be found anywhere else.
-    ...extras.map((item) => toCard(item, { buttonLabel: "Buy Now" })),
-    ...etsyListings.map((item) => toCard(item, { buttonLabel: "View on Etsy" })),
+    ...extras.map((item) =>
+      toCard(item, { key: String(item.id), buttonLabel: "Buy Now" })
+    ),
+    ...etsyListings.map((item) =>
+      toCard(item, { key: String(item.listing_id), buttonLabel: "View on Etsy" })
+    ),
   ];
 
   const parts = [];
@@ -84,6 +115,9 @@ function renderProducts(etsyData, extras) {
   }
   if (extras.length) {
     parts.push(`${extras.length} piece${extras.length === 1 ? "" : "s"} only here`);
+  }
+  if (stripeEnabled && stripeData.mode === "test") {
+    parts.push("Stripe TEST mode — local preview only");
   }
   syncNote.textContent = parts.join(" · ");
   syncNote.style.display = parts.length ? "" : "none";
