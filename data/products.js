@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-30T13:16:44.288Z",
+  "synced_at": "2026-09-30T19:35:47.289Z",
   "listings": [
     {
       "listing_id": "4584458361",
@@ -26,7 +26,10 @@ window.MICKNACK_PRODUCTS = {
         "chain earring",
         "ASTM F136",
         "G23 Titanium"
-      ]
+      ],
+      "quantity": 5,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4579868601",
@@ -54,7 +57,10 @@ window.MICKNACK_PRODUCTS = {
         "CZ Earring",
         "Threadless Flatback",
         "Pushpin"
-      ]
+      ],
+      "quantity": 4,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4581913102",
@@ -83,7 +89,10 @@ window.MICKNACK_PRODUCTS = {
         "Threadless flatback",
         "Pushpin",
         "Flatback"
-      ]
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4579820434",
@@ -105,7 +114,10 @@ window.MICKNACK_PRODUCTS = {
         "chain earring",
         "ASTM F136",
         "G23 Titanium"
-      ]
+      ],
+      "quantity": 5,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4576742876",
@@ -132,7 +144,10 @@ window.MICKNACK_PRODUCTS = {
         "cartilage chain",
         "non tarnish jewelry",
         "multiple piercings"
-      ]
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4579741852",
@@ -159,7 +174,10 @@ window.MICKNACK_PRODUCTS = {
         "Threadless flatback",
         "Pushpin",
         "Flatback"
-      ]
+      ],
+      "quantity": 5,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573638523",
@@ -185,7 +203,10 @@ window.MICKNACK_PRODUCTS = {
         "snowflake earring",
         "ski earrings",
         "mountain snow"
-      ]
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4577301519",
@@ -212,7 +233,10 @@ window.MICKNACK_PRODUCTS = {
         "cartilage chain",
         "non tarnish jewelry",
         "multiple piercings"
-      ]
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4576665382",
@@ -240,7 +264,10 @@ window.MICKNACK_PRODUCTS = {
         "cartilage chain",
         "non tarnish jewelry",
         "multiple piercings"
-      ]
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4576033359",
@@ -269,7 +296,10 @@ window.MICKNACK_PRODUCTS = {
         "cartilage chain",
         "non tarnish jewelry",
         "multiple piercings"
-      ]
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573651300",
@@ -295,7 +325,10 @@ window.MICKNACK_PRODUCTS = {
         "beach flatback",
         "beach earring",
         "coastal earring"
-      ]
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4575212975",
@@ -318,7 +351,10 @@ window.MICKNACK_PRODUCTS = {
         "ear stack jewelry",
         "hinged hoop",
         "tragus hoop"
-      ]
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4574722466",
@@ -345,7 +381,10 @@ window.MICKNACK_PRODUCTS = {
         "cartilage chain",
         "non tarnish jewelry",
         "multiple piercings"
-      ]
+      ],
+      "quantity": 4,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4574696395",
@@ -372,7 +411,10 @@ window.MICKNACK_PRODUCTS = {
         "cartilage chain",
         "non tarnish jewelry",
         "multiple piercings"
-      ]
+      ],
+      "quantity": 4,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573640401",
@@ -398,7 +440,10 @@ window.MICKNACK_PRODUCTS = {
         "Colorado Earring",
         "Mountain Flatback",
         "Pikes Peak"
-      ]
+      ],
+      "quantity": 2,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573631273",
@@ -424,7 +469,10 @@ window.MICKNACK_PRODUCTS = {
         "cute ear stack",
         "curated ear",
         "gold cartilage"
-      ]
+      ],
+      "quantity": 2,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573623947",
@@ -450,7 +498,10 @@ window.MICKNACK_PRODUCTS = {
         "Bear Earring",
         "Bear Flatback",
         "Dainty Bear"
-      ]
+      ],
+      "quantity": 2,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573632540",
@@ -476,7 +527,10 @@ window.MICKNACK_PRODUCTS = {
         "ear climber",
         "mountain earring",
         "ski earrings"
-      ]
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573613361",
@@ -502,7 +556,10 @@ window.MICKNACK_PRODUCTS = {
         "gold cartilage",
         "cherry earring",
         "cherry flatback"
-      ]
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573609723",
@@ -528,7 +585,10 @@ window.MICKNACK_PRODUCTS = {
         "simple ear stack",
         "ear climber",
         "mountain earring"
-      ]
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573623776",
@@ -555,7 +615,10 @@ window.MICKNACK_PRODUCTS = {
         "simple ear stack",
         "bat flatback",
         "bat earring"
-      ]
+      ],
+      "quantity": 3,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573601729",
@@ -582,7 +645,10 @@ window.MICKNACK_PRODUCTS = {
         "minimal flatback",
         "dainty flatback",
         "simple ear stack"
-      ]
+      ],
+      "quantity": 2,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573616908",
@@ -609,7 +675,10 @@ window.MICKNACK_PRODUCTS = {
         "minimal flatback",
         "dainty flatback",
         "simple ear stack"
-      ]
+      ],
+      "quantity": 4,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573594151",
@@ -635,7 +704,10 @@ window.MICKNACK_PRODUCTS = {
         "simple ear stack",
         "lotus earring",
         "lotus flatback"
-      ]
+      ],
+      "quantity": 2,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573481130",
@@ -662,7 +734,10 @@ window.MICKNACK_PRODUCTS = {
         "minimal flatback",
         "dainty flatback",
         "simple ear stack"
-      ]
+      ],
+      "quantity": 2,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573472494",
@@ -689,7 +764,10 @@ window.MICKNACK_PRODUCTS = {
         "minimal flatback",
         "dainty flatback",
         "simple ear stack"
-      ]
+      ],
+      "quantity": 2,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573443165",
@@ -715,7 +793,10 @@ window.MICKNACK_PRODUCTS = {
         "cosmic earring",
         "starburst stud",
         "star earring"
-      ]
+      ],
+      "quantity": 2,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573452050",
@@ -742,7 +823,10 @@ window.MICKNACK_PRODUCTS = {
         "tragus earring",
         "hidden helix",
         "earring climber"
-      ]
+      ],
+      "quantity": 2,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573443638",
@@ -767,7 +851,10 @@ window.MICKNACK_PRODUCTS = {
         "fox earring",
         "mountain fox",
         "woodland jewelry"
-      ]
+      ],
+      "quantity": 2,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573438832",
@@ -793,7 +880,10 @@ window.MICKNACK_PRODUCTS = {
         "minimalist stud",
         "dainty cartilage",
         "tragus earring"
-      ]
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573433368",
@@ -820,7 +910,10 @@ window.MICKNACK_PRODUCTS = {
         "adventure jewelry",
         "colorado jewelry",
         "sporty earrings"
-      ]
+      ],
+      "quantity": 2,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573422828",
@@ -846,7 +939,10 @@ window.MICKNACK_PRODUCTS = {
         "cute ear stack",
         "bow cartilage",
         "curated ear"
-      ]
+      ],
+      "quantity": 2,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4571571883",
@@ -874,7 +970,10 @@ window.MICKNACK_PRODUCTS = {
         "cartilage chain",
         "non tarnish jewelry",
         "multiple piercings"
-      ]
+      ],
+      "quantity": 5,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4571494427",
@@ -903,7 +1002,10 @@ window.MICKNACK_PRODUCTS = {
         "cartilage chain",
         "non tarnish jewelry",
         "multiple piercings"
-      ]
+      ],
+      "quantity": 5,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4568279074",
@@ -930,7 +1032,10 @@ window.MICKNACK_PRODUCTS = {
         "cartilage chain",
         "non tarnish jewelry",
         "multiple piercings"
-      ]
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4566919003",
@@ -956,7 +1061,10 @@ window.MICKNACK_PRODUCTS = {
         "cartilage chain",
         "non tarnish jewelry",
         "multiple piercings"
-      ]
+      ],
+      "quantity": 5,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4566277207",
@@ -982,7 +1090,10 @@ window.MICKNACK_PRODUCTS = {
         "flatback earrings",
         "piercing chain",
         "ear piercing chain"
-      ]
+      ],
+      "quantity": 5,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
     }
   ]
 };
