@@ -166,6 +166,9 @@ function normalizeListing(listing, images) {
     description: listing.description,
     images: images.length ? images : ["assets/products/placeholder.svg"],
     tags: listing.tags || [],
+    // Etsy's own stock count, so the private dashboard can start from it
+    // instead of you counting everything by hand.
+    quantity: typeof listing.quantity === "number" ? listing.quantity : null,
   };
 }
 
