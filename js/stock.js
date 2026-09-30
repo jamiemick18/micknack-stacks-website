@@ -32,11 +32,13 @@ window.MICKNACK_STOCK = {
       };
     }
 
+    // The public file normally carries only sold_out/hidden flags; the real
+    // counts stay in the private dashboard. A qty here still works.
     const qty = typeof raw.qty === "number" ? raw.qty : null;
     return {
       qty,
       hidden: Boolean(raw.hidden),
-      soldOut: qty !== null && qty <= 0,
+      soldOut: Boolean(raw.sold_out) || (qty !== null && qty <= 0),
       tracked: qty !== null,
     };
   },

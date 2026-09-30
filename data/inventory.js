@@ -1,27 +1,21 @@
 // ============================================================================
-// INVENTORY — how many of each piece you have, and what's hidden.
+// INVENTORY — what's sold out or hidden on the site.
 // ============================================================================
 //
-// The Etsy sync NEVER touches this file. Anything you set here sticks.
+// The Etsy sync NEVER touches this file.
 //
-// Change these from the dashboard instead of editing by hand:
-//   https://micknackstacks.com/manage.html
+// Your stock counts are NOT here. They live in your private dashboard, which
+// only you can open. This file carries only what the public site needs:
 //
-// Shoppers never see these numbers. The site only uses them to decide whether
-// a piece can be bought:
+//   sold_out: true   Shows a Sold Out label. No Buy button.
+//   hidden: true     Not shown on the site at all.
 //
-//   qty: 3            In stock. Buy button works.
-//   qty: 0            Shows a Sold Out label. No Buy button.
-//   hidden: true      Not shown on the site at all, whatever the quantity.
+// A piece with no entry is treated as in stock.
 //
-// A piece with no entry here is treated as in stock, so nothing disappears
-// just because you haven't counted it yet.
-//
-// The key is the piece's id: the Etsy listing number, or the id you gave a
-// piece added through the listing builder.
+// To change it: open the dashboard, set your counts, then either copy what it
+// generates over this file, or tell Claude "update my stock."
 
 window.MICKNACK_INVENTORY = {
-  // "4566134771": { qty: 3 },
-  // "rose-studs": { qty: 0 },
-  // "old-sample": { qty: 2, hidden: true },
+  // "4566134771": { sold_out: true },
+  // "rose-studs": { hidden: true },
 };
