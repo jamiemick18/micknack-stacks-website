@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Micknack Stacks | Chain Jewelry &amp; Ear Stacks</title>
-  <meta name="description" content="Micknack Stacks: draped chain ear cuffs and stacking jewelry, designed and loved from Colorado." />
+  <title>Your Cart | Micknack Stacks</title>
+  <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -25,12 +25,10 @@
   </header>
 
   <main id="top">
-    <section class="product-page">
-      <div class="wrap">
-        <a class="back-link" href="index.html#shop">← Back to the collection</a>
-        <div id="product-detail">
-          <!-- Filled in by js/product.js -->
-        </div>
+    <section class="shop-section" style="padding-top:44px;">
+      <div class="wrap" style="max-width:820px;">
+        <h1 class="section-heading" style="text-align:left; margin-bottom:24px;">Your cart</h1>
+        <div id="cart-contents"></div>
       </div>
     </section>
   </main>
@@ -46,7 +44,6 @@
         <a href="https://www.tiktok.com/@micknack.stacks" target="_blank" rel="noopener">TikTok</a>
         <a href="mailto:micknackstacks@gmail.com">Email Us</a>
         <a href="index.html#shop">Shop This Site</a>
-        <a href="#top">Back to Top</a>
       </div>
       <p class="fine-print">© <span id="year"></span> Micknack Stacks. Designed in Colorado.</p>
     </div>
@@ -66,13 +63,8 @@
     </div>
   </dialog>
 
-  <script src="data/products.js"></script>
-  <script src="data/extra-products.js"></script>
-  <script src="data/inventory.js"></script>
-  <script src="data/stripe-links.js"></script>
-  <script src="js/stock.js"></script>
   <script src="js/cart.js"></script>
-  <script src="js/product.js"></script>
+  <script src="js/cart-page.js"></script>
   <script src="js/contact.js"></script>
 </body>
 </html>

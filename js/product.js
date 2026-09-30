@@ -136,8 +136,16 @@ function renderProduct(product) {
   if (soldOut) {
     actions.push(`<span class="btn btn-muted btn-lg">Sold out</span>`);
   } else if (buyUrl) {
+    const priceId = (stripeLinks[product.id] || {}).price_id || "";
     actions.push(
-      `<a class="btn btn-primary btn-lg" href="${buyUrl}" target="_blank" rel="noopener">Buy Now</a>`
+      priceId
+        ? `<button type="button" class="btn btn-primary btn-lg" data-add-to-cart
+             data-id="${escapeHtml(product.id)}"
+             data-price-id="${escapeHtml(priceId)}"
+             data-title="${escapeHtml(product.title)}"
+             data-price="${escapeHtml(product.price || "")}"
+             data-image="${escapeHtml(images[0] || "")}">Add to cart</button>`
+        : `<a class="btn btn-primary btn-lg" href="${buyUrl}" target="_blank" rel="noopener">Buy Now</a>`
     );
   }
   if (product.etsyUrl) {

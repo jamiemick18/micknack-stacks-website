@@ -39,6 +39,8 @@ function toCard(item, { key, buttonLabel, badge }) {
   const stock = window.MICKNACK_STOCK.of(key);
   const buyUrl = !stock.soldOut && stripeEnabled ? stripeLinks[key]?.url : undefined;
   return {
+    id: key,
+    priceId: (stripeLinks[key] || {}).price_id || "",
     soldOut: stock.soldOut,
     hidden: stock.hidden,
     title: item.title,
@@ -77,9 +79,14 @@ function renderCard(card) {
         `<a class="btn btn-secondary" href="${card.url}" target="_blank" rel="noopener">View on Etsy</a>`
       );
     }
-  } else if (card.buyUrl) {
+  } else if (card.buyUrl && card.priceId) {
     actions.push(
-      `<a class="btn btn-primary" href="${card.buyUrl}" target="_blank" rel="noopener">Buy Now</a>`
+      `<button type="button" class="btn btn-primary" data-add-to-cart
+         data-id="${escapeHtml(card.id)}"
+         data-price-id="${escapeHtml(card.priceId)}"
+         data-title="${escapeHtml(card.title)}"
+         data-price="${escapeHtml(card.price || "")}"
+         data-image="${escapeHtml(card.image)}">Add to cart</button>`
     );
     if (card.url) {
       actions.push(

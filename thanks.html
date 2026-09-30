@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Micknack Stacks | Chain Jewelry &amp; Ear Stacks</title>
-  <meta name="description" content="Micknack Stacks: draped chain ear cuffs and stacking jewelry, designed and loved from Colorado." />
+  <title>Thank You | Micknack Stacks</title>
+  <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -19,17 +19,26 @@
         <a href="https://www.tiktok.com/@micknack.stacks" target="_blank" rel="noopener">TikTok</a>
         <a class="nav-etsy" href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Visit Etsy Shop</a>
         <button type="button" class="nav-contact" id="contact-open">Contact</button>
-        <a class="nav-cart" href="cart.html" id="cart-link">Cart</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <section class="product-page">
-      <div class="wrap">
-        <a class="back-link" href="index.html#shop">← Back to the collection</a>
-        <div id="product-detail">
-          <!-- Filled in by js/product.js -->
+    <section class="shop-section" style="padding-top:64px;">
+      <div class="wrap" style="max-width:560px; text-align:center;">
+        <img src="assets/crescent-mountain-charm.png" alt="" class="section-accent" />
+        <h1 class="section-heading" style="margin-bottom:14px;">Thank you</h1>
+        <p style="color:#555; font-size:0.98rem;">
+          Your order is in. A receipt is on its way to your email, and your
+          pieces will be packed and shipped from Colorado shortly.
+        </p>
+        <p style="color:#777; font-size:0.9rem; margin-top:18px;">
+          Questions about your order? Email
+          <a href="mailto:micknackstacks@gmail.com" style="color:var(--gold);">micknackstacks@gmail.com</a>.
+        </p>
+        <div class="cta-row" style="margin-top:30px;">
+          <a class="btn btn-primary" href="index.html#shop">Keep shopping</a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/micknackstacks/" target="_blank" rel="noopener">Follow on Instagram</a>
         </div>
       </div>
     </section>
@@ -46,7 +55,6 @@
         <a href="https://www.tiktok.com/@micknack.stacks" target="_blank" rel="noopener">TikTok</a>
         <a href="mailto:micknackstacks@gmail.com">Email Us</a>
         <a href="index.html#shop">Shop This Site</a>
-        <a href="#top">Back to Top</a>
       </div>
       <p class="fine-print">© <span id="year"></span> Micknack Stacks. Designed in Colorado.</p>
     </div>
@@ -66,13 +74,11 @@
     </div>
   </dialog>
 
-  <script src="data/products.js"></script>
-  <script src="data/extra-products.js"></script>
-  <script src="data/inventory.js"></script>
-  <script src="data/stripe-links.js"></script>
-  <script src="js/stock.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/product.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    // The order is placed, so the cart has done its job.
+    try { localStorage.removeItem("micknack-cart"); } catch (err) {}
+  </script>
   <script src="js/contact.js"></script>
 </body>
 </html>
