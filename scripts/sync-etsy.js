@@ -145,6 +145,21 @@ function loadPreviousCatalog() {
   return previous;
 }
 
+// Listing videos come from their own endpoint too. Returns the video's URL,
+// "" when the listing has none, or null when the request failed.
+async function fetchListingVideo(listingId) {
+  try {
+    const data = await etsyGet(`/listings/${listingId}/videos`);
+    const video = (data.results || []).find(
+      (item) => item.video_url && item.video_state !== "removed"
+    );
+    return video ? video.video_url : "";
+  } catch (err) {
+    console.warn(`Could not fetch video for listing ${listingId}: ${err.message}`);
+    return null;
+  }
+}
+
 // Photos from the last sync, keyed by listing id. Placeholders are dropped so a
 // past failure is never carried forward as if it were real data.
 function previousImagesFrom(previous) {
@@ -156,7 +171,7 @@ function previousImagesFrom(previous) {
   return images;
 }
 
-function normalizeListing(listing, images) {
+function normalizeListing(listing, images, video) {
   return {
     listing_id: String(listing.listing_id),
     title: listing.title,
@@ -165,6 +180,7 @@ function normalizeListing(listing, images) {
     url: listing.url,
     description: listing.description,
     images: images.length ? images : ["assets/products/placeholder.svg"],
+    video: video || "",
     tags: listing.tags || [],
     // Etsy's own stock count, so the private dashboard can start from it
     // instead of you counting everything by hand.
@@ -180,20 +196,32 @@ async function main() {
   const rawListings = await fetchAllActiveListings(shopId);
   console.log(`Found ${rawListings.length} active listing(s).`);
 
-  console.log("Fetching listing images...");
+  console.log("Fetching listing photos and videos...");
   const previous = loadPreviousCatalog();
   const previousImages = previousImagesFrom(previous);
   const listings = [];
   let failed = 0;
+  let withVideo = 0;
   for (const listing of rawListings) {
+    const id = String(listing.listing_id);
+
     let images = await fetchListingImages(listing.listing_id);
     if (images === null) {
       failed++;
       // Keep the last sync's photos rather than downgrading to the placeholder.
-      images = previousImages.get(String(listing.listing_id)) || [];
+      images = previousImages.get(id) || [];
     }
-    listings.push(normalizeListing(listing, images));
+
+    let video = await fetchListingVideo(listing.listing_id);
+    if (video === null) {
+      // Same idea for video: a failed call shouldn't drop one we already have.
+      video = (previous.get(id) || {}).video || "";
+    }
+    if (video) withVideo++;
+
+    listings.push(normalizeListing(listing, images, video));
   }
+  console.log(`${withVideo} of ${rawListings.length} listing(s) have a video.`);
   if (failed) {
     console.warn(
       `Image fetch failed for ${failed} listing(s); reused previous photos where available.`
