@@ -109,6 +109,86 @@ img {
   color: var(--cream) !important;
 }
 
+.nav-contact {
+  font-family: "Jost", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.nav-contact:hover {
+  opacity: 1;
+}
+
+/* ---------- Contact popup ---------- */
+
+.contact-dialog {
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: 420px;
+  width: calc(100% - 32px);
+}
+
+.contact-dialog::backdrop {
+  background: rgba(10, 10, 10, 0.55);
+}
+
+.contact-card {
+  background: #fff;
+  border: 1px solid rgba(10, 10, 10, 0.1);
+  border-radius: 4px;
+  padding: 32px 28px 26px;
+  text-align: center;
+}
+
+.contact-card h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+  margin: 0 0 8px;
+}
+
+.contact-card p {
+  font-size: 0.9rem;
+  color: #5c5c5c;
+  margin: 0 0 20px;
+}
+
+.contact-card .email {
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--gold);
+  word-break: break-all;
+  margin-bottom: 22px;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-actions .btn {
+  padding: 11px 24px;
+  font-size: 0.75rem;
+}
+
+.contact-copied {
+  display: block;
+  font-size: 0.78rem;
+  color: #2f6b45;
+  margin-top: 14px;
+}
+
 /* ---------- Hero ---------- */
 
 .hero {

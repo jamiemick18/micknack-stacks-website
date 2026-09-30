@@ -16,6 +16,7 @@
         <a href="index.html#shop">Shop</a>
         <a href="index.html#about">About</a>
         <a class="nav-etsy" href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Visit Etsy Shop</a>
+        <button type="button" class="nav-contact" id="contact-open">Contact</button>
       </nav>
     </div>
   </header>
@@ -38,6 +39,7 @@
       <p>New pieces and restocks post to our Etsy shop first, and this site mirrors it automatically.</p>
       <div class="foot-links">
         <a href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Etsy Shop</a>
+        <a href="mailto:micknackstacks@gmail.com">Email Us</a>
         <a href="index.html#shop">Shop This Site</a>
         <a href="#top">Back to Top</a>
       </div>
@@ -45,11 +47,26 @@
     </div>
   </footer>
 
+  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title">
+    <div class="contact-card">
+      <h2 id="contact-title">Get in touch</h2>
+      <p>Questions about a piece, sizing, or an order? Send an email and I'll get back to you.</p>
+      <a class="email" id="contact-email" href="#">…</a>
+      <div class="contact-actions">
+        <a class="btn btn-primary" id="contact-mailto" href="mailto:micknackstacks@gmail.com">Email me</a>
+        <button type="button" class="btn btn-secondary" id="contact-copy">Copy address</button>
+        <button type="button" class="btn btn-secondary" data-close>Close</button>
+      </div>
+      <span class="contact-copied" id="contact-copied" hidden></span>
+    </div>
+  </dialog>
+
   <script src="data/products.js"></script>
   <script src="data/extra-products.js"></script>
   <script src="data/inventory.js"></script>
   <script src="data/stripe-links.js"></script>
   <script src="js/stock.js"></script>
   <script src="js/product.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 </html>
