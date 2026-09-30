@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-30T19:35:47.289Z",
+  "synced_at": "2026-09-30T19:47:05.089Z",
   "listings": [
     {
       "listing_id": "4584458361",
@@ -16,6 +16,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/d315f5/8592403518/il_fullxfull.8592403518_loqn.jpg",
         "https://i.etsystatic.com/67609393/r/il/8e41af/8640247141/il_fullxfull.8640247141_2zxl.jpg"
       ],
+      "video": "https://v.etsystatic.com/e/videos/262e/7992ccca-9919-4fea-bd1f-29d39095f619/vid_v1.mp4",
       "tags": [
         "earring connector",
         "earring chain",
@@ -43,6 +44,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/56c92a/8605662947/il_fullxfull.8605662947_tovz.jpg",
         "https://i.etsystatic.com/67609393/r/il/3a6072/8557802612/il_fullxfull.8557802612_9huu.jpg"
       ],
+      "video": "",
       "tags": [
         "earring connector",
         "earring chain",
@@ -75,6 +77,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/829ee4/8620858001/il_fullxfull.8620858001_1n3c.jpg",
         "https://i.etsystatic.com/67609393/r/il/c66026/8573018020/il_fullxfull.8573018020_r9zy.jpg"
       ],
+      "video": "https://v.etsystatic.com/e/videos/aa7b/d4ddcca8-4548-4e56-902c-30a6a1718e78/vid_v1.mp4",
       "tags": [
         "earring connector",
         "earring chain",
@@ -104,6 +107,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/949235/8557324058/il_fullxfull.8557324058_npvr.jpg"
       ],
+      "video": "",
       "tags": [
         "earring connector",
         "earring chain",
@@ -130,6 +134,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/af4b6c/8534298038/il_fullxfull.8534298038_jq78.jpg",
         "https://i.etsystatic.com/67609393/r/il/9d487c/8582162945/il_fullxfull.8582162945_7kut.jpg"
       ],
+      "video": "",
       "tags": [
         "earring connector",
         "earring chain",
@@ -160,6 +165,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/60261b/8556752050/il_fullxfull.8556752050_5lnq.jpg",
         "https://i.etsystatic.com/67609393/r/il/83621e/8604612151/il_fullxfull.8604612151_8yxk.jpg"
       ],
+      "video": "https://v.etsystatic.com/e/videos/d6a9/5fb3c098-fc41-41a0-b1aa-1ffd2aaaf7ec/vid_v1.mp4",
       "tags": [
         "earring connector",
         "earring chain",
@@ -189,6 +195,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/d3330b/8559109725/il_fullxfull.8559109725_bxm1.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -219,6 +226,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/76221a/8538576258/il_fullxfull.8538576258_aqwo.jpg",
         "https://i.etsystatic.com/67609393/r/il/016f71/8538574230/il_fullxfull.8538574230_ne6z.jpg"
       ],
+      "video": "",
       "tags": [
         "earring connector",
         "earring chain",
@@ -250,6 +258,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/9fe69a/8533758412/il_fullxfull.8533758412_fxey.jpg",
         "https://i.etsystatic.com/67609393/r/il/c8b461/8533758406/il_fullxfull.8533758406_hob2.jpg"
       ],
+      "video": "https://v.etsystatic.com/e/videos/f378/9047c56a-cf1f-4841-b86c-ce00949b26fc/vid_v1.mp4",
       "tags": [
         "earring connector",
         "earring chain",
@@ -282,6 +291,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/1ffb9c/8529138842/il_fullxfull.8529138842_d4k6.jpg",
         "https://i.etsystatic.com/67609393/r/il/abf4d8/8529138840/il_fullxfull.8529138840_7k0o.jpg"
       ],
+      "video": "",
       "tags": [
         "earring connector",
         "earring chain",
@@ -311,6 +321,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/47dd75/8559082937/il_fullxfull.8559082937_5evd.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -340,6 +351,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/89cd3e/8570981975/il_fullxfull.8570981975_bgd0.jpg"
       ],
+      "video": "",
       "tags": [
         "g23 titanium",
         "clicker",
@@ -367,6 +379,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
         "https://i.etsystatic.com/67609393/r/il/4d1be5/8567100197/il_fullxfull.8567100197_hn0o.jpg"
       ],
+      "video": "",
       "tags": [
         "earring connector",
         "earring chain",
@@ -397,6 +410,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/fb151c/8519182858/il_fullxfull.8519182858_r6j8.jpg",
         "https://i.etsystatic.com/67609393/r/il/44be7f/8567054973/il_fullxfull.8567054973_ftoj.jpg"
       ],
+      "video": "",
       "tags": [
         "earring connector",
         "earring chain",
@@ -426,6 +440,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/8891a6/8511253424/il_fullxfull.8511253424_q787.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -455,6 +470,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/2590a4/8559063703/il_fullxfull.8559063703_a2on.jpg"
       ],
+      "video": "",
       "tags": [
         "gold bow earring",
         "bow flatback",
@@ -484,6 +500,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/d66115/8559014997/il_fullxfull.8559014997_qk6j.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -513,6 +530,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/b7a185/8511085468/il_fullxfull.8511085468_qen4.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -542,6 +560,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/0dd077/8559046031/il_fullxfull.8559046031_qz6r.jpg"
       ],
+      "video": "",
       "tags": [
         "gold bow earring",
         "bow flatback",
@@ -571,6 +590,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/81999a/8511051188/il_fullxfull.8511051188_q5qo.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -601,6 +621,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/810a99/8511022266/il_fullxfull.8511022266_fl1z.jpg",
         "https://i.etsystatic.com/67609393/r/il/a7c2b4/8511022430/il_fullxfull.8511022430_rao1.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -631,6 +652,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/dd8fa7/8510995928/il_fullxfull.8510995928_1ert.jpg",
         "https://i.etsystatic.com/67609393/r/il/4315bf/8510997692/il_fullxfull.8510997692_10c9.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -661,6 +683,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
         "https://i.etsystatic.com/67609393/r/il/a10d00/8558847061/il_fullxfull.8558847061_siin.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -690,6 +713,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/c181d3/8558805011/il_fullxfull.8558805011_n75x.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -720,6 +744,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/8bff0f/8510003008/il_fullxfull.8510003008_755c.jpg",
         "https://i.etsystatic.com/67609393/r/il/e480e7/8510003394/il_fullxfull.8510003394_9rab.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -750,6 +775,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/3e57de/8557813877/il_fullxfull.8557813877_cfpb.jpg",
         "https://i.etsystatic.com/67609393/r/il/96b71d/8509944170/il_fullxfull.8509944170_bgjx.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -779,6 +805,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/ec8a54/8509879106/il_fullxfull.8509879106_hrg2.jpg"
       ],
+      "video": "",
       "tags": [
         "bow flatback",
         "threadless earring",
@@ -809,6 +836,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/772551/8557657689/il_fullxfull.8557657689_6ngn.jpg",
         "https://i.etsystatic.com/67609393/r/il/646b60/8509787950/il_fullxfull.8509787950_cw27.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -838,6 +866,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/58ab30/8509748036/il_fullxfull.8509748036_909l.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -866,6 +895,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/84a872/8509707076/il_fullxfull.8509707076_li75.jpg"
       ],
+      "video": "",
       "tags": [
         "threadless earring",
         "push pin earring",
@@ -896,6 +926,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/62357b/8509659802/il_fullxfull.8509659802_1088.jpg",
         "https://i.etsystatic.com/67609393/r/il/fa6beb/8509659804/il_fullxfull.8509659804_bufw.jpg"
       ],
+      "video": "",
       "tags": [
         "mountain bike",
         "bike earrings",
@@ -925,6 +956,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/919681/8509583544/il_fullxfull.8509583544_3emk.jpg"
       ],
+      "video": "",
       "tags": [
         "gold bow earring",
         "bow flatback",
@@ -956,6 +988,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/e20641/8544053133/il_fullxfull.8544053133_hlvc.jpg",
         "https://i.etsystatic.com/67609393/r/il/7cb97f/8496165540/il_fullxfull.8496165540_coun.jpg"
       ],
+      "video": "https://v.etsystatic.com/e/videos/986d/562be43c-7caa-42b4-9c1f-fa3518f8d79e/vid_v1.mp4",
       "tags": [
         "earring connector",
         "earring chain",
@@ -988,6 +1021,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/46e35b/8495611180/il_fullxfull.8495611180_qab4.jpg",
         "https://i.etsystatic.com/67609393/r/il/42d529/8495611174/il_fullxfull.8495611174_3smz.jpg"
       ],
+      "video": "https://v.etsystatic.com/e/videos/dbe3/cef72bb6-381a-42da-9c87-d4c8232015c6/vid_v1.mp4",
       "tags": [
         "earring connector",
         "earring chain",
@@ -1018,6 +1052,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/0ef10e/8520941987/il_fullxfull.8520941987_qdsu.jpg",
         "https://i.etsystatic.com/67609393/r/il/a4a844/8520941985/il_fullxfull.8520941985_u6c4.jpg"
       ],
+      "video": "https://v.etsystatic.com/e/videos/5659/a3612d2d-e9c3-428f-b8e1-b4807ff37424/vid_v1.mp4",
       "tags": [
         "earring connector",
         "earring chain",
@@ -1047,6 +1082,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg"
       ],
+      "video": "https://v.etsystatic.com/e/videos/a491/538b1183-d64b-4292-9f39-0bdc7e2da50c/vid_v1.mp4",
       "tags": [
         "earring connector",
         "earring chain",
@@ -1076,6 +1112,7 @@ window.MICKNACK_PRODUCTS = {
       "images": [
         "https://i.etsystatic.com/67609393/r/il/f5e586/8477015756/il_fullxfull.8477015756_phwu.jpg"
       ],
+      "video": "https://v.etsystatic.com/e/videos/1d66/154a6be8-e211-45f4-a883-38187da38c79/vid_v1.mp4",
       "tags": [
         "earring chain",
         "earring connector",
