@@ -58,11 +58,15 @@ if (!SECRET_KEY) {
   );
   process.exit(1);
 }
-if (LIVE && !SECRET_KEY.startsWith("sk_live_")) {
-  console.error("--live was passed but STRIPE_SECRET_KEY_LIVE is not an sk_live_ key.");
+// Stripe issues sk_ for standard secret keys and rk_ for restricted ones; the
+// "full access except sensitive operations" option gives an rk_ key, which is
+// the recommended choice here and works fine for everything this script does.
+const isLiveKey = /^(sk|rk)_live_/.test(SECRET_KEY);
+if (LIVE && !isLiveKey) {
+  console.error("--live was passed but STRIPE_SECRET_KEY_LIVE is not a live key (sk_live_ or rk_live_).");
   process.exit(1);
 }
-if (!LIVE && SECRET_KEY.startsWith("sk_live_")) {
+if (!LIVE && isLiveKey) {
   console.error("STRIPE_SECRET_KEY looks like a LIVE key. Refusing to run without --live.");
   process.exit(1);
 }
