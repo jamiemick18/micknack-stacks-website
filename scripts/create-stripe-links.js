@@ -25,6 +25,13 @@ const ROOT = join(__dirname, "..");
 const LIVE = process.argv.includes("--live");
 const SITE_URL = "https://micknackstacks.com/";
 const SHIPPING_COUNTRIES = ["US"];
+const SHIPPING_AMOUNT_CENTS = 500; // flat $5.00 shipping
+const SHIPPING_LABEL = "Shipping";
+
+// A payment link's options are fixed once created, so changing them means
+// building new links. Bump this when the options below change (shipping,
+// redirect, address collection) and existing links get rebuilt on next run.
+const CONFIG_VERSION = 2;
 
 function loadEnv() {
   const env = { ...process.env };
@@ -171,23 +178,63 @@ function writeLinks(links) {
   return out;
 }
 
-async function createLinkFor(item) {
-  const product = await stripe("/products", {
-    name: item.name.slice(0, 250),
-    images: item.image && item.image.startsWith("http") ? [item.image] : undefined,
-    metadata: { micknack_id: item.key, source: item.source },
-  });
+// One flat shipping rate is shared by every link. Reused across runs so
+// rebuilding links doesn't pile up duplicate rates in the dashboard.
+let shippingRateId;
+async function getShippingRateId() {
+  if (shippingRateId) return shippingRateId;
 
-  const price = await stripe("/prices", {
-    product: product.id,
-    currency: "usd",
-    unit_amount: Math.round(Number(item.price) * 100),
+  const existing = await stripe("/shipping_rates?limit=100", undefined, "GET");
+  const match = (existing.data || []).find(
+    (rate) =>
+      rate.active &&
+      rate.display_name === SHIPPING_LABEL &&
+      rate.fixed_amount?.amount === SHIPPING_AMOUNT_CENTS &&
+      rate.fixed_amount?.currency === "usd"
+  );
+  if (match) {
+    shippingRateId = match.id;
+    return shippingRateId;
+  }
+
+  const created = await stripe("/shipping_rates", {
+    display_name: SHIPPING_LABEL,
+    type: "fixed_amount",
+    fixed_amount: { amount: SHIPPING_AMOUNT_CENTS, currency: "usd" },
   });
+  shippingRateId = created.id;
+  return shippingRateId;
+}
+
+async function createLinkFor(item, existing) {
+  // When only the link options changed, keep the product and price we already
+  // made rather than leaving orphans behind.
+  const reuse = existing && existing.price === item.price && existing.price_id;
+
+  let productId = reuse ? existing.product_id : undefined;
+  let priceId = reuse ? existing.price_id : undefined;
+
+  if (!reuse) {
+    const product = await stripe("/products", {
+      name: item.name.slice(0, 250),
+      images: item.image && item.image.startsWith("http") ? [item.image] : undefined,
+      metadata: { micknack_id: item.key, source: item.source },
+    });
+    productId = product.id;
+
+    const price = await stripe("/prices", {
+      product: product.id,
+      currency: "usd",
+      unit_amount: Math.round(Number(item.price) * 100),
+    });
+    priceId = price.id;
+  }
 
   const link = await stripe("/payment_links", {
-    line_items: [{ price: price.id, quantity: 1 }],
+    line_items: [{ price: priceId, quantity: 1 }],
     // Physical goods need somewhere to ship to.
     shipping_address_collection: { allowed_countries: SHIPPING_COUNTRIES },
+    shipping_options: [{ shipping_rate: await getShippingRateId() }],
     after_completion: { type: "redirect", redirect: { url: SITE_URL } },
     metadata: { micknack_id: item.key },
   });
@@ -195,9 +242,11 @@ async function createLinkFor(item) {
   return {
     url: link.url,
     price: item.price,
+    shipping_cents: SHIPPING_AMOUNT_CENTS,
+    config: CONFIG_VERSION,
     link_id: link.id,
-    price_id: price.id,
-    product_id: product.id,
+    price_id: priceId,
+    product_id: productId,
   };
 }
 
@@ -213,7 +262,7 @@ async function main() {
 
   for (const item of items) {
     const existing = links[item.key];
-    if (existing && existing.price === item.price) {
+    if (existing && existing.price === item.price && existing.config === CONFIG_VERSION) {
       unchanged++;
       continue;
     }
@@ -227,7 +276,7 @@ async function main() {
       }
     }
 
-    links[item.key] = await createLinkFor(item);
+    links[item.key] = await createLinkFor(item, existing);
     existing ? replaced++ : created++;
     console.log(`  ${existing ? "updated" : "created"}: ${item.name.slice(0, 55)}`);
   }
