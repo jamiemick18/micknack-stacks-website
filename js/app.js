@@ -44,19 +44,18 @@ function toCard(item, { key, buttonLabel, badge }) {
     buttonLabel: item.button_label || (item.url ? buttonLabel : "Coming soon"),
     badge: item.badge || badge || "",
     buyUrl: buyUrl || "",
+    // Clicking the card opens our own product page rather than sending people
+    // straight to Etsy or Stripe.
+    detailUrl: `product.html?id=${encodeURIComponent(key)}`,
   };
 }
 
 function renderCard(card) {
-  const thumbHref = card.buyUrl || card.url;
   const thumbInner = `<img src="${card.image}" alt="${escapeHtml(card.title)}" loading="lazy" />
             ${card.badge ? `<span class="card-badge">${escapeHtml(card.badge)}</span>` : ""}`;
 
-  // Without a link there is nothing to click, so render a plain div instead of
-  // a dead anchor.
-  const thumb = thumbHref
-    ? `<a class="thumb" href="${thumbHref}" target="_blank" rel="noopener">${thumbInner}</a>`
-    : `<div class="thumb">${thumbInner}</div>`;
+  // Same tab: this is our own page, not an outside link.
+  const thumb = `<a class="thumb" href="${card.detailUrl}">${thumbInner}</a>`;
 
   const actions = [];
   if (card.buyUrl) {
@@ -80,7 +79,7 @@ function renderCard(card) {
     <article class="product-card">
       ${thumb}
       <div class="card-body">
-        <h3>${escapeHtml(card.title)}</h3>
+        <h3><a class="card-title-link" href="${card.detailUrl}">${escapeHtml(card.title)}</a></h3>
         ${card.price ? `<div class="price">${formatPrice(card.price, card.currency_code)}</div>` : ""}
         <p class="desc">${escapeHtml(truncate(card.description, 110))}</p>
         <div class="card-actions">${actions.join("")}</div>
