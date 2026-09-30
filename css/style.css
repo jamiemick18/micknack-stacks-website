@@ -242,6 +242,46 @@ img {
   justify-content: center;
 }
 
+.shop-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto 26px;
+  max-width: 420px;
+}
+
+.shop-search input {
+  width: 100%;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid rgba(10, 10, 10, 0.14);
+  border-radius: 999px;
+  padding: 13px 22px;
+  text-align: center;
+}
+
+.shop-search input::placeholder {
+  color: #9a9088;
+  letter-spacing: 0.06em;
+}
+
+.shop-search input:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.search-count {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7a7269;
+  font-variant-numeric: tabular-nums;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

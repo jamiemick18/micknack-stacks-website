@@ -6,6 +6,8 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // Test links only accept Stripe's fake cards, so they're shown on localhost
 // only. Publishing them would give real shoppers a checkout that can't take
 // their money.
+let allCards = [];
+
 const stripeData = window.MICKNACK_STRIPE_LINKS || {};
 const stripeLinks = stripeData.links || {};
 const isLocalhost = ["localhost", "127.0.0.1", "[::1]"].includes(location.hostname);
@@ -48,6 +50,11 @@ function toCard(item, { key, buttonLabel, badge }) {
     // With no link there's nothing to buy yet, so don't promise a purchase.
     buttonLabel: item.button_label || (item.url ? buttonLabel : "Coming soon"),
     badge: stock.soldOut ? "Sold out" : item.badge || badge || "",
+    // Searched against, never displayed on the card.
+    keywords: [item.title, item.description, (item.tags || []).join(" ")]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase(),
     buyUrl: buyUrl || "",
     // Clicking the card opens our own product page rather than sending people
     // straight to Etsy or Stripe.
@@ -138,13 +145,51 @@ function renderProducts(etsyData, extras) {
     return;
   }
 
-  grid.innerHTML = cards.map(renderCard).join("");
+  allCards = cards;
+  applySearch();
+}
+
+// Searching filters the cards already on the page, so results are instant.
+function applySearch() {
+  const input = document.getElementById("shop-search");
+  const countEl = document.getElementById("search-count");
+  const term = input ? input.value.trim().toLowerCase() : "";
+
+  const matches = term
+    ? allCards.filter((card) => term.split(/\s+/).every((word) => card.keywords.includes(word)))
+    : allCards;
+
+  if (countEl) {
+    countEl.textContent = `${matches.length} ${matches.length === 1 ? "piece" : "pieces"}`;
+    countEl.hidden = !term;
+  }
+
+  if (!matches.length) {
+    grid.innerHTML = `<div class="empty-state">
+        <p>Nothing matches “${escapeHtml(term)}”.</p>
+        <a class="btn btn-secondary" href="#" id="clear-search">Show everything</a>
+      </div>`;
+    const clear = document.getElementById("clear-search");
+    if (clear) {
+      clear.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (input) input.value = "";
+        applySearch();
+      });
+    }
+    return;
+  }
+
+  grid.innerHTML = matches.map(renderCard).join("");
 }
 
 // Missing extra-products.js shouldn't take the whole shop down with it.
 const extras = Array.isArray(window.MICKNACK_EXTRA_PRODUCTS)
   ? window.MICKNACK_EXTRA_PRODUCTS
   : [];
+
+const searchInput = document.getElementById("shop-search");
+if (searchInput) searchInput.addEventListener("input", applySearch);
 
 if (window.MICKNACK_PRODUCTS || extras.length) {
   renderProducts(window.MICKNACK_PRODUCTS, extras);
