@@ -128,9 +128,8 @@ async function fetchListingImages(listingId) {
   }
 }
 
-// Photos from the last sync, keyed by listing id. Placeholders are dropped so a
-// past failure is never carried forward as if it were real data.
-function loadPreviousImages() {
+// Everything the last sync wrote, keyed by listing id.
+function loadPreviousCatalog() {
   const previous = new Map();
   const path = join(ROOT, "data", "products.js");
   if (!existsSync(path)) return previous;
@@ -138,13 +137,23 @@ function loadPreviousImages() {
     const text = readFileSync(path, "utf8");
     const data = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1));
     for (const listing of data.listings || []) {
-      const real = (listing.images || []).filter((src) => !src.includes("placeholder"));
-      if (real.length) previous.set(String(listing.listing_id), real);
+      previous.set(String(listing.listing_id), listing);
     }
   } catch (err) {
     console.warn(`Could not read previous products.js: ${err.message}`);
   }
   return previous;
+}
+
+// Photos from the last sync, keyed by listing id. Placeholders are dropped so a
+// past failure is never carried forward as if it were real data.
+function previousImagesFrom(previous) {
+  const images = new Map();
+  for (const [id, listing] of previous) {
+    const real = (listing.images || []).filter((src) => !src.includes("placeholder"));
+    if (real.length) images.set(id, real);
+  }
+  return images;
 }
 
 function normalizeListing(listing, images) {
@@ -169,7 +178,8 @@ async function main() {
   console.log(`Found ${rawListings.length} active listing(s).`);
 
   console.log("Fetching listing images...");
-  const previousImages = loadPreviousImages();
+  const previous = loadPreviousCatalog();
+  const previousImages = previousImagesFrom(previous);
   const listings = [];
   let failed = 0;
   for (const listing of rawListings) {
@@ -187,11 +197,44 @@ async function main() {
     );
   }
 
+  // The site is the permanent record, not a mirror of Etsy. Pieces that leave
+  // Etsy (sold out, expired, retired) stay in the catalog and are simply
+  // marked etsy_active: false, so nothing ever disappears from the site.
+  const now = new Date().toISOString();
+  const merged = [];
+  const seen = new Set();
+
+  for (const listing of listings) {
+    const prior = previous.get(listing.listing_id);
+    merged.push({
+      ...listing,
+      etsy_active: true,
+      added_at: (prior && prior.added_at) || now,
+    });
+    seen.add(listing.listing_id);
+  }
+
+  let retired = 0;
+  for (const [id, prior] of previous) {
+    if (seen.has(id)) continue;
+    merged.push({
+      ...prior,
+      etsy_active: false,
+      added_at: prior.added_at || now,
+      left_etsy_at: prior.left_etsy_at || now,
+    });
+    retired++;
+  }
+
+  if (retired) {
+    console.log(`${retired} piece(s) are no longer active on Etsy; kept on the site.`);
+  }
+
   const output = {
     shop_name: SHOP_NAME,
     shop_url: `https://www.etsy.com/shop/${SHOP_NAME}`,
-    synced_at: new Date().toISOString(),
-    listings,
+    synced_at: now,
+    listings: merged,
   };
 
   const outPath = join(ROOT, "data", "products.js");

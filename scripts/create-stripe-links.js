@@ -150,8 +150,20 @@ function loadCatalog() {
       source: "etsy",
     });
   }
-  // Only items with a price can be sold.
-  return items.filter((i) => i.price && Number(i.price) > 0);
+  // Only items with a price can be sold, and only what's actually in stock.
+  // A sold-out or hidden piece loses its link here and gets a fresh one when
+  // it comes back in stock.
+  const inventory = loadWindowGlobal("inventory.js", "MICKNACK_INVENTORY") || {};
+  const inStock = (item) => {
+    const raw = inventory[item.key];
+    if (raw === undefined || raw === null) return true; // uncounted: still sellable
+    if (typeof raw === "number") return raw > 0;
+    if (typeof raw === "string") return raw !== "hidden" && raw !== "sold_out";
+    if (raw.hidden) return false;
+    return typeof raw.qty === "number" ? raw.qty > 0 : true;
+  };
+
+  return items.filter((i) => i.price && Number(i.price) > 0).filter(inStock);
 }
 
 function loadExistingLinks() {

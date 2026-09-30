@@ -39,6 +39,7 @@ function findProduct(id) {
       currency_code: extra.currency_code,
       description: extra.description,
       images: extra.images || [],
+      video: extra.video || "",
       tags: extra.tags || [],
       etsyUrl: extra.url || "",
       badge: extra.badge || "",
@@ -57,6 +58,7 @@ function findProduct(id) {
     currency_code: listing.currency_code,
     description: listing.description,
     images: listing.images || [],
+    video: listing.video || "",
     tags: listing.tags || [],
     etsyUrl: listing.url || "",
     badge: "",
@@ -76,24 +78,50 @@ function renderNotFound() {
 function renderProduct(product) {
   document.title = `${product.title} | Micknack Stacks`;
 
+  const stock = window.MICKNACK_STOCK.of(product.id);
+  const soldOut = stock.soldOut;
+
+  // A video, when there is one, leads the gallery.
+  const media = [];
+  if (product.video) media.push({ type: "video", src: product.video });
   const images = product.images.length
     ? product.images
     : ["assets/products/placeholder.svg"];
+  images.forEach((src) => media.push({ type: "image", src }));
+
+  const first = media[0];
+  const mainSlot =
+    first.type === "video"
+      ? `<video id="gallery-video" src="${first.src}" controls playsinline preload="metadata"${
+          images[0] ? ` poster="${images[0]}"` : ""
+        }></video>`
+      : `<img id="gallery-image" src="${first.src}" alt="${escapeHtml(product.title)}" />`;
 
   const gallery = `
     <div class="gallery">
-      <div class="gallery-main">
-        <img id="gallery-image" src="${images[0]}" alt="${escapeHtml(product.title)}" />
-        ${product.badge ? `<span class="card-badge">${escapeHtml(product.badge)}</span>` : ""}
+      <div class="gallery-main" id="gallery-main">
+        ${mainSlot}
+        ${
+          soldOut
+            ? `<span class="card-badge">Sold out</span>`
+            : product.badge
+            ? `<span class="card-badge">${escapeHtml(product.badge)}</span>`
+            : ""
+        }
       </div>
       ${
-        images.length > 1
+        media.length > 1
           ? `<div class="gallery-thumbs">
-              ${images
+              ${media
                 .map(
-                  (src, i) =>
-                    `<button type="button" class="gallery-thumb${i === 0 ? " is-active" : ""}" data-src="${src}">
-                       <img src="${src}" alt="View ${i + 1} of ${escapeHtml(product.title)}" loading="lazy" />
+                  (item, i) =>
+                    `<button type="button" class="gallery-thumb${i === 0 ? " is-active" : ""}"
+                       data-type="${item.type}" data-src="${item.src}">
+                       ${
+                         item.type === "video"
+                           ? `<video src="${item.src}" muted playsinline preload="metadata"></video><span class="play-mark" aria-hidden="true">▶</span>`
+                           : `<img src="${item.src}" alt="View ${i + 1} of ${escapeHtml(product.title)}" loading="lazy" />`
+                       }
                      </button>`
                 )
                 .join("")}
@@ -103,16 +131,18 @@ function renderProduct(product) {
     </div>
   `;
 
-  const buyUrl = stripeEnabled ? stripeLinks[product.id]?.url : undefined;
+  const buyUrl = !soldOut && stripeEnabled ? stripeLinks[product.id]?.url : undefined;
   const actions = [];
-  if (buyUrl) {
+  if (soldOut) {
+    actions.push(`<span class="btn btn-muted btn-lg">Sold out</span>`);
+  } else if (buyUrl) {
     actions.push(
       `<a class="btn btn-primary btn-lg" href="${buyUrl}" target="_blank" rel="noopener">Buy Now</a>`
     );
   }
   if (product.etsyUrl) {
     actions.push(
-      `<a class="btn ${buyUrl ? "btn-secondary" : "btn-primary"} btn-lg" href="${product.etsyUrl}" target="_blank" rel="noopener">Buy on Etsy</a>`
+      `<a class="btn ${buyUrl && !soldOut ? "btn-secondary" : "btn-primary"} btn-lg" href="${product.etsyUrl}" target="_blank" rel="noopener">Buy on Etsy</a>`
     );
   }
   if (!actions.length) {
@@ -135,6 +165,7 @@ function renderProduct(product) {
         <h1>${escapeHtml(product.title)}</h1>
         ${product.price ? `<div class="product-price">${formatPrice(product.price, product.currency_code)}</div>` : ""}
         ${buyUrl ? `<p class="shipping-note">${SHIPPING_NOTE}</p>` : ""}
+        ${soldOut ? `<p class="shipping-note">This piece is sold out right now.</p>` : ""}
         <div class="product-actions">${actions.join("")}</div>
         ${
           product.description
@@ -149,11 +180,32 @@ function renderProduct(product) {
     </div>
   `;
 
-  // Thumbnail clicks swap the main photo.
-  const mainImage = document.getElementById("gallery-image");
+  // Thumbnail clicks swap what's in the main slot, photo or video.
+  const mainBox = document.getElementById("gallery-main");
   detail.querySelectorAll(".gallery-thumb").forEach((button) => {
     button.addEventListener("click", () => {
-      mainImage.src = button.dataset.src;
+      const badge = mainBox.querySelector(".card-badge");
+      const type = button.dataset.type;
+      const src = button.dataset.src;
+      mainBox.querySelectorAll("img, video").forEach((node) => node.remove());
+
+      if (type === "video") {
+        const video = document.createElement("video");
+        video.id = "gallery-video";
+        video.src = src;
+        video.controls = true;
+        video.playsInline = true;
+        video.preload = "metadata";
+        mainBox.prepend(video);
+      } else {
+        const img = document.createElement("img");
+        img.id = "gallery-image";
+        img.src = src;
+        img.alt = product.title;
+        mainBox.prepend(img);
+      }
+      if (badge) mainBox.appendChild(badge);
+
       detail
         .querySelectorAll(".gallery-thumb")
         .forEach((b) => b.classList.toggle("is-active", b === button));
@@ -164,7 +216,8 @@ function renderProduct(product) {
 const id = new URLSearchParams(location.search).get("id");
 const product = id ? findProduct(id) : null;
 
-if (product) {
+// A hidden piece is treated as if it isn't on the site.
+if (product && !window.MICKNACK_STOCK.of(product.id).hidden) {
   renderProduct(product);
 } else {
   renderNotFound();

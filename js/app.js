@@ -32,8 +32,13 @@ function escapeHtml(str) {
 // Etsy listings and hand-added pieces render identically; they only differ in
 // where they come from and what their button says.
 function toCard(item, { key, buttonLabel, badge }) {
-  const buyUrl = stripeEnabled ? stripeLinks[key]?.url : undefined;
+  // Quantities live in data/inventory.js and are never shown to shoppers;
+  // they only decide whether a piece can be bought.
+  const stock = window.MICKNACK_STOCK.of(key);
+  const buyUrl = !stock.soldOut && stripeEnabled ? stripeLinks[key]?.url : undefined;
   return {
+    soldOut: stock.soldOut,
+    hidden: stock.hidden,
     title: item.title,
     price: item.price,
     currency_code: item.currency_code,
@@ -42,7 +47,7 @@ function toCard(item, { key, buttonLabel, badge }) {
     url: item.url || "",
     // With no link there's nothing to buy yet, so don't promise a purchase.
     buttonLabel: item.button_label || (item.url ? buttonLabel : "Coming soon"),
-    badge: item.badge || badge || "",
+    badge: stock.soldOut ? "Sold out" : item.badge || badge || "",
     buyUrl: buyUrl || "",
     // Clicking the card opens our own product page rather than sending people
     // straight to Etsy or Stripe.
@@ -58,7 +63,14 @@ function renderCard(card) {
   const thumb = `<a class="thumb" href="${card.detailUrl}">${thumbInner}</a>`;
 
   const actions = [];
-  if (card.buyUrl) {
+  if (card.soldOut) {
+    actions.push(`<span class="btn btn-muted">Sold out</span>`);
+    if (card.url) {
+      actions.push(
+        `<a class="btn btn-secondary" href="${card.url}" target="_blank" rel="noopener">View on Etsy</a>`
+      );
+    }
+  } else if (card.buyUrl) {
     actions.push(
       `<a class="btn btn-primary" href="${card.buyUrl}" target="_blank" rel="noopener">Buy Now</a>`
     );
@@ -99,7 +111,7 @@ function renderProducts(etsyData, extras) {
     ...etsyListings.map((item) =>
       toCard(item, { key: String(item.listing_id), buttonLabel: "View on Etsy" })
     ),
-  ];
+  ].filter((card) => !card.hidden);
 
   const parts = [];
   if (etsyData && etsyData.synced_at) {
