@@ -1,86 +1,121 @@
 # Micknack Stacks — Website
 
-A static storefront that mirrors your Etsy shop (**MicknackStacks**). It's plain
-HTML/CSS/JS — no build step, no framework, no server required to view it —
-plus one small optional Node script that pulls your active listings from the
-Etsy Open API into `data/products.js`.
+Live at **https://jamiemick18.github.io/micknack-stacks-website/**
+
+A plain HTML/CSS/JS storefront. It copies your Etsy listings automatically, and
+you can also add pieces by hand that aren't on Etsy at all.
 
 ```
-index.html            The page
-css/style.css          All styling (brand colors + fonts)
-js/app.js              Renders product cards from data/products.js
-data/products.js       Your listings (sample data until you run the sync)
-assets/                Logo, decorative graphics, sample product images
-scripts/sync-etsy.js   Pulls listings from Etsy → data/products.js (needs Node)
-scripts/serve.js       Optional local server, only useful if you have Node
+index.html              The page itself
+css/style.css           Colors, fonts, layout
+js/app.js               Builds the product cards
+data/products.js        Etsy listings (written by the sync, don't hand-edit)
+data/extra-products.js  Pieces you add by hand (the sync never touches this)
+assets/                 Logo, graphics, product photos you upload
+scripts/sync-etsy.js    Fetches listings from Etsy
+scripts/serve.js        Local preview server
+.github/workflows/      The automation (sync daily, publish the site)
 ```
 
-## 1. Preview it now (sample data)
+## How it updates itself
 
-Just double-click `index.html`, or open it in a browser. That's it — the
-listing data is a plain `.js` file loaded like any script tag, so there's
-nothing to install and nothing to run.
+Every morning around 7am Colorado time, GitHub fetches your active Etsy
+listings, saves them to `data/products.js`, and republishes the site. You don't
+have to do anything.
 
-It already shows placeholder listings (The Aspyn, The Lou, The Maddix) styled
-in your Dark Alpine palette, sourced from the inspiration images already in
-your `Product` folder.
+**To update it right now instead of waiting:** go to
+[the sync workflow](https://github.com/jamiemick18/micknack-stacks-website/actions/workflows/sync-etsy.yml),
+click **Run workflow**, then the green **Run workflow** button. Give it about
+two minutes.
 
-## 2. Connect your real Etsy listings
+Only listings that are **Active** on Etsy show up. Drafts are ignored.
 
-This step needs [Node.js](https://nodejs.org) installed on your computer
-(free, one-click installer — pick the "LTS" version). It's the only part of
-this project that needs anything installed; the site itself never does.
+## Adding a piece that isn't on Etsy
 
-Then, get a free Etsy developer API key — about 5 minutes:
+Use this for anything you don't want to pay Etsy's $0.20 listing fee for:
+pieces that didn't sell, one-offs, things you're testing. There's no limit and
+no cost.
 
-1. Go to **https://www.etsy.com/developers/register** and sign in with your
-   Etsy account (the same one that owns the MicknackStacks shop).
-2. Create a new app (any name/description is fine, e.g. "Micknack Stacks Website").
-3. Etsy gives you a **Keystring** and a **Shared Secret** on the app's page.
-   Your API key is both of these joined with a colon:
-   `yourkeystring:yoursharedsecret` — the Keystring alone will fail with a
-   403 "Invalid API key" error.
-4. In this `Website` folder, copy `.env.example` to `.env`:
-   ```bash
-   cp .env.example .env
-   ```
-5. Open `.env` and paste your key:
-   ```
-   ETSY_API_KEY=yourkeystring:yoursharedsecret
-   ETSY_SHOP_NAME=MicknackStacks
-   ```
-6. Run the sync script (no extra installs needed, it only uses Node's
-   built-ins):
-   ```bash
-   node scripts/sync-etsy.js
-   ```
+All of it can be done on github.com in your browser:
 
-This fetches every **active** listing in your shop (title, price, photos,
-description, tags) and overwrites `data/products.js`. Refresh `index.html`
-in your browser to see your real listings.
+**1. Upload the photo**
 
-Re-run `node scripts/sync-etsy.js` any time you add, edit, or retire a
-listing on Etsy — it's a one-way, read-only pull, so nothing you do on this
-site ever touches your Etsy shop or listings.
+- Open the [assets/products folder](https://github.com/jamiemick18/micknack-stacks-website/tree/main/assets/products)
+- **Add file** → **Upload files**, drag your photo in, then **Commit changes**
+- Note the file name, e.g. `rose-studs.jpg`
 
-> The `.env` file holds your private API key and is already excluded via
-> `.gitignore` — never commit it or share it publicly.
+**2. Add the item**
 
-## 3. Put it online
+- Open [data/extra-products.js](https://github.com/jamiemick18/micknack-stacks-website/blob/main/data/extra-products.js)
+- Click the pencil icon to edit
+- Paste a block like this between the `[` and `]` brackets:
 
-Since it's just static files, any of these work (all have free tiers):
+```js
+  {
+    id: "rose-studs",
+    title: "Black Rose Studs | Gold Flatback",
+    price: "15.99",
+    description: "A short description. The first line or so shows on the card.",
+    images: ["assets/products/rose-studs.jpg"],
+    url: "",
+    badge: "Only here",
+  },
+```
 
-- **Netlify** — drag the `Website` folder onto https://app.netlify.com/drop
-- **Vercel** — `vercel deploy` from inside `Website/`
-- **GitHub Pages** — push `Website/` to a repo and enable Pages on it
+- **Commit changes**. The site updates in about a minute.
 
-Whichever host you pick, re-run the sync script locally and re-deploy (or
-push) whenever you want the live site to pick up new Etsy listings — there's
-no live database, so it only updates when you sync.
+**What each line does**
 
-## Customizing
+| Field | Required? | Notes |
+|---|---|---|
+| `id` | Yes | Any short nickname, no spaces, unique |
+| `title` | Yes | Shown on the card |
+| `price` | No | Number only, no `$`. Leave it out to hide the price |
+| `description` | No | First ~110 characters show on the card |
+| `images` | No | Your uploaded photo, or a web link |
+| `url` | No | Where the button goes. Empty means no button |
+| `button_label` | No | Button wording. Defaults to "Buy Now" |
+| `badge` | No | Small label on the photo, e.g. "Only here" |
 
-- **Colors/fonts**: `css/style.css`, top `:root` block.
-- **Copy** (tagline, about section): `index.html`.
-- **Decorative graphics**: swap files in `assets/` — they're pulled from
-  your existing Dark Alpine graphics pack and shop banner.
+Items with no `url` show a "Coming soon" label instead of a button. When you're
+ready to sell directly, put a Stripe payment link in `url` and it becomes a
+working Buy button.
+
+Keep the commas and quote marks exactly as shown. If the page ever goes blank
+after an edit, a comma or quote is usually missing — undo that commit on GitHub
+and the site comes right back.
+
+## Changing the words or colors
+
+- **Headline, tagline, About text**: [index.html](https://github.com/jamiemick18/micknack-stacks-website/blob/main/index.html)
+- **Colors and fonts**: `css/style.css`, the `:root` block at the top
+- **Logo and graphics**: replace files in `assets/`
+
+## For developers
+
+Local preview (needs [Node.js](https://nodejs.org)):
+
+```bash
+node scripts/serve.js     # http://localhost:5173
+```
+
+Run the Etsy sync locally: copy `.env.example` to `.env` and set
+`ETSY_API_KEY` to your Etsy app's **Keystring and Shared Secret joined by a
+colon** (`keystring:sharedsecret` — the keystring alone returns 403). Then:
+
+```bash
+node scripts/sync-etsy.js
+```
+
+In GitHub Actions the same value comes from the `ETSY_API_KEY` repository
+secret. `.env` is gitignored and must never be committed.
+
+Notes on the automation:
+
+- `sync-etsy.yml` commits changes, then calls `deploy-pages.yml` directly,
+  because a push made with `GITHUB_TOKEN` does not trigger other workflows.
+- Both workflows check out `ref: main` rather than the triggering commit, so a
+  sync publishes the data it just wrote instead of the previous run's.
+- Photos need a separate API call per listing (the bulk endpoint ignores
+  `includes=Images`), so requests are spaced out and retried to stay under
+  Etsy's 5 requests/second limit.
