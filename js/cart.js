@@ -104,6 +104,14 @@ document.addEventListener("click", (event) => {
 
   // Options come from the selects next to the button, when a piece has any.
   const optionRoot = button.closest("[data-options-for]");
+
+  // No drop-downs beside the button, but the piece has some: adding here
+  // would put it in the cart with no length on it. Go and choose instead.
+  const pieceVariations = (window.MICKNACK_VARIATIONS || {})[button.dataset.id];
+  if (!optionRoot && pieceVariations && pieceVariations.length) {
+    window.location.href = `product.html?id=${encodeURIComponent(button.dataset.id)}`;
+    return;
+  }
   const options = {};
   let missing = null;
   if (optionRoot) {

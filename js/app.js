@@ -38,7 +38,13 @@ function toCard(item, { key, buttonLabel, badge }) {
   // they only decide whether a piece can be bought.
   const stock = window.MICKNACK_STOCK.of(key);
   const buyUrl = !stock.soldOut && stripeEnabled ? stripeLinks[key]?.url : undefined;
+  // A piece with drop-downs cannot be added from here: there would be no
+  // length on the order. The card sends people to the piece to choose first.
+  const variations =
+    (window.MICKNACK_VARIATIONS || {})[key] ||
+    (Array.isArray(item.variations) ? item.variations : []);
   return {
+    hasOptions: variations.length > 0,
     id: key,
     priceId: (stripeLinks[key] || {}).price_id || "",
     soldOut: stock.soldOut,
@@ -74,6 +80,15 @@ function renderCard(card) {
   const actions = [];
   if (card.soldOut) {
     actions.push(`<span class="btn btn-muted">Sold out</span>`);
+    if (card.url) {
+      actions.push(
+        `<a class="btn btn-secondary" href="${card.url}" target="_blank" rel="noopener">View on Etsy</a>`
+      );
+    }
+  } else if (card.buyUrl && card.priceId && card.hasOptions) {
+    actions.push(
+      `<a class="btn btn-primary" href="${card.detailUrl}">Choose options</a>`
+    );
     if (card.url) {
       actions.push(
         `<a class="btn btn-secondary" href="${card.url}" target="_blank" rel="noopener">View on Etsy</a>`
