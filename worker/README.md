@@ -37,3 +37,36 @@ prices.
 - It only accepts Stripe price ids and quantities from 1 to 20.
 - It doesn't check stock. If a piece sells out between adding it to a cart and
   paying, the order still goes through.
+
+## Reconnecting Etsy (about every 90 days)
+
+The sync reads your listings with an API key, but Etsy will not hand over the
+option drop-downs without your permission as the shop owner. That permission
+lasts 90 days and only a person can renew it, so this is the one job here that
+cannot run itself.
+
+When it lapses, nothing breaks: the sync keeps running and leaves
+`data/variations.js` exactly as it is. The run log says so with a warning, and
+the site keeps showing the options it already knows about.
+
+To reconnect:
+
+```bash
+node scripts/etsy-connect.js
+```
+
+It prints a link. Open it while signed in to Etsy, check the screen asks only to
+read your listings, and click Allow. You land on `micknackstacks.com/oauth.html`
+with a short code. Then:
+
+```bash
+node scripts/etsy-connect.js <code>
+```
+
+That writes the new token to `.env`, which is gitignored and never printed.
+Copy the same value into the repository secret `ETSY_REFRESH_TOKEN` at
+Settings, Secrets and variables, Actions. The script prints a one-liner that
+puts it on your clipboard without showing it on screen.
+
+Your Etsy password is never involved at any point, and you can withdraw the
+permission from Etsy under Account settings, Apps.

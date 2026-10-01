@@ -36,6 +36,9 @@ jobs:
         env:
           ETSY_API_KEY: ${{ secrets.ETSY_API_KEY }}
           ETSY_SHOP_NAME: ${{ vars.ETSY_SHOP_NAME }}
+          # Lets the sync read option drop-downs. Without it the sync still
+          # runs and simply leaves data/variations.js alone.
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
         run: node scripts/sync-etsy.js
 
       # Etsy sales move the shop's own stock. Sent as changes, not totals, so a
@@ -80,10 +83,10 @@ jobs:
         run: |
           git config user.name "micknack-stacks-bot"
           git config user.email "actions@users.noreply.github.com"
-          if git diff --quiet -- data/products.js data/etsy-stock-deltas.json; then
+          if git diff --quiet -- data/products.js data/etsy-stock-deltas.json data/variations.js; then
             echo "No listing changes — nothing to commit."
           else
-            git add data/products.js data/etsy-stock-deltas.json
+            git add data/products.js data/etsy-stock-deltas.json data/variations.js
             git commit -m "Sync Etsy listings"
             # Rebase onto anything pushed while this run was in flight, so a
             # concurrent commit doesn't fail the sync.
