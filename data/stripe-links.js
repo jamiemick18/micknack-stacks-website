@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-09-30T18:53:30.179Z",
+  "generated_at": "2026-10-01T23:51:54.703Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/00w9AMfLH17d5pz5taaZi0B",
@@ -337,6 +337,15 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1ULSdC680JvUCS8JLYKtgrWz",
       "price_id": "price_1ULSdB680JvUCS8Jr6NZj6ZV",
       "product_id": "prod_VMAzl7qw33oprg"
+    },
+    "4586013046": {
+      "url": "https://buy.stripe.com/9B67sE5738zF19j3l2aZi1c",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1ULtlW680JvUCS8Jnaq4duxX",
+      "price_id": "price_1ULtlW680JvUCS8J88gftppE",
+      "product_id": "prod_VMd12OO6X855zi"
     }
   }
 };

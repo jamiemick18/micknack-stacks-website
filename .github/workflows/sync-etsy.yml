@@ -41,43 +41,17 @@ jobs:
           ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
         run: node scripts/sync-etsy.js
 
-      # Etsy sales move the shop's own stock. Sent as changes, not totals, so a
-      # sale made on the site isn't undone by Etsy's older count.
+      # Keeps the checkout worker in step with the shop: which piece each
+      # Stripe price belongs to, how far Etsy's counts moved, and a first
+      # count for any piece the worker has not seen before.
       #
-      # The worker is called on every run, even with nothing to send, because a
-      # run that quietly skips looks exactly like one where the secrets are
-      # missing. An empty set of changes writes nothing and still answers.
-      - name: Send Etsy stock changes to the checkout worker
+      # Run every time, even with nothing to send. A run that skips quietly
+      # looks exactly like one where the secrets are missing.
+      - name: Update the checkout worker
         env:
           WORKER_URL: ${{ secrets.WORKER_URL }}
           WORKER_ADMIN_TOKEN: ${{ secrets.WORKER_ADMIN_TOKEN }}
-        run: |
-          if [ -z "$WORKER_ADMIN_TOKEN" ] || [ -z "$WORKER_URL" ]; then
-            echo "::warning::WORKER_URL or WORKER_ADMIN_TOKEN is not set, so the shop's stock was left alone."
-            exit 0
-          fi
-
-          if [ -f data/etsy-stock-deltas.json ]; then
-            node -e 'const d=require("./data/etsy-stock-deltas.json");console.log(JSON.stringify({deltas:d.deltas||{}}))' > /tmp/deltas.json
-          else
-            echo '{"deltas":{}}' > /tmp/deltas.json
-          fi
-
-          changes=$(node -e 'console.log(Object.keys(require("/tmp/deltas.json").deltas).length)')
-          echo "Etsy stock changes to send: $changes"
-
-          code=$(curl -sS -o /tmp/worker-reply.json -w '%{http_code}' \
-            -X POST "$WORKER_URL/admin" \
-            -H "Content-Type: application/json" \
-            -H "X-Admin-Token: $WORKER_ADMIN_TOKEN" \
-            -d @/tmp/deltas.json)
-          echo "Worker replied $code: $(cat /tmp/worker-reply.json)"
-
-          if [ "$code" != "200" ]; then
-            echo "::error::The checkout worker refused the stock update."
-            exit 1
-          fi
-          echo "Stock link to the checkout worker is healthy."
+        run: node scripts/push-stock.js
 
       - name: Commit and push if listings changed
         run: |
