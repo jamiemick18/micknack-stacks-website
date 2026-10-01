@@ -2,8 +2,38 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-09-30T19:47:05.089Z",
+  "synced_at": "2026-10-01T13:17:40.579Z",
   "listings": [
+    {
+      "listing_id": "4586013046",
+      "title": "Badd Mommi Black CZ Ear Chain | 1.5mm Gold Earring Connector | 4mm Black Stone Cartilage Chain | Edgy Curated Ear Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4586013046/badd-mommi-black-cz-ear-chain-15mm-gold",
+      "description": "Badd Mommi 🖤⛓️\nPretty and absolutely not here to behave.\n\nBadd Mommi is a moody gold ear chain connector finished with five 4 mm black CZ stones for a sleek, high-contrast look. The dainty 1.5 mm chain keeps it light and wearable, while the black stones add just enough edge to make the whole stack feel a little more edgy.\n\nThis one is for the girls who like their jewelry polished, but not too sweet.\n\nWhy you’ll love it:\nFive 4 mm black CZ stones\nDainty 1.5 mm gold-tone chain\nChain connector only\n3mm connector loops\nSoft drape with subtle movement\nDark, edgy look without feeling bulky\nEasy to style between compatible hoops, flatbacks, or earrings\nPerfect for alt, goth, and curated ear stacks\n\nStyle it your way\nBadd Mommi is designed as a chain connector only, so you can attach it between compatible jewelry you already own.\n\nUse it between two piercings to add movement, texture, and a little black sparkle without changing the rest of your stack.\n\nMaterials & Details:\n1.5 mm gold-tone chain\nFive 4 mm black CZ stones\nConnector loops at each end\nEar-chain connector only\nEarrings / labret posts not included\n\nPerfect for\nHelix-to-lobe styling • Cartilage stacks • Multi-piercing looks • Alt ear stacks • Gothic jewelry styling • Curated ears\nBlack stones. Gold chain. Badd intentions. \n\n🖤\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/05859e/8651994183/il_fullxfull.8651994183_4av3.jpg",
+        "https://i.etsystatic.com/67609393/r/il/173938/8651994177/il_fullxfull.8651994177_h4ud.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "piercing chain",
+        "cartilage chain",
+        "multiple piercings",
+        "black earrings",
+        "alt jewelry",
+        "black CZ"
+      ],
+      "quantity": 1,
+      "etsy_active": true,
+      "added_at": "2026-10-01T13:17:40.579Z"
+    },
     {
       "listing_id": "4584458361",
       "title": "Checkered Black & Clear CZ Ear Chain | 30mm Gold Connector Chain | ASTM F136 Titanium Labret Option | 6mm or 8mm Flatback",
