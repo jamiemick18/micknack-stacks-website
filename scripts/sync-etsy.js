@@ -308,7 +308,12 @@ async function main() {
 async function syncVariations(listings, now) {
   const refreshToken = env.ETSY_REFRESH_TOKEN;
   if (!refreshToken) {
-    console.log("No Etsy OAuth token set; leaving data/variations.js alone.");
+    // A warning, not a quiet note: this is a degraded run, and it should be
+    // visible on the run summary rather than buried in the log.
+    console.log(
+      "::warning::ETSY_REFRESH_TOKEN is not set, so option drop-downs were not read. " +
+        "data/variations.js is unchanged."
+    );
     return;
   }
 
