@@ -38,23 +38,34 @@ const Cart = {
     );
   },
 
+  // A piece in two different options is two cart lines, so "6mm" and "8mm"
+  // can sit side by side with their own quantities.
+  lineId(piece) {
+    const options = piece.options || {};
+    const parts = Object.keys(options)
+      .sort()
+      .map((name) => `${name}=${options[name]}`);
+    return parts.length ? `${piece.id}|${parts.join("|")}` : String(piece.id);
+  },
+
   add(piece) {
     const items = this.items();
-    const existing = items.find((item) => item.id === piece.id);
+    const line = this.lineId(piece);
+    const existing = items.find((item) => this.lineId(item) === line);
     if (existing) existing.quantity = Math.min(20, existing.quantity + 1);
     else items.push({ ...piece, quantity: 1 });
     this.save(items);
   },
 
-  setQuantity(id, quantity) {
+  setQuantity(line, quantity) {
     const items = this.items()
-      .map((item) => (item.id === id ? { ...item, quantity } : item))
+      .map((item) => (this.lineId(item) === line ? { ...item, quantity } : item))
       .filter((item) => item.quantity > 0);
     this.save(items);
   },
 
-  remove(id) {
-    this.save(this.items().filter((item) => item.id !== id));
+  remove(line) {
+    this.save(this.items().filter((item) => this.lineId(item) !== line));
   },
 
   clear() {
@@ -91,12 +102,33 @@ document.addEventListener("click", (event) => {
   if (!button) return;
   event.preventDefault();
 
+  // Options come from the selects next to the button, when a piece has any.
+  const optionRoot = button.closest("[data-options-for]");
+  const options = {};
+  let missing = null;
+  if (optionRoot) {
+    optionRoot.querySelectorAll("select[data-option-name]").forEach((select) => {
+      if (!select.value) missing = missing || select.dataset.optionName;
+      else options[select.dataset.optionName] = select.value;
+    });
+  }
+
+  if (missing) {
+    const note = optionRoot.querySelector("[data-option-error]");
+    if (note) {
+      note.textContent = `Please choose a ${missing.toLowerCase()}.`;
+      note.hidden = false;
+    }
+    return;
+  }
+
   Cart.add({
     id: button.dataset.id,
     price_id: button.dataset.priceId,
     title: button.dataset.title,
     price: button.dataset.price,
     image: button.dataset.image || "",
+    options,
   });
 
   const original = button.textContent;

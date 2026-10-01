@@ -300,6 +300,58 @@ img {
   .cart-summary { max-width: none; }
 }
 
+/* ---------- Product options (variations) ---------- */
+
+.product-options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.option-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 280px;
+}
+
+.option-field label {
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #6b6b6b;
+}
+
+.option-field select {
+  font-family: "Jost", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid rgba(10, 10, 10, 0.18);
+  border-radius: 2px;
+  padding: 11px 12px;
+  cursor: pointer;
+}
+
+.option-field select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.option-error {
+  color: #9a3412;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.cart-options {
+  font-size: 0.8rem;
+  color: #6b6b6b;
+  margin-top: 3px;
+}
+
 /* A piece in the cart that can't be bought as things stand. */
 .cart-alert {
   background: #fdf3ee;

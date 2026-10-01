@@ -239,13 +239,16 @@ async function handleCheckout(request, env, cors, origin) {
     return json({ error: "Could not read the cart." }, 400, cors);
   }
 
-  const lines = (Array.isArray(payload.items) ? payload.items : [])
+  const requested = (Array.isArray(payload.items) ? payload.items : [])
     .slice(0, MAX_LINES)
     .map((item) => ({
       price: String(item.price_id || ""),
       quantity: Math.min(MAX_QTY, Math.max(1, Math.floor(Number(item.quantity) || 1))),
+      options: item.options && typeof item.options === "object" ? item.options : {},
     }))
     .filter((line) => /^price_[A-Za-z0-9]+$/.test(line.price));
+
+  const lines = requested.map(({ price, quantity }) => ({ price, quantity }));
 
   if (!lines.length) return json({ error: "Your cart is empty." }, 400, cors);
 
@@ -278,10 +281,23 @@ async function handleCheckout(request, env, cors, origin) {
 
   const siteOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
 
+  // The buyer's choices ride along as metadata, so the order in Stripe says
+  // which length or colour to pack. Stripe caps a value at 500 characters.
+  const metadata = {};
+  for (const line of requested) {
+    const chosen = Object.entries(line.options)
+      .map(([name, value]) => `${name}: ${value}`)
+      .join(", ");
+    if (!chosen) continue;
+    const pieceId = (await pieceForPrice(env, line.price)) || line.price;
+    metadata[`opt_${String(pieceId).slice(0, 36)}`] = chosen.slice(0, 500);
+  }
+
   try {
     const session = await stripe(env, "/checkout/sessions", {
       mode: "payment",
       line_items: lines,
+      metadata,
       shipping_address_collection: { allowed_countries: ["US"] },
       shipping_options: [
         {

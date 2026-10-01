@@ -40,6 +40,7 @@ function findProduct(id) {
       description: extra.description,
       images: extra.images || [],
       video: extra.video || "",
+      variations: Array.isArray(extra.variations) ? extra.variations : [],
       tags: extra.tags || [],
       etsyUrl: extra.url || "",
       badge: extra.badge || "",
@@ -148,6 +149,33 @@ function renderProduct(product) {
         : `<a class="btn btn-primary btn-lg" href="${buyUrl}" target="_blank" rel="noopener">Buy Now</a>`
     );
   }
+
+  // Drop-downs the buyer picks from, the way Etsy's options work. Every one
+  // has to be chosen before the piece can go in the cart. data/variations.js
+  // wins, so an Etsy piece can be given options without touching its listing.
+  const variations =
+    (window.MICKNACK_VARIATIONS || {})[product.id] ||
+    (Array.isArray(product.variations) ? product.variations : []);
+  const optionsBlock =
+    variations.length && !soldOut
+      ? `<div class="product-options">
+           ${variations
+             .map((variation, i) => {
+               const id = `option-${i}`;
+               return `<div class="option-field">
+                   <label for="${id}">${escapeHtml(variation.name)}</label>
+                   <select id="${id}" data-option-name="${escapeHtml(variation.name)}">
+                     <option value="">Choose ${escapeHtml(variation.name.toLowerCase())}</option>
+                     ${(variation.options || [])
+                       .map((opt) => `<option value="${escapeHtml(opt)}">${escapeHtml(opt)}</option>`)
+                       .join("")}
+                   </select>
+                 </div>`;
+             })
+             .join("")}
+           <p class="option-error" data-option-error hidden></p>
+         </div>`
+      : "";
   if (product.etsyUrl) {
     actions.push(
       `<a class="btn ${buyUrl && !soldOut ? "btn-secondary" : "btn-primary"} btn-lg" href="${product.etsyUrl}" target="_blank" rel="noopener">Buy on Etsy</a>`
@@ -174,7 +202,10 @@ function renderProduct(product) {
         ${product.price ? `<div class="product-price">${formatPrice(product.price, product.currency_code)}</div>` : ""}
         ${buyUrl ? `<p class="shipping-note">${SHIPPING_NOTE}</p>` : ""}
         ${soldOut ? `<p class="shipping-note">This piece is sold out right now.</p>` : ""}
-        <div class="product-actions">${actions.join("")}</div>
+        <div data-options-for="${escapeHtml(product.id)}">
+          ${optionsBlock}
+          <div class="product-actions">${actions.join("")}</div>
+        </div>
         ${
           product.description
             ? `<div class="product-description">

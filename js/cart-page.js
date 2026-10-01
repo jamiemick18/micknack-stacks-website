@@ -43,10 +43,20 @@ function problemLines() {
 }
 
 function fixCart() {
+  const Cart = window.MICKNACK_CART;
   problemLines().forEach(({ item, left, kind }) => {
-    if (kind === "sold_out") window.MICKNACK_CART.remove(item.id);
-    else window.MICKNACK_CART.setQuantity(item.id, left);
+    const line = Cart.lineId(item);
+    if (kind === "sold_out") Cart.remove(line);
+    else Cart.setQuantity(line, left);
   });
+}
+
+function optionsLine(item) {
+  const entries = Object.entries(item.options || {});
+  if (!entries.length) return "";
+  return `<div class="cart-options">${entries
+    .map(([name, value]) => `${escapeHtml(name)}: ${escapeHtml(value)}`)
+    .join(" &middot; ")}</div>`;
 }
 
 function renderCartPage() {
@@ -100,6 +110,7 @@ function renderCartPage() {
     <ul class="cart-lines">
       ${items
         .map((item) => {
+          const line = Cart.lineId(item);
           const left = availableFor(item.id);
           const flagged = problemIds.has(item.id);
           const note =
@@ -114,19 +125,20 @@ function renderCartPage() {
             : "";
 
           return `
-        <li class="cart-line${flagged ? " is-problem" : ""}" data-id="${escapeHtml(item.id)}">
+        <li class="cart-line${flagged ? " is-problem" : ""}" data-id="${escapeHtml(line)}">
           <a class="cart-thumb" href="product.html?id=${encodeURIComponent(item.id)}">
             <img src="${escapeHtml(item.image)}" alt="" loading="lazy" />
           </a>
           <div class="cart-line-meta">
             <a class="cart-title" href="product.html?id=${encodeURIComponent(item.id)}">${escapeHtml(item.title)}</a>
+            ${optionsLine(item)}
             <div class="cart-price">${money(item.price)} each ${problemChip}${note}</div>
           </div>
           <div class="cart-line-controls">
-            <label class="sr-only" for="qty-${escapeHtml(item.id)}">Quantity</label>
-            <input class="cart-qty" id="qty-${escapeHtml(item.id)}" type="number" min="0" max="20" step="1" value="${item.quantity}" data-qty="${escapeHtml(item.id)}" />
+            <label class="sr-only" for="qty-${escapeHtml(line)}">Quantity</label>
+            <input class="cart-qty" id="qty-${escapeHtml(line)}" type="number" min="0" max="20" step="1" value="${item.quantity}" data-qty="${escapeHtml(line)}" />
             <div class="cart-line-total">${money(Number(item.price) * item.quantity)}</div>
-            <button type="button" class="cart-remove" data-remove="${escapeHtml(item.id)}">Remove</button>
+            <button type="button" class="cart-remove" data-remove="${escapeHtml(line)}">Remove</button>
           </div>
         </li>`;
         })
@@ -194,7 +206,11 @@ cartRoot.addEventListener("click", async (event) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        items: items.map((item) => ({ price_id: item.price_id, quantity: item.quantity })),
+        items: items.map((item) => ({
+          price_id: item.price_id,
+          quantity: item.quantity,
+          options: item.options || {},
+        })),
       }),
     });
     const data = await response.json();
