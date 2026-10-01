@@ -1,9 +1,9 @@
 // The shopping cart: kept in this browser, checked out through the Cloudflare
 // worker in worker/checkout-worker.js.
 //
-// Paste your Worker's URL here after deploying it (see worker/README.md).
-// Until then, Add to cart still works and Checkout explains what's missing.
-const CHECKOUT_ENDPOINT = "";
+// The Cloudflare Worker that turns a cart into a Stripe checkout page.
+// See worker/README.md if this ever needs redeploying.
+const CHECKOUT_ENDPOINT = "https://micknack-checkout.jamie-mick18.workers.dev";
 
 const CART_KEY = "micknack-cart";
 
