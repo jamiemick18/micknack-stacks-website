@@ -39,31 +39,42 @@ jobs:
         run: node scripts/sync-etsy.js
 
       # Etsy sales move the shop's own stock. Sent as changes, not totals, so a
-      # sale made on the site isn't undone by Etsy's older count. Skipped
-      # quietly until the worker's URL and token are set as repository secrets.
+      # sale made on the site isn't undone by Etsy's older count.
+      #
+      # The worker is called on every run, even with nothing to send, because a
+      # run that quietly skips looks exactly like one where the secrets are
+      # missing. An empty set of changes writes nothing and still answers.
       - name: Send Etsy stock changes to the checkout worker
         env:
           WORKER_URL: ${{ secrets.WORKER_URL }}
           WORKER_ADMIN_TOKEN: ${{ secrets.WORKER_ADMIN_TOKEN }}
         run: |
           if [ -z "$WORKER_ADMIN_TOKEN" ] || [ -z "$WORKER_URL" ]; then
-            echo "Worker not configured yet; skipping stock update."
+            echo "::warning::WORKER_URL or WORKER_ADMIN_TOKEN is not set, so the shop's stock was left alone."
             exit 0
           fi
-          if [ ! -f data/etsy-stock-deltas.json ]; then
-            echo "No deltas file; nothing to send."
-            exit 0
+
+          if [ -f data/etsy-stock-deltas.json ]; then
+            node -e 'const d=require("./data/etsy-stock-deltas.json");console.log(JSON.stringify({deltas:d.deltas||{}}))' > /tmp/deltas.json
+          else
+            echo '{"deltas":{}}' > /tmp/deltas.json
           fi
-          if ! node -e 'const d=require("./data/etsy-stock-deltas.json");process.exit(Object.keys(d.deltas||{}).length?0:1)'; then
-            echo "No stock changes to send."
-            exit 0
-          fi
-          node -e 'const d=require("./data/etsy-stock-deltas.json");console.log(JSON.stringify({deltas:d.deltas}))' > /tmp/deltas.json
-          curl -sS -X POST "$WORKER_URL/admin" \
+
+          changes=$(node -e 'console.log(Object.keys(require("/tmp/deltas.json").deltas).length)')
+          echo "Etsy stock changes to send: $changes"
+
+          code=$(curl -sS -o /tmp/worker-reply.json -w '%{http_code}' \
+            -X POST "$WORKER_URL/admin" \
             -H "Content-Type: application/json" \
             -H "X-Admin-Token: $WORKER_ADMIN_TOKEN" \
-            -d @/tmp/deltas.json
-          echo
+            -d @/tmp/deltas.json)
+          echo "Worker replied $code: $(cat /tmp/worker-reply.json)"
+
+          if [ "$code" != "200" ]; then
+            echo "::error::The checkout worker refused the stock update."
+            exit 1
+          fi
+          echo "Stock link to the checkout worker is healthy."
 
       - name: Commit and push if listings changed
         run: |
