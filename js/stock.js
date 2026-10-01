@@ -5,6 +5,25 @@
 // a piece can be bought, and never print the number.
 
 window.MICKNACK_STOCK = {
+  // Live counts from the checkout worker, once they arrive. These win over
+  // data/inventory.js, because the worker is what actually sells things: it
+  // counts down on every purchase, so it knows before the file does.
+  live: null,
+
+  async loadLive(endpoint) {
+    try {
+      const response = await fetch(endpoint, { cache: "no-store" });
+      if (!response.ok) return false;
+      const data = await response.json();
+      if (!data || typeof data.stock !== "object") return false;
+      this.live = data.stock;
+      return true;
+    } catch (err) {
+      // The shop still works from the published file if the worker is down.
+      return false;
+    }
+  },
+
   /**
    * Returns {qty, hidden, soldOut, tracked} for a piece.
    *
@@ -16,6 +35,13 @@ window.MICKNACK_STOCK = {
   of(key) {
     const inventory = window.MICKNACK_INVENTORY || {};
     const raw = inventory[key];
+
+    // A live count answers the only question the shop asks: can this be bought?
+    if (this.live && typeof this.live[key] === "number") {
+      const qty = this.live[key];
+      const hidden = Boolean(raw && typeof raw === "object" && raw.hidden) || raw === "hidden";
+      return { qty, hidden, soldOut: qty <= 0, tracked: true };
+    }
 
     if (raw === undefined || raw === null) {
       return { qty: null, hidden: false, soldOut: false, tracked: false };

@@ -114,6 +114,23 @@ cartRoot.addEventListener("click", async (event) => {
       }),
     });
     const data = await response.json();
+
+    // Something in the cart sold out between adding it and paying.
+    if (response.status === 409) {
+      const names = (data.items || [])
+        .map((entry) => {
+          const line = window.MICKNACK_CART.items().find((item) => item.id === entry.id);
+          const title = line ? line.title : "a piece";
+          return entry.left === 0 ? `${title} (sold out)` : `${title} (only ${entry.left} left)`;
+        })
+        .join("; ");
+      error.textContent = `${data.message} ${names}`.trim();
+      error.hidden = false;
+      checkout.disabled = false;
+      checkout.textContent = "Checkout";
+      return;
+    }
+
     if (!response.ok || !data.url) throw new Error(data.error || "Checkout failed");
     window.location.href = data.url;
   } catch (err) {

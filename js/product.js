@@ -221,8 +221,15 @@ function renderProduct(product) {
   });
 }
 
+const STOCK_ENDPOINT = "https://micknack-checkout.jamie-mick18.workers.dev/stock";
+
 const id = new URLSearchParams(location.search).get("id");
 const product = id ? findProduct(id) : null;
+
+// Redraw once the worker says what's actually left.
+window.MICKNACK_STOCK.loadLive(STOCK_ENDPOINT).then((ok) => {
+  if (ok && product && !window.MICKNACK_STOCK.of(product.id).hidden) renderProduct(product);
+});
 
 // A hidden piece is treated as if it isn't on the site.
 if (product && !window.MICKNACK_STOCK.of(product.id).hidden) {

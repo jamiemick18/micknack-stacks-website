@@ -261,6 +261,27 @@ async function main() {
     console.log(`${retired} piece(s) are no longer active on Etsy; kept on the site.`);
   }
 
+  // How much each piece's Etsy stock moved since the last sync. The site's own
+  // counts live in the checkout worker and are adjusted by this much, rather
+  // than overwritten, so a sale made here isn't undone by Etsy's older number.
+  const deltas = {};
+  for (const listing of merged) {
+    if (!listing.etsy_active || typeof listing.quantity !== "number") continue;
+    const prior = previous.get(listing.listing_id);
+    if (!prior || typeof prior.quantity !== "number") continue;
+    const change = listing.quantity - prior.quantity;
+    if (change !== 0) deltas[listing.listing_id] = change;
+  }
+
+  const deltaPath = join(ROOT, "data", "etsy-stock-deltas.json");
+  writeFileSync(deltaPath, JSON.stringify({ deltas, computed_at: now }, null, 2));
+  const changedCount = Object.keys(deltas).length;
+  console.log(
+    changedCount
+      ? `${changedCount} piece(s) changed stock on Etsy since the last sync.`
+      : "No Etsy stock changes since the last sync."
+  );
+
   const output = {
     shop_name: SHOP_NAME,
     shop_url: `https://www.etsy.com/shop/${SHOP_NAME}`,

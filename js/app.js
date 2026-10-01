@@ -198,6 +198,15 @@ const extras = Array.isArray(window.MICKNACK_EXTRA_PRODUCTS)
 const searchInput = document.getElementById("shop-search");
 if (searchInput) searchInput.addEventListener("input", applySearch);
 
+// Ask the checkout worker what's actually left, then redraw. The page renders
+// first from the published file, so a slow or missing worker never blocks it.
+const STOCK_ENDPOINT = "https://micknack-checkout.jamie-mick18.workers.dev/stock";
+window.MICKNACK_STOCK.loadLive(STOCK_ENDPOINT).then((ok) => {
+  if (ok && (window.MICKNACK_PRODUCTS || extras.length)) {
+    renderProducts(window.MICKNACK_PRODUCTS, extras);
+  }
+});
+
 if (window.MICKNACK_PRODUCTS || extras.length) {
   renderProducts(window.MICKNACK_PRODUCTS, extras);
 } else {
