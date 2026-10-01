@@ -6,8 +6,8 @@
 // our API key (that needs a full login), so these were copied from the live
 // Etsy listings on 2026-10-01 and are kept here by hand.
 //
-// Wording is mirrored from Etsy exactly, so a buyer sees the same choices in
-// both places. Edit a listing on Etsy and change it here too.
+// Wording follows Etsy, standardized to "6 mm" / "8 mm" with a space, since
+// one listing wrote it without. Edit a listing on Etsy and change it here too.
 //
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
@@ -18,7 +18,7 @@ window.MICKNACK_VARIATIONS = {
   // Checkered Black & Clear CZ Ear Chain | 30mm Gold Connector
   "4584458361": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 
-  "4579868601": [{ name: "Post Length", options: ["6mm", "8mm"] }],
+  "4579868601": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Prism Spell Double Draped Ear Chain | ASTM F136 G23 Titani
   "4581913102": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Alpenglow Labret to Earring Connector | Gold CZ Ear Chain 
