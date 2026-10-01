@@ -254,14 +254,22 @@ async function handleCheckout(request, env, cors, origin) {
 
   // Refuse before taking any money: this is the only moment that can actually
   // stop a sold-out piece being bought.
-  const unavailable = [];
+  //
+  // Stock belongs to the piece, not to each option of it, so a cart holding
+  // 3 × 6mm and 3 × 8mm of the same piece wants six of it — add the lines of a
+  // piece together before comparing, or each would pass on its own.
+  const wantedPerPiece = new Map();
   for (const line of lines) {
     const pieceId = await pieceForPrice(env, line.price);
     if (!pieceId) continue; // unknown price: not stock-tracked
+    wantedPerPiece.set(pieceId, (wantedPerPiece.get(pieceId) || 0) + line.quantity);
+  }
+
+  const unavailable = [];
+  for (const [pieceId, wanted] of wantedPerPiece) {
     const left = await readQty(env, pieceId);
     if (left === null) continue; // untracked
-    if (left <= 0) unavailable.push({ id: pieceId, left: 0, wanted: line.quantity });
-    else if (left < line.quantity) unavailable.push({ id: pieceId, left, wanted: line.quantity });
+    if (left < wanted) unavailable.push({ id: pieceId, left: Math.max(0, left), wanted });
   }
 
   if (unavailable.length) {

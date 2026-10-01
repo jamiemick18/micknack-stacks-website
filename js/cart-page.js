@@ -30,13 +30,24 @@ function availableFor(id) {
 }
 
 // Lines that can't be bought as they stand.
+//
+// Stock belongs to the piece, not to each option of it: two lines of the same
+// piece in different lengths draw on one count, so they're added together.
 function problemLines() {
-  return window.MICKNACK_CART.items()
+  const items = window.MICKNACK_CART.items();
+
+  const wantedPerPiece = {};
+  items.forEach((item) => {
+    wantedPerPiece[item.id] = (wantedPerPiece[item.id] || 0) + item.quantity;
+  });
+
+  return items
     .map((item) => {
       const left = availableFor(item.id);
       if (left === null) return null;
-      if (left <= 0) return { item, left, kind: "sold_out" };
-      if (item.quantity > left) return { item, left, kind: "too_many" };
+      const wanted = wantedPerPiece[item.id];
+      if (left <= 0) return { item, left: 0, wanted, kind: "sold_out" };
+      if (wanted > left) return { item, left, wanted, kind: "too_many" };
       return null;
     })
     .filter(Boolean);
@@ -44,10 +55,28 @@ function problemLines() {
 
 function fixCart() {
   const Cart = window.MICKNACK_CART;
-  problemLines().forEach(({ item, left, kind }) => {
-    const line = Cart.lineId(item);
-    if (kind === "sold_out") Cart.remove(line);
-    else Cart.setQuantity(line, left);
+  const problems = problemLines();
+
+  // Sold out: the piece goes, in every option.
+  problems
+    .filter((p) => p.kind === "sold_out")
+    .forEach((p) => Cart.remove(Cart.lineId(p.item)));
+
+  // Too many: trim from the last line of that piece backwards until the
+  // piece's lines add up to what's in stock.
+  const overPieces = [...new Set(problems.filter((p) => p.kind === "too_many").map((p) => p.item.id))];
+  overPieces.forEach((pieceId) => {
+    const left = availableFor(pieceId);
+    const lines = Cart.items().filter((item) => item.id === pieceId);
+    let total = lines.reduce((sum, item) => sum + item.quantity, 0);
+
+    for (let i = lines.length - 1; i >= 0 && total > left; i--) {
+      const line = lines[i];
+      const canKeep = Math.max(0, line.quantity - (total - left));
+      total -= line.quantity - canKeep;
+      if (canKeep === 0) Cart.remove(Cart.lineId(line));
+      else Cart.setQuantity(Cart.lineId(line), canKeep);
+    }
   });
 }
 
@@ -76,21 +105,27 @@ function renderCartPage() {
   const problemIds = new Set(problems.map((p) => p.item.id));
   const subtotal = Cart.total();
 
+  // One entry per piece, not per line: a piece in two options is still one
+  // problem to the shopper.
+  const problemsByPiece = [...new Map(problems.map((p) => [p.item.id, p])).values()];
+
   const banner = problems.length
     ? `<div class="cart-alert">
          <p class="cart-alert-title">${
-           problems.length === 1
+           problemsByPiece.length === 1
              ? "One piece in your cart isn't available."
-             : `${problems.length} pieces in your cart aren't available.`
+             : `${problemsByPiece.length} pieces in your cart aren't available.`
          }</p>
          <ul>
-           ${problems
+           ${problemsByPiece
              .map(
                (p) =>
                  `<li><strong>${escapeHtml(p.item.title)}</strong> — ${
                    p.kind === "sold_out"
                      ? "just sold out"
-                     : `only ${p.left} left, you have ${p.item.quantity}`
+                     : `only ${p.left} left, your cart has ${p.wanted}${
+                         p.wanted !== p.item.quantity ? " across its options" : ""
+                       }`
                  }</li>`
              )
              .join("")}
