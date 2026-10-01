@@ -1,9 +1,18 @@
-// The cart page: what's in the cart, and the button that starts checkout.
+// The cart page: what's in the cart, what's still available, and the button
+// that starts checkout.
+//
+// Availability is checked when the page opens, not only when someone presses
+// Checkout, so a sold-out piece is obvious before they try to pay.
 
 const cartRoot = document.getElementById("cart-contents");
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const SHIPPING = 5;
+const STOCK_ENDPOINT = "https://micknack-checkout.jamie-mick18.workers.dev/stock";
+
+// id -> how many are left. Null until the worker answers; a piece that isn't
+// listed is untracked and always available.
+let stockMap = null;
 
 function escapeHtml(str) {
   const div = document.createElement("div");
@@ -13,6 +22,31 @@ function escapeHtml(str) {
 
 function money(amount) {
   return "$" + Number(amount).toFixed(2);
+}
+
+function availableFor(id) {
+  if (!stockMap || typeof stockMap[id] !== "number") return null; // untracked
+  return stockMap[id];
+}
+
+// Lines that can't be bought as they stand.
+function problemLines() {
+  return window.MICKNACK_CART.items()
+    .map((item) => {
+      const left = availableFor(item.id);
+      if (left === null) return null;
+      if (left <= 0) return { item, left, kind: "sold_out" };
+      if (item.quantity > left) return { item, left, kind: "too_many" };
+      return null;
+    })
+    .filter(Boolean);
+}
+
+function fixCart() {
+  problemLines().forEach(({ item, left, kind }) => {
+    if (kind === "sold_out") window.MICKNACK_CART.remove(item.id);
+    else window.MICKNACK_CART.setQuantity(item.id, left);
+  });
 }
 
 function renderCartPage() {
@@ -28,20 +62,65 @@ function renderCartPage() {
     return;
   }
 
+  const problems = problemLines();
+  const problemIds = new Set(problems.map((p) => p.item.id));
   const subtotal = Cart.total();
 
+  const banner = problems.length
+    ? `<div class="cart-alert">
+         <p class="cart-alert-title">${
+           problems.length === 1
+             ? "One piece in your cart isn't available."
+             : `${problems.length} pieces in your cart aren't available.`
+         }</p>
+         <ul>
+           ${problems
+             .map(
+               (p) =>
+                 `<li><strong>${escapeHtml(p.item.title)}</strong> — ${
+                   p.kind === "sold_out"
+                     ? "just sold out"
+                     : `only ${p.left} left, you have ${p.item.quantity}`
+                 }</li>`
+             )
+             .join("")}
+         </ul>
+         <button type="button" class="btn btn-primary" id="fix-cart">
+           ${problems.every((p) => p.kind === "sold_out")
+             ? problems.length === 1
+               ? "Remove it and continue"
+               : "Remove them and continue"
+             : "Fix my cart"}
+         </button>
+       </div>`
+    : "";
+
   cartRoot.innerHTML = `
+    ${banner}
     <ul class="cart-lines">
       ${items
-        .map(
-          (item) => `
-        <li class="cart-line" data-id="${escapeHtml(item.id)}">
+        .map((item) => {
+          const left = availableFor(item.id);
+          const flagged = problemIds.has(item.id);
+          const note =
+            left !== null && left > 0 && left <= 2 && !flagged
+              ? `<span class="cart-flag low">Only ${left} left</span>`
+              : "";
+          const problem = problems.find((p) => p.item.id === item.id);
+          const problemChip = problem
+            ? `<span class="cart-flag gone">${
+                problem.kind === "sold_out" ? "Sold out" : `Only ${problem.left} left`
+              }</span>`
+            : "";
+
+          return `
+        <li class="cart-line${flagged ? " is-problem" : ""}" data-id="${escapeHtml(item.id)}">
           <a class="cart-thumb" href="product.html?id=${encodeURIComponent(item.id)}">
             <img src="${escapeHtml(item.image)}" alt="" loading="lazy" />
           </a>
           <div class="cart-line-meta">
             <a class="cart-title" href="product.html?id=${encodeURIComponent(item.id)}">${escapeHtml(item.title)}</a>
-            <div class="cart-price">${money(item.price)} each</div>
+            <div class="cart-price">${money(item.price)} each ${problemChip}${note}</div>
           </div>
           <div class="cart-line-controls">
             <label class="sr-only" for="qty-${escapeHtml(item.id)}">Quantity</label>
@@ -49,8 +128,8 @@ function renderCartPage() {
             <div class="cart-line-total">${money(Number(item.price) * item.quantity)}</div>
             <button type="button" class="cart-remove" data-remove="${escapeHtml(item.id)}">Remove</button>
           </div>
-        </li>`
-        )
+        </li>`;
+        })
         .join("")}
     </ul>
 
@@ -59,7 +138,7 @@ function renderCartPage() {
       <div class="cart-row"><span>Shipping</span><span>${money(SHIPPING)}</span></div>
       <div class="cart-row cart-total"><span>Total</span><span>${money(subtotal + SHIPPING)}</span></div>
       <p class="cart-note">One flat $5 shipping charge, however many pieces you order. Ships from Colorado.</p>
-      <button type="button" class="btn btn-primary btn-lg" id="checkout">Checkout</button>
+      <button type="button" class="btn btn-primary btn-lg" id="checkout"${problems.length ? " disabled" : ""}>Checkout</button>
       <p class="cart-error" id="checkout-error" hidden></p>
       <a class="cart-keep" href="index.html#shop">Keep shopping</a>
     </div>
@@ -77,6 +156,11 @@ cartRoot.addEventListener("click", async (event) => {
   const remove = event.target.closest("[data-remove]");
   if (remove) {
     window.MICKNACK_CART.remove(remove.dataset.remove);
+    return;
+  }
+
+  if (event.target.closest("#fix-cart")) {
+    fixCart();
     return;
   }
 
@@ -115,19 +199,18 @@ cartRoot.addEventListener("click", async (event) => {
     });
     const data = await response.json();
 
-    // Something in the cart sold out between adding it and paying.
+    // Something sold out between opening the cart and paying. Fold the
+    // worker's answer into what we know and redraw, so the offending lines are
+    // marked and the fix button appears.
     if (response.status === 409) {
-      const names = (data.items || [])
-        .map((entry) => {
-          const line = window.MICKNACK_CART.items().find((item) => item.id === entry.id);
-          const title = line ? line.title : "a piece";
-          return entry.left === 0 ? `${title} (sold out)` : `${title} (only ${entry.left} left)`;
-        })
-        .join("; ");
-      error.textContent = `${data.message} ${names}`.trim();
-      error.hidden = false;
-      checkout.disabled = false;
-      checkout.textContent = "Checkout";
+      stockMap = stockMap || {};
+      (data.items || []).forEach((entry) => {
+        stockMap[entry.id] = entry.left;
+      });
+      renderCartPage();
+      const refreshed = document.getElementById("checkout-error");
+      refreshed.textContent = "Nothing has been charged.";
+      refreshed.hidden = false;
       return;
     }
 
@@ -144,3 +227,14 @@ cartRoot.addEventListener("click", async (event) => {
 
 document.addEventListener("cart:changed", renderCartPage);
 renderCartPage();
+
+// Ask what's left, then redraw. The cart works without an answer; it just
+// can't warn in advance.
+fetch(STOCK_ENDPOINT, { cache: "no-store" })
+  .then((response) => (response.ok ? response.json() : null))
+  .then((data) => {
+    if (!data || typeof data.stock !== "object") return;
+    stockMap = data.stock;
+    renderCartPage();
+  })
+  .catch(() => {});

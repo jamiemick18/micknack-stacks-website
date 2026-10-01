@@ -300,6 +300,57 @@ img {
   .cart-summary { max-width: none; }
 }
 
+/* A piece in the cart that can't be bought as things stand. */
+.cart-alert {
+  background: #fdf3ee;
+  border: 1px solid rgba(154, 52, 18, 0.28);
+  border-left: 3px solid #9a3412;
+  border-radius: 3px;
+  padding: 18px 20px;
+  margin-bottom: 26px;
+}
+
+.cart-alert-title {
+  font-weight: 500;
+  color: #9a3412;
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+}
+
+.cart-alert ul {
+  margin: 0 0 16px;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
+  color: #5c5c5c;
+}
+
+.cart-alert li { margin-bottom: 4px; }
+
+.cart-line.is-problem {
+  background: #fdf7f4;
+  border-left: 3px solid #9a3412;
+  padding-left: 12px;
+}
+
+.cart-flag {
+  display: inline-block;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.cart-flag.gone { background: #f3e2da; color: #9a3412; }
+.cart-flag.low { background: var(--cream-dim); color: #7a6a52; }
+
+.btn[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 /* ---------- Contact popup ---------- */
 
 .contact-dialog {
