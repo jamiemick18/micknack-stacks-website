@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Etsy connection | Micknack Stacks</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* This page is only ever seen for a few seconds, by the shop owner, on the
+       way back from Etsy. It carries no navigation on purpose. */
+    .oauth-wrap { max-width: 640px; margin: 80px auto; padding: 0 20px; }
+    .oauth-card {
+      background: #fffaf4;
+      border: 1px solid rgba(15, 13, 11, 0.13);
+      border-radius: 4px;
+      padding: 32px 28px;
+    }
+    .oauth-code {
+      display: block;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.95rem;
+      word-break: break-all;
+      background: #f8eee3;
+      border: 1px solid rgba(15, 13, 11, 0.13);
+      border-radius: 3px;
+      padding: 14px;
+      margin: 18px 0;
+    }
+    .oauth-note { color: #5d554c; font-size: 0.9rem; }
+    .oauth-bad { color: #9a3412; }
+  </style>
+</head>
+<body>
+  <div class="oauth-wrap">
+    <div class="oauth-card">
+      <h1 id="oauth-title">Connecting to Etsy…</h1>
+      <div id="oauth-body"></div>
+    </div>
+  </div>
+
+  <script>
+    // Etsy sends the one-time code back as a query parameter. It is useless on
+    // its own: swapping it for a token also needs the verifier kept off this
+    // page, and it expires in minutes.
+    const params = new URLSearchParams(location.search);
+    const code = params.get("code");
+    const error = params.get("error");
+    const title = document.getElementById("oauth-title");
+    const body = document.getElementById("oauth-body");
+
+    function button(text, onClick) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "btn btn-primary";
+      b.textContent = text;
+      b.addEventListener("click", onClick);
+      return b;
+    }
+
+    if (error) {
+      title.textContent = "Etsy turned that down";
+      const p = document.createElement("p");
+      p.className = "oauth-note oauth-bad";
+      p.textContent =
+        "Etsy said: " + error + ". Nothing was connected. Start again from the link Claude gave you.";
+      body.appendChild(p);
+    } else if (!code) {
+      title.textContent = "Nothing to connect";
+      const p = document.createElement("p");
+      p.className = "oauth-note";
+      p.textContent =
+        "This page is the landing spot after approving the shop's own Etsy app. There is nothing here otherwise.";
+      body.appendChild(p);
+    } else {
+      title.textContent = "Etsy said yes";
+      const intro = document.createElement("p");
+      intro.className = "oauth-note";
+      intro.textContent = "Copy this code and paste it back to Claude. It expires in a few minutes.";
+
+      const pre = document.createElement("code");
+      pre.className = "oauth-code";
+      pre.textContent = code;
+
+      const copy = button("Copy the code", async () => {
+        try {
+          await navigator.clipboard.writeText(code);
+          copy.textContent = "Copied";
+        } catch (err) {
+          const range = document.createRange();
+          range.selectNodeContents(pre);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          copy.textContent = "Selected — press Ctrl+C";
+        }
+      });
+
+      const after = document.createElement("p");
+      after.className = "oauth-note";
+      after.textContent =
+        "Your Etsy password was never involved. You can take this permission back any time from Etsy, under Account settings, Apps.";
+
+      body.append(intro, pre, copy, after);
+    }
+  </script>
+</body>
+</html>
