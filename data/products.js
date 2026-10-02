@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-02T00:11:02.237Z",
+  "synced_at": "2026-10-02T18:15:26.357Z",
   "listings": [
     {
       "listing_id": "4586013046",
@@ -821,7 +821,7 @@ window.MICKNACK_PRODUCTS = {
         "dainty flatback",
         "simple ear stack"
       ],
-      "quantity": 2,
+      "quantity": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -942,37 +942,6 @@ window.MICKNACK_PRODUCTS = {
         "tragus earring"
       ],
       "quantity": 1,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4573433368",
-      "title": "Summit Ride Huggie Earrings | Removable Mountain Bike Charm | Gold 10mm Stainless Steel Hoops | Nickel Free Bike Jewelry - PAIR",
-      "price": "15.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4573433368/summit-ride-huggie-earrings-removable",
-      "description": "Meet the Summit Ride Huggies 🚵✨\n\nA little sparkle for the trail girls because that where my peace and heart LIVE, in the forest and on the trails.\n\nThese 10 mm gold huggie hoops feature a detailed mountain bike charm accented with clear stones for just the right amount of shine. They’re playful, sporty, and polished enough to work into an everyday ear stack.\n\nMade from premium-quality 316L stainless steel, these hoops are lead free and nickel free.\n\nWear It Your Way\nThe mountain bike charm can be easily removed from the included huggie hoop, giving you more flexibility in how you style it. Wear the hoop on its own for a simple everyday look, add the charm back when you want a little extra personality, or slide the charm onto another of your favorite set of huggies or hoops you already love.\n\nOne piece, multiple ways to wear it.\n\nDetails\n\n10 mm huggie hoop\nRemovable mountain bike charm\n316L stainless steel\nGold finish\nClear stone accents\nLead free\nNickel free\nHinged huggie closure\nWear with or without the charm\nCharm can be added to other compatible hoops or huggies\nSold as a pair\n\nPerfect for mountain bikers, cyclists, outdoor girls, trail riders, and anyone who wants a little adventure worked into their ear stack.\n\nA little rugged. A little sparkly. Very Micknack.\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/62357b/8509659802/il_fullxfull.8509659802_1088.jpg",
-        "https://i.etsystatic.com/67609393/r/il/fa6beb/8509659804/il_fullxfull.8509659804_bufw.jpg"
-      ],
-      "video": "",
-      "tags": [
-        "mountain bike",
-        "bike earrings",
-        "cyclist gift",
-        "mtb jewelry",
-        "huggie earrings",
-        "gold bike earring",
-        "outdoor girl gift",
-        "mountain biker gift",
-        "stainless earrings",
-        "nickel free earring",
-        "adventure jewelry",
-        "colorado jewelry",
-        "sporty earrings"
-      ],
-      "quantity": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1161,6 +1130,38 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4573433368",
+      "title": "Summit Ride Huggie Earrings | Removable Mountain Bike Charm | Gold 10mm Stainless Steel Hoops | Nickel Free Bike Jewelry - PAIR",
+      "price": "15.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4573433368/summit-ride-huggie-earrings-removable",
+      "description": "Meet the Summit Ride Huggies 🚵✨\n\nA little sparkle for the trail girls because that where my peace and heart LIVE, in the forest and on the trails.\n\nThese 10 mm gold huggie hoops feature a detailed mountain bike charm accented with clear stones for just the right amount of shine. They’re playful, sporty, and polished enough to work into an everyday ear stack.\n\nMade from premium-quality 316L stainless steel, these hoops are lead free and nickel free.\n\nWear It Your Way\nThe mountain bike charm can be easily removed from the included huggie hoop, giving you more flexibility in how you style it. Wear the hoop on its own for a simple everyday look, add the charm back when you want a little extra personality, or slide the charm onto another of your favorite set of huggies or hoops you already love.\n\nOne piece, multiple ways to wear it.\n\nDetails\n\n10 mm huggie hoop\nRemovable mountain bike charm\n316L stainless steel\nGold finish\nClear stone accents\nLead free\nNickel free\nHinged huggie closure\nWear with or without the charm\nCharm can be added to other compatible hoops or huggies\nSold as a pair\n\nPerfect for mountain bikers, cyclists, outdoor girls, trail riders, and anyone who wants a little adventure worked into their ear stack.\n\nA little rugged. A little sparkly. Very Micknack.\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/62357b/8509659802/il_fullxfull.8509659802_1088.jpg",
+        "https://i.etsystatic.com/67609393/r/il/fa6beb/8509659804/il_fullxfull.8509659804_bufw.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "mountain bike",
+        "bike earrings",
+        "cyclist gift",
+        "mtb jewelry",
+        "huggie earrings",
+        "gold bike earring",
+        "outdoor girl gift",
+        "mountain biker gift",
+        "stainless earrings",
+        "nickel free earring",
+        "adventure jewelry",
+        "colorado jewelry",
+        "sporty earrings"
+      ],
+      "quantity": 2,
+      "etsy_active": false,
+      "added_at": "2026-09-30T19:35:47.289Z",
+      "left_etsy_at": "2026-10-02T18:15:26.357Z"
     }
   ]
 };
