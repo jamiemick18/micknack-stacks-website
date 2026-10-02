@@ -555,6 +555,32 @@ img {
   fill: var(--gold);
 }
 
+.divider-art {
+  width: 140px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.about-scene {
+  display: block;
+  width: min(320px, 80%);
+  height: auto;
+  margin: 0 auto 12px;
+}
+
+.art-pair {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.art-pair img {
+  width: min(200px, 40%);
+  height: auto;
+}
+
 .section-accent {
   width: 92px;
   margin: 0 auto 20px;
