@@ -995,3 +995,72 @@ img {
     font-size: 0.72rem;
   }
 }
+
+/* ---------- Newsletter signup ---------- */
+
+.newsletter {
+  max-width: 460px;
+  margin: 0 auto 40px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(183, 132, 54, 0.35);
+}
+
+.newsletter h2 {
+  font-size: 1.4rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.newsletter .newsletter-pitch {
+  margin-bottom: 18px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 13px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--cream);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.newsletter-form input::placeholder {
+  color: rgba(240, 226, 212, 0.5);
+}
+
+.newsletter-form .btn-primary {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.newsletter-form .btn-primary:hover {
+  background: transparent;
+  color: var(--gold-light);
+}
+
+.site-footer .newsletter-fine {
+  font-size: 0.72rem;
+  margin: 12px auto 0;
+}
+
+.site-footer .newsletter-msg {
+  color: var(--gold-light);
+  margin: 14px auto 0;
+}
+
+.site-footer .newsletter-msg.is-error {
+  color: #e8a0a0;
+}
