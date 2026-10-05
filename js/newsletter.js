@@ -9,7 +9,17 @@
   const local = ["localhost", "127.0.0.1", "[::1]", ""].includes(location.hostname);
   if (!config.action && !local) return;
 
+  // A small nav link that jumps down to the footer form.
+  const contactButton = document.getElementById("contact-open");
+  if (contactButton && document.querySelector("[data-newsletter]")) {
+    const link = document.createElement("a");
+    link.href = "#newsletter";
+    link.textContent = "Join the list";
+    contactButton.before(link);
+  }
+
   document.querySelectorAll("[data-newsletter]").forEach((host) => {
+    host.id = "newsletter";
     host.className = "newsletter";
     host.innerHTML = `
       <h2>Join the Menace List <span aria-hidden="true">✨</span></h2>
