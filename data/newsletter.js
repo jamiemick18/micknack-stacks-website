@@ -17,6 +17,6 @@
 // still shows when you open the site locally, so you can see it).
 
 window.MICKNACK_NEWSLETTER = {
-  action: "",
+  action: "https://buttondown.com/api/emails/embed-subscribe/micknackstacks",
   emailField: "email",
 };
