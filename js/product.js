@@ -61,7 +61,8 @@ function findProduct(id) {
     images: listing.images || [],
     video: listing.video || "",
     tags: listing.tags || [],
-    etsyUrl: listing.url || "",
+    // Blank once the listing leaves Etsy, so Buy on Etsy disappears with it.
+    etsyUrl: listing.etsy_active === false ? "" : listing.url || "",
     badge: "",
     buttonLabel: "",
   };

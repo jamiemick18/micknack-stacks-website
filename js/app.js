@@ -37,6 +37,11 @@ function toCard(item, { key, buttonLabel, badge }) {
   // Quantities live in data/inventory.js and are never shown to shoppers;
   // they only decide whether a piece can be bought.
   const stock = window.MICKNACK_STOCK.of(key);
+  // Taken off Etsy: the piece stays here, but its Etsy link does not. The
+  // listing is gone, so the button would land on "this item is unavailable".
+  const url = item.etsy_active === false ? "" : item.url || "";
+  // Only an Etsy listing gets a button that says Etsy on it.
+  const etsyUrl = item.listing_id !== undefined ? url : "";
   const buyUrl = !stock.soldOut && stripeEnabled ? stripeLinks[key]?.url : undefined;
   // A piece with drop-downs cannot be added from here: there would be no
   // length on the order. The card sends people to the piece to choose first.
@@ -54,9 +59,10 @@ function toCard(item, { key, buttonLabel, badge }) {
     currency_code: item.currency_code,
     description: item.description,
     image: (item.images && item.images[0]) || "assets/products/placeholder.svg",
-    url: item.url || "",
+    url,
+    etsyUrl,
     // With no link there's nothing to buy yet, so don't promise a purchase.
-    buttonLabel: item.button_label || (item.url ? buttonLabel : "Coming soon"),
+    buttonLabel: item.button_label || (url ? buttonLabel : "Coming soon"),
     badge: stock.soldOut ? "Sold out" : item.badge || badge || "",
     // Searched against, never displayed on the card.
     keywords: [item.title, item.description, (item.tags || []).join(" ")]
@@ -80,18 +86,18 @@ function renderCard(card) {
   const actions = [];
   if (card.soldOut) {
     actions.push(`<span class="btn btn-muted">Sold out</span>`);
-    if (card.url) {
+    if (card.etsyUrl) {
       actions.push(
-        `<a class="btn btn-secondary" href="${card.url}" target="_blank" rel="noopener">View on Etsy</a>`
+        `<a class="btn btn-secondary" href="${card.etsyUrl}" target="_blank" rel="noopener">View on Etsy</a>`
       );
     }
   } else if (card.buyUrl && card.priceId && card.hasOptions) {
     actions.push(
       `<a class="btn btn-primary" href="${card.detailUrl}">Choose options</a>`
     );
-    if (card.url) {
+    if (card.etsyUrl) {
       actions.push(
-        `<a class="btn btn-secondary" href="${card.url}" target="_blank" rel="noopener">View on Etsy</a>`
+        `<a class="btn btn-secondary" href="${card.etsyUrl}" target="_blank" rel="noopener">View on Etsy</a>`
       );
     }
   } else if (card.buyUrl && card.priceId) {
@@ -103,9 +109,9 @@ function renderCard(card) {
          data-price="${escapeHtml(card.price || "")}"
          data-image="${escapeHtml(card.image)}">Add to cart</button>`
     );
-    if (card.url) {
+    if (card.etsyUrl) {
       actions.push(
-        `<a class="btn btn-secondary" href="${card.url}" target="_blank" rel="noopener">View on Etsy</a>`
+        `<a class="btn btn-secondary" href="${card.etsyUrl}" target="_blank" rel="noopener">View on Etsy</a>`
       );
     }
   } else if (card.url) {
