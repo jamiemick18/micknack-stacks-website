@@ -2,8 +2,10 @@
 
 :root {
   --ink: #0a0a0a;
-  --cream: #f0e2d4;
-  --cream-dim: #e9d8c7;
+  /* Sampled from the banner artwork, so the page is the same paper the
+     logo is drawn on and the image has no visible edge. */
+  --cream: #f7f0e5;
+  --cream-dim: #f0e6d8;
   --gold: #b78436;
   --gold-light: #d1a862;
   --blush: #e7ccc7;
@@ -56,7 +58,9 @@ img {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(240, 226, 212, 0.92);
+  /* --cream at 92%. Written out because a variable cannot carry the alpha
+     here; keep it in step with --cream or the bar shows against the page. */
+  background: rgba(247, 240, 229, 0.92);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(10, 10, 10, 0.08);
 }
@@ -475,6 +479,10 @@ img {
 .hero img.logo {
   max-width: 1080px;
   width: 96%;
+  /* The width and height attributes on the tag reserve the right space while
+     the image loads; height:auto keeps it to its own 3:1 shape rather than
+     stretching it to that literal pixel height. */
+  height: auto;
   margin: 0 auto 8px;
 }
 
@@ -1035,7 +1043,7 @@ img {
 }
 
 .newsletter-form input::placeholder {
-  color: rgba(240, 226, 212, 0.5);
+  color: rgba(247, 240, 229, 0.5);
 }
 
 .newsletter-form .btn-primary {
