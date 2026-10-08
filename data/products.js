@@ -2,8 +2,39 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-07T19:14:32.853Z",
+  "synced_at": "2026-10-08T19:10:48.816Z",
   "listings": [
+    {
+      "listing_id": "4591313547",
+      "title": "Everyday G23 ASTM F136 Titanium Gold Clicker Hoop | 18K PVD Implant Grade Cartilage Ring | Helix Conch Lobe 5mm–12mm",
+      "price": "15.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4591313547/everyday-g23-astm-f136-titanium-gold",
+      "description": "Everyday Gold Clicker Hoop ✨\nThe little gold hoop that does everything.\nClean, simple, and ridiculously easy to style, these hoops are made from G23 titanium listed by the manufacturer as meeting ASTM F136 implant-grade specifications, then finished in 18K gold PVD for that polished gold look.\nWear one alone for a minimal stack, layer several sizes together, or use them as the base for your favorite Micknack chains and removable charms.\nAvailable from a tiny 5 mm through 12 mm, giving you plenty of options for different piercing placements and ear anatomy.\nWhy G23 ASTM F136 Titanium?\nThe material that actually sits inside your piercing matters.\n✨ Implant-grade titanium: These hoops are made from G23 titanium manufactured to ASTM F136 specifications, a titanium alloy specification widely used for implant applications and quality body jewelry.\n✨ Nickel-conscious: Titanium is a popular option for people who want to avoid jewelry made from nickel-containing alloys.\n✨ Lightweight: Titanium is noticeably lighter than many traditional jewelry metals, making it especially nice for everyday ear stacks.\n✨ Corrosion resistant: Titanium has excellent resistance to corrosion and everyday moisture.\n✨ Comfortable hinged design: The smooth clicker closure eliminates traditional butterfly backs, loose balls, and separate pieces.\n✨ Easy styling: Wear them alone or add compatible chains and charms to completely change the look.\nAvailable Sizes\n5 mm • 6 mm • 7 mm • 8 mm • 10 mm • 11 mm • 12 mm\nAs a general styling guide:\n5–6 mm: Extra petite or very snug placements\n7–8 mm: Great for many lobe and helix placements\n10 mm: More room for larger placements\n11 mm: A popular starting point for a closer-fitting conch hoop\n12 mm: Great when you want a little more room around the conch\nFor conch piercings: I’d especially look at 11 mm and 12 mm. An 11 mm hoop may give a more fitted look, while 12 mm offers a little more clearance. Ear anatomy and piercing placement vary, so measurements are always the safest way to choose your fit.\nMaterials & Details\nG23 titanium\nASTM F136 implant-grade specification\n18K gold PVD finish\nHinged segment clicker closure\nAvailable in 5, 6, 7, 8, 10, 11 & 12 mm\nSmooth polished finish\nSold individually\nPerfect for\nLobe • Helix • Conch • Cartilage • Curated Ear Stacks • Chain & Charm Styling\nThe basic hoop your ear stack will keep finding excuses to use. ✨\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/e158b3/8645167936/il_fullxfull.8645167936_hbuv.jpg",
+        "https://i.etsystatic.com/67609393/r/il/bda76b/8645133202/il_fullxfull.8645133202_7t5g.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "titanium clicker",
+        "18g clicker hoop",
+        "gold clicker hoop",
+        "f136 titanium",
+        "implant grade hoop",
+        "cartilage hoop",
+        "helix hoop earring",
+        "conch hoop",
+        "tragus hoop",
+        "daith hoop",
+        "tiny hoop earring",
+        "ear stack jewelry",
+        "hinged hoop earring"
+      ],
+      "quantity": 20,
+      "etsy_active": true,
+      "added_at": "2026-10-08T19:10:48.816Z"
+    },
     {
       "listing_id": "4589894700",
       "title": "Sweet Little Thing Pink CZ Ear Chain | 18K Gold Plated Earring Connector | Dainty Cartilage Jewelry",
