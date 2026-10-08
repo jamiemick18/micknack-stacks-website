@@ -22,10 +22,11 @@ const ROOT = join(__dirname, "..");
 // fall back to reading ../.env so you don't have to export env vars by hand.
 function loadEnv() {
   if (process.env.ETSY_API_KEY) {
-    return {
-      ETSY_API_KEY: process.env.ETSY_API_KEY,
-      ETSY_SHOP_NAME: process.env.ETSY_SHOP_NAME,
-    };
+    // The whole environment, not a hand-written list. Listing keys here meant
+    // ETSY_REFRESH_TOKEN reached the runner but never the script, so every CI
+    // run skipped the options and said the token was missing, while a local
+    // run read the same token from .env and worked.
+    return process.env;
   }
 
   const envPath = join(ROOT, ".env");
