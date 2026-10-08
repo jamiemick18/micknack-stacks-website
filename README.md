@@ -119,3 +119,17 @@ Notes on the automation:
 - Photos need a separate API call per listing (the bulk endpoint ignores
   `includes=Images`), so requests are spaced out and retried to stay under
   Etsy's 5 requests/second limit.
+
+## If a style change doesn't show up
+
+`index.html` and the other pages load the stylesheet as
+`css/style.css?v=YYYYMMDD`. That version number exists so a browser can never
+pair a freshly downloaded page with a stylesheet it cached earlier — which once
+left the banner stretched and the background the old colour at the same time.
+
+**When changing `css/style.css`, bump the `?v=` on every page that links it.**
+Nothing enforces this, so it is worth a grep:
+
+```bash
+grep -n "style.css?v=" *.html
+```
