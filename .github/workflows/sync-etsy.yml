@@ -32,6 +32,25 @@ jobs:
         with:
           node-version: 20
 
+      # GitHub offers several places that look alike: Actions secrets, Actions
+      # variables, and Codespaces and Dependabot secrets of the same name. Only
+      # the first is readable here, so say which one actually holds the token.
+      # Lengths only, never the value.
+      - name: Check the Etsy token is somewhere Actions can read
+        env:
+          AS_SECRET: ${{ secrets.ETSY_REFRESH_TOKEN }}
+          AS_VARIABLE: ${{ vars.ETSY_REFRESH_TOKEN }}
+        run: |
+          if [ -n "$AS_SECRET" ]; then
+            echo "Found as an Actions secret, ${#AS_SECRET} characters. That is the right place."
+            if [ "${#AS_SECRET}" -ne 100 ]; then
+              echo "::warning::Expected 100 characters; got ${#AS_SECRET}. The paste may have been cut short."
+            fi
+          elif [ -n "$AS_VARIABLE" ]; then
+            echo "::warning::The token is saved as a repository VARIABLE (${#AS_VARIABLE} characters), not a secret. Delete it from the Variables tab and add it under Secrets instead: a variable is shown in plain text to anyone who can see the repo."
+          else
+            echo "::warning::No ETSY_REFRESH_TOKEN visible to Actions, as either a secret or a variable. Check it is on the Actions page (not Codespaces or Dependabot) and that the name has no stray spaces."
+          fi
       - name: Fetch latest Etsy listings
         env:
           ETSY_API_KEY: ${{ secrets.ETSY_API_KEY }}
