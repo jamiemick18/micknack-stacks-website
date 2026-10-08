@@ -1,3 +1,7 @@
 .env
 node_modules/
 .etsy-connect.json
+
+# Source artwork kept in this folder for convenience, not part of the site.
+# The banner the site actually uses lives in assets/.
+/Micknack*.png
