@@ -2,8 +2,38 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-09T18:41:22.734Z",
+  "synced_at": "2026-10-10T17:41:05.078Z",
   "listings": [
+    {
+      "listing_id": "4566919003",
+      "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+      "price": "15.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4566919003/triple-drip-earring-connector-chain-18k",
+      "description": "This dainty gold chain features a unique flattened lip-link texture with a soft drape and three cascading chain dangles on one end for a little extra detail. The 4mm hoops make it easy to connect between earrings, hoops, or compatible flatback jewelry to create a stack that feels completely your own.\n\nDETAILS • 40mm main connector chain\n• Approx. 2mm wide lip-link chain\n• 4mm connecting hoop on each end\n• Three cascading dangle chains on one end\n• 18K gold plated\n• Non-tarnish + water resistant\n• Lightweight for comfortable stacking\n\nEach chain is sold individually so you can style it however you want — connect two piercings, add it to a hoop, layer it with other chains, or use it as the statement piece in your current stack.\nBecause ear anatomy and piercing placement vary, the way the chain drapes will be unique to you.\n\n✨ MIX. CONNECT. STACK.\nBuild an ear stack that feels like you.\nPlease note: “Lip Link” refers to the style/shape of the chain links — this piece is designed as an earring connector chain.\n\nMicknack Stacks\nDesigned for creative ears + unapologetically personal stacks.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/a491/538b1183-d64b-4292-9f39-0bdc7e2da50c/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ],
+      "quantity": 3,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
     {
       "listing_id": "4591313547",
       "title": "Everyday G23 ASTM F136 Titanium Gold Clicker Hoop | 18K PVD Implant Grade Cartilage Ring | Helix Conch Lobe 5mm–12mm",
@@ -66,36 +96,6 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 4,
       "etsy_active": true,
       "added_at": "2026-10-06T18:49:33.238Z"
-    },
-    {
-      "listing_id": "4566919003",
-      "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
-      "price": "15.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4566919003/triple-drip-earring-connector-chain-18k",
-      "description": "This dainty gold chain features a unique flattened lip-link texture with a soft drape and three cascading chain dangles on one end for a little extra detail. The 4mm hoops make it easy to connect between earrings, hoops, or compatible flatback jewelry to create a stack that feels completely your own.\n\nDETAILS • 40mm main connector chain\n• Approx. 2mm wide lip-link chain\n• 4mm connecting hoop on each end\n• Three cascading dangle chains on one end\n• 18K gold plated\n• Non-tarnish + water resistant\n• Lightweight for comfortable stacking\n\nEach chain is sold individually so you can style it however you want — connect two piercings, add it to a hoop, layer it with other chains, or use it as the statement piece in your current stack.\nBecause ear anatomy and piercing placement vary, the way the chain drapes will be unique to you.\n\n✨ MIX. CONNECT. STACK.\nBuild an ear stack that feels like you.\nPlease note: “Lip Link” refers to the style/shape of the chain links — this piece is designed as an earring connector chain.\n\nMicknack Stacks\nDesigned for creative ears + unapologetically personal stacks.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/a491/538b1183-d64b-4292-9f39-0bdc7e2da50c/vid_v1.mp4",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "gold ear chain",
-        "double drape chain",
-        "piercing chain",
-        "cartilage chain",
-        "non tarnish jewelry",
-        "multiple piercings"
-      ],
-      "quantity": 4,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4574722466",
