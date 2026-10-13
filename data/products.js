@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-12T21:36:41.495Z",
+  "synced_at": "2026-10-13T19:46:56.877Z",
   "listings": [
     {
       "listing_id": "4566919003",
@@ -231,7 +231,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/829ee4/8620858001/il_fullxfull.8620858001_1n3c.jpg",
         "https://i.etsystatic.com/67609393/r/il/c66026/8573018020/il_fullxfull.8573018020_r9zy.jpg"
       ],
-      "video": "https://v.etsystatic.com/e/videos/aa7b/d4ddcca8-4548-4e56-902c-30a6a1718e78/vid_v1.mp4",
+      "video": "https://v.etsystatic.com/e/videos/28c7/45b51fa3-e475-4a59-930f-1a51325e6f38/vid_v1.mp4",
       "tags": [
         "earring connector",
         "earring chain",
@@ -1080,7 +1080,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/e20641/8544053133/il_fullxfull.8544053133_hlvc.jpg",
         "https://i.etsystatic.com/67609393/r/il/7cb97f/8496165540/il_fullxfull.8496165540_coun.jpg"
       ],
-      "video": "https://v.etsystatic.com/e/videos/986d/562be43c-7caa-42b4-9c1f-fa3518f8d79e/vid_v1.mp4",
+      "video": "https://v.etsystatic.com/e/videos/2905/44d66692-5a0c-457d-82f4-ddde203bf6f7/vid_v1.mp4",
       "tags": [
         "earring connector",
         "earring chain",
@@ -1113,7 +1113,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/46e35b/8495611180/il_fullxfull.8495611180_qab4.jpg",
         "https://i.etsystatic.com/67609393/r/il/42d529/8495611174/il_fullxfull.8495611174_3smz.jpg"
       ],
-      "video": "https://v.etsystatic.com/e/videos/dbe3/cef72bb6-381a-42da-9c87-d4c8232015c6/vid_v1.mp4",
+      "video": "https://v.etsystatic.com/e/videos/c0e3/f9c38fb3-c6a9-4588-b5fe-b97794dd1382/vid_v1.mp4",
       "tags": [
         "earring connector",
         "earring chain",
