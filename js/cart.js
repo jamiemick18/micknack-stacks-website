@@ -109,7 +109,7 @@ document.addEventListener("click", (event) => {
   // would put it in the cart with no length on it. Go and choose instead.
   const pieceVariations = (window.MICKNACK_VARIATIONS || {})[button.dataset.id];
   if (!optionRoot && pieceVariations && pieceVariations.length) {
-    window.location.href = `product.html?id=${encodeURIComponent(button.dataset.id)}`;
+    window.location.href = `p/${encodeURIComponent(button.dataset.id)}.html`;
     return;
   }
   const options = {};

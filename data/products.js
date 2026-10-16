@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-16T18:39:17.698Z",
+  "synced_at": "2026-10-16T19:06:22.272Z",
   "listings": [
     {
       "listing_id": "4596333038",
@@ -32,6 +32,7 @@ window.MICKNACK_PRODUCTS = {
         "multiple piercings"
       ],
       "quantity": 3,
+      "created": "2026-10-15T22:11:01.000Z",
       "views": 0,
       "num_favorers": 0,
       "etsy_active": true,
@@ -65,6 +66,7 @@ window.MICKNACK_PRODUCTS = {
         "sterling silver"
       ],
       "quantity": 3,
+      "created": "2026-10-15T20:06:48.000Z",
       "views": 0,
       "num_favorers": 0,
       "etsy_active": true,
@@ -97,6 +99,7 @@ window.MICKNACK_PRODUCTS = {
         "multiple piercings"
       ],
       "quantity": 3,
+      "created": "2026-09-01T21:11:50.000Z",
       "views": 93,
       "num_favorers": 9,
       "etsy_active": true,
@@ -130,6 +133,7 @@ window.MICKNACK_PRODUCTS = {
         "hinged hoop earring"
       ],
       "quantity": 20,
+      "created": "2026-10-08T17:47:55.000Z",
       "views": 7,
       "num_favorers": 0,
       "etsy_active": true,
@@ -164,6 +168,7 @@ window.MICKNACK_PRODUCTS = {
         "multi piercing"
       ],
       "quantity": 4,
+      "created": "2026-10-06T18:38:59.000Z",
       "views": 0,
       "num_favorers": 0,
       "etsy_active": true,
@@ -197,6 +202,7 @@ window.MICKNACK_PRODUCTS = {
         "multiple piercings"
       ],
       "quantity": 3,
+      "created": "2026-09-13T21:39:50.000Z",
       "views": 79,
       "num_favorers": 9,
       "etsy_active": true,
@@ -229,6 +235,7 @@ window.MICKNACK_PRODUCTS = {
         "black CZ"
       ],
       "quantity": 1,
+      "created": "2026-09-30T21:01:07.000Z",
       "views": 12,
       "num_favorers": 0,
       "etsy_active": true,
@@ -259,6 +266,7 @@ window.MICKNACK_PRODUCTS = {
         "G23 Titanium"
       ],
       "quantity": 5,
+      "created": "2026-09-28T18:23:41.000Z",
       "views": 22,
       "num_favorers": 1,
       "etsy_active": true,
@@ -293,6 +301,7 @@ window.MICKNACK_PRODUCTS = {
         "Pushpin"
       ],
       "quantity": 4,
+      "created": "2026-09-21T19:48:13.000Z",
       "views": 43,
       "num_favorers": 8,
       "etsy_active": true,
@@ -328,6 +337,7 @@ window.MICKNACK_PRODUCTS = {
         "Flatback"
       ],
       "quantity": 1,
+      "created": "2026-09-24T17:00:41.000Z",
       "views": 14,
       "num_favorers": 0,
       "etsy_active": true,
@@ -356,6 +366,7 @@ window.MICKNACK_PRODUCTS = {
         "G23 Titanium"
       ],
       "quantity": 5,
+      "created": "2026-09-21T18:11:40.000Z",
       "views": 9,
       "num_favorers": 0,
       "etsy_active": true,
@@ -389,6 +400,7 @@ window.MICKNACK_PRODUCTS = {
         "multiple piercings"
       ],
       "quantity": 3,
+      "created": "2026-09-16T20:46:30.000Z",
       "views": 76,
       "num_favorers": 7,
       "etsy_active": true,
@@ -422,6 +434,7 @@ window.MICKNACK_PRODUCTS = {
         "Flatback"
       ],
       "quantity": 5,
+      "created": "2026-09-21T16:04:05.000Z",
       "views": 16,
       "num_favorers": 0,
       "etsy_active": true,
@@ -454,6 +467,7 @@ window.MICKNACK_PRODUCTS = {
         "mountain snow"
       ],
       "quantity": 1,
+      "created": "2026-09-12T00:00:43.000Z",
       "views": 16,
       "num_favorers": 1,
       "etsy_active": true,
@@ -487,6 +501,7 @@ window.MICKNACK_PRODUCTS = {
         "multiple piercings"
       ],
       "quantity": 1,
+      "created": "2026-09-17T17:55:02.000Z",
       "views": 21,
       "num_favorers": 2,
       "etsy_active": true,
@@ -521,6 +536,7 @@ window.MICKNACK_PRODUCTS = {
         "multiple piercings"
       ],
       "quantity": 1,
+      "created": "2026-09-16T18:47:42.000Z",
       "views": 26,
       "num_favorers": 3,
       "etsy_active": true,
@@ -556,6 +572,7 @@ window.MICKNACK_PRODUCTS = {
         "multiple piercings"
       ],
       "quantity": 1,
+      "created": "2026-09-15T20:48:41.000Z",
       "views": 44,
       "num_favorers": 4,
       "etsy_active": true,
@@ -588,6 +605,7 @@ window.MICKNACK_PRODUCTS = {
         "coastal earring"
       ],
       "quantity": 1,
+      "created": "2026-09-11T23:49:06.000Z",
       "views": 15,
       "num_favorers": 1,
       "etsy_active": true,
@@ -617,6 +635,7 @@ window.MICKNACK_PRODUCTS = {
         "tragus hoop"
       ],
       "quantity": 1,
+      "created": "2026-09-14T17:51:28.000Z",
       "views": 11,
       "num_favorers": 0,
       "etsy_active": true,
@@ -650,6 +669,7 @@ window.MICKNACK_PRODUCTS = {
         "multiple piercings"
       ],
       "quantity": 4,
+      "created": "2026-09-13T21:26:03.000Z",
       "views": 5,
       "num_favorers": 0,
       "etsy_active": true,
@@ -682,6 +702,7 @@ window.MICKNACK_PRODUCTS = {
         "Pikes Peak"
       ],
       "quantity": 2,
+      "created": "2026-09-12T00:05:44.000Z",
       "views": 4,
       "num_favorers": 1,
       "etsy_active": true,
@@ -714,6 +735,7 @@ window.MICKNACK_PRODUCTS = {
         "gold cartilage"
       ],
       "quantity": 2,
+      "created": "2026-09-11T23:40:39.000Z",
       "views": 9,
       "num_favorers": 2,
       "etsy_active": true,
@@ -746,6 +768,7 @@ window.MICKNACK_PRODUCTS = {
         "Dainty Bear"
       ],
       "quantity": 2,
+      "created": "2026-09-11T23:20:43.000Z",
       "views": 9,
       "num_favorers": 0,
       "etsy_active": true,
@@ -778,6 +801,7 @@ window.MICKNACK_PRODUCTS = {
         "ski earrings"
       ],
       "quantity": 1,
+      "created": "2026-09-11T22:59:05.000Z",
       "views": 17,
       "num_favorers": 2,
       "etsy_active": true,
@@ -810,6 +834,7 @@ window.MICKNACK_PRODUCTS = {
         "cherry flatback"
       ],
       "quantity": 1,
+      "created": "2026-09-11T22:53:41.000Z",
       "views": 26,
       "num_favorers": 5,
       "etsy_active": true,
@@ -842,6 +867,7 @@ window.MICKNACK_PRODUCTS = {
         "mountain earring"
       ],
       "quantity": 1,
+      "created": "2026-09-11T22:44:39.000Z",
       "views": 13,
       "num_favorers": 4,
       "etsy_active": true,
@@ -875,6 +901,7 @@ window.MICKNACK_PRODUCTS = {
         "bat earring"
       ],
       "quantity": 3,
+      "created": "2026-09-11T22:37:16.000Z",
       "views": 22,
       "num_favorers": 2,
       "etsy_active": true,
@@ -908,6 +935,7 @@ window.MICKNACK_PRODUCTS = {
         "simple ear stack"
       ],
       "quantity": 1,
+      "created": "2026-09-11T22:25:35.000Z",
       "views": 16,
       "num_favorers": 2,
       "etsy_active": true,
@@ -941,6 +969,7 @@ window.MICKNACK_PRODUCTS = {
         "simple ear stack"
       ],
       "quantity": 4,
+      "created": "2026-09-11T22:21:13.000Z",
       "views": 24,
       "num_favorers": 3,
       "etsy_active": true,
@@ -973,6 +1002,7 @@ window.MICKNACK_PRODUCTS = {
         "lotus flatback"
       ],
       "quantity": 2,
+      "created": "2026-09-11T22:07:53.000Z",
       "views": 15,
       "num_favorers": 2,
       "etsy_active": true,
@@ -1006,6 +1036,7 @@ window.MICKNACK_PRODUCTS = {
         "simple ear stack"
       ],
       "quantity": 2,
+      "created": "2026-09-11T18:09:27.000Z",
       "views": 37,
       "num_favorers": 2,
       "etsy_active": true,
@@ -1039,6 +1070,7 @@ window.MICKNACK_PRODUCTS = {
         "simple ear stack"
       ],
       "quantity": 1,
+      "created": "2026-09-11T17:54:53.000Z",
       "views": 48,
       "num_favorers": 2,
       "etsy_active": true,
@@ -1071,6 +1103,7 @@ window.MICKNACK_PRODUCTS = {
         "star earring"
       ],
       "quantity": 2,
+      "created": "2026-09-11T17:34:10.000Z",
       "views": 24,
       "num_favorers": 1,
       "etsy_active": true,
@@ -1104,6 +1137,7 @@ window.MICKNACK_PRODUCTS = {
         "earring climber"
       ],
       "quantity": 2,
+      "created": "2026-09-11T17:21:14.000Z",
       "views": 69,
       "num_favorers": 4,
       "etsy_active": true,
@@ -1135,6 +1169,7 @@ window.MICKNACK_PRODUCTS = {
         "woodland jewelry"
       ],
       "quantity": 2,
+      "created": "2026-09-11T17:06:43.000Z",
       "views": 9,
       "num_favorers": 0,
       "etsy_active": true,
@@ -1167,6 +1202,7 @@ window.MICKNACK_PRODUCTS = {
         "tragus earring"
       ],
       "quantity": 1,
+      "created": "2026-09-11T16:58:37.000Z",
       "views": 4,
       "num_favorers": 0,
       "etsy_active": true,
@@ -1199,6 +1235,7 @@ window.MICKNACK_PRODUCTS = {
         "curated ear"
       ],
       "quantity": 2,
+      "created": "2026-09-11T16:31:14.000Z",
       "views": 19,
       "num_favorers": 0,
       "etsy_active": true,
@@ -1233,6 +1270,7 @@ window.MICKNACK_PRODUCTS = {
         "multiple piercings"
       ],
       "quantity": 5,
+      "created": "2026-09-08T22:16:35.000Z",
       "views": 24,
       "num_favorers": 3,
       "etsy_active": true,
@@ -1268,6 +1306,7 @@ window.MICKNACK_PRODUCTS = {
         "multiple piercings"
       ],
       "quantity": 5,
+      "created": "2026-09-08T19:59:35.000Z",
       "views": 47,
       "num_favorers": 5,
       "etsy_active": true,
@@ -1301,6 +1340,7 @@ window.MICKNACK_PRODUCTS = {
         "multiple piercings"
       ],
       "quantity": 1,
+      "created": "2026-09-03T19:48:22.000Z",
       "views": 18,
       "num_favorers": 3,
       "etsy_active": true,
@@ -1333,6 +1373,7 @@ window.MICKNACK_PRODUCTS = {
         "ear piercing chain"
       ],
       "quantity": 5,
+      "created": "2026-08-31T21:52:58.000Z",
       "views": 19,
       "num_favorers": 1,
       "etsy_active": true,

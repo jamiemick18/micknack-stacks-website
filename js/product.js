@@ -255,7 +255,63 @@ function renderProduct(product) {
 
 const STOCK_ENDPOINT = "https://micknack-checkout.jamie-mick18.workers.dev/stock";
 
-const id = new URLSearchParams(location.search).get("id");
+// A share page at /p/<id>.html sets this before the scripts run, so it does
+// not need a query string. product.html?id=... still works.
+// Three more pieces from the same shelf, so a product page is somewhere to
+// carry on from rather than a dead end. Stacking is the whole idea, after all.
+function renderAlsoLike(product, all) {
+  const host = document.getElementById("also-like");
+  if (!host) return;
+
+  const shelfOf = window.MICKNACK_CATEGORY_OF || {};
+  const mine = shelfOf[String(product.id)];
+  const stock = window.MICKNACK_STOCK;
+
+  const candidates = all
+    .filter((piece) => String(piece.id) !== String(product.id))
+    .filter((piece) => !stock.of(String(piece.id)).hidden)
+    .filter((piece) => !stock.of(String(piece.id)).soldOut)
+    .map((piece) => ({
+      piece,
+      // Same shelf first, then anything else, so there is always something.
+      rank: shelfOf[String(piece.id)] === mine ? 0 : 1,
+    }))
+    .sort((a, b) => a.rank - b.rank)
+    .slice(0, 3)
+    .map((entry) => entry.piece);
+
+  if (candidates.length < 2) return; // one lonely suggestion is not a row
+
+  host.innerHTML =
+    `<h2 class="also-heading">Completes the stack</h2>` +
+    `<div class="also-row">` +
+    candidates
+      .map(
+        (piece) => `
+        <a class="also-card" href="/p/${encodeURIComponent(piece.id)}.html">
+          <img src="${escapeHtml((piece.images || [])[0] || "/assets/products/placeholder.svg")}"
+               alt="" loading="lazy" />
+          <span class="also-title">${escapeHtml((piece.title || "").split("|")[0].trim())}</span>
+          ${piece.price ? `<span class="also-price">${escapeHtml(piece.price)}</span>` : ""}
+        </a>`
+      )
+      .join("") +
+    `</div>`;
+  host.hidden = false;
+}
+
+// Everything the shop sells, Etsy pieces and site-only ones alike.
+function allPieces() {
+  const listings = (window.MICKNACK_PRODUCTS && window.MICKNACK_PRODUCTS.listings) || [];
+  const extras = Array.isArray(window.MICKNACK_EXTRA_PRODUCTS) ? window.MICKNACK_EXTRA_PRODUCTS : [];
+  return [
+    ...listings.map((l) => ({ id: String(l.listing_id), title: l.title, price: l.price, images: l.images })),
+    ...extras.map((e) => ({ id: String(e.id), title: e.title, price: e.price, images: e.images })),
+  ];
+}
+
+const id =
+  window.MICKNACK_PRODUCT_ID || new URLSearchParams(location.search).get("id");
 const product = id ? findProduct(id) : null;
 
 // Redraw once the worker says what's actually left.
@@ -266,6 +322,7 @@ window.MICKNACK_STOCK.loadLive(STOCK_ENDPOINT).then((ok) => {
 // A hidden piece is treated as if it isn't on the site.
 if (product && !window.MICKNACK_STOCK.of(product.id).hidden) {
   renderProduct(product);
+  renderAlsoLike(product, allPieces());
 } else {
   renderNotFound();
 }

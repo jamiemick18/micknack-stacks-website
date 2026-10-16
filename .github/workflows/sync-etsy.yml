@@ -60,6 +60,11 @@ jobs:
           ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
         run: node scripts/sync-etsy.js
 
+      # A page per piece, so a link shared to Instagram or TikTok shows the
+      # piece rather than a bare grey box. Rebuilt from product.html each run.
+      - name: Build the share pages
+        run: node scripts/build-share-pages.js
+
       # Keeps the checkout worker in step with the shop: which piece each
       # Stripe price belongs to, how far Etsy's counts moved, and a first
       # count for any piece the worker has not seen before.
@@ -79,10 +84,10 @@ jobs:
           # Every file the sync writes belongs here. A written-but-unstaged
           # file is left behind as a local change, and the rebase below then
           # refuses to run, which failed the whole job once.
-          if git diff --quiet -- data/products.js data/etsy-stock-deltas.json data/variations.js data/etsy-stats.json data/site-views.json; then
+          if git diff --quiet -- data/products.js data/etsy-stock-deltas.json data/variations.js data/etsy-stats.json data/site-views.json data/categories.js p; then
             echo "No listing changes — nothing to commit."
           else
-            git add data/products.js data/etsy-stock-deltas.json data/variations.js data/etsy-stats.json data/site-views.json
+            git add data/products.js data/etsy-stock-deltas.json data/variations.js data/etsy-stats.json data/site-views.json data/categories.js p
             git commit -m "Sync Etsy listings"
             # Rebase onto anything pushed while this run was in flight, so a
             # concurrent commit doesn't fail the sync.

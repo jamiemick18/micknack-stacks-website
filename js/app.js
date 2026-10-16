@@ -37,6 +37,11 @@ function toCard(item, { key, buttonLabel, badge }) {
   // Quantities live in data/inventory.js and are never shown to shoppers;
   // they only decide whether a piece can be bought.
   const stock = window.MICKNACK_STOCK.of(key);
+  const shelf = (window.MICKNACK_CATEGORY_OF || {})[key] || "";
+  // Listed within the fortnight counts as new, which is roughly how often
+  // something lands. A piece with no date is simply not new.
+  const listedAt = item.created || item.added_at || null;
+  const isNew = listedAt ? Date.now() - new Date(listedAt).getTime() < 14 * 86400000 : false;
   // Taken off Etsy: the piece stays here, but its Etsy link does not. The
   // listing is gone, so the button would land on "this item is unavailable".
   const url = item.etsy_active === false ? "" : item.url || "";
@@ -50,6 +55,8 @@ function toCard(item, { key, buttonLabel, badge }) {
     (Array.isArray(item.variations) ? item.variations : []);
   return {
     hasOptions: variations.length > 0,
+    shelf,
+    isNew,
     id: key,
     priceId: (stripeLinks[key] || {}).price_id || "",
     soldOut: stock.soldOut,
@@ -72,13 +79,14 @@ function toCard(item, { key, buttonLabel, badge }) {
     buyUrl: buyUrl || "",
     // Clicking the card opens our own product page rather than sending people
     // straight to Etsy or Stripe.
-    detailUrl: `product.html?id=${encodeURIComponent(key)}`,
+    detailUrl: `p/${encodeURIComponent(key)}.html`,
   };
 }
 
 function renderCard(card) {
   const thumbInner = `<img src="${card.image}" alt="${escapeHtml(card.title)}" loading="lazy" />
-            ${card.badge ? `<span class="card-badge">${escapeHtml(card.badge)}</span>` : ""}`;
+            ${card.badge ? `<span class="card-badge">${escapeHtml(card.badge)}</span>` : ""}
+            ${card.isNew && !card.badge ? `<span class="card-badge is-new">New</span>` : ""}`;
 
   // Same tab: this is our own page, not an outside link.
   const thumb = `<a class="thumb" href="${card.detailUrl}">${thumbInner}</a>`;
@@ -174,27 +182,40 @@ function renderProducts(etsyData, extras) {
   }
 
   allCards = cards;
+  renderShelves();
   applySearch();
 }
 
-// Searching filters the cards already on the page, so results are instant.
+// The shelf currently chosen above the grid; empty means everything.
+let shelfFilter = "";
+
+// Searching and the shelf chips narrow the cards already on the page, so
+// both are instant and they combine rather than fight.
 function applySearch() {
   const input = document.getElementById("shop-search");
   const countEl = document.getElementById("search-count");
   const term = input ? input.value.trim().toLowerCase() : "";
 
-  const matches = term
-    ? allCards.filter((card) => term.split(/\s+/).every((word) => card.keywords.includes(word)))
+  const onShelf = shelfFilter
+    ? allCards.filter((card) => card.shelf === shelfFilter)
     : allCards;
+
+  const matches = term
+    ? onShelf.filter((card) => term.split(/\s+/).every((word) => card.keywords.includes(word)))
+    : onShelf;
 
   if (countEl) {
     countEl.textContent = `${matches.length} ${matches.length === 1 ? "piece" : "pieces"}`;
-    countEl.hidden = !term;
+    countEl.hidden = !term && !shelfFilter;
   }
 
   if (!matches.length) {
+    const shelfName = (window.MICKNACK_CATEGORIES || []).find((c) => c.id === shelfFilter);
+    const said = term
+      ? `Nothing matches “${escapeHtml(term)}”${shelfName ? ` in ${escapeHtml(shelfName.label)}` : ""}.`
+      : "Nothing on this shelf just now.";
     grid.innerHTML = `<div class="empty-state">
-        <p>Nothing matches “${escapeHtml(term)}”.</p>
+        <p>${said}</p>
         <a class="btn btn-secondary" href="#" id="clear-search">Show everything</a>
       </div>`;
     const clear = document.getElementById("clear-search");
@@ -202,6 +223,8 @@ function applySearch() {
       clear.addEventListener("click", (event) => {
         event.preventDefault();
         if (input) input.value = "";
+        shelfFilter = "";
+        renderShelves();
         applySearch();
       });
     }
@@ -215,6 +238,44 @@ function applySearch() {
 const extras = Array.isArray(window.MICKNACK_EXTRA_PRODUCTS)
   ? window.MICKNACK_EXTRA_PRODUCTS
   : [];
+
+// Only shelves with something on them get a chip: a filter that leads to an
+// empty grid is just a disappointment with a label.
+function renderShelves() {
+  const host = document.getElementById("shelf-filters");
+  if (!host) return;
+
+  const shelves = (window.MICKNACK_CATEGORIES || []).filter((shelf) =>
+    allCards.some((card) => card.shelf === shelf.id)
+  );
+  if (shelves.length < 2) return; // one shelf is not a choice
+
+  const chips = [{ id: "", label: "All" }, ...shelves];
+  host.innerHTML = chips
+    .map((shelf) => {
+      const count = shelf.id
+        ? allCards.filter((card) => card.shelf === shelf.id).length
+        : allCards.length;
+      const on = shelfFilter === shelf.id;
+      return `<button type="button" class="shelf-chip${on ? " is-on" : ""}"
+               data-shelf="${escapeHtml(shelf.id)}" aria-pressed="${on}">
+               ${escapeHtml(shelf.label)} <span class="shelf-n">${count}</span>
+             </button>`;
+    })
+    .join("");
+  host.hidden = false;
+}
+
+const shelfHost = document.getElementById("shelf-filters");
+if (shelfHost) {
+  shelfHost.addEventListener("click", (event) => {
+    const chip = event.target.closest("[data-shelf]");
+    if (!chip) return;
+    shelfFilter = chip.dataset.shelf;
+    renderShelves();
+    applySearch();
+  });
+}
 
 const searchInput = document.getElementById("shop-search");
 if (searchInput) searchInput.addEventListener("input", applySearch);

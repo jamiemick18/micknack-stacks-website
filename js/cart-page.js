@@ -161,11 +161,11 @@ function renderCartPage() {
 
           return `
         <li class="cart-line${flagged ? " is-problem" : ""}" data-id="${escapeHtml(line)}">
-          <a class="cart-thumb" href="product.html?id=${encodeURIComponent(item.id)}">
+          <a class="cart-thumb" href="p/${encodeURIComponent(item.id)}.html">
             <img src="${escapeHtml(item.image)}" alt="" loading="lazy" />
           </a>
           <div class="cart-line-meta">
-            <a class="cart-title" href="product.html?id=${encodeURIComponent(item.id)}">${escapeHtml(item.title)}</a>
+            <a class="cart-title" href="p/${encodeURIComponent(item.id)}.html">${escapeHtml(item.title)}</a>
             ${optionsLine(item)}
             <div class="cart-price">${money(item.price)} each ${problemChip}${note}</div>
           </div>

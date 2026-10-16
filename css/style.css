@@ -583,6 +583,60 @@ img {
   margin: 0 auto 40px;
 }
 
+/* ---- Shelf filters ---- */
+
+.shelf-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 auto 10px;
+  max-width: 680px;
+}
+
+.shelf-chip {
+  font-family: "Jost", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(10, 10, 10, 0.16);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+}
+
+.shelf-chip:hover { border-color: var(--gold); color: var(--gold); }
+
+.shelf-chip.is-on {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--cream);
+}
+
+/* The count stays quiet: it is a hint about how much is behind the chip, */
+/* not part of the label. */
+.shelf-n {
+  opacity: 0.5;
+  font-variant-numeric: tabular-nums;
+  margin-left: 4px;
+}
+
+.shelf-chip.is-on .shelf-n { opacity: 0.65; }
+
+/* A new piece wears the same badge shape as Sold out, in gold rather than */
+/* black, and only when nothing more important needs that corner. */
+.card-badge.is-new {
+  background: var(--gold);
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .shelf-chip { padding: 8px 12px; font-size: 0.64rem; }
+}
+
 .sync-note-row {
   display: flex;
   justify-content: center;
@@ -1015,6 +1069,65 @@ img {
 
 @media (prefers-reduced-motion: reduce) {
   .pop-backdrop, .pop-box { transition: none; }
+}
+
+/* ---- Completes the stack ---- */
+
+.also-like {
+  max-width: var(--max-width);
+  margin: 56px auto 0;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.also-heading {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0 0 20px;
+}
+
+.also-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.also-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.also-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 3px;
+  background: var(--cream-dim);
+  transition: opacity 0.16s ease;
+}
+
+.also-card:hover img { opacity: 0.86; }
+
+.also-title {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 8px;
+  line-height: 1.35;
+}
+
+.also-price {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--gold);
+  margin-top: 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 560px) {
+  .also-row { gap: 12px; }
+  .also-title { font-size: 0.78rem; }
 }
 
 .site-footer {
