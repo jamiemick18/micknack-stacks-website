@@ -571,16 +571,18 @@ img {
   margin-bottom: 48px;
 }
 
+/* Housekeeping, not a headline: it sits in the footer with the view count
+   and the copyright rather than between a shopper and the collection. */
 .sync-note {
   text-align: center;
   font-size: 0.78rem;
   letter-spacing: 0.04em;
-  color: var(--gold);
-  background: var(--blush);
-  border-radius: 999px;
-  padding: 8px 18px;
-  display: inline-block;
-  margin: 0 auto 40px;
+  color: rgba(250, 246, 239, 0.4);
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  display: block;
+  margin: 0 0 6px;
 }
 
 /* ---- Shelf filters ---- */
@@ -635,11 +637,6 @@ img {
 
 @media (max-width: 480px) {
   .shelf-chip { padding: 8px 12px; font-size: 0.64rem; }
-}
-
-.sync-note-row {
-  display: flex;
-  justify-content: center;
 }
 
 .shop-search {
