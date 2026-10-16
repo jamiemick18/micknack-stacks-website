@@ -2,8 +2,70 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-15T17:39:20.652Z",
+  "synced_at": "2026-10-16T17:12:22.208Z",
   "listings": [
+    {
+      "listing_id": "4596333038",
+      "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4596333038/golden-hour-ear-chain-champagne-clear-cz",
+      "description": "Golden Hour ✨🥂\n\nWarm, glowy, and catching the light like the last few minutes before sunset.\nGolden Hour features a delicate gold chain with five individually dangling CZ stones — three round champagne-colored stones alternating with two clear kite-shaped stones. The mix of warm champagne sparkle and crisp clear facets gives the piece dimension without making it feel overly busy.\n\nwww.micknackstacks.com⁠\n\nWhy you’ll love it:\nFive individually dangling CZ stones\nThree round champagne CZ stones\nTwo clear kite-shaped CZ stones\nAlternating stone shapes for extra texture\nWarm, neutral sparkle that pairs easily with gold jewelry and delicate movement as the stones catch the light\nAdds depth without overpowering the rest of your stack\n\nGolden Hour is a chain connector only, designed to attach between compatible hoops, earrings, or flatback jewelry you already own.\n\nDrape it between two piercings for a soft layered look, pair it with simple gold hoops, or work it into a fuller curated stack.\n\nThe champagne stones give off a warm, honey-toned glow while the clear kite stones break up the color with brighter flashes of light.\n\nMaterials & Details:\nGold-tone chain\nFive dangling CZ stones\n3 round champagne CZ stones\n2 clear kite-shaped CZ stones\nConnector loops at both ends\nChain connector only\nEarrings and labret posts not included\nSold individually\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Curated ears • Neutral ear stacks • Dainty chain styling\nWarm light. Tiny sparkle. Golden Hour, whenever you want it. ✨🥂\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+        "https://i.etsystatic.com/67609393/r/il/65ce53/8732822721/il_fullxfull.8732822721_qf7t.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/c7af/ae7878a4-a901-4713-a0e2-336e6f03415c/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ],
+      "quantity": 3,
+      "etsy_active": true,
+      "added_at": "2026-10-16T17:12:22.208Z"
+    },
+    {
+      "listing_id": "4596261114",
+      "title": "Sterling Silver Drizzle Ear Chain | 30mm Earring Connector | 3x5mm CZ Drop Dangles | Dainty Cartilage Chain Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4596261114/sterling-silver-drizzle-ear-chain-30mm",
+      "description": "Sterling Silver Drizzle 💧\nA little rainfall for your ear stack.\n\nSterling Silver Drizzle features a delicate 30 mm sterling silver chain finished with five 3 × 5 mm drop-shaped CZ stones that move and catch the light like tiny raindrops.\n\nThe cool silver tone gives this piece a clean, icy feel while the five dangling stones add soft movement and sparkle. It’s delicate enough for an everyday stack, but detailed enough to completely change the look of your earrings.\n\nwww.micknackstacks.com⁠\n\nWhy you’ll love it:\n30 mm ear-chain connector\nDelicate 1.5 mm sterling silver chain\nFive 3 × 5 mm drop-shaped CZ stones\nSterling silver jump rings\nSoft dangling movement\nCool, bright silver finish\nLightweight, delicate \n\nSterling Silver Drizzle is a chain connector only, designed to attach between compatible earrings, hoops, or flatback jewelry you already own.\n\nDrape it between two piercings for a soft waterfall effect, pair it with simple silver hoops for a clean look, or layer it into a more detailed curated stack.\n\nMaterials & Details:\nChain length: 30 mm\nChain width: 1.5 mm\nChain: Sterling silver\nJump rings: Sterling silver\nStones: Five clear CZ\nStone size: 3 × 5 mm\nStone shape: Drop / pear-shaped\nConnector loops at both ends\n\nChain connector only\nEarrings and labret posts not included\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Silver ear stacks • Curated ears • Dainty chain styling\nFive little drops. Zero chance of staying unnoticed. 💧\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/6f0f7e/8684444088/il_fullxfull.8684444088_n3z3.jpg",
+        "https://i.etsystatic.com/67609393/r/il/6d93b3/8684444098/il_fullxfull.8684444098_p4i5.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/0b04/b0854f94-8688-489d-bce7-22a650080aa7/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings",
+        "sterling silver"
+      ],
+      "quantity": 3,
+      "etsy_active": true,
+      "added_at": "2026-10-16T17:12:22.208Z"
+    },
     {
       "listing_id": "4566919003",
       "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
@@ -304,7 +366,7 @@ window.MICKNACK_PRODUCTS = {
         "non tarnish jewelry",
         "multiple piercings"
       ],
-      "quantity": 1,
+      "quantity": 3,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
