@@ -20,7 +20,7 @@
 // Usage: node scripts/push-stock.js [--dry-run]
 //   WORKER_URL and WORKER_ADMIN_TOKEN come from the environment.
 
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createContext, runInContext } from "node:vm";
@@ -96,6 +96,23 @@ async function main() {
   // them to the visits counted here.
   const stats = readJson("data/etsy-stats.json", {});
   const etsyViews = typeof stats.views === "number" ? stats.views : undefined;
+
+  // Written into the repo as well as pushed: the daily dashboard routine runs
+  // in a sandbox that can reach GitHub but not the shop or the worker, so this
+  // file is the only way those visit counts travel to it.
+  try {
+    const res = await fetch(`${workerUrl}/views`, { cache: "no-store" });
+    if (res.ok) {
+      const counts = await res.json();
+      writeFileSync(
+        join(ROOT, "data", "site-views.json"),
+        JSON.stringify({ ...counts, recorded_at: new Date().toISOString() }, null, 2)
+      );
+      console.log(`Site visits so far: ${counts.site}.`);
+    }
+  } catch (err) {
+    console.log(`::warning::Could not read the view count: ${err.message}`);
+  }
 
   const payload = { prices, deltas, quantities };
   if (etsyViews !== undefined) payload.etsy_views = etsyViews;

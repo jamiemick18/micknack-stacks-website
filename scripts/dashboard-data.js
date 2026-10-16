@@ -15,7 +15,10 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { createContext, runInContext } from "node:vm";
 
-const SITE = "https://micknackstacks.com";
+// Read from the repo rather than the live site: the daily cloud routine runs in
+// a sandbox whose proxy allows GitHub and refuses both micknackstacks.com and
+// the worker. These files are the same ones the site serves.
+const SITE = "https://raw.githubusercontent.com/jamiemick18/micknack-stacks-website/main";
 const WORKER = "https://micknack-checkout.jamie-mick18.workers.dev";
 const OUT = process.argv[2] || "dashboard-data";
 
@@ -36,7 +39,16 @@ async function main() {
   const products = await windowFile("/data/products.js", "MICKNACK_PRODUCTS");
   const extras = (await windowFile("/data/extra-products.js", "MICKNACK_EXTRA_PRODUCTS")) || [];
   const stats = JSON.parse(await text(SITE + "/data/etsy-stats.json"));
-  const views = JSON.parse(await text(WORKER + "/views"));
+
+  // The worker knows the visit count first-hand, so ask it when it can be
+  // reached; otherwise fall back to the copy the sync writes into the repo.
+  let views;
+  try {
+    views = JSON.parse(await text(WORKER + "/views"));
+  } catch (err) {
+    views = JSON.parse(await text(SITE + "/data/site-views.json"));
+    console.log("Worker unreachable; using the count recorded by the last sync.");
+  }
 
   const listings = (products && products.listings) || [];
   if (!listings.length) throw new Error("No listings came back; refusing to write an empty catalog.");
