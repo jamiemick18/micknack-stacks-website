@@ -9,7 +9,7 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-10-16T18:25:06.844Z
+// Last read from Etsy: 2026-10-16T18:39:17.698Z
 
 window.MICKNACK_VARIATIONS = {
   // Everyday G23 ASTM F136 Titanium Gold Clicker Hoop | 18K PVD 
