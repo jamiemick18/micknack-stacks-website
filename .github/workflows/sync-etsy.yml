@@ -76,10 +76,13 @@ jobs:
         run: |
           git config user.name "micknack-stacks-bot"
           git config user.email "actions@users.noreply.github.com"
-          if git diff --quiet -- data/products.js data/etsy-stock-deltas.json data/variations.js; then
+          # Every file the sync writes belongs here. A written-but-unstaged
+          # file is left behind as a local change, and the rebase below then
+          # refuses to run, which failed the whole job once.
+          if git diff --quiet -- data/products.js data/etsy-stock-deltas.json data/variations.js data/etsy-stats.json; then
             echo "No listing changes — nothing to commit."
           else
-            git add data/products.js data/etsy-stock-deltas.json data/variations.js
+            git add data/products.js data/etsy-stock-deltas.json data/variations.js data/etsy-stats.json
             git commit -m "Sync Etsy listings"
             # Rebase onto anything pushed while this run was in flight, so a
             # concurrent commit doesn't fail the sync.
