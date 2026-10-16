@@ -910,6 +910,113 @@ img {
 
 /* ---------- Footer ---------- */
 
+/* ---- Welcome popup ---- */
+
+.pop-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(10, 10, 10, 0.55);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.pop-backdrop.is-open { opacity: 1; }
+
+.pop-box {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: var(--cream);
+  border: 1px solid rgba(10, 10, 10, 0.12);
+  border-radius: 4px;
+  padding: 34px 28px 24px;
+  text-align: center;
+  transform: translateY(8px);
+  transition: transform 0.2s ease;
+  box-shadow: 0 18px 50px rgba(10, 10, 10, 0.22);
+}
+
+.pop-backdrop.is-open .pop-box { transform: none; }
+
+.pop-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--ink);
+  opacity: 0.45;
+  cursor: pointer;
+  padding: 6px 8px;
+}
+
+.pop-close:hover { opacity: 1; }
+
+.pop-eyebrow {
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 8px;
+}
+
+.pop-box h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+  margin: 0 0 8px;
+}
+
+.pop-pitch { font-size: 0.92rem; color: #4a4a4a; margin: 0 0 18px; }
+
+.pop-form { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.pop-form input {
+  flex: 1 1 200px;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(10, 10, 10, 0.18);
+  border-radius: 999px;
+  background: #fff;
+  font-family: "Jost", sans-serif;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.pop-form .btn { flex: 0 0 auto; }
+
+.pop-msg { font-size: 0.85rem; margin: 12px 0 0; color: #2f6b45; }
+.pop-msg.is-error { color: #9a3412; }
+
+.pop-skip {
+  display: block;
+  margin: 16px auto 0;
+  background: none;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b6b6b;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 4px;
+}
+
+.pop-skip:hover { color: var(--ink); }
+
+.pop-fine { font-size: 0.72rem; color: #8a8a8a; margin: 10px 0 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pop-backdrop, .pop-box { transition: none; }
+}
+
 .site-footer {
   background: var(--ink);
   color: var(--cream);

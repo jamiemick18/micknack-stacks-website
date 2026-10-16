@@ -1,4 +1,4 @@
-// The "Join the Menace List" email signup, shared by every page.
+// The "Join the Micknack Stack Society" email signup, shared by every page.
 //
 // Any element with data-newsletter gets the form. The form posts to the URL in
 // data/newsletter.js. Email services don't allow cross-site reads, so the
@@ -6,6 +6,25 @@
 
 (function () {
   const config = window.MICKNACK_NEWSLETTER || {};
+
+  // Shared with the welcome popup so there is one place that knows how to
+  // subscribe someone, and one place to fix if the email service changes.
+  // The response is opaque by design (no-cors), so a request going out
+  // without throwing is as much confirmation as the browser can give us.
+  window.MICKNACK_SUBSCRIBE = async function subscribe(email, fieldName) {
+    if (!config.action) throw new Error("not_configured");
+    const body = new FormData();
+    body.append(fieldName || config.emailField || "email", email);
+    await fetch(config.action, { method: "POST", mode: "no-cors", body });
+    try {
+      // So the popup never interrupts someone who has already signed up.
+      localStorage.setItem("micknack-subscribed", "1");
+    } catch (err) {
+      /* blocked storage only means the popup may ask again */
+    }
+  };
+
+  window.MICKNACK_EMAIL_OK = (email) => /^[^@s]+@[^@s]+.[^@s]+$/.test(email);
   const local = ["localhost", "127.0.0.1", "[::1]", ""].includes(location.hostname);
   if (!config.action && !local) return;
 
@@ -22,8 +41,8 @@
     host.id = "newsletter";
     host.className = "newsletter";
     host.innerHTML = `
-      <h2>Join the Menace List <span aria-hidden="true">✨</span></h2>
-      <p class="newsletter-pitch">New drops, tiny ear necklaces, occasional chaos.</p>
+      <h2>Join the Micknack Stack Society <span aria-hidden="true">✨</span></h2>
+      <p class="newsletter-pitch">New drops, tiny treasures, and first word when something lands.</p>
       <form class="newsletter-form" novalidate>
         <input type="email" name="${config.emailField || "email"}" placeholder="your@email.com" aria-label="Email address" autocomplete="email" required />
         <button type="submit" class="btn btn-primary">Let me in</button>
@@ -55,11 +74,7 @@
       const button = form.querySelector("button");
       button.disabled = true;
       try {
-        await fetch(config.action, {
-          method: "POST",
-          mode: "no-cors",
-          body: new FormData(form),
-        });
+        await window.MICKNACK_SUBSCRIBE(email, input.name);
         form.hidden = true;
         host.querySelector(".newsletter-fine").hidden = true;
         show("You're on the list. Check your inbox to confirm.");

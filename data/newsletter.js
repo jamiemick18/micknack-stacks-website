@@ -1,5 +1,5 @@
 // ============================================================================
-// NEWSLETTER — where the "Join the Menace List" signup form sends emails.
+// NEWSLETTER — where the "Join the Micknack Stack Society" signup sends emails.
 // ============================================================================
 //
 // Create a free account with an email service (Buttondown, MailerLite, Mailchimp,
