@@ -187,10 +187,36 @@ function normalizeListing(listing, images, video) {
     // Etsy's own stock count, so the private dashboard can start from it
     // instead of you counting everything by hand.
     quantity: typeof listing.quantity === "number" ? listing.quantity : null,
+    // What Etsy reports for this piece. Only populated when the sync runs with
+    // the shop owner token; an API key alone reads every listing as zero.
+    views: typeof listing.views === "number" ? listing.views : 0,
+    num_favorers: typeof listing.num_favorers === "number" ? listing.num_favorers : 0,
   };
 }
 
 async function main() {
+  // Signed in before anything else: Etsy returns a listing's view count only
+  // to the shop owner, so without this every piece reads as zero views.
+  let accessToken = null;
+  if (env.ETSY_REFRESH_TOKEN) {
+    try {
+      accessToken = await getAccessToken({
+        clientId: API_KEY.split(":")[0],
+        refreshToken: env.ETSY_REFRESH_TOKEN,
+      });
+      headers.Authorization = `Bearer ${accessToken}`;
+      console.log("Signed in to Etsy as the shop owner.");
+    } catch (err) {
+      console.log(`::warning::Could not sign in to Etsy: ${err.message}`);
+      console.log("Carrying on with the API key alone: no options, no view counts.");
+    }
+  } else {
+    console.log(
+      "::warning::ETSY_REFRESH_TOKEN is not set, so option drop-downs and view " +
+        "counts were not read."
+    );
+  }
+
   console.log(`Looking up shop "${SHOP_NAME}"...`);
   const shopId = await findShopId(SHOP_NAME);
 
@@ -291,7 +317,21 @@ async function main() {
     listings: merged,
   };
 
-  await syncVariations(merged, now);
+  await syncVariations(merged, now, accessToken);
+
+  // Etsy counts views per listing; the shop total is just their sum. Written
+  // out so push-stock.js can hand it to the worker without calling Etsy again.
+  const etsyViews = merged
+    .filter((listing) => listing.etsy_active)
+    .reduce((sum, listing) => sum + (listing.views || 0), 0);
+  const etsyFavourites = merged
+    .filter((listing) => listing.etsy_active)
+    .reduce((sum, listing) => sum + (listing.num_favorers || 0), 0);
+  writeFileSync(
+    join(ROOT, "data", "etsy-stats.json"),
+    JSON.stringify({ views: etsyViews, favourites: etsyFavourites, computed_at: now }, null, 2)
+  );
+  console.log(`Etsy reports ${etsyViews} view(s) and ${etsyFavourites} favourite(s).`);
 
   const outPath = join(ROOT, "data", "products.js");
   const banner =
@@ -306,15 +346,10 @@ async function main() {
 //
 // A failure here is reported but not fatal: losing tonight.s options is a far
 // smaller problem than losing tonight.s listings and photos.
-async function syncVariations(listings, now) {
-  const refreshToken = env.ETSY_REFRESH_TOKEN;
-  if (!refreshToken) {
-    // A warning, not a quiet note: this is a degraded run, and it should be
-    // visible on the run summary rather than buried in the log.
-    console.log(
-      "::warning::ETSY_REFRESH_TOKEN is not set, so option drop-downs were not read. " +
-        "data/variations.js is unchanged."
-    );
+async function syncVariations(listings, now, accessToken) {
+  if (!accessToken) {
+    // Already warned about at sign-in; say what it costs and move on.
+    console.log("Not signed in to Etsy, so data/variations.js is unchanged.");
     return;
   }
 
@@ -322,7 +357,6 @@ async function syncVariations(listings, now) {
   const active = listings.filter((listing) => listing.etsy_active);
 
   try {
-    const accessToken = await getAccessToken({ clientId, refreshToken });
     const variations = await fetchVariations(
       active.map((listing) => listing.listing_id),
       { clientId, apiKey: API_KEY, accessToken, log: (message) => console.log(message) }

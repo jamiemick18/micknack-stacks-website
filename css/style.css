@@ -956,6 +956,21 @@ img {
   color: var(--cream);
 }
 
+/* The view count sits just above the small print, quieter than the links
+   and louder than the copyright line. Hidden until the number arrives, so a
+   worker that cannot be reached leaves no empty sentence behind. */
+.view-count {
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: rgba(247, 240, 229, 0.55);
+  margin: 0 0 6px;
+}
+
+.view-count span {
+  color: var(--gold-light);
+  font-variant-numeric: tabular-nums;
+}
+
 .site-footer .fine-print {
   color: rgba(250, 246, 239, 0.35);
   font-size: 0.72rem;

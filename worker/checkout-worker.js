@@ -12,6 +12,8 @@
  *   POST /          create a checkout session (refuses sold-out pieces)
  *   POST /webhook   Stripe tells us a payment succeeded; counts come down
  *   POST /admin     set counts (needs ADMIN_TOKEN)
+ *   GET  /views     how many have looked, here and on Etsy
+ *   POST /views     count one more visit here
  *
  * Bindings it needs — see worker/README.md:
  *   STOCK              KV namespace
@@ -201,6 +203,7 @@ async function handleAdmin(request, env, cors) {
   const quantities = body.quantities || {}; // set outright
   const deltas = body.deltas || {}; // adjust by this much
   const prices = body.prices || {};
+  const etsyViews = body.etsy_views; // Etsy own view count, read by the sync
 
   let written = 0;
 
@@ -221,12 +224,42 @@ async function handleAdmin(request, env, cors) {
     written++;
   }
 
+  if (typeof etsyViews === "number" && etsyViews >= 0) {
+    await env.STOCK.put("views:etsy", String(Math.floor(etsyViews)));
+    written++;
+  }
+
   for (const [priceId, pieceId] of Object.entries(prices)) {
     await env.STOCK.put(`price:${priceId}`, String(pieceId));
     written++;
   }
 
   return json({ ok: true, written }, 200, cors);
+}
+
+// ----------------------------------------------------------------- views ----
+
+// Two numbers: visits to the shop own pages, counted here, and Etsy own count,
+// pushed in by the sync. Kept apart so neither can overwrite the other, and
+// added together only when they are read.
+async function readViews(env) {
+  const [site, etsy] = await Promise.all([
+    env.STOCK.get("views:site"),
+    env.STOCK.get("views:etsy"),
+  ]);
+  const siteCount = Math.max(0, parseInt(site || "0", 10) || 0);
+  const etsyCount = Math.max(0, parseInt(etsy || "0", 10) || 0);
+  return { site: siteCount, etsy: etsyCount, total: siteCount + etsyCount };
+}
+
+async function countView(env, cors) {
+  const current = await readViews(env);
+  const next = current.site + 1;
+  await env.STOCK.put("views:site", String(next));
+  return json({ site: next, etsy: current.etsy, total: next + current.etsy }, 200, {
+    ...cors,
+    "Cache-Control": "no-store",
+  });
 }
 
 // -------------------------------------------------------------- checkout ----
@@ -346,6 +379,12 @@ export default {
         ...cors,
         "Cache-Control": "no-store",
       });
+    }
+
+    if (path === "/views" && (request.method === "GET" || request.method === "POST")) {
+      if (!env.STOCK) return json({ site: 0, etsy: 0, total: 0 }, 200, cors);
+      if (request.method === "POST") return countView(env, cors);
+      return json(await readViews(env), 200, { ...cors, "Cache-Control": "no-store" });
     }
 
     if (path === "/admin" && request.method === "POST") {

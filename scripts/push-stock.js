@@ -91,11 +91,19 @@ async function main() {
     }
   }
 
+  // Etsy counts views in its own system; the shop has no way to read them
+  // from a browser, so they travel with the stock update and the worker adds
+  // them to the visits counted here.
+  const stats = readJson("data/etsy-stats.json", {});
+  const etsyViews = typeof stats.views === "number" ? stats.views : undefined;
+
   const payload = { prices, deltas, quantities };
+  if (etsyViews !== undefined) payload.etsy_views = etsyViews;
   console.log(
     `Sending ${Object.keys(prices).length} price mapping(s), ` +
       `${Object.keys(deltas).length} stock change(s), ` +
-      `${Object.keys(quantities).length} first count(s).`
+      `${Object.keys(quantities).length} first count(s)` +
+      (etsyViews === undefined ? "." : `, ${etsyViews} Etsy view(s).`)
   );
   for (const [id, qty] of Object.entries(quantities)) {
     const listing = listings.find((l) => String(l.listing_id) === id);
