@@ -113,10 +113,15 @@ function main() {
   const products = dataFile("products.js", "MICKNACK_PRODUCTS") || { listings: [] };
   const extras = dataFile("extra-products.js", "MICKNACK_EXTRA_PRODUCTS") || [];
 
+  // A hidden piece is off the site, so it should have nothing to share either:
+  // a link to one would show a page that then refuses to render it.
+  const inventory = dataFile("inventory.js", "MICKNACK_INVENTORY") || {};
+  const hidden = (id) => Boolean((inventory[String(id)] || {}).hidden);
+
   const pieces = [
     ...(products.listings || []).map((listing) => [String(listing.listing_id), listing]),
     ...extras.map((extra) => [String(extra.id), extra]),
-  ];
+  ].filter(([id]) => !hidden(id));
 
   if (!pieces.length) {
     console.log("::warning::No pieces found; share pages left alone.");

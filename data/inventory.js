@@ -18,4 +18,8 @@
 window.MICKNACK_INVENTORY = {
   // "4566134771": { sold_out: true },
   // "rose-studs": { hidden: true },
+
+  // Summit Ride Huggie Earrings: retired, left Etsy 2 October 2026 and no
+  // longer sold here either.
+  "4573433368": { hidden: true },
 };
