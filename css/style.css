@@ -87,18 +87,101 @@ img {
 .site-header nav {
   display: flex;
   align-items: center;
+  flex: 1 1 auto;
   flex-wrap: wrap;
+  gap: 10px 20px;
   justify-content: flex-end;
+}
+
+.nav-main,
+.nav-utility {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 10px 20px;
 }
 
-/* Seven items is a lot of nav: tighten before anything falls off the edge. */
+/* Favourites and the cart sit apart from the browsing links, hard right,
+   where a shopper expects to find what they are carrying. */
+.nav-utility { margin-left: auto; }
+
 @media (max-width: 1080px) {
-  .site-header nav { gap: 8px 14px; }
+  .site-header nav,
+  .nav-main,
+  .nav-utility { gap: 8px 14px; }
   .site-header nav a,
-  .site-header .nav-contact { font-size: 0.78rem; letter-spacing: 0.09em; }
+  .nav-social-toggle { font-size: 0.78rem; letter-spacing: 0.09em; }
   .nav-etsy { padding: 7px 13px !important; }
   .nav-cart { padding: 7px 13px !important; }
+}
+
+/* ---- Social menu ---- */
+
+.nav-social { position: relative; }
+
+.nav-social-toggle {
+  font-family: "Jost", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.75;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-social-toggle:hover,
+.nav-social-toggle[aria-expanded="true"] { opacity: 1; }
+
+.nav-social-toggle .caret { font-size: 0.7em; transition: transform 0.18s ease; }
+.nav-social-toggle[aria-expanded="true"] .caret { transform: rotate(180deg); }
+
+.social-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 150px;
+  background: var(--cream);
+  border: 1px solid rgba(10, 10, 10, 0.12);
+  border-radius: 4px;
+  box-shadow: 0 10px 26px rgba(10, 10, 10, 0.12);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  z-index: 30;
+}
+
+/* display:flex would quietly beat the hidden attribute, leaving the menu
+   open for good. */
+.social-menu[hidden] { display: none; }
+
+.social-menu a {
+  padding: 9px 12px !important;
+  border-radius: 3px;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+.social-menu a:hover { background: var(--cream-dim); opacity: 1; }
+
+/* A button that has to pass for one of the footer's links. */
+.foot-link-btn {
+  font-family: "Jost", sans-serif;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
 }
 
 .site-header nav a {
@@ -686,6 +769,7 @@ img {
 }
 
 .product-card {
+  position: relative;
   background: #fff;
   border: 1px solid rgba(10, 10, 10, 0.07);
   border-radius: 4px;
@@ -1125,6 +1209,135 @@ img {
 @media (max-width: 560px) {
   .also-row { gap: 12px; }
   .also-title { font-size: 0.78rem; }
+}
+
+/* ---- Saving a piece ---- */
+
+.heart {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  line-height: 0;
+  color: var(--ink);
+  opacity: 0.75;
+  transition: opacity 0.16s ease, transform 0.16s ease;
+}
+
+.heart svg { width: 22px; height: 22px; }
+.heart.is-on { opacity: 1; }
+.heart:hover { opacity: 1; transform: scale(1.08); }
+
+/* On a card it floats over the photo, in its own soft disc so it reads
+   against a busy image. */
+.card-heart {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.86);
+  border-radius: 999px;
+  padding: 7px;
+  backdrop-filter: blur(3px);
+}
+
+.product-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.product-title-row h1 { margin-bottom: 8px; }
+.product-heart { flex: 0 0 auto; margin-top: 4px; }
+
+.nav-saved { white-space: nowrap; }
+
+/* ---- The saved list ---- */
+
+.saved-intro { color: #5f5f5f; font-size: 0.9rem; margin: 0 0 22px; }
+
+.saved-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.saved-note { font-size: 0.84rem; color: #6b6b6b; margin: 0; }
+
+.saved-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+
+.saved-row {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(10, 10, 10, 0.08);
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.saved-thumb img {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 3px;
+  background: var(--cream-dim);
+  display: block;
+}
+
+.saved-meta { min-width: 0; }
+
+.saved-title {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.saved-title:hover { color: var(--gold); }
+.saved-price { color: var(--gold); font-size: 0.86rem; margin-top: 4px; font-variant-numeric: tabular-nums; }
+
+.saved-controls { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+
+.btn-sm { font-size: 0.64rem; padding: 9px 16px; }
+
+.saved-why { font-size: 0.78rem; color: #8a8a8a; }
+
+.saved-remove {
+  background: none;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.saved-remove:hover { color: var(--ink); }
+
+.saved-keep {
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b6b6b;
+}
+
+@media (max-width: 560px) {
+  .saved-row { grid-template-columns: 64px minmax(0, 1fr); }
+  .saved-thumb img { width: 64px; height: 64px; }
+  .saved-controls { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; }
 }
 
 .site-footer {

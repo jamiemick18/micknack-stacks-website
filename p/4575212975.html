@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="G23 Titanium Clicker Hoop, 18G 6mm Silver Cartilage Ring, Tiny Hinged Hoop for Helix, Tragus, Daith or Septum Piercing" />
   <meta name="twitter:description" content="Small, simple and made for a snug fit." />
   <meta name="twitter:image" content="https://i.etsystatic.com/67609393/r/il/89cd3e/8570981975/il_fullxfull.8570981975_bgd0.jpg" />
-  <link rel="stylesheet" href="/css/style.css?v=20261016d" />
+  <link rel="stylesheet" href="/css/style.css?v=20261018b" />
 </head>
 <body>
   <script>window.MICKNACK_PRODUCT_ID = "4575212975";</script>
@@ -29,13 +29,27 @@
     <div class="wrap">
       <a class="brand" href="/index.html">Micknack Stacks</a>
       <nav>
-        <a href="/index.html#shop">Shop</a>
-        <a href="/index.html#about">About</a>
-        <a href="https://www.instagram.com/micknackstacks/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.tiktok.com/@micknack.stacks" target="_blank" rel="noopener">TikTok</a>
-        <a class="nav-etsy" href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Visit Etsy Shop</a>
-        <button type="button" class="nav-contact" id="contact-open">Contact</button>
-        <a class="nav-cart" href="/cart.html" id="cart-link">Cart</a>
+        <div class="nav-main">
+          <a href="/index.html#shop">Shop</a>
+
+          <div class="nav-social">
+            <button type="button" class="nav-social-toggle" id="social-toggle"
+                    aria-expanded="false" aria-haspopup="true" aria-controls="social-menu">
+              Social <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="social-menu" id="social-menu" role="menu" hidden>
+              <a role="menuitem" href="https://www.instagram.com/micknackstacks/" target="_blank" rel="noopener">Instagram</a>
+              <a role="menuitem" href="https://www.tiktok.com/@micknack.stacks" target="_blank" rel="noopener">TikTok</a>
+            </div>
+          </div>
+
+          <a class="nav-etsy" href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Visit Etsy Shop</a>
+        </div>
+
+        <div class="nav-utility">
+          <a class="nav-saved" href="/saved.html" id="saved-link" hidden>Favorites</a>
+          <a class="nav-cart" href="/cart.html" id="cart-link">Cart</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -62,6 +76,8 @@
         <a href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Etsy Shop</a>
         <a href="https://www.instagram.com/micknackstacks/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.tiktok.com/@micknack.stacks" target="_blank" rel="noopener">TikTok</a>
+        <a href="/index.html#about">About</a>
+        <button type="button" class="foot-link-btn" id="contact-open">Contact</button>
         <a href="mailto:micknackstacks@gmail.com">Email Us</a>
         <a href="/index.html#shop">Shop This Site</a>
         <a href="#top">Back to Top</a>
@@ -94,11 +110,13 @@
   <script src="/data/stripe-links.js"></script>
   <script src="/data/categories.js"></script>
   <script src="/js/stock.js"></script>
+  <script src="/js/hearts.js"></script>
   <script src="/js/cart.js"></script>
   <script src="/js/product.js"></script>
   <script src="/data/newsletter.js"></script>
   <script src="/js/newsletter.js"></script>
   <script src="/js/newsletter-popup.js"></script>
+  <script src="/js/nav.js"></script>
   <script src="/js/contact.js"></script>
   <script src="/js/views.js"></script>
 </body>

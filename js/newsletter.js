@@ -28,13 +28,15 @@
   const local = ["localhost", "127.0.0.1", "[::1]", ""].includes(location.hostname);
   if (!config.action && !local) return;
 
-  // A small nav link that jumps down to the footer form.
-  const contactButton = document.getElementById("contact-open");
-  if (contactButton && document.querySelector("[data-newsletter]")) {
+  // A small nav link that jumps down to the footer form. It sits with the
+  // other browse links: Contact has moved to the footer, so it can no longer
+  // be the thing this is hung off.
+  const browseLinks = document.querySelector(".nav-main");
+  if (browseLinks && document.querySelector("[data-newsletter]")) {
     const link = document.createElement("a");
     link.href = "#newsletter";
     link.textContent = "Join the list";
-    contactButton.before(link);
+    browseLinks.appendChild(link);
   }
 
   document.querySelectorAll("[data-newsletter]").forEach((host) => {

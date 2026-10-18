@@ -88,7 +88,9 @@ function renderCard(card) {
             ${card.isNew && !card.badge ? `<span class="card-badge is-new">New</span>` : ""}`;
 
   // Same tab: this is our own page, not an outside link.
-  const thumb = `<a class="thumb" href="${card.detailUrl}">${thumbInner}</a>`;
+  const thumb = `<a class="thumb" href="${card.detailUrl}">${thumbInner}</a>
+    <button type="button" class="heart card-heart" data-heart="${escapeHtml(card.id)}"
+            data-heart-title="${escapeHtml(card.title)}" aria-label="Save ${escapeHtml(card.title)}"></button>`;
 
   const actions = [];
   if (card.soldOut) {
@@ -257,6 +259,7 @@ function applySearch() {
   }
 
   grid.innerHTML = matches.map(renderCard).join("");
+  if (window.MICKNACK_PAINT_HEARTS) window.MICKNACK_PAINT_HEARTS();
 }
 
 // Missing extra-products.js shouldn't take the whole shop down with it.

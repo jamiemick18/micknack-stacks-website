@@ -199,7 +199,11 @@ function renderProduct(product) {
     <div class="product-layout">
       ${gallery}
       <div class="product-info">
-        <h1>${escapeHtml(product.title)}</h1>
+        <div class="product-title-row">
+          <h1>${escapeHtml(product.title)}</h1>
+          <button type="button" class="heart product-heart" data-heart="${escapeHtml(product.id)}"
+                  data-heart-title="${escapeHtml(product.title)}"></button>
+        </div>
         ${product.price ? `<div class="product-price">${formatPrice(product.price, product.currency_code)}</div>` : ""}
         ${buyUrl ? `<p class="shipping-note">${SHIPPING_NOTE}</p>` : ""}
         ${soldOut ? `<p class="shipping-note">This piece is sold out right now.</p>` : ""}
@@ -323,6 +327,7 @@ window.MICKNACK_STOCK.loadLive(STOCK_ENDPOINT).then((ok) => {
 if (product && !window.MICKNACK_STOCK.of(product.id).hidden) {
   renderProduct(product);
   renderAlsoLike(product, allPieces());
+  if (window.MICKNACK_PAINT_HEARTS) window.MICKNACK_PAINT_HEARTS();
 } else {
   renderNotFound();
 }

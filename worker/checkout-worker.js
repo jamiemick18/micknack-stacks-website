@@ -14,6 +14,8 @@
  *   POST /admin     set counts (needs ADMIN_TOKEN)
  *   GET  /views     how many have looked, here and on Etsy
  *   POST /views     count one more visit here
+ *   GET  /hearts    how many have saved each piece
+ *   POST /hearts    save or unsave one, counted but not attributed
  *
  * Bindings it needs — see worker/README.md:
  *   STOCK              KV namespace
@@ -237,6 +239,77 @@ async function handleAdmin(request, env, cors) {
   return json({ ok: true, written }, 200, cors);
 }
 
+// ---------------------------------------------------------------- hearts ----
+
+// How many people have saved each piece, and nothing else.
+//
+// The browser sends a random id it made up for itself, which exists for one
+// reason: so hearting the same piece twice, or hearting and unhearting all
+// afternoon, counts once. It is never stored against an email, a name, an
+// address or a basket, and two ids cannot be told apart or joined up. What
+// comes out is a number per piece.
+//
+// KV holds  heart:<piece>            the count
+//           saved:<visitor>:<piece>  that this browser has it saved
+
+const HEART_ID = /^[A-Za-z0-9_-]{1,64}$/;
+
+async function readHearts(env) {
+  const counts = {};
+  let cursor;
+  do {
+    const page = await env.STOCK.list({ prefix: "heart:", cursor });
+    for (const key of page.keys) {
+      const piece = key.name.slice("heart:".length);
+      const value = await env.STOCK.get(key.name);
+      const count = Math.max(0, parseInt(value || "0", 10) || 0);
+      if (count > 0) counts[piece] = count;
+    }
+    cursor = page.list_complete ? null : page.cursor;
+  } while (cursor);
+  return counts;
+}
+
+async function handleHeart(request, env, cors) {
+  let body;
+  try {
+    body = await request.json();
+  } catch (err) {
+    return json({ error: "Could not read that." }, 400, cors);
+  }
+
+  const piece = String(body.piece || "");
+  const visitor = String(body.visitor || "");
+  const saving = body.saved !== false;
+
+  if (!HEART_ID.test(piece) || !HEART_ID.test(visitor)) {
+    return json({ error: "Not a piece we know." }, 400, cors);
+  }
+
+  const marker = `saved:${visitor}:${piece}`;
+  const already = await env.STOCK.get(marker);
+
+  // Nothing to do: saving what is already saved, or removing what is not.
+  if (Boolean(already) === saving) {
+    const current = await env.STOCK.get(`heart:${piece}`);
+    return json({ saved: Math.max(0, parseInt(current || "0", 10) || 0) }, 200, cors);
+  }
+
+  const current = Math.max(0, parseInt((await env.STOCK.get(`heart:${piece}`)) || "0", 10) || 0);
+  const next = Math.max(0, current + (saving ? 1 : -1));
+
+  await env.STOCK.put(`heart:${piece}`, String(next));
+  if (saving) {
+    // A year is long enough to stop double counting and short enough that a
+    // browser nobody uses any more stops taking up room.
+    await env.STOCK.put(marker, "1", { expirationTtl: 31536000 });
+  } else {
+    await env.STOCK.delete(marker);
+  }
+
+  return json({ saved: next }, 200, { ...cors, "Cache-Control": "no-store" });
+}
+
 // ----------------------------------------------------------------- views ----
 
 // Two numbers: visits to the shop own pages, counted here, and Etsy own count,
@@ -379,6 +452,19 @@ export default {
         ...cors,
         "Cache-Control": "no-store",
       });
+    }
+
+    if (path === "/hearts" && request.method === "GET") {
+      if (!env.STOCK) return json({ counts: {} }, 200, cors);
+      return json({ counts: await readHearts(env) }, 200, {
+        ...cors,
+        "Cache-Control": "no-store",
+      });
+    }
+
+    if (path === "/hearts" && request.method === "POST") {
+      if (!env.STOCK) return json({ saved: 0 }, 200, cors);
+      return handleHeart(request, env, cors);
     }
 
     if (path === "/views" && (request.method === "GET" || request.method === "POST")) {

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Your Cart | Micknack Stacks</title>
   <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="css/style.css?v=20261016d" />
+  <link rel="stylesheet" href="css/style.css?v=20261018b" />
 </head>
 <body>
 
@@ -13,13 +13,27 @@
     <div class="wrap">
       <a class="brand" href="index.html">Micknack Stacks</a>
       <nav>
-        <a href="index.html#shop">Shop</a>
-        <a href="index.html#about">About</a>
-        <a href="https://www.instagram.com/micknackstacks/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.tiktok.com/@micknack.stacks" target="_blank" rel="noopener">TikTok</a>
-        <a class="nav-etsy" href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Visit Etsy Shop</a>
-        <button type="button" class="nav-contact" id="contact-open">Contact</button>
-        <a class="nav-cart" href="cart.html" id="cart-link">Cart</a>
+        <div class="nav-main">
+          <a href="index.html#shop">Shop</a>
+
+          <div class="nav-social">
+            <button type="button" class="nav-social-toggle" id="social-toggle"
+                    aria-expanded="false" aria-haspopup="true" aria-controls="social-menu">
+              Social <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="social-menu" id="social-menu" role="menu" hidden>
+              <a role="menuitem" href="https://www.instagram.com/micknackstacks/" target="_blank" rel="noopener">Instagram</a>
+              <a role="menuitem" href="https://www.tiktok.com/@micknack.stacks" target="_blank" rel="noopener">TikTok</a>
+            </div>
+          </div>
+
+          <a class="nav-etsy" href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Visit Etsy Shop</a>
+        </div>
+
+        <div class="nav-utility">
+          <a class="nav-saved" href="saved.html" id="saved-link" hidden>Favorites</a>
+          <a class="nav-cart" href="cart.html" id="cart-link">Cart</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -42,6 +56,8 @@
         <a href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Etsy Shop</a>
         <a href="https://www.instagram.com/micknackstacks/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.tiktok.com/@micknack.stacks" target="_blank" rel="noopener">TikTok</a>
+        <a href="index.html#about">About</a>
+        <button type="button" class="foot-link-btn" id="contact-open">Contact</button>
         <a href="mailto:micknackstacks@gmail.com">Email Us</a>
         <a href="index.html#shop">Shop This Site</a>
       </div>
@@ -66,11 +82,13 @@
     </div>
   </dialog>
 
+  <script src="js/hearts.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/cart-page.js"></script>
   <script src="data/newsletter.js"></script>
   <script src="js/newsletter.js"></script>
   <script src="js/newsletter-popup.js"></script>
+  <script src="js/nav.js"></script>
   <script src="js/contact.js"></script>
   <script src="js/views.js"></script>
 </body>
