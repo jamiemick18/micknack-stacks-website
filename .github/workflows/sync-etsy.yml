@@ -65,6 +65,23 @@ jobs:
       - name: Build the share pages
         run: node scripts/build-share-pages.js
 
+      # A piece listed on Etsy arrives here with no way to buy it until a
+      # Stripe price exists for it, which used to mean someone running this
+      # by hand and four pieces sitting there unsellable until they did.
+      #
+      # It is idempotent and keyed on the listing id: pieces that already
+      # have a link are left alone, so this only ever fills in the gaps.
+      # Without the key it skips, loudly, rather than failing the sync.
+      - name: Give new pieces a Buy button
+        env:
+          STRIPE_SECRET_KEY_LIVE: ${{ secrets.STRIPE_SECRET_KEY_LIVE }}
+        run: |
+          if [ -z "$STRIPE_SECRET_KEY_LIVE" ]; then
+            echo "::warning::STRIPE_SECRET_KEY_LIVE is not set, so any newly listed piece has no Buy button yet."
+            exit 0
+          fi
+          node scripts/create-stripe-links.js --live
+
       # Keeps the checkout worker in step with the shop: which piece each
       # Stripe price belongs to, how far Etsy's counts moved, and a first
       # count for any piece the worker has not seen before.
@@ -84,10 +101,10 @@ jobs:
           # Every file the sync writes belongs here. A written-but-unstaged
           # file is left behind as a local change, and the rebase below then
           # refuses to run, which failed the whole job once.
-          if git diff --quiet -- data/products.js data/etsy-stock-deltas.json data/variations.js data/etsy-stats.json data/site-views.json data/categories.js p; then
+          if git diff --quiet -- data/products.js data/etsy-stock-deltas.json data/variations.js data/etsy-stats.json data/site-views.json data/categories.js data/stripe-links.js p; then
             echo "No listing changes — nothing to commit."
           else
-            git add data/products.js data/etsy-stock-deltas.json data/variations.js data/etsy-stats.json data/site-views.json data/categories.js p
+            git add data/products.js data/etsy-stock-deltas.json data/variations.js data/etsy-stats.json data/site-views.json data/categories.js data/stripe-links.js p
             git commit -m "Sync Etsy listings"
             # Rebase onto anything pushed while this run was in flight, so a
             # concurrent commit doesn't fail the sync.

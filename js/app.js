@@ -38,10 +38,7 @@ function toCard(item, { key, buttonLabel, badge }) {
   // they only decide whether a piece can be bought.
   const stock = window.MICKNACK_STOCK.of(key);
   const shelf = (window.MICKNACK_CATEGORY_OF || {})[key] || "";
-  // Listed within the fortnight counts as new, which is roughly how often
-  // something lands. A piece with no date is simply not new.
   const listedAt = item.created || item.added_at || null;
-  const isNew = listedAt ? Date.now() - new Date(listedAt).getTime() < 14 * 86400000 : false;
   // Taken off Etsy: the piece stays here, but its Etsy link does not. The
   // listing is gone, so the button would land on "this item is unavailable".
   const url = item.etsy_active === false ? "" : item.url || "";
@@ -56,7 +53,9 @@ function toCard(item, { key, buttonLabel, badge }) {
   return {
     hasOptions: variations.length > 0,
     shelf,
-    isNew,
+    listedAt,
+    // A piece on its way out should never be announced as new.
+    retired: item.etsy_active === false,
     id: key,
     priceId: (stripeLinks[key] || {}).price_id || "",
     soldOut: stock.soldOut,
@@ -143,6 +142,30 @@ function renderCard(card) {
   `;
 }
 
+// What counts as new.
+//
+// Anything listed in the last fortnight, however many that is, so a drop is
+// always marked. After a fortnight a piece keeps the label only while it is
+// still among the ten newest, so a quiet month leaves the shop looking
+// stocked rather than stale, and a busy week does not brand half the grid.
+const NEW_DAYS = 14;
+const NEW_KEEP = 10;
+
+function markNew(cards) {
+  const dated = cards
+    .filter((card) => card.listedAt && !card.retired)
+    .sort((a, b) => new Date(b.listedAt) - new Date(a.listedAt));
+
+  const newest = new Set(dated.slice(0, NEW_KEEP).map((card) => card.id));
+  const cutoff = Date.now() - NEW_DAYS * 86400000;
+
+  cards.forEach((card) => {
+    const listed = card.listedAt ? new Date(card.listedAt).getTime() : 0;
+    card.isNew =
+      Boolean(listed) && !card.retired && (listed > cutoff || newest.has(card.id));
+  });
+}
+
 function renderProducts(etsyData, extras) {
   const etsyListings = (etsyData && etsyData.listings) || [];
 
@@ -180,6 +203,8 @@ function renderProducts(etsyData, extras) {
     grid.innerHTML = `<div class="empty-state">No pieces to show yet. Check back soon!</div>`;
     return;
   }
+
+  markNew(cards);
 
   allCards = cards;
   renderShelves();
