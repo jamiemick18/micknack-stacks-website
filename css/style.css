@@ -54,6 +54,14 @@ img {
 
 /* ---------- Header ---------- */
 
+/* The header is sticky, so a jump to #shop or #about would otherwise put
+   the heading underneath it. */
+#shop,
+#about,
+#newsletter {
+  scroll-margin-top: 88px;
+}
+
 .site-header {
   position: sticky;
   top: 0;

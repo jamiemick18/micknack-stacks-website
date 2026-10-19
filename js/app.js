@@ -208,6 +208,15 @@ function renderProducts(etsyData, extras) {
 
   markNew(cards);
 
+  // Arriving on #about or #shop scrolls before these cards exist, so the page
+  // grows under the browser and leaves you short of where you asked to be.
+  // Once the grid is in, go there again.
+  if (location.hash && !window.__jumped) {
+    window.__jumped = true;
+    const target = document.getElementById(location.hash.slice(1));
+    if (target) requestAnimationFrame(() => target.scrollIntoView());
+  }
+
   allCards = cards;
   renderShelves();
   applySearch();
