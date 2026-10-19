@@ -1355,6 +1355,17 @@ img {
 
 .about-page h1 { margin-bottom: 10px; }
 
+/* So someone who clicked About knows they arrived, even though the page
+   opens on the alpenglow story rather than the word About. */
+.about-eyebrow {
+  font-size: 0.64rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 6px;
+  text-align: center;
+}
+
 .about-lede {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
