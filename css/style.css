@@ -1347,6 +1347,65 @@ img {
   .saved-controls { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; }
 }
 
+/* ---- The About page ---- */
+
+.about-page { text-align: center; }
+
+.about-page .about-scene { width: 220px; height: auto; margin: 0 auto 10px; display: block; }
+
+.about-page h1 { margin-bottom: 10px; }
+
+.about-lede {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--ink);
+  margin: 0 0 26px;
+}
+
+/* The body of it reads left, however the page is centred: a column of prose
+   centred line by line is hard work to read. */
+.about-page p {
+  text-align: left;
+  color: #555;
+  font-size: 0.97rem;
+  line-height: 1.75;
+  margin: 0 0 18px;
+}
+
+.about-page h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-align: left;
+  margin: 34px 0 10px;
+}
+
+.about-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.about-more {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+.about-more:hover { color: var(--ink); }
+
+@media (max-width: 560px) {
+  .about-page .about-scene { width: 170px; }
+  .about-lede { font-size: 1.2rem; }
+}
+
 .site-footer {
   background: var(--ink);
   color: var(--cream);
