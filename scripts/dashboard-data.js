@@ -50,6 +50,16 @@ async function main() {
     console.log("Worker unreachable; using the count recorded by the last sync.");
   }
 
+  // Favourites on the shop own pages. Only the worker knows these, and the
+  // sandbox the daily routine runs in cannot reach it, so an empty set is
+  // normal there rather than a sign that nobody is favouriting anything.
+  let hearts = {};
+  try {
+    hearts = JSON.parse(await text(WORKER + "/hearts")).counts || {};
+  } catch (err) {
+    console.log("Worker unreachable; favourite counts left out of this run.");
+  }
+
   const listings = (products && products.listings) || [];
   if (!listings.length) throw new Error("No listings came back; refusing to write an empty catalog.");
 
@@ -89,9 +99,27 @@ async function main() {
         title: listing.title,
         views: listing.views || 0,
         favourites: listing.num_favorers || 0,
+        hearts: hearts[String(listing.listing_id)] || 0,
       }))
       .sort((a, b) => b.views - a.views)
       .slice(0, 12),
+    // Favourited here, most first, and only pieces anybody has actually
+    // favourited: a list of zeroes tells nobody anything.
+    hearted: [
+      ...listings
+        .filter((listing) => hearts[String(listing.listing_id)])
+        .map((listing) => ({
+          id: String(listing.listing_id),
+          title: listing.title,
+          hearts: hearts[String(listing.listing_id)],
+        })),
+      ...extras
+        .filter((extra) => hearts[String(extra.id)])
+        .map((extra) => ({ id: String(extra.id), title: extra.title, hearts: hearts[String(extra.id)] })),
+    ]
+      .sort((a, b) => b.hearts - a.hearts)
+      .slice(0, 12),
+    site_hearts: Object.values(hearts).reduce((sum, n) => sum + n, 0),
     updated_at: now,
   };
 
