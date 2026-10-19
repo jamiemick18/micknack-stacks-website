@@ -1472,18 +1472,6 @@ img {
 
 .review-when { display: block; opacity: 0.8; text-transform: none; letter-spacing: 0.04em; }
 
-/* The way to the full set, said plainly rather than hidden: these are the
-   five star ones, and the rest are a click away. */
-.review-all {
-  margin: 20px 0 0;
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.review-all a { color: var(--gold); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; }
-.review-all a:hover { color: var(--ink); }
-
 @media (max-width: 560px) {
   .review blockquote { font-size: 1rem; }
 }

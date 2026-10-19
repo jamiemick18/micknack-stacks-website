@@ -1,9 +1,9 @@
 // Kind words from Etsy, shown on the shop's own pages.
 //
-// Only the five star ones are quoted, which is the shop owner's choice and
-// what every shop does with testimonials. The link to the full set on Etsy
-// sits underneath, so nobody is being told these are all the reviews there
-// are: anyone who wants the whole picture is one click from it.
+// Only the five star ones are quoted, the way any shop picks the testimonials
+// it puts on the wall. There is deliberately no link out to Etsy here:
+// someone reading kind words about a piece is close to buying it, and that is
+// not the moment to hand them the door to another shopfront.
 //
 // Etsy gives no buyer name, so a quote is attributed to a verified Etsy buyer
 // and the piece it was left on. Buyers' own photos are not republished.
@@ -53,15 +53,6 @@
         )
         .join("")}
     </div>
-    ${
-      data.shop_reviews_url
-        ? `<p class="review-all">
-             <a href="${data.shop_reviews_url}" target="_blank" rel="noopener">
-               Read all ${data.count || best.length} reviews on Etsy
-             </a>
-           </p>`
-        : ""
-    }
   `;
 
   host.hidden = false;
