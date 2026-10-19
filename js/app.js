@@ -1,5 +1,4 @@
 const grid = document.getElementById("product-grid");
-const syncNote = document.getElementById("sync-note");
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // Stripe payment links, written by scripts/create-stripe-links.js.
@@ -166,25 +165,15 @@ function renderProducts(etsyData, extras) {
     ),
   ].filter((card) => !card.hidden);
 
-  const parts = [];
-  if (etsyData && etsyData.synced_at) {
-    const date = new Date(etsyData.synced_at);
-    parts.push(
-      `Synced from Etsy on ${date.toLocaleDateString(undefined, {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      })}`
-    );
-  }
-  if (extras.length) {
-    parts.push(`${extras.length} piece${extras.length === 1 ? "" : "s"} only here`);
-  }
+  // Nothing about the sync is shown to shoppers. The one exception is a
+  // warning that the Buy buttons are Stripe test links, which can only
+  // happen on a local preview and would otherwise be invisible.
   if (stripeEnabled && stripeData.mode === "test") {
-    parts.push("Stripe TEST mode — local preview only");
+    const warning = document.createElement("p");
+    warning.className = "test-mode-note";
+    warning.textContent = "Stripe TEST mode — local preview only";
+    grid.before(warning);
   }
-  syncNote.textContent = parts.join(" · ");
-  syncNote.style.display = parts.length ? "" : "none";
 
   if (cards.length === 0) {
     grid.innerHTML = `<div class="empty-state">No pieces to show yet. Check back soon!</div>`;

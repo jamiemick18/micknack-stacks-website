@@ -661,18 +661,20 @@ img {
   margin-bottom: 48px;
 }
 
-/* Housekeeping, not a headline: it sits in the footer with the view count
-   and the copyright rather than between a shopper and the collection. */
-.sync-note {
+/* Only ever seen on a local preview, and meant to be impossible to miss
+   there: a test Buy button takes no money and must not be mistaken for a
+   working one. */
+.test-mode-note {
   text-align: center;
   font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  color: rgba(250, 246, 239, 0.4);
-  background: none;
-  border-radius: 0;
-  padding: 0;
-  display: block;
-  margin: 0 0 6px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9a3412;
+  background: #f3e2da;
+  border-radius: 999px;
+  padding: 8px 18px;
+  margin: 0 auto 20px;
+  width: fit-content;
 }
 
 /* ---- Shelf filters ---- */
