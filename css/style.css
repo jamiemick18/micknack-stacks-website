@@ -1417,6 +1417,77 @@ img {
   .about-lede { font-size: 1.2rem; }
 }
 
+/* ---- Kind words ---- */
+
+.reviews-section {
+  text-align: center;
+  padding-top: 8px;
+}
+
+.reviews-section[hidden] { display: none; }
+
+.review-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  max-width: var(--max-width);
+  margin: 26px auto 0;
+  padding: 0 24px;
+}
+
+.review {
+  margin: 0;
+  background: #fff;
+  border: 1px solid rgba(10, 10, 10, 0.07);
+  border-radius: 4px;
+  padding: 22px 20px 18px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review .stars {
+  color: var(--gold);
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+}
+
+.review blockquote {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.08rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.review figcaption {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+  margin-top: auto;
+  line-height: 1.5;
+}
+
+.review-when { display: block; opacity: 0.8; text-transform: none; letter-spacing: 0.04em; }
+
+/* The way to the full set, said plainly rather than hidden: these are the
+   five star ones, and the rest are a click away. */
+.review-all {
+  margin: 20px 0 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.review-all a { color: var(--gold); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+.review-all a:hover { color: var(--ink); }
+
+@media (max-width: 560px) {
+  .review blockquote { font-size: 1rem; }
+}
+
 .site-footer {
   background: var(--ink);
   color: var(--cream);
