@@ -177,9 +177,12 @@ function renderProduct(product) {
            <p class="option-error" data-option-error hidden></p>
          </div>`
       : "";
-  if (product.etsyUrl) {
+  // Only when this piece cannot be bought here: otherwise a shopper already
+  // on the page would be sent to Etsy to finish a sale that could happen
+  // right where they are.
+  if (product.etsyUrl && !buyUrl && !soldOut) {
     actions.push(
-      `<a class="btn ${buyUrl && !soldOut ? "btn-secondary" : "btn-primary"} btn-lg" href="${product.etsyUrl}" target="_blank" rel="noopener">Buy on Etsy</a>`
+      `<a class="btn btn-primary btn-lg" href="${product.etsyUrl}" target="_blank" rel="noopener">Buy on Etsy</a>`
     );
   }
   if (!actions.length) {

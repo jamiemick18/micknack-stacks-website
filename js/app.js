@@ -95,20 +95,10 @@ function renderCard(card) {
   const actions = [];
   if (card.soldOut) {
     actions.push(`<span class="btn btn-muted">Sold out</span>`);
-    if (card.etsyUrl) {
-      actions.push(
-        `<a class="btn btn-secondary" href="${card.etsyUrl}" target="_blank" rel="noopener">View on Etsy</a>`
-      );
-    }
   } else if (card.buyUrl && card.priceId && card.hasOptions) {
     actions.push(
       `<a class="btn btn-primary" href="${card.detailUrl}">Choose options</a>`
     );
-    if (card.etsyUrl) {
-      actions.push(
-        `<a class="btn btn-secondary" href="${card.etsyUrl}" target="_blank" rel="noopener">View on Etsy</a>`
-      );
-    }
   } else if (card.buyUrl && card.priceId) {
     actions.push(
       `<button type="button" class="btn btn-primary" data-add-to-cart
@@ -118,11 +108,6 @@ function renderCard(card) {
          data-price="${escapeHtml(card.price || "")}"
          data-image="${escapeHtml(card.image)}">Add to cart</button>`
     );
-    if (card.etsyUrl) {
-      actions.push(
-        `<a class="btn btn-secondary" href="${card.etsyUrl}" target="_blank" rel="noopener">View on Etsy</a>`
-      );
-    }
   } else if (card.url) {
     actions.push(
       `<a class="btn btn-primary" href="${card.url}" target="_blank" rel="noopener">${escapeHtml(card.buttonLabel)}</a>`
