@@ -2,8 +2,41 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-19T19:06:05.944Z",
+  "synced_at": "2026-10-20T17:49:05.879Z",
   "listings": [
+    {
+      "listing_id": "4573422828",
+      "title": "Darling Gold Bow Threadless Flatback Earring | Titanium Labret Post | Gold Push Pin Cartilage Earring | Coquette Bow Stud",
+      "price": "14.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4573422828/darling-gold-bow-threadless-flatback",
+      "description": "A little vintage romance for your ear stack.\n\nThe Darling Bow is a polished gold bow finished with a tiny sparkling center stone for just the right amount of detail. It’s feminine, dainty, and a little bit coquette without being overly sweet.\n\nDesigned as a threadless pushpin flatback, the Darling Bow pairs a decorative 316L surgical steel top with a gold PVD implant-grade titanium labret post, so the portion sitting inside your piercing is made with comfort in mind.\n\nI intentionally handpicked and paired this decorative 316L surgical steel bow with a gold PVD implant-grade titanium flatback post to give you the cute designs you want, while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a great option for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is an especially popular choice for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing, making it a great option for everyday wear.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel when the jewelry is inserted.\n\nMaterials\n\nDecorative bow: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nThreadless / pushpin design\nFlatback labret style\n\nPost Length Options\n\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for:\nLobe • Helix • Flat • Tragus • Cartilage • Curated Ear Stacks\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/919681/8509583544/il_fullxfull.8509583544_3emk.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "gold bow earring",
+        "bow flatback",
+        "coquette earring",
+        "threadless earring",
+        "titanium labret",
+        "push pin earring",
+        "flatback earring",
+        "cartilage earring",
+        "helix earring",
+        "dainty gold stud",
+        "cute ear stack",
+        "bow cartilage",
+        "curated ear"
+      ],
+      "quantity": 1,
+      "created": "2026-09-11T16:31:14.000Z",
+      "views": 24,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
     {
       "listing_id": "4596333038",
       "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
@@ -33,8 +66,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-10-15T22:11:01.000Z",
-      "views": 5,
-      "num_favorers": 0,
+      "views": 12,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
     },
@@ -67,7 +100,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-10-15T20:06:48.000Z",
-      "views": 0,
+      "views": 1,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
@@ -100,8 +133,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-01T21:11:50.000Z",
-      "views": 106,
-      "num_favorers": 10,
+      "views": 115,
+      "num_favorers": 11,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -134,7 +167,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 20,
       "created": "2026-10-08T17:47:55.000Z",
-      "views": 8,
+      "views": 9,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-10-08T19:10:48.816Z"
@@ -169,7 +202,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-10-06T18:38:59.000Z",
-      "views": 0,
+      "views": 7,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-10-06T18:49:33.238Z"
@@ -203,7 +236,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-13T21:39:50.000Z",
-      "views": 99,
+      "views": 104,
       "num_favorers": 10,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -267,7 +300,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-28T18:23:41.000Z",
-      "views": 23,
+      "views": 24,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -302,7 +335,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-09-21T19:48:13.000Z",
-      "views": 50,
+      "views": 52,
       "num_favorers": 9,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -338,7 +371,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-24T17:00:41.000Z",
-      "views": 16,
+      "views": 18,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -401,7 +434,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-16T20:46:30.000Z",
-      "views": 85,
+      "views": 96,
       "num_favorers": 8,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -435,7 +468,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-21T16:04:05.000Z",
-      "views": 16,
+      "views": 20,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -502,7 +535,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-17T17:55:02.000Z",
-      "views": 25,
+      "views": 26,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -537,7 +570,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-16T18:47:42.000Z",
-      "views": 28,
+      "views": 30,
       "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -606,7 +639,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T23:49:06.000Z",
-      "views": 19,
+      "views": 20,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -736,7 +769,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T23:40:39.000Z",
-      "views": 9,
+      "views": 10,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -835,7 +868,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T22:53:41.000Z",
-      "views": 31,
+      "views": 33,
       "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -903,7 +936,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-09-11T22:37:16.000Z",
       "views": 22,
-      "num_favorers": 2,
+      "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -936,7 +969,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T22:25:35.000Z",
-      "views": 18,
+      "views": 19,
       "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -970,7 +1003,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-09-11T22:21:13.000Z",
-      "views": 30,
+      "views": 32,
       "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1037,7 +1070,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T18:09:27.000Z",
-      "views": 39,
+      "views": 40,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1071,7 +1104,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T17:54:53.000Z",
-      "views": 56,
+      "views": 57,
       "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1104,7 +1137,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T17:34:10.000Z",
-      "views": 24,
+      "views": 26,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1138,7 +1171,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T17:21:14.000Z",
-      "views": 76,
+      "views": 80,
       "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1209,39 +1242,6 @@ window.MICKNACK_PRODUCTS = {
       "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
-      "listing_id": "4573422828",
-      "title": "Darling Gold Bow Threadless Flatback Earring | Titanium Labret Post | Gold Push Pin Cartilage Earring | Coquette Bow Stud",
-      "price": "14.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4573422828/darling-gold-bow-threadless-flatback",
-      "description": "A little vintage romance for your ear stack.\n\nThe Darling Bow is a polished gold bow finished with a tiny sparkling center stone for just the right amount of detail. It’s feminine, dainty, and a little bit coquette without being overly sweet.\n\nDesigned as a threadless pushpin flatback, the Darling Bow pairs a decorative 316L surgical steel top with a gold PVD implant-grade titanium labret post, so the portion sitting inside your piercing is made with comfort in mind.\n\nI intentionally handpicked and paired this decorative 316L surgical steel bow with a gold PVD implant-grade titanium flatback post to give you the cute designs you want, while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a great option for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is an especially popular choice for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing, making it a great option for everyday wear.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel when the jewelry is inserted.\n\nMaterials\n\nDecorative bow: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nThreadless / pushpin design\nFlatback labret style\n\nPost Length Options\n\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for:\nLobe • Helix • Flat • Tragus • Cartilage • Curated Ear Stacks\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/919681/8509583544/il_fullxfull.8509583544_3emk.jpg"
-      ],
-      "video": "",
-      "tags": [
-        "gold bow earring",
-        "bow flatback",
-        "coquette earring",
-        "threadless earring",
-        "titanium labret",
-        "push pin earring",
-        "flatback earring",
-        "cartilage earring",
-        "helix earring",
-        "dainty gold stud",
-        "cute ear stack",
-        "bow cartilage",
-        "curated ear"
-      ],
-      "quantity": 2,
-      "created": "2026-09-11T16:31:14.000Z",
-      "views": 21,
-      "num_favorers": 0,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
       "listing_id": "4571571883",
       "title": "Sprinkle Chain | 3×5mm Pear CZ Ear Connector Chain | 2mm Dainty Gold Earring Chain | Helix Conch Lobe Ear Stack Jewelry",
       "price": "19.99",
@@ -1271,7 +1271,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-08T22:16:35.000Z",
-      "views": 28,
+      "views": 30,
       "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1307,7 +1307,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-08T19:59:35.000Z",
-      "views": 47,
+      "views": 48,
       "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1341,8 +1341,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-03T19:48:22.000Z",
-      "views": 19,
-      "num_favorers": 4,
+      "views": 20,
+      "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1374,8 +1374,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-08-31T21:52:58.000Z",
-      "views": 20,
-      "num_favorers": 1,
+      "views": 24,
+      "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
