@@ -2,8 +2,103 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-20T17:49:05.879Z",
+  "synced_at": "2026-10-21T14:19:56.913Z",
   "listings": [
+    {
+      "listing_id": "4579868601",
+      "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4579868601/unicorn-chaos-labret-to-earring",
+      "description": "Unicorn Chaos 🦄✨\n\nTiny rainbows. Maximum ear-stack refraction chaos.\n\nUnicorn Chaos is a playful labret-to-earring connector featuring a delicate 30 mm 18k PVD gold chain and five 3 mm AB stones that flash pink, blue, lavender, and gold depending on the light.\n\nIt’s sparkly, a little magical, and just chaotic enough to make your stack way more fun. Perfect for anyone who likes their jewelry cute, flashy, and impossible to ignore.\n\nWhy you’ll love it:\n30 mm dainty connector chain\nFive 3 mm AB sparkling stones\nIridescent rainbow flash in different lighting\nLabret-to-earring connector design\nAdds movement, texture, and shimmer to your stack\n\nPlayful, colorful, and easy to style\nPerfect for curated ears that need a little extra chaos\n\nWhy the G23 Titanium Labret?\nThe included flatback post is made from ASTM F136 G23 titanium, chosen for its lightweight feel and popularity in body jewelry.\n✨ Lightweight comfort: Titanium is much lighter than many traditional jewelry metals, helping it feel comfortable for everyday wear.\n✨ Popular for sensitive ears: G23 titanium is a go-to choice for people who are mindful about the materials sitting inside the piercing channel.\n✨ Corrosion resistant: Titanium holds up well against moisture and regular wear.\n✨ Smooth flatback design: The flat disk sits comfortably against the back of the piercing without the bulk of a traditional butterfly backing.\n✨ Threadless pushpin style: No exposed external threads pass through the piercing channel during insertion, helping keep the jewelry smooth and easy to wear.\n\nMaterials\nFlatback labret post: G23 titanium\nFinish: 18K Gold PVD\n30 mm gold-tone chain\nFive 3 mm AB stones\nThreadless / pushpin labret\nLabret-to-earring connector design\n\nPerfect for\nHelix-to-lobe styling • Cartilage-to-hoop styling • Curated ear stacks • Colorful chain looks • Statement stacks\n\nCute, chaotic, and catching rainbows from every angle. 🦄✨",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/8841bd/8557802610/il_fullxfull.8557802610_oea8.jpg",
+        "https://i.etsystatic.com/67609393/r/il/56c92a/8605662947/il_fullxfull.8605662947_tovz.jpg",
+        "https://i.etsystatic.com/67609393/r/il/3a6072/8557802612/il_fullxfull.8557802612_9huu.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "piercing chain",
+        "ASTM F136",
+        "G23 Titanium",
+        "Flatback",
+        "G23",
+        "CZ Earring",
+        "Threadless Flatback",
+        "Pushpin"
+      ],
+      "quantity": 3,
+      "created": "2026-09-21T19:48:13.000Z",
+      "views": 70,
+      "num_favorers": 12,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4599803201",
+      "title": "Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain | ASTM F136 Threadless Connector | 40mm Emerald Green CZ Dangle",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4599803201/green-with-envy-g23-titanium-labret-to",
+      "description": "Green With Envy 💚✨\n\nBright, bold, and absolutely not trying to blend in.\n\nGreen With Envy is a 40 mm GOLD FILLED chain / labret-to-earring chain connector finished with five individually dangling emerald green CZ stones. All jump rings are also gold filled. The saturated green gives your stack a rich pop of color, while the delicate chain lets each stone move and catch the light on its own.\n\nwww.micknackstacks.com⁠\n\nOne end is attached to a threadless G23 titanium labret while the opposite end connects to a compatible hoop or earring, creating a soft drape between two piercings.\n\nA little luxe. A little bratty. Very hard not to stare at. 💚\n\nWhy you’ll love it:\n40 mm labret-to-earring chain\nFive individually dangling emerald-green CZ stones\nRich jewel-tone color\nDelicate movement and sparkle\nAdds depth without making your stack feel bulky\nEasy statement piece for an otherwise minimal ear\nDesigned to connect two piercings in one cohesive look\n\n✨ Implant-grade specification: ASTM F136 is a recognized specification for titanium alloy used in implant applications and quality body jewelry.\n✨ Nickel-conscious: Titanium is commonly chosen by people who want to avoid jewelry made from nickel-containing alloys.\n✨ Lightweight: Titanium is naturally lightweight, making it especially nice for cartilage jewelry and chain styles.\n✨ Corrosion resistant: Titanium offers excellent resistance to corrosion and everyday moisture.\n✨ Threadless design: The pushpin-style connection means there are no exposed external screw threads passing through the piercing channel during insertion.\n✨ Star flatback: The post is finished with a tiny star-shaped flatback for a cute little detail behind the piercing. ⭐\n\nChoose your post length\n6 mm — for a more fitted, snug placement\n8 mm — for a little extra room\n\nEveryone’s anatomy and piercing placement are different, so the best fit will vary.\n\nSold individually\n\nPerfect for\nHelix-to-lobe • Cartilage-to-hoop • Multi-piercing stacks • Green ear stacks • Jewel-tone jewelry • Curated ears\nGreen with envy? As you should be. 💚✨\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/9ca196/8714086152/il_fullxfull.8714086152_8ky9.jpg",
+        "https://i.etsystatic.com/67609393/r/il/3f6057/8714068328/il_fullxfull.8714068328_gi0p.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/a54d/0a65c04a-b0b5-44c5-9e07-b4702dd1e919/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "ASTM F136",
+        "G23 Titanium"
+      ],
+      "quantity": 4,
+      "created": "2026-10-20T23:20:39.000Z",
+      "views": 4,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-10-21T14:19:56.913Z"
+    },
+    {
+      "listing_id": "4599690242",
+      "title": "Soft Spark G23 Titanium Labret to Sterling Silver Ear Chain | ASTM F136 Threadless Connector | 40mm Pink Lavender Clear CZ Dangle",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4599690242/soft-spark-g23-titanium-labret-to",
+      "description": "Soft Spark ✨\n\nDelicate color, silver shine, and just enough movement.\n\nSoft Spark is a 40 mm sterling silver labret-to-earring chain connector finished with five individually dangling round CZ stones. \n\nChoose your favorite in Baby Pink, Lavender, or Clear for a clean, monochromatic little line of sparkle that moves with you.\n\nwww.micknackstacks.com⁠\n\nOne end is attached to a threadless titanium labret while the other connects to a compatible hoop or earring, creating a soft drape between two piercings. It’s an easy way to add movement and dimension to your stack without making it feel heavy or overdone.\n\n✨ Implant-grade specification: ASTM F136 is a recognized specification for titanium alloy used in implant applications and quality body jewelry.\n✨ Nickel-conscious: Titanium is commonly chosen by people looking to avoid jewelry made from nickel-containing alloys.\n✨ Lightweight: Titanium is naturally lightweight, making it especially comfortable for cartilage jewelry and chain styles.\n✨ Corrosion resistant: Titanium offers excellent resistance to corrosion and everyday moisture.\n✨ Threadless design: The pushpin-style connection means there are no exposed external screw threads passing through the piercing channel during insertion.\n✨ Tiny star flatback: Instead of a standard round disk, Soft Spark is finished with an adorable little star-shaped flatback for an extra detail behind the piercing. ⭐\n\nChoose your color:\nBaby Pink 💗 — soft, sweet, and feminine.\nLavender 💜 — dreamy purple sparkle with a little personality.\nClear ✨ — clean, icy shine that pairs with practically everything.\n\nChoose your post length:\n6 mm gives a more fitted, snug look, while 8 mm provides a little extra room. Everyone’s anatomy and piercing placement are different, so the best length will vary from person to person.\n\nDetails\n40mm chain length\nSold individually\n\nPerfect for helix-to-lobe styling, cartilage-to-hoop looks, multi-piercing stacks, silver ear stacks, and anyone who likes their sparkle a little softer.\n\nTiny stones. Soft movement. Just a little spark. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/5469bc/8760832607/il_fullxfull.8760832607_8ypb.jpg",
+        "https://i.etsystatic.com/67609393/r/il/bf9b0b/8761050261/il_fullxfull.8761050261_er9l.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/af00/a589d605-0e14-4bb4-80a2-d42dfb51413c/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "ASTM F136",
+        "G23 Titanium"
+      ],
+      "quantity": 5,
+      "created": "2026-10-20T19:38:15.000Z",
+      "views": 5,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-10-21T14:19:56.913Z"
+    },
     {
       "listing_id": "4573422828",
       "title": "Darling Gold Bow Threadless Flatback Earring | Titanium Labret Post | Gold Push Pin Cartilage Earring | Coquette Bow Stud",
@@ -32,7 +127,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T16:31:14.000Z",
-      "views": 24,
+      "views": 31,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -66,7 +161,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-10-15T22:11:01.000Z",
-      "views": 12,
+      "views": 18,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
@@ -133,7 +228,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-01T21:11:50.000Z",
-      "views": 115,
+      "views": 120,
       "num_favorers": 11,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -168,7 +263,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 20,
       "created": "2026-10-08T17:47:55.000Z",
       "views": 9,
-      "num_favorers": 0,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-10-08T19:10:48.816Z"
     },
@@ -236,8 +331,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-13T21:39:50.000Z",
-      "views": 104,
-      "num_favorers": 10,
+      "views": 117,
+      "num_favorers": 12,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -306,41 +401,6 @@ window.MICKNACK_PRODUCTS = {
       "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
-      "listing_id": "4579868601",
-      "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4579868601/unicorn-chaos-labret-to-earring",
-      "description": "Unicorn Chaos 🦄✨\n\nTiny rainbows. Maximum ear-stack refraction chaos.\n\nUnicorn Chaos is a playful labret-to-earring connector featuring a delicate 30 mm 18k PVD gold chain and five 3 mm AB stones that flash pink, blue, lavender, and gold depending on the light.\n\nIt’s sparkly, a little magical, and just chaotic enough to make your stack way more fun. Perfect for anyone who likes their jewelry cute, flashy, and impossible to ignore.\n\nWhy you’ll love it:\n30 mm dainty connector chain\nFive 3 mm AB sparkling stones\nIridescent rainbow flash in different lighting\nLabret-to-earring connector design\nAdds movement, texture, and shimmer to your stack\n\nPlayful, colorful, and easy to style\nPerfect for curated ears that need a little extra chaos\n\nWhy the G23 Titanium Labret?\nThe included flatback post is made from ASTM F136 G23 titanium, chosen for its lightweight feel and popularity in body jewelry.\n✨ Lightweight comfort: Titanium is much lighter than many traditional jewelry metals, helping it feel comfortable for everyday wear.\n✨ Popular for sensitive ears: G23 titanium is a go-to choice for people who are mindful about the materials sitting inside the piercing channel.\n✨ Corrosion resistant: Titanium holds up well against moisture and regular wear.\n✨ Smooth flatback design: The flat disk sits comfortably against the back of the piercing without the bulk of a traditional butterfly backing.\n✨ Threadless pushpin style: No exposed external threads pass through the piercing channel during insertion, helping keep the jewelry smooth and easy to wear.\n\nMaterials\nFlatback labret post: G23 titanium\nFinish: 18K Gold PVD\n30 mm gold-tone chain\nFive 3 mm AB stones\nThreadless / pushpin labret\nLabret-to-earring connector design\n\nPerfect for\nHelix-to-lobe styling • Cartilage-to-hoop styling • Curated ear stacks • Colorful chain looks • Statement stacks\n\nCute, chaotic, and catching rainbows from every angle. 🦄✨",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/8841bd/8557802610/il_fullxfull.8557802610_oea8.jpg",
-        "https://i.etsystatic.com/67609393/r/il/56c92a/8605662947/il_fullxfull.8605662947_tovz.jpg",
-        "https://i.etsystatic.com/67609393/r/il/3a6072/8557802612/il_fullxfull.8557802612_9huu.jpg"
-      ],
-      "video": "",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "piercing chain",
-        "ASTM F136",
-        "G23 Titanium",
-        "Flatback",
-        "G23",
-        "CZ Earring",
-        "Threadless Flatback",
-        "Pushpin"
-      ],
-      "quantity": 4,
-      "created": "2026-09-21T19:48:13.000Z",
-      "views": 52,
-      "num_favorers": 9,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
       "listing_id": "4581913102",
       "title": "Prism Spell Double Draped Ear Chain | ASTM F136 G23 Titanium Flatback | Gold Labret to Earring Connector | Iridescent AB CZ Jewelry",
       "price": "19.99",
@@ -400,8 +460,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-21T18:11:40.000Z",
-      "views": 13,
-      "num_favorers": 0,
+      "views": 14,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -434,8 +494,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-16T20:46:30.000Z",
-      "views": 96,
-      "num_favorers": 8,
+      "views": 109,
+      "num_favorers": 10,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -468,7 +528,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-21T16:04:05.000Z",
-      "views": 20,
+      "views": 24,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -501,7 +561,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-12T00:00:43.000Z",
-      "views": 16,
+      "views": 17,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -535,7 +595,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-17T17:55:02.000Z",
-      "views": 26,
+      "views": 28,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -570,8 +630,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-16T18:47:42.000Z",
-      "views": 30,
-      "num_favorers": 3,
+      "views": 33,
+      "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -736,7 +796,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-12T00:05:44.000Z",
-      "views": 4,
+      "views": 6,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -802,7 +862,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T23:20:43.000Z",
-      "views": 9,
+      "views": 10,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -868,7 +928,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T22:53:41.000Z",
-      "views": 33,
+      "views": 37,
       "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1003,8 +1063,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-09-11T22:21:13.000Z",
-      "views": 32,
-      "num_favorers": 3,
+      "views": 33,
+      "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1070,7 +1130,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T18:09:27.000Z",
-      "views": 40,
+      "views": 41,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1104,7 +1164,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T17:54:53.000Z",
-      "views": 57,
+      "views": 58,
       "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1137,8 +1197,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T17:34:10.000Z",
-      "views": 26,
-      "num_favorers": 1,
+      "views": 31,
+      "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1171,7 +1231,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T17:21:14.000Z",
-      "views": 80,
+      "views": 86,
       "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1271,8 +1331,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-08T22:16:35.000Z",
-      "views": 30,
-      "num_favorers": 3,
+      "views": 31,
+      "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1374,7 +1434,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-08-31T21:52:58.000Z",
-      "views": 24,
+      "views": 25,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
