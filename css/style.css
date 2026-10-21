@@ -1394,6 +1394,24 @@ img {
   margin: 34px 0 10px;
 }
 
+/* Her closing lines, and her name under them. A signed letter, which is what
+   this page is, so the sign-off is not just another paragraph. */
+.about-page .about-signoff {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin: 30px 0 10px;
+}
+
+.about-page .about-signature {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
 .about-actions {
   display: flex;
   gap: 12px;
