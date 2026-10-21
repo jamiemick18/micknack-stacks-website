@@ -9,7 +9,7 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-10-21T14:19:56.913Z
+// Last read from Etsy: 2026-10-21T17:56:11.767Z
 
 window.MICKNACK_VARIATIONS = {
   // Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Ti
@@ -20,7 +20,7 @@ window.MICKNACK_VARIATIONS = {
   "4599690242": [{ name: "Post Length", options: ["6 mm", "8 mm"] }, { name: "Stone Color", options: ["Baby Pink CZ", "Lavendar CZ", "Crystal Clear CZ"] }],
   // Darling Gold Bow Threadless Flatback Earring | Titanium Labr
   "4573422828": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
-  // Everyday G23 ASTM F136 Titanium Gold Clicker Hoop | 18K PVD 
+  // Everyday 18g G23 ASTM F136 Titanium Gold Clicker Hoop | 18K 
   "4591313547": [{ name: "Hoop Diameter", options: ["5 mm", "6 mm", "7 mm", "8 mm", "10 mm", "11 mm", "12 mm"] }],
   // Checkered Black & Clear CZ Ear Chain | 30mm Gold Connector C
   "4584458361": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
