@@ -2,12 +2,114 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-22T17:53:04.910Z",
+  "synced_at": "2026-10-22T21:35:10.209Z",
   "listings": [
+    {
+      "listing_id": "4601250009",
+      "title": "Periodt Green CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4601250009/periodt-green-cz-earring-connector-chain",
+      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/0dada6/8773351701/il_fullxfull.8773351701_r2eh.jpg",
+        "https://i.etsystatic.com/67609393/r/il/0b4e60/8725521842/il_fullxfull.8725521842_iplc.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "earring chain",
+        "earring connector",
+        "ear chain connector",
+        "connecting chain",
+        "earring stack chain",
+        "flatback chain",
+        "threadless earring",
+        "ear stack jewelry",
+        "curated ear jewelry",
+        "gold earring chain",
+        "flatback earrings",
+        "piercing chain",
+        "ear piercing chain"
+      ],
+      "quantity": 3,
+      "created": "2026-10-22T21:29:09.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-10-22T21:35:10.209Z"
+    },
+    {
+      "listing_id": "4601274406",
+      "title": "The Blues CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4601274406/the-blues-cz-earring-connector-chain",
+      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/b19289/8725511806/il_fullxfull.8725511806_p0lj.jpg",
+        "https://i.etsystatic.com/67609393/r/il/4f2c43/8773341613/il_fullxfull.8773341613_i5zt.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "earring chain",
+        "earring connector",
+        "ear chain connector",
+        "connecting chain",
+        "earring stack chain",
+        "flatback chain",
+        "threadless earring",
+        "ear stack jewelry",
+        "curated ear jewelry",
+        "gold earring chain",
+        "flatback earrings",
+        "piercing chain",
+        "ear piercing chain"
+      ],
+      "quantity": 3,
+      "created": "2026-10-22T21:27:09.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-10-22T21:35:10.209Z"
+    },
+    {
+      "listing_id": "4601246993",
+      "title": "Ruby CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4601246993/ruby-cz-earring-connector-chain-40mm",
+      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/052d90/8773328647/il_fullxfull.8773328647_moyd.jpg",
+        "https://i.etsystatic.com/67609393/r/il/4c428e/8725498528/il_fullxfull.8725498528_skbk.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "earring chain",
+        "earring connector",
+        "ear chain connector",
+        "connecting chain",
+        "earring stack chain",
+        "flatback chain",
+        "threadless earring",
+        "ear stack jewelry",
+        "curated ear jewelry",
+        "gold earring chain",
+        "flatback earrings",
+        "piercing chain",
+        "ear piercing chain"
+      ],
+      "quantity": 3,
+      "created": "2026-10-22T21:24:04.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-10-22T21:35:10.209Z"
+    },
     {
       "listing_id": "4579868601",
       "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
-      "price": "19.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4579868601/unicorn-chaos-labret-to-earring",
       "description": "Unicorn Chaos 🦄✨\n\nTiny rainbows. Maximum ear-stack refraction chaos.\n\nUnicorn Chaos is a playful labret-to-earring connector featuring a delicate 30 mm 18k PVD gold chain and five 3 mm AB stones that flash pink, blue, lavender, and gold depending on the light.\n\nIt’s sparkly, a little magical, and just chaotic enough to make your stack way more fun. Perfect for anyone who likes their jewelry cute, flashy, and impossible to ignore.\n\nWhy you’ll love it:\n30 mm dainty connector chain\nFive 3 mm AB sparkling stones\nIridescent rainbow flash in different lighting\nLabret-to-earring connector design\nAdds movement, texture, and shimmer to your stack\n\nPlayful, colorful, and easy to style\nPerfect for curated ears that need a little extra chaos\n\nWhy the G23 Titanium Labret?\nThe included flatback post is made from ASTM F136 G23 titanium, chosen for its lightweight feel and popularity in body jewelry.\n✨ Lightweight comfort: Titanium is much lighter than many traditional jewelry metals, helping it feel comfortable for everyday wear.\n✨ Popular for sensitive ears: G23 titanium is a go-to choice for people who are mindful about the materials sitting inside the piercing channel.\n✨ Corrosion resistant: Titanium holds up well against moisture and regular wear.\n✨ Smooth flatback design: The flat disk sits comfortably against the back of the piercing without the bulk of a traditional butterfly backing.\n✨ Threadless pushpin style: No exposed external threads pass through the piercing channel during insertion, helping keep the jewelry smooth and easy to wear.\n\nMaterials\nFlatback labret post: G23 titanium\nFinish: 18K Gold PVD\n30 mm gold-tone chain\nFive 3 mm AB stones\nThreadless / pushpin labret\nLabret-to-earring connector design\n\nPerfect for\nHelix-to-lobe styling • Cartilage-to-hoop styling • Curated ear stacks • Colorful chain looks • Statement stacks\n\nCute, chaotic, and catching rainbows from every angle. 🦄✨",
@@ -42,7 +144,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4599803201",
       "title": "Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain | ASTM F136 Threadless Connector | 40mm Emerald Green CZ Dangle",
-      "price": "19.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4599803201/green-with-envy-g23-titanium-labret-to",
       "description": "Green With Envy 💚✨\n\nBright, bold, and absolutely not trying to blend in.\n\nGreen With Envy is a 40 mm GOLD FILLED chain / labret-to-earring chain connector finished with five individually dangling emerald green CZ stones. All jump rings are also gold filled. The saturated green gives your stack a rich pop of color, while the delicate chain lets each stone move and catch the light on its own.\n\nwww.micknackstacks.com⁠\n\nOne end is attached to a threadless G23 titanium labret while the opposite end connects to a compatible hoop or earring, creating a soft drape between two piercings.\n\nA little luxe. A little bratty. Very hard not to stare at. 💚\n\nWhy you’ll love it:\n40 mm labret-to-earring chain\nFive individually dangling emerald-green CZ stones\nRich jewel-tone color\nDelicate movement and sparkle\nAdds depth without making your stack feel bulky\nEasy statement piece for an otherwise minimal ear\nDesigned to connect two piercings in one cohesive look\n\n✨ Implant-grade specification: ASTM F136 is a recognized specification for titanium alloy used in implant applications and quality body jewelry.\n✨ Nickel-conscious: Titanium is commonly chosen by people who want to avoid jewelry made from nickel-containing alloys.\n✨ Lightweight: Titanium is naturally lightweight, making it especially nice for cartilage jewelry and chain styles.\n✨ Corrosion resistant: Titanium offers excellent resistance to corrosion and everyday moisture.\n✨ Threadless design: The pushpin-style connection means there are no exposed external screw threads passing through the piercing channel during insertion.\n✨ Star flatback: The post is finished with a tiny star-shaped flatback for a cute little detail behind the piercing. ⭐\n\nChoose your post length\n6 mm — for a more fitted, snug placement\n8 mm — for a little extra room\n\nEveryone’s anatomy and piercing placement are different, so the best fit will vary.\n\nSold individually\n\nPerfect for\nHelix-to-lobe • Cartilage-to-hoop • Multi-piercing stacks • Green ear stacks • Jewel-tone jewelry • Curated ears\nGreen with envy? As you should be. 💚✨\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -72,7 +174,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4599690242",
       "title": "Soft Spark G23 Titanium Labret to Sterling Silver Ear Chain | ASTM F136 Threadless Connector | 40mm Pink Lavender Clear CZ Dangle",
-      "price": "19.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4599690242/soft-spark-g23-titanium-labret-to",
       "description": "Soft Spark ✨\n\nDelicate color, silver shine, and just enough movement.\n\nSoft Spark is a 40 mm sterling silver labret-to-earring chain connector finished with five individually dangling round CZ stones. \n\nChoose your favorite in Baby Pink, Lavender, or Clear for a clean, monochromatic little line of sparkle that moves with you.\n\nwww.micknackstacks.com⁠\n\nOne end is attached to a threadless titanium labret while the other connects to a compatible hoop or earring, creating a soft drape between two piercings. It’s an easy way to add movement and dimension to your stack without making it feel heavy or overdone.\n\n✨ Implant-grade specification: ASTM F136 is a recognized specification for titanium alloy used in implant applications and quality body jewelry.\n✨ Nickel-conscious: Titanium is commonly chosen by people looking to avoid jewelry made from nickel-containing alloys.\n✨ Lightweight: Titanium is naturally lightweight, making it especially comfortable for cartilage jewelry and chain styles.\n✨ Corrosion resistant: Titanium offers excellent resistance to corrosion and everyday moisture.\n✨ Threadless design: The pushpin-style connection means there are no exposed external screw threads passing through the piercing channel during insertion.\n✨ Tiny star flatback: Instead of a standard round disk, Soft Spark is finished with an adorable little star-shaped flatback for an extra detail behind the piercing. ⭐\n\nChoose your color:\nBaby Pink 💗 — soft, sweet, and feminine.\nLavender 💜 — dreamy purple sparkle with a little personality.\nClear ✨ — clean, icy shine that pairs with practically everything.\n\nChoose your post length:\n6 mm gives a more fitted, snug look, while 8 mm provides a little extra room. Everyone’s anatomy and piercing placement are different, so the best length will vary from person to person.\n\nDetails\n40mm chain length\nSold individually\n\nPerfect for helix-to-lobe styling, cartilage-to-hoop looks, multi-piercing stacks, silver ear stacks, and anyone who likes their sparkle a little softer.\n\nTiny stones. Soft movement. Just a little spark. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -439,7 +541,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4579820434",
       "title": "Alpenglow Labret to Earring Connector | Gold CZ Ear Chain | ASTM F136 G23 Titanium Flatback Connector | Pink Lavender Cartilage Chain",
-      "price": "19.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4579820434/alpenglow-labret-to-earring-connector",
       "description": "Inspired by the rosy pink and violet light that washes over mountain peaks at sunrise and sunset, Alpenglow brings that same soft color shift to your ear stack.\n\nThis dainty labret-to-earring connector features a 30 mm PVD gold plated chain accented with four 3 mm CZ stones in soft pink and lavender, finished with a 3 × 5 mm clear pear-shaped CZ at the center for one brighter drop of sparkle.\n\nOne end connects to a flatback labret post while the other attaches to a compatible hoop or earring, creating a delicate drape between two piercings with movement, color, and just enough shine.\n\nWhy you’ll love it:\n30 mm dainty connector chain\nFour 3 mm pink and lavender CZ stones\nOne 3 × 5 mm clear pear-shaped CZ\nDesigned to connect a labret to a hoop or earring.\n\nAdds depth and movement to your ear stack\nSoft, colorful sparkle without feeling bulky\nEasy to mix with gold and clear-stone jewelry\n\nWhy the G23 Titanium Labret?\nThe included flatback post is made from ASTM F136 G23 titanium, chosen for its lightweight feel and popularity in body jewelry.\n✨ Lightweight comfort: Titanium is much lighter than many traditional jewelry metals, helping the post feel comfortable for everyday wear.\n✨ Sensitive-ear friendly: Titanium is a popular choice for people who are sensitive to nickel-containing jewelry.\n✨ Corrosion resistant: Titanium holds up well against moisture and everyday wear.\n✨ Smooth flatback design: The flat disk sits flush against the back of the piercing, avoiding the poking and bulk of a traditional butterfly backing.\n✨ Threadless pushpin style: No exposed external threads pass through the piercing channel during insertion, helping keep the jewelry smooth and easy to wear.\n\nMaterials\nFlatback labret post: G23 titanium\nGold finish: 18k PVD coating\n30 mm chain\nFour 3 mm pink and lavender CZ stones\nOne 3 × 5 mm clear pear-shaped CZ\nThreadless / pushpin labret\nLabret-to-earring connector design\n\nPerfect for:\nHelix-to-lobe styling • Cartilage-to-hoop styling • Multi-piercing ear stacks • Dainty chain looks • Curated ear styling\n\nSoft mountain color. A little movement. A whole lot of sparkle. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
