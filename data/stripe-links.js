@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-10-18T23:08:25.168Z",
+  "generated_at": "2026-10-22T21:35:55.204Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/00w9AMfLH17d5pz5taaZi0B",
@@ -15,13 +15,13 @@ window.MICKNACK_STRIPE_LINKS = {
       "product_id": "prod_VMAyb8AFHYTs5K"
     },
     "4579868601": {
-      "url": "https://buy.stripe.com/28E7sE2YVbLR3hr8FmaZi0C",
-      "price": "19.99",
+      "url": "https://buy.stripe.com/9B64gsdDz4jpdW57BiaZi1k",
+      "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1ULScp680JvUCS8JQySLJetm",
-      "price_id": "price_1ULScp680JvUCS8J9wZBhCvt",
-      "product_id": "prod_VMAyQKMSTWwFQ1"
+      "link_id": "plink_1UTTeO680JvUCS8JeDk3U7az",
+      "price_id": "price_1UTTeN680JvUCS8JsVKxvtRC",
+      "product_id": "prod_VUSZtmR2cPMVml"
     },
     "4581913102": {
       "url": "https://buy.stripe.com/fZubIU42ZeY3cS1aNuaZi0D",
@@ -33,13 +33,13 @@ window.MICKNACK_STRIPE_LINKS = {
       "product_id": "prod_VMAyyk8dUCgYvn"
     },
     "4579820434": {
-      "url": "https://buy.stripe.com/3cIcMY8jf2bh9FP8FmaZi0E",
-      "price": "19.99",
+      "url": "https://buy.stripe.com/cNi7sEbvr8zF19jf3KaZi1n",
+      "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1ULScq680JvUCS8JkQvPnLTf",
-      "price_id": "price_1ULScq680JvUCS8JiLOSORFT",
-      "product_id": "prod_VMAyLEuooYigCs"
+      "link_id": "plink_1UTTeQ680JvUCS8JGIDcQAVH",
+      "price_id": "price_1UTTeP680JvUCS8JJ5mDSNT3",
+      "product_id": "prod_VUSZoCr1m9pYqI"
     },
     "4576742876": {
       "url": "https://buy.stripe.com/00w28k6b79DJdW5aNuaZi0F",
@@ -275,15 +275,6 @@ window.MICKNACK_STRIPE_LINKS = {
       "price_id": "price_1ULSd7680JvUCS8JSHnAAJvG",
       "product_id": "prod_VMAz59yUsnA3Oq"
     },
-    "4573433368": {
-      "url": "https://buy.stripe.com/9B64gsdDz5ntaJTcVCaZi15",
-      "price": "15.99",
-      "shipping_cents": 500,
-      "config": 2,
-      "link_id": "plink_1ULSd8680JvUCS8JRwHeGWtP",
-      "price_id": "price_1ULSd7680JvUCS8J5xDjGlOr",
-      "product_id": "prod_VMAzie3CkrMWMt"
-    },
     "4573422828": {
       "url": "https://buy.stripe.com/9B600c2YVdTZf098FmaZi16",
       "price": "14.99",
@@ -382,6 +373,51 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1US3Bl680JvUCS8J5wlVzBzV",
       "price_id": "price_1US3Bk680JvUCS8JgS6iKrD5",
       "product_id": "prod_VSzAOIuC08EoZ5"
+    },
+    "4601250009": {
+      "url": "https://buy.stripe.com/aFabIUgPL17d05fg7OaZi1h",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UTTeM680JvUCS8Jk3RsrMIX",
+      "price_id": "price_1UTTeL680JvUCS8JWwDeidLs",
+      "product_id": "prod_VUSZKIMh9jZTP0"
+    },
+    "4601274406": {
+      "url": "https://buy.stripe.com/4gM00c573aHN05faNuaZi1i",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UTTeM680JvUCS8JexGDwCaW",
+      "price_id": "price_1UTTeM680JvUCS8J9ioA4uap",
+      "product_id": "prod_VUSZDQGFc9mmnG"
+    },
+    "4601246993": {
+      "url": "https://buy.stripe.com/14A7sE7fbdTZ4lvbRyaZi1j",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UTTeN680JvUCS8JKa1SWcvm",
+      "price_id": "price_1UTTeN680JvUCS8JIslYgFYd",
+      "product_id": "prod_VUSZ2k2j1fIC3B"
+    },
+    "4599803201": {
+      "url": "https://buy.stripe.com/fZu28k1URaHN19j9JqaZi1l",
+      "price": "25.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UTTeO680JvUCS8JyqDQNtV8",
+      "price_id": "price_1UTTeO680JvUCS8JT8MzTyfh",
+      "product_id": "prod_VUSZLyFmVh7QUB"
+    },
+    "4599690242": {
+      "url": "https://buy.stripe.com/5kQaEQ2YV17d3hr8FmaZi1m",
+      "price": "25.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UTTeP680JvUCS8JHs142cci",
+      "price_id": "price_1UTTeP680JvUCS8Jq0pH2C8V",
+      "product_id": "prod_VUSZsR85CVcUsL"
     }
   }
 };
