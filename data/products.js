@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-22T22:07:53.714Z",
+  "synced_at": "2026-10-22T22:26:57.750Z",
   "listings": [
     {
       "listing_id": "4601257943",
@@ -12,7 +12,8 @@ window.MICKNACK_PRODUCTS = {
       "url": "https://www.etsy.com/listing/4601257943/sweet-champagne-cz-earring-connector",
       "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/10fdaa/8725586526/il_fullxfull.8725586526_2u67.jpg"
+        "https://i.etsystatic.com/67609393/r/il/10fdaa/8725586526/il_fullxfull.8725586526_2u67.jpg",
+        "https://i.etsystatic.com/67609393/r/il/08b30c/8725743110/il_fullxfull.8725743110_fc5k.jpg"
       ],
       "video": "",
       "tags": [
