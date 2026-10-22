@@ -2,9 +2,13 @@ name: Sync Etsy listings
 
 on:
   schedule:
-    # Runs once a day at 13:00 UTC (~9am Eastern / 6am Pacific).
+    # Runs at the top of every hour. Etsy does not tell the shop when
+    # something sells, so the only way the site learns about a sale there is
+    # by asking: a daily run meant a piece could show as in stock for most of
+    # a day after its last one went. Hourly keeps the gap to an hour, and a
+    # run with nothing to report commits nothing.
     # Change the cron expression to adjust — https://crontab.guru helps.
-    - cron: "0 13 * * *"
+    - cron: "0 * * * *"
   workflow_dispatch: {} # lets you click "Run workflow" in the Actions tab anytime
 
 permissions:
