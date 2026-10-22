@@ -22,4 +22,7 @@ window.MICKNACK_INVENTORY = {
   // Summit Ride Huggie Earrings: retired, left Etsy 2 October 2026 and no
   // longer sold here either.
   "4573433368": { hidden: true },
+
+  // SLIMED Apple Green CZ Ear Chain: hidden from the site 22 October 2026.
+  "4579741852": { hidden: true },
 };
