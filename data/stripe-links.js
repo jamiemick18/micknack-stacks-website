@@ -3,16 +3,16 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-10-22T21:35:55.204Z",
+  "generated_at": "2026-10-22T22:08:05.579Z",
   "links": {
     "4584458361": {
-      "url": "https://buy.stripe.com/00w9AMfLH17d5pz5taaZi0B",
-      "price": "19.99",
+      "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
+      "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1ULSco680JvUCS8JOGGy9zDF",
-      "price_id": "price_1ULSco680JvUCS8JRHu0IsRc",
-      "product_id": "prod_VMAyb8AFHYTs5K"
+      "link_id": "plink_1UTU9Y680JvUCS8J5c5k5O2Y",
+      "price_id": "price_1UTU9Y680JvUCS8Ja47RjjtW",
+      "product_id": "prod_VUT5SsOsoMTEbh"
     },
     "4579868601": {
       "url": "https://buy.stripe.com/9B64gsdDz4jpdW57BiaZi1k",
@@ -418,6 +418,42 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UTTeP680JvUCS8JHs142cci",
       "price_id": "price_1UTTeP680JvUCS8Jq0pH2C8V",
       "product_id": "prod_VUSZsR85CVcUsL"
+    },
+    "4601257943": {
+      "url": "https://buy.stripe.com/9B6bIUeHDeY37xHbRyaZi1o",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UTU9V680JvUCS8JIGUUOgH0",
+      "price_id": "price_1UTU9V680JvUCS8JOqiE365I",
+      "product_id": "prod_VUT54n7BlPicsg"
+    },
+    "4601282092": {
+      "url": "https://buy.stripe.com/3cIbIUbvr6rx4lv3l2aZi1p",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UTU9W680JvUCS8JV3lqqTsL",
+      "price_id": "price_1UTU9W680JvUCS8JJ3YkSquL",
+      "product_id": "prod_VUT59V7qPulFim"
+    },
+    "4601255929": {
+      "url": "https://buy.stripe.com/8x200c9njdTZdW5g7OaZi1q",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UTU9X680JvUCS8J6N3TTrA3",
+      "price_id": "price_1UTU9W680JvUCS8J7EzfQDkC",
+      "product_id": "prod_VUT51CArUnoJgO"
+    },
+    "4601276860": {
+      "url": "https://buy.stripe.com/28EaEQ9nj9DJ2dnf3KaZi1r",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UTU9Y680JvUCS8JR3dyiEv6",
+      "price_id": "price_1UTU9X680JvUCS8JkPDcfhUp",
+      "product_id": "prod_VUT5vvAF88Vj4m"
     }
   }
 };

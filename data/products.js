@@ -2,8 +2,143 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-22T21:36:51.849Z",
+  "synced_at": "2026-10-22T22:07:28.091Z",
   "listings": [
+    {
+      "listing_id": "4601257943",
+      "title": "Sweet Champagne CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4601257943/sweet-champagne-cz-earring-connector",
+      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/10fdaa/8725586526/il_fullxfull.8725586526_2u67.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "earring chain",
+        "earring connector",
+        "ear chain connector",
+        "connecting chain",
+        "earring stack chain",
+        "flatback chain",
+        "threadless earring",
+        "ear stack jewelry",
+        "curated ear jewelry",
+        "gold earring chain",
+        "flatback earrings",
+        "piercing chain",
+        "ear piercing chain"
+      ],
+      "quantity": 3,
+      "created": "2026-10-22T21:43:52.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-10-22T22:07:28.091Z"
+    },
+    {
+      "listing_id": "4601282092",
+      "title": "Lavendar CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4601282092/lavendar-cz-earring-connector-chain-40mm",
+      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/6e7507/8773404145/il_fullxfull.8773404145_5r4b.jpg",
+        "https://i.etsystatic.com/67609393/r/il/59a687/8725574260/il_fullxfull.8725574260_drg2.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "earring chain",
+        "earring connector",
+        "ear chain connector",
+        "connecting chain",
+        "earring stack chain",
+        "flatback chain",
+        "threadless earring",
+        "ear stack jewelry",
+        "curated ear jewelry",
+        "gold earring chain",
+        "flatback earrings",
+        "piercing chain",
+        "ear piercing chain"
+      ],
+      "quantity": 3,
+      "created": "2026-10-22T21:41:06.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-10-22T22:07:28.091Z"
+    },
+    {
+      "listing_id": "4601255929",
+      "title": "Baby Pink CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4601255929/baby-pink-cz-earring-connector-chain",
+      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/ada0aa/8773399497/il_fullxfull.8773399497_ysno.jpg",
+        "https://i.etsystatic.com/67609393/r/il/8b99d6/8773399583/il_fullxfull.8773399583_6o5t.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "earring chain",
+        "earring connector",
+        "ear chain connector",
+        "connecting chain",
+        "earring stack chain",
+        "flatback chain",
+        "threadless earring",
+        "ear stack jewelry",
+        "curated ear jewelry",
+        "gold earring chain",
+        "flatback earrings",
+        "piercing chain",
+        "ear piercing chain"
+      ],
+      "quantity": 3,
+      "created": "2026-10-22T21:40:02.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-10-22T22:07:28.091Z"
+    },
+    {
+      "listing_id": "4601276860",
+      "title": "Clementine CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4601276860/clementine-cz-earring-connector-chain",
+      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/52c9f0/8725531238/il_fullxfull.8725531238_owcc.jpg",
+        "https://i.etsystatic.com/67609393/r/il/f8b2ad/8725531240/il_fullxfull.8725531240_34gb.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "earring chain",
+        "earring connector",
+        "ear chain connector",
+        "connecting chain",
+        "earring stack chain",
+        "flatback chain",
+        "threadless earring",
+        "ear stack jewelry",
+        "curated ear jewelry",
+        "gold earring chain",
+        "flatback earrings",
+        "piercing chain",
+        "ear piercing chain"
+      ],
+      "quantity": 3,
+      "created": "2026-10-22T21:31:39.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-10-22T22:07:28.091Z"
+    },
     {
       "listing_id": "4601250009",
       "title": "Periodt Green CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
@@ -474,7 +609,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4584458361",
       "title": "Checkered Black & Clear CZ Ear Chain | 30mm Gold Connector Chain | ASTM F136 Titanium Labret Option | 6mm or 8mm Flatback",
-      "price": "19.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4584458361/checkered-black-clear-cz-ear-chain-30mm",
       "description": "Checkered 🏁✨\n\nCheckered features a dainty gold chain accented with alternating 4 mm black and clear CZ stones, creating a bold black-and-white contrast with plenty of movement and shine.\n\nThe chain comes attached to a gold PVD ASTM F136 implant-grade titanium flatback labret, so the piece is ready to wear as a single piercing chain dangle. Choose between a 6 mm or 8 mm post depending on your preferred fit and anatomy.\n\nWhy you’ll love it\nFive 4 mm black and clear CZ stones\nAlternating checkered-inspired color pattern\nDainty gold chain with subtle movement\nEdgy without feeling heavy\nFlatback labret design\nAvailable with 6 mm or 8 mm post\nEasy statement piece for a curated ear stack\n\nWhy ASTM F136 titanium?\nThe post sitting inside your piercing is ASTM F136 implant-grade titanium with a gold PVD finish.\n✨ Implant-grade material: ASTM F136 is a recognized specification for titanium alloy used in surgical implants and quality body jewelry.\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear.\n✨ Nickel-conscious: Titanium is commonly chosen by people concerned about sensitivity to nickel-containing jewelry.\n✨ Corrosion resistant: Titanium is highly resistant to corrosion and holds up well against everyday moisture and wear.\n✨ Smooth flatback: No traditional butterfly backing poking behind your ear. The flat disk creates a clean, low-profile fit.\n✨ Threadless pushpin: No exposed external screw threads pass through the piercing channel during insertion.\n\nMaterials:\nFlatback labret: ASTM F136 implant-grade titanium\nStones: 4 mm black and clear CZ\nThreadless / pushpin design\nPost options: 6 mm or 8 mm\n\nPerfect for\nHelix • Flat • Lobe • Cartilage • Curated Ear Stacks\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
@@ -495,7 +630,7 @@ window.MICKNACK_PRODUCTS = {
         "ASTM F136",
         "G23 Titanium"
       ],
-      "quantity": 5,
+      "quantity": 3,
       "created": "2026-09-28T18:23:41.000Z",
       "views": 25,
       "num_favorers": 1,
