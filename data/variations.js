@@ -9,7 +9,7 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-10-22T22:26:57.750Z
+// Last read from Etsy: 2026-10-23T01:20:53.342Z
 
 window.MICKNACK_VARIATIONS = {
   // Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Ti
@@ -28,8 +28,6 @@ window.MICKNACK_VARIATIONS = {
   "4581913102": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Alpenglow Labret to Earring Connector | Gold CZ Ear Chain | 
   "4579820434": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
-  // SLIMED | Apple Green CZ Ear Chain | ASTM F136 G23 Titanium T
-  "4579741852": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Snow Bunnies Threadless Flatback Earring | Gold Snowflake Ca
   "4573638523": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Feeling Crabby Threadless Flatback Earring | Gold Crab Carti

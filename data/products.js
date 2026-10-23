@@ -2,8 +2,77 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-22T22:26:57.750Z",
+  "synced_at": "2026-10-23T01:20:53.342Z",
   "listings": [
+    {
+      "listing_id": "4601338080",
+      "title": "Hot Mess Pink CZ Ear Chain | 18K Gold PVD Earring Connector | Hot Pink Marquise Dangle | Dainty Cartilage Chain Jewelry",
+      "price": "25.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4601338080/hot-mess-pink-cz-ear-chain-18k-gold-pvd",
+      "description": "Hot Mess 💗🔥\n\nPretty, pink, and making questionable.\n\nHot Mess is a bold little ear-chain connector featuring five dangling hot-pink marquise CZ stones on a delicate gold chain. The pointed stones catch the light from every angle, giving the piece plenty of movement, color, and just enough drama.\nShe’s bright. She’s extra. She absolutely did not come here to be subtle.\n\nWhy you’ll love it\nFive hot-pink marquise-cut CZ stones\n\nIndividually dangling stones for extra movement\nDelicate gold chain\nVivid fuchsia-pink color\nLightweight, draped styling\nEasy way to add color to an existing ear stack\n\nStyle it your way\nHot Mess is a chain connector only, designed to attach between compatible hoops, flatbacks, or earrings you already own.\n\nDrape it between two piercings for a bold pop of pink, pair it with simple gold hoops, or add it to a stacked ear when “one more thing” is clearly the correct answer.\n\nEarrings and labret posts are not included.\n\nMaterials & Details\nChain width: 1.5 mm\nChain style: Flat cable chain\nFinish: 18K gold PVD\nStones: Five hot-pink marquise CZ stones\nConnector loops at both ends\n\nChain connector only\n\nSold individually\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Pink ear stacks • Curated ears • Alt-girly jewelry\nCute? Definitely. Together? Debatable. 💗🔥\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/d0159d/8773871911/il_fullxfull.8773871911_5ixs.jpg",
+        "https://i.etsystatic.com/67609393/r/il/f016e9/8726054634/il_fullxfull.8726054634_842s.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "ear chain connector",
+        "earring connector",
+        "pink ear chain",
+        "helix chain",
+        "cartilage chain",
+        "chain ear jacket",
+        "pink cz chain",
+        "gold ear chain",
+        "ear stack jewelry",
+        "piercing connector",
+        "dainty ear jewelry",
+        "curated ear",
+        "multi piercing"
+      ],
+      "quantity": 2,
+      "created": "2026-10-22T23:42:27.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-10-23T01:20:53.342Z"
+    },
+    {
+      "listing_id": "4601327168",
+      "title": "Brat CZ Ear Chain | 18K Gold PVD Earring Connector | Baby Pink, Hot Pink 4mm CZ | Dainty Cartilage Chain Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4601327168/brat-cz-ear-chain-18k-gold-pvd-earring",
+      "description": "Brat 💗✨\n\nBrat is a dainty gold ear-chain connector dripping with five 4 mm pink CZ stones in a mix of soft baby pink and bold hot pink.\nThe alternating shades give it that perfect sweet-meets-spicy look — feminine enough to be pretty, bright enough to get noticed, and just bratty enough to earn the name.\n\nEach stone hangs individually from a delicate 1.5 mm flat cable chain, adding movement and flashes of pink every time you turn your head.\n\nWhy you’ll love it\nFive 4 mm round CZ stones\nMix of baby pink + hot pink\nDelicate 1.5 mm flat cable chain\nIndividual dangling stones for extra movement\nBright two-tone pink color\nLightweight, playful look\nEasy to add to an existing curated ear stack\n\nStyle it your way\nBrat is a chain connector only, designed to attach between compatible hoops, flatbacks, or earrings you already own.\nDrape it between two piercings for an easy pop of pink, pair it with simple gold hoops, or throw it into an already-stacked ear when you need just a little more chaos.\n\nMaterials & Details\nChain width: 1.5 mm\nChain style: Flat cable chain\nFinish: 18K gold PVD plated\nStones: Five 4 mm round CZ\nColors: Baby pink + hot pink\nConnector loops at both ends\nChain connector only\nSold individually\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Pink ear stacks • Curated ears • Dainty chain styling\nCute enough to fool you. Bratty enough to warn you. 💗\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/dc74da/8773785101/il_fullxfull.8773785101_tq4u.jpg",
+        "https://i.etsystatic.com/67609393/r/il/94be9e/8725958720/il_fullxfull.8725958720_kjz9.jpg",
+        "https://i.etsystatic.com/67609393/r/il/aec218/8725961896/il_fullxfull.8725961896_36pi.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/c187/85c99d1a-0347-4607-8577-92ae59d2ece5/vid_v1.mp4",
+      "tags": [
+        "earring chain",
+        "earring connector",
+        "ear chain connector",
+        "connecting chain",
+        "earring stack chain",
+        "flatback chain",
+        "threadless earring",
+        "ear stack jewelry",
+        "curated ear jewelry",
+        "gold earring chain",
+        "flatback earrings",
+        "piercing chain",
+        "ear piercing chain"
+      ],
+      "quantity": 3,
+      "created": "2026-10-22T23:16:42.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-10-23T01:20:53.342Z"
+    },
     {
       "listing_id": "4601257943",
       "title": "Sweet Champagne CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
@@ -400,7 +469,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-10-15T22:11:01.000Z",
       "views": 28,
-      "num_favorers": 3,
+      "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
     },
@@ -733,41 +802,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-09-16T20:46:30.000Z",
       "views": 114,
-      "num_favorers": 11,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4579741852",
-      "title": "SLIMED | Apple Green CZ Ear Chain | ASTM F136 G23 Titanium Threadless Flat Back | Marquise Drip Chain | Spooky Ear Stack",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4579741852/slimed-apple-green-cz-ear-chain-g23",
-      "description": "SLIMED 💚👻\n\nDrippy. Gooey. Radioactive, and still cute.\nThree juicy 3×6mm apple green marquise CZ stones drip from a dainty 30mm gold chain, giving full-on freshly slimed ectoplasm energy. 🫠✨\n\nBright, weird, sparkly and just a little unhinged, SLIMED was made for the ear stack that refuses to behave.\n\nAnd the details are just as good from the back. SLIMED sits on a 6mm solid G23 titanium post with a star-shaped flat back and comfortable threadless pushpin closure.\n\n💚 Three 3×6mm apple green marquise CZ stones\n🫠 30mm drippy gold chain\n👻 6mm or 8mm solid ASTM F136 G23 titanium post\n⭐ Star-shaped flat back\n✨ Threadless pushpin style\n🍏 Bright apple green sparkle\n🖤 Sold individually\n\nThe goo is fake. The sparkle is VERY real.\nGet SLIMED. Stay sparkly. 💚👻",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/60261b/8556752050/il_fullxfull.8556752050_5lnq.jpg",
-        "https://i.etsystatic.com/67609393/r/il/83621e/8604612151/il_fullxfull.8604612151_8yxk.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/d6a9/5fb3c098-fc41-41a0-b1aa-1ffd2aaaf7ec/vid_v1.mp4",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "piercing chain",
-        "ASTM F136",
-        "G23 Titanium",
-        "Threadless flatback",
-        "Pushpin",
-        "Flatback"
-      ],
-      "quantity": 5,
-      "created": "2026-09-21T16:04:05.000Z",
-      "views": 24,
-      "num_favorers": 0,
+      "num_favorers": 12,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1676,6 +1711,41 @@ window.MICKNACK_PRODUCTS = {
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4579741852",
+      "title": "SLIMED | Apple Green CZ Ear Chain | ASTM F136 G23 Titanium Threadless Flat Back | Marquise Drip Chain | Spooky Ear Stack",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4579741852/slimed-apple-green-cz-ear-chain-g23",
+      "description": "SLIMED 💚👻\n\nDrippy. Gooey. Radioactive, and still cute.\nThree juicy 3×6mm apple green marquise CZ stones drip from a dainty 30mm gold chain, giving full-on freshly slimed ectoplasm energy. 🫠✨\n\nBright, weird, sparkly and just a little unhinged, SLIMED was made for the ear stack that refuses to behave.\n\nAnd the details are just as good from the back. SLIMED sits on a 6mm solid G23 titanium post with a star-shaped flat back and comfortable threadless pushpin closure.\n\n💚 Three 3×6mm apple green marquise CZ stones\n🫠 30mm drippy gold chain\n👻 6mm or 8mm solid ASTM F136 G23 titanium post\n⭐ Star-shaped flat back\n✨ Threadless pushpin style\n🍏 Bright apple green sparkle\n🖤 Sold individually\n\nThe goo is fake. The sparkle is VERY real.\nGet SLIMED. Stay sparkly. 💚👻",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/60261b/8556752050/il_fullxfull.8556752050_5lnq.jpg",
+        "https://i.etsystatic.com/67609393/r/il/83621e/8604612151/il_fullxfull.8604612151_8yxk.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/d6a9/5fb3c098-fc41-41a0-b1aa-1ffd2aaaf7ec/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "piercing chain",
+        "ASTM F136",
+        "G23 Titanium",
+        "Threadless flatback",
+        "Pushpin",
+        "Flatback"
+      ],
+      "quantity": 5,
+      "created": "2026-09-21T16:04:05.000Z",
+      "views": 24,
+      "num_favorers": 0,
+      "etsy_active": false,
+      "added_at": "2026-09-30T19:35:47.289Z",
+      "left_etsy_at": "2026-10-23T01:20:53.342Z"
     },
     {
       "listing_id": "4573433368",
