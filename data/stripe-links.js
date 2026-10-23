@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-10-23T17:01:24.045Z",
+  "generated_at": "2026-10-23T17:06:05.640Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -12,7 +12,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTU9Y680JvUCS8J5c5k5O2Y",
       "price_id": "price_1UTU9Y680JvUCS8Ja47RjjtW",
-      "product_id": "prod_VUT5SsOsoMTEbh"
+      "product_id": "prod_VUT5SsOsoMTEbh",
+      "name": "Checkered Black & Clear CZ Ear Chain | 30mm Gold Connector Chain | ASTM F136 Titanium Labret Option | 6mm or 8mm Flatback"
     },
     "4579868601": {
       "url": "https://buy.stripe.com/9B64gsdDz4jpdW57BiaZi1k",
@@ -21,7 +22,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTTeO680JvUCS8JeDk3U7az",
       "price_id": "price_1UTTeN680JvUCS8JsVKxvtRC",
-      "product_id": "prod_VUSZtmR2cPMVml"
+      "product_id": "prod_VUSZtmR2cPMVml",
+      "name": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto"
     },
     "4581913102": {
       "url": "https://buy.stripe.com/fZubIU42ZeY3cS1aNuaZi0D",
@@ -30,7 +32,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULScq680JvUCS8JNsEmKsJJ",
       "price_id": "price_1ULScp680JvUCS8J06imwlGN",
-      "product_id": "prod_VMAyyk8dUCgYvn"
+      "product_id": "prod_VMAyyk8dUCgYvn",
+      "name": "Prism Spell Double Draped Ear Chain | ASTM F136 G23 Titanium Flatback | Gold Labret to Earring Connector | Iridescent AB CZ Jewelry"
     },
     "4579820434": {
       "url": "https://buy.stripe.com/cNi7sEbvr8zF19jf3KaZi1n",
@@ -39,7 +42,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTTeQ680JvUCS8JGIDcQAVH",
       "price_id": "price_1UTTeP680JvUCS8JJ5mDSNT3",
-      "product_id": "prod_VUSZoCr1m9pYqI"
+      "product_id": "prod_VUSZoCr1m9pYqI",
+      "name": "Alpenglow Labret to Earring Connector | Gold CZ Ear Chain | ASTM F136 G23 Titanium Flatback Connector | Pink Lavender Cartilage Chain"
     },
     "4576742876": {
       "url": "https://buy.stripe.com/00w28k6b79DJdW5aNuaZi0F",
@@ -48,7 +52,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULScr680JvUCS8JioUF34xi",
       "price_id": "price_1ULScr680JvUCS8Jj0NnRc1a",
-      "product_id": "prod_VMAyFDOstBO2A4"
+      "product_id": "prod_VMAyFDOstBO2A4",
+      "name": "Alpenglow Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry"
     },
     "4573638523": {
       "url": "https://buy.stripe.com/fZubIUgPL8zF8BL1cUaZi0H",
@@ -57,7 +62,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULScs680JvUCS8JdO2zKOEV",
       "price_id": "price_1ULScs680JvUCS8JbgkpZRG9",
-      "product_id": "prod_VMAyhMbUzLA4m0"
+      "product_id": "prod_VMAyhMbUzLA4m0",
+      "name": "Snow Bunnies Threadless Flatback Earring | Gold Snowflake Cartilage Stud | Titanium Labret Post | Winter"
     },
     "4577301519": {
       "url": "https://buy.stripe.com/28EaEQ2YVg276tDcVCaZi0I",
@@ -66,7 +72,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSct680JvUCS8JfFuXr02W",
       "price_id": "price_1ULSct680JvUCS8JP81pCRWE",
-      "product_id": "prod_VMAy5lQaEZzwdF"
+      "product_id": "prod_VMAy5lQaEZzwdF",
+      "name": "Purple Problem Triple Ear Chain | 18K PVD Gold Drape Chain | Amethyst & Clear CZ Connector | Curated Ear Jewelry"
     },
     "4576665382": {
       "url": "https://buy.stripe.com/8x200c1UR9DJaJT2gYaZi0J",
@@ -75,7 +82,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSct680JvUCS8JFyjFRA6m",
       "price_id": "price_1ULSct680JvUCS8JHYGQt7UN",
-      "product_id": "prod_VMAyqjsJh5FBqL"
+      "product_id": "prod_VMAyqjsJh5FBqL",
+      "name": "Sugar Sweet Baby Pink Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry"
     },
     "4576033359": {
       "url": "https://buy.stripe.com/bJe14g0QNbLRg4d3l2aZi0K",
@@ -84,7 +92,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULScu680JvUCS8JUCX3NQRl",
       "price_id": "price_1ULScu680JvUCS8J9vLO5O7L",
-      "product_id": "prod_VMAywpOY1wwf9W"
+      "product_id": "prod_VMAywpOY1wwf9W",
+      "name": "Lilac Drop Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry"
     },
     "4573651300": {
       "url": "https://buy.stripe.com/cNi14g42Z0399FPf3KaZi0L",
@@ -93,7 +102,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULScv680JvUCS8JkbpTDA1i",
       "price_id": "price_1ULScu680JvUCS8Jpe10R1xT",
-      "product_id": "prod_VMAyM8S4xNYTkq"
+      "product_id": "prod_VMAyM8S4xNYTkq",
+      "name": "Feeling Crabby Threadless Flatback Earring | Gold Crab Cartilage Stud | Titanium Labret Post | Coastal Ear Jewelry"
     },
     "4575212975": {
       "url": "https://buy.stripe.com/8x200c42ZbLRg4dcVCaZi0M",
@@ -102,7 +112,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULScv680JvUCS8Juq7BQjtM",
       "price_id": "price_1ULScv680JvUCS8JBD6AnrAh",
-      "product_id": "prod_VMAyXyFm1a6F6Z"
+      "product_id": "prod_VMAyXyFm1a6F6Z",
+      "name": "G23 Titanium Clicker Hoop, 18G 6mm Silver Cartilage Ring, Tiny Hinged Hoop for Helix, Tragus, Daith or Septum Piercing"
     },
     "4574722466": {
       "url": "https://buy.stripe.com/00wcMY0QNdTZ19j3l2aZi1v",
@@ -111,7 +122,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTlqI680JvUCS8J0c03oFNY",
       "price_id": "price_1UTlqI680JvUCS8JXuryUnXu",
-      "product_id": "prod_VUlNuquFkzx7RT"
+      "product_id": "prod_VUlNuquFkzx7RT",
+      "name": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry"
     },
     "4574696395": {
       "url": "https://buy.stripe.com/5kQdR28jfg277xH1cUaZi1w",
@@ -120,7 +132,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTlqJ680JvUCS8JCCpCPzYb",
       "price_id": "price_1UTlqJ680JvUCS8JSRSaSsXi",
-      "product_id": "prod_VUlNaEcpDqKxYn"
+      "product_id": "prod_VUlNaEcpDqKxYn",
+      "name": "Midnight Amethyst Ear Chain Connector | Purple Synthetic Corundum Sapphire Dangle Chain | Dainty Gold Earring Chain | Ear Stack Jewelry"
     },
     "4573640401": {
       "url": "https://buy.stripe.com/28E7sE42ZcPVf09dZGaZi0P",
@@ -129,7 +142,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULScx680JvUCS8JEIGDNRJW",
       "price_id": "price_1ULScx680JvUCS8JyNACt7rC",
-      "product_id": "prod_VMAytO2Ej5TcKx"
+      "product_id": "prod_VMAytO2Ej5TcKx",
+      "name": "Pikes Peak Summit Threadless Flatback Earring | Gold CZ Chain Dangle | Titanium Labret Post | Colorado Mountain Jewelry"
     },
     "4573631273": {
       "url": "https://buy.stripe.com/5kQaEQczvdTZ9FP9JqaZi0Q",
@@ -138,7 +152,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULScy680JvUCS8J27nIkdWB",
       "price_id": "price_1ULScy680JvUCS8JbBXKNF0m",
-      "product_id": "prod_VMAyjhPUbrY81g"
+      "product_id": "prod_VMAyjhPUbrY81g",
+      "name": "Soft Bow Threadless Flatback Earring | Minimal Gold Bow Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty Cartilage Jewelry"
     },
     "4573623947": {
       "url": "https://buy.stripe.com/fZufZa573g27g4d2gYaZi0R",
@@ -147,7 +162,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULScz680JvUCS8JY1zTLmOT",
       "price_id": "price_1ULScy680JvUCS8JXZbUZPIk",
-      "product_id": "prod_VMAy5HHY8mdx2Z"
+      "product_id": "prod_VMAy5HHY8mdx2Z",
+      "name": "Honey Bear Threadless Flatback Earring | Gold Bear Cartilage Stud | Titanium Labret Post | Dainty Cute Ear Jewelry"
     },
     "4573632540": {
       "url": "https://buy.stripe.com/cNifZafLHaHN8BLg7OaZi0S",
@@ -156,7 +172,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULScz680JvUCS8Ju3flsEK9",
       "price_id": "price_1ULScz680JvUCS8JFHE2uftu",
-      "product_id": "prod_VMAyqKi48Fjdbx"
+      "product_id": "prod_VMAyqKi48Fjdbx",
+      "name": "Double Diamond Run Threadless Flatback Earring | Gold Geometric Ear Climber | Titanium Labret Post | Ski Inspired Cartilage Jewelry"
     },
     "4573613361": {
       "url": "https://buy.stripe.com/fZuaEQczvaHN6tD7BiaZi0T",
@@ -165,7 +182,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd0680JvUCS8JE8OWtCZd",
       "price_id": "price_1ULSd0680JvUCS8JpozeG2Ud",
-      "product_id": "prod_VMAywxm5DX04tn"
+      "product_id": "prod_VMAywxm5DX04tn",
+      "name": "Cherry Crush Threadless Flatback Earring | Pink & Clear Heart CZ Stud | Gold Bow Cartilage Earring | Titanium Labret Post"
     },
     "4573609723": {
       "url": "https://buy.stripe.com/3cIcMYeHD2bh2dng7OaZi0U",
@@ -174,7 +192,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd1680JvUCS8JCXP13iUI",
       "price_id": "price_1ULSd0680JvUCS8J00SKjzdP",
-      "product_id": "prod_VMAy1qasf3Mcz7"
+      "product_id": "prod_VMAy1qasf3Mcz7",
+      "name": "Mountain Climber Love Threadless Flatback Earring | Gold CZ Ear Climber | Titanium Labret Post | Dainty Cartilage Jewelry"
     },
     "4573623776": {
       "url": "https://buy.stripe.com/28EcMY9nj0397xHcVCaZi0V",
@@ -183,7 +202,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd1680JvUCS8JKdnqyGsn",
       "price_id": "price_1ULSd1680JvUCS8J05yFmnzQ",
-      "product_id": "prod_VMAySkVnHEXZ4M"
+      "product_id": "prod_VMAySkVnHEXZ4M",
+      "name": "Midnight Battie Threadless Flatback Earring | Gold Bat Cartilage Stud | Titanium Labret Post | Sparkly Gothic Ear Jewelry"
     },
     "4573601729": {
       "url": "https://buy.stripe.com/6oU00c42Z6rx3hrdZGaZi0W",
@@ -192,7 +212,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd2680JvUCS8JXWzDuXDA",
       "price_id": "price_1ULSd2680JvUCS8Ju8l7ciMt",
-      "product_id": "prod_VMAz9szBlBiHYw"
+      "product_id": "prod_VMAz9szBlBiHYw",
+      "name": "Drip Threadless Flatback Earring | Dainty Gold Dangle | Titanium Labret Post | Minimal Cartilage Jewelry"
     },
     "4573616908": {
       "url": "https://buy.stripe.com/00wfZabvrbLRbNX7BiaZi0X",
@@ -201,7 +222,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd3680JvUCS8JokSRuPDO",
       "price_id": "price_1ULSd2680JvUCS8JicLG5i5J",
-      "product_id": "prod_VMAzAyyDYXP1o4"
+      "product_id": "prod_VMAzAyyDYXP1o4",
+      "name": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry"
     },
     "4573594151": {
       "url": "https://buy.stripe.com/3cI6oA7fb4jpf09f3KaZi0Y",
@@ -210,7 +232,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd3680JvUCS8J6i8UwVyo",
       "price_id": "price_1ULSd3680JvUCS8JJDFtWUK2",
-      "product_id": "prod_VMAzXZ6SphwP2O"
+      "product_id": "prod_VMAzXZ6SphwP2O",
+      "name": "Lotus Glow Threadless Flatback Earring | Gold Lotus Cartilage Stud | Titanium Labret Post | Dainty Marquise CZ Jewelry"
     },
     "4573481130": {
       "url": "https://buy.stripe.com/fZu7sE8jf8zF8BL2gYaZi0Z",
@@ -219,7 +242,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd4680JvUCS8Jpo9IgI9U",
       "price_id": "price_1ULSd4680JvUCS8J7ytQD3Tu",
-      "product_id": "prod_VMAzyJKCeX1sDW"
+      "product_id": "prod_VMAzyJKCeX1sDW",
+      "name": "Mini Chic Dangle Threadless Flatback Earring | Dainty Gold Drop Earring | Titanium Labret Post | Minimal Cartilage Jewelry"
     },
     "4573472494": {
       "url": "https://buy.stripe.com/bJefZa1UReY32dn7BiaZi10",
@@ -228,7 +252,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd4680JvUCS8J7H1nVsA9",
       "price_id": "price_1ULSd4680JvUCS8JrwCQLnCk",
-      "product_id": "prod_VMAzw2Ey5291eo"
+      "product_id": "prod_VMAzw2Ey5291eo",
+      "name": "Barely There Threadless Flatback Earring | Minimal Gold Cartilage Stud | ASTM F136 G23 Implant Grade Titanium | Dainty Two Stone Earring"
     },
     "4573443165": {
       "url": "https://buy.stripe.com/5kQ8wI0QN4jp5pzaNuaZi11",
@@ -237,7 +262,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd5680JvUCS8JnZYG3fns",
       "price_id": "price_1ULSd5680JvUCS8JDPa1vk6U",
-      "product_id": "prod_VMAzbf8sXDAWgM"
+      "product_id": "prod_VMAzbf8sXDAWgM",
+      "name": "Cosmic Supernova Threadless Flatback Earring | Gold Starburst Cartilage Stud | ASTM F136 G23 Implant Grade Titanium | Celestial Ear Jewelry"
     },
     "4573452050": {
       "url": "https://buy.stripe.com/6oU6oA7fb8zF2dncVCaZi12",
@@ -246,7 +272,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd6680JvUCS8JESHsEkKu",
       "price_id": "price_1ULSd5680JvUCS8J5k9a0ODP",
-      "product_id": "prod_VMAzVkln97iaZo"
+      "product_id": "prod_VMAzVkln97iaZo",
+      "name": "Zephyr Threadless Flatback Earring | Hidden Helix Dangle | Gold Ear Climber | Titanium Labret Post | Marquise Cartilage Jewelry"
     },
     "4573443638": {
       "url": "https://buy.stripe.com/eVq28k5732bhdW56xeaZi13",
@@ -255,7 +282,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd6680JvUCS8JMAGtUjrI",
       "price_id": "price_1ULSd6680JvUCS8JSJOtGnAK",
-      "product_id": "prod_VMAzBLsezKxSje"
+      "product_id": "prod_VMAzBLsezKxSje",
+      "name": "Mountain Fox Threadless Flatback Earring | Gold Fox Cartilage Stud | Titanium Labret Post | Woodland Animal Jewelry"
     },
     "4573438832": {
       "url": "https://buy.stripe.com/28EaEQarnaHN7xH5taaZi14",
@@ -264,7 +292,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd7680JvUCS8JOTYONlM3",
       "price_id": "price_1ULSd7680JvUCS8JSHnAAJvG",
-      "product_id": "prod_VMAz59yUsnA3Oq"
+      "product_id": "prod_VMAz59yUsnA3Oq",
+      "name": "Alpen Glow Threadless Flatback Earring | Dainty Mountain Stud | Gold Cartilage Earring | Minimal Sparkle Helix Jewelry"
     },
     "4573422828": {
       "url": "https://buy.stripe.com/9B600c2YVdTZf098FmaZi16",
@@ -273,7 +302,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd8680JvUCS8JUGRt4pfF",
       "price_id": "price_1ULSd8680JvUCS8Jjqu5gmLH",
-      "product_id": "prod_VMAzJt0MxZiIOd"
+      "product_id": "prod_VMAzJt0MxZiIOd",
+      "name": "Darling Gold Bow Threadless Flatback Earring | Titanium Labret Post | Gold Push Pin Cartilage Earring | Coquette Bow Stud"
     },
     "4571571883": {
       "url": "https://buy.stripe.com/7sYdR242Z7vBg4d9JqaZi17",
@@ -282,7 +312,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSd9680JvUCS8J18Dz8ld1",
       "price_id": "price_1ULSd9680JvUCS8J3OPbiOX6",
-      "product_id": "prod_VMAzmlaKItDymC"
+      "product_id": "prod_VMAzmlaKItDymC",
+      "name": "Sprinkle Chain | 3×5mm Pear CZ Ear Connector Chain | 2mm Dainty Gold Earring Chain | Helix Conch Lobe Ear Stack Jewelry"
     },
     "4571494427": {
       "url": "https://buy.stripe.com/4gMcMYarn4jpaJT08QaZi18",
@@ -291,7 +322,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSdA680JvUCS8JcaEnySRQ",
       "price_id": "price_1ULSd9680JvUCS8JKoW8MQZm",
-      "product_id": "prod_VMAzh35QTzmWOX"
+      "product_id": "prod_VMAzh35QTzmWOX",
+      "name": "Drizzle Chain Ear Connector | 5A CZ Raindrop Earring Chain | Dainty Gold Ear Chain | Ear Stack Jewelry"
     },
     "4568279074": {
       "url": "https://buy.stripe.com/aFa7sEgPL7vBbNX1cUaZi19",
@@ -300,7 +332,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSdA680JvUCS8JwBqcYUpq",
       "price_id": "price_1ULSdA680JvUCS8JTOWC2Ojw",
-      "product_id": "prod_VMAzacRhmkU13D"
+      "product_id": "prod_VMAzacRhmkU13D",
+      "name": "Double Dewdrop, 30mm earring connector with 2 CZ stones, minimal styled chain 2mm"
     },
     "4566919003": {
       "url": "https://buy.stripe.com/fZu6oAdDz17dcS11cUaZi1a",
@@ -309,7 +342,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSdB680JvUCS8J872i5Ghh",
       "price_id": "price_1ULSdB680JvUCS8JXyBeW7Nu",
-      "product_id": "prod_VMAzf88msgh2YY"
+      "product_id": "prod_VMAzf88msgh2YY",
+      "name": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm"
     },
     "4566277207": {
       "url": "https://buy.stripe.com/cNi9AM5734jp05ff3KaZi1b",
@@ -318,7 +352,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULSdC680JvUCS8JLYKtgrWz",
       "price_id": "price_1ULSdB680JvUCS8Jr6NZj6ZV",
-      "product_id": "prod_VMAzl7qw33oprg"
+      "product_id": "prod_VMAzl7qw33oprg",
+      "name": "Pear CZ Earring Connector Chain | 33mm Dainty Gold Ear Chain | Double Gemstone Dangle Chain | 2mm Jewelry Chain | Ear Stack Accessory"
     },
     "4586013046": {
       "url": "https://buy.stripe.com/9B67sE5738zF19j3l2aZi1c",
@@ -327,7 +362,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1ULtlW680JvUCS8Jnaq4duxX",
       "price_id": "price_1ULtlW680JvUCS8J88gftppE",
-      "product_id": "prod_VMd12OO6X855zi"
+      "product_id": "prod_VMd12OO6X855zi",
+      "name": "Badd Mommi Black CZ Ear Chain | 1.5mm Gold Earring Connector | 4mm Black Stone Cartilage Chain | Edgy Curated Ear Jewelry"
     },
     "4596333038": {
       "url": "https://buy.stripe.com/3cI00c0QNg275pzcVCaZi1d",
@@ -336,7 +372,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1US3Bj680JvUCS8JRz9IZJrA",
       "price_id": "price_1US3Bi680JvUCS8Jo9jTeIlk",
-      "product_id": "prod_VSzAYsEYH2jqA6"
+      "product_id": "prod_VSzAYsEYH2jqA6",
+      "name": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry"
     },
     "4596261114": {
       "url": "https://buy.stripe.com/dRm5kwczv6rx6tDdZGaZi1e",
@@ -345,7 +382,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1US3Bj680JvUCS8JJitnXbM1",
       "price_id": "price_1US3Bj680JvUCS8JTDyuszFE",
-      "product_id": "prod_VSzAKgQb1j4raf"
+      "product_id": "prod_VSzAKgQb1j4raf",
+      "name": "Sterling Silver Drizzle Ear Chain | 30mm Earring Connector | 3x5mm CZ Drop Dangles | Dainty Cartilage Chain Jewelry"
     },
     "4591313547": {
       "url": "https://buy.stripe.com/00wdR25737vBaJTf3KaZi1f",
@@ -354,7 +392,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1US3Bk680JvUCS8J8pBtRgAn",
       "price_id": "price_1US3Bk680JvUCS8JJtnUduGD",
-      "product_id": "prod_VSzAhylIXj4edf"
+      "product_id": "prod_VSzAhylIXj4edf",
+      "name": "Everyday 18g G23 ASTM F136 Titanium Gold Clicker Hoop | 18K PVD Implant Grade Cartilage Ring | Helix Conch Lobe 5mm–12mm"
     },
     "4589894700": {
       "url": "https://buy.stripe.com/cNi4gsfLH4jp8BLbRyaZi1g",
@@ -363,7 +402,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1US3Bl680JvUCS8J5wlVzBzV",
       "price_id": "price_1US3Bk680JvUCS8JgS6iKrD5",
-      "product_id": "prod_VSzAOIuC08EoZ5"
+      "product_id": "prod_VSzAOIuC08EoZ5",
+      "name": "Sweet Little Thing Pink CZ Ear Chain | 18K Gold Plated Earring Connector | Dainty Cartilage Jewelry"
     },
     "4601250009": {
       "url": "https://buy.stripe.com/aFabIUgPL17d05fg7OaZi1h",
@@ -372,7 +412,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTTeM680JvUCS8Jk3RsrMIX",
       "price_id": "price_1UTTeL680JvUCS8JWwDeidLs",
-      "product_id": "prod_VUSZKIMh9jZTP0"
+      "product_id": "prod_VUSZKIMh9jZTP0",
+      "name": "Periodt Green CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory"
     },
     "4601274406": {
       "url": "https://buy.stripe.com/4gM00c573aHN05faNuaZi1i",
@@ -381,7 +422,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTTeM680JvUCS8JexGDwCaW",
       "price_id": "price_1UTTeM680JvUCS8J9ioA4uap",
-      "product_id": "prod_VUSZDQGFc9mmnG"
+      "product_id": "prod_VUSZDQGFc9mmnG",
+      "name": "The Blues CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory"
     },
     "4601246993": {
       "url": "https://buy.stripe.com/14A7sE7fbdTZ4lvbRyaZi1j",
@@ -390,7 +432,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTTeN680JvUCS8JKa1SWcvm",
       "price_id": "price_1UTTeN680JvUCS8JIslYgFYd",
-      "product_id": "prod_VUSZ2k2j1fIC3B"
+      "product_id": "prod_VUSZ2k2j1fIC3B",
+      "name": "Ruby CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory"
     },
     "4599803201": {
       "url": "https://buy.stripe.com/fZu28k1URaHN19j9JqaZi1l",
@@ -399,7 +442,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTTeO680JvUCS8JyqDQNtV8",
       "price_id": "price_1UTTeO680JvUCS8JT8MzTyfh",
-      "product_id": "prod_VUSZLyFmVh7QUB"
+      "product_id": "prod_VUSZLyFmVh7QUB",
+      "name": "Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain | ASTM F136 Threadless Connector | 40mm Emerald Green CZ Dangle"
     },
     "4599690242": {
       "url": "https://buy.stripe.com/5kQaEQ2YV17d3hr8FmaZi1m",
@@ -408,7 +452,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTTeP680JvUCS8JHs142cci",
       "price_id": "price_1UTTeP680JvUCS8Jq0pH2C8V",
-      "product_id": "prod_VUSZsR85CVcUsL"
+      "product_id": "prod_VUSZsR85CVcUsL",
+      "name": "Soft Spark G23 Titanium Labret to Sterling Silver Ear Chain | ASTM F136 Threadless Connector | 40mm Pink Lavender Clear CZ Dangle"
     },
     "4601257943": {
       "url": "https://buy.stripe.com/9B6bIUeHDeY37xHbRyaZi1o",
@@ -417,7 +462,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTU9V680JvUCS8JIGUUOgH0",
       "price_id": "price_1UTU9V680JvUCS8JOqiE365I",
-      "product_id": "prod_VUT54n7BlPicsg"
+      "product_id": "prod_VUT54n7BlPicsg",
+      "name": "Sweet Champagne CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory"
     },
     "4601282092": {
       "url": "https://buy.stripe.com/3cIbIUbvr6rx4lv3l2aZi1p",
@@ -426,7 +472,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTU9W680JvUCS8JV3lqqTsL",
       "price_id": "price_1UTU9W680JvUCS8JJ3YkSquL",
-      "product_id": "prod_VUT59V7qPulFim"
+      "product_id": "prod_VUT59V7qPulFim",
+      "name": "Lavendar CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory"
     },
     "4601255929": {
       "url": "https://buy.stripe.com/8x200c9njdTZdW5g7OaZi1q",
@@ -435,7 +482,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTU9X680JvUCS8J6N3TTrA3",
       "price_id": "price_1UTU9W680JvUCS8J7EzfQDkC",
-      "product_id": "prod_VUT51CArUnoJgO"
+      "product_id": "prod_VUT51CArUnoJgO",
+      "name": "Baby Pink CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory"
     },
     "4601276860": {
       "url": "https://buy.stripe.com/28EaEQ9nj9DJ2dnf3KaZi1r",
@@ -444,7 +492,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTU9Y680JvUCS8JR3dyiEv6",
       "price_id": "price_1UTU9X680JvUCS8JkPDcfhUp",
-      "product_id": "prod_VUT5vvAF88Vj4m"
+      "product_id": "prod_VUT5vvAF88Vj4m",
+      "name": "Clementine CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory"
     },
     "4601338080": {
       "url": "https://buy.stripe.com/9B65kw9njdTZ8BLbRyaZi1t",
@@ -453,7 +502,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTlqG680JvUCS8JJjU9tIAD",
       "price_id": "price_1UTlqG680JvUCS8JynUGn6EU",
-      "product_id": "prod_VUlNje8KBl7QaQ"
+      "product_id": "prod_VUlNje8KBl7QaQ",
+      "name": "Hot Mess Pink  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Hot Pink Marquise Dangle | Dainty Cartilage Chain Jewelry"
     },
     "4601327168": {
       "url": "https://buy.stripe.com/fZu00cgPLeY3cS12gYaZi1u",
@@ -462,7 +512,8 @@ window.MICKNACK_STRIPE_LINKS = {
       "config": 2,
       "link_id": "plink_1UTlqH680JvUCS8JEbKPxljR",
       "price_id": "price_1UTlqH680JvUCS8JyvzEWTzw",
-      "product_id": "prod_VUlNOkgMxNtQpk"
+      "product_id": "prod_VUlNOkgMxNtQpk",
+      "name": "Brat CZ &  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Baby Pink, Hot Pink 4mm CZ | Dainty Cartilage Chain Jewelry"
     }
   }
 };

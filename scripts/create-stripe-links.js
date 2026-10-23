@@ -257,6 +257,7 @@ async function createLinkFor(item, existing) {
 
   return {
     url: link.url,
+    name: item.name.slice(0, 250),
     price: item.price,
     shipping_cents: SHIPPING_AMOUNT_CENTS,
     config: CONFIG_VERSION,
@@ -274,11 +275,22 @@ async function main() {
 
   let created = 0;
   let replaced = 0;
+  let renamed = 0;
   let unchanged = 0;
 
   for (const item of items) {
     const existing = links[item.key];
     if (existing && existing.price === item.price && existing.config === CONFIG_VERSION) {
+      // Renaming a piece on Etsy does not change its price, so its link and
+      // price still stand. The product's name is what a shopper reads on the
+      // Stripe checkout page, though, so that much has to follow the title.
+      const name = item.name.slice(0, 250);
+      if (existing.name !== name && existing.product_id) {
+        await stripe(`/products/${existing.product_id}`, { name });
+        existing.name = name;
+        renamed++;
+        console.log(`  renamed: ${name.slice(0, 55)}`);
+      }
       unchanged++;
       continue;
     }
@@ -313,7 +325,7 @@ async function main() {
 
   const out = writeLinks(links);
   console.log(
-    `\ncreated ${created}, updated ${replaced}, unchanged ${unchanged}, removed ${removed}`
+    `\ncreated ${created}, updated ${replaced}, renamed ${renamed}, unchanged ${unchanged}, removed ${removed}`
   );
   console.log(`Wrote ${Object.keys(links).length} link(s) to ${out}`);
 }

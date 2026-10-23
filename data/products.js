@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-23T17:01:12.633Z",
+  "synced_at": "2026-10-23T17:04:49.835Z",
   "listings": [
     {
       "listing_id": "4596333038",
@@ -1009,7 +1009,7 @@ window.MICKNACK_PRODUCTS = {
     },
     {
       "listing_id": "4574696395",
-      "title": "Midnight Amethyst Ear Chain Connector | Purple 5A Synthetic Corundum Sapphire Dangle Chain | Dainty Gold Earring Chain | Ear Stack Jewelry",
+      "title": "Midnight Amethyst Ear Chain Connector | Purple Synthetic Corundum Sapphire Dangle Chain | Dainty Gold Earring Chain | Ear Stack Jewelry",
       "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4574696395/grape-drizzle-chain-ear-connector-5a-cz",
