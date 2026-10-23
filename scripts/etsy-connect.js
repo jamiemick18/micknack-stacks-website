@@ -67,7 +67,7 @@ function start(clientId) {
 
   console.log("\n1. Open this link while signed in to Etsy:\n");
   console.log(url);
-  console.log("\n2. Check it asks only to read your listings, then click Allow.");
+  console.log("\n2. Check it asks only to READ your listings and orders, then click Allow.");
   console.log("3. Copy the code from the page you land on, then run:\n");
   console.log("   node scripts/etsy-connect.js <code>\n");
 }

@@ -220,6 +220,7 @@ async function main() {
   // Only the shop's own sales carry a collection duty, so those are what the
   // flags watch. Etsy's are reported beside them for context.
   const own = report.site.by_place || {};
+  const etsyHome = (report.etsy.by_place || {})[HOME_STATE];
   for (const [place, row] of Object.entries(own)) {
     if (place === HOME_STATE) {
       report.flags.push({
@@ -262,7 +263,18 @@ async function main() {
 
   console.log("\nSales tax");
   if (!report.flags.length) {
-    console.log("  Nothing to do. No Colorado orders, and no state close to a nexus threshold.");
+    console.log("  Nothing to do: nothing has shipped to Colorado through the site, and no");
+    console.log("  state is close to a nexus threshold.");
+    // A Colorado order through Etsy is not nothing — it is proof that Colorado
+    // buyers find the shop — but Etsy collected the tax on it, so it carries no
+    // duty. Saying "no Colorado orders" would be untrue and would hide the one
+    // thing most likely to change the answer.
+    if (etsyHome) {
+      console.log(
+        `  (${etsyHome.orders} Colorado order(s) came through Etsy, which collected the tax on them.` +
+          " The\n  same buyer ordering direct next time is what starts the clock.)"
+      );
+    }
   } else {
     report.flags.forEach((f) => console.log(`  [${f.level.toUpperCase()}] ${f.why}`));
   }
