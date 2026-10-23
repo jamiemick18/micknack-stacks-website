@@ -22,7 +22,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const STATE_PATH = join(ROOT, ".etsy-connect.json"); // gitignored: holds the verifier
 const REDIRECT_URI = "https://micknackstacks.com/oauth.html";
-const SCOPE = "listings_r";
+// listings_r reads the shop's own listings, including the view counts and
+// option drop-downs that the public API will not give out. transactions_r
+// reads the orders, which is how the shop knows which states it has shipped
+// to — the question sales tax turns on. Both are read-only: nothing here can
+// change a listing, refund an order or message a buyer.
+const SCOPE = "listings_r transactions_r";
 
 function env() {
   const path = join(ROOT, ".env");
