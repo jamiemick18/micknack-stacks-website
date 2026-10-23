@@ -2,15 +2,49 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-23T13:13:45.628Z",
+  "synced_at": "2026-10-23T17:00:34.325Z",
   "listings": [
     {
+      "listing_id": "4596333038",
+      "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4596333038/golden-hour-ear-chain-champagne-clear-cz",
+      "description": "Golden Hour ✨🥂\n\nWarm, glowy, and catching the light like the last few minutes before sunset.\nGolden Hour features a delicate gold chain with five individually dangling CZ stones — three round champagne-colored stones alternating with two clear kite-shaped stones. The mix of warm champagne sparkle and crisp clear facets gives the piece dimension without making it feel overly busy.\n\nwww.micknackstacks.com⁠\n\nWhy you’ll love it:\nFive individually dangling CZ stones\nThree round champagne CZ stones\nTwo clear kite-shaped CZ stones\nAlternating stone shapes for extra texture\nWarm, neutral sparkle that pairs easily with gold jewelry and delicate movement as the stones catch the light\nAdds depth without overpowering the rest of your stack\n\nGolden Hour is a chain connector only, designed to attach between compatible hoops, earrings, or flatback jewelry you already own.\n\nDrape it between two piercings for a soft layered look, pair it with simple gold hoops, or work it into a fuller curated stack.\n\nThe champagne stones give off a warm, honey-toned glow while the clear kite stones break up the color with brighter flashes of light.\n\nMaterials & Details:\nGold-tone chain, 40mm long\nFive dangling CZ stones\n3 round champagne CZ stones\n2 clear kite-shaped CZ stones\nConnector loops at both ends\nChain connector only\nEarrings and labret posts not included\nSold individually\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Curated ears • Neutral ear stacks • Dainty chain styling\nWarm light. Tiny sparkle. Golden Hour, whenever you want it. ✨🥂\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+        "https://i.etsystatic.com/67609393/r/il/65ce53/8732822721/il_fullxfull.8732822721_qf7t.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/c7af/ae7878a4-a901-4713-a0e2-336e6f03415c/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ],
+      "quantity": 2,
+      "created": "2026-10-15T22:11:01.000Z",
+      "views": 33,
+      "num_favorers": 4,
+      "etsy_active": true,
+      "added_at": "2026-10-16T17:12:22.208Z"
+    },
+    {
       "listing_id": "4601338080",
-      "title": "Hot Mess Pink CZ Ear Chain | 18K Gold PVD Earring Connector | Hot Pink Marquise Dangle | Dainty Cartilage Chain Jewelry",
-      "price": "25.00",
+      "title": "Hot Mess Pink  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Hot Pink Marquise Dangle | Dainty Cartilage Chain Jewelry",
+      "price": "30.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4601338080/hot-mess-pink-cz-ear-chain-18k-gold-pvd",
-      "description": "Hot Mess 💗🔥\n\nPretty, pink, and making questionable.\n\nHot Mess is a bold little ear-chain connector featuring five dangling hot-pink marquise CZ stones on a delicate gold chain. The pointed stones catch the light from every angle, giving the piece plenty of movement, color, and just enough drama.\nShe’s bright. She’s extra. She absolutely did not come here to be subtle.\n\nWhy you’ll love it\nFive hot-pink marquise-cut CZ stones\n\nIndividually dangling stones for extra movement\nDelicate gold chain\nVivid fuchsia-pink color\nLightweight, draped styling\nEasy way to add color to an existing ear stack\n\nStyle it your way\nHot Mess is a chain connector only, designed to attach between compatible hoops, flatbacks, or earrings you already own.\n\nDrape it between two piercings for a bold pop of pink, pair it with simple gold hoops, or add it to a stacked ear when “one more thing” is clearly the correct answer.\n\nEarrings and labret posts are not included.\n\nMaterials & Details\nChain width: 1.5 mm\nChain style: Flat cable chain\nFinish: 18K gold PVD\nStones: Five hot-pink marquise CZ stones\nConnector loops at both ends\n\nChain connector only\n\nSold individually\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Pink ear stacks • Curated ears • Alt-girly jewelry\nCute? Definitely. Together? Debatable. 💗🔥\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
+      "description": "Hot Mess 💗🔥\n\nPretty, pink, and making questionable.\n\nHot Mess is a bold little ear-chain connector featuring five dangling hot-pink marquise  Corundum stones on a delicate gold chain. The pointed stones catch the light from every angle, giving the piece plenty of movement, color, and just enough drama.\nShe’s bright. She’s extra. She absolutely did not come here to be subtle.\n\nWhy you’ll love it\nFive hot-pink marquise-cut high quality Corundum stone \n\nIndividually dangling stones for extra movement\nDelicate gold chain\nVivid fuchsia-pink color\nLightweight, draped styling\nEasy way to add color to an existing ear stack\n\nStyle it your way\nHot Mess is a chain connector only, designed to attach between compatible hoops, flatbacks, or earrings you already own.\n\nDrape it between two piercings for a bold pop of pink, pair it with simple gold hoops, or add it to a stacked ear when “one more thing” is clearly the correct answer.\n\nEarrings and labret posts are not included.\n\nMaterials & Details\nChain width: 1.5 mm\nChain style: Flat cable chain\nFinish: 18K gold PVD\nStones: Five hot-pink marquise Corundum Stone \nConnector loops at both ends\n\nChain connector only\n\nSold individually\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Pink ear stacks • Curated ears • Alt-girly jewelry\nCute? Definitely. Together? Debatable. 💗🔥\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
       "images": [
         "https://i.etsystatic.com/67609393/r/il/d0159d/8773871911/il_fullxfull.8773871911_5ixs.jpg",
         "https://i.etsystatic.com/67609393/r/il/f016e9/8726054634/il_fullxfull.8726054634_842s.jpg"
@@ -40,11 +74,11 @@ window.MICKNACK_PRODUCTS = {
     },
     {
       "listing_id": "4601327168",
-      "title": "Brat CZ Ear Chain | 18K Gold PVD Earring Connector | Baby Pink, Hot Pink 4mm CZ | Dainty Cartilage Chain Jewelry",
-      "price": "19.99",
+      "title": "Brat CZ &  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Baby Pink, Hot Pink 4mm CZ | Dainty Cartilage Chain Jewelry",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4601327168/brat-cz-ear-chain-18k-gold-pvd-earring",
-      "description": "Brat 💗✨\n\nBrat is a dainty gold ear-chain connector dripping with five 4 mm pink CZ stones in a mix of soft baby pink and bold hot pink.\nThe alternating shades give it that perfect sweet-meets-spicy look — feminine enough to be pretty, bright enough to get noticed, and just bratty enough to earn the name.\n\nEach stone hangs individually from a delicate 1.5 mm flat cable chain, adding movement and flashes of pink every time you turn your head.\n\nWhy you’ll love it\nFive 4 mm round CZ stones\nMix of baby pink + hot pink\nDelicate 1.5 mm flat cable chain\nIndividual dangling stones for extra movement\nBright two-tone pink color\nLightweight, playful look\nEasy to add to an existing curated ear stack\n\nStyle it your way\nBrat is a chain connector only, designed to attach between compatible hoops, flatbacks, or earrings you already own.\nDrape it between two piercings for an easy pop of pink, pair it with simple gold hoops, or throw it into an already-stacked ear when you need just a little more chaos.\n\nMaterials & Details\nChain width: 1.5 mm\nChain style: Flat cable chain\nFinish: 18K gold PVD plated\nStones: Five 4 mm round CZ\nColors: Baby pink + hot pink\nConnector loops at both ends\nChain connector only\nSold individually\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Pink ear stacks • Curated ears • Dainty chain styling\nCute enough to fool you. Bratty enough to warn you. 💗\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
+      "description": "Brat 💗✨\n\nBrat is a dainty gold ear-chain connector dripping with three 4 mm soft pink CZ stones and 2 high quality  Corundum Stones in a mix.\n\nThe alternating shades give it that perfect sweet-meets-spicy look...  feminine enough to be pretty, bright enough to get noticed, and just bratty enough to earn the name.\n\nEach stone hangs individually from a delicate 1.5 mm flat cable chain, adding movement and flashes of pink every time you turn your head.\n\nWhy you’ll love it\nThree 4 mm round soft pink CZ stones\nTwo 4mm high quality  Corundum Stones\nMix of baby pink + hot pink\nDelicate 1.5 mm flat cable chain\nIndividual dangling stones for extra movement\nBright two-tone pink color\nLightweight, playful look\nEasy to add to an existing curated ear stack\n\nStyle it your way\nBrat is a chain connector only, designed to attach between compatible hoops, flatbacks, or earrings you already own.\nDrape it between two piercings for an easy pop of pink, pair it with simple gold hoops, or throw it into an already-stacked ear when you need just a little more chaos.\n\nMaterials & Details\nChain width: 1.5 mm\nChain style: Flat cable chain\nFinish: 18K gold PVD plated\nColors: Baby pink + hot pink\nConnector loops at both ends\nChain connector only\nSold individually\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Pink ear stacks • Curated ears • Dainty chain styling\nCute enough to fool you. Bratty enough to warn you. 💗\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
       "images": [
         "https://i.etsystatic.com/67609393/r/il/dc74da/8773785101/il_fullxfull.8773785101_tq4u.jpg",
         "https://i.etsystatic.com/67609393/r/il/94be9e/8725958720/il_fullxfull.8725958720_kjz9.jpg",
@@ -440,40 +474,6 @@ window.MICKNACK_PRODUCTS = {
       "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
-      "listing_id": "4596333038",
-      "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4596333038/golden-hour-ear-chain-champagne-clear-cz",
-      "description": "Golden Hour ✨🥂\n\nWarm, glowy, and catching the light like the last few minutes before sunset.\nGolden Hour features a delicate gold chain with five individually dangling CZ stones — three round champagne-colored stones alternating with two clear kite-shaped stones. The mix of warm champagne sparkle and crisp clear facets gives the piece dimension without making it feel overly busy.\n\nwww.micknackstacks.com⁠\n\nWhy you’ll love it:\nFive individually dangling CZ stones\nThree round champagne CZ stones\nTwo clear kite-shaped CZ stones\nAlternating stone shapes for extra texture\nWarm, neutral sparkle that pairs easily with gold jewelry and delicate movement as the stones catch the light\nAdds depth without overpowering the rest of your stack\n\nGolden Hour is a chain connector only, designed to attach between compatible hoops, earrings, or flatback jewelry you already own.\n\nDrape it between two piercings for a soft layered look, pair it with simple gold hoops, or work it into a fuller curated stack.\n\nThe champagne stones give off a warm, honey-toned glow while the clear kite stones break up the color with brighter flashes of light.\n\nMaterials & Details:\nGold-tone chain, 40mm long\nFive dangling CZ stones\n3 round champagne CZ stones\n2 clear kite-shaped CZ stones\nConnector loops at both ends\nChain connector only\nEarrings and labret posts not included\nSold individually\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Curated ears • Neutral ear stacks • Dainty chain styling\nWarm light. Tiny sparkle. Golden Hour, whenever you want it. ✨🥂\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
-        "https://i.etsystatic.com/67609393/r/il/65ce53/8732822721/il_fullxfull.8732822721_qf7t.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/c7af/ae7878a4-a901-4713-a0e2-336e6f03415c/vid_v1.mp4",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "gold ear chain",
-        "double drape chain",
-        "piercing chain",
-        "cartilage chain",
-        "non tarnish jewelry",
-        "multiple piercings"
-      ],
-      "quantity": 3,
-      "created": "2026-10-15T22:11:01.000Z",
-      "views": 33,
-      "num_favorers": 4,
-      "etsy_active": true,
-      "added_at": "2026-10-16T17:12:22.208Z"
-    },
-    {
       "listing_id": "4596261114",
       "title": "Sterling Silver Drizzle Ear Chain | 30mm Earring Connector | 3x5mm CZ Drop Dangles | Dainty Cartilage Chain Jewelry",
       "price": "19.99",
@@ -612,10 +612,10 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4574722466",
       "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
-      "price": "19.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4574722466/sugarplum-sparkle-ear-chain-connector",
-      "description": "Pink Poppies 🌸\n\nA delicate 18K gold PVD-plated ear chain finished with five sparkling 5A cubic zirconia drops. The stones alternate between bright pink and soft blush, creating a dainty trail of color inspired by scattered poppy petals.\n\nDrape it between two flatback earrings, hoops, or cartilage piercings to add movement, color, and a little extra sparkle to your curated ear stack.\n\nDETAILS:\n• 18K gold PVD-plated finish\n• Approximately 42 mm long\n• Dainty 1.5 mm oval cable chain\n• Five 3 mm single-drilled Synthetic Corundum Sapphire stone\n• Alternating bright and light pink tones\n• 3 mm connecting loops on each end\n• Prong-free gemstone design\n• Sold as one connector chain\n\n\nWith love from Colorado ♡\nMicknack Stacks",
+      "description": "Pink Poppies 🌸\n\nA delicate 18K gold PVD-plated ear chain finished with five sparkling 5A  Corundum Stone drops. The stones alternate between bright pink and soft blush, creating a dainty trail of color inspired by scattered poppy petals.\n\nDrape it between two flatback earrings, hoops, or cartilage piercings to add movement, color, and a little extra sparkle to your curated ear stack.\n\nDETAILS:\n• 18K gold PVD-plated finish\n• Approximately 42 mm long\n• Dainty 1.5 mm oval cable chain\n• Five 3 mm single-drilled Synthetic Corundum Sapphire stone\n• Alternating bright and light pink tones\n• 3 mm connecting loops on each end\n• Prong-free gemstone design\n• Sold as one connector chain\n\n\nWith love from Colorado ♡\nMicknack Stacks",
       "images": [
         "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
         "https://i.etsystatic.com/67609393/r/il/4d1be5/8567100197/il_fullxfull.8567100197_hn0o.jpg"
@@ -1010,13 +1010,13 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4574696395",
       "title": "Midnight Amethyst Ear Chain Connector | Purple 5A Synthetic Corundum Sapphire Dangle Chain | Dainty Gold Earring Chain | Ear Stack Jewelry",
-      "price": "19.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4574696395/grape-drizzle-chain-ear-connector-5a-cz",
-      "description": "Midnight Amethyst 💜\n\nA dainty gold connector chain finished with five sparkling 5A cubic zirconia drops in alternating shades of deep and medium amethyst purple. The mix of moody jewel tones gives this piece a little midnight magic while still feeling delicate enough for an everyday ear stack.\n\nDrape it between two flatback earrings, hoops, or cartilage piercings to add movement, color, and a little extra sparkle to your curation.\n\nDETAILS:\n• Approximately 42 mm long\n• Dainty 1.5 mm gold chain\n• Five 3 mm single-drilled Synthetic Corundum Sapphire stones\n• Alternating deep and light amethyst-purple tones\n• 3 mm connecting loops on each end\n\nMade to connect between earrings, hoops, or piercing jewelry.\n\nBeautiful for conch, helix, cartilage, and other curated ear-stack combinations.\n\nThe stones move freely with the chain, creating a soft little shimmer with every turn.\n\nPlease note: This listing is for one chain.",
+      "description": "Midnight Amethyst 💜\n\nA dainty gold connector chain finished with five sparkling 5A  Corundum Stone drops in alternating shades of deep and medium amethyst purple. The mix of moody jewel tones gives this piece a little midnight magic while still feeling delicate enough for an everyday ear stack.\n\nDrape it between two flatback earrings, hoops, or cartilage piercings to add movement, color, and a little extra sparkle to your curation.\n\nDETAILS:\n• Approximately 42 mm long\n• Dainty 1.5 mm gold chain\n• Five 3 mm single-drilled Synthetic Corundum Sapphire stones\n• Alternating deep and light amethyst-purple tones\n• 3 mm connecting loops on each end\n\nMade to connect between earrings, hoops, or piercing jewelry.\n\nBeautiful for conch, helix, cartilage, and other curated ear-stack combinations.\n\nThe stones move freely with the chain, creating a soft little shimmer with every turn.\n\nPlease note: This listing is for one chain.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/fb151c/8519182858/il_fullxfull.8519182858_r6j8.jpg",
-        "https://i.etsystatic.com/67609393/r/il/44be7f/8567054973/il_fullxfull.8567054973_ftoj.jpg"
+        "https://i.etsystatic.com/67609393/r/il/44be7f/8567054973/il_fullxfull.8567054973_ftoj.jpg",
+        "https://i.etsystatic.com/67609393/r/il/fb151c/8519182858/il_fullxfull.8519182858_r6j8.jpg"
       ],
       "video": "",
       "tags": [
