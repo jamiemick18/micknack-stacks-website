@@ -2,8 +2,42 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-24T00:25:30.147Z",
+  "synced_at": "2026-10-24T05:33:30.340Z",
   "listings": [
+    {
+      "listing_id": "4574722466",
+      "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
+      "price": "25.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4574722466/sugarplum-sparkle-ear-chain-connector",
+      "description": "Pink Poppies 🌸\n\nA delicate 18K gold PVD-plated ear chain finished with five sparkling 5A  Corundum Stone drops. The stones alternate between bright pink and soft blush, creating a dainty trail of color inspired by scattered poppy petals.\n\nDrape it between two flatback earrings, hoops, or cartilage piercings to add movement, color, and a little extra sparkle to your curated ear stack.\n\nDETAILS:\n• 18K gold PVD-plated finish\n• Approximately 42 mm long\n• Dainty 1.5 mm oval cable chain\n• Five 3 mm single-drilled Synthetic Corundum Sapphire stone\n• Alternating bright and light pink tones\n• 3 mm connecting loops on each end\n• Prong-free gemstone design\n• Sold as one connector chain\n\n\nWith love from Colorado ♡\nMicknack Stacks",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
+        "https://i.etsystatic.com/67609393/r/il/4d1be5/8567100197/il_fullxfull.8567100197_hn0o.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ],
+      "quantity": 2,
+      "created": "2026-09-13T21:39:50.000Z",
+      "views": 149,
+      "num_favorers": 13,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
     {
       "listing_id": "4596333038",
       "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
@@ -406,7 +440,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 4,
       "created": "2026-10-20T23:20:39.000Z",
       "views": 10,
-      "num_favorers": 1,
+      "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-10-21T14:19:56.913Z"
     },
@@ -608,40 +642,6 @@ window.MICKNACK_PRODUCTS = {
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-10-06T18:49:33.238Z"
-    },
-    {
-      "listing_id": "4574722466",
-      "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
-      "price": "25.00",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4574722466/sugarplum-sparkle-ear-chain-connector",
-      "description": "Pink Poppies 🌸\n\nA delicate 18K gold PVD-plated ear chain finished with five sparkling 5A  Corundum Stone drops. The stones alternate between bright pink and soft blush, creating a dainty trail of color inspired by scattered poppy petals.\n\nDrape it between two flatback earrings, hoops, or cartilage piercings to add movement, color, and a little extra sparkle to your curated ear stack.\n\nDETAILS:\n• 18K gold PVD-plated finish\n• Approximately 42 mm long\n• Dainty 1.5 mm oval cable chain\n• Five 3 mm single-drilled Synthetic Corundum Sapphire stone\n• Alternating bright and light pink tones\n• 3 mm connecting loops on each end\n• Prong-free gemstone design\n• Sold as one connector chain\n\n\nWith love from Colorado ♡\nMicknack Stacks",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
-        "https://i.etsystatic.com/67609393/r/il/4d1be5/8567100197/il_fullxfull.8567100197_hn0o.jpg"
-      ],
-      "video": "",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "gold ear chain",
-        "double drape chain",
-        "piercing chain",
-        "cartilage chain",
-        "non tarnish jewelry",
-        "multiple piercings"
-      ],
-      "quantity": 3,
-      "created": "2026-09-13T21:39:50.000Z",
-      "views": 149,
-      "num_favorers": 12,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4586013046",
