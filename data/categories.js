@@ -6,7 +6,7 @@
 // put corrections in data/category-overrides.json, which wins over the
 // titles and survives the next sync.
 //
-// Last worked out: 2026-10-24T20:39:05.088Z
+// Last worked out: 2026-10-24T23:00:17.450Z
 
 window.MICKNACK_CATEGORIES = [
   {
