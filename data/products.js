@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-24T17:58:39.602Z",
+  "synced_at": "2026-10-24T20:39:05.088Z",
   "listings": [
     {
       "listing_id": "4574722466",
@@ -68,7 +68,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 2,
       "created": "2026-10-15T22:11:01.000Z",
       "views": 43,
-      "num_favorers": 4,
+      "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
     },
@@ -537,7 +537,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-10-15T20:06:48.000Z",
       "views": 2,
-      "num_favorers": 0,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
     },
@@ -869,7 +869,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-17T17:55:02.000Z",
       "views": 30,
-      "num_favorers": 2,
+      "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -904,43 +904,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-16T18:47:42.000Z",
       "views": 37,
-      "num_favorers": 5,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4576033359",
-      "title": "Lilac Drop Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4576033359/lilac-drop-ear-chain-30mm-gold-connector",
-      "description": "A little drape, a little sparkle, and a soft pop of lilac.\n\nLilac Drop features a delicate 2 mm wide / 18K Gold PVD Plated gold lip chain with a 30 mm center chain length There are 4 mm amethyst purple colored CZ stones arranged for a cascading look. Three stones dangle from the upper section, while a single stone drops from the lower end for an asymmetrical finish that gives the piece extra movement.\n\nIt’s feminine, lightweight-looking, and just different enough to make your ear stack feel styled without looking too busy.\n\nWhy you’ll love it:\n2 mm dainty gold chain\n30 mm center chain length\nFour 4 mm amethyst-colored CZ stones\nThree CZ dangles at the top\nOne CZ dangle at the bottom\nSoft draped movement\nEasy to style across multiple piercings\nAdds color without overwhelming your stack\nStyle it your way\n\nLilac Drop is designed to drape between compatible earrings, hoops, or flatback posts, giving you a soft layered look with movement and sparkle.\n\nThe lilac stones add just enough color to stand out while still pairing easily with gold, clear CZ, and other minimal pieces.\n\nMaterials\n2 mm gold chain\n30 mm center chain\nFour 4 mm amethyst-colored CZ stones\nGold-tone connecting loops\nMulti-point draped design\n\nPerfect for:\nHelix-to-lobe styling • Curated ear stacks • Dainty chain looks • Purple jewelry lovers\n\nSoft lilac sparkle with a little movement in every angle. 💜",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/3f3f24/8577000729/il_fullxfull.8577000729_f2zn.jpg",
-        "https://i.etsystatic.com/67609393/r/il/691bb5/8529138852/il_fullxfull.8529138852_d91y.jpg",
-        "https://i.etsystatic.com/67609393/r/il/1ffb9c/8529138842/il_fullxfull.8529138842_d4k6.jpg",
-        "https://i.etsystatic.com/67609393/r/il/abf4d8/8529138840/il_fullxfull.8529138840_7k0o.jpg"
-      ],
-      "video": "",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "gold ear chain",
-        "double drape chain",
-        "piercing chain",
-        "cartilage chain",
-        "non tarnish jewelry",
-        "multiple piercings"
-      ],
-      "quantity": 1,
-      "created": "2026-09-15T20:48:41.000Z",
-      "views": 48,
-      "num_favorers": 4,
+      "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1605,43 +1569,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 5,
       "created": "2026-09-08T22:16:35.000Z",
       "views": 47,
-      "num_favorers": 4,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4571494427",
-      "title": "Drizzle Chain Ear Connector | 5A CZ Raindrop Earring Chain | Dainty Gold Ear Chain | Ear Stack Jewelry",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4571494427/drizzle-chain-ear-connector-5a-cz",
-      "description": "Drizzle Chain \nInspired by that fresh rain feeling after a light shower moves through the pine trees, the Drizzle Chain is all about soft sparkle, delicate movement, and a little bit of mountain air.\n\nFive 3 × 5 mm raindrop-shaped 5A CZ stones shimmer along a dainty 2 mm chain, catching the light like tiny drops of rain clinging to pine needles after a storm.\nFinished with petite 3 mm connecting loops on each end, Drizzle is intentionally lightweight and delicate, designed to add movement to your ear stack without looking bulky.\n\nDetails\nFive 3 × 5 mm raindrop-shaped 5A CZ stones\nDainty 2 mm chain, 30mm in length\nPetite 3 mm connecting loops on each end\nFive individual crystal drops\nLightweight, delicate design\n\nMade to connect between compatible earrings, hoops, or piercing jewelry\nBeautiful for conch, helix, cartilage, and other curated ear-stack combinations.\n\nThe stones move freely with the chain, creating a soft little shimmer with every turn like fresh rain sparkling on the pines.\n\nStyling idea: Drape it between two piercings for a subtle cascading look, or use it to add a little movement to an otherwise minimal stack.\n\nPlease note: This listing is for one Drizzle Chain. Earrings shown in styled photos are not included.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/51e709/8495611182/il_fullxfull.8495611182_5rxg.jpg",
-        "https://i.etsystatic.com/67609393/r/il/fe62ea/8543501357/il_fullxfull.8543501357_9jj1.jpg",
-        "https://i.etsystatic.com/67609393/r/il/46e35b/8495611180/il_fullxfull.8495611180_qab4.jpg",
-        "https://i.etsystatic.com/67609393/r/il/42d529/8495611174/il_fullxfull.8495611174_3smz.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/c0e3/f9c38fb3-c6a9-4588-b5fe-b97794dd1382/vid_v1.mp4",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "gold ear chain",
-        "double drape chain",
-        "piercing chain",
-        "cartilage chain",
-        "non tarnish jewelry",
-        "multiple piercings"
-      ],
-      "quantity": 5,
-      "created": "2026-09-08T19:59:35.000Z",
-      "views": 54,
-      "num_favorers": 6,
+      "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1711,6 +1639,80 @@ window.MICKNACK_PRODUCTS = {
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4576033359",
+      "title": "Lilac Drop Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4576033359/lilac-drop-ear-chain-30mm-gold-connector",
+      "description": "A little drape, a little sparkle, and a soft pop of lilac.\n\nLilac Drop features a delicate 2 mm wide / 18K Gold PVD Plated gold lip chain with a 30 mm center chain length There are 4 mm amethyst purple colored CZ stones arranged for a cascading look. Three stones dangle from the upper section, while a single stone drops from the lower end for an asymmetrical finish that gives the piece extra movement.\n\nIt’s feminine, lightweight-looking, and just different enough to make your ear stack feel styled without looking too busy.\n\nWhy you’ll love it:\n2 mm dainty gold chain\n30 mm center chain length\nFour 4 mm amethyst-colored CZ stones\nThree CZ dangles at the top\nOne CZ dangle at the bottom\nSoft draped movement\nEasy to style across multiple piercings\nAdds color without overwhelming your stack\nStyle it your way\n\nLilac Drop is designed to drape between compatible earrings, hoops, or flatback posts, giving you a soft layered look with movement and sparkle.\n\nThe lilac stones add just enough color to stand out while still pairing easily with gold, clear CZ, and other minimal pieces.\n\nMaterials\n2 mm gold chain\n30 mm center chain\nFour 4 mm amethyst-colored CZ stones\nGold-tone connecting loops\nMulti-point draped design\n\nPerfect for:\nHelix-to-lobe styling • Curated ear stacks • Dainty chain looks • Purple jewelry lovers\n\nSoft lilac sparkle with a little movement in every angle. 💜",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/3f3f24/8577000729/il_fullxfull.8577000729_f2zn.jpg",
+        "https://i.etsystatic.com/67609393/r/il/691bb5/8529138852/il_fullxfull.8529138852_d91y.jpg",
+        "https://i.etsystatic.com/67609393/r/il/1ffb9c/8529138842/il_fullxfull.8529138842_d4k6.jpg",
+        "https://i.etsystatic.com/67609393/r/il/abf4d8/8529138840/il_fullxfull.8529138840_7k0o.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ],
+      "quantity": 1,
+      "created": "2026-09-15T20:48:41.000Z",
+      "views": 48,
+      "num_favorers": 4,
+      "etsy_active": false,
+      "added_at": "2026-09-30T19:35:47.289Z",
+      "left_etsy_at": "2026-10-24T20:39:05.088Z"
+    },
+    {
+      "listing_id": "4571494427",
+      "title": "Drizzle Chain Ear Connector | 5A CZ Raindrop Earring Chain | Dainty Gold Ear Chain | Ear Stack Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4571494427/drizzle-chain-ear-connector-5a-cz",
+      "description": "Drizzle Chain \nInspired by that fresh rain feeling after a light shower moves through the pine trees, the Drizzle Chain is all about soft sparkle, delicate movement, and a little bit of mountain air.\n\nFive 3 × 5 mm raindrop-shaped 5A CZ stones shimmer along a dainty 2 mm chain, catching the light like tiny drops of rain clinging to pine needles after a storm.\nFinished with petite 3 mm connecting loops on each end, Drizzle is intentionally lightweight and delicate, designed to add movement to your ear stack without looking bulky.\n\nDetails\nFive 3 × 5 mm raindrop-shaped 5A CZ stones\nDainty 2 mm chain, 30mm in length\nPetite 3 mm connecting loops on each end\nFive individual crystal drops\nLightweight, delicate design\n\nMade to connect between compatible earrings, hoops, or piercing jewelry\nBeautiful for conch, helix, cartilage, and other curated ear-stack combinations.\n\nThe stones move freely with the chain, creating a soft little shimmer with every turn like fresh rain sparkling on the pines.\n\nStyling idea: Drape it between two piercings for a subtle cascading look, or use it to add a little movement to an otherwise minimal stack.\n\nPlease note: This listing is for one Drizzle Chain. Earrings shown in styled photos are not included.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/51e709/8495611182/il_fullxfull.8495611182_5rxg.jpg",
+        "https://i.etsystatic.com/67609393/r/il/fe62ea/8543501357/il_fullxfull.8543501357_9jj1.jpg",
+        "https://i.etsystatic.com/67609393/r/il/46e35b/8495611180/il_fullxfull.8495611180_qab4.jpg",
+        "https://i.etsystatic.com/67609393/r/il/42d529/8495611174/il_fullxfull.8495611174_3smz.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/c0e3/f9c38fb3-c6a9-4588-b5fe-b97794dd1382/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ],
+      "quantity": 5,
+      "created": "2026-09-08T19:59:35.000Z",
+      "views": 54,
+      "num_favorers": 6,
+      "etsy_active": false,
+      "added_at": "2026-09-30T19:35:47.289Z",
+      "left_etsy_at": "2026-10-24T20:39:05.088Z"
     },
     {
       "listing_id": "4579741852",

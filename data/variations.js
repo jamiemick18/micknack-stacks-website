@@ -9,7 +9,7 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-10-24T17:58:39.602Z
+// Last read from Etsy: 2026-10-24T20:39:05.088Z
 
 window.MICKNACK_VARIATIONS = {
   // Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Ti
