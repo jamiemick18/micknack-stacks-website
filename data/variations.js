@@ -9,9 +9,11 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-10-25T13:04:08.132Z
+// Last read from Etsy: 2026-10-25T17:30:53.258Z
 
 window.MICKNACK_VARIATIONS = {
+  // Zephyr Threadless Flatback Earring | Hidden Helix Dangle | G
+  "4573452050": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Ti
   "4579868601": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain
@@ -58,8 +60,6 @@ window.MICKNACK_VARIATIONS = {
   "4573472494": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Cosmic Supernova Threadless Flatback Earring | Gold Starburs
   "4573443165": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
-  // Zephyr Threadless Flatback Earring | Hidden Helix Dangle | G
-  "4573452050": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Mountain Fox Threadless Flatback Earring | Gold Fox Cartilag
   "4573443638": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Alpen Glow Threadless Flatback Earring | Dainty Mountain Stu

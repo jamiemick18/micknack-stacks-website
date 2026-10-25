@@ -2,8 +2,42 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-25T13:04:08.132Z",
+  "synced_at": "2026-10-25T17:30:53.258Z",
   "listings": [
+    {
+      "listing_id": "4573452050",
+      "title": "Zephyr Threadless Flatback Earring | Hidden Helix Dangle | Gold Ear Climber | Titanium Labret Post | Marquise Cartilage Jewelry",
+      "price": "14.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4573452050/zephyr-threadless-flatback-earring",
+      "description": "Named for a soft, gentle breeze, Zephyr is a delicate cascading piece designed to bring movement and lightness to your ear stack.\n\nThe curved gold bar is accented with tiny sparkling CZ stones, while the marquise shaped dangles fall softly beneath it for an airy, floating effect. Depending on your piercing placement, Zephyr can be styled as a climber along the ear edge or worn in a hidden helix for a soft curtain of sparkle.\n\nThis is the kind of piece that adds movement without making your stack feel heavy.\n\nWhy you’ll love it\nAiry Prism look\nCascading marquise shaped stones\nDelicate sparkle with subtle movement\nCan be styled as a climber or hidden helix\nEasy to mix into curated ear stacks\nStatement making without feeling bulky\n\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nClear sparkling stones\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHidden Helix • Helix • Flat • Climber Styling • Cartilage • Curated Ear Stacks\n\nSoft movement, floating sparkle, and a little breeze of gold. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/772551/8557657689/il_fullxfull.8557657689_6ngn.jpg",
+        "https://i.etsystatic.com/67609393/r/il/646b60/8509787950/il_fullxfull.8509787950_cw27.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "threadless earring",
+        "push pin earring",
+        "titanium labret",
+        "flatback earring",
+        "cartilage earring",
+        "dainty gold earring",
+        "curated ear",
+        "gold cartilage",
+        "minimalist stud",
+        "dainty cartilage",
+        "tragus earring",
+        "hidden helix",
+        "earring climber"
+      ],
+      "quantity": 1,
+      "created": "2026-09-11T17:21:14.000Z",
+      "views": 97,
+      "num_favorers": 6,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
     {
       "listing_id": "4574722466",
       "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
@@ -1402,7 +1436,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T17:54:53.000Z",
       "views": 66,
-      "num_favorers": 4,
+      "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1436,40 +1470,6 @@ window.MICKNACK_PRODUCTS = {
       "created": "2026-09-11T17:34:10.000Z",
       "views": 41,
       "num_favorers": 2,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4573452050",
-      "title": "Zephyr Threadless Flatback Earring | Hidden Helix Dangle | Gold Ear Climber | Titanium Labret Post | Marquise Cartilage Jewelry",
-      "price": "14.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4573452050/zephyr-threadless-flatback-earring",
-      "description": "Named for a soft, gentle breeze, Zephyr is a delicate cascading piece designed to bring movement and lightness to your ear stack.\n\nThe curved gold bar is accented with tiny sparkling CZ stones, while the marquise shaped dangles fall softly beneath it for an airy, floating effect. Depending on your piercing placement, Zephyr can be styled as a climber along the ear edge or worn in a hidden helix for a soft curtain of sparkle.\n\nThis is the kind of piece that adds movement without making your stack feel heavy.\n\nWhy you’ll love it\nAiry Prism look\nCascading marquise shaped stones\nDelicate sparkle with subtle movement\nCan be styled as a climber or hidden helix\nEasy to mix into curated ear stacks\nStatement making without feeling bulky\n\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nClear sparkling stones\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHidden Helix • Helix • Flat • Climber Styling • Cartilage • Curated Ear Stacks\n\nSoft movement, floating sparkle, and a little breeze of gold. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/772551/8557657689/il_fullxfull.8557657689_6ngn.jpg",
-        "https://i.etsystatic.com/67609393/r/il/646b60/8509787950/il_fullxfull.8509787950_cw27.jpg"
-      ],
-      "video": "",
-      "tags": [
-        "threadless earring",
-        "push pin earring",
-        "titanium labret",
-        "flatback earring",
-        "cartilage earring",
-        "dainty gold earring",
-        "curated ear",
-        "gold cartilage",
-        "minimalist stud",
-        "dainty cartilage",
-        "tragus earring",
-        "hidden helix",
-        "earring climber"
-      ],
-      "quantity": 2,
-      "created": "2026-09-11T17:21:14.000Z",
-      "views": 97,
-      "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
