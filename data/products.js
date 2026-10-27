@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-27T19:56:27.972Z",
+  "synced_at": "2026-10-27T23:39:57.540Z",
   "listings": [
     {
       "listing_id": "4576033359",
