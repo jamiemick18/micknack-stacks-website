@@ -135,6 +135,7 @@
     if (view === "today") return renderToday();
     if (view === "orders") return renderOrders();
     if (view === "stock") return renderStock();
+    if (view === "requests") return renderRequests();
     if (view === "reviews") return renderReviews();
   }
 
@@ -147,12 +148,14 @@
     ask("summary").then(function (body) {
       var s = (cache.summary = body.summary);
       badge("dot-reviews", s.reviews_waiting);
+      badge("dot-requests", s.customs_waiting || 0);
 
       var h = "<div class='tiles'>";
       h += tile(s.views.site, "visits here");
       h += tile(s.total_hearts, "hearts");
       h += tile(s.sold_out, "sold out", s.sold_out > 0);
       h += tile(s.reviews_waiting, "reviews waiting", s.reviews_waiting > 0);
+      h += tile(s.customs_waiting || 0, "custom requests", (s.customs_waiting || 0) > 0);
       h += "</div>";
 
       if (s.money) {
@@ -314,6 +317,59 @@
       paintStock();
       say(err.message, true);
     });
+  }
+
+  // ---- custom requests ---------------------------------------------------
+
+  function renderRequests() {
+    var host = document.getElementById("v-requests");
+    host.innerHTML = "<p class='note'>Loading…</p>";
+
+    ask("customs").then(function (body) {
+      var list = body.customs || [];
+      var waiting = list.filter(function (c) { return c.status !== "done"; }).length;
+      badge("dot-requests", waiting);
+
+      if (!list.length) {
+        host.innerHTML = "<div class='card'><b>Nothing yet.</b>" +
+          "<p class='meta'>The band is live at the top of your site. The first request lands here.</p></div>";
+        return;
+      }
+
+      var h = waiting ? "<p class='note'><b>" + waiting + "</b> waiting for a reply.</p>"
+                      : "<p class='note'>All answered.</p>";
+      for (var i = 0; i < list.length; i++) {
+        var c = list[i], open = c.status !== "done";
+        h += "<div class='card" + (open ? "" : " live") + "'>";
+        h += "<div class='rowtop'><b>" + esc(c.name || "No name given") + "</b>" +
+          "<span class='when'>" + esc(String(c.at || "").slice(0, 10)) + "</span></div>";
+        h += "<div class='where'><a href='mailto:" + esc(c.email) + "'>" + esc(c.email) + "</a></div>";
+        h += "<blockquote>" + esc(c.idea) + "</blockquote>";
+        var bits = [];
+        if (c.budget) bits.push("Budget: " + esc(c.budget));
+        if (c.when) bits.push("Needed by: " + esc(c.when));
+        if (c.emailed && c.emailed !== "sent") bits.push("email " + esc(c.emailed));
+        if (bits.length) h += "<div class='meta'>" + bits.join(" &middot; ") + "</div>";
+        h += "<div class='foot'>";
+        h += "<a class='act' href='mailto:" + esc(c.email) +
+          "?subject=" + encodeURIComponent("About your custom piece") + "'>Reply</a>";
+        h += open
+          ? "<button class='act ghost' data-cx='" + esc(c.id) + "' data-do='done'>Answered</button>"
+          : "<button class='act ghost' data-cx='" + esc(c.id) + "' data-do='new'>Still open</button>";
+        h += "</div></div>";
+      }
+      host.innerHTML = h;
+
+      var buttons = host.querySelectorAll("button[data-cx]");
+      for (var b = 0; b < buttons.length; b++) {
+        buttons[b].addEventListener("click", function () {
+          this.disabled = true;
+          ask("custom", { id: this.dataset.cx, do: this.dataset.do })
+            .then(renderRequests)
+            .catch(function (err) { say(err.message, true); });
+        });
+      }
+    }).catch(function (err) { host.innerHTML = ""; say(err.message, true); });
   }
 
   // ---- reviews -----------------------------------------------------------

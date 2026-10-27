@@ -186,6 +186,12 @@ export function page() {
   .rv .rvdo { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
   .rv .rvdo button { padding: 6px 14px; font-size: .78rem; }
   .danger { border-color: var(--bad); color: var(--bad); background: none; }
+  .btn-mail {
+    display: inline-block; text-decoration: none; border-radius: 999px;
+    padding: 6px 14px; font-size: .78rem; border: 1px solid var(--ink);
+    background: var(--ink); color: var(--paper);
+  }
+  .rv .who a { color: var(--gold); }
 
   /* ---- inventory ---- */
   .tools { display: flex; gap: 10px; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
@@ -261,6 +267,7 @@ export function page() {
     <a href="#/" data-view="home">Welcome</a>
     <a href="#/inventory" data-view="inventory">Inventory</a>
     <a href="#/add" data-view="add">Add a piece</a>
+    <a href="#/requests" data-view="requests">Custom requests</a>
     <a href="#/reviews" data-view="reviews">Reviews</a>
     <a href="#/traffic" data-view="traffic">Traffic</a>
   </nav>
@@ -281,6 +288,7 @@ export function page() {
     <div class="doors">
       <a class="door" href="#/inventory"><b>Inventory</b><span>Counts, sold out, hidden</span></a>
       <a class="door" href="#/add"><b>Add a piece</b><span>Something sold only here</span></a>
+      <a class="door" href="#/requests"><b>Custom requests</b><span>Someone wants a piece made</span></a>
       <a class="door" href="#/reviews"><b>Reviews</b><span>Read them before they go up</span></a>
       <a class="door" href="#/traffic"><b>Traffic &amp; sales</b><span>Who is looking, who is buying</span></a>
     </div>
@@ -303,6 +311,12 @@ export function page() {
         <b>Your shop &#8599;</b><span>See it the way a customer does</span>
       </a>
     </div>
+  </section>
+
+  <section class="view" id="view-requests">
+    <h2>Custom requests</h2>
+    <p class="sub">Sent from the band at the top of your website. Kept here whether or not the email reached you.</p>
+    <div id="requests-body">Loading…</div>
   </section>
 
   <section class="view" id="view-reviews">
@@ -405,6 +419,7 @@ function show(name) {
   // it showed last time.
   if (name === "inventory") renderRows();
   if (name === "traffic" && !salesLoaded) loadTraffic();
+  if (name === "requests") loadRequests();
   if (name === "reviews") loadReviews();
   if (name === "home") { paintHome(); loadOrders(); loadMoney(); }
 }
@@ -731,6 +746,62 @@ document.getElementById("load-sales").addEventListener("click", function () {
     body.innerHTML = h;
   }).catch(function (err) { btn.disabled = false; body.textContent = "That did not work: " + err.message; });
 });
+
+/* ---------- custom requests ---------- */
+function loadRequests() {
+  var host = document.getElementById("requests-body");
+  host.textContent = "Loading…";
+  fetch("/api/customs").then(function (r) { return r.json(); }).then(function (d) {
+    if (!d.ok) { host.textContent = d.message; return; }
+    var list = d.customs || [];
+    if (!list.length) {
+      host.innerHTML = "<p class='sub'>Nothing yet. The band is live on your site — the first one lands here.</p>";
+      return;
+    }
+    var waiting = list.filter(function (c) { return c.status !== "done"; }).length;
+    var h = waiting ? "<p class='sub'><b>" + waiting + "</b> waiting for a reply.</p>"
+                    : "<p class='sub'>All answered.</p>";
+
+    for (var i = 0; i < list.length; i++) {
+      var c = list[i], open = c.status !== "done";
+      h += "<div class='rv" + (open ? "" : " live") + "'>";
+      h += "<div class='who'><b>" + esc(c.name || "No name given") + "</b> &middot; " +
+        "<a href='mailto:" + esc(c.email) + "'>" + esc(c.email) + "</a></div>";
+      h += "<blockquote>" + esc(c.idea) + "</blockquote>";
+      var bits = [];
+      if (c.budget) bits.push("Budget: " + esc(c.budget));
+      if (c.when) bits.push("Needed by: " + esc(c.when));
+      bits.push(esc(String(c.at || "").slice(0, 10)));
+      // Whether the email actually went is worth saying: if it never does,
+      // this page is the only place the request exists.
+      if (c.emailed && c.emailed !== "sent") bits.push("email " + esc(c.emailed));
+      h += "<div class='rvmeta'>" + bits.join(" &middot; ") + "</div>";
+      h += "<div class='rvdo'>";
+      h += "<a class='btn-mail' href='mailto:" + esc(c.email) +
+        "?subject=" + encodeURIComponent("About your custom piece") + "'>Reply</a>";
+      h += open
+        ? "<button data-cx='" + esc(c.id) + "' data-do='done'>Mark answered</button>"
+        : "<button class='ghost' data-cx='" + esc(c.id) + "' data-do='new'>Still open</button>";
+      h += "<button class='ghost danger' data-cx='" + esc(c.id) + "' data-do='delete'>Delete</button>";
+      h += "</div></div>";
+    }
+    host.innerHTML = h;
+
+    var buttons = host.querySelectorAll("button[data-cx]");
+    for (var b = 0; b < buttons.length; b++) {
+      buttons[b].addEventListener("click", function () {
+        var id = this.dataset.cx, action = this.dataset.do;
+        if (action === "delete" && !confirm("Delete this request for good?")) return;
+        note("Working…");
+        fetch("/api/customs", { method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ id: id, action: action }) })
+          .then(function (r) { return r.json(); })
+          .then(function (d2) { note(d2.ok ? "Done." : d2.message, !d2.ok); loadRequests(); })
+          .catch(function (err) { note("That did not work: " + err.message, true); });
+      });
+    }
+  }).catch(function (err) { host.textContent = "Could not load those: " + err.message; });
+}
 
 /* ---------- reviews ---------- */
 function loadReviews() {

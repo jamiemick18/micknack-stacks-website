@@ -748,6 +748,40 @@ const server = createServer(async (req, res) => {
       return json(200, res.ok ? { ok: true } : { ok: false, message: body.error || "That did not work." });
     }
 
+    // Custom requests live in the worker, like reviews, because the form on
+    // the website has to reach them from anywhere.
+    if (req.url === "/api/customs" && req.method === "GET") {
+      const token = reviewToken();
+      if (!token) return json(200, { ok: false, message: "REVIEW_TOKEN is missing from .env." });
+      const res = await fetch(`${WORKER}/hub`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ pass: envValue("HUB_PASSWORD"), action: "customs" }),
+      });
+      const body = await res.json();
+      if (!res.ok) {
+        return json(200, {
+          ok: false,
+          message:
+            res.status === 401
+              ? "Add HUB_PASSWORD to .env — the same one you set on the worker — so the HUB can read requests."
+              : body.error || `The worker answered ${res.status}.`,
+        });
+      }
+      return json(200, { ok: true, customs: body.customs || [] });
+    }
+
+    if (req.url === "/api/customs" && req.method === "POST") {
+      const { id, action } = await readBody(req);
+      const res = await fetch(`${WORKER}/hub`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ pass: envValue("HUB_PASSWORD"), action: "custom", id, do: action }),
+      });
+      const body = await res.json();
+      return json(200, res.ok ? { ok: true } : { ok: false, message: body.error || "That did not work." });
+    }
+
     if (req.url === "/api/orders") return json(200, await orders());
 
     if (req.url === "/api/shipped" && req.method === "POST") {
