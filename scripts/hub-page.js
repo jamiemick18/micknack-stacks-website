@@ -111,6 +111,28 @@ export function page() {
   .door:hover { border-color: var(--gold); }
   .door b { display: block; font-weight: 500; margin-bottom: 3px; }
   .door span { color: var(--muted); font-size: .82rem; }
+  .door.out { background: none; border-style: dashed; }
+  .away {
+    font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); font-weight: 400; margin: 28px 0 10px;
+  }
+
+  /* ---- reviews ---- */
+  .rv {
+    background: var(--card); border: 1px solid var(--line); border-radius: 4px;
+    padding: 14px 16px; margin-bottom: 10px;
+  }
+  .rv.live { border-left: 3px solid var(--gold); }
+  .rv .who { font-size: .9rem; }
+  .rv .stars { color: var(--gold); letter-spacing: .14em; font-size: .8rem; }
+  .rv blockquote {
+    margin: 8px 0; font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.05rem; line-height: 1.55;
+  }
+  .rv .rvmeta { color: var(--muted); font-size: .74rem; }
+  .rv .rvdo { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  .rv .rvdo button { padding: 6px 14px; font-size: .78rem; }
+  .danger { border-color: var(--bad); color: var(--bad); background: none; }
 
   /* ---- inventory ---- */
   .tools { display: flex; gap: 10px; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
@@ -186,6 +208,7 @@ export function page() {
     <a href="#/" data-view="home">Welcome</a>
     <a href="#/inventory" data-view="inventory">Inventory</a>
     <a href="#/add" data-view="add">Add a piece</a>
+    <a href="#/reviews" data-view="reviews">Reviews</a>
     <a href="#/traffic" data-view="traffic">Traffic</a>
   </nav>
 </header>
@@ -199,8 +222,31 @@ export function page() {
     <div class="doors">
       <a class="door" href="#/inventory"><b>Inventory</b><span>Counts, sold out, hidden</span></a>
       <a class="door" href="#/add"><b>Add a piece</b><span>Something sold only here</span></a>
+      <a class="door" href="#/reviews"><b>Reviews</b><span>Read them before they go up</span></a>
       <a class="door" href="#/traffic"><b>Traffic &amp; sales</b><span>Who is looking, who is buying</span></a>
     </div>
+
+    <h3 class="away">Everything else</h3>
+    <div class="doors">
+      <a class="door out" href="https://www.etsy.com/your/account/payments?ref=seller-platform-mcnav" target="_blank" rel="noopener">
+        <b>Etsy payments &#8599;</b><span>What Etsy owes you, and when</span>
+      </a>
+      <a class="door out" href="https://dashboard.stripe.com/payments" target="_blank" rel="noopener">
+        <b>Stripe payments &#8599;</b><span>Orders taken on your own site</span>
+      </a>
+      <a class="door out" href="https://github.com/jamiemick18/micknack-stacks-website" target="_blank" rel="noopener">
+        <b>GitHub &#8599;</b><span>The website itself, and its history</span>
+      </a>
+      <a class="door out" href="https://micknackstacks.com" target="_blank" rel="noopener">
+        <b>Your shop &#8599;</b><span>See it the way a customer does</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="view" id="view-reviews">
+    <h2>Reviews</h2>
+    <p class="sub">Written by people who bought here rather than on Etsy. Nothing appears on your site until you approve it.</p>
+    <div id="reviews-body">Loading…</div>
   </section>
 
   <section class="view" id="view-inventory">
@@ -287,6 +333,7 @@ function show(name) {
   var links = document.querySelectorAll("nav a");
   for (var j = 0; j < links.length; j++) links[j].classList.toggle("on", links[j].dataset.view === name);
   if (name === "traffic" && !salesLoaded) loadTraffic();
+  if (name === "reviews") loadReviews();
   if (name === "home") paintHome();
 }
 function route() {
@@ -459,6 +506,57 @@ document.getElementById("load-sales").addEventListener("click", function () {
     body.innerHTML = h;
   }).catch(function (err) { btn.disabled = false; body.textContent = "That did not work: " + err.message; });
 });
+
+/* ---------- reviews ---------- */
+function loadReviews() {
+  var host = document.getElementById("reviews-body");
+  host.textContent = "Loading…";
+  fetch("/api/reviews").then(function (r) { return r.json(); }).then(function (d) {
+    if (!d.ok) { host.textContent = d.message; return; }
+    var list = d.reviews || [];
+    if (!list.length) {
+      host.innerHTML = "<p class='sub'>No reviews yet. The form is live on your site — the first one will land here.</p>";
+      return;
+    }
+    var waiting = 0;
+    for (var i = 0; i < list.length; i++) if (list[i].status !== "approved") waiting++;
+    var h = waiting
+      ? "<p class='sub'><b>" + waiting + "</b> waiting for you.</p>"
+      : "<p class='sub'>Nothing waiting. All of these are on your site.</p>";
+
+    for (var k = 0; k < list.length; k++) {
+      var r2 = list[k], live = r2.status === "approved";
+      h += "<div class='rv" + (live ? " live" : "") + "'>";
+      h += "<span class='stars'>" + "★".repeat(r2.rating) + "☆".repeat(5 - r2.rating) + "</span>";
+      h += "<div class='who'>" + esc(r2.name) + (r2.piece ? " · " + esc(r2.piece) : "") + "</div>";
+      h += "<blockquote>" + esc(r2.text) + "</blockquote>";
+      h += "<div class='rvmeta'>" + esc(r2.date) + (r2.email ? " · " + esc(r2.email) : " · no email given");
+      h += " · " + (live ? "on your site" : "not shown yet") + "</div>";
+      h += "<div class='rvdo'>";
+      if (!live) h += "<button data-rv='" + esc(r2.id) + "' data-do='approve'>Put it on the site</button>";
+      else h += "<button class='ghost' data-rv='" + esc(r2.id) + "' data-do='hide'>Take it down</button>";
+      h += "<button class='ghost danger' data-rv='" + esc(r2.id) + "' data-do='delete'>Delete</button>";
+      h += "</div></div>";
+    }
+    host.innerHTML = h;
+
+    var buttons = host.querySelectorAll("button[data-rv]");
+    for (var b = 0; b < buttons.length; b++) {
+      buttons[b].addEventListener("click", function () {
+        var id = this.dataset.rv, action = this.dataset.do;
+        if (action === "delete" && !confirm("Delete this review for good?")) return;
+        note("Working…");
+        fetch("/api/reviews", {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ id: id, action: action })
+        }).then(function (r) { return r.json(); }).then(function (d2) {
+          note(d2.ok ? "Done." : d2.message, !d2.ok);
+          loadReviews();
+        }).catch(function (err) { note("That did not work: " + err.message, true); });
+      });
+    }
+  }).catch(function (err) { host.textContent = "Could not load those: " + err.message; });
+}
 
 /* ---------- add a piece ---------- */
 var photoData = null;

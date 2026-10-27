@@ -57,6 +57,19 @@ function windowFile(relative, key) {
   return context.window[key];
 }
 
+// The one secret the HUB uses: it lets the worker know an approval really
+// came from Jamie. Read fresh each time so adding it to .env takes effect
+// without restarting.
+function reviewToken() {
+  const path = join(ROOT, ".env");
+  if (!existsSync(path)) return "";
+  for (const line of readFileSync(path, "utf8").split(/\r?\n/)) {
+    const match = /^\s*REVIEW_TOKEN\s*=\s*(.+)$/.exec(line);
+    if (match) return match[1].trim();
+  }
+  return "";
+}
+
 function readCounts() {
   if (!existsSync(COUNTS_PATH)) return {};
   try {
@@ -452,6 +465,39 @@ const server = createServer(async (req, res) => {
           ? `${moved.length} count(s) brought in line with Etsy. Publish if any of them went to zero.`
           : "Nothing moved — your counts already match Etsy.",
       });
+    }
+
+    // Reviews live in the worker, not here, because the form on the website
+    // has to reach them from anywhere. The HUB is just the window onto them.
+    if (req.url === "/api/reviews" && req.method === "GET") {
+      const token = reviewToken();
+      if (!token) {
+        return json(200, { ok: false, message: "REVIEW_TOKEN is missing from .env, so reviews cannot be read." });
+      }
+      const res = await fetch(`${WORKER}/reviews/admin`, { headers: { "X-Admin-Token": token } });
+      const body = await res.json();
+      if (!res.ok) {
+        return json(200, {
+          ok: false,
+          message:
+            res.status === 401
+              ? "The worker turned that down. Its REVIEW_TOKEN and the one in .env need to match."
+              : body.error || `The worker answered ${res.status}.`,
+        });
+      }
+      return json(200, { ok: true, reviews: body.reviews || [] });
+    }
+
+    if (req.url === "/api/reviews" && req.method === "POST") {
+      const token = reviewToken();
+      const { id, action } = await readBody(req);
+      const res = await fetch(`${WORKER}/reviews/admin`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Admin-Token": token || "" },
+        body: JSON.stringify({ id, action }),
+      });
+      const body = await res.json();
+      return json(200, res.ok ? { ok: true } : { ok: false, message: body.error || "That did not work." });
     }
 
     if (req.url === "/api/traffic") return json(200, await traffic());

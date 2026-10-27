@@ -20,6 +20,23 @@ covers 100,000 requests a day.
    `https://micknack-checkout.<something>.workers.dev`.
 5. Put that URL in `js/cart.js`, as `CHECKOUT_ENDPOINT` at the top.
 
+## Reviews written on the site
+
+People who bought here rather than on Etsy can leave a review from the shop's
+own page. Nothing they write appears until Jamie approves it in the HUB.
+
+The worker needs one more secret for this:
+
+- Type: **Secret**
+- Name: `REVIEW_TOKEN`
+- Value: the `REVIEW_TOKEN` line from `.env`
+
+It is separate from `ADMIN_TOKEN` on purpose: approving a review should never
+need the secret that can rewrite stock.
+
+Without it, the form still takes reviews and stores them — they simply cannot
+be approved until the secret is set.
+
 ## Checking it works
 
 Add something to the cart on the site and press Checkout. You should land on

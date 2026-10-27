@@ -335,6 +335,156 @@ async function countView(env, cors) {
   });
 }
 
+// --------------------------------------------------------------- reviews ----
+
+// Kind words from people who bought here rather than on Etsy.
+//
+// Nothing written here appears on the shop until Jamie has read it and said
+// yes. That is the whole design: a form that publishes itself is a form that
+// publishes whatever the internet feels like saying that day.
+//
+// KV holds  review:<id>   the review, with a status of pending or approved
+//           rvlimit:<ip>  that this address has written recently
+//
+// The email address, if one is given, is never sent back out: it is there so
+// Jamie can reply, not so the world can read it.
+
+const REVIEW_MAX = 1200;
+const REVIEW_NAME_MAX = 60;
+const REVIEW_WINDOW_SECONDS = 600;
+
+function cleanText(value, max) {
+  return String(value || "")
+    .replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, "")
+    .trim()
+    .slice(0, max);
+}
+
+async function readReviews(env, { approvedOnly }) {
+  const out = [];
+  let cursor;
+  do {
+    const page = await env.STOCK.list({ prefix: "review:", cursor });
+    for (const key of page.keys) {
+      const raw = await env.STOCK.get(key.name);
+      if (!raw) continue;
+      let review;
+      try {
+        review = JSON.parse(raw);
+      } catch (err) {
+        continue;
+      }
+      if (approvedOnly && review.status !== "approved") continue;
+      out.push(
+        approvedOnly
+          ? { id: review.id, name: review.name, rating: review.rating, text: review.text, piece: review.piece, date: review.date }
+          : review
+      );
+    }
+    cursor = page.list_complete ? null : page.cursor;
+  } while (cursor);
+
+  out.sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+  return out;
+}
+
+async function handleReview(request, env, cors) {
+  let body;
+  try {
+    body = await request.json();
+  } catch (err) {
+    return json({ error: "Could not read that." }, 400, cors);
+  }
+
+  // A hidden field no person ever sees. Something that fills in every box on
+  // the page has told on itself.
+  if (cleanText(body.website, 40)) return json({ ok: true }, 200, cors);
+
+  const rating = Math.round(Number(body.rating));
+  const text = cleanText(body.text, REVIEW_MAX);
+  const name = cleanText(body.name, REVIEW_NAME_MAX);
+  const email = cleanText(body.email, 160);
+  const piece = cleanText(body.piece, 160);
+
+  if (!(rating >= 1 && rating <= 5)) return json({ error: "Please pick a star rating." }, 400, cors);
+  if (text.length < 4) return json({ error: "Please write a little more." }, 400, cors);
+  if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+    return json({ error: "That email address does not look right." }, 400, cors);
+  }
+
+  // One review per address per ten minutes. Enough to stop a script, not
+  // enough to stop a couple writing one each on the same wifi.
+  const ip = request.headers.get("CF-Connecting-IP") || "";
+  if (ip) {
+    const key = `rvlimit:${ip}`;
+    if (await env.STOCK.get(key)) {
+      return json({ error: "Thank you — that came through already." }, 429, cors);
+    }
+    await env.STOCK.put(key, "1", { expirationTtl: REVIEW_WINDOW_SECONDS });
+  }
+
+  const id = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+  const review = {
+    id,
+    status: "pending",
+    name: name || "Anonymous",
+    email,
+    rating,
+    text,
+    piece,
+    date: new Date().toISOString().slice(0, 10),
+  };
+  await env.STOCK.put(`review:${id}`, JSON.stringify(review));
+
+  return json({ ok: true, message: "Thank you. Jamie reads every one before it goes up." }, 200, cors);
+}
+
+// Approving, hiding and deleting all happen from the HUB, behind the same
+// admin token the stock push uses.
+async function handleReviewAdmin(request, env, cors) {
+  // A secret of its own, so moderating reviews from the HUB never needs the
+  // one that can rewrite stock. Falls back to the stock secret only if no
+  // separate one was ever set.
+  const expected = env.REVIEW_TOKEN || env.ADMIN_TOKEN;
+  if (!expected || request.headers.get("X-Admin-Token") !== expected) {
+    return json({ error: "Not allowed." }, 401, cors);
+  }
+  if (request.method === "GET") {
+    return json({ reviews: await readReviews(env, { approvedOnly: false }) }, 200, {
+      ...cors,
+      "Cache-Control": "no-store",
+    });
+  }
+
+  let body;
+  try {
+    body = await request.json();
+  } catch (err) {
+    return json({ error: "Could not read that." }, 400, cors);
+  }
+
+  const id = cleanText(body.id, 64);
+  const action = cleanText(body.action, 20);
+  if (!id) return json({ error: "Which review?" }, 400, cors);
+
+  const key = `review:${id}`;
+  const raw = await env.STOCK.get(key);
+  if (!raw) return json({ error: "That review is not here." }, 404, cors);
+
+  if (action === "delete") {
+    await env.STOCK.delete(key);
+    return json({ ok: true, status: "deleted" }, 200, cors);
+  }
+  if (action !== "approve" && action !== "hide") {
+    return json({ error: "Approve, hide or delete." }, 400, cors);
+  }
+
+  const review = JSON.parse(raw);
+  review.status = action === "approve" ? "approved" : "pending";
+  await env.STOCK.put(key, JSON.stringify(review));
+  return json({ ok: true, status: review.status }, 200, cors);
+}
+
 // -------------------------------------------------------------- checkout ----
 
 async function handleCheckout(request, env, cors, origin) {
@@ -471,6 +621,24 @@ export default {
       if (!env.STOCK) return json({ site: 0, etsy: 0, total: 0 }, 200, cors);
       if (request.method === "POST") return countView(env, cors);
       return json(await readViews(env), 200, { ...cors, "Cache-Control": "no-store" });
+    }
+
+    if (path === "/reviews" && request.method === "GET") {
+      if (!env.STOCK) return json({ reviews: [] }, 200, cors);
+      return json({ reviews: await readReviews(env, { approvedOnly: true }) }, 200, {
+        ...cors,
+        "Cache-Control": "no-store",
+      });
+    }
+
+    if (path === "/reviews" && request.method === "POST") {
+      if (!env.STOCK) return json({ error: "Reviews aren't set up yet." }, 500, cors);
+      return handleReview(request, env, cors);
+    }
+
+    if (path === "/reviews/admin" && (request.method === "GET" || request.method === "POST")) {
+      if (!env.STOCK) return json({ error: "No store bound." }, 500, cors);
+      return handleReviewAdmin(request, env, cors);
     }
 
     if (path === "/admin" && request.method === "POST") {
