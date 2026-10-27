@@ -2,8 +2,80 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-27T19:38:36.202Z",
+  "synced_at": "2026-10-27T19:52:27.938Z",
   "listings": [
+    {
+      "listing_id": "4576033359",
+      "title": "Lilac Drop Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4576033359/lilac-drop-ear-chain-30mm-gold-connector",
+      "description": "A little drape, a little sparkle, and a soft pop of lilac.\n\nLilac Drop features a delicate 2 mm wide / 18K Gold PVD Plated gold lip chain with a 30 mm center chain length There are 4 mm amethyst purple colored CZ stones arranged for a cascading look. Three stones dangle from the upper section, while a single stone drops from the lower end for an asymmetrical finish that gives the piece extra movement.\n\nIt’s feminine, lightweight-looking, and just different enough to make your ear stack feel styled without looking too busy.\n\nWhy you’ll love it:\n2 mm dainty gold chain\n30 mm center chain length\nFour 4 mm amethyst-colored CZ stones\nThree CZ dangles at the top\nOne CZ dangle at the bottom\nSoft draped movement\nEasy to style across multiple piercings\nAdds color without overwhelming your stack\nStyle it your way\n\nLilac Drop is designed to drape between compatible earrings, hoops, or flatback posts, giving you a soft layered look with movement and sparkle.\n\nThe lilac stones add just enough color to stand out while still pairing easily with gold, clear CZ, and other minimal pieces.\n\nMaterials\n2 mm gold chain\n30 mm center chain\nFour 4 mm amethyst-colored CZ stones\nGold-tone connecting loops\nMulti-point draped design\n\nPerfect for:\nHelix-to-lobe styling • Curated ear stacks • Dainty chain looks • Purple jewelry lovers\n\nSoft lilac sparkle with a little movement in every angle. 💜",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/3f3f24/8577000729/il_fullxfull.8577000729_f2zn.jpg",
+        "https://i.etsystatic.com/67609393/r/il/691bb5/8529138852/il_fullxfull.8529138852_d91y.jpg",
+        "https://i.etsystatic.com/67609393/r/il/1ffb9c/8529138842/il_fullxfull.8529138842_d4k6.jpg",
+        "https://i.etsystatic.com/67609393/r/il/abf4d8/8529138840/il_fullxfull.8529138840_7k0o.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ],
+      "quantity": 4,
+      "created": "2026-09-15T20:48:41.000Z",
+      "views": 0,
+      "num_favorers": 4,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4571494427",
+      "title": "Drizzle Chain Ear Connector | 5A CZ Raindrop Earring Chain | Dainty Gold Ear Chain | Ear Stack Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4571494427/drizzle-chain-ear-connector-5a-cz",
+      "description": "Drizzle Chain \nInspired by that fresh rain feeling after a light shower moves through the pine trees, the Drizzle Chain is all about soft sparkle, delicate movement, and a little bit of mountain air.\n\nFive 3 × 5 mm raindrop-shaped 5A CZ stones shimmer along a dainty 2 mm chain, catching the light like tiny drops of rain clinging to pine needles after a storm.\nFinished with petite 3 mm connecting loops on each end, Drizzle is intentionally lightweight and delicate, designed to add movement to your ear stack without looking bulky.\n\nDetails\nFive 3 × 5 mm raindrop-shaped 5A CZ stones\nDainty 2 mm chain, 30mm in length\nPetite 3 mm connecting loops on each end\nFive individual crystal drops\nLightweight, delicate design\n\nMade to connect between compatible earrings, hoops, or piercing jewelry\nBeautiful for conch, helix, cartilage, and other curated ear-stack combinations.\n\nThe stones move freely with the chain, creating a soft little shimmer with every turn like fresh rain sparkling on the pines.\n\nStyling idea: Drape it between two piercings for a subtle cascading look, or use it to add a little movement to an otherwise minimal stack.\n\nPlease note: This listing is for one Drizzle Chain. Earrings shown in styled photos are not included.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/51e709/8495611182/il_fullxfull.8495611182_5rxg.jpg",
+        "https://i.etsystatic.com/67609393/r/il/fe62ea/8543501357/il_fullxfull.8543501357_9jj1.jpg",
+        "https://i.etsystatic.com/67609393/r/il/46e35b/8495611180/il_fullxfull.8495611180_qab4.jpg",
+        "https://i.etsystatic.com/67609393/r/il/42d529/8495611174/il_fullxfull.8495611174_3smz.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/c0e3/f9c38fb3-c6a9-4588-b5fe-b97794dd1382/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ],
+      "quantity": 5,
+      "created": "2026-09-08T19:59:35.000Z",
+      "views": 0,
+      "num_favorers": 6,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
     {
       "listing_id": "4596333038",
       "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
@@ -545,7 +617,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573422828",
       "title": "Darling Gold Bow Threadless Flatback Earring | Titanium Labret Post | Gold Push Pin Cartilage Earring | Coquette Bow Stud",
-      "price": "14.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573422828/darling-gold-bow-threadless-flatback",
       "description": "A little vintage romance for your ear stack.\n\nThe Darling Bow is a polished gold bow finished with a tiny sparkling center stone for just the right amount of detail. It’s feminine, dainty, and a little bit coquette without being overly sweet.\n\nDesigned as a threadless pushpin flatback, the Darling Bow pairs a decorative 316L surgical steel top with a gold PVD implant-grade titanium labret post, so the portion sitting inside your piercing is made with comfort in mind.\n\nI intentionally handpicked and paired this decorative 316L surgical steel bow with a gold PVD implant-grade titanium flatback post to give you the cute designs you want, while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a great option for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is an especially popular choice for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing, making it a great option for everyday wear.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel when the jewelry is inserted.\n\nMaterials\n\nDecorative bow: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nThreadless / pushpin design\nFlatback labret style\n\nPost Length Options\n\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for:\nLobe • Helix • Flat • Tragus • Cartilage • Curated Ear Stacks\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -843,7 +915,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573638523",
       "title": "Snow Bunnies Threadless Flatback Earring | Gold Snowflake Cartilage Stud | Titanium Labret Post | Winter",
-      "price": "14.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573638523/snow-bunnies-threadless-flatback-earring",
       "description": "Snow Bunnies ❄️✨\n\nFor the girls who would rather be chasing pow.\n\nSnow Bunnies features an intricate gold snowflake design accented with sparkling marquise and round CZ stones, giving it that fresh-snow-catching-the-light kind of shine.\n\nDetailed without feeling heavy, this piece brings a little alpine energy to your stack while still staying polished and feminine. Perfect for ski girls, snowboarders, mountain lovers, and anyone who thinks winter jewelry should be cute enough to wear year-round.\n\nWhy you’ll love it:\nSnowflake-inspired design\nSparkling marquise and round CZ stones\nDainty but eye-catching\nPerfect for ski and mountain lovers\nEasy to mix into curated ear stacks\nWintery without feeling holiday-only\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nClear marquise and round CZ stones\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Cartilage • Ski-Inspired Stacks • Curated Ear Stacks\n\nFresh snow. Golden sparkle. Mountain-girl energy. ❄️✨",
@@ -945,7 +1017,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573651300",
       "title": "Feeling Crabby Threadless Flatback Earring | Gold Crab Cartilage Stud | Titanium Labret Post | Coastal Ear Jewelry",
-      "price": "15.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573651300/feeling-crabby-threadless-flatback",
       "description": "Feeling crabby? Same. This will help. 🦀\n\nFeeling Crabby features a petite gold crab with a sparkling clear CZ body and tiny dark eye accents for just the right mix of cute, quirky, and polished.\n\nIt’s playful enough to show some personality, but still dainty enough to work into an everyday ear stack. Perfect for beach lovers, coastal girls, or anyone who appreciates a tiny bit of attitude in their jewelry.\n\nWhy you’ll love it:\nPetite gold crab design\nSparkling clear CZ body\nTiny dark eye accents\nPlayful without feeling novelty-only\nDainty enough for everyday wear\nEasy to mix into curated ear stacks\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the cute, detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nClear CZ center stone\nDark eye accents\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nTiny claws. Big mood. 🦀✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -1042,7 +1114,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573640401",
       "title": "Pikes Peak Summit Threadless Flatback Earring | Gold CZ Chain Dangle | Titanium Labret Post | Colorado Mountain Jewelry",
-      "price": "14.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573640401/pikes-peak-summit-threadless-flatback",
       "description": "Pikes Peak Summit ✨ I see this mountain out my window everyday and it deserves all the beauty credits.\n\nA tiny mountain hidden helix moment with just the right amount of sparkle.\n\nPikes Peak Summit features a delicate three-stone CZ cluster suspended from a fine gold chain, creating a soft little drop inspired by the shape of a mountain peak. It’s dainty, subtle, and designed to add movement without overwhelming your ear stack.\n\nThis one is a little nod to Colorado Springs, my home. \n\nWhy you’ll love it:\nPetite three-stone CZ cluster\nDelicate chain drop\nMountain peak-inspired shape\nLight movement and subtle sparkle\nDainty enough for everyday wear\nEasy to mix into curated ear stacks\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nClear CZ stones\nDelicate gold chain\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHidden Helix • Helix • Flat • Cartilage • Mountain-Inspired Stacks • Curated Ear Stacks\n\nA tiny summit. A little sparkle. A piece of Colorado. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
@@ -1075,7 +1147,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573631273",
       "title": "Soft Bow Threadless Flatback Earring | Minimal Gold Bow Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty Cartilage Jewelry",
-      "price": "15.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573631273/soft-bow-threadless-flatback-earring",
       "description": "Soft Bow 🎀\n\nSimple, delicate, and intentionally understated.\n\nSoft Bow features a clean open-line bow design with a smooth gold finish for a soft, minimal look. With no stones and no extra sparkle, it’s perfect for anyone who wants a tiny feminine detail that blends effortlessly into an everyday ear stack.\n\nIt’s polished, lightweight-looking, and easy to style whether you wear it alone or pair it with more detailed pieces.\n\nWhy you’ll love it:\nMinimal open-line bow design\nSmooth gold finish\nNo stones for a clean, simple look\nDainty and feminine\nEasy to mix into curated ear stacks\nPerfect for everyday wear\n\nWhy titanium?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials:\nASTM F136 G23 Implant-grade titanium\nFinish: Gold PVD\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Minimal Ear Stacks • Curated Ear Stacks\n\nSoft lines. Tiny bow. Easy everyday styling. 🎀\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -1108,7 +1180,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573623947",
       "title": "Honey Bear Threadless Flatback Earring | Gold Bear Cartilage Stud | Titanium Labret Post | Dainty Cute Ear Jewelry",
-      "price": "14.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573623947/honey-bear-threadless-flatback-earring",
       "description": "Honey Bear 🍯🐻\n\nSweet, tiny, and full of charm.\n\nHoney Bear features a petite gold bear outline with a soft pink sparkling center stone for the cutest little pop of color. It’s playful, dainty, and easy to mix into a curated ear stack without feeling too busy.\n\nThis one has just enough personality to stand out while still keeping that soft, minimal look.\n\nWhy you’ll love it:\nPetite gold bear design\nSoft pink sparkling center stone\nCute without feeling overly juvenile\nDainty and lightweight look\nEasy to mix into curated ear stacks\nPerfect for everyday wear\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the cute, detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nPink sparkling center stone\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nSweet little bear. Tiny pink sparkle. Maximum charm. 🍯🐻\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -1141,7 +1213,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573632540",
       "title": "Double Diamond Run Threadless Flatback Earring | Gold Geometric Ear Climber | Titanium Labret Post | Ski Inspired Cartilage Jewelry",
-      "price": "15.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573632540/double-diamond-run-threadless-flatback",
       "description": "Double Diamond Run ⛷️✨\n\nInspired by steep lines, sharp edges, and a little mountain confidence, Double Diamond Run is a sleek geometric climber with a bold alpine feel.\n\nThe polished gold facets create a clean line that climbs along the ear, giving the piece a modern, slightly edgy look while still staying minimal enough for an everyday stack.\n\nIt’s a subtle nod to black-diamond runs, ski-town energy, and anyone who likes their jewelry with a little mountain attitude.\n\nWhy you’ll love it:\nGeometric ear climber design\nSki-inspired mountain vibe\nClean, polished gold finish\nMinimal but still distinctive\nEasy to pair with simple or layered stacks\nGreat for everyday wear\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Cartilage • Ear Climber Styling • Curated Ear Stacks\n\nSharp lines. Mountain energy. A little double-diamond attitude. ⛷️✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -1174,7 +1246,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573613361",
       "title": "Cherry Crush Threadless Flatback Earring | Pink & Clear Heart CZ Stud | Gold Bow Cartilage Earring | Titanium Labret Post",
-      "price": "14.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573613361/pinkie-bow-threadless-flatback-earring",
       "description": "Cherry Crush 🍒\n\nCherry Crush features two heart-shaped CZ stones styled like a tiny pair of cherries, with one sparkling clear CZ and one pink CZ for a fun mismatched pop of color. Finished with a petite gold bow detail, it gives your ear stack a cute romantic touch without feeling overdone.\n\nIt’s dainty, feminine, and perfect for anyone who likes their jewelry to be a little sweet treat.\n\nWhy you’ll love it:\nTwo heart-shaped CZ “cherries”\nOne clear CZ and one pink CZ\nPetite gold bow detail\nDainty, playful design\nAdds a soft pop of color\nEasy to mix into curated ear stacks\nPerfect for everyday wear\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the cute, detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nOne pink heart-shaped CZ\nOne clear heart-shaped CZ\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nTwo little hearts. One serious crush. 🍒💗\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -1240,7 +1312,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573623776",
       "title": "Midnight Battie Threadless Flatback Earring | Gold Bat Cartilage Stud | Titanium Labret Post | Sparkly Gothic Ear Jewelry",
-      "price": "14.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573623776/midnight-battie-threadless-flatback",
       "description": "A real baddie... I mean battie .... hehe 🦇✨\nlittle dark, a little sparkly, and ridiculously cute.\n\nMidnight Battie features a petite gold bat with sparkling CZ-covered wings, giving you the perfect mix of gothic and glam. It has just enough edge to stand out while still staying dainty enough for an everyday ear stack.\n\nThis one is made for the girls who like their jewelry a little moodier. \n\nWhy you’ll love it:\nPetite gold bat design\nSparkling CZ-accented wings\nGothic without feeling costume-y\nDainty enough for everyday wear\nEasy to mix into curated ear stacks\nPerfect for alt, goth, and edgy styling\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nClear CZ accents\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nA little midnight energy for your everyday stack. 🦇✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -1308,7 +1380,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573616908",
       "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
-      "price": "15.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573616908/little-orbit-threadless-flatback-earring",
       "description": "A tiny little universe for your ear stack.\n\nLittle Orbit features a polished gold center surrounded by a curved cluster of four sparkling CZ stones, creating the look of tiny stars orbiting around their own little golden planet.\n\nPetite, playful, and beautifully minimal, this piece adds just enough celestial sparkle to make your stack interesting without taking over.\n\nWhy you’ll love it\nPetite celestial-inspired design\nPolished gold center\nFour sparkling CZ accents\nDainty, minimal silhouette\nEasy to mix into curated ear stacks\nPerfect for everyday wear\n\nWhy ASTM F136 G23 titanium?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nImplant-grade titanium\nFinish: Gold PVD\nFour clear CZ stones\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nTiny orbit. Little sparkle. Big ear-stack energy. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -1342,7 +1414,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573594151",
       "title": "Lotus Glow Threadless Flatback Earring | Gold Lotus Cartilage Stud | Titanium Labret Post | Dainty Marquise CZ Jewelry",
-      "price": "14.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573594151/lotus-glow-threadless-flatback-earring",
       "description": "A delicate little lotus with just a touch of sparkle.\n\nLotus Glow features a petite gold lotus design with a single marquise-shaped CZ at the center, giving it a soft, luminous look without feeling too flashy. It’s dainty, feminine, and easy to style anywhere in a curated ear stack.\n\nThe open lotus shape keeps the piece feeling light and minimal, while the center stone adds just enough shine to catch the light.\n\nWhy you’ll love it\nPetite lotus-inspired design\nSingle marquise CZ center stone\nDainty, feminine silhouette\nLightweight and easy to style\nAdds subtle sparkle without overpowering your stack\nPerfect for everyday wear\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nMarquise-cut clear CZ\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nSoft shape. Tiny sparkle. A little golden glow. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -1375,7 +1447,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573481130",
       "title": "Mini Chic Dangle Threadless Flatback Earring | Dainty Gold Drop Earring | Titanium Labret Post | Minimal Cartilage Jewelry",
-      "price": "15.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573481130/mini-chic-dangle-threadless-flatback",
       "description": "For the minimalist.\nTiny, polished.\n\nMini Chic Dangle pairs a sleek gold bead with a round CZ stone followed by a dangling marquise-cut CZ stone, creating a delicate drop that catches the light with subtle movement.\n\nThis piece is perfect for anyone who wants a little movement and shine while still keeping their look clean and simple.\n\nWhy you’ll love it:\nPetite, lightweight dangle\nTwo delicate sparkling drops\nMinimal and polished look\nAdds movement without feeling bulky\nEasy to style in a curated ear stack\nPerfect for everyday wear\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nClear sparkling stones\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nLobe • Helix • Flat • Cartilage • Curated Ear Stacks\n\nSmall, chic, and made to move. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -1476,7 +1548,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573443638",
       "title": "Mountain Fox Threadless Flatback Earring | Gold Fox Cartilage Stud | Titanium Labret Post | Woodland Animal Jewelry",
-      "price": "14.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573443638/mountain-fox-threadless-flatback-earring",
       "description": "Inspired by the clever, quiet beauty of the fox, Mountain Fox brings a little woodland charm to your ear stack.\n\nThis delicate design features a sparkling fox face with marquise-cut stones that catch the light beautifully, giving the piece a soft, glimmering look while still feeling playful and refined. It’s dainty, eye-catching, and perfect for anyone who loves nature-inspired jewelry with a polished finish.\n\nClean, feminine, and easy to style, this piece adds a subtle outdoorsy touch without overpowering the rest of your stack.\n\nWhy you’ll love it\nFox-inspired design\nDainty but eye-catching sparkle\nNature-meets-polished styling\nEasy to mix into curated ear stacks\nPerfect for everyday wear\nA playful woodland touch with a refined look\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nA little wild, a little sparkly, and made to stand out in your stack. 🦊\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -1508,7 +1580,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4573438832",
       "title": "Alpen Glow Threadless Flatback Earring | Dainty Mountain Stud | Gold Cartilage Earring | Minimal Sparkle Helix Jewelry",
-      "price": "14.99",
+      "price": "16.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4573438832/alpen-glow-threadless-flatback-earring",
       "description": "Inspired by that soft glow that catches the mountains at sunrise and sunset, Alpen Glow is a delicate little flatback made for minimal ear stacks.\n\nThe geometric gold shape gives the feel of a tiny mountain peak, while the single sparkling stone adds just a hint of shimmer, like light catching fresh snow at the summit.\n\nDainty, clean, and easy to style, this piece adds a subtle outdoorsy touch without overpowering the rest of your stack.\n\nWhy you’ll love it\n\nDelicate mountain-inspired design\nTiny sparkling accent\nMinimal and lightweight look\nEasy to mix into curated ear stacks\nPerfect for everyday wear\nSubtle enough for a clean, polished stack\n\nWhat makes this piece a little different? The post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally handpicked and paired this decorative 316L surgical steel bow with a gold PVD implant-grade titanium flatback post to give you the cute designs you want while keeping a high quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a great option for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is an especially popular choice for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing, making it a great option for everyday wear.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel when the jewelry is inserted.\n\nMaterials\n\nDecorative bow: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nThreadless / pushpin design\nFlatback labret style\n\nPost Length Options\n\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for:\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nA little bow, a better post, and a whole lot of cute. 🎀\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -1639,80 +1711,6 @@ window.MICKNACK_PRODUCTS = {
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4576033359",
-      "title": "Lilac Drop Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4576033359/lilac-drop-ear-chain-30mm-gold-connector",
-      "description": "A little drape, a little sparkle, and a soft pop of lilac.\n\nLilac Drop features a delicate 2 mm wide / 18K Gold PVD Plated gold lip chain with a 30 mm center chain length There are 4 mm amethyst purple colored CZ stones arranged for a cascading look. Three stones dangle from the upper section, while a single stone drops from the lower end for an asymmetrical finish that gives the piece extra movement.\n\nIt’s feminine, lightweight-looking, and just different enough to make your ear stack feel styled without looking too busy.\n\nWhy you’ll love it:\n2 mm dainty gold chain\n30 mm center chain length\nFour 4 mm amethyst-colored CZ stones\nThree CZ dangles at the top\nOne CZ dangle at the bottom\nSoft draped movement\nEasy to style across multiple piercings\nAdds color without overwhelming your stack\nStyle it your way\n\nLilac Drop is designed to drape between compatible earrings, hoops, or flatback posts, giving you a soft layered look with movement and sparkle.\n\nThe lilac stones add just enough color to stand out while still pairing easily with gold, clear CZ, and other minimal pieces.\n\nMaterials\n2 mm gold chain\n30 mm center chain\nFour 4 mm amethyst-colored CZ stones\nGold-tone connecting loops\nMulti-point draped design\n\nPerfect for:\nHelix-to-lobe styling • Curated ear stacks • Dainty chain looks • Purple jewelry lovers\n\nSoft lilac sparkle with a little movement in every angle. 💜",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/3f3f24/8577000729/il_fullxfull.8577000729_f2zn.jpg",
-        "https://i.etsystatic.com/67609393/r/il/691bb5/8529138852/il_fullxfull.8529138852_d91y.jpg",
-        "https://i.etsystatic.com/67609393/r/il/1ffb9c/8529138842/il_fullxfull.8529138842_d4k6.jpg",
-        "https://i.etsystatic.com/67609393/r/il/abf4d8/8529138840/il_fullxfull.8529138840_7k0o.jpg"
-      ],
-      "video": "",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "gold ear chain",
-        "double drape chain",
-        "piercing chain",
-        "cartilage chain",
-        "non tarnish jewelry",
-        "multiple piercings"
-      ],
-      "quantity": 4,
-      "created": "2026-09-15T20:48:41.000Z",
-      "views": 48,
-      "num_favorers": 4,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z",
-      "etsy_state": "active"
-    },
-    {
-      "listing_id": "4571494427",
-      "title": "Drizzle Chain Ear Connector | 5A CZ Raindrop Earring Chain | Dainty Gold Ear Chain | Ear Stack Jewelry",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4571494427/drizzle-chain-ear-connector-5a-cz",
-      "description": "Drizzle Chain \nInspired by that fresh rain feeling after a light shower moves through the pine trees, the Drizzle Chain is all about soft sparkle, delicate movement, and a little bit of mountain air.\n\nFive 3 × 5 mm raindrop-shaped 5A CZ stones shimmer along a dainty 2 mm chain, catching the light like tiny drops of rain clinging to pine needles after a storm.\nFinished with petite 3 mm connecting loops on each end, Drizzle is intentionally lightweight and delicate, designed to add movement to your ear stack without looking bulky.\n\nDetails\nFive 3 × 5 mm raindrop-shaped 5A CZ stones\nDainty 2 mm chain, 30mm in length\nPetite 3 mm connecting loops on each end\nFive individual crystal drops\nLightweight, delicate design\n\nMade to connect between compatible earrings, hoops, or piercing jewelry\nBeautiful for conch, helix, cartilage, and other curated ear-stack combinations.\n\nThe stones move freely with the chain, creating a soft little shimmer with every turn like fresh rain sparkling on the pines.\n\nStyling idea: Drape it between two piercings for a subtle cascading look, or use it to add a little movement to an otherwise minimal stack.\n\nPlease note: This listing is for one Drizzle Chain. Earrings shown in styled photos are not included.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/51e709/8495611182/il_fullxfull.8495611182_5rxg.jpg",
-        "https://i.etsystatic.com/67609393/r/il/fe62ea/8543501357/il_fullxfull.8543501357_9jj1.jpg",
-        "https://i.etsystatic.com/67609393/r/il/46e35b/8495611180/il_fullxfull.8495611180_qab4.jpg",
-        "https://i.etsystatic.com/67609393/r/il/42d529/8495611174/il_fullxfull.8495611174_3smz.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/c0e3/f9c38fb3-c6a9-4588-b5fe-b97794dd1382/vid_v1.mp4",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "gold ear chain",
-        "double drape chain",
-        "piercing chain",
-        "cartilage chain",
-        "non tarnish jewelry",
-        "multiple piercings"
-      ],
-      "quantity": 5,
-      "created": "2026-09-08T19:59:35.000Z",
-      "views": 54,
-      "num_favorers": 6,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z",
-      "etsy_state": "active"
     },
     {
       "listing_id": "4579741852",
