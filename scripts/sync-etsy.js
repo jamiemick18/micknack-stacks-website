@@ -279,16 +279,41 @@ async function main() {
     seen.add(listing.listing_id);
   }
 
+  // A piece that sells its last one on Etsy does not appear in the active
+  // list at all: it simply vanishes, taking its real count with it, and the
+  // site carries on selling something there is none of. So anything that has
+  // dropped out gets asked after by name.
   let retired = 0;
+  let soldOut = 0;
   for (const [id, prior] of previous) {
     if (seen.has(id)) continue;
+
+    let state = prior.etsy_state || "";
+    let quantity = prior.quantity;
+    try {
+      const listing = await etsyGet(`/listings/${id}`);
+      state = listing.state || state;
+      if (typeof listing.quantity === "number") quantity = listing.quantity;
+    } catch (err) {
+      // A deleted listing answers 404 and there is nothing more to learn.
+      state = /404/.test(err.message) ? "gone" : state;
+    }
+
+    if (state === "sold_out") soldOut++;
+
     merged.push({
       ...prior,
+      quantity,
       etsy_active: false,
+      etsy_state: state,
       added_at: prior.added_at || now,
       left_etsy_at: prior.left_etsy_at || now,
     });
     retired++;
+  }
+
+  if (soldOut) {
+    console.log(`${soldOut} piece(s) sold out on Etsy and are now counted as none left.`);
   }
 
   if (retired) {

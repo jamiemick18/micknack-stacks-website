@@ -97,6 +97,7 @@ function state() {
       price: listing.price,
       image: (listing.images && listing.images[0]) || "",
       on_etsy: listing.etsy_active !== false,
+      etsy_state: listing.etsy_state || "",
       etsy_qty: listing.quantity,
       qty: saved.qty === undefined ? listing.quantity : saved.qty,
       hidden: Boolean(saved.hidden),
@@ -446,7 +447,10 @@ const server = createServer(async (req, res) => {
       const counts = readCounts();
       const moved = [];
       for (const listing of products.listings || []) {
-        if (listing.etsy_active === false) continue;
+        // A piece that left Etsy is skipped, with one exception: one that
+        // left because it sold out really is down to none, and that is the
+        // whole reason for pressing this.
+        if (listing.etsy_active === false && listing.etsy_state !== "sold_out") continue;
         const id = String(listing.listing_id);
         const was = counts[id];
         if (!was) {

@@ -389,7 +389,15 @@ function renderRows() {
     m.className = "meta";
     var bits = ["$" + p.price];
     if (p.source === "here") bits.push("only here");
-    else if (!p.on_etsy) bits.push("not on Etsy");
+    else if (!p.on_etsy) {
+      // Why it left Etsy matters: sold out is a fact about your stock,
+      // the others are decisions you made.
+      bits.push(p.etsy_state === "sold_out" ? "SOLD OUT on Etsy"
+        : p.etsy_state === "gone" ? "deleted from Etsy"
+        : p.etsy_state === "inactive" ? "switched off on Etsy"
+        : p.etsy_state === "expired" ? "expired on Etsy"
+        : "not on Etsy");
+    }
     else if (p.etsy_qty !== p.qty) bits.push("Etsy says " + p.etsy_qty);
     if (!p.buyable) bits.push("no Buy button yet");
     m.textContent = bits.join(" · ");

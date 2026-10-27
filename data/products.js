@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-27T17:37:17.297Z",
+  "synced_at": "2026-10-27T17:52:02.286Z",
   "listings": [
     {
       "listing_id": "4596333038",
@@ -1669,13 +1669,14 @@ window.MICKNACK_PRODUCTS = {
         "non tarnish jewelry",
         "multiple piercings"
       ],
-      "quantity": 1,
+      "quantity": 0,
       "created": "2026-09-15T20:48:41.000Z",
       "views": 48,
       "num_favorers": 4,
       "etsy_active": false,
       "added_at": "2026-09-30T19:35:47.289Z",
-      "left_etsy_at": "2026-10-24T20:39:05.088Z"
+      "left_etsy_at": "2026-10-24T20:39:05.088Z",
+      "etsy_state": "sold_out"
     },
     {
       "listing_id": "4571494427",
@@ -1706,13 +1707,14 @@ window.MICKNACK_PRODUCTS = {
         "non tarnish jewelry",
         "multiple piercings"
       ],
-      "quantity": 5,
+      "quantity": 0,
       "created": "2026-09-08T19:59:35.000Z",
       "views": 54,
       "num_favorers": 6,
       "etsy_active": false,
       "added_at": "2026-09-30T19:35:47.289Z",
-      "left_etsy_at": "2026-10-24T20:39:05.088Z"
+      "left_etsy_at": "2026-10-24T20:39:05.088Z",
+      "etsy_state": "sold_out"
     },
     {
       "listing_id": "4579741852",
@@ -1747,7 +1749,8 @@ window.MICKNACK_PRODUCTS = {
       "num_favorers": 0,
       "etsy_active": false,
       "added_at": "2026-09-30T19:35:47.289Z",
-      "left_etsy_at": "2026-10-23T01:20:53.342Z"
+      "left_etsy_at": "2026-10-23T01:20:53.342Z",
+      "etsy_state": "inactive"
     },
     {
       "listing_id": "4573433368",
@@ -1779,7 +1782,8 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 2,
       "etsy_active": false,
       "added_at": "2026-09-30T19:35:47.289Z",
-      "left_etsy_at": "2026-10-02T18:15:26.357Z"
+      "left_etsy_at": "2026-10-02T18:15:26.357Z",
+      "etsy_state": "gone"
     }
   ]
 };

@@ -36,8 +36,17 @@ window.MICKNACK_STOCK = {
     const inventory = window.MICKNACK_INVENTORY || {};
     const raw = inventory[key];
 
-    // A live count answers the only question the shop asks: can this be bought?
-    if (this.live && typeof this.live[key] === "number") {
+    // Jamie saying a piece is sold out is the end of the argument. The live
+    // count can be stale — a piece that sold its last one on Etsy leaves the
+    // worker's number untouched — and the harm runs one way: showing Sold Out
+    // on something still available costs a sale, while selling something that
+    // does not exist costs a customer.
+    const flaggedSoldOut =
+      raw === "sold_out" || Boolean(raw && typeof raw === "object" && raw.sold_out);
+
+    // Otherwise a live count answers the only question the shop asks: can
+    // this be bought?
+    if (!flaggedSoldOut && this.live && typeof this.live[key] === "number") {
       const qty = this.live[key];
       const hidden = Boolean(raw && typeof raw === "object" && raw.hidden) || raw === "hidden";
       return { qty, hidden, soldOut: qty <= 0, tracked: true };

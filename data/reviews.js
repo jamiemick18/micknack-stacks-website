@@ -7,7 +7,7 @@
 // No names and no buyer photos: Etsy does not provide a name, and the photos
 // belong to the buyers who took them.
 //
-// Last read from Etsy: 2026-10-27T17:37:17.297Z
+// Last read from Etsy: 2026-10-27T17:52:02.286Z
 window.MICKNACK_REVIEWS = {
   "count": 4,
   "average": 4.75,

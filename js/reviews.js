@@ -58,6 +58,22 @@
       </figure>`;
   }
 
+  // The browser restores its own idea of where the page was once everything
+  // has loaded, which undoes an early scroll. Saying "manual" tells it to
+  // leave that to us.
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
+  // Instantly, not smoothly. The page scrolls smoothly by default, which is
+  // right for a link you click but wrong here: this is thirteen thousand
+  // pixels of animation that each later attempt cancels halfway, so it ends
+  // up going nowhere at all.
+  function jumpHere() {
+    const go = () => host.scrollIntoView({ block: "start", behavior: "instant" });
+    requestAnimationFrame(go);
+    setTimeout(go, 400);
+    window.addEventListener("load", () => setTimeout(go, 100), { once: true });
+  }
+
   function render(all) {
     // Nothing worth showing yet: leave the quotes out rather than show an
     // empty shelf with a heading over it. The form still goes up, because a
@@ -124,6 +140,15 @@
 
     host.hidden = false;
     wireForm();
+
+    // Someone arriving from the Social menu asked for this section by name,
+    // but it was still hidden when the browser went looking for it, so the
+    // jump landed nowhere. Now that it is on the page, take them to it.
+    //
+    // Twice, a moment apart: the grid above is still growing as its photos
+    // arrive, and a page that grows under you leaves you short of where you
+    // asked to be. The second go lands it.
+    if (location.hash === "#reviews") jumpHere();
   }
 
   function wireForm() {
