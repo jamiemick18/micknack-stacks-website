@@ -15,16 +15,46 @@ anything below is when you want to change something yourself.
 Double-click the **Micknack Stacks HUB** icon on your desktop. A black window
 opens (leave it open) and your browser shows the HUB.
 
-There you can:
+It has four pages, along the top.
+
+### Welcome
+
+Where it opens. How many pieces you have, how many are in stock, sold out or
+hidden, and whether anything is waiting to be published.
+
+### Inventory
 
 - **Set how many you have** of each piece. Put a count in the box.
 - **Hide a piece** so it does not appear on the site at all.
 - **Say why**, when a piece is hidden or sold out, so you remember later.
+- **Search** by name, or show only the pieces that are off sale.
 
 A piece at **0** shows as *Sold Out* on the site, with no Buy button. A piece
 you hide is not shown at all.
 
-Then press **Save & publish**. The site updates in a minute or two.
+### Add a piece
+
+For something sold only here and never listed on Etsy. Fill in the name,
+price and how many you have, pick a photo, press **Add the piece**.
+
+It gets a Buy button automatically. Nothing reaches the website until you
+press **Save & publish**, so you can add several and publish once.
+
+The Etsy sync never touches these pieces.
+
+### Traffic
+
+Etsy views and favourites, visits to your own site, and which pieces people
+have hearted here — all anonymous.
+
+**Count the orders** asks Stripe and Etsy where your orders have shipped,
+keeping the two apart, and tells you whether anything needs doing about sales
+tax. It takes a few seconds because it is asking them live.
+
+---
+
+When you have made changes, press **Save & publish**. The site updates in a
+minute or two.
 
 *Save* on its own keeps your changes on this computer without touching the
 website — useful if you are halfway through counting.

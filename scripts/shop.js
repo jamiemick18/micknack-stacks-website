@@ -10,7 +10,11 @@
 // Nothing here phones home. No account, no subscription, no service that can
 // decide to stop existing. Start it, use it, close it.
 //
-//   npm run shop        (or double-click shop.cmd)
+//   npm run shop        (or the bear icon on the desktop)
+//
+// Four pages: a welcome screen, the inventory, a form for adding a piece
+// that was never on Etsy, and the traffic and sales figures. The page itself
+// lives in hub-page.js; this file is the plumbing behind it.
 //
 // Two files hold the answer between runs:
 //
@@ -24,11 +28,15 @@
 //                           cannot refill from Etsy.
 
 import { createServer } from "node:http";
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
-import { join, dirname } from "node:path";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, mkdtempSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join, dirname, extname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createContext, runInContext } from "node:vm";
 import { execFileSync, spawn } from "node:child_process";
+import { page } from "./hub-page.js";
+
+const WORKER = "https://micknack-checkout.jamie-mick18.workers.dev";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -167,12 +175,23 @@ function git(...args) {
   return execFileSync("git", args, { cwd: ROOT, encoding: "utf8" }).trim();
 }
 
+// Everything the HUB is allowed to change. Adding a piece writes the catalog
+// entry, its photo and its Buy link, so publishing has to carry those too —
+// and nothing else, so a half-finished edit elsewhere in the folder cannot
+// ride along by accident.
+const HUB_FILES = [
+  "data/inventory.js",
+  "data/extra-products.js",
+  "data/stripe-links.js",
+  "assets/products",
+];
+
 function publish() {
-  const changed = git("status", "--porcelain", "--", "data/inventory.js");
+  const changed = git("status", "--porcelain", "--", ...HUB_FILES);
   if (!changed) return { ok: true, message: "Nothing to publish — the site already matches." };
 
-  git("add", "data/inventory.js");
-  git("commit", "-m", "Update what's sold out and hidden");
+  git("add", ...HUB_FILES);
+  git("commit", "-m", "Update the shop from the HUB");
 
   try {
     git("push", "origin", "main");
@@ -185,221 +204,176 @@ function publish() {
 }
 
 // ---------------------------------------------------------------------------
-// The page itself. Built here rather than kept as a file in the repo, because
-// every file in the repo is published to the open web and this one is nobody
-// else's business.
+// Traffic: how many people looked, and at what.
 // ---------------------------------------------------------------------------
 
-function page() {
-  return `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Micknack Stacks HUB</title>
-<style>
-  :root {
-    --ink: #0f0d0b; --paper: #faf6ef; --card: #fffaf4;
-    --gold: #b78436; --line: rgba(15,13,11,.13); --muted: #6b6259;
+async function traffic() {
+  const products = windowFile("data/products.js", "MICKNACK_PRODUCTS") || {};
+  const extras = windowFile("data/extra-products.js", "MICKNACK_EXTRA_PRODUCTS") || [];
+  const listings = products.listings || [];
+
+  let stats = { views: 0, favourites: 0 };
+  const statsPath = join(ROOT, "data", "etsy-stats.json");
+  if (existsSync(statsPath)) {
+    try {
+      stats = JSON.parse(readFileSync(statsPath, "utf8"));
+    } catch (err) {
+      /* a half-written file is not worth crashing over */
+    }
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--paper); color: var(--ink);
-    font: 15px/1.5 "Helvetica Neue", Arial, sans-serif;
-  }
-  header {
-    position: sticky; top: 0; z-index: 5; background: var(--paper);
-    border-bottom: 1px solid var(--line); padding: 16px 20px;
-    display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
-  }
-  h1 {
-    font: 400 1.15rem/1 "Cormorant Garamond", Georgia, serif;
-    letter-spacing: .16em; text-transform: uppercase; margin: 0; flex: 1;
-  }
-  .count { color: var(--muted); font-size: .8rem; }
-  button {
-    font: inherit; border-radius: 999px; padding: 9px 18px; cursor: pointer;
-    border: 1px solid var(--ink); background: var(--ink); color: var(--paper);
-  }
-  button.ghost { background: none; color: var(--ink); }
-  button:disabled { opacity: .4; cursor: default; }
-  #note { padding: 0 20px; color: var(--muted); font-size: .85rem; min-height: 22px; }
-  main { padding: 12px 20px 60px; display: grid; gap: 10px; }
-  .row {
-    background: var(--card); border: 1px solid var(--line); border-radius: 4px;
-    padding: 10px 12px; display: grid;
-    grid-template-columns: 54px 1fr auto auto auto; gap: 12px; align-items: center;
-  }
-  .row.off { opacity: .5; }
-  img { width: 54px; height: 54px; object-fit: cover; border-radius: 3px; background: #eee; }
-  .title { font-size: .92rem; }
-  .meta { color: var(--muted); font-size: .75rem; margin-top: 2px; }
-  .note {
-    display: none; margin-top: 6px; width: 100%; max-width: 440px;
-    font: inherit; font-size: .8rem; padding: 5px 8px; background: #fff;
-    border: 1px solid var(--line); border-radius: 3px;
-  }
-  .warn { color: #9a3412; }
-  input[type=number] {
-    width: 68px; padding: 7px 8px; font: inherit; text-align: center;
-    border: 1px solid var(--line); border-radius: 3px; background: #fff;
-  }
-  .pill {
-    font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
-    border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px;
-    color: var(--muted); white-space: nowrap;
-  }
-  .pill.sold { color: #9a3412; border-color: #9a3412; }
-  @media (max-width: 720px) {
-    .row { grid-template-columns: 44px 1fr auto; }
-    img { width: 44px; height: 44px; }
-    .pill { display: none; }
-  }
-</style>
-</head>
-<body>
-<header>
-  <h1>Micknack Stacks HUB</h1>
-  <span class="count" id="summary"></span>
-  <button class="ghost" id="revert">Undo changes</button>
-  <button id="save">Save</button>
-  <button id="publish">Save &amp; publish</button>
-</header>
-<p id="note">Loading…</p>
-<main id="list"></main>
 
-<script>
-let pieces = [];
-let original = "";
-
-const note = (text, bad) => {
-  const el = document.getElementById("note");
-  el.textContent = text;
-  el.className = bad ? "warn" : "";
-};
-
-function summarise() {
-  const sold = pieces.filter(p => !p.hidden && Number(p.qty) <= 0).length;
-  const hidden = pieces.filter(p => p.hidden).length;
-  document.getElementById("summary").textContent =
-    pieces.length + " pieces · " + sold + " sold out · " + hidden + " hidden";
-}
-
-function render() {
-  const list = document.getElementById("list");
-  list.innerHTML = "";
-  for (const p of pieces) {
-    const row = document.createElement("div");
-    row.className = "row" + (p.hidden ? " off" : "");
-
-    const img = document.createElement("img");
-    img.src = p.image; img.alt = "";
-    img.onerror = () => { img.style.visibility = "hidden"; };
-
-    const cell = document.createElement("div");
-    const title = document.createElement("div");
-    title.className = "title";
-    title.textContent = p.title.split("|")[0].trim();
-    const meta = document.createElement("div");
-    meta.className = "meta";
-    const bits = ["$" + p.price];
-    if (!p.on_etsy) bits.push("not on Etsy");
-    else if (p.etsy_qty !== p.qty) bits.push("Etsy says " + p.etsy_qty);
-    if (!p.buyable) bits.push("no Buy button yet");
-    meta.textContent = bits.join(" · ");
-    cell.append(title, meta);
-
-    const qty = document.createElement("input");
-    qty.type = "number"; qty.min = "0"; qty.value = p.qty;
-    qty.title = "How many you have";
-    qty.addEventListener("input", () => { p.qty = Number(qty.value); summarise(); paint(row, p); });
-
-    const pill = document.createElement("span");
-    pill.className = "pill";
-
-    const hide = document.createElement("button");
-    hide.className = "ghost";
-    hide.addEventListener("click", () => {
-      p.hidden = !p.hidden;
-      row.className = "row" + (p.hidden ? " off" : "");
-      paint(row, p); summarise();
-    });
-
-    const note = document.createElement("input");
-    note.type = "text";
-    note.className = "note";
-    note.placeholder = "why? (optional — kept with the piece)";
-    note.value = p.note || "";
-    note.addEventListener("input", () => { p.note = note.value; });
-    cell.append(note);
-
-    row.append(img, cell, qty, pill, hide);
-    list.append(row);
-    paint(row, p);
-  }
-  summarise();
-}
-
-function paint(row, p) {
-  const pill = row.querySelector(".pill");
-  const hide = row.querySelector("button");
-  // The note only matters for a piece that is off sale, so it only appears
-  // then rather than putting an empty box against all fifty-three.
-  const off = p.hidden || Number(p.qty) <= 0;
-  row.querySelector(".note").style.display = off ? "block" : "none";
-  hide.textContent = p.hidden ? "Show" : "Hide";
-  if (p.hidden) { pill.textContent = "hidden"; pill.className = "pill"; }
-  else if (Number(p.qty) <= 0) { pill.textContent = "sold out"; pill.className = "pill sold"; }
-  else { pill.textContent = "on sale"; pill.className = "pill"; }
-}
-
-async function load() {
-  const res = await fetch("/api/state");
-  const data = await res.json();
-  pieces = data.pieces;
-  original = JSON.stringify(pieces);
-  render();
-  note("Set a count, or hide a piece. Nothing reaches the website until you publish.");
-}
-
-function body() {
-  const items = {};
-  for (const p of pieces) {
-    items[p.id] = { qty: Number(p.qty), hidden: Boolean(p.hidden) };
-    if (p.note) items[p.id].note = p.note;
-  }
-  return JSON.stringify({ items });
-}
-
-async function send(path, label) {
-  for (const b of document.querySelectorAll("header button")) b.disabled = true;
-  note(label + "…");
+  // The worker is the only thing that knows about visits and hearts. It is
+  // usually there; when it is not, say so rather than showing a confident
+  // zero that means "could not ask".
+  let views = null;
+  let hearts = {};
+  let workerError = false;
   try {
-    const res = await fetch(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: body() });
-    const data = await res.json();
-    note(data.message, !data.ok);
-    if (data.ok) original = JSON.stringify(pieces);
+    const [v, h] = await Promise.all([
+      fetch(`${WORKER}/views`).then((r) => r.json()),
+      fetch(`${WORKER}/hearts`).then((r) => r.json()),
+    ]);
+    views = v;
+    hearts = h.counts || {};
   } catch (err) {
-    note("That did not work: " + err.message, true);
+    workerError = true;
   }
-  for (const b of document.querySelectorAll("header button")) b.disabled = false;
+
+  if (!views) {
+    const local = join(ROOT, "data", "site-views.json");
+    views = existsSync(local) ? JSON.parse(readFileSync(local, "utf8")) : { site: 0 };
+  }
+
+  const titleOf = (id) => {
+    const listing = listings.find((l) => String(l.listing_id) === id);
+    if (listing) return listing.title.split("|")[0].trim();
+    const extra = extras.find((e) => String(e.id) === id);
+    return extra ? extra.title.split("|")[0].trim() : id;
+  };
+
+  return {
+    etsy_views: stats.views || 0,
+    etsy_favourites: stats.favourites || 0,
+    site_views: views.site || 0,
+    site_hearts: Object.values(hearts).reduce((sum, n) => sum + n, 0),
+    worker_error: workerError,
+    hearted: Object.entries(hearts)
+      .map(([id, n]) => ({ title: titleOf(id), hearts: n }))
+      .sort((a, b) => b.hearts - a.hearts)
+      .slice(0, 10),
+    top: listings
+      .filter((l) => l.etsy_active !== false)
+      .map((l) => ({
+        title: l.title.split("|")[0].trim(),
+        views: l.views || 0,
+        favourites: l.num_favorers || 0,
+      }))
+      .sort((a, b) => b.views - a.views)
+      .slice(0, 10),
+  };
 }
 
-document.getElementById("save").addEventListener("click", () => send("/api/save", "Saving"));
-document.getElementById("publish").addEventListener("click", () => send("/api/publish", "Publishing"));
-document.getElementById("revert").addEventListener("click", () => {
-  pieces = JSON.parse(original); render();
-  note("Back to the last saved version.");
-});
+// Where the orders went. The counting lives in sales-by-state.js so that it
+// can also be run on its own from a terminal; here it is run the same way and
+// its answer read back.
+function sales() {
+  const dir = mkdtempSync(join(tmpdir(), "hub-sales-"));
+  try {
+    execFileSync(process.execPath, [join(__dirname, "sales-by-state.js"), dir], {
+      cwd: ROOT,
+      encoding: "utf8",
+      timeout: 120000,
+    });
+    const report = JSON.parse(readFileSync(join(dir, "sales-by-state.json"), "utf8"));
+    const etsyHome = (report.etsy.by_place || {}).CO;
+    return {
+      ok: true,
+      report,
+      aside: etsyHome
+        ? `${etsyHome.orders} Colorado order(s) came through Etsy, which collected the tax on them.`
+        : "",
+    };
+  } catch (err) {
+    return { ok: false, message: `Could not count the orders: ${err.message}` };
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+}
 
-window.addEventListener("beforeunload", (e) => {
-  if (JSON.stringify(pieces) !== original) { e.preventDefault(); e.returnValue = ""; }
-});
+// ---------------------------------------------------------------------------
+// Adding a piece that was never on Etsy
+// ---------------------------------------------------------------------------
 
-load();
-</script>
-</body>
-</html>`;
+const IMAGE_TYPES = { ".jpg": 1, ".jpeg": 1, ".png": 1, ".webp": 1, ".gif": 1 };
+
+function slugify(text) {
+  return String(text)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 48) || "piece";
+}
+
+function addPiece({ title, price, qty, description, badge, photo }) {
+  if (!String(title || "").trim()) throw new Error("It needs a name.");
+  if (!/^\d+(\.\d{1,2})?$/.test(String(price || "").trim())) {
+    throw new Error("The price should be a number like 19.99, with no dollar sign.");
+  }
+
+  const extras = windowFile("data/extra-products.js", "MICKNACK_EXTRA_PRODUCTS") || [];
+  const products = windowFile("data/products.js", "MICKNACK_PRODUCTS") || {};
+
+  let id = slugify(title);
+  const taken = new Set([
+    ...extras.map((e) => String(e.id)),
+    ...(products.listings || []).map((l) => String(l.listing_id)),
+  ]);
+  let n = 2;
+  while (taken.has(id)) id = `${slugify(title)}-${n++}`;
+
+  // The photo is written into the same folder every other product photo
+  // lives in, so the site finds it with no extra step.
+  let imagePath = "";
+  if (photo && photo.data) {
+    const ext = extname(photo.name || "").toLowerCase();
+    if (!IMAGE_TYPES[ext]) throw new Error("That photo needs to be a jpg, png, webp or gif.");
+    const buffer = Buffer.from(photo.data, "base64");
+    if (buffer.length > 8e6) throw new Error("That photo is bigger than 8MB. Shrink it first.");
+    mkdirSync(join(ROOT, "assets", "products"), { recursive: true });
+    imagePath = `assets/products/${id}${ext}`;
+    writeFileSync(join(ROOT, imagePath), buffer);
+  }
+
+  const entry =
+    "  {\n" +
+    `    id: ${JSON.stringify(id)},\n` +
+    `    title: ${JSON.stringify(String(title).trim())},\n` +
+    `    price: ${JSON.stringify(String(price).trim())},\n` +
+    (description ? `    description: ${JSON.stringify(String(description).trim())},\n` : "") +
+    (imagePath ? `    images: [${JSON.stringify(imagePath)}],\n` : "") +
+    `    url: "",\n` +
+    (badge ? `    badge: ${JSON.stringify(String(badge).trim())},\n` : "") +
+    "  },\n";
+
+  const path = join(ROOT, "data", "extra-products.js");
+  const original = readFileSync(path, "utf8");
+  const crlf = original.includes("\r\n");
+  let file = original.replace(/\r\n/g, "\n");
+  const anchor = "window.MICKNACK_EXTRA_PRODUCTS = [\n";
+  if (!file.includes(anchor)) throw new Error("data/extra-products.js does not look like itself.");
+  file = file.replace(anchor, anchor + entry);
+  writeFileSync(path, crlf ? file.replace(/\n/g, "\r\n") : file);
+
+  // It needs a count like anything else, or the site has no idea whether it
+  // is in stock.
+  const counts = readCounts();
+  counts[id] = { qty: Number(qty) || 0, hidden: false };
+  writeFileSync(
+    COUNTS_PATH,
+    JSON.stringify({ items: counts, updated_at: new Date().toISOString() }, null, 1) + "\n"
+  );
+
+  return { id, imagePath };
 }
 
 // ---------------------------------------------------------------------------
@@ -409,7 +383,9 @@ function readBody(req) {
     let raw = "";
     req.on("data", (chunk) => {
       raw += chunk;
-      if (raw.length > 2e6) reject(new Error("too much data"));
+      // Generous, because a photo arrives here as base64, which is a third
+      // bigger again than the file on disk.
+      if (raw.length > 16e6) reject(new Error("That is too big to send at once."));
     });
     req.on("end", () => {
       try {
@@ -448,6 +424,45 @@ const server = createServer(async (req, res) => {
       const { items } = await readBody(req);
       save(items || {});
       return json(200, publish());
+    }
+
+    if (req.url === "/api/traffic") return json(200, await traffic());
+
+    if (req.url === "/api/sales") return json(200, sales());
+
+    if (req.url === "/api/add" && req.method === "POST") {
+      const form = await readBody(req);
+      const { id } = addPiece(form);
+      // A piece nobody can buy is not much use, so it gets its Stripe link
+      // here. Nothing is sent to the website, though: the form promises that
+      // publishing is a separate decision, and it should stay one.
+      let linked = "";
+      try {
+        execFileSync(process.execPath, [join(__dirname, "create-stripe-links.js"), "--live"], {
+          cwd: ROOT,
+          encoding: "utf8",
+          timeout: 120000,
+        });
+        linked = " with a Buy button";
+      } catch (err) {
+        linked = ", though its Buy button could not be made yet";
+      }
+      return json(200, {
+        ok: true,
+        message: `Added "${form.title}"${linked}. Press Save & publish to put it on the website.`,
+        id,
+      });
+    }
+
+    // The bear, for the tab and the page's own header.
+    if (req.url === "/icon.ico" || req.url === "/icon.png") {
+      const file = req.url.endsWith(".ico")
+        ? join(ROOT, "assets", "micknack-bear.ico")
+        : join(ROOT, "assets", "emblem-bear-moon.png");
+      if (existsSync(file)) {
+        res.writeHead(200, { "Content-Type": req.url.endsWith(".ico") ? "image/x-icon" : "image/png" });
+        return res.end(readFileSync(file));
+      }
     }
 
     res.writeHead(404).end("Not here");
