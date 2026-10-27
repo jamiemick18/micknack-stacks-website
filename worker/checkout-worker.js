@@ -485,6 +485,116 @@ async function handleReviewAdmin(request, env, cors) {
   return json({ ok: true, status: review.status }, 200, cors);
 }
 
+// ------------------------------------------------------------- phone hub ----
+
+// What Jamie can see from her phone, away from the computer.
+//
+// Everything here is read-only except approving a review, which is the one
+// thing worth doing from a sofa. Setting counts and publishing stay on the
+// desktop, where there is a keyboard and where git lives.
+//
+// One password, held as a secret on the worker and never in the page. It is
+// checked on every call rather than swapped for a session, because a session
+// is a thing that can be stolen and this is a one-person shop.
+
+async function hubGuard(request, env) {
+  if (!env.HUB_PASSWORD) return { ok: false, status: 503, error: "No phone password set yet." };
+
+  let body;
+  try {
+    body = await request.json();
+  } catch (err) {
+    return { ok: false, status: 400, error: "Could not read that." };
+  }
+
+  const given = String(body.pass || "");
+  // Slow down guessing without locking Jamie out: a wrong password costs a
+  // second, which is nothing once and hopeless at scale.
+  if (given.length !== env.HUB_PASSWORD.length || given !== env.HUB_PASSWORD) {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    return { ok: false, status: 401, error: "That password is not right." };
+  }
+  return { ok: true, body };
+}
+
+async function hubSummary(env) {
+  const [views, hearts, reviews] = await Promise.all([
+    readViews(env),
+    readHearts(env),
+    readReviews(env, { approvedOnly: false }),
+  ]);
+
+  const stock = await allStock(env);
+  const counts = Object.values(stock);
+
+  let money = null;
+  if (env.STRIPE_SECRET_KEY) {
+    try {
+      const res = await fetch("https://api.stripe.com/v1/balance", {
+        headers: { Authorization: `Bearer ${env.STRIPE_SECRET_KEY}` },
+      });
+      const balance = await res.json();
+      if (!balance.error) {
+        const sum = (rows) => (rows || []).reduce((total, row) => total + (row.amount || 0), 0);
+        money = { available: sum(balance.available), pending: sum(balance.pending) };
+      }
+    } catch (err) {
+      /* Stripe being unreachable is not a reason to show nothing else */
+    }
+  }
+
+  return {
+    views,
+    hearts: Object.entries(hearts)
+      .map(([piece, count]) => ({ piece, count }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 10),
+    total_hearts: Object.values(hearts).reduce((sum, n) => sum + n, 0),
+    reviews_waiting: reviews.filter((review) => review.status !== "approved").length,
+    reviews_live: reviews.filter((review) => review.status === "approved").length,
+    tracked: counts.length,
+    sold_out: counts.filter((qty) => qty <= 0).length,
+    low: counts.filter((qty) => qty > 0 && qty <= 1).length,
+    money,
+  };
+}
+
+async function handleHub(request, env, cors) {
+  const guard = await hubGuard(request, env);
+  if (!guard.ok) return json({ error: guard.error }, guard.status, cors);
+
+  const { body } = guard;
+  const action = String(body.action || "summary");
+
+  if (action === "summary") return json({ ok: true, summary: await hubSummary(env) }, 200, cors);
+
+  if (action === "reviews") {
+    return json({ ok: true, reviews: await readReviews(env, { approvedOnly: false }) }, 200, cors);
+  }
+
+  if (action === "review") {
+    const id = cleanText(body.id, 64);
+    const verb = cleanText(body.do, 20);
+    const key = `review:${id}`;
+    const raw = await env.STOCK.get(key);
+    if (!raw) return json({ error: "That review is not here." }, 404, cors);
+
+    if (verb === "delete") {
+      await env.STOCK.delete(key);
+      return json({ ok: true }, 200, cors);
+    }
+    if (verb !== "approve" && verb !== "hide") {
+      return json({ error: "Approve, hide or delete." }, 400, cors);
+    }
+    const review = JSON.parse(raw);
+    review.status = verb === "approve" ? "approved" : "pending";
+    await env.STOCK.put(key, JSON.stringify(review));
+    return json({ ok: true }, 200, cors);
+  }
+
+  return json({ error: "Not something this does." }, 400, cors);
+}
+
 // -------------------------------------------------------------- checkout ----
 
 async function handleCheckout(request, env, cors, origin) {
@@ -634,6 +744,12 @@ export default {
     if (path === "/reviews" && request.method === "POST") {
       if (!env.STOCK) return json({ error: "Reviews aren't set up yet." }, 500, cors);
       return handleReview(request, env, cors);
+    }
+
+    // Jamie's phone. One password, checked on every call.
+    if (path === "/hub" && request.method === "POST") {
+      if (!env.STOCK) return json({ error: "No store bound." }, 500, cors);
+      return handleHub(request, env, cors);
     }
 
     if (path === "/reviews/admin" && (request.method === "GET" || request.method === "POST")) {
