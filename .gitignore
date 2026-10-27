@@ -5,3 +5,6 @@ node_modules/
 # Source artwork kept in this folder for convenience, not part of the site.
 # The banner the site actually uses lives in assets/.
 /Micknack*.png
+
+# The real stock counts. Private: the public site never needs them.
+data/stock-counts.json

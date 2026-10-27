@@ -7,7 +7,9 @@
   "scripts": {
     "sync": "node scripts/sync-etsy.js",
     "serve": "node scripts/serve.js",
-    "stripe-links": "node scripts/create-stripe-links.js"
+    "stripe-links": "node scripts/create-stripe-links.js",
+    "shop": "node scripts/shop.js",
+    "sales": "node scripts/sales-by-state.js"
   },
   "engines": {
     "node": ">=18"
