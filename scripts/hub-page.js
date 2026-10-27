@@ -102,6 +102,14 @@ export function page() {
   }
   .tile.warn { border-color: var(--gold); }
   .tile.warn .n { color: var(--gold); }
+  a.tile { text-decoration: none; color: inherit; display: block; }
+  a.tile.go:hover { border-color: var(--gold); }
+  a.tile.go:hover .chev { opacity: 1; transform: translateX(2px); }
+  .chev { opacity: .45; display: inline-block; transition: transform .12s ease; }
+  .showing {
+    font-size: .8rem; color: var(--muted);
+  }
+  .showing a { color: var(--gold); }
   .doors { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin-top: 8px; }
   .door {
     display: block; text-decoration: none; color: inherit;
@@ -285,6 +293,7 @@ export function page() {
     <div class="tools">
       <input type="search" id="find" placeholder="Find a piece…" />
       <button class="ghost" id="only-off">Only off sale</button>
+      <span class="showing" id="showing" hidden></span>
       <button class="ghost" id="match-etsy" title="Bring your counts in line with what Etsy has">Match Etsy</button>
     </div>
     <div class="rows" id="rows"></div>
@@ -344,7 +353,12 @@ export function page() {
 </main>
 
 <script>
-var pieces = [], original = "", onlyOff = false, salesLoaded = false;
+var pieces = [], original = "", salesLoaded = false;
+
+/* What the inventory list is narrowed to: "" everything, "off" anything not
+   for sale, "sold" sold out only, "hidden" hidden only. The Welcome tiles
+   set it, which is the whole point of a number you can click. */
+var filter = "";
 
 function note(text, bad) {
   var el = document.getElementById("note");
@@ -362,6 +376,10 @@ function show(name) {
   if (el) el.classList.add("on");
   var links = document.querySelectorAll("nav a");
   for (var j = 0; j < links.length; j++) links[j].classList.toggle("on", links[j].dataset.view === name);
+  // The list has to be drawn again on arrival: a Welcome tile sets the
+  // filter on its way here, and the view would otherwise still show whatever
+  // it showed last time.
+  if (name === "inventory") renderRows();
   if (name === "traffic" && !salesLoaded) loadTraffic();
   if (name === "reviews") loadReviews();
   if (name === "home") { paintHome(); loadMoney(); }
@@ -398,11 +416,25 @@ function paint(row, p) {
 function renderRows() {
   var host = document.getElementById("rows");
   host.innerHTML = "";
+
+  // Say what is being left out, and offer the way back. A filtered list that
+  // does not announce itself reads as a shop that has lost most of its stock.
+  var names = { off: "not for sale", sold: "sold out", hidden: "hidden" };
+  var tag = document.getElementById("showing");
+  tag.hidden = !filter;
+  if (filter) tag.innerHTML = "Showing <b>" + names[filter] + "</b> only &nbsp;<a href='#' id='clear-filter'>show all</a>";
+  document.getElementById("only-off").textContent = filter === "off" ? "Show everything" : "Only off sale";
+  var clear = document.getElementById("clear-filter");
+  if (clear) clear.addEventListener("click", function (e) { e.preventDefault(); filter = ""; renderRows(); });
+
   var q = document.getElementById("find").value.trim().toLowerCase();
   for (var i = 0; i < pieces.length; i++) {
     var p = pieces[i];
     if (q && p.title.toLowerCase().indexOf(q) === -1) continue;
-    if (onlyOff && !(p.hidden || Number(p.qty) <= 0)) continue;
+    var soldOut = !p.hidden && Number(p.qty) <= 0;
+    if (filter === "off" && !(p.hidden || soldOut)) continue;
+    if (filter === "sold" && !soldOut) continue;
+    if (filter === "hidden" && !p.hidden) continue;
 
     var row = document.createElement("div");
     var img = document.createElement("img");
@@ -464,17 +496,29 @@ function renderRows() {
 function paintHome() {
   var s = summary();
   var tiles = [
-    { n: s.total, k: "pieces" },
+    { n: s.total, k: "pieces", to: "all" },
     { n: s.stock, k: "in stock" },
-    { n: s.sold, k: "sold out", warn: s.sold > 0 },
-    { n: s.hidden, k: "hidden" }
+    { n: s.sold, k: "sold out", warn: s.sold > 0, to: "sold" },
+    { n: s.hidden, k: "hidden", to: "hidden" }
   ];
   var host = document.getElementById("home-tiles");
   host.innerHTML = "";
   for (var i = 0; i < tiles.length; i++) {
-    var d = document.createElement("div");
-    d.className = "tile" + (tiles[i].warn ? " warn" : "");
-    d.innerHTML = "<span class='n'>" + tiles[i].n + "</span><span class='k'>" + tiles[i].k + "</span>";
+    var t = tiles[i];
+    // A number worth reacting to should take you to the thing it counts.
+    // A zero takes you nowhere, because there is nothing to look at.
+    var clickable = t.to && t.n > 0;
+    var d = document.createElement(clickable ? "a" : "div");
+    d.className = "tile" + (t.warn ? " warn" : "") + (clickable ? " go" : "");
+    if (clickable) {
+      d.href = "#/inventory";
+      d.title = "Show " + t.k;
+      d.addEventListener("click", (function (to) {
+        return function () { filter = to === "all" ? "" : to; };
+      })(t.to));
+    }
+    d.innerHTML = "<span class='n'>" + t.n + "</span><span class='k'>" + t.k +
+      (clickable ? " <span class='chev'>&rsaquo;</span>" : "") + "</span>";
     host.appendChild(d);
   }
   var dirty = JSON.stringify(pieces) !== original;
@@ -746,8 +790,7 @@ document.getElementById("match-etsy").addEventListener("click", function () {
 
 document.getElementById("find").addEventListener("input", renderRows);
 document.getElementById("only-off").addEventListener("click", function () {
-  onlyOff = !onlyOff;
-  this.textContent = onlyOff ? "Show everything" : "Only off sale";
+  filter = filter === "off" ? "" : "off";
   renderRows();
 });
 
