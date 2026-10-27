@@ -8,3 +8,6 @@ node_modules/
 
 # The real stock counts. Private: the public site never needs them.
 data/stock-counts.json
+
+# Which of your own orders have gone out. Private, like the counts.
+data/shipped.json

@@ -401,6 +401,136 @@ async function etsyMoney() {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Orders still to go out.
+// ---------------------------------------------------------------------------
+//
+// Etsy knows which of its own orders are unshipped, so it is simply asked.
+// Stripe does not — it takes money and has no idea whether anything was
+// posted — so orders taken here are marked off in a file of their own.
+
+const SHIPPED_PATH = join(ROOT, "data", "shipped.json");
+
+function readShipped() {
+  if (!existsSync(SHIPPED_PATH)) return {};
+  try {
+    return JSON.parse(readFileSync(SHIPPED_PATH, "utf8")).orders || {};
+  } catch (err) {
+    return {};
+  }
+}
+
+function markShipped(id, shipped) {
+  const orders = readShipped();
+  if (shipped) orders[id] = new Date().toISOString().slice(0, 10);
+  else delete orders[id];
+  writeFileSync(SHIPPED_PATH, JSON.stringify({ orders, updated_at: new Date().toISOString() }, null, 1) + "\n");
+}
+
+async function orders() {
+  const out = { etsy: { ok: false, open: [] }, site: { ok: false, open: [] } };
+
+  // ---- Etsy ----
+  const apiKey = envValue("ETSY_API_KEY");
+  const refresh = envValue("ETSY_REFRESH_TOKEN");
+  if (apiKey && refresh) {
+    try {
+      const tokenRes = await fetch("https://api.etsy.com/v3/public/oauth/token", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          grant_type: "refresh_token",
+          client_id: apiKey.split(":")[0],
+          refresh_token: refresh,
+        }),
+      });
+      const token = await tokenRes.json();
+      if (token.error) throw new Error(token.error);
+
+      const shopId = envValue("ETSY_SHOP_ID") || "67609393";
+      const res = await fetch(
+        `https://api.etsy.com/v3/application/shops/${shopId}/receipts?limit=100&was_shipped=false`,
+        { headers: { "x-api-key": apiKey, Authorization: `Bearer ${token.access_token}` } }
+      );
+      if (!res.ok) throw new Error(`Etsy answered ${res.status}`);
+      const body = await res.json();
+
+      out.etsy = {
+        ok: true,
+        open: (body.results || [])
+          .filter((receipt) => !receipt.is_shipped && receipt.is_paid)
+          .map((receipt) => ({
+            id: String(receipt.receipt_id),
+            at: new Date((receipt.created_timestamp || 0) * 1000).toISOString().slice(0, 10),
+            name: receipt.name || "",
+            where: [receipt.city, receipt.state, receipt.country_iso].filter(Boolean).join(", "),
+            cents:
+              receipt.grandtotal && receipt.grandtotal.divisor
+                ? Math.round((receipt.grandtotal.amount / receipt.grandtotal.divisor) * 100)
+                : 0,
+            items: (receipt.transactions || []).map((line) => ({
+              title: (line.title || "").split("|")[0].trim(),
+              qty: line.quantity || 1,
+              variation: (line.variations || []).map((v) => v.formatted_value).join(", "),
+            })),
+          }))
+          .sort((a, b) => a.at.localeCompare(b.at)),
+      };
+    } catch (err) {
+      out.etsy = { ok: false, why: err.message, open: [] };
+    }
+  } else {
+    out.etsy = { ok: false, why: "no Etsy credentials in .env", open: [] };
+  }
+
+  // ---- The shop's own ----
+  const key = envValue("STRIPE_SECRET_KEY_LIVE");
+  if (key) {
+    try {
+      const res = await fetch(
+        "https://api.stripe.com/v1/checkout/sessions?limit=100&status=complete&expand[]=data.line_items",
+        { headers: { Authorization: `Bearer ${key}` } }
+      );
+      const body = await res.json();
+      if (body.error) throw new Error(body.error.message);
+      const shipped = readShipped();
+
+      out.site = {
+        ok: true,
+        open: (body.data || [])
+          .filter((session) => session.payment_status === "paid" && !shipped[session.id])
+          .map((session) => {
+            const details =
+              (session.collected_information && session.collected_information.shipping_details) ||
+              session.shipping_details ||
+              {};
+            const address = details.address || {};
+            return {
+              id: session.id,
+              at: new Date(session.created * 1000).toISOString().slice(0, 10),
+              name: details.name || (session.customer_details && session.customer_details.name) || "",
+              email: (session.customer_details && session.customer_details.email) || "",
+              where: [address.city, address.state, address.country].filter(Boolean).join(", "),
+              cents: session.amount_total || 0,
+              items: ((session.line_items && session.line_items.data) || []).map((line) => ({
+                title: (line.description || "").split("|")[0].trim(),
+                qty: line.quantity || 1,
+                variation: "",
+              })),
+            };
+          })
+          .sort((a, b) => a.at.localeCompare(b.at)),
+      };
+    } catch (err) {
+      out.site = { ok: false, why: err.message, open: [] };
+    }
+  } else {
+    out.site = { ok: false, why: "no live Stripe key in .env", open: [] };
+  }
+
+  return out;
+}
+
 // Where the orders went. The counting lives in sales-by-state.js so that it
 // can also be run on its own from a terminal; here it is run the same way and
 // its answer read back.
@@ -616,6 +746,14 @@ const server = createServer(async (req, res) => {
       });
       const body = await res.json();
       return json(200, res.ok ? { ok: true } : { ok: false, message: body.error || "That did not work." });
+    }
+
+    if (req.url === "/api/orders") return json(200, await orders());
+
+    if (req.url === "/api/shipped" && req.method === "POST") {
+      const { id, shipped } = await readBody(req);
+      markShipped(String(id), shipped !== false);
+      return json(200, { ok: true });
     }
 
     if (req.url === "/api/money") {

@@ -144,6 +144,27 @@ export function page() {
   .purse dd { margin: 0; font-size: .82rem; text-align: right; font-variant-numeric: tabular-nums; }
   .purse dd.minus { color: var(--bad); }
   .purse .quiet { color: var(--muted); font-size: .82rem; margin: 0; }
+
+  /* ---- orders waiting ---- */
+  .orders { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .order {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 4px; padding: 14px 16px;
+  }
+  /* Three days is about when a shopper starts wondering where it is. */
+  .order.late { border-left: 3px solid var(--gold); }
+  .ohead { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+  .owhen { color: var(--muted); font-size: .74rem; }
+  .owhere { color: var(--muted); font-size: .78rem; margin-top: 2px; }
+  .oitems { margin: 10px 0 0; padding-left: 18px; font-size: .86rem; }
+  .oitems li { margin-bottom: 3px; }
+  .oitems .quiet { color: var(--muted); }
+  .ofoot {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 10px; margin-top: 12px; font-size: .86rem; flex-wrap: wrap;
+  }
+  .ofoot a { color: var(--gold); text-decoration: none; font-size: .78rem; }
+  .ofoot button { padding: 6px 14px; font-size: .78rem; }
   .away {
     font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
     color: var(--muted); font-weight: 400; margin: 28px 0 10px;
@@ -251,6 +272,9 @@ export function page() {
     <p class="hello">Morning, <em>Jamie</em>.</p>
     <p class="sub" id="home-sub">Loading…</p>
     <div class="tiles" id="home-tiles"></div>
+
+    <h3 class="away">To send out</h3>
+    <div id="home-orders">Checking Etsy and Stripe…</div>
 
     <h3 class="away">Money, last 30 days</h3>
     <div class="money" id="home-money">Asking Etsy and Stripe…</div>
@@ -382,7 +406,7 @@ function show(name) {
   if (name === "inventory") renderRows();
   if (name === "traffic" && !salesLoaded) loadTraffic();
   if (name === "reviews") loadReviews();
-  if (name === "home") { paintHome(); loadMoney(); }
+  if (name === "home") { paintHome(); loadOrders(); loadMoney(); }
 }
 function route() {
   var hash = location.hash.replace(/^#\\//, "");
@@ -525,6 +549,73 @@ function paintHome() {
   document.getElementById("home-sub").textContent = dirty
     ? "You have changes that are not on the website yet. Press Save & publish when you are ready."
     : "Everything here matches the website.";
+}
+
+/* ---------- orders to send ---------- */
+var ordersLoaded = false;
+function loadOrders() {
+  if (ordersLoaded) return;
+  ordersLoaded = true;
+  var host = document.getElementById("home-orders");
+
+  fetch("/api/orders").then(function (r) { return r.json(); }).then(function (d) {
+    var all = []
+      .concat((d.etsy.open || []).map(function (o) { o.from = "Etsy"; return o; }))
+      .concat((d.site.open || []).map(function (o) { o.from = "Your site"; return o; }))
+      .sort(function (a, b) { return a.at.localeCompare(b.at); });
+
+    if (!all.length) {
+      var quiet = "<div class='purse'><span class='big'>Nothing waiting</span>" +
+        "<span class='bigk'>every order has gone out</span>";
+      if (!d.etsy.ok) quiet += "<p class='quiet'>Etsy could not be asked — " + esc(d.etsy.why) + "</p>";
+      if (!d.site.ok) quiet += "<p class='quiet'>Stripe could not be asked — " + esc(d.site.why) + "</p>";
+      host.innerHTML = quiet + "</div>";
+      return;
+    }
+
+    var today = new Date();
+    var h = "<div class='orders'>";
+    for (var i = 0; i < all.length; i++) {
+      var o = all[i];
+      var days = Math.round((today - new Date(o.at + "T12:00:00Z")) / 86400000);
+      // Three days is when a shopper starts wondering. Say so plainly.
+      var late = days >= 3;
+      h += "<div class='order" + (late ? " late" : "") + "'>";
+      h += "<div class='ohead'><b>" + esc(o.name || "No name given") + "</b>";
+      h += "<span class='owhen'>" + esc(o.from) + " &middot; " + esc(o.at) +
+        " &middot; " + (days <= 0 ? "today" : days + " day" + (days === 1 ? "" : "s") + " ago") + "</span></div>";
+      if (o.where) h += "<div class='owhere'>" + esc(o.where) + "</div>";
+      h += "<ul class='oitems'>";
+      for (var k = 0; k < o.items.length; k++) {
+        h += "<li>" + (o.items[k].qty > 1 ? "<b>&times;" + o.items[k].qty + "</b> " : "") +
+          esc(o.items[k].title) + (o.items[k].variation ? " <span class='quiet'>" + esc(o.items[k].variation) + "</span>" : "") + "</li>";
+      }
+      h += "</ul>";
+      h += "<div class='ofoot'><span>" + money(o.cents) + "</span>";
+      if (o.from === "Etsy") {
+        h += "<a href='https://www.etsy.com/your/orders/sold' target='_blank' rel='noopener'>Open in Etsy &#8599;</a>";
+      } else {
+        h += "<button class='ghost' data-ship='" + esc(o.id) + "'>Mark as sent</button>";
+      }
+      h += "</div></div>";
+    }
+    h += "</div>";
+    host.innerHTML = h;
+
+    var marks = host.querySelectorAll("button[data-ship]");
+    for (var m = 0; m < marks.length; m++) {
+      marks[m].addEventListener("click", function () {
+        var id = this.dataset.ship;
+        this.disabled = true;
+        fetch("/api/shipped", { method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ id: id, shipped: true }) })
+          .then(function () { ordersLoaded = false; loadOrders(); });
+      });
+    }
+  }).catch(function (err) {
+    ordersLoaded = false;
+    host.innerHTML = "<p class='quiet'>Could not check those: " + esc(err.message) + "</p>";
+  });
 }
 
 /* ---------- money ---------- */

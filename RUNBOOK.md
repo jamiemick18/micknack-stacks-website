@@ -22,7 +22,16 @@ It has four pages, along the top.
 Where it opens. How many pieces you have, how many are in stock, sold out or
 hidden, and whether anything is waiting to be published.
 
-Underneath, the last 30 days of money from both shopfronts: what Etsy is
+Under that, **To send out**: every order that has been paid for and not yet
+posted, oldest first, with what is in it and where it is going. Etsy orders
+come straight from Etsy, so posting one there clears it here. Orders from
+your own site have a **Mark as sent** button, because Stripe takes the money
+and has no idea whether anything was posted.
+
+An order waiting three days or more is marked with a gold edge — about when
+a shopper starts wondering where it is.
+
+Then the last 30 days of money from both shopfronts: what Etsy is
 holding for you, what it took in sales, what it kept in fees and postage, and
 what it has paid out — and the same for your own site through Stripe. Those
 are read live, so they are as current as Etsy and Stripe are.
