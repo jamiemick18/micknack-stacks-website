@@ -28,7 +28,7 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createContext, runInContext } from "node:vm";
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawn } from "node:child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -459,6 +459,23 @@ const server = createServer(async (req, res) => {
 // Only ever answer this machine. There is no password on this thing because
 // there is no way in from anywhere else.
 server.listen(PORT, "127.0.0.1", () => {
-  console.log(`\n  The HUB is open:  http://localhost:${PORT}\n`);
+  const url = `http://localhost:${PORT}`;
+  console.log(`\n  The HUB is open:  ${url}\n`);
   console.log("  Leave this window open while you use it. Close it when you are done.\n");
+
+  // Open the browser from here rather than from a .cmd wrapper, because
+  // Windows refuses to pin a shortcut that points at a batch file, and the
+  // desktop icon has to point straight at node for pinning to work.
+  if (process.env.HUB_NO_BROWSER) return;
+  const opener =
+    process.platform === "win32"
+      ? ["cmd", ["/c", "start", "", url]]
+      : process.platform === "darwin"
+        ? ["open", [url]]
+        : ["xdg-open", [url]];
+  try {
+    spawn(opener[0], opener[1], { detached: true, stdio: "ignore" }).unref();
+  } catch (err) {
+    console.log(`  (Open it yourself: ${url})`);
+  }
 });
