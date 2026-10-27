@@ -60,14 +60,20 @@ function windowFile(relative, key) {
 // The one secret the HUB uses: it lets the worker know an approval really
 // came from Jamie. Read fresh each time so adding it to .env takes effect
 // without restarting.
-function reviewToken() {
+function envValue(name) {
   const path = join(ROOT, ".env");
-  if (!existsSync(path)) return "";
+  if (!existsSync(path)) return process.env[name] || "";
   for (const line of readFileSync(path, "utf8").split(/\r?\n/)) {
-    const match = /^\s*REVIEW_TOKEN\s*=\s*(.+)$/.exec(line);
-    if (match) return match[1].trim();
+    if (line.trim().startsWith("#")) continue;
+    const at = line.indexOf("=");
+    if (at === -1) continue;
+    if (line.slice(0, at).trim().replace(/^﻿/, "") === name) return line.slice(at + 1).trim();
   }
-  return "";
+  return process.env[name] || "";
+}
+
+function reviewToken() {
+  return envValue("REVIEW_TOKEN");
 }
 
 function readCounts() {
@@ -287,6 +293,114 @@ async function traffic() {
   };
 }
 
+// ---------------------------------------------------------------------------
+// Money, from both shopfronts.
+// ---------------------------------------------------------------------------
+//
+// Deliberately only the few numbers worth glancing at: what is waiting to
+// reach the bank, and what the last month took. Anything more belongs in
+// Etsy's and Stripe's own pages, which the Welcome screen links to.
+
+async function stripeMoney() {
+  const key = envValue("STRIPE_SECRET_KEY_LIVE");
+  if (!key) return { ok: false, why: "no live Stripe key in .env" };
+
+  const get = async (path) => {
+    const res = await fetch("https://api.stripe.com/v1" + path, {
+      headers: { Authorization: `Bearer ${key}` },
+    });
+    const body = await res.json();
+    if (body.error) throw new Error(body.error.message);
+    return body;
+  };
+
+  try {
+    const since = Math.floor(Date.now() / 1000) - 30 * 86400;
+    const [balance, payouts, charges] = await Promise.all([
+      get("/balance"),
+      get("/payouts?limit=1"),
+      get(`/charges?limit=100&created[gte]=${since}`),
+    ]);
+
+    const sum = (rows) => rows.reduce((total, row) => total + (row.amount || 0), 0);
+    const paid = (charges.data || []).filter((charge) => charge.paid && !charge.refunded);
+
+    return {
+      ok: true,
+      available: sum(balance.available || []),
+      pending: sum(balance.pending || []),
+      month_gross: sum(paid),
+      month_orders: paid.length,
+      last_payout: (payouts.data || [])[0]
+        ? {
+            amount: payouts.data[0].amount,
+            on: new Date(payouts.data[0].arrival_date * 1000).toISOString().slice(0, 10),
+            status: payouts.data[0].status,
+          }
+        : null,
+    };
+  } catch (err) {
+    return { ok: false, why: err.message };
+  }
+}
+
+async function etsyMoney() {
+  const apiKey = envValue("ETSY_API_KEY");
+  const refresh = envValue("ETSY_REFRESH_TOKEN");
+  if (!apiKey || !refresh) return { ok: false, why: "no Etsy credentials in .env" };
+
+  try {
+    const tokenRes = await fetch("https://api.etsy.com/v3/public/oauth/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        grant_type: "refresh_token",
+        client_id: apiKey.split(":")[0],
+        refresh_token: refresh,
+      }),
+    });
+    const token = await tokenRes.json();
+    if (token.error) return { ok: false, why: `Etsy would not sign in (${token.error})` };
+
+    // Etsy refuses a window longer than 31 days, so a month is what it is.
+    const max = Math.floor(Date.now() / 1000);
+    const min = max - 30 * 86400;
+    const shopId = envValue("ETSY_SHOP_ID") || "67609393";
+    const res = await fetch(
+      `https://api.etsy.com/v3/application/shops/${shopId}/payment-account/ledger-entries` +
+        `?min_created=${min}&max_created=${max}&limit=100`,
+      { headers: { "x-api-key": apiKey, Authorization: `Bearer ${token.access_token}` } }
+    );
+    if (!res.ok) return { ok: false, why: `Etsy answered ${res.status}` };
+    const ledger = await res.json();
+    const rows = ledger.results || [];
+
+    // Etsy's ledger is one line per thing that happened: sales positive, its
+    // cut and the postage negative. Grouping them is the only way to see what
+    // a month actually left behind.
+    const byType = {};
+    for (const row of rows) byType[row.ledger_type] = (byType[row.ledger_type] || 0) + row.amount;
+
+    const gross = byType.PAYMENT_GROSS || 0;
+    const fees = Object.entries(byType)
+      .filter(([type, amount]) => amount < 0 && !/^DISBURSE/i.test(type) && type !== "sales_tax")
+      .reduce((total, [, amount]) => total + amount, 0);
+
+    return {
+      ok: true,
+      balance: rows.length ? rows[0].balance : 0,
+      gross,
+      fees,
+      net: gross + fees,
+      paid_out: Math.abs(byType.DISBURSE2 || byType.DISBURSE || 0),
+      entries: rows.length,
+      capped: Boolean(ledger.count && ledger.count > rows.length),
+    };
+  } catch (err) {
+    return { ok: false, why: err.message };
+  }
+}
+
 // Where the orders went. The counting lives in sales-by-state.js so that it
 // can also be run on its own from a terminal; here it is run the same way and
 // its answer read back.
@@ -502,6 +616,11 @@ const server = createServer(async (req, res) => {
       });
       const body = await res.json();
       return json(200, res.ok ? { ok: true } : { ok: false, message: body.error || "That did not work." });
+    }
+
+    if (req.url === "/api/money") {
+      const [etsy, stripe] = await Promise.all([etsyMoney(), stripeMoney()]);
+      return json(200, { etsy, stripe });
     }
 
     if (req.url === "/api/traffic") return json(200, await traffic());

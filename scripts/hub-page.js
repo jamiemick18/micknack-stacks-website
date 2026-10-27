@@ -112,6 +112,30 @@ export function page() {
   .door b { display: block; font-weight: 500; margin-bottom: 3px; }
   .door span { color: var(--muted); font-size: .82rem; }
   .door.out { background: none; border-style: dashed; }
+
+  /* ---- money ---- */
+  .money { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .purse {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 4px; padding: 18px 20px;
+  }
+  .purse h4 {
+    margin: 0 0 12px; font: 400 .68rem/1 inherit;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+  }
+  .purse .big {
+    font: 500 1.8rem/1 "Cormorant Garamond", Georgia, serif;
+    display: block; margin-bottom: 2px;
+  }
+  .purse .bigk {
+    font-size: .68rem; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--muted); display: block; margin-bottom: 14px;
+  }
+  .purse dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; }
+  .purse dt { color: var(--muted); font-size: .82rem; }
+  .purse dd { margin: 0; font-size: .82rem; text-align: right; font-variant-numeric: tabular-nums; }
+  .purse dd.minus { color: var(--bad); }
+  .purse .quiet { color: var(--muted); font-size: .82rem; margin: 0; }
   .away {
     font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
     color: var(--muted); font-weight: 400; margin: 28px 0 10px;
@@ -219,6 +243,9 @@ export function page() {
     <p class="hello">Morning, <em>Jamie</em>.</p>
     <p class="sub" id="home-sub">Loading…</p>
     <div class="tiles" id="home-tiles"></div>
+
+    <h3 class="away">Money, last 30 days</h3>
+    <div class="money" id="home-money">Asking Etsy and Stripe…</div>
     <div class="doors">
       <a class="door" href="#/inventory"><b>Inventory</b><span>Counts, sold out, hidden</span></a>
       <a class="door" href="#/add"><b>Add a piece</b><span>Something sold only here</span></a>
@@ -337,7 +364,7 @@ function show(name) {
   for (var j = 0; j < links.length; j++) links[j].classList.toggle("on", links[j].dataset.view === name);
   if (name === "traffic" && !salesLoaded) loadTraffic();
   if (name === "reviews") loadReviews();
-  if (name === "home") paintHome();
+  if (name === "home") { paintHome(); loadMoney(); }
 }
 function route() {
   var hash = location.hash.replace(/^#\\//, "");
@@ -454,6 +481,58 @@ function paintHome() {
   document.getElementById("home-sub").textContent = dirty
     ? "You have changes that are not on the website yet. Press Save & publish when you are ready."
     : "Everything here matches the website.";
+}
+
+/* ---------- money ---------- */
+var moneyLoaded = false;
+function loadMoney() {
+  if (moneyLoaded) return;
+  moneyLoaded = true;
+  var host = document.getElementById("home-money");
+  fetch("/api/money").then(function (r) { return r.json(); }).then(function (d) {
+    var h = "";
+
+    h += "<div class='purse'><h4>Etsy</h4>";
+    if (!d.etsy.ok) {
+      h += "<p class='quiet'>Not available — " + esc(d.etsy.why) + "</p>";
+    } else {
+      h += "<span class='big'>" + money(d.etsy.balance) + "</span>";
+      h += "<span class='bigk'>in your Etsy account now</span>";
+      h += "<dl>";
+      h += "<dt>Sales</dt><dd>" + money(d.etsy.gross) + "</dd>";
+      h += "<dt>Etsy's cut, postage, ads</dt><dd class='minus'>" + money(d.etsy.fees) + "</dd>";
+      h += "<dt><b>Kept</b></dt><dd><b>" + money(d.etsy.net) + "</b></dd>";
+      h += "<dt>Paid out to you</dt><dd>" + money(d.etsy.paid_out) + "</dd>";
+      h += "</dl>";
+      if (d.etsy.capped) h += "<p class='quiet' style='margin-top:10px'>Busy month — only the latest 100 entries counted.</p>";
+    }
+    h += "</div>";
+
+    h += "<div class='purse'><h4>Your own site (Stripe)</h4>";
+    if (!d.stripe.ok) {
+      h += "<p class='quiet'>Not available — " + esc(d.stripe.why) + "</p>";
+    } else if (!d.stripe.month_orders && !d.stripe.available && !d.stripe.pending) {
+      h += "<span class='big'>$0.00</span><span class='bigk'>no orders here yet</span>";
+      h += "<p class='quiet'>Every sale here keeps the whole price. No marketplace cut.</p>";
+    } else {
+      h += "<span class='big'>" + money(d.stripe.available + d.stripe.pending) + "</span>";
+      h += "<span class='bigk'>in Stripe now</span>";
+      h += "<dl>";
+      h += "<dt>Ready to pay out</dt><dd>" + money(d.stripe.available) + "</dd>";
+      h += "<dt>Still clearing</dt><dd>" + money(d.stripe.pending) + "</dd>";
+      h += "<dt>Taken this month</dt><dd>" + money(d.stripe.month_gross) + "</dd>";
+      h += "<dt>Orders</dt><dd>" + d.stripe.month_orders + "</dd>";
+      if (d.stripe.last_payout)
+        h += "<dt>Last payout</dt><dd>" + money(d.stripe.last_payout.amount) + " &middot; " + esc(d.stripe.last_payout.on) + "</dd>";
+      h += "</dl>";
+    }
+    h += "</div>";
+
+    host.innerHTML = h;
+  }).catch(function (err) {
+    moneyLoaded = false;
+    host.innerHTML = "<p class='quiet'>Could not reach them: " + esc(err.message) + "</p>";
+  });
 }
 
 /* ---------- traffic ---------- */

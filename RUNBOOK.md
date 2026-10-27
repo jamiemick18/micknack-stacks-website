@@ -22,6 +22,14 @@ It has four pages, along the top.
 Where it opens. How many pieces you have, how many are in stock, sold out or
 hidden, and whether anything is waiting to be published.
 
+Underneath, the last 30 days of money from both shopfronts: what Etsy is
+holding for you, what it took in sales, what it kept in fees and postage, and
+what it has paid out — and the same for your own site through Stripe. Those
+are read live, so they are as current as Etsy and Stripe are.
+
+Below that, links straight to Etsy payments, Stripe, GitHub, Cloudflare and
+your own shop.
+
 ### Inventory
 
 - **Set how many you have** of each piece. Put a count in the box.
