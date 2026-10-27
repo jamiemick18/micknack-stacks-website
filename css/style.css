@@ -1492,6 +1492,155 @@ img {
 
 .review-when { display: block; opacity: 0.8; text-transform: none; letter-spacing: 0.04em; }
 
+/* ---- Custom pieces, said out loud ---- */
+
+/* Jamie makes custom work and almost nobody knew, because it was a line
+   near the bottom of the About page. This sits under the header on every
+   page: dark against the cream so it reads as a thing, not a notice. */
+.custom-band {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 11px 22px;
+  background: var(--ink);
+  color: var(--cream, #faf6ef);
+  text-decoration: none;
+  text-align: left;
+}
+
+.custom-band:hover { background: #1d1916; }
+
+.custom-band-mark {
+  color: var(--gold);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.custom-band-text {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.custom-band-text b {
+  font-weight: 500;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.custom-band-text span {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 0.97rem;
+  opacity: 0.82;
+}
+
+.custom-band-go {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .custom-band { gap: 10px; padding: 10px 16px; }
+  .custom-band-text { gap: 2px; flex-direction: column; align-items: flex-start; }
+  .custom-band-text span { font-size: 0.9rem; }
+  .custom-band-go { display: none; }
+}
+
+/* ---- The form it opens ---- */
+
+.custom-dialog {
+  border: 0;
+  border-radius: 4px;
+  padding: 0;
+  max-width: 540px;
+  width: calc(100% - 32px);
+  background: #fffaf4;
+  color: var(--ink);
+}
+
+.custom-dialog::backdrop { background: rgba(15, 13, 11, 0.55); }
+
+.custom-inner { padding: 28px 26px; }
+
+.custom-inner h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0 0 4px;
+}
+
+.custom-lede {
+  color: #5d554c;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.custom-form { display: grid; gap: 14px; }
+
+.custom-form label > span {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+  margin-bottom: 6px;
+}
+
+.custom-form label em {
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  opacity: 0.75;
+}
+
+.custom-form input,
+.custom-form textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid rgba(15, 13, 11, 0.13);
+  border-radius: 3px;
+}
+
+.custom-form textarea { min-height: 110px; resize: vertical; line-height: 1.6; }
+.custom-form input:focus, .custom-form textarea:focus { outline: none; border-color: var(--gold); }
+
+.custom-two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.custom-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 4px; }
+.custom-status { margin: 0; font-size: 0.85rem; color: #5d554c; }
+.custom-status.good { color: var(--gold); }
+.custom-status.bad { color: #9a3412; }
+
+.custom-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: 0;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #8a8a8a;
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .custom-two { grid-template-columns: 1fr; }
+  .custom-inner { padding: 24px 18px; }
+}
+
 /* ---- Leaving one ---- */
 
 /* The ask has to carry its own weight: it sits under three glowing reviews,

@@ -485,6 +485,130 @@ async function handleReviewAdmin(request, env, cors) {
   return json({ ok: true, status: review.status }, 200, cors);
 }
 
+// -------------------------------------------------------- custom requests ----
+
+// Someone asking Jamie to make them something.
+//
+// It is kept here first and emailed second, deliberately. Email is the part
+// that can fail — a service down, a binding not set, a spam folder — and a
+// request that only ever existed in an email that did not arrive is a
+// customer who thinks they were ignored. Stored, it is in the HUB either way.
+//
+// KV holds  custom:<id>   the request, with a status of new or done
+//           cxlimit:<ip>  that this address has asked recently
+
+async function readCustoms(env) {
+  const out = [];
+  let cursor;
+  do {
+    const page = await env.STOCK.list({ prefix: "custom:", cursor });
+    for (const key of page.keys) {
+      const raw = await env.STOCK.get(key.name);
+      if (!raw) continue;
+      try {
+        out.push(JSON.parse(raw));
+      } catch (err) {
+        continue;
+      }
+    }
+    cursor = page.list_complete ? null : page.cursor;
+  } while (cursor);
+  out.sort((a, b) => String(b.at || "").localeCompare(String(a.at || "")));
+  return out;
+}
+
+// Cloudflare can send mail straight from the worker to an address Jamie has
+// verified, with no third party and no monthly fee. If the binding is not
+// there the request is still saved, and the HUB still shows it.
+async function emailCustom(env, request) {
+  if (!env.SEND_EMAIL || !env.SHOP_EMAIL) return "not set up";
+  try {
+    const { EmailMessage } = await import("cloudflare:email");
+    const lines = [
+      `From: Micknack Stacks <requests@${env.MAIL_FROM_DOMAIN || "micknackstacks.com"}>`,
+      `To: ${env.SHOP_EMAIL}`,
+      request.email ? `Reply-To: ${request.email}` : "",
+      `Subject: Custom request from ${request.name || "someone"}`,
+      "MIME-Version: 1.0",
+      'Content-Type: text/plain; charset="utf-8"',
+      "",
+      `${request.name || "No name given"}`,
+      request.email ? `${request.email}` : "No email given",
+      "",
+      request.idea,
+      "",
+      request.budget ? `Budget: ${request.budget}` : "",
+      request.when ? `Needed by: ${request.when}` : "",
+      "",
+      "— sent by the shop's own website",
+    ].filter((line) => line !== "");
+
+    await env.SEND_EMAIL.send(
+      new EmailMessage(
+        `requests@${env.MAIL_FROM_DOMAIN || "micknackstacks.com"}`,
+        env.SHOP_EMAIL,
+        lines.join("\r\n")
+      )
+    );
+    return "sent";
+  } catch (err) {
+    return `not sent: ${err.message}`;
+  }
+}
+
+async function handleCustom(request, env, cors) {
+  let body;
+  try {
+    body = await request.json();
+  } catch (err) {
+    return json({ error: "Could not read that." }, 400, cors);
+  }
+
+  if (cleanText(body.website, 40)) return json({ ok: true }, 200, cors);
+
+  const name = cleanText(body.name, 80);
+  const email = cleanText(body.email, 160);
+  const idea = cleanText(body.idea, 2000);
+  const budget = cleanText(body.budget, 60);
+  const when = cleanText(body.when, 60);
+
+  if (idea.length < 10) return json({ error: "Tell Jamie a little more about the idea." }, 400, cors);
+  if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+    return json({ error: "Please leave an email address so Jamie can reply." }, 400, cors);
+  }
+
+  const ip = request.headers.get("CF-Connecting-IP") || "";
+  if (ip) {
+    const key = `cxlimit:${ip}`;
+    if (await env.STOCK.get(key)) {
+      return json({ error: "That came through already — Jamie will be in touch." }, 429, cors);
+    }
+    await env.STOCK.put(key, "1", { expirationTtl: 300 });
+  }
+
+  const id = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+  const saved = {
+    id,
+    status: "new",
+    name,
+    email,
+    idea,
+    budget,
+    when,
+    at: new Date().toISOString(),
+  };
+  await env.STOCK.put(`custom:${id}`, JSON.stringify(saved));
+
+  saved.emailed = await emailCustom(env, saved);
+  await env.STOCK.put(`custom:${id}`, JSON.stringify(saved));
+
+  return json(
+    { ok: true, message: "Thank you. Jamie will come back to you, usually within a day or two." },
+    200,
+    cors
+  );
+}
+
 // ------------------------------------------------------------- phone hub ----
 
 // What Jamie can see from her phone, away from the computer.
@@ -635,10 +759,11 @@ async function hubOrders(env) {
 }
 
 async function hubSummary(env) {
-  const [views, hearts, reviews] = await Promise.all([
+  const [views, hearts, reviews, customs] = await Promise.all([
     readViews(env),
     readHearts(env),
     readReviews(env, { approvedOnly: false }),
+    readCustoms(env),
   ]);
 
   const stock = await allStock(env);
@@ -668,6 +793,7 @@ async function hubSummary(env) {
       .slice(0, 10),
     total_hearts: Object.values(hearts).reduce((sum, n) => sum + n, 0),
     reviews_waiting: reviews.filter((review) => review.status !== "approved").length,
+    customs_waiting: customs.filter((one) => one.status !== "done").length,
     reviews_live: reviews.filter((review) => review.status === "approved").length,
     tracked: counts.length,
     sold_out: counts.filter((qty) => qty <= 0).length,
@@ -686,6 +812,24 @@ async function handleHub(request, env, cors) {
   if (action === "summary") return json({ ok: true, summary: await hubSummary(env) }, 200, cors);
 
   if (action === "orders") return json({ ok: true, orders: await hubOrders(env) }, 200, cors);
+
+  if (action === "customs") return json({ ok: true, customs: await readCustoms(env) }, 200, cors);
+
+  if (action === "custom") {
+    const id = cleanText(body.id, 64);
+    const verb = cleanText(body.do, 20);
+    const key = `custom:${id}`;
+    const raw = await env.STOCK.get(key);
+    if (!raw) return json({ error: "That request is not here." }, 404, cors);
+    if (verb === "delete") {
+      await env.STOCK.delete(key);
+      return json({ ok: true }, 200, cors);
+    }
+    const saved = JSON.parse(raw);
+    saved.status = verb === "done" ? "done" : "new";
+    await env.STOCK.put(key, JSON.stringify(saved));
+    return json({ ok: true }, 200, cors);
+  }
 
   // Everything the phone can change about a piece. The site reads these the
   // moment they are written, so there is nothing to publish afterwards.
@@ -898,6 +1042,11 @@ export default {
     if (path === "/reviews" && request.method === "POST") {
       if (!env.STOCK) return json({ error: "Reviews aren't set up yet." }, 500, cors);
       return handleReview(request, env, cors);
+    }
+
+    if (path === "/custom" && request.method === "POST") {
+      if (!env.STOCK) return json({ error: "Requests aren't set up yet." }, 500, cors);
+      return handleCustom(request, env, cors);
     }
 
     // Jamie's phone. One password, checked on every call.
