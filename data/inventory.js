@@ -17,8 +17,6 @@
 // A piece with no entry is treated as in stock.
 
 window.MICKNACK_INVENTORY = {
-  "4571494427": { sold_out: true },
-  "4576033359": { sold_out: true },
   // SLIMED Apple Green CZ Ear Chain: hidden from the site 22 October 2026.
   "4579741852": { hidden: true },
   // Summit Ride Huggie Earrings: retired, left Etsy 2 October 2026 and no longer sold here either.

@@ -285,6 +285,7 @@ async function main() {
   // dropped out gets asked after by name.
   let retired = 0;
   let soldOut = 0;
+  let back = 0;
   for (const [id, prior] of previous) {
     if (seen.has(id)) continue;
 
@@ -297,6 +298,23 @@ async function main() {
     } catch (err) {
       // A deleted listing answers 404 and there is nothing more to learn.
       state = /404/.test(err.message) ? "gone" : state;
+    }
+
+    // Etsy's bulk listing endpoint lags behind the listing itself, so a piece
+    // restocked a minute ago is missing from the active list while its own
+    // page says active. Asking by name is the better answer of the two: take
+    // it, or the shop goes on showing Sold Out over stock Jamie has.
+    if (state === "active") {
+      merged.push({
+        ...prior,
+        quantity,
+        etsy_active: true,
+        etsy_state: "active",
+        added_at: prior.added_at || now,
+        left_etsy_at: undefined,
+      });
+      back++;
+      continue;
     }
 
     if (state === "sold_out") soldOut++;
@@ -314,6 +332,9 @@ async function main() {
 
   if (soldOut) {
     console.log(`${soldOut} piece(s) sold out on Etsy and are now counted as none left.`);
+  }
+  if (back) {
+    console.log(`${back} piece(s) are back on Etsy and for sale here again.`);
   }
 
   if (retired) {
