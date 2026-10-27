@@ -83,7 +83,11 @@
       <h2 class="section-heading">Kind words</h2>
       ${best.length ? `<div class="review-row">${best.slice(0, 3).map(quote).join("")}</div>` : ""}
       <div class="review-invite">
-        <button type="button" class="btn btn-secondary" id="review-open">Leave a review</button>
+        <p class="review-ask">Bought something? Tell people how it wears.</p>
+        <button type="button" class="btn btn-primary review-open" id="review-open">
+          <span class="review-open-stars" aria-hidden="true">★★★★★</span>
+          Leave a review
+        </button>
       </div>
       <form class="review-form" id="review-form" hidden>
         <p class="review-form-note">

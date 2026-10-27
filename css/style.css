@@ -1494,7 +1494,44 @@ img {
 
 /* ---- Leaving one ---- */
 
-.review-invite { margin-top: 26px; }
+/* The ask has to carry its own weight: it sits under three glowing reviews,
+   which is the most persuaded a reader will ever be, and a quiet outline
+   button there reads as a footnote rather than an invitation. */
+.review-invite { margin-top: 34px; }
+
+.review-ask {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+
+.review-open.btn {
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  padding: 16px 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 6px 20px rgba(15, 13, 11, 0.16);
+}
+
+.review-open.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 26px rgba(15, 13, 11, 0.22);
+}
+
+.review-open-stars {
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 560px) {
+  .review-open.btn { padding: 15px 28px; width: 100%; justify-content: center; }
+  .review-ask { font-size: 1.05rem; }
+}
 
 .review-form {
   max-width: 540px;
