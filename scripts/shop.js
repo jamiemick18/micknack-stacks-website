@@ -545,6 +545,18 @@ const server = createServer(async (req, res) => {
   }
 });
 
+// Opening the HUB twice is an easy thing to do and should not look like a
+// crash. The second one bows out and points at the one already running.
+server.on("error", (err) => {
+  if (err.code === "EADDRINUSE") {
+    console.log("\n  The HUB is already open:  http://localhost:" + PORT + "\n");
+    console.log("  Nothing is wrong — you can close this window.\n");
+    process.exit(0);
+  }
+  console.error("\n  The HUB could not start: " + err.message + "\n");
+  process.exit(1);
+});
+
 // Only ever answer this machine. There is no password on this thing because
 // there is no way in from anywhere else.
 server.listen(PORT, "127.0.0.1", () => {

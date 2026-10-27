@@ -237,6 +237,9 @@ export function page() {
       <a class="door out" href="https://github.com/jamiemick18/micknack-stacks-website" target="_blank" rel="noopener">
         <b>GitHub &#8599;</b><span>The website itself, and its history</span>
       </a>
+      <a class="door out" href="https://dash.cloudflare.com/?to=/:account/workers/services/view/micknack-checkout" target="_blank" rel="noopener">
+        <b>Cloudflare &#8599;</b><span>The checkout worker and its logs</span>
+      </a>
       <a class="door out" href="https://micknackstacks.com" target="_blank" rel="noopener">
         <b>Your shop &#8599;</b><span>See it the way a customer does</span>
       </a>
