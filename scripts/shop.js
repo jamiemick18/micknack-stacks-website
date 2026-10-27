@@ -426,6 +426,34 @@ const server = createServer(async (req, res) => {
       return json(200, publish());
     }
 
+    // Etsy lowers its own count when something sells there, but nothing tells
+    // the HUB, so the two drift apart a sale at a time. This catches it up.
+    if (req.url === "/api/match-etsy" && req.method === "POST") {
+      const products = windowFile("data/products.js", "MICKNACK_PRODUCTS") || {};
+      const counts = readCounts();
+      const moved = [];
+      for (const listing of products.listings || []) {
+        if (listing.etsy_active === false) continue;
+        const id = String(listing.listing_id);
+        const was = counts[id];
+        if (!was) {
+          counts[id] = { qty: listing.quantity, hidden: false };
+          moved.push(`${listing.title.split("|")[0].trim()} — new, ${listing.quantity}`);
+        } else if (was.qty !== listing.quantity) {
+          moved.push(`${listing.title.split("|")[0].trim()}: ${was.qty} → ${listing.quantity}`);
+          was.qty = listing.quantity;
+        }
+      }
+      save(counts);
+      return json(200, {
+        ok: true,
+        moved,
+        message: moved.length
+          ? `${moved.length} count(s) brought in line with Etsy. Publish if any of them went to zero.`
+          : "Nothing moved — your counts already match Etsy.",
+      });
+    }
+
     if (req.url === "/api/traffic") return json(200, await traffic());
 
     if (req.url === "/api/sales") return json(200, sales());

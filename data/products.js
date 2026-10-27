@@ -2,8 +2,42 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-27T14:12:04.885Z",
+  "synced_at": "2026-10-27T17:37:17.297Z",
   "listings": [
+    {
+      "listing_id": "4596333038",
+      "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4596333038/golden-hour-ear-chain-champagne-clear-cz",
+      "description": "Golden Hour ✨🥂\n\nWarm, glowy, and catching the light like the last few minutes before sunset.\nGolden Hour features a delicate gold chain with five individually dangling CZ stones — three round champagne-colored stones alternating with two clear kite-shaped stones. The mix of warm champagne sparkle and crisp clear facets gives the piece dimension without making it feel overly busy.\n\nwww.micknackstacks.com⁠\n\nWhy you’ll love it:\nFive individually dangling CZ stones\nThree round champagne CZ stones\nTwo clear kite-shaped CZ stones\nAlternating stone shapes for extra texture\nWarm, neutral sparkle that pairs easily with gold jewelry and delicate movement as the stones catch the light\nAdds depth without overpowering the rest of your stack\n\nGolden Hour is a chain connector only, designed to attach between compatible hoops, earrings, or flatback jewelry you already own.\n\nDrape it between two piercings for a soft layered look, pair it with simple gold hoops, or work it into a fuller curated stack.\n\nThe champagne stones give off a warm, honey-toned glow while the clear kite stones break up the color with brighter flashes of light.\n\nMaterials & Details:\nGold-tone chain, 40mm long\nFive dangling CZ stones\n3 round champagne CZ stones\n2 clear kite-shaped CZ stones\nConnector loops at both ends\nChain connector only\nEarrings and labret posts not included\nSold individually\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Curated ears • Neutral ear stacks • Dainty chain styling\nWarm light. Tiny sparkle. Golden Hour, whenever you want it. ✨🥂\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+        "https://i.etsystatic.com/67609393/r/il/65ce53/8732822721/il_fullxfull.8732822721_qf7t.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/c7af/ae7878a4-a901-4713-a0e2-336e6f03415c/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ],
+      "quantity": 1,
+      "created": "2026-10-15T22:11:01.000Z",
+      "views": 69,
+      "num_favorers": 12,
+      "etsy_active": true,
+      "added_at": "2026-10-16T17:12:22.208Z"
+    },
     {
       "listing_id": "4591313547",
       "title": "Everyday 18g G23 ASTM F136 Titanium Gold Clicker Hoop | 18K PVD Implant Grade Cartilage Ring | Helix Conch Lobe 5mm–12mm",
@@ -34,7 +68,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 19,
       "created": "2026-10-08T17:47:55.000Z",
       "views": 24,
-      "num_favorers": 1,
+      "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-10-08T19:10:48.816Z"
     },
@@ -105,40 +139,6 @@ window.MICKNACK_PRODUCTS = {
       "num_favorers": 13,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4596333038",
-      "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4596333038/golden-hour-ear-chain-champagne-clear-cz",
-      "description": "Golden Hour ✨🥂\n\nWarm, glowy, and catching the light like the last few minutes before sunset.\nGolden Hour features a delicate gold chain with five individually dangling CZ stones — three round champagne-colored stones alternating with two clear kite-shaped stones. The mix of warm champagne sparkle and crisp clear facets gives the piece dimension without making it feel overly busy.\n\nwww.micknackstacks.com⁠\n\nWhy you’ll love it:\nFive individually dangling CZ stones\nThree round champagne CZ stones\nTwo clear kite-shaped CZ stones\nAlternating stone shapes for extra texture\nWarm, neutral sparkle that pairs easily with gold jewelry and delicate movement as the stones catch the light\nAdds depth without overpowering the rest of your stack\n\nGolden Hour is a chain connector only, designed to attach between compatible hoops, earrings, or flatback jewelry you already own.\n\nDrape it between two piercings for a soft layered look, pair it with simple gold hoops, or work it into a fuller curated stack.\n\nThe champagne stones give off a warm, honey-toned glow while the clear kite stones break up the color with brighter flashes of light.\n\nMaterials & Details:\nGold-tone chain, 40mm long\nFive dangling CZ stones\n3 round champagne CZ stones\n2 clear kite-shaped CZ stones\nConnector loops at both ends\nChain connector only\nEarrings and labret posts not included\nSold individually\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Curated ears • Neutral ear stacks • Dainty chain styling\nWarm light. Tiny sparkle. Golden Hour, whenever you want it. ✨🥂\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
-        "https://i.etsystatic.com/67609393/r/il/65ce53/8732822721/il_fullxfull.8732822721_qf7t.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/c7af/ae7878a4-a901-4713-a0e2-336e6f03415c/vid_v1.mp4",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "gold ear chain",
-        "double drape chain",
-        "piercing chain",
-        "cartilage chain",
-        "non tarnish jewelry",
-        "multiple piercings"
-      ],
-      "quantity": 2,
-      "created": "2026-10-15T22:11:01.000Z",
-      "views": 69,
-      "num_favorers": 12,
-      "etsy_active": true,
-      "added_at": "2026-10-16T17:12:22.208Z"
     },
     {
       "listing_id": "4601338080",

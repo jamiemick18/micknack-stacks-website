@@ -209,6 +209,7 @@ export function page() {
     <div class="tools">
       <input type="search" id="find" placeholder="Find a piece…" />
       <button class="ghost" id="only-off">Only off sale</button>
+      <button class="ghost" id="match-etsy" title="Bring your counts in line with what Etsy has">Match Etsy</button>
     </div>
     <div class="rows" id="rows"></div>
   </section>
@@ -541,6 +542,20 @@ document.getElementById("publish").addEventListener("click", function () { send(
 document.getElementById("revert").addEventListener("click", function () {
   pieces = JSON.parse(original); renderRows(); paintHome(); note("Back to the last saved version.");
 });
+document.getElementById("match-etsy").addEventListener("click", function () {
+  var btn = this;
+  btn.disabled = true;
+  note("Asking Etsy what it has…");
+  fetch("/api/match-etsy", { method: "POST" })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      btn.disabled = false;
+      note(d.message + (d.moved && d.moved.length ? "  (" + d.moved.join("; ") + ")" : ""));
+      return load();
+    })
+    .catch(function (err) { btn.disabled = false; note("That did not work: " + err.message, true); });
+});
+
 document.getElementById("find").addEventListener("input", renderRows);
 document.getElementById("only-off").addEventListener("click", function () {
   onlyOff = !onlyOff;

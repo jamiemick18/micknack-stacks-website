@@ -28,6 +28,8 @@ hidden, and whether anything is waiting to be published.
 - **Hide a piece** so it does not appear on the site at all.
 - **Say why**, when a piece is hidden or sold out, so you remember later.
 - **Search** by name, or show only the pieces that are off sale.
+- **Match Etsy** brings every count in line with what Etsy has. Press it
+  after something sells on Etsy; it tells you exactly what moved.
 
 A piece at **0** shows as *Sold Out* on the site, with no Buy button. A piece
 you hide is not shown at all.

@@ -2,8 +2,8 @@
 // INVENTORY — what's sold out or hidden on the site.
 // ============================================================================
 //
-// Written by the shop desk (npm run shop). Hand edits here are fine but will
-// be overwritten the next time it saves.
+// Written by the Micknack Stacks HUB (npm run shop). Hand edits here are fine
+// but will be overwritten the next time it saves.
 //
 // The Etsy sync NEVER touches this file.
 //
