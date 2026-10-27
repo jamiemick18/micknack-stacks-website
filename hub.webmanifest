@@ -1,0 +1,14 @@
+{
+  "name": "Micknack Stacks HUB",
+  "short_name": "HUB",
+  "description": "Orders, stock and reviews for Micknack Stacks.",
+  "start_url": "/hub.html",
+  "scope": "/hub.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf6ef",
+  "theme_color": "#0f0d0b",
+  "icons": [
+    { "src": "/assets/emblem-bear-moon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

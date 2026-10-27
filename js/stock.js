@@ -10,6 +10,10 @@ window.MICKNACK_STOCK = {
   // counts down on every purchase, so it knows before the file does.
   live: null,
 
+  // Pieces hidden from the HUB on a phone. They arrive with the counts and
+  // take effect at once, without waiting for anyone to publish a file.
+  liveHidden: null,
+
   async loadLive(endpoint) {
     try {
       const response = await fetch(endpoint, { cache: "no-store" });
@@ -17,6 +21,7 @@ window.MICKNACK_STOCK = {
       const data = await response.json();
       if (!data || typeof data.stock !== "object") return false;
       this.live = data.stock;
+      if (Array.isArray(data.hidden)) this.liveHidden = new Set(data.hidden);
       return true;
     } catch (err) {
       // The shop still works from the published file if the worker is down.
@@ -36,6 +41,10 @@ window.MICKNACK_STOCK = {
     const inventory = window.MICKNACK_INVENTORY || {};
     const raw = inventory[key];
 
+    // Hidden from a phone, which the published file knows nothing about.
+    // Either source hiding a piece is enough to keep it off the shop.
+    const hiddenLive = Boolean(this.liveHidden && this.liveHidden.has(key));
+
     // Jamie saying a piece is sold out is the end of the argument. The live
     // count can be stale — a piece that sold its last one on Etsy leaves the
     // worker's number untouched — and the harm runs one way: showing Sold Out
@@ -48,8 +57,15 @@ window.MICKNACK_STOCK = {
     // this be bought?
     if (!flaggedSoldOut && this.live && typeof this.live[key] === "number") {
       const qty = this.live[key];
-      const hidden = Boolean(raw && typeof raw === "object" && raw.hidden) || raw === "hidden";
+      const hidden =
+        hiddenLive || Boolean(raw && typeof raw === "object" && raw.hidden) || raw === "hidden";
       return { qty, hidden, soldOut: qty <= 0, tracked: true };
+    }
+
+    // No live count for this piece, but it may still have been hidden.
+    if (hiddenLive) {
+      const qty = raw && typeof raw === "object" && typeof raw.qty === "number" ? raw.qty : null;
+      return { qty, hidden: true, soldOut: qty !== null && qty <= 0, tracked: qty !== null };
     }
 
     if (raw === undefined || raw === null) {

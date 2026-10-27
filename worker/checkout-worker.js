@@ -517,6 +517,123 @@ async function hubGuard(request, env) {
   return { ok: true, body };
 }
 
+// Hidden pieces, held here rather than only in the published file, so that
+// hiding something from a phone takes effect at once instead of waiting for
+// a computer to publish it.
+async function readHidden(env) {
+  const out = {};
+  let cursor;
+  do {
+    const page = await env.STOCK.list({ prefix: "hidden:", cursor });
+    for (const key of page.keys) out[key.name.slice("hidden:".length)] = true;
+    cursor = page.list_complete ? null : page.cursor;
+  } while (cursor);
+  return out;
+}
+
+async function hubOrders(env) {
+  const out = { etsy: { ok: false, open: [] }, site: { ok: false, open: [] } };
+
+  if (env.ETSY_API_KEY && env.ETSY_REFRESH_TOKEN) {
+    try {
+      const tokenRes = await fetch("https://api.etsy.com/v3/public/oauth/token", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          grant_type: "refresh_token",
+          client_id: env.ETSY_API_KEY.split(":")[0],
+          refresh_token: env.ETSY_REFRESH_TOKEN,
+        }),
+      });
+      const token = await tokenRes.json();
+      if (token.error) throw new Error(token.error);
+
+      const shopId = env.ETSY_SHOP_ID || "67609393";
+      const res = await fetch(
+        `https://api.etsy.com/v3/application/shops/${shopId}/receipts?limit=50&was_shipped=false`,
+        { headers: { "x-api-key": env.ETSY_API_KEY, Authorization: `Bearer ${token.access_token}` } }
+      );
+      if (!res.ok) throw new Error(`Etsy answered ${res.status}`);
+      const body = await res.json();
+
+      out.etsy = {
+        ok: true,
+        open: (body.results || [])
+          .filter((receipt) => !receipt.is_shipped && receipt.is_paid)
+          .map((receipt) => ({
+            id: String(receipt.receipt_id),
+            from: "Etsy",
+            at: new Date((receipt.created_timestamp || 0) * 1000).toISOString().slice(0, 10),
+            name: receipt.name || "",
+            where: [receipt.city, receipt.state, receipt.country_iso].filter(Boolean).join(", "),
+            cents:
+              receipt.grandtotal && receipt.grandtotal.divisor
+                ? Math.round((receipt.grandtotal.amount / receipt.grandtotal.divisor) * 100)
+                : 0,
+            items: (receipt.transactions || []).map((line) => ({
+              title: (line.title || "").split("|")[0].trim(),
+              qty: line.quantity || 1,
+            })),
+          })),
+      };
+    } catch (err) {
+      out.etsy = { ok: false, why: err.message, open: [] };
+    }
+  } else {
+    out.etsy = { ok: false, why: "Etsy keys not set on the worker", open: [] };
+  }
+
+  if (env.STRIPE_SECRET_KEY) {
+    try {
+      const res = await fetch(
+        "https://api.stripe.com/v1/checkout/sessions?limit=50&status=complete&expand[]=data.line_items",
+        { headers: { Authorization: `Bearer ${env.STRIPE_SECRET_KEY}` } }
+      );
+      const body = await res.json();
+      if (body.error) throw new Error(body.error.message);
+
+      const sent = {};
+      let cursor;
+      do {
+        const page = await env.STOCK.list({ prefix: "sent:", cursor });
+        for (const key of page.keys) sent[key.name.slice("sent:".length)] = true;
+        cursor = page.list_complete ? null : page.cursor;
+      } while (cursor);
+
+      out.site = {
+        ok: true,
+        open: (body.data || [])
+          .filter((session) => session.payment_status === "paid" && !sent[session.id])
+          .map((session) => {
+            const details =
+              (session.collected_information && session.collected_information.shipping_details) ||
+              session.shipping_details || {};
+            const address = details.address || {};
+            return {
+              id: session.id,
+              from: "Your site",
+              at: new Date(session.created * 1000).toISOString().slice(0, 10),
+              name: details.name || (session.customer_details && session.customer_details.name) || "",
+              where: [address.city, address.state, address.country].filter(Boolean).join(", "),
+              cents: session.amount_total || 0,
+              items: ((session.line_items && session.line_items.data) || []).map((line) => ({
+                title: (line.description || "").split("|")[0].trim(),
+                qty: line.quantity || 1,
+              })),
+            };
+          }),
+      };
+    } catch (err) {
+      out.site = { ok: false, why: err.message, open: [] };
+    }
+  } else {
+    out.site = { ok: false, why: "no Stripe key on the worker", open: [] };
+  }
+
+  const all = out.etsy.open.concat(out.site.open).sort((a, b) => a.at.localeCompare(b.at));
+  return { ...out, all };
+}
+
 async function hubSummary(env) {
   const [views, hearts, reviews] = await Promise.all([
     readViews(env),
@@ -567,6 +684,39 @@ async function handleHub(request, env, cors) {
   const action = String(body.action || "summary");
 
   if (action === "summary") return json({ ok: true, summary: await hubSummary(env) }, 200, cors);
+
+  if (action === "orders") return json({ ok: true, orders: await hubOrders(env) }, 200, cors);
+
+  // Everything the phone can change about a piece. The site reads these the
+  // moment they are written, so there is nothing to publish afterwards.
+  if (action === "stock") {
+    const [stock, hidden] = await Promise.all([allStock(env), readHidden(env)]);
+    return json({ ok: true, stock, hidden }, 200, cors);
+  }
+
+  if (action === "setqty") {
+    const piece = cleanText(body.piece, 64);
+    if (!HEART_ID.test(piece)) return json({ error: "Not a piece we know." }, 400, cors);
+    const qty = Math.max(0, Math.floor(Number(body.qty) || 0));
+    await env.STOCK.put(`qty:${piece}`, String(qty));
+    return json({ ok: true, qty }, 200, cors);
+  }
+
+  if (action === "hide") {
+    const piece = cleanText(body.piece, 64);
+    if (!HEART_ID.test(piece)) return json({ error: "Not a piece we know." }, 400, cors);
+    if (body.hidden === false) await env.STOCK.delete(`hidden:${piece}`);
+    else await env.STOCK.put(`hidden:${piece}`, "1");
+    return json({ ok: true }, 200, cors);
+  }
+
+  if (action === "sent") {
+    const id = cleanText(body.id, 120);
+    if (!id) return json({ error: "Which order?" }, 400, cors);
+    if (body.sent === false) await env.STOCK.delete(`sent:${id}`);
+    else await env.STOCK.put(`sent:${id}`, new Date().toISOString().slice(0, 10));
+    return json({ ok: true }, 200, cors);
+  }
 
   if (action === "reviews") {
     return json({ ok: true, reviews: await readReviews(env, { approvedOnly: false }) }, 200, cors);
@@ -708,7 +858,11 @@ export default {
 
     if (path === "/stock" && request.method === "GET") {
       if (!env.STOCK) return json({ stock: {} }, 200, cors);
-      return json({ stock: await allStock(env) }, 200, {
+      // Hidden pieces ride along with the counts: the shop asks this once on
+      // every page, and hiding something from a phone has to reach shoppers
+      // as fast as selling the last one does.
+      const [stock, hidden] = await Promise.all([allStock(env), readHidden(env)]);
+      return json({ stock, hidden: Object.keys(hidden) }, 200, {
         ...cors,
         "Cache-Control": "no-store",
       });
