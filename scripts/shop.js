@@ -1,5 +1,5 @@
 // ============================================================================
-// The shop desk. Runs on this computer, needs nothing and nobody.
+// The Micknack Stacks HUB. Runs on this computer, needs nothing and nobody.
 // ============================================================================
 //
 // This is the dashboard, moved off Claude and onto Jamie's own machine. It
@@ -137,8 +137,8 @@ function save(items) {
 // INVENTORY — what's sold out or hidden on the site.
 // ============================================================================
 //
-// Written by the shop desk (npm run shop). Hand edits here are fine but will
-// be overwritten the next time it saves.
+// Written by the Micknack Stacks HUB (npm run shop). Hand edits here are fine
+// but will be overwritten the next time it saves.
 //
 // The Etsy sync NEVER touches this file.
 //
@@ -196,7 +196,7 @@ function page() {
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Shop desk | Micknack Stacks</title>
+<title>Micknack Stacks HUB</title>
 <style>
   :root {
     --ink: #0f0d0b; --paper: #faf6ef; --card: #fffaf4;
@@ -259,7 +259,7 @@ function page() {
 </head>
 <body>
 <header>
-  <h1>Shop desk</h1>
+  <h1>Micknack Stacks HUB</h1>
   <span class="count" id="summary"></span>
   <button class="ghost" id="revert">Undo changes</button>
   <button id="save">Save</button>
@@ -459,6 +459,6 @@ const server = createServer(async (req, res) => {
 // Only ever answer this machine. There is no password on this thing because
 // there is no way in from anywhere else.
 server.listen(PORT, "127.0.0.1", () => {
-  console.log(`\n  The shop desk is open:  http://localhost:${PORT}\n`);
+  console.log(`\n  The HUB is open:  http://localhost:${PORT}\n`);
   console.log("  Leave this window open while you use it. Close it when you are done.\n");
 });

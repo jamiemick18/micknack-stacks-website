@@ -10,10 +10,10 @@ anything below is when you want to change something yourself.
 
 ---
 
-## The one thing you'll use regularly: the shop desk
+## The one thing you'll use regularly: the HUB
 
-Double-click **`shop.cmd`** in this folder. A black window opens (leave it
-open) and your browser shows the shop desk.
+Double-click the **Micknack Stacks HUB** icon on your desktop. A black window
+opens (leave it open) and your browser shows the HUB.
 
 There you can:
 
