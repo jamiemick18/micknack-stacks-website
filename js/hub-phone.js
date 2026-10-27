@@ -356,6 +356,7 @@
         h += open
           ? "<button class='act ghost' data-cx='" + esc(c.id) + "' data-do='done'>Answered</button>"
           : "<button class='act ghost' data-cx='" + esc(c.id) + "' data-do='new'>Still open</button>";
+        h += "<button class='act danger' data-cx='" + esc(c.id) + "' data-do='delete'>Delete</button>";
         h += "</div></div>";
       }
       host.innerHTML = h;
@@ -363,6 +364,9 @@
       var buttons = host.querySelectorAll("button[data-cx]");
       for (var b = 0; b < buttons.length; b++) {
         buttons[b].addEventListener("click", function () {
+          // Deleting is the one thing here that cannot be undone, and a
+          // phone is easy to tap by accident.
+          if (this.dataset.do === "delete" && !confirm("Delete this request for good?")) return;
           this.disabled = true;
           ask("custom", { id: this.dataset.cx, do: this.dataset.do })
             .then(renderRequests)
