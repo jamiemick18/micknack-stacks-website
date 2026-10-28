@@ -32,14 +32,14 @@
   // other browse links: Contact has moved to the footer, so it can no longer
   // be the thing this is hung off.
   //
-  // "Join the email list", Jamie's wording: plainer than "Drop alerts" and it
+  // "Join our email list", Jamie's wording: plainer than "Drop alerts" and it
   // says the one thing a visitor actually wants to know before clicking —
   // that this is email, not another part of the shop.
   const browseLinks = document.querySelector(".nav-main");
   if (browseLinks && document.querySelector("[data-newsletter]")) {
     const link = document.createElement("a");
     link.href = "#newsletter";
-    link.textContent = "Join the email list";
+    link.textContent = "Join our email list";
     browseLinks.appendChild(link);
   }
 
