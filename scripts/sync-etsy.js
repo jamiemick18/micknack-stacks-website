@@ -10,6 +10,7 @@
 // so no OAuth login flow is needed — the API key alone is enough.
 
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { createContext, runInContext } from "node:vm";
 import { getAccessToken, fetchVariations, renderVariationsFile } from "./etsy-variations.js";
 import { categoryOf, CATEGORIES } from "./categorize.js";
 import { fetchReviews, tidyReviews, renderReviewsFile } from "./etsy-reviews.js";
@@ -385,6 +386,8 @@ async function main() {
   );
   console.log(`Etsy reports ${etsyViews} view(s) and ${etsyFavourites} favourite(s).`);
 
+  writeFavouriteHistory(merged, previous, now);
+
   await syncReviews(shopId, merged, now);
 
   writeCategories(merged, now);
@@ -420,6 +423,62 @@ async function syncReviews(shopId, listings, now) {
 
 // Which shelf each piece sits on, for the filters above the collection. The
 // titles decide it, and data/category-overrides.json settles what they cannot.
+// Etsy keeps no record of a piece being favourited — only a running total per
+// listing. So the shop keeps its own: every sync compares this hour's count
+// with last hour's and writes down what moved. That is the nearest thing to
+// "someone just liked this" that Etsy makes possible, and it is honest about
+// being hourly rather than instant.
+//
+// Only increases are recorded. A count going down means someone un-favourited
+// it, which is nobody's business and makes a miserable feed.
+function writeFavouriteHistory(listings, previous, now) {
+  const path = join(ROOT, "data", "favorites-feed.js");
+  let events = [];
+  if (existsSync(path)) {
+    try {
+      const context = createContext({ window: {} });
+      runInContext(readFileSync(path, "utf8"), context);
+      events = (context.window.MICKNACK_FAVORITES || {}).events || [];
+    } catch (err) {
+      events = [];
+    }
+  }
+
+  let added = 0;
+  for (const listing of listings) {
+    if (!listing.etsy_active) continue;
+    const before = previous.get(listing.listing_id);
+    if (!before) continue; // first time we have seen it: no change to report
+    const gained = (listing.num_favorers || 0) - (before.num_favorers || 0);
+    if (gained <= 0) continue;
+    events.push({
+      id: String(listing.listing_id),
+      title: listing.title,
+      image: (listing.images && listing.images[0]) || "",
+      gained,
+      total: listing.num_favorers || 0,
+      at: now,
+    });
+    added += gained;
+  }
+
+  // A feed nobody scrolls needs no more than the last few weeks of it.
+  const cutoff = Date.now() - 30 * 24 * 60 * 60 * 1000;
+  events = events
+    .filter((event) => Date.parse(event.at) >= cutoff)
+    .slice(-200);
+
+  writeFileSync(
+    path,
+    "// Written by scripts/sync-etsy.js. Which pieces gained favourites on Etsy,\n" +
+      "// and roughly when. Etsy gives no event and no names, so this is built by\n" +
+      "// comparing each sync's counts with the one before.\n" +
+      `window.MICKNACK_FAVORITES = ${JSON.stringify({ events, updated_at: now }, null, 1)};\n`
+  );
+
+  if (added) console.log(`${added} new favourite(s) on Etsy since the last sync.`);
+}
+
 function writeCategories(listings, now) {
   const overridePath = join(ROOT, "data", "category-overrides.json");
   let overrides = {};

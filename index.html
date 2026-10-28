@@ -19,7 +19,7 @@
   <meta name="twitter:title" content="Micknack Stacks | Chain Jewelry &amp; Ear Stacks" />
   <meta name="twitter:description" content="Draped chain ear cuffs and stacking jewelry, designed and loved from Colorado." />
   <meta name="twitter:image" content="https://micknackstacks.com/assets/hero-banner.webp" />
-  <link rel="stylesheet" href="css/style.css?v=20261027c" />
+  <link rel="stylesheet" href="css/style.css?v=20261028a" />
 </head>
 <body>
 
@@ -82,8 +82,13 @@
         </div>
 
         <div class="shelf-filters" id="shelf-filters" role="group" aria-label="Filter the collection" hidden></div>
-        <div class="product-grid" id="product-grid">
-          <!-- Product cards injected by js/app.js -->
+        <div class="shop-layout">
+          <div class="product-grid" id="product-grid">
+            <!-- Product cards injected by js/app.js -->
+          </div>
+          <!-- Desktop only: hidden entirely on phones, where it would crowd
+               the pieces themselves. Filled by js/loved.js. -->
+          <aside class="loved" id="loved" aria-label="What people are loving"></aside>
         </div>
       </div>
     </section>
@@ -160,6 +165,8 @@
   <script src="js/reviews.js"></script>
   <script src="js/contact.js"></script>
   <script src="js/custom.js"></script>
+  <script src="data/favorites-feed.js"></script>
+  <script src="js/loved.js"></script>
   <script src="js/views.js"></script>
 </body>
 </html>
