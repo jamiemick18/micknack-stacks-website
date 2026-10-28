@@ -57,7 +57,7 @@ async function main() {
   try {
     hearts = JSON.parse(await text(WORKER + "/hearts")).counts || {};
   } catch (err) {
-    console.log("Worker unreachable; favourite counts left out of this run.");
+    console.log("Worker unreachable; favorite counts left out of this run.");
   }
 
   const listings = (products && products.listings) || [];
@@ -130,7 +130,7 @@ async function main() {
   console.log(`catalog.json: ${pieces.length} piece(s), ${active.length} still on Etsy`);
   console.log(
     `traffic.json: ${traffic.etsy_views} Etsy view(s), ${traffic.site_views} site visit(s), ` +
-      `${traffic.etsy_favourites} favourite(s)`
+      `${traffic.etsy_favourites} favorite(s)`
   );
   console.log(`Written to ${OUT}/`);
 }

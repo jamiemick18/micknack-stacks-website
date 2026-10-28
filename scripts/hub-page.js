@@ -693,12 +693,12 @@ function loadTraffic() {
     h += "<div class='tiles'>";
     h += "<div class='tile'><span class='n'>" + d.etsy_views + "</span><span class='k'>Etsy views</span></div>";
     h += "<div class='tile'><span class='n'>" + d.site_views + "</span><span class='k'>site visits</span></div>";
-    h += "<div class='tile'><span class='n'>" + d.etsy_favourites + "</span><span class='k'>Etsy favourites</span></div>";
+    h += "<div class='tile'><span class='n'>" + d.etsy_favourites + "</span><span class='k'>Etsy favorites</span></div>";
     h += "<div class='tile'><span class='n'>" + d.site_hearts + "</span><span class='k'>hearts here</span></div>";
     h += "</div>";
 
     if (d.hearted && d.hearted.length) {
-      h += "<div class='panel'><h3>Favourited on your own site</h3>";
+      h += "<div class='panel'><h3>Favorited on your own site</h3>";
       h += "<p class='sub'>Anonymous. Nobody's identity is kept.</p><table><tr><th>Piece</th><th class='n'>Hearts</th></tr>";
       for (var i = 0; i < d.hearted.length; i++)
         h += "<tr><td>" + esc(d.hearted[i].title) + "</td><td class='n'>" + d.hearted[i].hearts + "</td></tr>";
@@ -706,7 +706,7 @@ function loadTraffic() {
     }
 
     if (d.top && d.top.length) {
-      h += "<div class='panel'><h3>Most looked at on Etsy</h3><table><tr><th>Piece</th><th class='n'>Views</th><th class='n'>Favourites</th></tr>";
+      h += "<div class='panel'><h3>Most looked at on Etsy</h3><table><tr><th>Piece</th><th class='n'>Views</th><th class='n'>Favorites</th></tr>";
       for (var k = 0; k < d.top.length; k++)
         h += "<tr><td>" + esc(d.top[k].title) + "</td><td class='n'>" + d.top[k].views + "</td><td class='n'>" + d.top[k].favourites + "</td></tr>";
       h += "</table></div>";

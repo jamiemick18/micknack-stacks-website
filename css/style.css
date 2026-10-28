@@ -786,7 +786,16 @@ img {
 
 .shop-layout { display: block; }
 
-@media (min-width: 1080px) {
+/* The rail only appears once there is room for it WITHOUT costing a column
+   of pieces. Four across is the shape of the collection; a sidebar that
+   quietly turns it into three is a bad trade, so below this width the rail
+   simply does not appear and the grid keeps its usual 1180px.
+
+   1500 = 1460 of content and padding, less the 248 rail and its 34 gap,
+   leaving 1130 for the grid: enough for four 260px cards and their gaps. */
+@media (min-width: 1500px) {
+  #shop .wrap { max-width: 1460px; }
+
   .shop-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 248px;

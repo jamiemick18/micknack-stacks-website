@@ -384,7 +384,7 @@ async function main() {
     join(ROOT, "data", "etsy-stats.json"),
     JSON.stringify({ views: etsyViews, favourites: etsyFavourites, computed_at: now }, null, 2)
   );
-  console.log(`Etsy reports ${etsyViews} view(s) and ${etsyFavourites} favourite(s).`);
+  console.log(`Etsy reports ${etsyViews} view(s) and ${etsyFavourites} favorite(s).`);
 
   writeFavouriteHistory(merged, previous, now);
 
@@ -476,7 +476,7 @@ function writeFavouriteHistory(listings, previous, now) {
       `window.MICKNACK_FAVORITES = ${JSON.stringify({ events, updated_at: now }, null, 1)};\n`
   );
 
-  if (added) console.log(`${added} new favourite(s) on Etsy since the last sync.`);
+  if (added) console.log(`${added} new favorite(s) on Etsy since the last sync.`);
 }
 
 function writeCategories(listings, now) {

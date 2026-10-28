@@ -85,7 +85,7 @@
       id: String(l.listing_id),
       title: l.title,
       image: (l.images && l.images[0]) || "",
-      note: l.num_favorers + (l.num_favorers === 1 ? " favourite" : " favourites"),
+      note: l.num_favorers + (l.num_favorers === 1 ? " favorite" : " favorites"),
     }));
 
   if (!recent.length && !most.length) return;
