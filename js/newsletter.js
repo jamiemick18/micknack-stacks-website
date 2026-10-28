@@ -31,11 +31,16 @@
   // A small nav link that jumps down to the footer form. It sits with the
   // other browse links: Contact has moved to the footer, so it can no longer
   // be the thing this is hung off.
+  //
+  // "Drop alerts" rather than "Join the list": the old label asked for an
+  // action without naming what you get for it, and it sits in a row of plain
+  // functional words — Shop, Favorites, Cart — where a prettier phrase would
+  // read as out of place. The footer does the inviting; this does the saying.
   const browseLinks = document.querySelector(".nav-main");
   if (browseLinks && document.querySelector("[data-newsletter]")) {
     const link = document.createElement("a");
     link.href = "#newsletter";
-    link.textContent = "Join the list";
+    link.textContent = "Drop alerts";
     browseLinks.appendChild(link);
   }
 
