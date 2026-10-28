@@ -32,15 +32,14 @@
   // other browse links: Contact has moved to the footer, so it can no longer
   // be the thing this is hung off.
   //
-  // "Drop alerts" rather than "Join the list": the old label asked for an
-  // action without naming what you get for it, and it sits in a row of plain
-  // functional words — Shop, Favorites, Cart — where a prettier phrase would
-  // read as out of place. The footer does the inviting; this does the saying.
+  // "Join the email list", Jamie's wording: plainer than "Drop alerts" and it
+  // says the one thing a visitor actually wants to know before clicking —
+  // that this is email, not another part of the shop.
   const browseLinks = document.querySelector(".nav-main");
   if (browseLinks && document.querySelector("[data-newsletter]")) {
     const link = document.createElement("a");
     link.href = "#newsletter";
-    link.textContent = "Drop alerts";
+    link.textContent = "Join the email list";
     browseLinks.appendChild(link);
   }
 
