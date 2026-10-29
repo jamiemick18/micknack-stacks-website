@@ -158,12 +158,8 @@
       h += tile(s.customs_waiting || 0, "custom requests", (s.customs_waiting || 0) > 0);
       h += "</div>";
 
-      if (s.money) {
-        h += "<h2>Your site, in Stripe</h2><div class='card'>";
-        h += row("Ready to pay out", money(s.money.available));
-        h += row("Still clearing", money(s.money.pending));
-        h += "</div>";
-      }
+      h += "<h2 id='money-head'>Money, last 30 days</h2><div id='money-body'>" +
+        "<div class='card'><p class='meta'>Asking Etsy and Stripe…</p></div></div>";
 
       if (s.hearts && s.hearts.length) {
         h += "<h2>Most hearted here</h2><div class='card'>";
@@ -180,12 +176,59 @@
       host.innerHTML = h;
     }).catch(function (err) { say(err.message, true); });
 
+    loadMoney();
+
     // The orders badge needs its own answer; it is the thing most worth
     // knowing before you even choose a tab.
     ask("orders").then(function (body) {
       cache.orders = body.orders;
       badge("dot-orders", body.orders.all.length);
     }).catch(function () {});
+  }
+
+  // Both shopfronts. Etsy is where the money actually is, and leaving it off
+  // the phone made the screen look like the shop had earned nothing.
+  function loadMoney() {
+    ask("money").then(function (body) {
+      var host = document.getElementById("money-body");
+      if (!host) return;
+      var m = body.money || {};
+      var h = "";
+
+      h += "<div class='card'><div class='rowtop'><b>Etsy</b></div>";
+      if (!m.etsy.ok) {
+        h += "<p class='meta'>Not available — " + esc(m.etsy.why) + "</p>";
+      } else {
+        h += "<div class='big-money'>" + money(m.etsy.balance) + "</div>";
+        h += "<div class='meta' style='margin-bottom:8px'>in your Etsy account now</div>";
+        h += row("Sales", money(m.etsy.gross));
+        h += row("Etsy's cut, postage, ads", money(m.etsy.fees));
+        h += row("Kept", money(m.etsy.net));
+        h += row("Paid out to you", money(m.etsy.paid_out));
+      }
+      h += "</div>";
+
+      h += "<div class='card'><div class='rowtop'><b>Your own site</b></div>";
+      if (!m.stripe.ok) {
+        h += "<p class='meta'>Not available — " + esc(m.stripe.why) + "</p>";
+      } else if (!m.stripe.month_orders && !m.stripe.available && !m.stripe.pending) {
+        h += "<div class='big-money'>$0.00</div>";
+        h += "<p class='meta'>No orders here yet. Every sale here keeps the whole price.</p>";
+      } else {
+        h += "<div class='big-money'>" + money(m.stripe.available + m.stripe.pending) + "</div>";
+        h += "<div class='meta' style='margin-bottom:8px'>in Stripe now</div>";
+        h += row("Ready to pay out", money(m.stripe.available));
+        h += row("Still clearing", money(m.stripe.pending));
+        h += row("Taken this month", money(m.stripe.month_gross));
+        h += row("Orders", String(m.stripe.month_orders));
+      }
+      h += "</div>";
+
+      host.innerHTML = h;
+    }).catch(function (err) {
+      var host = document.getElementById("money-body");
+      if (host) host.innerHTML = "<div class='card'><p class='meta'>Could not reach them: " + esc(err.message) + "</p></div>";
+    });
   }
 
   function tile(n, k, warn) {

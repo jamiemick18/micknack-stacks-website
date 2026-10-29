@@ -758,6 +758,95 @@ async function hubOrders(env) {
   return { ...out, all };
 }
 
+// Both purses, for the phone. The desktop HUB works this out for itself from
+// Jamie's own .env; away from the desk only the worker has the keys, so it
+// has to do the same sums here.
+async function hubMoney(env) {
+  const out = { etsy: { ok: false }, stripe: { ok: false } };
+
+  if (env.ETSY_API_KEY && env.ETSY_REFRESH_TOKEN) {
+    try {
+      const tokenRes = await fetch("https://api.etsy.com/v3/public/oauth/token", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          grant_type: "refresh_token",
+          client_id: env.ETSY_API_KEY.split(":")[0],
+          refresh_token: env.ETSY_REFRESH_TOKEN,
+        }),
+      });
+      const token = await tokenRes.json();
+      if (token.error) throw new Error(token.error);
+
+      // Etsy refuses a window longer than 31 days, so a month is what it is.
+      const max = Math.floor(Date.now() / 1000);
+      const min = max - 30 * 86400;
+      const shopId = env.ETSY_SHOP_ID || "67609393";
+      const res = await fetch(
+        `https://api.etsy.com/v3/application/shops/${shopId}/payment-account/ledger-entries` +
+          `?min_created=${min}&max_created=${max}&limit=100`,
+        { headers: { "x-api-key": env.ETSY_API_KEY, Authorization: `Bearer ${token.access_token}` } }
+      );
+      if (!res.ok) throw new Error(`Etsy answered ${res.status}`);
+      const ledger = await res.json();
+      const rows = ledger.results || [];
+
+      const byType = {};
+      for (const row of rows) byType[row.ledger_type] = (byType[row.ledger_type] || 0) + row.amount;
+      const gross = byType.PAYMENT_GROSS || 0;
+      const fees = Object.entries(byType)
+        .filter(([type, amount]) => amount < 0 && !/^DISBURSE/i.test(type) && type !== "sales_tax")
+        .reduce((total, [, amount]) => total + amount, 0);
+
+      out.etsy = {
+        ok: true,
+        balance: rows.length ? rows[0].balance : 0,
+        gross,
+        fees,
+        net: gross + fees,
+        paid_out: Math.abs(byType.DISBURSE2 || byType.DISBURSE || 0),
+      };
+    } catch (err) {
+      out.etsy = { ok: false, why: err.message };
+    }
+  } else {
+    out.etsy = { ok: false, why: "Etsy keys not set on the worker" };
+  }
+
+  if (env.STRIPE_SECRET_KEY) {
+    try {
+      const since = Math.floor(Date.now() / 1000) - 30 * 86400;
+      const get = async (path) => {
+        const res = await fetch("https://api.stripe.com/v1" + path, {
+          headers: { Authorization: `Bearer ${env.STRIPE_SECRET_KEY}` },
+        });
+        const body = await res.json();
+        if (body.error) throw new Error(body.error.message);
+        return body;
+      };
+      const [balance, charges] = await Promise.all([
+        get("/balance"),
+        get(`/charges?limit=100&created[gte]=${since}`),
+      ]);
+      const sum = (rows) => (rows || []).reduce((total, row) => total + (row.amount || 0), 0);
+      const paid = (charges.data || []).filter((charge) => charge.paid && !charge.refunded);
+      out.stripe = {
+        ok: true,
+        available: sum(balance.available),
+        pending: sum(balance.pending),
+        month_gross: sum(paid),
+        month_orders: paid.length,
+      };
+    } catch (err) {
+      out.stripe = { ok: false, why: err.message };
+    }
+  } else {
+    out.stripe = { ok: false, why: "no Stripe key on the worker" };
+  }
+
+  return out;
+}
+
 async function hubSummary(env) {
   const [views, hearts, reviews, customs] = await Promise.all([
     readViews(env),
@@ -812,6 +901,8 @@ async function handleHub(request, env, cors) {
   if (action === "summary") return json({ ok: true, summary: await hubSummary(env) }, 200, cors);
 
   if (action === "orders") return json({ ok: true, orders: await hubOrders(env) }, 200, cors);
+
+  if (action === "money") return json({ ok: true, money: await hubMoney(env) }, 200, cors);
 
   if (action === "customs") return json({ ok: true, customs: await readCustoms(env) }, 200, cors);
 
