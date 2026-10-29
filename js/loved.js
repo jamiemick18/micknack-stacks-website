@@ -62,7 +62,7 @@
   // ---- recently loved ----
   const recent = [];
   const seen = new Set();
-  for (let i = feed.length - 1; i >= 0 && recent.length < 4; i--) {
+  for (let i = feed.length - 1; i >= 0 && recent.length < 5; i--) {
     const event = feed[i];
     if (seen.has(event.id) || !visible(event.id)) continue;
     const listing = listings.find((l) => String(l.listing_id) === event.id);
