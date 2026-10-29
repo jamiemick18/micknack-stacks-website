@@ -7,13 +7,20 @@
 // No names and no buyer photos: Etsy does not provide a name, and the photos
 // belong to the buyers who took them.
 //
-// Last read from Etsy: 2026-10-29T19:51:07.524Z
+// Last read from Etsy: 2026-10-29T21:40:46.932Z
 window.MICKNACK_REVIEWS = {
-  "count": 5,
-  "average": 4.8,
-  "five_star": 4,
+  "count": 6,
+  "average": 4.83,
+  "five_star": 5,
   "shop_reviews_url": "https://www.etsy.com/shop/MicknackStacks/reviews",
   "reviews": [
+    {
+      "rating": 5,
+      "text": "Love this piece I’m\nWearing another piece from the same company right now so I don’t have it in, but I love it and I’m definitely gonna be wearing it and ordering more from her store",
+      "listing_id": "4579868601",
+      "piece": "Unicorn Chaos Labret to Earring Connector",
+      "date": "2026-10-29"
+    },
     {
       "rating": 5,
       "text": "Most beautiful piece of jewelry iv bought ill definitely be buying from her again . Great quality",
