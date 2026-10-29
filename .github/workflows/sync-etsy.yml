@@ -102,13 +102,18 @@ jobs:
         run: |
           git config user.name "micknack-stacks-bot"
           git config user.email "actions@users.noreply.github.com"
-          # Every file the sync writes belongs here. A written-but-unstaged
-          # file is left behind as a local change, and the rebase below then
-          # refuses to run, which failed the whole job once.
-          if git diff --quiet -- data/products.js data/etsy-stock-deltas.json data/variations.js data/etsy-stats.json data/site-views.json data/categories.js data/stripe-links.js data/reviews.js p; then
+          # Everything the sync is allowed to write: the data folder and the
+          # share pages. Deliberately NOT a list of filenames — that list was
+          # wrong twice. A file the sync writes but nobody staged is left
+          # behind as a local change, and the rebase below then refuses to
+          # run, failing the whole job while every useful step had succeeded.
+          #
+          # The private files (stock counts, which orders have gone out) are
+          # gitignored, so this cannot publish them.
+          git add -A data p
+          if git diff --cached --quiet; then
             echo "No listing changes — nothing to commit."
           else
-            git add data/products.js data/etsy-stock-deltas.json data/variations.js data/etsy-stats.json data/site-views.json data/categories.js data/stripe-links.js data/reviews.js p
             git commit -m "Sync Etsy listings"
             # Rebase onto anything pushed while this run was in flight, so a
             # concurrent commit doesn't fail the sync.

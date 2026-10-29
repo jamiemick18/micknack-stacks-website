@@ -9,7 +9,7 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-10-28T14:04:20.346Z
+// Last read from Etsy: 2026-10-29T19:51:07.524Z
 
 window.MICKNACK_VARIATIONS = {
   // Everyday 18g G23 ASTM F136 Titanium Gold Clicker Hoop | 18K 
@@ -30,8 +30,6 @@ window.MICKNACK_VARIATIONS = {
   "4581913102": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Alpenglow Labret to Earring Connector | Gold CZ Ear Chain | 
   "4579820434": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
-  // Snow Bunnies Threadless Flatback Earring | Gold Snowflake Ca
-  "4573638523": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Feeling Crabby Threadless Flatback Earring | Gold Crab Carti
   "4573651300": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Pikes Peak Summit Threadless Flatback Earring | Gold CZ Chai

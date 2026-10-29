@@ -7,13 +7,20 @@
 // No names and no buyer photos: Etsy does not provide a name, and the photos
 // belong to the buyers who took them.
 //
-// Last read from Etsy: 2026-10-28T14:04:20.346Z
+// Last read from Etsy: 2026-10-29T19:51:07.524Z
 window.MICKNACK_REVIEWS = {
-  "count": 4,
-  "average": 4.75,
-  "five_star": 3,
+  "count": 5,
+  "average": 4.8,
+  "five_star": 4,
   "shop_reviews_url": "https://www.etsy.com/shop/MicknackStacks/reviews",
   "reviews": [
+    {
+      "rating": 5,
+      "text": "Most beautiful piece of jewelry iv bought ill definitely be buying from her again . Great quality",
+      "listing_id": "4599803201",
+      "piece": "Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain",
+      "date": "2026-10-28"
+    },
     {
       "rating": 5,
       "text": "Thanks for a great product",

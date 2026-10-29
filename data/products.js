@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-28T14:04:20.346Z",
+  "synced_at": "2026-10-29T19:51:07.524Z",
   "listings": [
     {
       "listing_id": "4576033359",
@@ -35,7 +35,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-09-15T20:48:41.000Z",
-      "views": 53,
+      "views": 54,
       "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -105,7 +105,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-10-15T22:11:01.000Z",
-      "views": 89,
+      "views": 99,
       "num_favorers": 12,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
@@ -139,7 +139,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 19,
       "created": "2026-10-08T17:47:55.000Z",
-      "views": 25,
+      "views": 28,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-10-08T19:10:48.816Z"
@@ -173,8 +173,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T17:21:14.000Z",
-      "views": 121,
-      "num_favorers": 7,
+      "views": 133,
+      "num_favorers": 8,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -207,8 +207,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-13T21:39:50.000Z",
-      "views": 177,
-      "num_favorers": 13,
+      "views": 183,
+      "num_favorers": 14,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -241,8 +241,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-10-22T23:42:27.000Z",
-      "views": 7,
-      "num_favorers": 0,
+      "views": 8,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-10-23T01:20:53.342Z"
     },
@@ -378,7 +378,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-10-22T21:40:02.000Z",
-      "views": 10,
+      "views": 14,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-10-22T22:07:53.714Z"
@@ -515,7 +515,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-10-22T21:24:04.000Z",
       "views": 1,
-      "num_favorers": 0,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-10-22T21:34:24.555Z"
     },
@@ -549,7 +549,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-21T19:48:13.000Z",
-      "views": 107,
+      "views": 112,
       "num_favorers": 14,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -580,7 +580,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 4,
       "created": "2026-10-20T23:20:39.000Z",
       "views": 13,
-      "num_favorers": 2,
+      "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-10-21T14:19:56.913Z"
     },
@@ -609,7 +609,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-10-20T19:38:15.000Z",
-      "views": 10,
+      "views": 11,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-10-21T14:19:56.913Z"
@@ -676,7 +676,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-10-15T20:06:48.000Z",
-      "views": 13,
+      "views": 15,
       "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
@@ -709,7 +709,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-01T21:11:50.000Z",
-      "views": 140,
+      "views": 143,
       "num_favorers": 12,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -744,7 +744,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-10-06T18:38:59.000Z",
-      "views": 12,
+      "views": 13,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-10-06T18:49:33.238Z"
@@ -808,7 +808,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-28T18:23:41.000Z",
-      "views": 27,
+      "views": 30,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -844,7 +844,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-24T17:00:41.000Z",
-      "views": 21,
+      "views": 23,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -873,7 +873,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-21T18:11:40.000Z",
-      "views": 14,
+      "views": 17,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -907,41 +907,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-16T20:46:30.000Z",
-      "views": 150,
+      "views": 151,
       "num_favorers": 13,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4573638523",
-      "title": "Snow Bunnies Threadless Flatback Earring | Gold Snowflake Cartilage Stud | Titanium Labret Post | Winter",
-      "price": "16.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4573638523/snow-bunnies-threadless-flatback-earring",
-      "description": "Snow Bunnies ❄️✨\n\nFor the girls who would rather be chasing pow.\n\nSnow Bunnies features an intricate gold snowflake design accented with sparkling marquise and round CZ stones, giving it that fresh-snow-catching-the-light kind of shine.\n\nDetailed without feeling heavy, this piece brings a little alpine energy to your stack while still staying polished and feminine. Perfect for ski girls, snowboarders, mountain lovers, and anyone who thinks winter jewelry should be cute enough to wear year-round.\n\nWhy you’ll love it:\nSnowflake-inspired design\nSparkling marquise and round CZ stones\nDainty but eye-catching\nPerfect for ski and mountain lovers\nEasy to mix into curated ear stacks\nWintery without feeling holiday-only\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nClear marquise and round CZ stones\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Cartilage • Ski-Inspired Stacks • Curated Ear Stacks\n\nFresh snow. Golden sparkle. Mountain-girl energy. ❄️✨",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/d3330b/8559109725/il_fullxfull.8559109725_bxm1.jpg"
-      ],
-      "video": "",
-      "tags": [
-        "threadless earring",
-        "push pin earring",
-        "titanium labret",
-        "flatback earring",
-        "cartilage earring",
-        "dainty gold earring",
-        "cute ear stack",
-        "curated ear",
-        "minimalist stud",
-        "snowboard jewelry",
-        "snowflake earring",
-        "ski earrings",
-        "mountain snow"
-      ],
-      "quantity": 1,
-      "created": "2026-09-12T00:00:43.000Z",
-      "views": 27,
-      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -974,7 +941,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-17T17:55:02.000Z",
-      "views": 42,
+      "views": 46,
       "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1009,8 +976,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-16T18:47:42.000Z",
-      "views": 46,
-      "num_favorers": 8,
+      "views": 57,
+      "num_favorers": 10,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1042,7 +1009,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T23:49:06.000Z",
-      "views": 30,
+      "views": 33,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1073,7 +1040,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-14T17:51:28.000Z",
       "views": 18,
-      "num_favorers": 1,
+      "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1106,7 +1073,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-09-13T21:26:03.000Z",
-      "views": 9,
+      "views": 11,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1205,7 +1172,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T23:20:43.000Z",
-      "views": 11,
+      "views": 13,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1271,8 +1238,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T22:53:41.000Z",
-      "views": 43,
-      "num_favorers": 7,
+      "views": 46,
+      "num_favorers": 8,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1304,7 +1271,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T22:44:39.000Z",
-      "views": 20,
+      "views": 22,
       "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1372,7 +1339,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T22:25:35.000Z",
-      "views": 27,
+      "views": 28,
       "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1404,9 +1371,9 @@ window.MICKNACK_PRODUCTS = {
         "dainty flatback",
         "simple ear stack"
       ],
-      "quantity": 4,
+      "quantity": 2,
       "created": "2026-09-11T22:21:13.000Z",
-      "views": 51,
+      "views": 58,
       "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1471,7 +1438,7 @@ window.MICKNACK_PRODUCTS = {
         "dainty flatback",
         "simple ear stack"
       ],
-      "quantity": 2,
+      "quantity": 1,
       "created": "2026-09-11T18:09:27.000Z",
       "views": 59,
       "num_favorers": 2,
@@ -1507,7 +1474,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T17:54:53.000Z",
-      "views": 80,
+      "views": 85,
       "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1538,7 +1505,7 @@ window.MICKNACK_PRODUCTS = {
         "starburst stud",
         "star earring"
       ],
-      "quantity": 2,
+      "quantity": 1,
       "created": "2026-09-11T17:34:10.000Z",
       "views": 41,
       "num_favorers": 2,
@@ -1572,7 +1539,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T17:06:43.000Z",
-      "views": 14,
+      "views": 15,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1605,7 +1572,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T16:58:37.000Z",
-      "views": 8,
+      "views": 9,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1640,7 +1607,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-08T22:16:35.000Z",
-      "views": 55,
+      "views": 58,
       "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1674,7 +1641,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-03T19:48:22.000Z",
-      "views": 23,
+      "views": 24,
       "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1711,6 +1678,41 @@ window.MICKNACK_PRODUCTS = {
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4573638523",
+      "title": "Snow Bunnies Threadless Flatback Earring | Gold Snowflake Cartilage Stud | Titanium Labret Post | Winter",
+      "price": "16.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4573638523/snow-bunnies-threadless-flatback-earring",
+      "description": "Snow Bunnies ❄️✨\n\nFor the girls who would rather be chasing pow.\n\nSnow Bunnies features an intricate gold snowflake design accented with sparkling marquise and round CZ stones, giving it that fresh-snow-catching-the-light kind of shine.\n\nDetailed without feeling heavy, this piece brings a little alpine energy to your stack while still staying polished and feminine. Perfect for ski girls, snowboarders, mountain lovers, and anyone who thinks winter jewelry should be cute enough to wear year-round.\n\nWhy you’ll love it:\nSnowflake-inspired design\nSparkling marquise and round CZ stones\nDainty but eye-catching\nPerfect for ski and mountain lovers\nEasy to mix into curated ear stacks\nWintery without feeling holiday-only\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nClear marquise and round CZ stones\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Cartilage • Ski-Inspired Stacks • Curated Ear Stacks\n\nFresh snow. Golden sparkle. Mountain-girl energy. ❄️✨",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/d3330b/8559109725/il_fullxfull.8559109725_bxm1.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "threadless earring",
+        "push pin earring",
+        "titanium labret",
+        "flatback earring",
+        "cartilage earring",
+        "dainty gold earring",
+        "cute ear stack",
+        "curated ear",
+        "minimalist stud",
+        "snowboard jewelry",
+        "snowflake earring",
+        "ski earrings",
+        "mountain snow"
+      ],
+      "quantity": 1,
+      "created": "2026-09-12T00:00:43.000Z",
+      "views": 27,
+      "num_favorers": 1,
+      "etsy_active": false,
+      "added_at": "2026-09-30T19:35:47.289Z",
+      "etsy_state": "inactive",
+      "left_etsy_at": "2026-10-29T19:51:07.524Z"
     },
     {
       "listing_id": "4579741852",

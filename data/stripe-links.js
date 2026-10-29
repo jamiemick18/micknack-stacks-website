@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-10-27T19:53:34.540Z",
+  "generated_at": "2026-10-29T19:52:42.887Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
