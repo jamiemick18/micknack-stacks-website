@@ -114,7 +114,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 15,
    "at": "2026-10-30T08:20:20.234Z"
+  },
+  {
+   "id": "4596333038",
+   "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+   "gained": 1,
+   "total": 14,
+   "at": "2026-10-30T15:43:22.439Z"
   }
  ],
- "updated_at": "2026-10-30T14:07:47.091Z"
+ "updated_at": "2026-10-30T15:43:22.439Z"
 };
