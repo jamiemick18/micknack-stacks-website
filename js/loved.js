@@ -37,16 +37,7 @@
 
   const name = (title) => String(title || "").split("|")[0].trim();
 
-  function when(at) {
-    const then = Date.parse(at);
-    if (isNaN(then)) return "";
-    const days = Math.floor((Date.now() - then) / 86400000);
-    if (days <= 0) return "today";
-    if (days === 1) return "yesterday";
-    if (days < 7) return days + " days ago";
-    const weeks = Math.round(days / 7);
-    return weeks === 1 ? "a week ago" : weeks + " weeks ago";
-  }
+  const count = (n) => n + (n === 1 ? " favorite" : " favorites");
 
   function row(piece) {
     return `
@@ -72,20 +63,27 @@
       id: event.id,
       title: event.title || listing.title,
       image: event.image || (listing.images && listing.images[0]) || "",
-      note: when(event.at),
+      // Not a time. The feed records when the hourly sync NOTICED a new
+      // favorite, which is not when someone clicked — and when a sync is
+      // late or fails, a week of them arrive stamped with the same minute.
+      // Saying "today" about that was simply untrue, so the row shows what
+      // is actually known: how many people have favorited it.
+      note: count(listing.num_favorers || event.total || 0),
     });
   }
 
   // ---- most loved ----
+  // Anything already in Recently loved is left out here. A rail that names
+  // the same five pieces twice is half a rail.
   const most = listings
-    .filter((l) => (l.num_favorers || 0) > 0 && visible(String(l.listing_id)))
+    .filter((l) => (l.num_favorers || 0) > 0 && visible(String(l.listing_id)) && !seen.has(String(l.listing_id)))
     .sort((a, b) => (b.num_favorers || 0) - (a.num_favorers || 0))
     .slice(0, 5)
     .map((l) => ({
       id: String(l.listing_id),
       title: l.title,
       image: (l.images && l.images[0]) || "",
-      note: l.num_favorers + (l.num_favorers === 1 ? " favorite" : " favorites"),
+      note: count(l.num_favorers || 0),
     }));
 
   if (!recent.length && !most.length) return;

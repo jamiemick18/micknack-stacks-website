@@ -82,6 +82,7 @@ async function main() {
   }
 
   const quantities = {};
+  let zeroed = 0;
   for (const listing of listings) {
     const id = String(listing.listing_id);
     const sellableHere = Object.values(prices).includes(id);
@@ -89,7 +90,21 @@ async function main() {
     if (sellableHere && !known && typeof listing.quantity === "number") {
       quantities[id] = listing.quantity;
     }
+
+    // A piece that sold its last one on Etsy vanishes from the active list
+    // instead of going to zero, so no delta is ever produced for it and the
+    // worker keeps selling something that does not exist. Deltas cannot fix
+    // this — there is no change to describe — so the count is set outright.
+    //
+    // This is the only place the sync overrules the worker, and it is the
+    // one case where Etsy knows something the shop cannot: that the last one
+    // is gone.
+    if (listing.etsy_active === false && listing.etsy_state === "sold_out" && tracked[id] !== 0) {
+      quantities[id] = 0;
+      zeroed++;
+    }
   }
+  if (zeroed) console.log(`${zeroed} piece(s) sold out on Etsy; their count here set to none left.`);
 
   // Etsy counts views in its own system; the shop has no way to read them
   // from a browser, so they travel with the stock update and the worker adds

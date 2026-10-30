@@ -139,6 +139,49 @@ function state() {
 // Writing it back
 // ---------------------------------------------------------------------------
 
+// The worker is what the shop actually reads, so anything changed here has
+// to reach it. Without this the desktop and the phone wrote to different
+// places and could each undo the other — which is how two hidden pieces came
+// back as merely sold out.
+//
+// Failing to reach the worker is reported, never swallowed: a count that did
+// not arrive is exactly the thing that must not pass quietly.
+async function mirrorToWorker(items) {
+  const pass = envValue("HUB_PASSWORD");
+  if (!pass) return { ok: false, why: "HUB_PASSWORD is not in .env" };
+
+  const tell = async (action, body) => {
+    const res = await fetch(`${WORKER}/hub`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ pass, action, ...body }),
+    });
+    const answer = await res.json();
+    if (!res.ok) throw new Error(answer.error || `worker answered ${res.status}`);
+  };
+
+  try {
+    const live = await fetch(`${WORKER}/stock`).then((r) => r.json());
+    const hidden = new Set(live.hidden || []);
+    let sent = 0;
+
+    for (const [id, item] of Object.entries(items)) {
+      const qty = Math.max(0, Number(item.qty) || 0);
+      if (live.stock[id] !== qty) {
+        await tell("setqty", { piece: id, qty });
+        sent++;
+      }
+      if (Boolean(item.hidden) !== hidden.has(id)) {
+        await tell("hide", { piece: id, hidden: Boolean(item.hidden) });
+        sent++;
+      }
+    }
+    return { ok: true, sent };
+  } catch (err) {
+    return { ok: false, why: err.message };
+  }
+}
+
 function save(items) {
   // The private file keeps everything.
   writeFileSync(
@@ -672,16 +715,25 @@ const server = createServer(async (req, res) => {
     if (req.url === "/api/save" && req.method === "POST") {
       const { items } = await readBody(req);
       const counted = save(items || {});
+      const mirrored = await mirrorToWorker(items || {});
       return json(200, {
         ok: true,
-        message: `Saved. ${counted.sold_out} sold out, ${counted.hidden} hidden. Publish when you want the site to show it.`,
+        message:
+          `Saved — the shop is already showing it. ` +
+          `${counted.sold_out} sold out, ${counted.hidden} hidden.` +
+          (mirrored.ok ? "" : ` (The shop itself could not be reached: ${mirrored.why})`),
       });
     }
 
     if (req.url === "/api/publish" && req.method === "POST") {
       const { items } = await readBody(req);
       save(items || {});
-      return json(200, publish());
+      const mirrored = await mirrorToWorker(items || {});
+      const result = publish();
+      return json(200, {
+        ok: true,
+        message: mirrored.ok ? result.message : `${result.message} (${mirrored.why})`,
+      });
     }
 
     // Etsy lowers its own count when something sells there, but nothing tells
@@ -706,6 +758,7 @@ const server = createServer(async (req, res) => {
         }
       }
       save(counts);
+      await mirrorToWorker(counts);
       return json(200, {
         ok: true,
         moved,

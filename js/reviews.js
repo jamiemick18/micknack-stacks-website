@@ -81,7 +81,7 @@
     const best = all.filter((review) => review.text);
     host.innerHTML = `
       <h2 class="section-heading">Kind words</h2>
-      ${best.length ? `<div class="review-row">${best.slice(0, 3).map(quote).join("")}</div>` : ""}
+      ${best.length ? `<div class="review-row">${best.slice(0, 6).map(quote).join("")}</div>` : ""}
       <div class="review-invite">
         <p class="review-ask">Bought something? Tell people how it wears.</p>
         <button type="button" class="btn btn-primary review-open" id="review-open">

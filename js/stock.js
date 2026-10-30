@@ -41,28 +41,25 @@ window.MICKNACK_STOCK = {
     const inventory = window.MICKNACK_INVENTORY || {};
     const raw = inventory[key];
 
-    // Hidden from a phone, which the published file knows nothing about.
-    // Either source hiding a piece is enough to keep it off the shop.
+    // The worker is the shop's one source of truth about stock. It is what
+    // counts a sale down at checkout, what Jamie's phone writes to, and what
+    // the sync corrects when something sells out on Etsy — so when it answers,
+    // it wins outright. data/inventory.js below is a mirror of it, used only
+    // when the worker cannot be reached.
+    //
+    // It used to be the other way round for sold-out pieces, because the
+    // worker's number went stale when something sold its last one on Etsy.
+    // That is fixed at the source now: the sync zeroes those. Two stores that
+    // could each override the other is what let a hidden piece quietly come
+    // back as merely sold out.
     const hiddenLive = Boolean(this.liveHidden && this.liveHidden.has(key));
 
-    // Jamie saying a piece is sold out is the end of the argument. The live
-    // count can be stale — a piece that sold its last one on Etsy leaves the
-    // worker's number untouched — and the harm runs one way: showing Sold Out
-    // on something still available costs a sale, while selling something that
-    // does not exist costs a customer.
-    const flaggedSoldOut =
-      raw === "sold_out" || Boolean(raw && typeof raw === "object" && raw.sold_out);
-
-    // Otherwise a live count answers the only question the shop asks: can
-    // this be bought?
-    if (!flaggedSoldOut && this.live && typeof this.live[key] === "number") {
+    if (this.live && typeof this.live[key] === "number") {
       const qty = this.live[key];
-      const hidden =
-        hiddenLive || Boolean(raw && typeof raw === "object" && raw.hidden) || raw === "hidden";
-      return { qty, hidden, soldOut: qty <= 0, tracked: true };
+      return { qty, hidden: hiddenLive, soldOut: qty <= 0, tracked: true };
     }
 
-    // No live count for this piece, but it may still have been hidden.
+    // The worker knows nothing about this piece, but may still have hidden it.
     if (hiddenLive) {
       const qty = raw && typeof raw === "object" && typeof raw.qty === "number" ? raw.qty : null;
       return { qty, hidden: true, soldOut: qty !== null && qty <= 0, tracked: qty !== null };

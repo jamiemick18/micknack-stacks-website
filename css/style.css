@@ -1533,7 +1533,9 @@ img {
 
 .review-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* Three across, so six quotes read as two even rows rather than a row of
+     four and a stranded pair. */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 18px;
   max-width: var(--max-width);
   margin: 26px auto 0;
