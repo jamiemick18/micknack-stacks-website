@@ -9,29 +9,23 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-10-29T21:40:46.932Z
+// Last read from Etsy: 2026-10-30T01:44:22.082Z
 
 window.MICKNACK_VARIATIONS = {
   // Everyday 18g G23 ASTM F136 Titanium Gold Clicker Hoop | 18K 
   "4591313547": [{ name: "Hoop Diameter", options: ["5 mm", "6 mm", "7 mm", "8 mm", "10 mm", "11 mm", "12 mm"] }],
-  // Zephyr Threadless Flatback Earring | Hidden Helix Dangle | G
-  "4573452050": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Ti
   "4579868601": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain
   "4599803201": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Soft Spark G23 Titanium Labret to Sterling Silver Ear Chain 
   "4599690242": [{ name: "Post Length", options: ["6 mm", "8 mm"] }, { name: "Stone Color", options: ["Baby Pink CZ", "Lavendar CZ", "Crystal Clear CZ"] }],
-  // Darling Gold Bow Threadless Flatback Earring | Titanium Labr
-  "4573422828": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Checkered Black & Clear CZ Ear Chain | 30mm Gold Connector C
   "4584458361": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Prism Spell Double Draped Ear Chain | ASTM F136 G23 Titanium
   "4581913102": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Alpenglow Labret to Earring Connector | Gold CZ Ear Chain | 
   "4579820434": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
-  // Feeling Crabby Threadless Flatback Earring | Gold Crab Carti
-  "4573651300": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Pikes Peak Summit Threadless Flatback Earring | Gold CZ Chai
   "4573640401": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Soft Bow Threadless Flatback Earring | Minimal Gold Bow Stud
