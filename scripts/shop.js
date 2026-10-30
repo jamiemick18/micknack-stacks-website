@@ -898,7 +898,11 @@ const server = createServer(async (req, res) => {
 server.on("error", (err) => {
   if (err.code === "EADDRINUSE") {
     console.log("\n  The HUB is already open:  http://localhost:" + PORT + "\n");
-    console.log("  Nothing is wrong — you can close this window.\n");
+    console.log("  Nothing is wrong — you can close this window.");
+    // Worth saying: the one already running may have been started days ago,
+    // before whatever changed since. A HUB left open keeps serving the code
+    // it started with, which once made a working feature look broken.
+    console.log("  If it looks out of date, close every HUB window and open it again.\n");
     process.exit(0);
   }
   console.error("\n  The HUB could not start: " + err.message + "\n");
