@@ -130,7 +130,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 16,
    "at": "2026-10-30T20:34:53.851Z"
+  },
+  {
+   "id": "4596333038",
+   "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+   "gained": 1,
+   "total": 15,
+   "at": "2026-10-31T00:34:52.928Z"
+  },
+  {
+   "id": "4577301519",
+   "title": "Purple Problem Triple Ear Chain | 18K PVD Gold Drape Chain | Amethyst & Clear CZ Connector | Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/76221a/8538576258/il_fullxfull.8538576258_aqwo.jpg",
+   "gained": 1,
+   "total": 5,
+   "at": "2026-10-31T00:34:52.928Z"
   }
  ],
- "updated_at": "2026-10-30T20:34:53.851Z"
+ "updated_at": "2026-10-31T00:34:52.928Z"
 };
