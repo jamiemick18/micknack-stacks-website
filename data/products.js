@@ -2,8 +2,41 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-10-31T00:34:52.928Z",
+  "synced_at": "2026-10-31T06:48:36.908Z",
   "listings": [
+    {
+      "listing_id": "4566277207",
+      "title": "Pear CZ Earring Connector Chain | 33mm Dainty Gold Ear Chain | Double Gemstone Dangle Chain | 2mm Jewelry Chain | Ear Stack Accessory",
+      "price": "15.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4566277207/18k-gold-plated-earring-connecting-chain",
+      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\nDetails:\nChain length: 33mm\nChain width: 2mm\nEnd jump hoops: 3mm\nStones: 3mm pear-shaped CZ\nTwo dangling gemstone drops\nLightweight, dainty design\nMade for mixing and styling with flatbacks and hoops\nEarrings shown separately unless otherwise noted\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/f5e586/8477015756/il_fullxfull.8477015756_phwu.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/1d66/154a6be8-e211-45f4-a883-38187da38c79/vid_v1.mp4",
+      "tags": [
+        "earring chain",
+        "earring connector",
+        "ear chain connector",
+        "connecting chain",
+        "earring stack chain",
+        "flatback chain",
+        "threadless earring",
+        "ear stack jewelry",
+        "curated ear jewelry",
+        "gold earring chain",
+        "flatback earrings",
+        "piercing chain",
+        "ear piercing chain"
+      ],
+      "quantity": 4,
+      "created": "2026-08-31T21:52:58.000Z",
+      "views": 27,
+      "num_favorers": 3,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
     {
       "listing_id": "4576033359",
       "title": "Lilac Drop Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
@@ -841,7 +874,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-09-16T20:46:30.000Z",
       "views": 154,
-      "num_favorers": 13,
+      "num_favorers": 14,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -974,7 +1007,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 4,
       "created": "2026-09-13T21:26:03.000Z",
       "views": 13,
-      "num_favorers": 0,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1205,7 +1238,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-11T22:37:16.000Z",
-      "views": 31,
+      "views": 33,
       "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1340,7 +1373,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T18:09:27.000Z",
-      "views": 61,
+      "views": 62,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1508,7 +1541,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 5,
       "created": "2026-09-08T22:16:35.000Z",
       "views": 62,
-      "num_favorers": 5,
+      "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1543,39 +1576,6 @@ window.MICKNACK_PRODUCTS = {
       "created": "2026-09-03T19:48:22.000Z",
       "views": 26,
       "num_favorers": 5,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4566277207",
-      "title": "Pear CZ Earring Connector Chain | 33mm Dainty Gold Ear Chain | Double Gemstone Dangle Chain | 2mm Jewelry Chain | Ear Stack Accessory",
-      "price": "15.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4566277207/18k-gold-plated-earring-connecting-chain",
-      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\nDetails:\nChain length: 33mm\nChain width: 2mm\nEnd jump hoops: 3mm\nStones: 3mm pear-shaped CZ\nTwo dangling gemstone drops\nLightweight, dainty design\nMade for mixing and styling with flatbacks and hoops\nEarrings shown separately unless otherwise noted\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/f5e586/8477015756/il_fullxfull.8477015756_phwu.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/1d66/154a6be8-e211-45f4-a883-38187da38c79/vid_v1.mp4",
-      "tags": [
-        "earring chain",
-        "earring connector",
-        "ear chain connector",
-        "connecting chain",
-        "earring stack chain",
-        "flatback chain",
-        "threadless earring",
-        "ear stack jewelry",
-        "curated ear jewelry",
-        "gold earring chain",
-        "flatback earrings",
-        "piercing chain",
-        "ear piercing chain"
-      ],
-      "quantity": 5,
-      "created": "2026-08-31T21:52:58.000Z",
-      "views": 27,
-      "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },

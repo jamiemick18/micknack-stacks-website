@@ -146,7 +146,39 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 5,
    "at": "2026-10-31T00:34:52.928Z"
+  },
+  {
+   "id": "4566277207",
+   "title": "Pear CZ Earring Connector Chain | 33mm Dainty Gold Ear Chain | Double Gemstone Dangle Chain | 2mm Jewelry Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/f5e586/8477015756/il_fullxfull.8477015756_phwu.jpg",
+   "gained": 1,
+   "total": 3,
+   "at": "2026-10-31T06:48:36.908Z"
+  },
+  {
+   "id": "4576742876",
+   "title": "Alpenglow Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/af4b6c/8534298038/il_fullxfull.8534298038_jq78.jpg",
+   "gained": 1,
+   "total": 14,
+   "at": "2026-10-31T06:48:36.908Z"
+  },
+  {
+   "id": "4574696395",
+   "title": "Midnight Amethyst Ear Chain Connector | Purple Synthetic Corundum Sapphire Dangle Chain | Dainty Gold Earring Chain | Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/44be7f/8567054973/il_fullxfull.8567054973_ftoj.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-10-31T06:48:36.908Z"
+  },
+  {
+   "id": "4571571883",
+   "title": "Sprinkle Chain | 3×5mm Pear CZ Ear Connector Chain | 2mm Dainty Gold Earring Chain | Helix Conch Lobe Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b6fe06/8496164574/il_fullxfull.8496164574_o4lp.jpg",
+   "gained": 1,
+   "total": 6,
+   "at": "2026-10-31T06:48:36.908Z"
   }
  ],
- "updated_at": "2026-10-31T00:34:52.928Z"
+ "updated_at": "2026-10-31T06:48:36.908Z"
 };
