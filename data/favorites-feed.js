@@ -178,7 +178,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 6,
    "at": "2026-10-31T06:48:36.908Z"
+  },
+  {
+   "id": "4601338080",
+   "title": "Hot Mess Pink  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Hot Pink Marquise Dangle | Dainty Cartilage Chain Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/d0159d/8773871911/il_fullxfull.8773871911_5ixs.jpg",
+   "gained": 1,
+   "total": 2,
+   "at": "2026-10-31T18:22:58.434Z"
+  },
+  {
+   "id": "4571571883",
+   "title": "Sprinkle Chain | 3×5mm Pear CZ Ear Connector Chain | 2mm Dainty Gold Earring Chain | Helix Conch Lobe Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b6fe06/8496164574/il_fullxfull.8496164574_o4lp.jpg",
+   "gained": 1,
+   "total": 7,
+   "at": "2026-10-31T18:22:58.434Z"
   }
  ],
- "updated_at": "2026-10-31T13:28:22.850Z"
+ "updated_at": "2026-10-31T18:22:58.434Z"
 };
