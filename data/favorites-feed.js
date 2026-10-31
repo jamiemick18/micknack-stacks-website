@@ -194,7 +194,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 7,
    "at": "2026-10-31T18:22:58.434Z"
+  },
+  {
+   "id": "4571494427",
+   "title": "Drizzle Chain Ear Connector | 5A CZ Raindrop Earring Chain | Dainty Gold Ear Chain | Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/51e709/8495611182/il_fullxfull.8495611182_5rxg.jpg",
+   "gained": 1,
+   "total": 7,
+   "at": "2026-10-31T22:22:10.028Z"
+  },
+  {
+   "id": "4573481130",
+   "title": "Mini Chic Dangle Threadless Flatback Earring | Dainty Gold Drop Earring | Titanium Labret Post | Minimal Cartilage Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/8bff0f/8510003008/il_fullxfull.8510003008_755c.jpg",
+   "gained": 1,
+   "total": 3,
+   "at": "2026-10-31T22:22:10.028Z"
   }
  ],
- "updated_at": "2026-10-31T18:22:58.434Z"
+ "updated_at": "2026-10-31T22:22:10.028Z"
 };
