@@ -51,13 +51,16 @@ your own shop.
 A piece at **0** shows as *Sold Out* on the site, with no Buy button. A piece
 you hide is not shown at all.
 
+Click a piece's photo or its name to open it on the website and see it the way
+a shopper does.
+
 ### Add a piece
 
 For something sold only here and never listed on Etsy. Fill in the name,
 price and how many you have, pick a photo, press **Add the piece**.
 
-It gets a Buy button automatically. Nothing reaches the website until you
-press **Save & publish**, so you can add several and publish once.
+It gets a Buy button and goes straight onto the website — you do not need to
+press Save & publish as well. It shows there a minute or two later.
 
 The Etsy sync never touches these pieces.
 
