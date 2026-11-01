@@ -1,0 +1,24 @@
+# How the checkout worker is deployed.
+#
+# Written so the worker can be deployed from here instead of pasted into the
+# Cloudflare dashboard by hand, which is how it was done before and is how a
+# worker ends up a version behind without anyone noticing.
+#
+# SECRETS ARE NOT HERE and must never be. They live in Cloudflare and survive
+# a deploy untouched: ADMIN_TOKEN, REVIEW_TOKEN, HUB_PASSWORD, ETSY_API_KEY,
+# ETSY_REFRESH_TOKEN, STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, VAPID_PUBLIC_KEY,
+# VAPID_PRIVATE_KEY, GITHUB_TOKEN. Set one with:
+#
+#   npx wrangler secret put NAME
+#
+# The KV id below is the real store the shop sells from. Changing it would
+# point the shop at an empty shelf, so leave it alone.
+
+name = "micknack-checkout"
+main = "worker/checkout-worker.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+[[kv_namespaces]]
+binding = "STOCK"
+id = "f70f2cf298f3407980145093e0a3a079"
