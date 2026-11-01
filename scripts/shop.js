@@ -251,9 +251,26 @@ const HUB_FILES = [
   "data/extra-products.js",
   "data/stripe-links.js",
   "assets/products",
+  // Every piece has its own real page under p/, which is what the grid links
+  // to and what Instagram reads when a link is shared. These used to be built
+  // only by the hourly sync, so a piece added here had a card pointing at a
+  // page that did not exist yet.
+  "p",
 ];
 
 function publish() {
+  // Rebuilt before the check, so adding, renaming, repricing or hiding a
+  // piece all reach its own page in the same breath as the shop.
+  try {
+    execFileSync(process.execPath, [join(__dirname, "build-share-pages.js")], {
+      cwd: ROOT,
+      encoding: "utf8",
+      timeout: 120000,
+    });
+  } catch (err) {
+    return { ok: false, message: `Could not build the piece pages: ${err.message}` };
+  }
+
   const changed = git("status", "--porcelain", "--", ...HUB_FILES);
   if (!changed) return { ok: true, message: "Nothing to publish — the site already matches." };
 
