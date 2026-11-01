@@ -35,7 +35,7 @@ window.MICKNACK_STONES = [
   { id: "lilac-cz", name: "Lilac CZ", swatch: "#d7c3ec", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
   { id: "moonstone", name: "Moonstone", swatch: "#b6b8de", shape: "Round", finish: "opal", size: "4mm", image: "", note: "Lavender with a deep blue AB flash", available: true },
   { id: "purple-cz", name: "Purple CZ", swatch: "#6f4bA8", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
-  { id: "red-cz", name: "Red CZ", swatch: "#c62828", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "red-cz", name: "Red CZ", swatch: "#c62828", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
   { id: "ruby-cz", name: "Ruby CZ", swatch: "#9b1b30", shape: "", finish: "", size: "", image: "", note: "", available: true },
 ];
 
