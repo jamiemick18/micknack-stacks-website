@@ -39,6 +39,15 @@ window.MICKNACK_STONES = [
   { id: "ruby-cz", name: "Ruby CZ", swatch: "#9b1b30", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
 ];
 
+// The chains you can build a custom piece on. Managed from the HUB's Stones
+// page. "mm" is the width, and it is what the mock-up draws.
+window.MICKNACK_CHAINS = [
+  { id: "cable-1-5mm", name: "1.5mm cable chain", mm: "1.5", available: true },
+  { id: "cable-2mm", name: "2mm cable chain", mm: "2", available: true },
+  { id: "zz-temp-chain", name: "ZZ Temp Chain", mm: "3", available: true },
+];
+
+
 // What a custom piece starts at, shown on the card at the front of the shop.
 // Changed from the HUB's Stones page.
 window.MICKNACK_CUSTOM = { from: "30.00" };
