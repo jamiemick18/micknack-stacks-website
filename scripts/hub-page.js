@@ -310,7 +310,7 @@ export function page() {
 
 <main>
   <section class="view" id="view-home">
-    <p class="hello">Morning, <em>Jamie</em>.</p>
+    <p class="hello" id="hello">Hello, <em>Jamie</em>.</p>
     <p class="sub" id="home-sub">Loading…</p>
     <div class="tiles" id="home-tiles"></div>
 
@@ -706,6 +706,16 @@ function renderRows() {
 }
 
 function paintHome() {
+  // The HUB said "Morning" at eleven at night, which is the sort of small
+  // wrongness that makes a thing feel unattended.
+  var hour = new Date().getHours();
+  var greeting =
+    hour < 5 ? "Still up" :
+    hour < 12 ? "Morning" :
+    hour < 17 ? "Afternoon" :
+    hour < 22 ? "Evening" : "Late one";
+  document.getElementById("hello").innerHTML = greeting + ", <em>Jamie</em>.";
+
   var s = summary();
   var tiles = [
     { n: s.total, k: "pieces", to: "all" },

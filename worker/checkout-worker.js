@@ -633,6 +633,260 @@ async function handleCustom(request, env, cors) {
   );
 }
 
+// ----------------------------------------------------------- the repo ------
+
+// Editing the shop's own files, so the phone can do what until now only the
+// desktop could.
+//
+// The desktop HUB edits files on Jamie's computer and pushes them. The phone
+// has no computer to edit, so the worker edits the repository directly
+// through GitHub's contents API. The repository stays the single source of
+// truth either way; this is a second hand on the same files, not a second
+// copy of them.
+//
+// It reads and writes data/stones.json and NEVER data/stones.js, because the
+// .js is generated. Both are written on every save, the script rebuilt from
+// the data, exactly as the desktop does it.
+
+const GH_API = "https://api.github.com";
+
+function ghHeaders(env) {
+  return {
+    Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+    Accept: "application/vnd.github+json",
+    "User-Agent": "micknack-hub",
+    "X-GitHub-Api-Version": "2022-11-28",
+  };
+}
+
+function ghRepo(env) {
+  return env.GITHUB_REPO || "jamiemick18/micknack-stacks-website";
+}
+
+function ghBranch(env) {
+  return env.GITHUB_BRANCH || "main";
+}
+
+// Text in, text out. The sha comes back too: GitHub needs it to prove we are
+// changing the version we actually read, which is what stops the phone and
+// the desktop from quietly overwriting each other.
+async function ghRead(env, path) {
+  const url = `${GH_API}/repos/${ghRepo(env)}/contents/${path}?ref=${ghBranch(env)}&t=${Date.now()}`;
+  const res = await fetch(url, { headers: ghHeaders(env) });
+  if (res.status === 404) return { text: null, sha: null };
+  if (!res.ok) throw new Error(`GitHub would not read ${path} (${res.status})`);
+  const body = await res.json();
+  const binary = atob(String(body.content || "").replace(/\n/g, ""));
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+  return { text: new TextDecoder().decode(bytes), sha: body.sha };
+}
+
+function toBase64(text) {
+  const bytes = new TextEncoder().encode(text);
+  let binary = "";
+  for (let i = 0; i < bytes.length; i++) binary += String.fromCharCode(bytes[i]);
+  return btoa(binary);
+}
+
+async function ghWrite(env, path, text, sha, message) {
+  const res = await fetch(`${GH_API}/repos/${ghRepo(env)}/contents/${path}`, {
+    method: "PUT",
+    headers: { ...ghHeaders(env), "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message,
+      content: toBase64(text),
+      sha: sha || undefined,
+      branch: ghBranch(env),
+    }),
+  });
+  if (!res.ok) {
+    const why = await res.text();
+    throw new Error(`GitHub would not save ${path} (${res.status}) ${why.slice(0, 160)}`);
+  }
+  return res.json();
+}
+
+// ---- the stone shelf, as the worker sees it ----
+
+const EMPTY_SHELF = { stones: [], chains: [], custom: { from: "", rings: "" } };
+
+async function shelfRead(env) {
+  const { text, sha } = await ghRead(env, "data/stones.json");
+  if (!text) return { data: { ...EMPTY_SHELF }, sha: null };
+  try {
+    const data = JSON.parse(text);
+    return {
+      data: {
+        stones: Array.isArray(data.stones) ? data.stones : [],
+        chains: Array.isArray(data.chains) ? data.chains : [],
+        custom: data.custom || { from: "", rings: "" },
+      },
+      sha,
+    };
+  } catch (err) {
+    throw new Error("data/stones.json is not readable.");
+  }
+}
+
+// The same script the desktop writes. If these two ever drift, the website
+// shows one thing and the HUB another, so this is kept deliberately dull and
+// identical rather than clever.
+function shelfScript(data) {
+  const q = (value) => JSON.stringify(String(value == null ? "" : value).trim());
+  const stone = (s) =>
+    `  { id: ${q(s.id)}, name: ${q(s.name)}, swatch: ${q(s.swatch)}, shape: ${q(s.shape)}, ` +
+    `finish: ${q(s.finish)}, size: ${q(s.size)}, image: ${JSON.stringify(String(s.image || ""))}, ` +
+    `note: ${q(s.note)}, available: ${s.available === false ? "false" : "true"} },\n`;
+  const chain = (c) =>
+    `  { id: ${q(c.id)}, name: ${q(c.name)}, mm: ${q(c.mm)}, ` +
+    `available: ${c.available === false ? "false" : "true"} },\n`;
+
+  return `// ============================================================================
+// STONES AND CHAINS - what a custom piece can be made from.
+// ============================================================================
+//
+// GENERATED FILE. Edit data/stones.json, or use the HUB's Stones page, which
+// writes both. Anything typed here is lost the next time either one saves.
+//
+// This is the shelf someone browses when they click "Custom pieces are
+// welcome". They cannot ask for what they do not know you have.
+
+window.MICKNACK_STONES = [
+${data.stones.map(stone).join("")}];
+
+window.MICKNACK_CHAINS = [
+${data.chains.map(chain).join("")}];
+
+window.MICKNACK_CUSTOM = { from: ${q(data.custom.from)}, rings: ${q(data.custom.rings)} };
+`;
+}
+
+async function shelfWrite(env, data, sha, what) {
+  data.stones.sort((a, b) => String(a.name).localeCompare(String(b.name)));
+  // The data first. If the second write fails the website keeps yesterday's
+  // script, which is wrong but harmless; the other way round would leave the
+  // shop showing something no record of exists.
+  const saved = await ghWrite(
+    env,
+    "data/stones.json",
+    JSON.stringify(data, null, 1) + "\n",
+    sha,
+    `${what} (from the phone)`
+  );
+  const script = await ghRead(env, "data/stones.js");
+  await ghWrite(env, "data/stones.js", shelfScript(data), script.sha, `${what} (from the phone)`);
+  return saved;
+}
+
+function slug(text) {
+  return (
+    String(text)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 48) || "thing"
+  );
+}
+
+async function handleShelf(env, body) {
+  if (!env.GITHUB_TOKEN) {
+    return { error: "No GitHub token set, so the phone cannot change the shop's files yet." };
+  }
+
+  const what = body.what;
+
+  if (what === "read") {
+    const { data } = await shelfRead(env);
+    return { ok: true, ...data };
+  }
+
+  const { data, sha } = await shelfRead(env);
+
+  if (what === "stone") {
+    if (!String(body.name || "").trim()) return { error: "A stone needs a name." };
+    let key = String(body.id || "").trim();
+    if (!key) {
+      key = slug(body.name);
+      const taken = new Set(data.stones.map((s) => String(s.id)));
+      let n = 2;
+      while (taken.has(key)) key = `${slug(body.name)}-${n++}`;
+    }
+    let stone = data.stones.find((s) => String(s.id) === key);
+    if (!stone) {
+      stone = { id: key, name: "", swatch: "", shape: "", finish: "", size: "", image: "", note: "", available: true };
+      data.stones.push(stone);
+    }
+    stone.name = String(body.name).trim();
+    if (body.swatch !== undefined) stone.swatch = String(body.swatch || "").trim();
+    if (body.finish !== undefined) {
+      stone.finish = ["ab", "opal"].includes(String(body.finish).trim()) ? String(body.finish).trim() : "";
+    }
+    if (body.shape !== undefined) {
+      stone.shape = String(body.shape || "")
+        .split(",")
+        .map((bit) => bit.trim())
+        .filter(Boolean)
+        .join(", ");
+    }
+    if (body.size !== undefined) stone.size = String(body.size || "").trim();
+    if (body.note !== undefined) stone.note = String(body.note || "").trim();
+    if (body.available !== undefined) stone.available = body.available !== false;
+    await shelfWrite(env, data, sha, `Stone: ${stone.name}`);
+    return { ok: true, message: "Saved. The website has it in a minute or two." };
+  }
+
+  if (what === "stone-remove") {
+    const key = String(body.id || "").trim();
+    if (!data.stones.some((s) => String(s.id) === key)) return { error: "No such stone." };
+    data.stones = data.stones.filter((s) => String(s.id) !== key);
+    await shelfWrite(env, data, sha, "Removed a stone");
+    return { ok: true, message: "Taken off the shelf." };
+  }
+
+  if (what === "chain") {
+    if (!String(body.name || "").trim()) return { error: "A chain needs a name." };
+    let key = String(body.id || "").trim();
+    if (!key) {
+      key = slug(body.name);
+      const taken = new Set(data.chains.map((c) => String(c.id)));
+      let n = 2;
+      while (taken.has(key)) key = `${slug(body.name)}-${n++}`;
+    }
+    let chain = data.chains.find((c) => String(c.id) === key);
+    if (!chain) {
+      chain = { id: key, name: "", mm: "", available: true };
+      data.chains.push(chain);
+    }
+    chain.name = String(body.name).trim();
+    if (body.mm !== undefined) chain.mm = String(body.mm || "").trim();
+    if (body.available !== undefined) chain.available = body.available !== false;
+    await shelfWrite(env, data, sha, `Chain: ${chain.name}`);
+    return { ok: true, message: "Saved. The website has it in a minute or two." };
+  }
+
+  if (what === "chain-remove") {
+    const key = String(body.id || "").trim();
+    if (!data.chains.some((c) => String(c.id) === key)) return { error: "No such chain." };
+    data.chains = data.chains.filter((c) => String(c.id) !== key);
+    await shelfWrite(env, data, sha, "Removed a chain");
+    return { ok: true, message: "Taken off the shelf." };
+  }
+
+  if (what === "custom") {
+    const from = body.from === undefined ? data.custom.from : String(body.from || "").trim();
+    const rings = body.rings === undefined ? data.custom.rings : String(body.rings || "").trim();
+    if (from && !/^\d+(\.\d{1,2})?$/.test(from)) {
+      return { error: "The starting price should be a number like 30.00, with no dollar sign." };
+    }
+    data.custom = { from, rings };
+    await shelfWrite(env, data, sha, "Custom piece settings");
+    return { ok: true, message: "Saved. The website has it in a minute or two." };
+  }
+
+  return { error: "Do not know how to do that." };
+}
+
 // ------------------------------------------------------------ push ---------
 
 // A real notification on Jamie's phone when something lands, so the HUB is
@@ -1079,6 +1333,18 @@ async function handleHub(request, env, cors) {
 
   if (action === "pushtest") {
     return json({ ok: true, message: await notifyPhone(env, "test") }, 200, cors);
+  }
+
+  // The stone shelf, edited from the phone. Everything it does goes through
+  // GitHub, so the phone and the desktop are changing the same files rather
+  // than two copies that drift.
+  if (action === "shelf") {
+    try {
+      const done = await handleShelf(env, body);
+      return json(done, done.error ? 400 : 200, cors);
+    } catch (err) {
+      return json({ error: err.message }, 500, cors);
+    }
   }
 
   if (action === "summary") return json({ ok: true, summary: await hubSummary(env) }, 200, cors);

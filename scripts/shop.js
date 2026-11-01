@@ -252,6 +252,7 @@ const HUB_FILES = [
   "data/stripe-links.js",
   "assets/products",
   "data/stones.js",
+  "data/stones.json",
   "assets/stones",
   // Every piece has its own real page under p/, which is what the grid links
   // to and what Instagram reads when a link is shared. These used to be built
@@ -636,161 +637,175 @@ function sales() {
 // list they browse before describing what they want, so it lives where Jamie
 // can change it without a text editor.
 
+// data/stones.json is the truth; data/stones.js is generated from it.
+//
+// Two things read this list: the website, which needs plain JavaScript it can
+// load from a <script> tag, and the checkout worker, which edits it when
+// Jamie changes something from her phone and cannot run JavaScript to find
+// out what is in it. A parser for a .js file would be a thing that works
+// until the day it does not, so the structured file is the one that counts
+// and the script is written out beside it every time.
+
 const STONES_PATH = join(ROOT, "data", "stones.js");
+const STONES_DATA = join(ROOT, "data", "stones.json");
+
+function readStoneData() {
+  if (existsSync(STONES_DATA)) {
+    try {
+      const data = JSON.parse(readFileSync(STONES_DATA, "utf8"));
+      return {
+        stones: Array.isArray(data.stones) ? data.stones : [],
+        chains: Array.isArray(data.chains) ? data.chains : [],
+        custom: data.custom || { from: "", rings: "" },
+      };
+    } catch (err) {
+      console.error(`Could not read ${STONES_DATA}: ${err.message}`);
+    }
+  }
+  // First run, or someone deleted it: fall back to whatever the script holds
+  // so nothing is lost.
+  return {
+    stones: windowFile("data/stones.js", "MICKNACK_STONES") || [],
+    chains: windowFile("data/stones.js", "MICKNACK_CHAINS") || [],
+    custom: windowFile("data/stones.js", "MICKNACK_CUSTOM") || { from: "", rings: "" },
+  };
+}
+
+function stoneScript(data) {
+  const stone = (s) =>
+    "  { " +
+    [
+      `id: ${JSON.stringify(String(s.id))}`,
+      `name: ${JSON.stringify(String(s.name || "").trim())}`,
+      `swatch: ${JSON.stringify(String(s.swatch || "").trim())}`,
+      `shape: ${JSON.stringify(String(s.shape || "").trim())}`,
+      `finish: ${JSON.stringify(String(s.finish || "").trim())}`,
+      `size: ${JSON.stringify(String(s.size || "").trim())}`,
+      `image: ${JSON.stringify(String(s.image || ""))}`,
+      `note: ${JSON.stringify(String(s.note || "").trim())}`,
+      `available: ${s.available === false ? "false" : "true"}`,
+    ].join(", ") +
+    " },\n";
+
+  const chain = (c) =>
+    "  { " +
+    [
+      `id: ${JSON.stringify(String(c.id))}`,
+      `name: ${JSON.stringify(String(c.name || "").trim())}`,
+      `mm: ${JSON.stringify(String(c.mm || "").trim())}`,
+      `available: ${c.available === false ? "false" : "true"}`,
+    ].join(", ") +
+    " },\n";
+
+  return `// ============================================================================
+// STONES AND CHAINS - what a custom piece can be made from.
+// ============================================================================
+//
+// GENERATED FILE. Edit data/stones.json, or use the HUB's Stones page, which
+// writes both. Anything typed here is lost the next time either one saves.
+//
+// This is the shelf someone browses when they click "Custom pieces are
+// welcome". They cannot ask for what they do not know you have.
+
+window.MICKNACK_STONES = [
+${data.stones.map(stone).join("")}];
+
+window.MICKNACK_CHAINS = [
+${data.chains.map(chain).join("")}];
+
+window.MICKNACK_CUSTOM = { from: ${JSON.stringify(String(data.custom.from || ""))}, rings: ${JSON.stringify(
+    String(data.custom.rings || "")
+  )} };
+`;
+}
+
+function writeStoneData(data) {
+  data.stones.sort((a, b) => String(a.name).localeCompare(String(b.name)));
+  writeFileSync(STONES_DATA, JSON.stringify(data, null, 1) + "\n");
+  writeFileSync(STONES_PATH, stoneScript(data));
+}
 
 function readStones() {
-  const list = windowFile("data/stones.js", "MICKNACK_STONES");
-  return Array.isArray(list) ? list : [];
-}
-
-// Both lists live in data/stones.js, so "the last ]" is no longer ours to
-// assume: each is replaced between its own anchor and the first ]; after it.
-// Getting that wrong would swallow the other list whole.
-function writeList(anchor, body) {
-  const original = existsSync(STONES_PATH) ? readFileSync(STONES_PATH, "utf8") : "";
-  const wasCrlf = original.includes("\r\n");
-  const file = original.replace(/\r\n/g, "\n");
-  const start = file.indexOf(anchor);
-  if (start === -1) throw new Error("data/stones.js does not look like itself.");
-  const from = start + anchor.length;
-  const end = file.indexOf("];", from);
-  if (end === -1) throw new Error("data/stones.js does not look like itself.");
-  const next = file.slice(0, from) + body + file.slice(end);
-  writeFileSync(STONES_PATH, wasCrlf ? next.replace(/\n/g, "\r\n") : next);
-}
-
-function writeStones(list) {
-  writeList(
-    "window.MICKNACK_STONES = [\n",
-    list
-      .map(
-        (stone) =>
-          "  { " +
-          [
-            `id: ${JSON.stringify(String(stone.id))}`,
-            `name: ${JSON.stringify(String(stone.name || "").trim())}`,
-            `swatch: ${JSON.stringify(String(stone.swatch || "").trim())}`,
-            `shape: ${JSON.stringify(String(stone.shape || "").trim())}`,
-            `finish: ${JSON.stringify(String(stone.finish || "").trim())}`,
-            `size: ${JSON.stringify(String(stone.size || "").trim())}`,
-            `image: ${JSON.stringify(String(stone.image || ""))}`,
-            `note: ${JSON.stringify(String(stone.note || "").trim())}`,
-            `available: ${stone.available === false ? "false" : "true"}`,
-          ].join(", ") +
-          " },\n"
-      )
-      .join("")
-  );
+  return readStoneData().stones;
 }
 
 function readChains() {
-  const list = windowFile("data/stones.js", "MICKNACK_CHAINS");
-  return Array.isArray(list) ? list : [];
+  return readStoneData().chains;
 }
 
-function writeChains(list) {
-  writeList(
-    "window.MICKNACK_CHAINS = [\n",
-    list
-      .map(
-        (chain) =>
-          "  { " +
-          [
-            `id: ${JSON.stringify(String(chain.id))}`,
-            `name: ${JSON.stringify(String(chain.name || "").trim())}`,
-            `mm: ${JSON.stringify(String(chain.mm || "").trim())}`,
-            `available: ${chain.available === false ? "false" : "true"}`,
-          ].join(", ") +
-          " },\n"
-      )
-      .join("")
-  );
+function readCustomSettings() {
+  const custom = readStoneData().custom;
+  return { from: custom.from || "", rings: custom.rings || "" };
+}
+
+function writeCustomSettings(next) {
+  const data = readStoneData();
+  const from = next.from === undefined ? data.custom.from : String(next.from || "").trim();
+  const rings = next.rings === undefined ? data.custom.rings : String(next.rings || "").trim();
+  if (from && !/^\d+(\.\d{1,2})?$/.test(from)) {
+    throw new Error("The starting price should be a number like 30.00, with no dollar sign.");
+  }
+  data.custom = { from, rings };
+  writeStoneData(data);
+  return { from, rings };
 }
 
 function saveChain({ id, name, mm, available }) {
   if (!String(name || "").trim()) throw new Error("A chain needs a name.");
-  const list = readChains();
+  const data = readStoneData();
   let key = String(id || "").trim();
   if (!key) {
     key = slugify(name);
-    const taken = new Set(list.map((c) => String(c.id)));
+    const taken = new Set(data.chains.map((c) => String(c.id)));
     let n = 2;
     while (taken.has(key)) key = `${slugify(name)}-${n++}`;
   }
-  let chain = list.find((c) => String(c.id) === key);
+  let chain = data.chains.find((c) => String(c.id) === key);
   if (!chain) {
     chain = { id: key, name: "", mm: "", available: true };
-    list.push(chain);
+    data.chains.push(chain);
   }
   chain.name = String(name).trim();
   chain.mm = String(mm || "").trim();
   chain.available = available !== false;
-  writeChains(list);
+  writeStoneData(data);
   return { id: key };
 }
 
 function removeChain(id) {
   const key = String(id || "").trim();
-  const list = readChains();
-  if (!list.some((c) => String(c.id) === key)) throw new Error("No such chain.");
-  writeChains(list.filter((c) => String(c.id) !== key));
+  const data = readStoneData();
+  if (!data.chains.some((c) => String(c.id) === key)) throw new Error("No such chain.");
+  data.chains = data.chains.filter((c) => String(c.id) !== key);
+  writeStoneData(data);
   return { id: key };
-}
-
-// What a custom piece starts at. It lives beside the stones because that is
-// the page Jamie is on when she thinks about custom work, and because it is
-// one number, not a thing that deserves a settings screen of its own.
-function readCustomSettings() {
-  const settings = windowFile("data/stones.js", "MICKNACK_CUSTOM") || {};
-  return { from: settings.from || "", rings: settings.rings || "" };
-}
-
-function writeCustomSettings(next) {
-  const now = readCustomSettings();
-  const from = next.from === undefined ? now.from : String(next.from || "").trim();
-  const rings = next.rings === undefined ? now.rings : String(next.rings || "").trim();
-  if (from && !/^\d+(\.\d{1,2})?$/.test(from)) {
-    throw new Error("The starting price should be a number like 30.00, with no dollar sign.");
-  }
-  const original = readFileSync(STONES_PATH, "utf8");
-  const wasCrlf = original.includes("\r\n");
-  let file = original.replace(/\r\n/g, "\n");
-  const line = `window.MICKNACK_CUSTOM = { from: ${JSON.stringify(from)}, rings: ${JSON.stringify(rings)} };`;
-  if (/window\.MICKNACK_CUSTOM\s*=\s*\{[^}]*\};/.test(file)) {
-    file = file.replace(/window\.MICKNACK_CUSTOM\s*=\s*\{[^}]*\};/, line);
-  } else {
-    file += `\n${line}\n`;
-  }
-  writeFileSync(STONES_PATH, wasCrlf ? file.replace(/\n/g, "\r\n") : file);
-  return { from, rings };
 }
 
 function saveStone({ id, name, swatch, shape, finish, size, note, available, photo }) {
   if (!String(name || "").trim()) throw new Error("A stone needs a name.");
-  const list = readStones();
+  const data = readStoneData();
 
-  // An id is made from the name once and then left alone, because it is what
-  // a saved request refers to. Renaming "Lavender CZ" must not orphan the
-  // requests that asked for it.
+  // An id is made from the name once and then left alone, because a saved
+  // request refers to the stone by name and the photo is filed under the id.
   let key = String(id || "").trim();
   if (!key) {
     key = slugify(name);
-    const taken = new Set(list.map((s) => String(s.id)));
+    const taken = new Set(data.stones.map((s) => String(s.id)));
     let n = 2;
     while (taken.has(key)) key = `${slugify(name)}-${n++}`;
   }
 
-  let stone = list.find((s) => String(s.id) === key);
+  let stone = data.stones.find((s) => String(s.id) === key);
   if (!stone) {
     stone = { id: key, name: "", swatch: "", shape: "", finish: "", size: "", image: "", note: "", available: true };
-    list.push(stone);
+    data.stones.push(stone);
   }
 
   stone.name = String(name).trim();
   stone.swatch = String(swatch || "").trim();
-  // An iridescent stone is not one colour, and pretending it is makes AB
-  // look like flat lilac. The finish says how to draw it; the swatch stays
-  // the base colour it shifts around.
+  // An iridescent stone is not one colour, and pretending it is makes AB look
+  // like flat lilac. The finish says how to draw it; the swatch stays the
+  // base colour it shifts around.
   stone.finish = ["ab", "opal"].includes(String(finish || "").trim()) ? String(finish).trim() : "";
   // Several shapes at once is normal: one colour is often cut round AND
   // marquise, and a shopper cares which they can have.
@@ -804,21 +819,21 @@ function saveStone({ id, name, swatch, shape, finish, size, note, available, pho
   stone.available = available !== false;
   if (photo && photo.data) stone.image = writePhoto(key, photo, "stones");
 
-  list.sort((a, b) => String(a.name).localeCompare(String(b.name)));
-  writeStones(list);
+  writeStoneData(data);
   return { id: key };
 }
 
 function removeStone(id) {
   const key = String(id || "").trim();
-  const list = readStones();
-  const stone = list.find((s) => String(s.id) === key);
+  const data = readStoneData();
+  const stone = data.stones.find((s) => String(s.id) === key);
   if (!stone) throw new Error("No such stone.");
   if (stone.image) {
     const file = join(ROOT, stone.image);
     if (existsSync(file)) rmSync(file, { force: true });
   }
-  writeStones(list.filter((s) => String(s.id) !== key));
+  data.stones = data.stones.filter((s) => String(s.id) !== key);
+  writeStoneData(data);
   return { id: key };
 }
 

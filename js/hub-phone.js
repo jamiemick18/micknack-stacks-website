@@ -177,11 +177,11 @@
         (on
           ? "This phone is being told when a request, review or order lands."
           : "Get a notification when a custom request, a review or an order comes in.") +
-        "</p><div class='acts'>";
+        "</p><div class='foot'>";
       h += on
-        ? "<button data-push='test'>Send a test</button>" +
-          "<button class='ghost' data-push='off'>Turn off</button>"
-        : "<button data-push='on'>Turn on for this phone</button>";
+        ? "<button class='act' data-push='test'>Send a test</button>" +
+          "<button class='act ghost' data-push='off'>Turn off</button>"
+        : "<button class='act' data-push='on'>Turn on for this phone</button>";
       h += "</div>";
       card.innerHTML = h;
 
@@ -248,10 +248,225 @@
       .catch(function (err) { say(err.message, true); });
   }
 
+  /* ---------- the stone shelf ---------- */
+  //
+  // Everything here goes through the worker, which edits the shop's own files
+  // on GitHub. The phone and the desktop are changing the same files, not two
+  // copies of them, so neither can quietly undo the other.
+  //
+  // Photos are not here yet: they need the file itself, which is the next
+  // piece of work. Everything else a stone has can be set from here.
+
+  var editingStone = null;
+  var editingChain = null;
+
+  function beadFace(stone) {
+    var base = stone.swatch || "#ddd";
+    if (stone.image) return "background-image:url('/" + esc(stone.image) + "')";
+    if (stone.finish === "ab") {
+      return "background:conic-gradient(from 210deg, " + base +
+        ", #bfe6ff, #ffd9f2, #fff0b8, #c9f7d8, " + base + ")";
+    }
+    if (stone.finish === "opal") {
+      return "background:radial-gradient(circle at 30% 24%, #ffffff 0%, #b9a7ef 22%, " +
+        base + " 46%, #3fae96 70%, #16296b 100%)";
+    }
+    return "background:" + base;
+  }
+
+  function renderShelf() {
+    var host = document.getElementById("v-shelf");
+    host.innerHTML = "<div class='card'><p class='meta'>Loading…</p></div>";
+
+    ask("shelf", { what: "read" }).then(function (d) {
+      if (!d.ok) { host.innerHTML = "<div class='card'><p class='meta'>" + esc(d.error) + "</p></div>"; return; }
+      cache.shelf = d;
+
+      var h = "<h2>Stones</h2><div class='card'><div class='beads'>";
+      for (var i = 0; i < d.stones.length; i++) {
+        var st = d.stones[i];
+        h += "<button class='bead-card" + (st.available === false ? " off" : "") +
+          "' data-stone='" + esc(st.id) + "'>";
+        h += "<span class='bead' style='" + beadFace(st) + "'></span>";
+        h += "<b>" + esc(st.name) + "</b>";
+        if (st.shape || st.size) h += "<small>" + esc([st.shape, st.size].filter(Boolean).join(" · ")) + "</small>";
+        if (st.available === false) h += "<small>off the shelf</small>";
+        h += "</button>";
+      }
+      h += "</div><div class='foot'><button class='act' data-new='stone'>Add a stone</button></div></div>";
+
+      h += "<h2>Chains</h2><div class='card'>";
+      for (var c = 0; c < d.chains.length; c++) {
+        var ch = d.chains[c];
+        h += "<button class='act ghost' style='display:block;width:100%;box-sizing:border-box;text-align:left;margin-bottom:6px' data-chain='" + esc(ch.id) + "'>" +
+          esc(ch.name) + (ch.mm ? " <span class='meta'>" + esc(ch.mm) + "mm</span>" : "") +
+          (ch.available === false ? " <span class='meta'>off the shelf</span>" : "") + "</button>";
+      }
+      h += "<div class='foot'><button class='act' data-new='chain'>Add a chain</button></div></div>";
+
+      h += "<h2>Custom pieces</h2><div class='card shelf-form'>";
+      h += "<label for='sh-from'>Starting price</label><input id='sh-from' value='" + esc(d.custom.from || "") + "' inputmode='decimal' />";
+      h += "<label for='sh-rings'>End rings</label><input id='sh-rings' value='" + esc(d.custom.rings || "") + "' />";
+      h += "<div class='foot'><button class='act' data-save='custom'>Save</button></div></div>";
+
+      host.innerHTML = h;
+      wireShelf(d);
+    }).catch(function (err) {
+      host.innerHTML = "<div class='card'><p class='meta'>" + esc(err.message) + "</p></div>";
+    });
+  }
+
+  function wireShelf(d) {
+    var host = document.getElementById("v-shelf");
+
+    var stoneButtons = host.querySelectorAll("button[data-stone]");
+    for (var i = 0; i < stoneButtons.length; i++) {
+      stoneButtons[i].addEventListener("click", function () {
+        var id = this.dataset.stone;
+        var found = null;
+        for (var k = 0; k < d.stones.length; k++) if (d.stones[k].id === id) found = d.stones[k];
+        if (found) stoneForm(found);
+      });
+    }
+
+    var chainButtons = host.querySelectorAll("button[data-chain]");
+    for (var c = 0; c < chainButtons.length; c++) {
+      chainButtons[c].addEventListener("click", function () {
+        var id = this.dataset.chain;
+        var found = null;
+        for (var k = 0; k < d.chains.length; k++) if (d.chains[k].id === id) found = d.chains[k];
+        if (found) chainForm(found);
+      });
+    }
+
+    var adds = host.querySelectorAll("button[data-new]");
+    for (var a = 0; a < adds.length; a++) {
+      adds[a].addEventListener("click", function () {
+        if (this.dataset["new"] === "stone") stoneForm(null);
+        else chainForm(null);
+      });
+    }
+
+    var save = host.querySelector("button[data-save=custom]");
+    if (save) {
+      save.addEventListener("click", function () {
+        say("Saving…");
+        ask("shelf", {
+          what: "custom",
+          from: document.getElementById("sh-from").value,
+          rings: document.getElementById("sh-rings").value,
+        }).then(function (r) {
+          say(r.ok ? r.message : r.error, !r.ok);
+        }).catch(function (err) { say(err.message, true); });
+      });
+    }
+  }
+
+  function stoneForm(stone) {
+    editingStone = stone;
+    var host = document.getElementById("v-shelf");
+    var s = stone || { swatch: "#cccccc", shape: "Round", size: "4mm", available: true };
+    var h = "<h2>" + (stone ? "Edit stone" : "Add a stone") + "</h2><div class='card shelf-form'>";
+    h += "<label for='st-name'>Name</label><input id='st-name' value='" + esc(s.name || "") + "' placeholder='Lavender CZ' />";
+    h += "<label for='st-swatch'>Colour</label><input type='color' id='st-swatch' value='" +
+      esc(/^#[0-9a-f]{6}$/i.test(s.swatch || "") ? s.swatch : "#cccccc") + "' />";
+    h += "<label for='st-finish'>Finish</label><select id='st-finish'>" +
+      "<option value=''" + (!s.finish ? " selected" : "") + ">Plain</option>" +
+      "<option value='ab'" + (s.finish === "ab" ? " selected" : "") + ">Iridescent (AB)</option>" +
+      "<option value='opal'" + (s.finish === "opal" ? " selected" : "") + ">Opal / moonstone glow</option>" +
+      "</select>";
+    h += "<label for='st-shape'>Shape</label><input id='st-shape' value='" + esc(s.shape || "") + "' placeholder='Round' />";
+    h += "<label for='st-size'>Size</label><input id='st-size' value='" + esc(s.size || "") + "' placeholder='4mm' />";
+    h += "<label for='st-note'>One line about it</label><input id='st-note' value='" + esc(s.note || "") + "' />";
+    h += "<label class='tick'><input type='checkbox' id='st-on'" + (s.available === false ? "" : " checked") +
+      " /> <span>On the shelf</span></label>";
+    if (stone && stone.image) h += "<p class='meta'>Its photo stays as it is — photos are set from the desktop for now.</p>";
+    h += "<div class='foot'><button class='act' data-do='save'>Save</button><button class='act ghost' data-do='back'>Never mind</button>";
+    if (stone) h += "<button class='act danger' data-do='remove'>Remove</button>";
+    h += "</div></div>";
+    host.innerHTML = h;
+
+    host.querySelector("button[data-do=back]").addEventListener("click", renderShelf);
+
+    host.querySelector("button[data-do=save]").addEventListener("click", function () {
+      say("Saving…");
+      ask("shelf", {
+        what: "stone",
+        id: stone ? stone.id : "",
+        name: document.getElementById("st-name").value,
+        swatch: document.getElementById("st-swatch").value,
+        finish: document.getElementById("st-finish").value,
+        shape: document.getElementById("st-shape").value,
+        size: document.getElementById("st-size").value,
+        note: document.getElementById("st-note").value,
+        available: document.getElementById("st-on").checked,
+      }).then(function (r) {
+        say(r.ok ? r.message : r.error, !r.ok);
+        if (r.ok) renderShelf();
+      }).catch(function (err) { say(err.message, true); });
+    });
+
+    var remove = host.querySelector("button[data-do=remove]");
+    if (remove) {
+      remove.addEventListener("click", function () {
+        if (!confirm("Remove " + stone.name + " for good? If you have just run out, untick On the shelf instead.")) return;
+        say("Removing…");
+        ask("shelf", { what: "stone-remove", id: stone.id }).then(function (r) {
+          say(r.ok ? r.message : r.error, !r.ok);
+          if (r.ok) renderShelf();
+        }).catch(function (err) { say(err.message, true); });
+      });
+    }
+  }
+
+  function chainForm(chain) {
+    editingChain = chain;
+    var host = document.getElementById("v-shelf");
+    var c = chain || { available: true };
+    var h = "<h2>" + (chain ? "Edit chain" : "Add a chain") + "</h2><div class='card shelf-form'>";
+    h += "<label for='ch-name'>Name</label><input id='ch-name' value='" + esc(c.name || "") + "' placeholder='1.5mm cable chain' />";
+    h += "<label for='ch-mm'>Width in mm</label><input id='ch-mm' value='" + esc(c.mm || "") + "' placeholder='1.5' inputmode='decimal' />";
+    h += "<label class='tick'><input type='checkbox' id='ch-on'" + (c.available === false ? "" : " checked") +
+      " /> <span>On the shelf</span></label>";
+    h += "<div class='foot'><button class='act' data-do='save'>Save</button><button class='act ghost' data-do='back'>Never mind</button>";
+    if (chain) h += "<button class='act danger' data-do='remove'>Remove</button>";
+    h += "</div></div>";
+    host.innerHTML = h;
+
+    host.querySelector("button[data-do=back]").addEventListener("click", renderShelf);
+
+    host.querySelector("button[data-do=save]").addEventListener("click", function () {
+      say("Saving…");
+      ask("shelf", {
+        what: "chain",
+        id: chain ? chain.id : "",
+        name: document.getElementById("ch-name").value,
+        mm: document.getElementById("ch-mm").value,
+        available: document.getElementById("ch-on").checked,
+      }).then(function (r) {
+        say(r.ok ? r.message : r.error, !r.ok);
+        if (r.ok) renderShelf();
+      }).catch(function (err) { say(err.message, true); });
+    });
+
+    var remove = host.querySelector("button[data-do=remove]");
+    if (remove) {
+      remove.addEventListener("click", function () {
+        if (!confirm("Remove " + chain.name + "?")) return;
+        say("Removing…");
+        ask("shelf", { what: "chain-remove", id: chain.id }).then(function (r) {
+          say(r.ok ? r.message : r.error, !r.ok);
+          if (r.ok) renderShelf();
+        }).catch(function (err) { say(err.message, true); });
+      });
+    }
+  }
+
   function render() {
     if (view === "today") return renderToday();
     if (view === "orders") return renderOrders();
     if (view === "stock") return renderStock();
+    if (view === "shelf") return renderShelf();
     if (view === "requests") return renderRequests();
     if (view === "reviews") return renderReviews();
   }

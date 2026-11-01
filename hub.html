@@ -140,6 +140,27 @@
 
   .stars { color: var(--gold); letter-spacing: .14em; font-size: .8rem; }
   .spec { font-size: .8rem; color: #6b6259; margin: 2px 0; }
+  .beads { display: grid; grid-template-columns: repeat(auto-fill, minmax(74px, 1fr)); gap: 10px; }
+  .bead-card { text-align: center; background: none; border: 0; padding: 4px 2px; color: inherit; }
+  .bead-card.off { opacity: .45; }
+  .bead {
+    display: block;
+    width: 46px; height: 46px; border-radius: 50%; margin: 0 auto 5px;
+    background-size: cover; background-position: center;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.14);
+  }
+  .bead-card b { display: block; font-size: .72rem; font-weight: 500; }
+  .bead-card small { display: block; font-size: .62rem; color: #8a8178; }
+  .shelf-form label { display: block; font-size: .7rem; letter-spacing: .08em;
+    text-transform: uppercase; color: #8a8178; margin: 10px 0 4px; }
+  .shelf-form input, .shelf-form select {
+    width: 100%; padding: 9px 10px; font: inherit; font-size: .9rem;
+    border: 1px solid rgba(0,0,0,.14); border-radius: 4px; background: #fff;
+  }
+  .shelf-form input[type=color] { height: 42px; padding: 3px; }
+  .shelf-form .tick { display: flex; align-items: center; gap: 8px;
+    text-transform: none; letter-spacing: 0; font-size: .85rem; color: inherit; }
+  .shelf-form .tick input { width: auto; }
   blockquote { margin: 8px 0; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.05rem; line-height: 1.5; }
   .meta { color: var(--muted); font-size: .74rem; }
 
@@ -177,6 +198,7 @@
       <button data-view="today" class="on">Today</button>
       <button data-view="orders">To send <span class="dot" id="dot-orders" hidden>0</span></button>
       <button data-view="stock">Stock</button>
+      <button data-view="shelf">Stones</button>
       <button data-view="requests">Requests <span class="dot" id="dot-requests" hidden>0</span></button>
       <button data-view="reviews">Reviews <span class="dot" id="dot-reviews" hidden>0</span></button>
     </nav>
@@ -190,11 +212,12 @@
       <input type="search" id="find" placeholder="Find a piece…" />
       <div id="stock-list"></div>
     </section>
+    <section class="view" id="v-shelf"></section>
     <section class="view" id="v-requests"></section>
     <section class="view" id="v-reviews"></section>
   </main>
 </div>
 
-<script src="js/hub-phone.js?v=20261101i"></script>
+<script src="js/hub-phone.js?v=20261101j"></script>
 </body>
 </html>
