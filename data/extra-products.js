@@ -38,6 +38,14 @@
 
 window.MICKNACK_EXTRA_PRODUCTS = [
   {
+    id: "starfall-double-drape-ear-chain-1-5mm-gold-cable",
+    title: "Starfall Double Drape Ear Chain | 1.5mm Gold Cable Chain | 3x5mm Teardrop CZ Earring Connector | Dainty Cartilage Jewelry",
+    price: "19.99",
+    description: "Starfall Double Drape ✨\n\nA little more movement. A little more drama. Still unmistakably Starfall.\n\nStarfall Double Drape takes the original celestial-inspired design and adds a second layer of delicate chain for a soft, dimensional look. Three sparkling **3 × 5 mm teardrop CZ stones** hang individually from the upper drape, catching the light with every little movement.\n\nThe 1.5 mm cable chain keeps the piece dainty while the double-layered design adds texture and depth without making your stack feel heavy.\n\nClean, sparkly, and just dramatic enough. ✨\n\nWhy you’ll love it:\nDouble-drape chain design\nDainty 1.5 mm cable chain\nThree individually dangling CZ stones\n3 × 5 mm teardrop-shaped CZ\nSoft layered movement\nAdds depth without feeling bulky\nEasy to mix into minimal or more detailed ear stacks\nA little extra drama while still staying delicate\n\nStyle it your way\n\nStarfall Double Drape is a chain connector only, designed to attach between compatible hoops, flatbacks, or earrings you already own.\n\nDrape it between two piercings for a layered line of sparkle, pair it with simple gold hoops, or use it to add movement to an already-curated stack.\n\nThe second chain creates a soft lower drape while the three teardrop stones hang from the upper chain, giving the piece dimension from every angle.\n\nPerfect for:\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Gold ear stacks • Celestial-inspired stacks • Curated ears\n\nA little more chain. A little more Starfall. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+    images: ["assets/products/starfall-double-drape-ear-chain-1-5mm-gold-cable.png"],
+    url: "",
+  },
+  {
     id: "starfall-cz-ear-chain-45mm-18k-gold-pvd-satellit",
     title: "Starfall CZ Ear Chain | 45mm 18K Gold PVD Satellite Chain | 3x5mm Teardrop Earring Connector | Dainty Cartilage Jewelry",
     price: "19.99",
