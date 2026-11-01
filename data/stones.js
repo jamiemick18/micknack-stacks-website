@@ -22,21 +22,21 @@
 // gemstone.
 
 window.MICKNACK_STONES = [
-  { id: "ab-crystal", name: "AB Crystal", swatch: "#dfe8f2", shape: "Round, Marquise, Pear", finish: "ab", image: "", note: "Shifts rainbow in the light", available: true },
-  { id: "amethyst-cz", name: "Amethyst Corundum", swatch: "#8f5fb5", shape: "", finish: "", image: "", note: "", available: true },
-  { id: "baby-pink-cz", name: "Baby Pink CZ", swatch: "#f6c3d0", shape: "", finish: "", image: "", note: "", available: true },
-  { id: "black-cz", name: "Black CZ", swatch: "#2a2a2e", shape: "", finish: "", image: "", note: "", available: true },
-  { id: "blue-cz", name: "Blue CZ", swatch: "#3f6fa8", shape: "", finish: "", image: "", note: "", available: true },
-  { id: "champagne-cz", name: "Champagne CZ", swatch: "#d9c3a0", shape: "", finish: "", image: "", note: "", available: true },
-  { id: "clear-cz", name: "Crystal Clear CZ", swatch: "#eef1f4", shape: "", finish: "", image: "", note: "", available: true },
-  { id: "green-cz", name: "Green CZ", swatch: "#3f8f6b", shape: "", finish: "", image: "", note: "", available: true },
-  { id: "hot-pink-cz", name: "Hot Pink Corundum", swatch: "#e0558c", shape: "", finish: "", image: "", note: "", available: true },
-  { id: "lavender-cz", name: "Lavender CZ", swatch: "#c9b6e4", shape: "", finish: "", image: "", note: "", available: true },
-  { id: "lilac-cz", name: "Lilac CZ", swatch: "#d7c3ec", shape: "", finish: "", image: "", note: "", available: true },
-  { id: "moonstone", name: "Moonstone", swatch: "#b6b8de", shape: "Round, Pear", finish: "opal", image: "", note: "Lavender with a deep blue AB flash", available: true },
-  { id: "purple-cz", name: "Purple CZ", swatch: "#6f4bA8", shape: "", finish: "", image: "", note: "", available: true },
-  { id: "red-cz", name: "Red CZ", swatch: "#c62828", shape: "", finish: "", image: "", note: "", available: true },
-  { id: "ruby-cz", name: "Ruby CZ", swatch: "#9b1b30", shape: "", finish: "", image: "", note: "", available: true },
+  { id: "ab-crystal", name: "AB Crystal", swatch: "#dfe8f2", shape: "Round", finish: "ab", size: "4mm", image: "", note: "Shifts rainbow in the light", available: true },
+  { id: "amethyst-cz", name: "Amethyst Corundum", swatch: "#8f5fb5", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "baby-pink-cz", name: "Baby Pink CZ", swatch: "#f6c3d0", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "black-cz", name: "Black CZ", swatch: "#2a2a2e", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "blue-cz", name: "Blue CZ", swatch: "#3f6fa8", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "champagne-cz", name: "Champagne CZ", swatch: "#d9c3a0", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "clear-cz", name: "Crystal Clear CZ", swatch: "#eef1f4", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "green-cz", name: "Green CZ", swatch: "#3f8f6b", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "hot-pink-cz", name: "Hot Pink Corundum", swatch: "#e0558c", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "lavender-cz", name: "Lavender CZ", swatch: "#c9b6e4", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "lilac-cz", name: "Lilac CZ", swatch: "#d7c3ec", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "moonstone", name: "Moonstone", swatch: "#b6b8de", shape: "Round, Pear", finish: "opal", size: "", image: "", note: "Lavender with a deep blue AB flash", available: true },
+  { id: "purple-cz", name: "Purple CZ", swatch: "#6f4bA8", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "red-cz", name: "Red CZ", swatch: "#c62828", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "ruby-cz", name: "Ruby CZ", swatch: "#9b1b30", shape: "", finish: "", size: "", image: "", note: "", available: true },
 ];
 
 // What a custom piece starts at, shown on the card at the front of the shop.
