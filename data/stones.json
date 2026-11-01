@@ -178,12 +178,6 @@
    "name": "2mm cable chain",
    "mm": "2",
    "available": true
-  },
-  {
-   "id": "zz-probe",
-   "name": "ZZ Probe",
-   "mm": "9",
-   "available": true
   }
  ],
  "custom": {

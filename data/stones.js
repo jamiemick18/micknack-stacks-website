@@ -29,7 +29,6 @@ window.MICKNACK_STONES = [
 window.MICKNACK_CHAINS = [
   { id: "cable-1-5mm", name: "1.5mm cable chain", mm: "1.5", available: true },
   { id: "cable-2mm", name: "2mm cable chain", mm: "2", available: true },
-  { id: "zz-probe", name: "ZZ Probe", mm: "9", available: true },
 ];
 
 window.MICKNACK_CUSTOM = { from: "30.00", rings: "3mm" };
