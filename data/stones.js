@@ -22,7 +22,7 @@
 // gemstone.
 
 window.MICKNACK_STONES = [
-  { id: "amethyst-cz", name: "Amethyst CZ", swatch: "#8f5fb5", image: "", note: "", available: true },
+  { id: "amethyst-cz", name: "Amethyst Corundum", swatch: "#8f5fb5", image: "", note: "", available: true },
   { id: "baby-pink-cz", name: "Baby Pink CZ", swatch: "#f6c3d0", image: "", note: "", available: true },
   { id: "black-cz", name: "Black CZ", swatch: "#2a2a2e", image: "", note: "", available: true },
   { id: "blue-cz", name: "Blue CZ", swatch: "#3f6fa8", image: "", note: "", available: true },
