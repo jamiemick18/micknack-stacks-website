@@ -128,6 +128,10 @@ function state() {
       note: saved.note || "",
       buyable: Boolean(links[id]),
       source: "here",
+      // Only pieces added here can be changed here, so only these carry the
+      // rest of the listing around for the edit form to fill itself from.
+      description: extra.description || "",
+      badge: extra.badge || "",
     });
   }
 
@@ -615,6 +619,90 @@ function slugify(text) {
     .slice(0, 48) || "piece";
 }
 
+// Writing the photo is the same job whether a piece is being added or
+// changed, and the file is always named after the piece's id so the site can
+// find it without being told. A new photo in a different format replaces the
+// old one rather than leaving the stale file behind.
+function writePhoto(id, photo) {
+  const ext = extname(photo.name || "").toLowerCase();
+  if (!IMAGE_TYPES[ext]) throw new Error("That photo needs to be a jpg, png, webp or gif.");
+  const buffer = Buffer.from(photo.data, "base64");
+  if (buffer.length > 8e6) throw new Error("That photo is bigger than 8MB. Shrink it first.");
+  mkdirSync(join(ROOT, "assets", "products"), { recursive: true });
+  for (const other of Object.keys(IMAGE_TYPES)) {
+    if (other === ext) continue;
+    const stale = join(ROOT, "assets", "products", `${id}${other}`);
+    if (existsSync(stale)) rmSync(stale, { force: true });
+  }
+  const imagePath = `assets/products/${id}${ext}`;
+  writeFileSync(join(ROOT, imagePath), buffer);
+  return imagePath;
+}
+
+function extraEntry(item) {
+  const images = (item.images || []).filter(Boolean);
+  return (
+    "  {\n" +
+    `    id: ${JSON.stringify(String(item.id))},\n` +
+    `    title: ${JSON.stringify(String(item.title).trim())},\n` +
+    `    price: ${JSON.stringify(String(item.price).trim())},\n` +
+    (item.description ? `    description: ${JSON.stringify(String(item.description).trim())},\n` : "") +
+    (images.length ? `    images: [${images.map((i) => JSON.stringify(i)).join(", ")}],\n` : "") +
+    `    url: ${JSON.stringify(String(item.url || ""))},\n` +
+    (item.badge ? `    badge: ${JSON.stringify(String(item.badge).trim())},\n` : "") +
+    "  },\n"
+  );
+}
+
+// The whole list is rewritten rather than patched, because finding one entry
+// inside the file with a regular expression is the kind of clever that breaks
+// the first time a description contains a brace. The comment header above the
+// list is kept; everything between the brackets is ours.
+function writeExtras(entries) {
+  const path = join(ROOT, "data", "extra-products.js");
+  const original = readFileSync(path, "utf8");
+  const wasCrlf = original.includes("\r\n");
+  const file = original.replace(/\r\n/g, "\n");
+  const anchor = "window.MICKNACK_EXTRA_PRODUCTS = [\n";
+  const start = file.indexOf(anchor);
+  const end = file.lastIndexOf("];");
+  if (start === -1 || end === -1 || end < start) {
+    throw new Error("data/extra-products.js does not look like itself.");
+  }
+  const body = entries.map(extraEntry).join("") + "  // Add your items here, between the brackets.\n";
+  const next = file.slice(0, start + anchor.length) + body + file.slice(end);
+  writeFileSync(path, wasCrlf ? next.replace(/\n/g, "\r\n") : next);
+}
+
+// Changing a piece that was never on Etsy. The id never moves, even when the
+// name does: it is what the stock count, the Buy link, the hearts and the
+// view counter all hang on, so renaming a piece must not quietly orphan them.
+//
+// Pieces that came from Etsy are deliberately not editable here. The hourly
+// sync rewrites them from Etsy every hour, so an edit made here would be
+// silently undone — better to say so than to let it look like it worked.
+function editPiece({ id, title, price, description, badge, photo }) {
+  const extras = windowFile("data/extra-products.js", "MICKNACK_EXTRA_PRODUCTS") || [];
+  const found = extras.find((e) => String(e.id) === String(id));
+  if (!found) {
+    throw new Error("That piece came from Etsy, so it has to be changed on Etsy.");
+  }
+  if (!String(title || "").trim()) throw new Error("It needs a name.");
+  if (!/^\d+(\.\d{1,2})?$/.test(String(price || "").trim())) {
+    throw new Error("The price should be a number like 19.99, with no dollar sign.");
+  }
+
+  const wasPrice = String(found.price);
+  found.title = String(title).trim();
+  found.price = String(price).trim();
+  found.description = String(description || "").trim();
+  found.badge = String(badge || "").trim();
+  if (photo && photo.data) found.images = [writePhoto(String(id), photo)];
+
+  writeExtras(extras);
+  return { id: String(id), repriced: wasPrice !== found.price };
+}
+
 function addPiece({ title, price, qty, description, badge, photo }) {
   if (!String(title || "").trim()) throw new Error("It needs a name.");
   if (!/^\d+(\.\d{1,2})?$/.test(String(price || "").trim())) {
@@ -634,36 +722,17 @@ function addPiece({ title, price, qty, description, badge, photo }) {
 
   // The photo is written into the same folder every other product photo
   // lives in, so the site finds it with no extra step.
-  let imagePath = "";
-  if (photo && photo.data) {
-    const ext = extname(photo.name || "").toLowerCase();
-    if (!IMAGE_TYPES[ext]) throw new Error("That photo needs to be a jpg, png, webp or gif.");
-    const buffer = Buffer.from(photo.data, "base64");
-    if (buffer.length > 8e6) throw new Error("That photo is bigger than 8MB. Shrink it first.");
-    mkdirSync(join(ROOT, "assets", "products"), { recursive: true });
-    imagePath = `assets/products/${id}${ext}`;
-    writeFileSync(join(ROOT, imagePath), buffer);
-  }
+  const imagePath = photo && photo.data ? writePhoto(id, photo) : "";
 
-  const entry =
-    "  {\n" +
-    `    id: ${JSON.stringify(id)},\n` +
-    `    title: ${JSON.stringify(String(title).trim())},\n` +
-    `    price: ${JSON.stringify(String(price).trim())},\n` +
-    (description ? `    description: ${JSON.stringify(String(description).trim())},\n` : "") +
-    (imagePath ? `    images: [${JSON.stringify(imagePath)}],\n` : "") +
-    `    url: "",\n` +
-    (badge ? `    badge: ${JSON.stringify(String(badge).trim())},\n` : "") +
-    "  },\n";
-
-  const path = join(ROOT, "data", "extra-products.js");
-  const original = readFileSync(path, "utf8");
-  const crlf = original.includes("\r\n");
-  let file = original.replace(/\r\n/g, "\n");
-  const anchor = "window.MICKNACK_EXTRA_PRODUCTS = [\n";
-  if (!file.includes(anchor)) throw new Error("data/extra-products.js does not look like itself.");
-  file = file.replace(anchor, anchor + entry);
-  writeFileSync(path, crlf ? file.replace(/\n/g, "\r\n") : file);
+  extras.unshift({
+    id,
+    title,
+    price,
+    description: String(description || "").trim(),
+    images: imagePath ? [imagePath] : [],
+    badge: String(badge || "").trim(),
+  });
+  writeExtras(extras);
 
   // It needs a count like anything else, or the site has no idea whether it
   // is in stock.
@@ -874,6 +943,54 @@ const server = createServer(async (req, res) => {
         message: `Added "${form.title}"${linked}. Press Save & publish to put it on the website.`,
         id,
       });
+    }
+
+    // Changing a piece that was added here. Etsy pieces are refused by
+    // editPiece itself, because the sync would undo any edit within the hour.
+    if (req.url === "/api/edit" && req.method === "POST") {
+      const form = await readBody(req);
+      const { id, repriced } = editPiece(form);
+      // A Payment Link's price is frozen when it is made, so a new price
+      // means a new link. Everything else leaves the link alone.
+      let linked = "";
+      if (repriced) {
+        try {
+          execFileSync(process.execPath, [join(__dirname, "create-stripe-links.js"), "--live"], {
+            cwd: ROOT,
+            encoding: "utf8",
+            timeout: 120000,
+          });
+          linked = " Its Buy button was remade for the new price.";
+        } catch (err) {
+          linked = " Its Buy button could NOT be remade for the new price — it will still charge the old one, so do not publish yet.";
+        }
+      }
+      return json(200, {
+        ok: true,
+        message: `Saved "${form.title}".${linked} Press Save & publish to put the change on the website.`,
+        id,
+      });
+    }
+
+    // Photos of pieces added here live on disk, not on Etsy, so the HUB has
+    // to hand them over itself or its own thumbnails come up blank.
+    if (req.method === "GET" && req.url.startsWith("/assets/products/")) {
+      const name = decodeURIComponent(req.url.split("?")[0].slice("/assets/products/".length));
+      const ext = extname(name).toLowerCase();
+      // Only image names, and only from that one folder: no slashes, no
+      // dots leading anywhere else.
+      if (/^[A-Za-z0-9._-]+$/.test(name) && !name.includes("..") && IMAGE_TYPES[ext]) {
+        const file = join(ROOT, "assets", "products", name);
+        if (existsSync(file)) {
+          const type = ext === ".png" ? "image/png" : ext === ".gif" ? "image/gif"
+            : ext === ".webp" ? "image/webp" : "image/jpeg";
+          res.writeHead(200, { "Content-Type": type, "Cache-Control": "no-store" });
+          res.end(readFileSync(file));
+          return;
+        }
+      }
+      res.writeHead(404); res.end();
+      return;
     }
 
     // The bear, for the tab and the page's own header.

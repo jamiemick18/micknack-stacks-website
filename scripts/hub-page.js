@@ -203,9 +203,10 @@ export function page() {
   .row {
     background: var(--card); border: 1px solid var(--line); border-radius: 4px;
     padding: 10px 12px; display: grid;
-    grid-template-columns: 50px 1fr auto auto auto; gap: 12px; align-items: center;
+    grid-template-columns: 50px 1fr auto auto auto auto; gap: 10px; align-items: center;
   }
   .row.off { opacity: .5; }
+  .row a.ghost { text-decoration: none; display: inline-block; }
   .row img { width: 50px; height: 50px; object-fit: cover; border-radius: 3px; background: #eee; }
   .title { font-size: .9rem; }
   .meta { color: var(--muted); font-size: .74rem; margin-top: 2px; }
@@ -247,7 +248,7 @@ export function page() {
   .panel .sub { margin-bottom: 10px; }
 
   @media (max-width: 720px) {
-    .row { grid-template-columns: 40px 1fr auto; }
+    .row { grid-template-columns: 40px 1fr auto auto; }
     .row img { width: 40px; height: 40px; }
     .pill { display: none; }
     .two { grid-template-columns: 1fr; }
@@ -338,8 +339,9 @@ export function page() {
   </section>
 
   <section class="view" id="view-add">
-    <h2>Add a piece</h2>
-    <p class="sub">For something sold only here, never listed on Etsy. The Etsy sync never touches these.</p>
+    <h2 id="a-head">Add a piece</h2>
+    <p class="sub" id="a-sub">For something sold only here, never listed on Etsy. The Etsy sync never touches these.</p>
+    <p class="sub" id="a-editing" hidden></p>
     <form class="add" id="add-form">
       <div>
         <label for="a-title">Name</label>
@@ -353,6 +355,7 @@ export function page() {
         <div>
           <label for="a-qty">How many you have</label>
           <input type="number" id="a-qty" class="wide" min="0" value="1" />
+          <span class="hint" id="a-qty-hint" hidden>Change the count on the Inventory page.</span>
         </div>
       </div>
       <div>
@@ -372,7 +375,8 @@ export function page() {
       <img id="preview" alt="" />
       <div>
         <button type="submit" id="a-go">Add the piece</button>
-        <span class="hint">It is saved here first. Publish when you are ready for the world to see it.</span>
+        <button type="button" class="ghost" id="a-cancel" hidden>Never mind</button>
+        <span class="hint" id="a-hint">It is saved here first. Publish when you are ready for the world to see it.</span>
       </div>
     </form>
   </section>
@@ -418,6 +422,10 @@ function show(name) {
   // filter on its way here, and the view would otherwise still show whatever
   // it showed last time.
   if (name === "inventory") renderRows();
+  // Reached from the menu rather than from an Edit button: this is a new
+  // piece. startEdit sets the hash itself and clears the flag below.
+  if (name === "add" && editing && !justEdited) addMode();
+  justEdited = false;
   if (name === "traffic" && !salesLoaded) loadTraffic();
   if (name === "requests") loadRequests();
   if (name === "reviews") loadReviews();
@@ -430,6 +438,7 @@ function route() {
 window.addEventListener("hashchange", route);
 
 /* ---------- inventory ---------- */
+var justEdited = false;
 function summary() {
   var sold = 0, hidden = 0;
   for (var i = 0; i < pieces.length; i++) {
@@ -442,7 +451,7 @@ function summary() {
 
 function paint(row, p) {
   var pill = row.querySelector(".pill");
-  var hide = row.querySelector("button");
+  var hide = row.querySelector("button.hide");
   hide.textContent = p.hidden ? "Show" : "Hide";
   var off = p.hidden || Number(p.qty) <= 0;
   row.querySelector(".note").style.display = off ? "block" : "none";
@@ -520,13 +529,30 @@ function renderRows() {
     pill.className = "pill";
 
     var hide = document.createElement("button");
-    hide.className = "ghost";
+    hide.className = "ghost hide";
     hide.addEventListener("click", (function (piece, r) {
       return function (e) { e.preventDefault(); piece.hidden = !piece.hidden; paint(r, piece); };
     })(p, row));
 
+    // Pieces added here can be changed here. Pieces from Etsy cannot: the
+    // hourly sync rewrites them from Etsy, so the honest thing is to send
+    // you to Etsy rather than let an edit look like it stuck.
+    var edit = document.createElement(p.source === "here" ? "button" : "a");
+    edit.className = "ghost";
+    edit.textContent = "Edit";
+    if (p.source === "here") {
+      edit.addEventListener("click", (function (piece) {
+        return function (e) { e.preventDefault(); startEdit(piece); };
+      })(p));
+    } else {
+      edit.href = "https://www.etsy.com/your/shops/me/tools/listings/" + encodeURIComponent(p.id);
+      edit.target = "_blank"; edit.rel = "noopener";
+      edit.title = "Edit on Etsy — the sync brings the change back here";
+      edit.textContent = "Edit on Etsy ↗";
+    }
+
     row.appendChild(img); row.appendChild(cell); row.appendChild(qty);
-    row.appendChild(pill); row.appendChild(hide);
+    row.appendChild(pill); row.appendChild(edit); row.appendChild(hide);
     host.appendChild(row);
     paint(row, p);
   }
@@ -854,8 +880,65 @@ function loadReviews() {
   }).catch(function (err) { host.textContent = "Could not load those: " + err.message; });
 }
 
-/* ---------- add a piece ---------- */
+/* ---------- add a piece, and changing one ---------- */
 var photoData = null;
+var editing = null;
+
+// The add form doubles as the edit form. One form means one place where the
+// fields, the validation and the look of it all live, so they cannot drift.
+function addMode() {
+  editing = null;
+  photoData = null;
+  document.getElementById("add-form").reset();
+  document.getElementById("preview").style.display = "none";
+  document.getElementById("a-head").textContent = "Add a piece";
+  document.getElementById("a-sub").hidden = false;
+  document.getElementById("a-editing").hidden = true;
+  document.getElementById("a-go").textContent = "Add the piece";
+  document.getElementById("a-cancel").hidden = true;
+  document.getElementById("a-qty").disabled = false;
+  document.getElementById("a-qty-hint").hidden = true;
+  document.getElementById("a-hint").textContent =
+    "It is saved here first. Publish when you are ready for the world to see it.";
+}
+
+function startEdit(p) {
+  editing = p.id;
+  photoData = null;
+  document.getElementById("a-title").value = p.title || "";
+  document.getElementById("a-price").value = p.price || "";
+  document.getElementById("a-desc").value = p.description || "";
+  document.getElementById("a-badge").value = p.badge || "";
+  document.getElementById("a-photo").value = "";
+
+  var preview = document.getElementById("preview");
+  if (p.image) { preview.src = "/" + p.image; preview.style.display = "block"; }
+  else preview.style.display = "none";
+
+  document.getElementById("a-head").textContent = "Edit a piece";
+  document.getElementById("a-sub").hidden = true;
+  var where = document.getElementById("a-editing");
+  where.hidden = false;
+  where.textContent = "Changing “" + p.title.split("|")[0].trim() +
+    "”. Leave the photo empty to keep the one it has.";
+  document.getElementById("a-go").textContent = "Save the change";
+  document.getElementById("a-cancel").hidden = false;
+  // The count is the Inventory page's job, and it reaches the shop the
+  // moment it is saved there. Having two places to set it is how the two
+  // ended up disagreeing before.
+  document.getElementById("a-qty").value = p.qty;
+  document.getElementById("a-qty").disabled = true;
+  document.getElementById("a-qty-hint").hidden = false;
+  document.getElementById("a-hint").textContent =
+    "Changing the price remakes its Buy button. Publish when you are ready.";
+  justEdited = true;
+  location.hash = "#/add";
+}
+
+document.getElementById("a-cancel").addEventListener("click", function () {
+  addMode();
+  location.hash = "#/inventory";
+});
 document.getElementById("a-photo").addEventListener("change", function () {
   var file = this.files && this.files[0];
   var preview = document.getElementById("preview");
@@ -871,11 +954,13 @@ document.getElementById("a-photo").addEventListener("change", function () {
 document.getElementById("add-form").addEventListener("submit", function (e) {
   e.preventDefault();
   var btn = document.getElementById("a-go");
+  var was = editing;
   btn.disabled = true;
-  note("Adding…");
-  fetch("/api/add", {
+  note(was ? "Saving…" : "Adding…");
+  fetch(was ? "/api/edit" : "/api/add", {
     method: "POST", headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
+      id: was || undefined,
       title: document.getElementById("a-title").value,
       price: document.getElementById("a-price").value,
       qty: Number(document.getElementById("a-qty").value),
@@ -887,10 +972,9 @@ document.getElementById("add-form").addEventListener("submit", function (e) {
     btn.disabled = false;
     note(d.message, !d.ok);
     if (d.ok) {
-      document.getElementById("add-form").reset();
-      photoData = null;
-      document.getElementById("preview").style.display = "none";
+      addMode();
       load();
+      if (was) location.hash = "#/inventory";
     }
   }).catch(function (err) { btn.disabled = false; note("That did not work: " + err.message, true); });
 });
