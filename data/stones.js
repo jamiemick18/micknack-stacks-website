@@ -33,6 +33,7 @@ window.MICKNACK_STONES = [
   { id: "hot-pink-cz", name: "Hot Pink Corundum", swatch: "#e0558c", shape: "", finish: "", image: "", note: "", available: true },
   { id: "lavender-cz", name: "Lavender CZ", swatch: "#c9b6e4", shape: "", finish: "", image: "", note: "", available: true },
   { id: "lilac-cz", name: "Lilac CZ", swatch: "#d7c3ec", shape: "", finish: "", image: "", note: "", available: true },
+  { id: "moonstone", name: "Moonstone", swatch: "#b6b8de", shape: "Round, Pear", finish: "opal", image: "", note: "Lavender with a deep blue AB flash", available: true },
   { id: "purple-cz", name: "Purple CZ", swatch: "#6f4bA8", shape: "", finish: "", image: "", note: "", available: true },
   { id: "red-cz", name: "Red CZ", swatch: "#c62828", shape: "", finish: "", image: "", note: "", available: true },
   { id: "ruby-cz", name: "Ruby CZ", swatch: "#9b1b30", shape: "", finish: "", image: "", note: "", available: true },
