@@ -23,7 +23,7 @@ window.MICKNACK_STONES = [
   { id: "moonstone", name: "Moonstone", swatch: "#5b3fb8", shape: "Round", finish: "opal", size: "4mm", image: "", note: "Deep blue to violet flash", available: true },
   { id: "purple-cz", name: "Purple CZ", swatch: "#6f4bA8", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
   { id: "red-cz", name: "Red CZ", swatch: "#c62828", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
-  { id: "ruby-cz", name: "Ruby CZ", swatch: "#9b1b30", shape: "Round", finish: "", size: "4mm", image: "", note: "written from the phone path", available: true },
+  { id: "ruby-cz", name: "Ruby CZ", swatch: "#9b1b30", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
 ];
 
 window.MICKNACK_CHAINS = [
