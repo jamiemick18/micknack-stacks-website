@@ -81,6 +81,22 @@ Etsy and the sync brings it back here by itself.
 
 As always, nothing reaches the website until you press **Save & publish**.
 
+### Stones
+
+The shelf someone browses when they click **Custom pieces are welcome**. They
+cannot ask for a stone they do not know you keep, so this is what makes custom
+orders possible at all.
+
+Add a stone with its name, a colour, and a photo when you have one. **A photo
+always beats a colour** — the colour is only a stand-in so the shelf is not
+empty while you work through photographing them.
+
+Run out of something? Untick **On the shelf**. It disappears from the website
+but stays here, ready for when you have it again. Only use **Remove** for
+something you are never stocking again.
+
+Changes here go on the website straight away.
+
 ### Traffic
 
 Etsy views and favourites, visits to your own site, and which pieces people
