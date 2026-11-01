@@ -210,7 +210,31 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 3,
    "at": "2026-10-31T22:22:10.028Z"
+  },
+  {
+   "id": "4574722466",
+   "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
+   "gained": 1,
+   "total": 17,
+   "at": "2026-11-01T09:06:33.328Z"
+  },
+  {
+   "id": "4581913102",
+   "title": "Prism Spell Double Draped Ear Chain | ASTM F136 G23 Titanium Flatback | Gold Labret to Earring Connector | Iridescent AB CZ Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/1b4eef/8573018016/il_fullxfull.8573018016_osqk.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-01T09:06:33.328Z"
+  },
+  {
+   "id": "4573438832",
+   "title": "Alpen Glow Threadless Flatback Earring | Dainty Mountain Stud | Gold Cartilage Earring | Minimal Sparkle Helix Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/84a872/8509707076/il_fullxfull.8509707076_li75.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-01T09:06:33.328Z"
   }
  ],
- "updated_at": "2026-11-01T01:59:46.962Z"
+ "updated_at": "2026-11-01T09:06:33.328Z"
 };
