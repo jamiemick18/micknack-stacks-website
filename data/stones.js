@@ -44,7 +44,6 @@ window.MICKNACK_STONES = [
 window.MICKNACK_CHAINS = [
   { id: "cable-1-5mm", name: "1.5mm cable chain", mm: "1.5", available: true },
   { id: "cable-2mm", name: "2mm cable chain", mm: "2", available: true },
-  { id: "zz-temp-chain", name: "ZZ Temp Chain", mm: "3", available: true },
 ];
 
 
