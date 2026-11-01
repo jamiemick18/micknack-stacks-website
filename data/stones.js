@@ -23,7 +23,7 @@
 
 window.MICKNACK_STONES = [
   { id: "ab-crystal", name: "AB Crystal", swatch: "#dfe8f2", shape: "Round", finish: "ab", size: "4mm", image: "", note: "Shifts rainbow in the light", available: true },
-  { id: "amethyst-cz", name: "Amethyst Corundum", swatch: "#8f5fb5", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "amethyst-cz", name: "Amethyst Corundum", swatch: "#8f5fb5", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
   { id: "baby-pink-cz", name: "Baby Pink CZ", swatch: "#f6c3d0", shape: "", finish: "", size: "", image: "", note: "", available: true },
   { id: "black-cz", name: "Black CZ", swatch: "#2a2a2e", shape: "", finish: "", size: "", image: "", note: "", available: true },
   { id: "blue-cz", name: "Blue CZ", swatch: "#3f6fa8", shape: "", finish: "", size: "", image: "", note: "", available: true },
