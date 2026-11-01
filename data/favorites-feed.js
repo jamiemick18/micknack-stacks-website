@@ -250,7 +250,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 6,
    "at": "2026-11-01T21:01:10.296Z"
+  },
+  {
+   "id": "4599803201",
+   "title": "Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain | ASTM F136 Threadless Connector | 40mm Emerald Green CZ Dangle",
+   "image": "https://i.etsystatic.com/67609393/r/il/9ca196/8714086152/il_fullxfull.8714086152_8ky9.jpg",
+   "gained": 1,
+   "total": 4,
+   "at": "2026-11-01T21:35:27.262Z"
   }
  ],
- "updated_at": "2026-11-01T21:01:10.296Z"
+ "updated_at": "2026-11-01T21:35:27.262Z"
 };
