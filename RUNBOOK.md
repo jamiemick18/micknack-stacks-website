@@ -61,6 +61,23 @@ press **Save & publish**, so you can add several and publish once.
 
 The Etsy sync never touches these pieces.
 
+### Change a piece
+
+Every row on the Inventory page has an **Edit** button.
+
+For a piece you added here, it reopens the same form with everything already
+filled in. Change the name, price, description, badge or photo and press
+**Save the change**. Leave the photo empty to keep the one it has. Changing
+the price makes it a new Buy button, so the right amount is charged. The
+count is not on this form — that stays on the Inventory page.
+
+For a piece from Etsy the button says **Edit on Etsy** and opens the listing
+there. That is on purpose: the sync rewrites those pieces from Etsy every
+hour, so a change made here would be wiped out by teatime. Change it on
+Etsy and the sync brings it back here by itself.
+
+As always, nothing reaches the website until you press **Save & publish**.
+
 ### Traffic
 
 Etsy views and favourites, visits to your own site, and which pieces people
