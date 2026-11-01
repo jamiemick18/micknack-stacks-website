@@ -25,6 +25,8 @@
     return c && c.available !== false && c.name;
   });
 
+  var rings = ((window.MICKNACK_CUSTOM || {}).rings || "").trim();
+
   function escapeHtml(value) {
     var div = document.createElement("div");
     div.textContent = value == null ? "" : value;
@@ -278,13 +280,12 @@
       ? ""
       : '<label><span>Chain <em>optional</em></span><input type="text" name="chain" maxlength="80" ' +
         'placeholder="Dainty, chunky — or leave it to me" /></label>') +
-    '<label><span>End rings <em>optional</em></span>' +
-    '<select name="rings">' +
-    '<option value="">No preference</option>' +
-    '<option>Small — the most hidden, needs a thin post</option>' +
-    '<option>Medium — fits most hoops and flatbacks</option>' +
-    '<option>Large — easiest to clip on and off</option>' +
-    "</select></label>" +
+    // One size is all she stocks, so this is a fact rather than a question.
+    // A dropdown with one entry asks people to make a choice that is not
+    // theirs to make.
+    (rings
+      ? '<p class="custom-fact">End rings are <b>' + escapeHtml(rings) + '</b> — they clip onto most hoops and flatbacks.</p>'
+      : "") +
     '<label><span>What are you after?</span><textarea name="idea" maxlength="2000" required ' +
     'placeholder="Describe it however it comes out. Photos or links can follow by email."></textarea></label>' +
     '<div class="custom-two">' +
@@ -418,7 +419,7 @@
           ? kindInput.options[kindInput.selectedIndex].textContent
           : fields.get("chain"),
         length: mmInput && mmInput.value ? mmInput.value + "mm" : "",
-        rings: fields.get("rings"),
+        rings: rings,
         budget: fields.get("budget"),
         when: fields.get("when"),
         website: fields.get("website"),

@@ -1765,6 +1765,13 @@ img {
 
 .custom-card .card-price { color: #6b6259; font-style: italic; }
 
+.custom-fact {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #6b6259;
+  line-height: 1.55;
+}
+
 /* ---- The stone shelf ---- */
 /* Shown above the question, because nobody can ask for a stone they do not
    know is there. */

@@ -427,6 +427,8 @@ export function page() {
       <div>
         <label for="s-from">Custom pieces start at</label>
         <input type="text" id="s-from" class="wide" placeholder="30.00" inputmode="decimal" />
+        <label for="s-rings" style="display:inline-block;margin:0 6px 0 14px">End rings</label>
+        <input type="text" id="s-rings" class="wide" placeholder="3mm" />
         <button type="submit" class="ghost">Save</button>
         <span class="hint">Shown on the Custom Ear Chain card at the front of your shop.</span>
       </div>
@@ -1165,6 +1167,7 @@ function loadStones() {
   var host = document.getElementById("stone-grid");
   fetch("/api/stones").then(function (r) { return r.json(); }).then(function (d) {
     document.getElementById("s-from").value = d.from || "";
+    document.getElementById("s-rings").value = d.rings || "";
     paintChains(d.chains || []);
     var list = d.stones || [];
     if (!list.length) { host.innerHTML = "<p class='quiet'>No stones on the shelf yet.</p>"; return; }
@@ -1236,7 +1239,11 @@ document.getElementById("from-form").addEventListener("submit", function (e) {
   note("Saving…");
   fetch("/api/stones", {
     method: "POST", headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ action: "from", from: document.getElementById("s-from").value })
+    body: JSON.stringify({
+      action: "from",
+      from: document.getElementById("s-from").value,
+      rings: document.getElementById("s-rings").value
+    })
   }).then(function (r) { return r.json(); }).then(function (d) {
     note(d.ok ? "Saved — the card out front says so in a minute or two." : d.message, !d.ok);
   }).catch(function (err) { note("That did not work: " + err.message, true); });

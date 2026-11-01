@@ -49,4 +49,4 @@ window.MICKNACK_CHAINS = [
 
 // What a custom piece starts at, shown on the card at the front of the shop.
 // Changed from the HUB's Stones page.
-window.MICKNACK_CUSTOM = { from: "30.00" };
+window.MICKNACK_CUSTOM = { from: "30.00", rings: "3mm" };

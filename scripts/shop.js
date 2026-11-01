@@ -740,27 +740,29 @@ function removeChain(id) {
 // What a custom piece starts at. It lives beside the stones because that is
 // the page Jamie is on when she thinks about custom work, and because it is
 // one number, not a thing that deserves a settings screen of its own.
-function readCustomFrom() {
-  const settings = windowFile("data/stones.js", "MICKNACK_CUSTOM");
-  return (settings && settings.from) || "";
+function readCustomSettings() {
+  const settings = windowFile("data/stones.js", "MICKNACK_CUSTOM") || {};
+  return { from: settings.from || "", rings: settings.rings || "" };
 }
 
-function writeCustomFrom(from) {
-  const clean = String(from || "").trim();
-  if (clean && !/^\d+(\.\d{1,2})?$/.test(clean)) {
+function writeCustomSettings(next) {
+  const now = readCustomSettings();
+  const from = next.from === undefined ? now.from : String(next.from || "").trim();
+  const rings = next.rings === undefined ? now.rings : String(next.rings || "").trim();
+  if (from && !/^\d+(\.\d{1,2})?$/.test(from)) {
     throw new Error("The starting price should be a number like 30.00, with no dollar sign.");
   }
   const original = readFileSync(STONES_PATH, "utf8");
   const wasCrlf = original.includes("\r\n");
   let file = original.replace(/\r\n/g, "\n");
-  const line = `window.MICKNACK_CUSTOM = { from: ${JSON.stringify(clean)} };`;
+  const line = `window.MICKNACK_CUSTOM = { from: ${JSON.stringify(from)}, rings: ${JSON.stringify(rings)} };`;
   if (/window\.MICKNACK_CUSTOM\s*=\s*\{[^}]*\};/.test(file)) {
     file = file.replace(/window\.MICKNACK_CUSTOM\s*=\s*\{[^}]*\};/, line);
   } else {
     file += `\n${line}\n`;
   }
   writeFileSync(STONES_PATH, wasCrlf ? file.replace(/\n/g, "\r\n") : file);
-  return clean;
+  return { from, rings };
 }
 
 function saveStone({ id, name, swatch, shape, finish, size, note, available, photo }) {
@@ -1232,7 +1234,14 @@ const server = createServer(async (req, res) => {
     }
 
     if (req.url === "/api/stones" && req.method === "GET") {
-      return json(200, { ok: true, stones: readStones(), chains: readChains(), from: readCustomFrom() });
+      const settings = readCustomSettings();
+      return json(200, {
+        ok: true,
+        stones: readStones(),
+        chains: readChains(),
+        from: settings.from,
+        rings: settings.rings,
+      });
     }
 
     if (req.url === "/api/stones" && req.method === "POST") {
@@ -1241,7 +1250,7 @@ const server = createServer(async (req, res) => {
         body.action === "remove"
           ? removeStone(body.id)
           : body.action === "from"
-          ? { id: "", from: writeCustomFrom(body.from) }
+          ? { id: "", ...writeCustomSettings({ from: body.from, rings: body.rings }) }
           : body.action === "chain"
           ? saveChain(body)
           : body.action === "chain-remove"
