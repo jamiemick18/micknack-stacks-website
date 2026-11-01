@@ -25,6 +25,20 @@ function formatPrice(price, currency) {
   return `${symbols[code] || code + " "}${price}`;
 }
 
+// Photos of pieces that were never on Etsy are files in this repo, stored as
+// a path like "assets/products/thing.png". That resolves correctly from the
+// shop at /, but a shared piece has its own page under /p/, where the browser
+// goes looking for /p/assets/... and finds nothing. Etsy's own photos are
+// absolute web links, so this never showed up until the first piece added
+// here reached a share page.
+function asset(path) {
+  const value = String(path || "");
+  if (!value || /^(https?:)?\/\//i.test(value) || value[0] === "/" || value.startsWith("data:")) {
+    return value;
+  }
+  return location.pathname.startsWith("/p/") ? "/" + value : value;
+}
+
 function findProduct(id) {
   const extras = Array.isArray(window.MICKNACK_EXTRA_PRODUCTS)
     ? window.MICKNACK_EXTRA_PRODUCTS
@@ -38,7 +52,7 @@ function findProduct(id) {
       price: extra.price,
       currency_code: extra.currency_code,
       description: extra.description,
-      images: extra.images || [],
+      images: (extra.images || []).map(asset),
       video: extra.video || "",
       variations: Array.isArray(extra.variations) ? extra.variations : [],
       tags: extra.tags || [],
@@ -58,7 +72,7 @@ function findProduct(id) {
     price: listing.price,
     currency_code: listing.currency_code,
     description: listing.description,
-    images: listing.images || [],
+    images: (listing.images || []).map(asset),
     video: listing.video || "",
     tags: listing.tags || [],
     // Blank once the listing leaves Etsy, so Buy on Etsy disappears with it.
@@ -296,7 +310,7 @@ function renderAlsoLike(product, all) {
       .map(
         (piece) => `
         <a class="also-card" href="/p/${encodeURIComponent(piece.id)}.html">
-          <img src="${escapeHtml((piece.images || [])[0] || "/assets/products/placeholder.svg")}"
+          <img src="${escapeHtml(asset((piece.images || [])[0]) || "/assets/products/placeholder.svg")}"
                alt="" loading="lazy" />
           <span class="also-title">${escapeHtml((piece.title || "").split("|")[0].trim())}</span>
           ${piece.price ? `<span class="also-price">${escapeHtml(piece.price)}</span>` : ""}
