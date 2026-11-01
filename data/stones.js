@@ -28,7 +28,7 @@ window.MICKNACK_STONES = [
   { id: "black-cz", name: "Black CZ", swatch: "#2a2a2e", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
   { id: "blue-cz", name: "Blue CZ", swatch: "#3f6fa8", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
   { id: "champagne-cz", name: "Champagne CZ", swatch: "#d9c3a0", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
-  { id: "clear-cz", name: "Crystal Clear CZ", swatch: "#eef1f4", shape: "", finish: "", size: "", image: "", note: "", available: true },
+  { id: "clear-cz", name: "Crystal Clear CZ", swatch: "#eef1f4", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
   { id: "green-cz", name: "Green CZ", swatch: "#3f8f6b", shape: "", finish: "", size: "", image: "", note: "", available: true },
   { id: "hot-pink-cz", name: "Hot Pink Corundum", swatch: "#e0558c", shape: "", finish: "", size: "", image: "", note: "", available: true },
   { id: "lavender-cz", name: "Lavender CZ", swatch: "#c9b6e4", shape: "", finish: "", size: "", image: "", note: "", available: true },
