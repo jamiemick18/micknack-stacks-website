@@ -242,7 +242,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 16,
    "at": "2026-11-01T16:40:18.454Z"
+  },
+  {
+   "id": "4568279074",
+   "title": "Double Dewdrop, 30mm earring connector with 2 CZ stones, minimal styled chain 2mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/0ef10e/8520941987/il_fullxfull.8520941987_qdsu.jpg",
+   "gained": 1,
+   "total": 6,
+   "at": "2026-11-01T21:01:10.296Z"
   }
  ],
- "updated_at": "2026-11-01T16:40:18.454Z"
+ "updated_at": "2026-11-01T21:01:10.296Z"
 };
