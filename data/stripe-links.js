@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-01T22:19:36.957Z",
+  "generated_at": "2026-11-01T22:21:11.014Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -544,6 +544,16 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UX76C680JvUCS8JqmQ6fKtF",
       "price_id": "price_1UX76C680JvUCS8J1f8nCp7i",
       "product_id": "prod_VYDXssminYIUwb"
+    },
+    "zz-second-test-delete-me": {
+      "url": "https://buy.stripe.com/aFa5kwgPL5ntf09bRyaZi1S",
+      "name": "ZZ Second Test Delete Me",
+      "price": "1.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UX77i680JvUCS8Jx5BMhLt4",
+      "price_id": "price_1UX77i680JvUCS8JDAs4KxQa",
+      "product_id": "prod_VYDYRtYkJJLdOR"
     }
   }
 };

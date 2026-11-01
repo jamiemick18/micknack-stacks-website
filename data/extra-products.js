@@ -38,6 +38,14 @@
 
 window.MICKNACK_EXTRA_PRODUCTS = [
   {
+    id: "zz-second-test-delete-me",
+    title: "ZZ Second Test Delete Me",
+    price: "1.00",
+    description: "Checking that adding also tells the shop its count.",
+    images: ["assets/products/zz-second-test-delete-me.png"],
+    url: "",
+  },
+  {
     id: "zz-test-piece-please-delete",
     title: "ZZ Test Piece Please Delete",
     price: "1.00",
