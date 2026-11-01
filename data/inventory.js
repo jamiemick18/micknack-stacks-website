@@ -19,6 +19,7 @@
 window.MICKNACK_INVENTORY = {
   "4573422828": { sold_out: true },
   "4573452050": { sold_out: true },
+  "4573481130": { sold_out: true },
   "4573651300": { sold_out: true },
   // Out of stock
   "4573638523": { sold_out: true },
