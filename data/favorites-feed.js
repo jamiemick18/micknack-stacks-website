@@ -234,7 +234,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 1,
    "at": "2026-11-01T09:06:33.328Z"
+  },
+  {
+   "id": "4579868601",
+   "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
+   "image": "https://i.etsystatic.com/67609393/r/il/8841bd/8557802610/il_fullxfull.8557802610_oea8.jpg",
+   "gained": 1,
+   "total": 16,
+   "at": "2026-11-01T16:40:18.454Z"
   }
  ],
- "updated_at": "2026-11-01T09:06:33.328Z"
+ "updated_at": "2026-11-01T16:40:18.454Z"
 };
