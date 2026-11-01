@@ -38,22 +38,6 @@
 
 window.MICKNACK_EXTRA_PRODUCTS = [
   {
-    id: "zz-second-test-delete-me",
-    title: "ZZ Second Test Delete Me",
-    price: "1.00",
-    description: "Checking that adding also tells the shop its count.",
-    images: ["assets/products/zz-second-test-delete-me.png"],
-    url: "",
-  },
-  {
-    id: "zz-test-piece-please-delete",
-    title: "ZZ Test Piece Please Delete",
-    price: "1.00",
-    description: "A throwaway piece used to check that adding publishes.",
-    images: ["assets/products/zz-test-piece-please-delete.png"],
-    url: "",
-  },
-  {
     id: "starfall-double-drape-ear-chain-1-5mm-gold-cable",
     title: "Starfall Double Drape Ear Chain | 1.5mm Gold Cable Chain | 3x5mm Teardrop CZ Earring Connector | Dainty Cartilage Jewelry",
     price: "19.99",
