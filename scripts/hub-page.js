@@ -380,7 +380,7 @@ export function page() {
       <div>
         <button type="submit" id="a-go">Add the piece</button>
         <button type="button" class="ghost" id="a-cancel" hidden>Never mind</button>
-        <span class="hint" id="a-hint">It is saved here first. Publish when you are ready for the world to see it.</span>
+        <span class="hint" id="a-hint">It goes on the website straight away, with a Buy button.</span>
       </div>
     </form>
   </section>
@@ -926,7 +926,7 @@ function addMode() {
   document.getElementById("a-qty").disabled = false;
   document.getElementById("a-qty-hint").hidden = true;
   document.getElementById("a-hint").textContent =
-    "It is saved here first. Publish when you are ready for the world to see it.";
+    "It goes on the website straight away, with a Buy button.";
 }
 
 function startEdit(p) {
@@ -983,7 +983,7 @@ document.getElementById("add-form").addEventListener("submit", function (e) {
   var btn = document.getElementById("a-go");
   var was = editing;
   btn.disabled = true;
-  note(was ? "Saving…" : "Adding…");
+  note(was ? "Saving…" : "Adding it and putting it on the website…");
   fetch(was ? "/api/edit" : "/api/add", {
     method: "POST", headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

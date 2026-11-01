@@ -941,9 +941,9 @@ const server = createServer(async (req, res) => {
     if (req.url === "/api/add" && req.method === "POST") {
       const form = await readBody(req);
       const { id } = addPiece(form);
+
       // A piece nobody can buy is not much use, so it gets its Stripe link
-      // here. Nothing is sent to the website, though: the form promises that
-      // publishing is a separate decision, and it should stay one.
+      // before it goes anywhere near the website.
       let linked = "";
       try {
         execFileSync(process.execPath, [join(__dirname, "create-stripe-links.js"), "--live"], {
@@ -951,13 +951,29 @@ const server = createServer(async (req, res) => {
           encoding: "utf8",
           timeout: 120000,
         });
-        linked = " with a Buy button";
       } catch (err) {
-        linked = ", though its Buy button could not be made yet";
+        linked = " Its Buy button could not be made, so it has no price on it yet.";
       }
+
+      // Adding a piece publishes it. Twice now a piece sat finished in the
+      // HUB while the shop knew nothing about it, because adding and
+      // publishing were two separate decisions and only the first one felt
+      // like one. The counts of OTHER pieces are deliberately left alone
+      // here: only this piece's is sent, so a count that Etsy has moved on
+      // from is not overwritten by whatever this file happens to hold.
+      const counts = readCounts();
+      const mirrored = await mirrorToWorker({ [id]: counts[id] || { qty: 0, hidden: false } });
+      const result = publish();
+
+      const trouble = [linked, mirrored.ok ? "" : ` Its count did not reach the shop (${mirrored.why}).`]
+        .filter(Boolean)
+        .join("");
+
       return json(200, {
-        ok: true,
-        message: `Added "${form.title}"${linked}. Press Save & publish to put it on the website.`,
+        ok: result.ok,
+        message: result.ok
+          ? `Added "${form.title}" and put it on the website — it shows there in a minute or two.${trouble}`
+          : result.message,
         id,
       });
     }
