@@ -206,6 +206,31 @@ export function page() {
     grid-template-columns: 50px 1fr auto auto auto auto; gap: 10px; align-items: center;
   }
   .row.off { opacity: .5; }
+  .spec {
+    display: grid; grid-template-columns: auto 1fr; gap: 3px 12px;
+    margin: 10px 0 0; font-size: .78rem;
+  }
+  .spec dt { color: var(--muted); }
+  .spec dd { margin: 0; }
+  .stone-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-top: 22px; }
+  .stone {
+    background: var(--card); border: 1px solid var(--line); border-radius: 4px;
+    padding: 10px; text-align: center;
+  }
+  .stone.off { opacity: .45; }
+  .stone .bead {
+    width: 64px; height: 64px; border-radius: 50%; margin: 2px auto 8px;
+    background-size: cover; background-position: center;
+    border: 1px solid rgba(0,0,0,.12);
+  }
+  .stone b { display: block; font-size: .82rem; font-weight: 500; }
+  .stone small { display: block; color: var(--muted); font-size: .7rem; margin-top: 3px; }
+  .stone .acts { margin-top: 9px; display: flex; gap: 6px; justify-content: center; }
+  .stone .acts button { font-size: .68rem; padding: 4px 9px; }
+  .stone-form input[type=color] { height: 38px; padding: 3px; }
+  .tick { display: flex; align-items: center; gap: 8px; font-size: .82rem; }
+  .tick input { width: auto; }
+  #s-preview { display: none; max-width: 140px; border-radius: 4px; margin-top: 4px; }
   .row a.ghost { text-decoration: none; display: inline-block; }
   .row img { width: 50px; height: 50px; object-fit: cover; border-radius: 3px; background: #eee; }
   .title { font-size: .9rem; }
@@ -272,6 +297,7 @@ export function page() {
     <a href="#/" data-view="home">Welcome</a>
     <a href="#/inventory" data-view="inventory">Inventory</a>
     <a href="#/add" data-view="add">Add a piece</a>
+    <a href="#/stones" data-view="stones">Stones</a>
     <a href="#/requests" data-view="requests">Custom requests</a>
     <a href="#/reviews" data-view="reviews">Reviews</a>
     <a href="#/traffic" data-view="traffic">Traffic</a>
@@ -293,6 +319,7 @@ export function page() {
     <div class="doors">
       <a class="door" href="#/inventory"><b>Inventory</b><span>Counts, sold out, hidden</span></a>
       <a class="door" href="#/add"><b>Add a piece</b><span>Something sold only here</span></a>
+      <a class="door" href="#/stones"><b>Stones</b><span>What people can choose from</span></a>
       <a class="door" href="#/requests"><b>Custom requests</b><span>Someone wants a piece made</span></a>
       <a class="door" href="#/reviews"><b>Reviews</b><span>Read them before they go up</span></a>
       <a class="door" href="#/traffic"><b>Traffic &amp; sales</b><span>Who is looking, who is buying</span></a>
@@ -316,6 +343,45 @@ export function page() {
         <b>Your shop &#8599;</b><span>See it the way a customer does</span>
       </a>
     </div>
+  </section>
+
+  <section class="view" id="view-stones">
+    <h2>Stones</h2>
+    <p class="sub">What someone sees when they click <em>Custom pieces are welcome</em>.
+      Nobody can ask for a stone they do not know you keep. A photo always beats a colour.</p>
+
+    <form class="add stone-form" id="stone-form">
+      <input type="hidden" id="s-id" />
+      <div class="two">
+        <div>
+          <label for="s-name">Name</label>
+          <input type="text" id="s-name" required placeholder="Lavender CZ" />
+        </div>
+        <div>
+          <label for="s-swatch">Colour <em>until there is a photo</em></label>
+          <input type="color" id="s-swatch" value="#cccccc" class="wide" />
+        </div>
+      </div>
+      <div class="two">
+        <div>
+          <label for="s-note">One line about it <em>optional</em></label>
+          <input type="text" id="s-note" maxlength="90" placeholder="Soft, almost grey in low light" />
+        </div>
+        <div>
+          <label for="s-photo">Photo</label>
+          <input type="file" id="s-photo" accept="image/*" />
+        </div>
+      </div>
+      <label class="tick"><input type="checkbox" id="s-available" checked /> <span>On the shelf</span></label>
+      <img id="s-preview" alt="" />
+      <div>
+        <button type="submit" id="s-go">Add the stone</button>
+        <button type="button" class="ghost" id="s-cancel" hidden>Never mind</button>
+        <span class="hint" id="s-hint">It goes on the website straight away.</span>
+      </div>
+    </form>
+
+    <div class="stone-grid" id="stone-grid">Loading…</div>
   </section>
 
   <section class="view" id="view-requests">
@@ -431,6 +497,7 @@ function show(name) {
   if (name === "add" && editing && !justEdited) addMode();
   justEdited = false;
   if (name === "traffic" && !salesLoaded) loadTraffic();
+  if (name === "stones") loadStones();
   if (name === "requests") loadRequests();
   if (name === "reviews") loadReviews();
   if (name === "home") { paintHome(); loadOrders(); loadMoney(); }
@@ -821,6 +888,22 @@ function loadRequests() {
       h += "<div class='who'><b>" + esc(c.name || "No name given") + "</b> &middot; " +
         "<a href='mailto:" + esc(c.email) + "'>" + esc(c.email) + "</a></div>";
       h += "<blockquote>" + esc(c.idea) + "</blockquote>";
+
+      // What they picked off the shelf, set out as a spec rather than buried
+      // in the paragraph. Only the parts they actually chose are shown.
+      var spec = [];
+      if (c.stones) spec.push(["Stones", c.stones]);
+      if (c.chain) spec.push(["Chain", c.chain]);
+      if (c.length) spec.push(["Length", c.length]);
+      if (c.rings) spec.push(["End rings", c.rings]);
+      if (spec.length) {
+        h += "<dl class='spec'>";
+        for (var q = 0; q < spec.length; q++) {
+          h += "<dt>" + esc(spec[q][0]) + "</dt><dd>" + esc(spec[q][1]) + "</dd>";
+        }
+        h += "</dl>";
+      }
+
       var bits = [];
       if (c.budget) bits.push("Budget: " + esc(c.budget));
       if (c.when) bits.push("Needed by: " + esc(c.when));
@@ -906,6 +989,119 @@ function loadReviews() {
     }
   }).catch(function (err) { host.textContent = "Could not load those: " + err.message; });
 }
+
+/* ---------- stones ---------- */
+var stonePhoto = null;
+
+document.getElementById("s-photo").addEventListener("change", function () {
+  var file = this.files && this.files[0];
+  var preview = document.getElementById("s-preview");
+  if (!file) { stonePhoto = null; preview.style.display = "none"; return; }
+  var reader = new FileReader();
+  reader.onload = function () {
+    stonePhoto = { name: file.name, data: String(reader.result).split(",")[1] };
+    preview.src = reader.result; preview.style.display = "block";
+  };
+  reader.readAsDataURL(file);
+});
+
+function stoneAddMode() {
+  stonePhoto = null;
+  document.getElementById("stone-form").reset();
+  document.getElementById("s-id").value = "";
+  document.getElementById("s-swatch").value = "#cccccc";
+  document.getElementById("s-available").checked = true;
+  document.getElementById("s-preview").style.display = "none";
+  document.getElementById("s-go").textContent = "Add the stone";
+  document.getElementById("s-cancel").hidden = true;
+}
+
+function stoneEdit(stone) {
+  stonePhoto = null;
+  document.getElementById("s-id").value = stone.id;
+  document.getElementById("s-name").value = stone.name || "";
+  document.getElementById("s-swatch").value = /^#[0-9a-f]{6}$/i.test(stone.swatch || "") ? stone.swatch : "#cccccc";
+  document.getElementById("s-note").value = stone.note || "";
+  document.getElementById("s-available").checked = stone.available !== false;
+  document.getElementById("s-photo").value = "";
+  var preview = document.getElementById("s-preview");
+  if (stone.image) { preview.src = "/" + stone.image; preview.style.display = "block"; }
+  else preview.style.display = "none";
+  document.getElementById("s-go").textContent = "Save the change";
+  document.getElementById("s-cancel").hidden = false;
+  document.getElementById("stone-form").scrollIntoView({ block: "start", behavior: "smooth" });
+}
+
+document.getElementById("s-cancel").addEventListener("click", stoneAddMode);
+
+function loadStones() {
+  var host = document.getElementById("stone-grid");
+  fetch("/api/stones").then(function (r) { return r.json(); }).then(function (d) {
+    var list = d.stones || [];
+    if (!list.length) { host.innerHTML = "<p class='quiet'>No stones on the shelf yet.</p>"; return; }
+    host.innerHTML = "";
+    for (var i = 0; i < list.length; i++) {
+      var st = list[i];
+      var card = document.createElement("div");
+      card.className = "stone" + (st.available === false ? " off" : "");
+      var bead = document.createElement("div");
+      bead.className = "bead";
+      // A photo is the real thing; the colour is what stands in until there
+      // is one, so it is never shown over the top of a photo.
+      if (st.image) bead.style.backgroundImage = "url('/" + st.image + "')";
+      else bead.style.background = st.swatch || "#ddd";
+      var nm = document.createElement("b");
+      nm.textContent = st.name;
+      card.appendChild(bead); card.appendChild(nm);
+      if (st.note) { var note = document.createElement("small"); note.textContent = st.note; card.appendChild(note); }
+      if (!st.image) { var warn = document.createElement("small"); warn.textContent = "no photo yet"; card.appendChild(warn); }
+      if (st.available === false) { var offk = document.createElement("small"); offk.textContent = "off the shelf"; card.appendChild(offk); }
+
+      var acts = document.createElement("div");
+      acts.className = "acts";
+      var ed = document.createElement("button");
+      ed.className = "ghost"; ed.textContent = "Edit";
+      ed.addEventListener("click", (function (one) { return function () { stoneEdit(one); }; })(st));
+      var rm = document.createElement("button");
+      rm.className = "ghost"; rm.textContent = "Remove";
+      rm.addEventListener("click", (function (one) {
+        return function () {
+          if (!confirm("Remove " + one.name + " from the shelf for good? If you have just run out, untick On the shelf instead.")) return;
+          note("Removing…");
+          fetch("/api/stones", { method: "POST", headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ action: "remove", id: one.id }) })
+            .then(function (r) { return r.json(); })
+            .then(function (d2) { note(d2.message, !d2.ok); loadStones(); });
+        };
+      })(st));
+      acts.appendChild(ed); acts.appendChild(rm);
+      card.appendChild(acts);
+      host.appendChild(card);
+    }
+  }).catch(function (err) { host.textContent = "Could not load those: " + err.message; });
+}
+
+document.getElementById("stone-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var btn = document.getElementById("s-go");
+  btn.disabled = true;
+  note("Saving…");
+  fetch("/api/stones", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      id: document.getElementById("s-id").value,
+      name: document.getElementById("s-name").value,
+      swatch: document.getElementById("s-swatch").value,
+      note: document.getElementById("s-note").value,
+      available: document.getElementById("s-available").checked,
+      photo: stonePhoto
+    })
+  }).then(function (r) { return r.json(); }).then(function (d) {
+    btn.disabled = false;
+    note(d.message, !d.ok);
+    if (d.ok) { stoneAddMode(); loadStones(); }
+  }).catch(function (err) { btn.disabled = false; note("That did not work: " + err.message, true); });
+});
 
 /* ---------- add a piece, and changing one ---------- */
 var photoData = null;

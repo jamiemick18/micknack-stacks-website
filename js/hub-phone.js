@@ -388,6 +388,13 @@
           "<span class='when'>" + esc(String(c.at || "").slice(0, 10)) + "</span></div>";
         h += "<div class='where'><a href='mailto:" + esc(c.email) + "'>" + esc(c.email) + "</a></div>";
         h += "<blockquote>" + esc(c.idea) + "</blockquote>";
+        // What they picked off the stone shelf, if they picked anything.
+        var spec = [];
+        if (c.stones) spec.push("Stones: " + c.stones);
+        if (c.chain) spec.push("Chain: " + c.chain);
+        if (c.length) spec.push("Length: " + c.length);
+        if (c.rings) spec.push("End rings: " + c.rings);
+        for (var q = 0; q < spec.length; q++) h += "<div class='spec'>" + esc(spec[q]) + "</div>";
         var bits = [];
         if (c.budget) bits.push("Budget: " + esc(c.budget));
         if (c.when) bits.push("Needed by: " + esc(c.when));

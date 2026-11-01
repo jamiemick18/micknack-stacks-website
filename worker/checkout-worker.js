@@ -537,6 +537,10 @@ async function emailCustom(env, request) {
       "",
       request.idea,
       "",
+      request.stones ? `Stones: ${request.stones}` : "",
+      request.chain ? `Chain: ${request.chain}` : "",
+      request.length ? `Length: ${request.length}` : "",
+      request.rings ? `End rings: ${request.rings}` : "",
       request.budget ? `Budget: ${request.budget}` : "",
       request.when ? `Needed by: ${request.when}` : "",
       "",
@@ -572,6 +576,14 @@ async function handleCustom(request, env, cors) {
   const budget = cleanText(body.budget, 60);
   const when = cleanText(body.when, 60);
 
+  // What they picked off the shelf. All optional: someone who just types what
+  // they want in their own words is still a perfectly good request, so none
+  // of this is ever required.
+  const stones = cleanText(body.stones, 300);
+  const chain = cleanText(body.chain, 80);
+  const length = cleanText(body.length, 60);
+  const rings = cleanText(body.rings, 80);
+
   if (idea.length < 10) return json({ error: "Tell Jamie a little more about the idea." }, 400, cors);
   if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     return json({ error: "Please leave an email address so Jamie can reply." }, 400, cors);
@@ -595,6 +607,10 @@ async function handleCustom(request, env, cors) {
     idea,
     budget,
     when,
+    stones,
+    chain,
+    length,
+    rings,
     at: new Date().toISOString(),
   };
   await env.STOCK.put(`custom:${id}`, JSON.stringify(saved));

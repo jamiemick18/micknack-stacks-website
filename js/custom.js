@@ -14,6 +14,49 @@
   var open = document.getElementById("custom-open");
   if (!open) return;
 
+  // The stones Jamie actually keeps. Nobody can ask for a lavender stone they
+  // do not know exists, so they are shown before the box that asks what you
+  // want — the shelf first, the question second.
+  var stones = (window.MICKNACK_STONES || []).filter(function (s) {
+    return s && s.available !== false && s.name;
+  });
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.textContent = value == null ? "" : value;
+    return div.innerHTML;
+  }
+
+  function shelf() {
+    if (!stones.length) return "";
+    var cards = stones
+      .map(function (stone) {
+        // A photo is the stone. The colour is only a stand-in until there is
+        // one, and it is never drawn over the top of a photo.
+        var face = stone.image
+          ? "background-image:url('" + escapeHtml(stone.image) + "')"
+          : "background:" + escapeHtml(stone.swatch || "#ddd");
+        return (
+          '<button type="button" class="stone-pick" data-stone="' + escapeHtml(stone.name) + '"' +
+          ' aria-pressed="false" title="' + escapeHtml(stone.note || stone.name) + '">' +
+          '<span class="stone-bead" style="' + face + '"></span>' +
+          '<span class="stone-name">' + escapeHtml(stone.name) + "</span>" +
+          (stone.note ? '<span class="stone-note">' + escapeHtml(stone.note) + "</span>" : "") +
+          "</button>"
+        );
+      })
+      .join("");
+    return (
+      '<div class="stone-shelf">' +
+      "<h3>Stones I have right now</h3>" +
+      '<p class="stone-lede">Tap any you like the look of — pick as many as you want, ' +
+      "or none at all and just tell me in your own words.</p>" +
+      '<div class="stone-row">' + cards + "</div>" +
+      '<p class="stone-chosen" id="stone-chosen" hidden></p>' +
+      "</div>"
+    );
+  }
+
   var dialog = document.createElement("dialog");
   dialog.className = "custom-dialog";
   dialog.innerHTML =
@@ -28,6 +71,20 @@
     '<label><span>Your name</span><input type="text" name="name" maxlength="80" placeholder="First name is plenty" /></label>' +
     '<label><span>Email</span><input type="email" name="email" maxlength="160" required placeholder="you@example.com" /></label>' +
     "</div>" +
+    shelf() +
+    '<div class="custom-two">' +
+    '<label><span>Chain <em>optional</em></span><input type="text" name="chain" maxlength="80" ' +
+    'placeholder="Dainty, chunky, satellite — or leave it to me" /></label>' +
+    '<label><span>How long? <em>optional</em></span><input type="text" name="length" maxlength="60" ' +
+    'placeholder="30mm, or the gap between two piercings" /></label>' +
+    "</div>" +
+    '<label><span>End rings <em>optional</em></span>' +
+    '<select name="rings">' +
+    '<option value="">No preference</option>' +
+    '<option>Small — the most hidden, needs a thin post</option>' +
+    '<option>Medium — fits most hoops and flatbacks</option>' +
+    '<option>Large — easiest to clip on and off</option>' +
+    "</select></label>" +
     '<label><span>What are you after?</span><textarea name="idea" maxlength="2000" required ' +
     'placeholder="Describe it however it comes out. Photos or links can follow by email."></textarea></label>' +
     '<div class="custom-two">' +
@@ -46,6 +103,22 @@
 
   var form = dialog.querySelector("#custom-form");
   var status = dialog.querySelector("#custom-status");
+  var chosen = [];
+
+  var chosenLine = dialog.querySelector("#stone-chosen");
+  dialog.querySelectorAll(".stone-pick").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var name = button.dataset.stone;
+      var at = chosen.indexOf(name);
+      if (at === -1) chosen.push(name);
+      else chosen.splice(at, 1);
+      button.classList.toggle("on", at === -1);
+      button.setAttribute("aria-pressed", at === -1 ? "true" : "false");
+      if (!chosenLine) return;
+      chosenLine.hidden = !chosen.length;
+      chosenLine.textContent = chosen.length ? "You picked: " + chosen.join(", ") : "";
+    });
+  });
 
   function show() {
     if (typeof dialog.showModal === "function") dialog.showModal();
@@ -84,6 +157,10 @@
         name: fields.get("name"),
         email: fields.get("email"),
         idea: fields.get("idea"),
+        stones: chosen.join(", "),
+        chain: fields.get("chain"),
+        length: fields.get("length"),
+        rings: fields.get("rings"),
         budget: fields.get("budget"),
         when: fields.get("when"),
         website: fields.get("website"),
@@ -97,6 +174,12 @@
       })
       .then(function (body) {
         form.reset();
+        chosen = [];
+        dialog.querySelectorAll(".stone-pick.on").forEach(function (b) {
+          b.classList.remove("on");
+          b.setAttribute("aria-pressed", "false");
+        });
+        if (chosenLine) { chosenLine.hidden = true; chosenLine.textContent = ""; }
         status.textContent = body.message || "Thank you.";
         status.className = "custom-status good";
         setTimeout(function () { dialog.close(); status.textContent = ""; }, 2600);

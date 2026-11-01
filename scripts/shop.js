@@ -251,6 +251,8 @@ const HUB_FILES = [
   "data/extra-products.js",
   "data/stripe-links.js",
   "assets/products",
+  "data/stones.js",
+  "assets/stones",
   // Every piece has its own real page under p/, which is what the grid links
   // to and what Instagram reads when a link is shared. These used to be built
   // only by the hourly sync, so a piece added here had a card pointing at a
@@ -271,10 +273,14 @@ function publish() {
     return { ok: false, message: `Could not build the piece pages: ${err.message}` };
   }
 
-  const changed = git("status", "--porcelain", "--", ...HUB_FILES);
+  // Only the ones that exist. assets/stones does not until the first stone
+  // photo is added, and git refuses the whole command over one missing path.
+  const files = HUB_FILES.filter((file) => existsSync(join(ROOT, file)));
+
+  const changed = git("status", "--porcelain", "--", ...files);
   if (!changed) return { ok: true, message: "Nothing to publish — the site already matches." };
 
-  git("add", ...HUB_FILES);
+  git("add", ...files);
   git("commit", "-m", "Update the shop from the HUB");
 
   try {
@@ -623,6 +629,95 @@ function sales() {
 }
 
 // ---------------------------------------------------------------------------
+// The stone shelf
+// ---------------------------------------------------------------------------
+//
+// Nobody can ask for a lavender stone they do not know you keep. This is the
+// list they browse before describing what they want, so it lives where Jamie
+// can change it without a text editor.
+
+const STONES_PATH = join(ROOT, "data", "stones.js");
+
+function readStones() {
+  const list = windowFile("data/stones.js", "MICKNACK_STONES");
+  return Array.isArray(list) ? list : [];
+}
+
+function writeStones(list) {
+  const original = existsSync(STONES_PATH) ? readFileSync(STONES_PATH, "utf8") : "";
+  const wasCrlf = original.includes("\r\n");
+  const file = original.replace(/\r\n/g, "\n");
+  const anchor = "window.MICKNACK_STONES = [\n";
+  const start = file.indexOf(anchor);
+  const end = file.lastIndexOf("];");
+  if (start === -1 || end === -1 || end < start) {
+    throw new Error("data/stones.js does not look like itself.");
+  }
+  const body = list
+    .map(
+      (stone) =>
+        "  { " +
+        [
+          `id: ${JSON.stringify(String(stone.id))}`,
+          `name: ${JSON.stringify(String(stone.name || "").trim())}`,
+          `swatch: ${JSON.stringify(String(stone.swatch || "").trim())}`,
+          `image: ${JSON.stringify(String(stone.image || ""))}`,
+          `note: ${JSON.stringify(String(stone.note || "").trim())}`,
+          `available: ${stone.available === false ? "false" : "true"}`,
+        ].join(", ") +
+        " },\n"
+    )
+    .join("");
+  const next = file.slice(0, start + anchor.length) + body + file.slice(end);
+  writeFileSync(STONES_PATH, wasCrlf ? next.replace(/\n/g, "\r\n") : next);
+}
+
+function saveStone({ id, name, swatch, note, available, photo }) {
+  if (!String(name || "").trim()) throw new Error("A stone needs a name.");
+  const list = readStones();
+
+  // An id is made from the name once and then left alone, because it is what
+  // a saved request refers to. Renaming "Lavender CZ" must not orphan the
+  // requests that asked for it.
+  let key = String(id || "").trim();
+  if (!key) {
+    key = slugify(name);
+    const taken = new Set(list.map((s) => String(s.id)));
+    let n = 2;
+    while (taken.has(key)) key = `${slugify(name)}-${n++}`;
+  }
+
+  let stone = list.find((s) => String(s.id) === key);
+  if (!stone) {
+    stone = { id: key, name: "", swatch: "", image: "", note: "", available: true };
+    list.push(stone);
+  }
+
+  stone.name = String(name).trim();
+  stone.swatch = String(swatch || "").trim();
+  stone.note = String(note || "").trim();
+  stone.available = available !== false;
+  if (photo && photo.data) stone.image = writePhoto(key, photo, "stones");
+
+  list.sort((a, b) => String(a.name).localeCompare(String(b.name)));
+  writeStones(list);
+  return { id: key };
+}
+
+function removeStone(id) {
+  const key = String(id || "").trim();
+  const list = readStones();
+  const stone = list.find((s) => String(s.id) === key);
+  if (!stone) throw new Error("No such stone.");
+  if (stone.image) {
+    const file = join(ROOT, stone.image);
+    if (existsSync(file)) rmSync(file, { force: true });
+  }
+  writeStones(list.filter((s) => String(s.id) !== key));
+  return { id: key };
+}
+
+// ---------------------------------------------------------------------------
 // Adding a piece that was never on Etsy
 // ---------------------------------------------------------------------------
 
@@ -640,18 +735,18 @@ function slugify(text) {
 // changed, and the file is always named after the piece's id so the site can
 // find it without being told. A new photo in a different format replaces the
 // old one rather than leaving the stale file behind.
-function writePhoto(id, photo) {
+function writePhoto(id, photo, folder = "products") {
   const ext = extname(photo.name || "").toLowerCase();
   if (!IMAGE_TYPES[ext]) throw new Error("That photo needs to be a jpg, png, webp or gif.");
   const buffer = Buffer.from(photo.data, "base64");
   if (buffer.length > 8e6) throw new Error("That photo is bigger than 8MB. Shrink it first.");
-  mkdirSync(join(ROOT, "assets", "products"), { recursive: true });
+  mkdirSync(join(ROOT, "assets", folder), { recursive: true });
   for (const other of Object.keys(IMAGE_TYPES)) {
     if (other === ext) continue;
-    const stale = join(ROOT, "assets", "products", `${id}${other}`);
+    const stale = join(ROOT, "assets", folder, `${id}${other}`);
     if (existsSync(stale)) rmSync(stale, { force: true });
   }
-  const imagePath = `assets/products/${id}${ext}`;
+  const imagePath = `assets/${folder}/${id}${ext}`;
   writeFileSync(join(ROOT, imagePath), buffer);
   return imagePath;
 }
@@ -1007,13 +1102,14 @@ const server = createServer(async (req, res) => {
 
     // Photos of pieces added here live on disk, not on Etsy, so the HUB has
     // to hand them over itself or its own thumbnails come up blank.
-    if (req.method === "GET" && req.url.startsWith("/assets/products/")) {
-      const name = decodeURIComponent(req.url.split("?")[0].slice("/assets/products/".length));
+    if (req.method === "GET" && /^\/assets\/(products|stones)\//.test(req.url)) {
+      const folder = req.url.split("/")[2];
+      const name = decodeURIComponent(req.url.split("?")[0].slice(`/assets/${folder}/`.length));
       const ext = extname(name).toLowerCase();
       // Only image names, and only from that one folder: no slashes, no
       // dots leading anywhere else.
       if (/^[A-Za-z0-9._-]+$/.test(name) && !name.includes("..") && IMAGE_TYPES[ext]) {
-        const file = join(ROOT, "assets", "products", name);
+        const file = join(ROOT, "assets", folder, name);
         if (existsSync(file)) {
           const type = ext === ".png" ? "image/png" : ext === ".gif" ? "image/gif"
             : ext === ".webp" ? "image/webp" : "image/jpeg";
@@ -1024,6 +1120,24 @@ const server = createServer(async (req, res) => {
       }
       res.writeHead(404); res.end();
       return;
+    }
+
+    if (req.url === "/api/stones" && req.method === "GET") {
+      return json(200, { ok: true, stones: readStones() });
+    }
+
+    if (req.url === "/api/stones" && req.method === "POST") {
+      const body = await readBody(req);
+      const done = body.action === "remove" ? removeStone(body.id) : saveStone(body);
+      const result = publish();
+      return json(200, {
+        ok: result.ok,
+        id: done.id,
+        message: result.ok
+          ? (body.action === "remove" ? "Taken off the shelf" : "Saved") +
+            " — the website shows it in a minute or two."
+          : result.message,
+      });
     }
 
     // The bear, for the tab and the page's own header.
