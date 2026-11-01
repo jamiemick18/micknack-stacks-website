@@ -95,6 +95,14 @@ Run out of something? Untick **On the shelf**. It disappears from the website
 but stays here, ready for when you have it again. Only use **Remove** for
 something you are never stocking again.
 
+Each stone has a **shape** (round, marquise, pear and so on — several, comma
+separated, if you cut it more than one way) and a **finish**. Leave the finish
+on *Plain* for an ordinary stone; *Iridescent (AB)* and *Opal / moonstone glow*
+draw it as a shift of colour instead of one flat disc.
+
+**Custom pieces start at** sets the price on the Custom Ear Chain card at the
+front of your shop. Change it whenever your costs change.
+
 Changes here go on the website straight away.
 
 ### Traffic
