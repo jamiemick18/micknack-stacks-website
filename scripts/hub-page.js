@@ -209,6 +209,10 @@ export function page() {
   .row a.ghost { text-decoration: none; display: inline-block; }
   .row img { width: 50px; height: 50px; object-fit: cover; border-radius: 3px; background: #eee; }
   .title { font-size: .9rem; }
+  .title a { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; }
+  .title a:hover { border-bottom-color: var(--line); }
+  .row a.shot { display: block; line-height: 0; }
+  .row a.shot:hover img { outline: 2px solid var(--line); outline-offset: 1px; }
   .meta { color: var(--muted); font-size: .74rem; margin-top: 2px; }
   .note {
     display: none; margin-top: 6px; width: 100%; max-width: 440px;
@@ -489,9 +493,32 @@ function renderRows() {
     img.src = p.image; img.alt = "";
     img.onerror = (function (el) { return function () { el.style.visibility = "hidden"; }; })(img);
 
+    // A fifty pixel square is not enough to tell two chains apart, so the
+    // photo and the name both open the piece on the website, where it is
+    // shown properly. A hidden piece has no page out there, so it stays a
+    // plain thumbnail rather than a link to nothing.
+    var live = "https://micknackstacks.com/p/" + encodeURIComponent(p.id) + ".html";
+    var shot = img;
+    if (!p.hidden) {
+      shot = document.createElement("a");
+      shot.className = "shot";
+      shot.href = live; shot.target = "_blank"; shot.rel = "noopener";
+      shot.title = "See it on your website";
+      shot.appendChild(img);
+    }
+
     var cell = document.createElement("div");
     var t = document.createElement("div");
-    t.className = "title"; t.textContent = p.title.split("|")[0].trim();
+    t.className = "title";
+    if (p.hidden) {
+      t.textContent = p.title.split("|")[0].trim();
+    } else {
+      var link = document.createElement("a");
+      link.href = live; link.target = "_blank"; link.rel = "noopener";
+      link.textContent = p.title.split("|")[0].trim();
+      link.title = "See it on your website";
+      t.appendChild(link);
+    }
     var m = document.createElement("div");
     m.className = "meta";
     var bits = ["$" + p.price];
@@ -551,7 +578,7 @@ function renderRows() {
       edit.textContent = "Edit on Etsy ↗";
     }
 
-    row.appendChild(img); row.appendChild(cell); row.appendChild(qty);
+    row.appendChild(shot); row.appendChild(cell); row.appendChild(qty);
     row.appendChild(pill); row.appendChild(edit); row.appendChild(hide);
     host.appendChild(row);
     paint(row, p);
