@@ -228,6 +228,9 @@ export function page() {
   .stone .acts { margin-top: 9px; display: flex; gap: 6px; justify-content: center; }
   .stone .acts button { font-size: .68rem; padding: 4px 9px; }
   .stone-form input[type=color] { height: 38px; padding: 3px; }
+  #s-finish { margin-top: 6px; }
+  .from-form { margin-top: 18px; }
+  .from-form input { max-width: 120px; display: inline-block; margin-right: 8px; }
   .tick { display: flex; align-items: center; gap: 8px; font-size: .82rem; }
   .tick input { width: auto; }
   #s-preview { display: none; max-width: 140px; border-radius: 4px; margin-top: 4px; }
@@ -360,17 +363,34 @@ export function page() {
         <div>
           <label for="s-swatch">Colour <em>until there is a photo</em></label>
           <input type="color" id="s-swatch" value="#cccccc" class="wide" />
+          <select id="s-finish">
+            <option value="">Plain</option>
+            <option value="ab">Iridescent (AB)</option>
+            <option value="opal">Opal / moonstone glow</option>
+          </select>
         </div>
       </div>
       <div class="two">
         <div>
+          <label for="s-shape">Shape <em>comma separated if more than one</em></label>
+          <input type="text" id="s-shape" list="shapes" placeholder="Round, Marquise" />
+          <datalist id="shapes">
+            <option>Round</option><option>Marquise</option><option>Pear</option>
+            <option>Teardrop</option><option>Heart</option><option>Star</option>
+            <option>Oval</option><option>Baguette</option>
+          </datalist>
+        </div>
+        <div>
           <label for="s-note">One line about it <em>optional</em></label>
           <input type="text" id="s-note" maxlength="90" placeholder="Soft, almost grey in low light" />
         </div>
+      </div>
+      <div class="two">
         <div>
           <label for="s-photo">Photo</label>
           <input type="file" id="s-photo" accept="image/*" />
         </div>
+        <div></div>
       </div>
       <label class="tick"><input type="checkbox" id="s-available" checked /> <span>On the shelf</span></label>
       <img id="s-preview" alt="" />
@@ -378,6 +398,15 @@ export function page() {
         <button type="submit" id="s-go">Add the stone</button>
         <button type="button" class="ghost" id="s-cancel" hidden>Never mind</button>
         <span class="hint" id="s-hint">It goes on the website straight away.</span>
+      </div>
+    </form>
+
+    <form class="add from-form" id="from-form">
+      <div>
+        <label for="s-from">Custom pieces start at</label>
+        <input type="text" id="s-from" class="wide" placeholder="30.00" inputmode="decimal" />
+        <button type="submit" class="ghost">Save</button>
+        <span class="hint">Shown on the Custom Ear Chain card at the front of your shop.</span>
       </div>
     </form>
 
@@ -1010,6 +1039,8 @@ function stoneAddMode() {
   document.getElementById("stone-form").reset();
   document.getElementById("s-id").value = "";
   document.getElementById("s-swatch").value = "#cccccc";
+  document.getElementById("s-shape").value = "";
+  document.getElementById("s-finish").value = "";
   document.getElementById("s-available").checked = true;
   document.getElementById("s-preview").style.display = "none";
   document.getElementById("s-go").textContent = "Add the stone";
@@ -1021,6 +1052,8 @@ function stoneEdit(stone) {
   document.getElementById("s-id").value = stone.id;
   document.getElementById("s-name").value = stone.name || "";
   document.getElementById("s-swatch").value = /^#[0-9a-f]{6}$/i.test(stone.swatch || "") ? stone.swatch : "#cccccc";
+  document.getElementById("s-shape").value = stone.shape || "";
+  document.getElementById("s-finish").value = stone.finish || "";
   document.getElementById("s-note").value = stone.note || "";
   document.getElementById("s-available").checked = stone.available !== false;
   document.getElementById("s-photo").value = "";
@@ -1034,9 +1067,24 @@ function stoneEdit(stone) {
 
 document.getElementById("s-cancel").addEventListener("click", stoneAddMode);
 
+// How a stone is drawn when there is no photo of it yet. An iridescent stone
+// is not one colour, so AB and opal are built as a shift around the base
+// rather than a flat disc that tells a shopper nothing.
+function beadFace(stone) {
+  var base = stone.swatch || "#ddd";
+  if (stone.finish === "ab") {
+    return "conic-gradient(from 210deg, " + base + ", #bfe6ff, #ffd9f2, #fff0b8, #c9f7d8, " + base + ")";
+  }
+  if (stone.finish === "opal") {
+    return "radial-gradient(circle at 32% 28%, #ffffff 0%, " + base + " 42%, #8fa8d8 100%)";
+  }
+  return base;
+}
+
 function loadStones() {
   var host = document.getElementById("stone-grid");
   fetch("/api/stones").then(function (r) { return r.json(); }).then(function (d) {
+    document.getElementById("s-from").value = d.from || "";
     var list = d.stones || [];
     if (!list.length) { host.innerHTML = "<p class='quiet'>No stones on the shelf yet.</p>"; return; }
     host.innerHTML = "";
@@ -1049,10 +1097,11 @@ function loadStones() {
       // A photo is the real thing; the colour is what stands in until there
       // is one, so it is never shown over the top of a photo.
       if (st.image) bead.style.backgroundImage = "url('/" + st.image + "')";
-      else bead.style.background = st.swatch || "#ddd";
+      else bead.style.background = beadFace(st);
       var nm = document.createElement("b");
       nm.textContent = st.name;
       card.appendChild(bead); card.appendChild(nm);
+      if (st.shape) { var shp = document.createElement("small"); shp.textContent = st.shape; card.appendChild(shp); }
       if (st.note) { var note = document.createElement("small"); note.textContent = st.note; card.appendChild(note); }
       if (!st.image) { var warn = document.createElement("small"); warn.textContent = "no photo yet"; card.appendChild(warn); }
       if (st.available === false) { var offk = document.createElement("small"); offk.textContent = "off the shelf"; card.appendChild(offk); }
@@ -1081,6 +1130,17 @@ function loadStones() {
   }).catch(function (err) { host.textContent = "Could not load those: " + err.message; });
 }
 
+document.getElementById("from-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  note("Saving…");
+  fetch("/api/stones", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ action: "from", from: document.getElementById("s-from").value })
+  }).then(function (r) { return r.json(); }).then(function (d) {
+    note(d.ok ? "Saved — the card out front says so in a minute or two." : d.message, !d.ok);
+  }).catch(function (err) { note("That did not work: " + err.message, true); });
+});
+
 document.getElementById("stone-form").addEventListener("submit", function (e) {
   e.preventDefault();
   var btn = document.getElementById("s-go");
@@ -1092,6 +1152,8 @@ document.getElementById("stone-form").addEventListener("submit", function (e) {
       id: document.getElementById("s-id").value,
       name: document.getElementById("s-name").value,
       swatch: document.getElementById("s-swatch").value,
+      shape: document.getElementById("s-shape").value,
+      finish: document.getElementById("s-finish").value,
       note: document.getElementById("s-note").value,
       available: document.getElementById("s-available").checked,
       photo: stonePhoto

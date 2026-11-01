@@ -38,3 +38,7 @@ window.MICKNACK_STONES = [
   { id: "red-cz", name: "Red CZ", swatch: "#c62828", shape: "", finish: "", image: "", note: "", available: true },
   { id: "ruby-cz", name: "Ruby CZ", swatch: "#9b1b30", shape: "", finish: "", image: "", note: "", available: true },
 ];
+
+// What a custom piece starts at, shown on the card at the front of the shop.
+// Changed from the HUB's Stones page.
+window.MICKNACK_CUSTOM = { from: "30.00" };

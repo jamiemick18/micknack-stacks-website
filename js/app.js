@@ -81,6 +81,66 @@ function toCard(item, { key, buttonLabel, badge }) {
   };
 }
 
+// ---- the custom piece, pinned first ----
+
+function customCard() {
+  const stones = (window.MICKNACK_STONES || []).filter((s) => s && s.available !== false);
+  // "Price varies" is true but unhelpful; a number stops people arriving
+  // with a figure in mind that was never going to be possible.
+  const from = ((window.MICKNACK_CUSTOM || {}).from || "").trim();
+  // Real beads from the real shelf, so the card shows what is actually
+  // stocked rather than a decorative guess.
+  const beads = stones
+    .slice(0, 8)
+    .map((stone) => {
+      const face = stone.image
+        ? `background-image:url('${escapeHtml(stone.image)}')`
+        : `background:${
+            stone.finish === "ab"
+              ? `conic-gradient(from 210deg, ${stone.swatch || "#ddd"}, #bfe6ff, #ffd9f2, #fff0b8, #c9f7d8, ${stone.swatch || "#ddd"})`
+              : stone.finish === "opal"
+              ? `radial-gradient(circle at 32% 28%, #ffffff 0%, ${stone.swatch || "#ddd"} 42%, #8fa8d8 100%)`
+              : stone.swatch || "#ddd"
+          }`;
+      return `<span class="custom-bead" style="${face}"></span>`;
+    })
+    .join("");
+
+  return `
+    <article class="product-card custom-card">
+      <button type="button" class="thumb custom-thumb" data-open-custom>
+        <span class="custom-thumb-inner">
+          <span class="custom-beads">${beads}</span>
+          <span class="custom-thumb-word">Made for you</span>
+        </span>
+        <span class="card-badge">Custom</span>
+      </button>
+      <div class="card-body">
+        <h3 class="card-title">Custom Ear Chain</h3>
+        <p class="card-price">${
+          from ? `Starting at $${escapeHtml(from)}` : "Price varies"
+        }</p>
+        <p class="card-desc">Pick your stones, chain and length — I will quote you before anything is made.</p>
+        <div class="card-actions">
+          <button type="button" class="btn btn-primary" data-open-custom>Start yours</button>
+        </div>
+      </div>
+    </article>`;
+}
+
+function wireCustomCard() {
+  // The band's own button already owns the dialog, so the card borrows it
+  // rather than building a second one that could drift out of step.
+  const opener = document.getElementById("custom-open");
+  if (!opener) return;
+  grid.querySelectorAll("[data-open-custom]").forEach((el) => {
+    el.addEventListener("click", (event) => {
+      event.preventDefault();
+      opener.click();
+    });
+  });
+}
+
 function renderCard(card) {
   const thumbInner = `<img src="${card.image}" alt="${escapeHtml(card.title)}" loading="lazy" />
             ${card.badge ? `<span class="card-badge">${escapeHtml(card.badge)}</span>` : ""}
@@ -241,7 +301,16 @@ function applySearch() {
     return;
   }
 
-  grid.innerHTML = matches.map(renderCard).join("");
+  // Custom work sits at the front of the shop rather than in a band someone
+  // has to notice. It is the one thing here with no fixed price, so it says
+  // so plainly instead of inventing one.
+  //
+  // Only on the full collection: on a filtered shelf or a search it would be
+  // the one result that does not match what was asked for.
+  const pinned = !term && !shelfFilter ? customCard() : "";
+
+  grid.innerHTML = pinned + matches.map(renderCard).join("");
+  wireCustomCard();
   if (window.MICKNACK_PAINT_HEARTS) window.MICKNACK_PAINT_HEARTS();
 }
 

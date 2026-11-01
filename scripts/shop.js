@@ -661,6 +661,8 @@ function writeStones(list) {
           `id: ${JSON.stringify(String(stone.id))}`,
           `name: ${JSON.stringify(String(stone.name || "").trim())}`,
           `swatch: ${JSON.stringify(String(stone.swatch || "").trim())}`,
+          `shape: ${JSON.stringify(String(stone.shape || "").trim())}`,
+          `finish: ${JSON.stringify(String(stone.finish || "").trim())}`,
           `image: ${JSON.stringify(String(stone.image || ""))}`,
           `note: ${JSON.stringify(String(stone.note || "").trim())}`,
           `available: ${stone.available === false ? "false" : "true"}`,
@@ -672,7 +674,33 @@ function writeStones(list) {
   writeFileSync(STONES_PATH, wasCrlf ? next.replace(/\n/g, "\r\n") : next);
 }
 
-function saveStone({ id, name, swatch, note, available, photo }) {
+// What a custom piece starts at. It lives beside the stones because that is
+// the page Jamie is on when she thinks about custom work, and because it is
+// one number, not a thing that deserves a settings screen of its own.
+function readCustomFrom() {
+  const settings = windowFile("data/stones.js", "MICKNACK_CUSTOM");
+  return (settings && settings.from) || "";
+}
+
+function writeCustomFrom(from) {
+  const clean = String(from || "").trim();
+  if (clean && !/^\d+(\.\d{1,2})?$/.test(clean)) {
+    throw new Error("The starting price should be a number like 30.00, with no dollar sign.");
+  }
+  const original = readFileSync(STONES_PATH, "utf8");
+  const wasCrlf = original.includes("\r\n");
+  let file = original.replace(/\r\n/g, "\n");
+  const line = `window.MICKNACK_CUSTOM = { from: ${JSON.stringify(clean)} };`;
+  if (/window\.MICKNACK_CUSTOM\s*=\s*\{[^}]*\};/.test(file)) {
+    file = file.replace(/window\.MICKNACK_CUSTOM\s*=\s*\{[^}]*\};/, line);
+  } else {
+    file += `\n${line}\n`;
+  }
+  writeFileSync(STONES_PATH, wasCrlf ? file.replace(/\n/g, "\r\n") : file);
+  return clean;
+}
+
+function saveStone({ id, name, swatch, shape, finish, note, available, photo }) {
   if (!String(name || "").trim()) throw new Error("A stone needs a name.");
   const list = readStones();
 
@@ -689,12 +717,23 @@ function saveStone({ id, name, swatch, note, available, photo }) {
 
   let stone = list.find((s) => String(s.id) === key);
   if (!stone) {
-    stone = { id: key, name: "", swatch: "", image: "", note: "", available: true };
+    stone = { id: key, name: "", swatch: "", shape: "", finish: "", image: "", note: "", available: true };
     list.push(stone);
   }
 
   stone.name = String(name).trim();
   stone.swatch = String(swatch || "").trim();
+  // An iridescent stone is not one colour, and pretending it is makes AB
+  // look like flat lilac. The finish says how to draw it; the swatch stays
+  // the base colour it shifts around.
+  stone.finish = ["ab", "opal"].includes(String(finish || "").trim()) ? String(finish).trim() : "";
+  // Several shapes at once is normal: one colour is often cut round AND
+  // marquise, and a shopper cares which they can have.
+  stone.shape = String(shape || "")
+    .split(",")
+    .map((bit) => bit.trim())
+    .filter(Boolean)
+    .join(", ");
   stone.note = String(note || "").trim();
   stone.available = available !== false;
   if (photo && photo.data) stone.image = writePhoto(key, photo, "stones");
@@ -887,7 +926,13 @@ const server = createServer(async (req, res) => {
 
   try {
     if (req.url === "/" || req.url.startsWith("/?")) {
-      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+      // Never cached. The HUB's whole page — markup and script together —
+      // is served from here, so a browser holding yesterday's copy means
+      // buttons that quietly do nothing and edits that appear not to save.
+      res.writeHead(200, {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store, must-revalidate",
+      });
       return res.end(page());
     }
 
@@ -1123,12 +1168,17 @@ const server = createServer(async (req, res) => {
     }
 
     if (req.url === "/api/stones" && req.method === "GET") {
-      return json(200, { ok: true, stones: readStones() });
+      return json(200, { ok: true, stones: readStones(), from: readCustomFrom() });
     }
 
     if (req.url === "/api/stones" && req.method === "POST") {
       const body = await readBody(req);
-      const done = body.action === "remove" ? removeStone(body.id) : saveStone(body);
+      const done =
+        body.action === "remove"
+          ? removeStone(body.id)
+          : body.action === "from"
+          ? { id: "", from: writeCustomFrom(body.from) }
+          : saveStone(body);
       const result = publish();
       return json(200, {
         ok: result.ok,
