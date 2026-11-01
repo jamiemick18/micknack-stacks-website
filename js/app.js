@@ -99,7 +99,7 @@ function customCard() {
             stone.finish === "ab"
               ? `conic-gradient(from 210deg, ${stone.swatch || "#ddd"}, #bfe6ff, #ffd9f2, #fff0b8, #c9f7d8, ${stone.swatch || "#ddd"})`
               : stone.finish === "opal"
-              ? `radial-gradient(circle at 32% 28%, #ffffff 0%, ${stone.swatch || "#ddd"} 42%, #8fa8d8 100%)`
+              ? `radial-gradient(circle at 30% 24%, #ffffff 0%, #b9a7ef 22%, ${stone.swatch || "#ddd"} 46%, #3fae96 70%, #16296b 100%)`
               : stone.swatch || "#ddd"
           }`;
       return `<span class="custom-bead" style="${face}"></span>`;

@@ -191,6 +191,10 @@ async function handleWebhook(request, env) {
     await env.STOCK.put(`qty:${pieceId}`, String(next));
   }
 
+  // Etsy and Stripe both email about an order already, but the phone HUB
+  // is where she works, so it says so too.
+  await notifyPhone(env, "order");
+
   return json({ received: true }, 200, {});
 }
 
@@ -435,6 +439,7 @@ async function handleReview(request, env, cors) {
     date: new Date().toISOString().slice(0, 10),
   };
   await env.STOCK.put(`review:${id}`, JSON.stringify(review));
+  await notifyPhone(env, "review");
 
   return json({ ok: true, message: "Thank you. Jamie reads every one before it goes up." }, 200, cors);
 }
@@ -616,6 +621,9 @@ async function handleCustom(request, env, cors) {
   await env.STOCK.put(`custom:${id}`, JSON.stringify(saved));
 
   saved.emailed = await emailCustom(env, saved);
+  // Saved first, told second. A notification that fails must never cost
+  // Jamie the request itself.
+  saved.pushed = await notifyPhone(env, "custom");
   await env.STOCK.put(`custom:${id}`, JSON.stringify(saved));
 
   return json(
@@ -623,6 +631,127 @@ async function handleCustom(request, env, cors) {
     200,
     cors
   );
+}
+
+// ------------------------------------------------------------ push ---------
+
+// A real notification on Jamie's phone when something lands, so the HUB is
+// not a place she has to remember to go and look at.
+//
+// Deliberately sent WITHOUT an encrypted payload. Web Push can carry one, but
+// it requires implementing RFC 8291 by hand here, and a mistake in that is a
+// notification that silently never arrives. Instead the push is a knock on
+// the door: the service worker wakes, asks /push/latest what kind of thing it
+// was, and says so. That endpoint returns only a kind and a time — never a
+// name, an email or anything someone wrote.
+
+const PUSH_SUBS = "pushsub:";
+
+function b64urlToBytes(value) {
+  const pad = "=".repeat((4 - (value.length % 4)) % 4);
+  const raw = atob((value + pad).replace(/-/g, "+").replace(/_/g, "/"));
+  const out = new Uint8Array(raw.length);
+  for (let i = 0; i < raw.length; i++) out[i] = raw.charCodeAt(i);
+  return out;
+}
+
+function bytesToB64url(bytes) {
+  let binary = "";
+  const view = new Uint8Array(bytes);
+  for (let i = 0; i < view.length; i++) binary += String.fromCharCode(view[i]);
+  return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+// The VAPID token proves the push came from us. Signed ES256, valid 12 hours,
+// one per push service rather than one per subscription.
+async function vapidToken(env, audience) {
+  const header = bytesToB64url(new TextEncoder().encode(JSON.stringify({ typ: "JWT", alg: "ES256" })));
+  const body = bytesToB64url(
+    new TextEncoder().encode(
+      JSON.stringify({
+        aud: audience,
+        exp: Math.floor(Date.now() / 1000) + 12 * 60 * 60,
+        sub: env.VAPID_SUBJECT || "mailto:micknackstacks@gmail.com",
+      })
+    )
+  );
+  const signing = `${header}.${body}`;
+
+  const pub = b64urlToBytes(env.VAPID_PUBLIC_KEY);
+  const key = await crypto.subtle.importKey(
+    "jwk",
+    {
+      kty: "EC",
+      crv: "P-256",
+      d: env.VAPID_PRIVATE_KEY,
+      x: bytesToB64url(pub.slice(1, 33)),
+      y: bytesToB64url(pub.slice(33, 65)),
+      ext: true,
+    },
+    { name: "ECDSA", namedCurve: "P-256" },
+    false,
+    ["sign"]
+  );
+
+  const signature = await crypto.subtle.sign(
+    { name: "ECDSA", hash: "SHA-256" },
+    key,
+    new TextEncoder().encode(signing)
+  );
+  return `${signing}.${bytesToB64url(signature)}`;
+}
+
+async function readSubs(env) {
+  const list = await env.STOCK.list({ prefix: PUSH_SUBS });
+  const subs = [];
+  for (const key of list.keys) {
+    const raw = await env.STOCK.get(key.name);
+    if (raw) {
+      try {
+        subs.push({ key: key.name, ...JSON.parse(raw) });
+      } catch (err) {
+        /* a damaged one is skipped, not fatal */
+      }
+    }
+  }
+  return subs;
+}
+
+// Called when something lands. Never allowed to break the thing that called
+// it: a customer's request must be saved whether or not a phone hears about
+// it, so every failure here is swallowed after being recorded.
+async function notifyPhone(env, kind) {
+  if (!env.VAPID_PUBLIC_KEY || !env.VAPID_PRIVATE_KEY) return "no keys set";
+  try {
+    await env.STOCK.put("push:latest", JSON.stringify({ kind, at: new Date().toISOString() }));
+    const subs = await readSubs(env);
+    if (!subs.length) return "nobody subscribed";
+
+    let sent = 0;
+    for (const sub of subs) {
+      try {
+        const audience = new URL(sub.endpoint).origin;
+        const token = await vapidToken(env, audience);
+        const res = await fetch(sub.endpoint, {
+          method: "POST",
+          headers: {
+            TTL: "86400",
+            Urgency: "high",
+            Authorization: `vapid t=${token}, k=${env.VAPID_PUBLIC_KEY}`,
+          },
+        });
+        // 404 and 410 mean that phone has thrown the subscription away. Keeping
+        // it would mean retrying a dead address forever.
+        if (res.status === 404 || res.status === 410) await env.STOCK.delete(sub.key);
+        else if (res.ok) sent++;
+      } catch (err) {
+        /* one phone failing must not stop the others */
+      }
+    }
+    return `sent to ${sent}`;
+  } catch (err) {
+    return `failed: ${err.message}`;
+  }
 }
 
 // ------------------------------------------------------------- phone hub ----
@@ -914,6 +1043,44 @@ async function handleHub(request, env, cors) {
   const { body } = guard;
   const action = String(body.action || "summary");
 
+  // Turning notifications on from the phone. The subscription is an address
+  // the phone's own push service gave it — it is not a secret, and it is
+  // useless to anyone without the private key that lives here.
+  if (action === "subscribe") {
+    const sub = body.subscription;
+    if (!sub || !sub.endpoint) return json({ error: "No subscription given." }, 400, cors);
+    // Keyed on the endpoint so re-subscribing on the same phone replaces the
+    // old entry instead of piling up duplicates that all buzz at once.
+    const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(sub.endpoint));
+    const key = `${PUSH_SUBS}${bytesToB64url(digest).slice(0, 24)}`;
+    await env.STOCK.put(key, JSON.stringify({ endpoint: sub.endpoint, at: new Date().toISOString() }));
+    return json({ ok: true, message: "This phone will be told from now on." }, 200, cors);
+  }
+
+  if (action === "unsubscribe") {
+    const endpoint = String((body.subscription || {}).endpoint || body.endpoint || "");
+    if (endpoint) {
+      const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(endpoint));
+      await env.STOCK.delete(`${PUSH_SUBS}${bytesToB64url(digest).slice(0, 24)}`);
+    }
+    return json({ ok: true, message: "This phone will be left alone." }, 200, cors);
+  }
+
+  // So the phone can say whether it is already set up, and so a test push can
+  // be sent without waiting for a real customer.
+  if (action === "pushstate") {
+    const subs = await readSubs(env);
+    return json(
+      { ok: true, phones: subs.length, keys: Boolean(env.VAPID_PUBLIC_KEY && env.VAPID_PRIVATE_KEY) },
+      200,
+      cors
+    );
+  }
+
+  if (action === "pushtest") {
+    return json({ ok: true, message: await notifyPhone(env, "test") }, 200, cors);
+  }
+
   if (action === "summary") return json({ ok: true, summary: await hubSummary(env) }, 200, cors);
 
   if (action === "orders") return json({ ok: true, orders: await hubOrders(env) }, 200, cors);
@@ -1136,6 +1303,20 @@ export default {
       if (!env.STOCK) return json({ site: 0, etsy: 0, total: 0 }, 200, cors);
       if (request.method === "POST") return countView(env, cors);
       return json(await readViews(env), 200, { ...cors, "Cache-Control": "no-store" });
+    }
+
+    // Only ever a kind and a time. The service worker needs to know what sort
+    // of thing happened to word the notification; it does not need to know
+    // who it was from or what they said, so it is never told.
+    if (path === "/push/latest" && request.method === "GET") {
+      const raw = env.STOCK ? await env.STOCK.get("push:latest") : null;
+      let latest = { kind: "", at: "" };
+      try {
+        if (raw) latest = JSON.parse(raw);
+      } catch (err) {
+        /* nothing worth saying */
+      }
+      return json({ kind: latest.kind || "", at: latest.at || "" }, 200, cors);
     }
 
     if (path === "/reviews" && request.method === "GET") {

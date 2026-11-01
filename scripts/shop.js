@@ -643,35 +643,98 @@ function readStones() {
   return Array.isArray(list) ? list : [];
 }
 
-function writeStones(list) {
+// Both lists live in data/stones.js, so "the last ]" is no longer ours to
+// assume: each is replaced between its own anchor and the first ]; after it.
+// Getting that wrong would swallow the other list whole.
+function writeList(anchor, body) {
   const original = existsSync(STONES_PATH) ? readFileSync(STONES_PATH, "utf8") : "";
   const wasCrlf = original.includes("\r\n");
   const file = original.replace(/\r\n/g, "\n");
-  const anchor = "window.MICKNACK_STONES = [\n";
   const start = file.indexOf(anchor);
-  const end = file.lastIndexOf("];");
-  if (start === -1 || end === -1 || end < start) {
-    throw new Error("data/stones.js does not look like itself.");
-  }
-  const body = list
-    .map(
-      (stone) =>
-        "  { " +
-        [
-          `id: ${JSON.stringify(String(stone.id))}`,
-          `name: ${JSON.stringify(String(stone.name || "").trim())}`,
-          `swatch: ${JSON.stringify(String(stone.swatch || "").trim())}`,
-          `shape: ${JSON.stringify(String(stone.shape || "").trim())}`,
-          `finish: ${JSON.stringify(String(stone.finish || "").trim())}`,
-          `image: ${JSON.stringify(String(stone.image || ""))}`,
-          `note: ${JSON.stringify(String(stone.note || "").trim())}`,
-          `available: ${stone.available === false ? "false" : "true"}`,
-        ].join(", ") +
-        " },\n"
-    )
-    .join("");
-  const next = file.slice(0, start + anchor.length) + body + file.slice(end);
+  if (start === -1) throw new Error("data/stones.js does not look like itself.");
+  const from = start + anchor.length;
+  const end = file.indexOf("];", from);
+  if (end === -1) throw new Error("data/stones.js does not look like itself.");
+  const next = file.slice(0, from) + body + file.slice(end);
   writeFileSync(STONES_PATH, wasCrlf ? next.replace(/\n/g, "\r\n") : next);
+}
+
+function writeStones(list) {
+  writeList(
+    "window.MICKNACK_STONES = [\n",
+    list
+      .map(
+        (stone) =>
+          "  { " +
+          [
+            `id: ${JSON.stringify(String(stone.id))}`,
+            `name: ${JSON.stringify(String(stone.name || "").trim())}`,
+            `swatch: ${JSON.stringify(String(stone.swatch || "").trim())}`,
+            `shape: ${JSON.stringify(String(stone.shape || "").trim())}`,
+            `finish: ${JSON.stringify(String(stone.finish || "").trim())}`,
+            `size: ${JSON.stringify(String(stone.size || "").trim())}`,
+            `image: ${JSON.stringify(String(stone.image || ""))}`,
+            `note: ${JSON.stringify(String(stone.note || "").trim())}`,
+            `available: ${stone.available === false ? "false" : "true"}`,
+          ].join(", ") +
+          " },\n"
+      )
+      .join("")
+  );
+}
+
+function readChains() {
+  const list = windowFile("data/stones.js", "MICKNACK_CHAINS");
+  return Array.isArray(list) ? list : [];
+}
+
+function writeChains(list) {
+  writeList(
+    "window.MICKNACK_CHAINS = [\n",
+    list
+      .map(
+        (chain) =>
+          "  { " +
+          [
+            `id: ${JSON.stringify(String(chain.id))}`,
+            `name: ${JSON.stringify(String(chain.name || "").trim())}`,
+            `mm: ${JSON.stringify(String(chain.mm || "").trim())}`,
+            `available: ${chain.available === false ? "false" : "true"}`,
+          ].join(", ") +
+          " },\n"
+      )
+      .join("")
+  );
+}
+
+function saveChain({ id, name, mm, available }) {
+  if (!String(name || "").trim()) throw new Error("A chain needs a name.");
+  const list = readChains();
+  let key = String(id || "").trim();
+  if (!key) {
+    key = slugify(name);
+    const taken = new Set(list.map((c) => String(c.id)));
+    let n = 2;
+    while (taken.has(key)) key = `${slugify(name)}-${n++}`;
+  }
+  let chain = list.find((c) => String(c.id) === key);
+  if (!chain) {
+    chain = { id: key, name: "", mm: "", available: true };
+    list.push(chain);
+  }
+  chain.name = String(name).trim();
+  chain.mm = String(mm || "").trim();
+  chain.available = available !== false;
+  writeChains(list);
+  return { id: key };
+}
+
+function removeChain(id) {
+  const key = String(id || "").trim();
+  const list = readChains();
+  if (!list.some((c) => String(c.id) === key)) throw new Error("No such chain.");
+  writeChains(list.filter((c) => String(c.id) !== key));
+  return { id: key };
 }
 
 // What a custom piece starts at. It lives beside the stones because that is
@@ -700,7 +763,7 @@ function writeCustomFrom(from) {
   return clean;
 }
 
-function saveStone({ id, name, swatch, shape, finish, note, available, photo }) {
+function saveStone({ id, name, swatch, shape, finish, size, note, available, photo }) {
   if (!String(name || "").trim()) throw new Error("A stone needs a name.");
   const list = readStones();
 
@@ -717,7 +780,7 @@ function saveStone({ id, name, swatch, shape, finish, note, available, photo }) 
 
   let stone = list.find((s) => String(s.id) === key);
   if (!stone) {
-    stone = { id: key, name: "", swatch: "", shape: "", finish: "", image: "", note: "", available: true };
+    stone = { id: key, name: "", swatch: "", shape: "", finish: "", size: "", image: "", note: "", available: true };
     list.push(stone);
   }
 
@@ -734,6 +797,7 @@ function saveStone({ id, name, swatch, shape, finish, note, available, photo }) 
     .map((bit) => bit.trim())
     .filter(Boolean)
     .join(", ");
+  stone.size = String(size || "").trim();
   stone.note = String(note || "").trim();
   stone.available = available !== false;
   if (photo && photo.data) stone.image = writePhoto(key, photo, "stones");
@@ -1168,7 +1232,7 @@ const server = createServer(async (req, res) => {
     }
 
     if (req.url === "/api/stones" && req.method === "GET") {
-      return json(200, { ok: true, stones: readStones(), from: readCustomFrom() });
+      return json(200, { ok: true, stones: readStones(), chains: readChains(), from: readCustomFrom() });
     }
 
     if (req.url === "/api/stones" && req.method === "POST") {
@@ -1178,6 +1242,10 @@ const server = createServer(async (req, res) => {
           ? removeStone(body.id)
           : body.action === "from"
           ? { id: "", from: writeCustomFrom(body.from) }
+          : body.action === "chain"
+          ? saveChain(body)
+          : body.action === "chain-remove"
+          ? removeChain(body.id)
           : saveStone(body);
       const result = publish();
       return json(200, {

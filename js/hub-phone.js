@@ -131,6 +131,123 @@
     el.textContent = n;
   }
 
+  /* ---------- notifications on this phone ---------- */
+  //
+  // The push itself carries nothing; hub-sw.js is woken by it and asks the
+  // worker what sort of thing happened. See the note at the top of that file.
+
+  var VAPID = "BM_0lhJXvNOntCtI4NbEgIyaSq4XLIs0CvptmapxlCNg42UGlryb8V7TWcqM7lRYv80WWnwXEbXcGalqUk70jn8";
+
+  function keyBytes(base64url) {
+    var pad = "=".repeat((4 - (base64url.length % 4)) % 4);
+    var raw = atob((base64url + pad).replace(/-/g, "+").replace(/_/g, "/"));
+    var out = new Uint8Array(raw.length);
+    for (var i = 0; i < raw.length; i++) out[i] = raw.charCodeAt(i);
+    return out;
+  }
+
+  function pushSupported() {
+    return "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
+  }
+
+  function currentSub() {
+    if (!pushSupported()) return Promise.resolve(null);
+    return navigator.serviceWorker.getRegistration().then(function (reg) {
+      return reg ? reg.pushManager.getSubscription() : null;
+    });
+  }
+
+  function paintPush() {
+    var card = document.getElementById("push-card");
+    if (!card) return;
+
+    if (!pushSupported()) {
+      // On an iPhone this is what you get until the HUB is added to the Home
+      // Screen, so say that rather than "not supported", which sounds final.
+      card.innerHTML =
+        "<p class='meta'>This phone cannot do notifications from a browser tab. " +
+        "On an iPhone, open the share menu and choose <b>Add to Home Screen</b>, " +
+        "then open the HUB from there and look again.</p>";
+      return;
+    }
+
+    currentSub().then(function (sub) {
+      var on = Boolean(sub) && Notification.permission === "granted";
+      var h = "<p class='meta'>" +
+        (on
+          ? "This phone is being told when a request, review or order lands."
+          : "Get a notification when a custom request, a review or an order comes in.") +
+        "</p><div class='acts'>";
+      h += on
+        ? "<button data-push='test'>Send a test</button>" +
+          "<button class='ghost' data-push='off'>Turn off</button>"
+        : "<button data-push='on'>Turn on for this phone</button>";
+      h += "</div>";
+      card.innerHTML = h;
+
+      var buttons = card.querySelectorAll("button[data-push]");
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function () {
+          var what = this.dataset.push;
+          if (what === "on") return turnPushOn();
+          if (what === "off") return turnPushOff();
+          say("Sending a test…");
+          ask("pushtest").then(function (d) {
+            say(d.ok ? "Sent. It should arrive in a moment." : d.error, !d.ok);
+          }).catch(function (err) { say(err.message, true); });
+        });
+      }
+    });
+  }
+
+  function turnPushOn() {
+    say("Asking for permission…");
+    Notification.requestPermission()
+      .then(function (permission) {
+        if (permission !== "granted") {
+          // Saying no here is sticky: the browser will not ask again, so say
+          // where to undo it rather than leaving a button that does nothing.
+          throw new Error("Not allowed. Turn notifications on for this site in your phone's settings, then try again.");
+        }
+        return navigator.serviceWorker.register("/hub-sw.js");
+      })
+      .then(function (reg) {
+        return navigator.serviceWorker.ready.then(function () { return reg; });
+      })
+      .then(function (reg) {
+        return reg.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: keyBytes(VAPID),
+        });
+      })
+      .then(function (sub) {
+        return ask("subscribe", { subscription: { endpoint: sub.endpoint } });
+      })
+      .then(function (d) {
+        if (!d.ok) throw new Error(d.error || "That did not save.");
+        say("Notifications are on for this phone.");
+        paintPush();
+      })
+      .catch(function (err) { say(err.message, true); });
+  }
+
+  function turnPushOff() {
+    say("Turning them off…");
+    currentSub()
+      .then(function (sub) {
+        if (!sub) return { ok: true };
+        var endpoint = sub.endpoint;
+        return sub.unsubscribe().then(function () {
+          return ask("unsubscribe", { endpoint: endpoint });
+        });
+      })
+      .then(function () {
+        say("This phone will be left alone.");
+        paintPush();
+      })
+      .catch(function (err) { say(err.message, true); });
+  }
+
   function render() {
     if (view === "today") return renderToday();
     if (view === "orders") return renderOrders();
@@ -173,7 +290,11 @@
       h += row("Views", s.views.etsy);
       h += "</div>";
 
+      h += "<h2>Notifications</h2><div class='card' id='push-card'>" +
+        "<p class='meta'>Checking…</p></div>";
+
       host.innerHTML = h;
+      paintPush();
     }).catch(function (err) { say(err.message, true); });
 
     loadMoney();

@@ -374,6 +374,8 @@ export function page() {
         <div>
           <label for="s-shape">Shape <em>comma separated if more than one</em></label>
           <input type="text" id="s-shape" list="shapes" placeholder="Round, Marquise" />
+          <label for="s-size" style="margin-top:8px">Size</label>
+          <input type="text" id="s-size" placeholder="4mm" />
           <datalist id="shapes">
             <option>Round</option><option>Marquise</option><option>Pear</option>
             <option>Teardrop</option><option>Heart</option><option>Star</option>
@@ -400,6 +402,26 @@ export function page() {
         <span class="hint" id="s-hint">It goes on the website straight away.</span>
       </div>
     </form>
+
+    <h3 class="away">Chains</h3>
+    <form class="add chain-form" id="chain-form">
+      <div class="two">
+        <div>
+          <label for="c-name">Name</label>
+          <input type="text" id="c-name" placeholder="1.5mm cable chain" />
+        </div>
+        <div>
+          <label for="c-mm">Width in mm</label>
+          <input type="text" id="c-mm" placeholder="1.5" />
+        </div>
+      </div>
+      <div>
+        <input type="hidden" id="c-id" />
+        <button type="submit" id="c-go">Add the chain</button>
+        <button type="button" class="ghost" id="c-cancel" hidden>Never mind</button>
+      </div>
+    </form>
+    <div class="rows" id="chain-list"></div>
 
     <form class="add from-form" id="from-form">
       <div>
@@ -1041,6 +1063,7 @@ function stoneAddMode() {
   document.getElementById("s-swatch").value = "#cccccc";
   document.getElementById("s-shape").value = "";
   document.getElementById("s-finish").value = "";
+  document.getElementById("s-size").value = "4mm";
   document.getElementById("s-available").checked = true;
   document.getElementById("s-preview").style.display = "none";
   document.getElementById("s-go").textContent = "Add the stone";
@@ -1054,6 +1077,7 @@ function stoneEdit(stone) {
   document.getElementById("s-swatch").value = /^#[0-9a-f]{6}$/i.test(stone.swatch || "") ? stone.swatch : "#cccccc";
   document.getElementById("s-shape").value = stone.shape || "";
   document.getElementById("s-finish").value = stone.finish || "";
+  document.getElementById("s-size").value = stone.size || "";
   document.getElementById("s-note").value = stone.note || "";
   document.getElementById("s-available").checked = stone.available !== false;
   document.getElementById("s-photo").value = "";
@@ -1076,15 +1100,72 @@ function beadFace(stone) {
     return "conic-gradient(from 210deg, " + base + ", #bfe6ff, #ffd9f2, #fff0b8, #c9f7d8, " + base + ")";
   }
   if (stone.finish === "opal") {
-    return "radial-gradient(circle at 32% 28%, #ffffff 0%, " + base + " 42%, #8fa8d8 100%)";
+    return "radial-gradient(circle at 30% 24%, #ffffff 0%, #b9a7ef 22%, " + base + " 46%, #3fae96 70%, #16296b 100%)";
   }
   return base;
+}
+
+function chainAddMode() {
+  document.getElementById("chain-form").reset();
+  document.getElementById("c-id").value = "";
+  document.getElementById("c-go").textContent = "Add the chain";
+  document.getElementById("c-cancel").hidden = true;
+}
+
+function paintChains(list) {
+  var host = document.getElementById("chain-list");
+  host.innerHTML = "";
+  if (!list.length) {
+    host.innerHTML = "<p class='quiet'>No chains yet. Someone building a piece has nothing to put the stones on.</p>";
+    return;
+  }
+  for (var i = 0; i < list.length; i++) {
+    var c = list[i];
+    var row = document.createElement("div");
+    row.className = "row";
+    var cell = document.createElement("div");
+    var t = document.createElement("div");
+    t.className = "title"; t.textContent = c.name;
+    var m = document.createElement("div");
+    m.className = "meta"; m.textContent = (c.mm ? c.mm + "mm wide" : "no width set");
+    cell.appendChild(t); cell.appendChild(m);
+    var ed = document.createElement("button");
+    ed.className = "ghost"; ed.textContent = "Edit";
+    ed.addEventListener("click", (function (one) {
+      return function () {
+        document.getElementById("c-id").value = one.id;
+        document.getElementById("c-name").value = one.name || "";
+        document.getElementById("c-mm").value = one.mm || "";
+        document.getElementById("c-go").textContent = "Save the change";
+        document.getElementById("c-cancel").hidden = false;
+      };
+    })(c));
+    var rm = document.createElement("button");
+    rm.className = "ghost"; rm.textContent = "Remove";
+    rm.addEventListener("click", (function (one) {
+      return function () {
+        if (!confirm("Remove " + one.name + "?")) return;
+        note("Removing…");
+        fetch("/api/stones", { method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action: "chain-remove", id: one.id }) })
+          .then(function (r) { return r.json(); })
+          .then(function (d) { note(d.message, !d.ok); loadStones(); });
+      };
+    })(c));
+    row.appendChild(document.createElement("span"));
+    row.appendChild(cell);
+    row.appendChild(document.createElement("span"));
+    row.appendChild(document.createElement("span"));
+    row.appendChild(ed); row.appendChild(rm);
+    host.appendChild(row);
+  }
 }
 
 function loadStones() {
   var host = document.getElementById("stone-grid");
   fetch("/api/stones").then(function (r) { return r.json(); }).then(function (d) {
     document.getElementById("s-from").value = d.from || "";
+    paintChains(d.chains || []);
     var list = d.stones || [];
     if (!list.length) { host.innerHTML = "<p class='quiet'>No stones on the shelf yet.</p>"; return; }
     host.innerHTML = "";
@@ -1101,7 +1182,8 @@ function loadStones() {
       var nm = document.createElement("b");
       nm.textContent = st.name;
       card.appendChild(bead); card.appendChild(nm);
-      if (st.shape) { var shp = document.createElement("small"); shp.textContent = st.shape; card.appendChild(shp); }
+      var spec = [st.shape, st.size].filter(Boolean).join(" · ");
+      if (spec) { var shp = document.createElement("small"); shp.textContent = spec; card.appendChild(shp); }
       if (st.note) { var note = document.createElement("small"); note.textContent = st.note; card.appendChild(note); }
       if (!st.image) { var warn = document.createElement("small"); warn.textContent = "no photo yet"; card.appendChild(warn); }
       if (st.available === false) { var offk = document.createElement("small"); offk.textContent = "off the shelf"; card.appendChild(offk); }
@@ -1130,6 +1212,25 @@ function loadStones() {
   }).catch(function (err) { host.textContent = "Could not load those: " + err.message; });
 }
 
+document.getElementById("c-cancel").addEventListener("click", chainAddMode);
+
+document.getElementById("chain-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  note("Saving…");
+  fetch("/api/stones", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      action: "chain",
+      id: document.getElementById("c-id").value,
+      name: document.getElementById("c-name").value,
+      mm: document.getElementById("c-mm").value
+    })
+  }).then(function (r) { return r.json(); }).then(function (d) {
+    note(d.message, !d.ok);
+    if (d.ok) { chainAddMode(); loadStones(); }
+  }).catch(function (err) { note("That did not work: " + err.message, true); });
+});
+
 document.getElementById("from-form").addEventListener("submit", function (e) {
   e.preventDefault();
   note("Saving…");
@@ -1154,6 +1255,7 @@ document.getElementById("stone-form").addEventListener("submit", function (e) {
       swatch: document.getElementById("s-swatch").value,
       shape: document.getElementById("s-shape").value,
       finish: document.getElementById("s-finish").value,
+      size: document.getElementById("s-size").value,
       note: document.getElementById("s-note").value,
       available: document.getElementById("s-available").checked,
       photo: stonePhoto

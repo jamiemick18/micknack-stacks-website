@@ -21,6 +21,10 @@
     return s && s.available !== false && s.name;
   });
 
+  var chains = (window.MICKNACK_CHAINS || []).filter(function (c) {
+    return c && c.available !== false && c.name;
+  });
+
   function escapeHtml(value) {
     var div = document.createElement("div");
     div.textContent = value == null ? "" : value;
@@ -36,7 +40,7 @@
       return "conic-gradient(from 210deg, " + base + ", #bfe6ff, #ffd9f2, #fff0b8, #c9f7d8, " + base + ")";
     }
     if (stone.finish === "opal") {
-      return "radial-gradient(circle at 32% 28%, #ffffff 0%, " + base + " 42%, #8fa8d8 100%)";
+      return "radial-gradient(circle at 30% 24%, #ffffff 0%, #b9a7ef 22%, " + base + " 46%, #3fae96 70%, #16296b 100%)";
     }
     return base;
   }
@@ -89,6 +93,14 @@
     return "round";
   }
 
+  // 4mm is the usual stone, so it is drawn at the usual size and anything
+  // else is drawn in proportion to it. Nobody should have to read a label to
+  // see that a 6mm is bigger.
+  function radiusOf(stone) {
+    var mm = parseFloat(String(stone.size || "").replace(/[^0-9.]/g, "")) || 4;
+    return Math.max(8, Math.min(19, 13 * Math.sqrt(mm / 4)));
+  }
+
   function shapesOf(stone) {
     var list = String(stone.shape || "")
       .split(",")
@@ -115,10 +127,12 @@
         }
         if (stone.finish === "opal") {
           return (
-            '<radialGradient id="g' + i + '" cx="33%" cy="28%" r="78%">' +
+            '<radialGradient id="g' + i + '" cx="30%" cy="24%" r="82%">' +
             '<stop offset="0%" stop-color="#ffffff"/>' +
-            '<stop offset="45%" stop-color="' + (stone.swatch || "#ddd") + '"/>' +
-            '<stop offset="100%" stop-color="#8fa8d8"/>' +
+            '<stop offset="22%" stop-color="#b9a7ef"/>' +
+            '<stop offset="46%" stop-color="' + (stone.swatch || "#ddd") + '"/>' +
+            '<stop offset="70%" stop-color="#3fae96"/>' +
+            '<stop offset="100%" stop-color="#16296b"/>' +
             "</radialGradient>"
           );
         }
@@ -131,7 +145,7 @@
   //
   // A drape, not a straight line: a connector chain hangs between two
   // piercings, and drawn flat it reads as a bracelet.
-  function drawChain(arrangement, mm) {
+  function drawChain(arrangement, mm, chainMm) {
     var W = 460, H = 190;
     var left = 46, right = W - 46;
     var top = 48;
@@ -154,7 +168,8 @@
       'aria-label="A rough drawing of your chain">' +
       "<defs>" + defs + "</defs>" +
       '<path d="M' + left + " " + top + " Q" + (left + right) / 2 + " " + ctrlY + " " + right + " " + top + '" ' +
-      'fill="none" stroke="#c9a227" stroke-width="2.2" stroke-linecap="round" ' +
+      'fill="none" stroke="#c9a227" stroke-width="' + (1.4 + (Number(chainMm) || 1.5) * 0.8).toFixed(1) + '" ' +
+      'stroke-linecap="round" ' +
       'stroke-dasharray="1 4.5" />' +
       '<circle cx="' + left + '" cy="' + top + '" r="6" fill="none" stroke="#c9a227" stroke-width="2.2"/>' +
       '<circle cx="' + right + '" cy="' + top + '" r="6" fill="none" stroke="#c9a227" stroke-width="2.2"/>';
@@ -167,11 +182,12 @@
       var stone = arrangement[i].stone;
       var fill = stone.finish ? "url(#g" + i + ")" : stone.swatch || "#ddd";
       var draw = SHAPES[shapeKey(arrangement[i].shape)] || SHAPES.round;
+      var r = radiusOf(stone);
       svg +=
         '<g transform="translate(' + point.x.toFixed(1) + "," + (point.y + 15).toFixed(1) + ')" ' +
         'fill="' + fill + '" stroke="rgba(15,13,11,.22)" stroke-width="0.8">' +
-        '<line x1="0" y1="-13" x2="0" y2="-5" stroke="#c9a227" stroke-width="1.6"/>' +
-        draw(13) +
+        '<line x1="0" y1="' + -r + '" x2="0" y2="-5" stroke="#c9a227" stroke-width="1.6"/>' +
+        draw(r) +
         "</g>";
     }
 
@@ -199,7 +215,7 @@
               ' title="' + escapeHtml([stone.name, cut, stone.note].filter(Boolean).join(" — ")) + '">' +
               '<span class="stone-bead" style="' + face + '"></span>' +
               '<span class="stone-name">' + escapeHtml(stone.name) + "</span>" +
-              '<span class="stone-note">' + escapeHtml(cut) + "</span>" +
+              '<span class="stone-note">' + escapeHtml([cut, stone.size].filter(Boolean).join(" · ")) + "</span>" +
               "</button>"
             );
           })
@@ -219,6 +235,19 @@
       '<label for="chain-mm">How long? <em>the gap between your two piercings</em></label>' +
       '<input type="number" id="chain-mm" min="10" max="120" step="5" value="40" /> <span>mm</span>' +
       "</div>" +
+      (chains.length
+        ? '<div class="chain-size">' +
+          '<label for="chain-kind">Chain</label>' +
+          '<select id="chain-kind">' +
+          chains
+            .map(function (c) {
+              return '<option value="' + escapeHtml(c.id) + '" data-mm="' + escapeHtml(c.mm || "") + '">' +
+                escapeHtml(c.name) + "</option>";
+            })
+            .join("") +
+          "</select>" +
+          "</div>"
+        : "") +
       '<div class="chain-preview" id="chain-preview"></div>' +
       '<p class="chain-seq" id="chain-seq">Nothing picked yet — tap a stone above.</p>' +
       '<div class="chain-acts">' +
@@ -245,8 +274,10 @@
     '<label><span>Email</span><input type="email" name="email" maxlength="160" required placeholder="you@example.com" /></label>' +
     "</div>" +
     shelf() +
-    '<label><span>Chain <em>optional</em></span><input type="text" name="chain" maxlength="80" ' +
-    'placeholder="Dainty, chunky, satellite — or leave it to me" /></label>' +
+    (chains.length
+      ? ""
+      : '<label><span>Chain <em>optional</em></span><input type="text" name="chain" maxlength="80" ' +
+        'placeholder="Dainty, chunky — or leave it to me" /></label>') +
     '<label><span>End rings <em>optional</em></span>' +
     '<select name="rings">' +
     '<option value="">No preference</option>' +
@@ -280,6 +311,7 @@
   var preview = dialog.querySelector("#chain-preview");
   var seqLine = dialog.querySelector("#chain-seq");
   var mmInput = dialog.querySelector("#chain-mm");
+  var kindInput = dialog.querySelector("#chain-kind");
 
   function byId(id) {
     for (var i = 0; i < stones.length; i++) if (String(stones[i].id) === String(id)) return stones[i];
@@ -288,14 +320,18 @@
 
   function said() {
     return chain
-      .map(function (one) { return one.stone.name + " (" + one.shape.toLowerCase() + ")"; })
+      .map(function (one) {
+        var bits = [one.shape.toLowerCase(), one.stone.size].filter(Boolean).join(", ");
+        return one.stone.name + " (" + bits + ")";
+      })
       .join(" → ");
   }
 
   function paint() {
     if (!preview) return;
     var mm = Math.max(10, Math.min(120, Number(mmInput && mmInput.value) || 40));
-    preview.innerHTML = drawChain(chain, mm);
+    var picked = kindInput ? kindInput.options[kindInput.selectedIndex] : null;
+    preview.innerHTML = drawChain(chain, mm, picked ? picked.dataset.mm : 1.5);
     if (!seqLine) return;
     seqLine.textContent = chain.length
       ? said() + "  ·  " + mm + "mm"
@@ -337,6 +373,7 @@
   if (undo) undo.addEventListener("click", function () { chain.pop(); paint(); });
   if (clear) clear.addEventListener("click", function () { chain = []; paint(); });
   if (mmInput) mmInput.addEventListener("input", paint);
+  if (kindInput) kindInput.addEventListener("change", paint);
   paint();
 
   function show() {
@@ -377,7 +414,9 @@
         email: fields.get("email"),
         idea: fields.get("idea"),
         stones: said(),
-        chain: fields.get("chain"),
+        chain: kindInput
+          ? kindInput.options[kindInput.selectedIndex].textContent
+          : fields.get("chain"),
         length: mmInput && mmInput.value ? mmInput.value + "mm" : "",
         rings: fields.get("rings"),
         budget: fields.get("budget"),
