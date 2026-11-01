@@ -37,5 +37,13 @@
 */
 
 window.MICKNACK_EXTRA_PRODUCTS = [
+  {
+    id: "starfall-cz-ear-chain-45mm-18k-gold-pvd-satellit",
+    title: "Starfall CZ Ear Chain | 45mm 18K Gold PVD Satellite Chain | 3x5mm Teardrop Earring Connector | Dainty Cartilage Jewelry",
+    price: "19.99",
+    description: "Starfall ✨\n\nThree little drops of light, falling right into your ear stack.\n\nStarfall features a delicate 45 mm satellite chain finished with three sparkling 3 × 5 mm teardrop CZ stones. Each stone hangs individually from the chain, catching the light with subtle movement while the tiny satellite details add just a little extra texture between the drops.\n\nThe 1.5 mm 18K gold PVD-plated chain keeps the look dainty and polished, making Starfall easy to layer into an existing stack without overwhelming everything around it.\n\nClean, sparkly, and just a little celestial. ✨\n\nWhy you’ll love it:\n45 mm satellite chain\nDainty 1.5 mm chain width\n18K gold PVD-plated finish\nThree individually dangling CZ stones\n3 × 5 mm teardrop-shaped CZ\nDelicate movement and sparkle\nSatellite details add subtle texture\nEasy to mix into minimal or layered ear stacks\nStyle it your way\n\nStarfall is a chain connector only, designed to attach between compatible hoops, flatbacks, or earrings you already own.\n\nDrape it between two piercings for a soft line of sparkle, pair it with simple gold hoops, or add it to a more layered stack for a little extra movement.\n\nBecause each teardrop hangs individually, the stones catch the light from different angles as you move.\n\nPerfect for:\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Gold ear stacks • Celestial-inspired stacks • Curated ears\n\nThree tiny drops. One little Starfall. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+    images: ["assets/products/starfall-cz-ear-chain-45mm-18k-gold-pvd-satellit.png"],
+    url: "",
+  },
   // Add your items here, between the brackets.
 ];

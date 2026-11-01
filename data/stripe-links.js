@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-10-29T19:52:42.887Z",
+  "generated_at": "2026-11-01T21:51:53.554Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -514,6 +514,16 @@ window.MICKNACK_STRIPE_LINKS = {
       "price_id": "price_1UTlqH680JvUCS8JyvzEWTzw",
       "product_id": "prod_VUlNOkgMxNtQpk",
       "name": "Brat CZ &  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Baby Pink, Hot Pink 4mm CZ | Dainty Cartilage Chain Jewelry"
+    },
+    "starfall-cz-ear-chain-45mm-18k-gold-pvd-satellit": {
+      "url": "https://buy.stripe.com/28EbIU2YV6rx8BL5taaZi1M",
+      "name": "Starfall CZ Ear Chain | 45mm 18K Gold PVD Satellite Chain | 3x5mm Teardrop Earring Connector | Dainty Cartilage Jewelry",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UX6fN680JvUCS8JFRU5zkQz",
+      "price_id": "price_1UX6fM680JvUCS8JFBOpWjpk",
+      "product_id": "prod_VYD5J7VfvURgEu"
     }
   }
 };
