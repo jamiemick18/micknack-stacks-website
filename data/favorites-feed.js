@@ -258,7 +258,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 4,
    "at": "2026-11-01T21:35:27.262Z"
+  },
+  {
+   "id": "4601282092",
+   "title": "Lavendar CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/6e7507/8773404145/il_fullxfull.8773404145_5r4b.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-02T01:22:52.179Z"
+  },
+  {
+   "id": "4601255929",
+   "title": "Baby Pink CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/ada0aa/8773399497/il_fullxfull.8773399497_ysno.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-02T01:22:52.179Z"
   }
  ],
- "updated_at": "2026-11-01T22:01:49.224Z"
+ "updated_at": "2026-11-02T01:22:52.179Z"
 };
