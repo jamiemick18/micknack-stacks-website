@@ -184,7 +184,12 @@ function shapeKey(word) {
 // else is drawn in proportion to it. Nobody should have to read a label to
 // see that a 6mm is bigger.
 function radiusOf(stone) {
-  var mm = parseFloat(String(stone.size || "").replace(/[^0-9.]/g, "")) || 4;
+  // The FIRST number, not every digit mashed together: a marquise written
+  // "3x5mm" is three by five, and stripping the x made it a thirty five
+  // millimetre stone that drew bigger than everything else on the chain.
+  var found = String(stone.size || "").match(/[0-9]*\.?[0-9]+/);
+  var mm = found ? parseFloat(found[0]) : 4;
+  if (!(mm > 0)) mm = 4;
   return Math.max(8, Math.min(19, 13 * Math.sqrt(mm / 4)));
 }
 
