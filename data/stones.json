@@ -144,17 +144,6 @@
    "available": true
   },
   {
-   "id": "red-cz",
-   "name": "Red CZ",
-   "swatch": "#c62828",
-   "shape": "Round",
-   "finish": "",
-   "size": "4mm",
-   "image": "",
-   "note": "",
-   "available": true
-  },
-  {
    "id": "ruby-cz",
    "name": "Ruby CZ",
    "swatch": "#9b1b30",
