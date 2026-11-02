@@ -122,6 +122,17 @@
    "available": true
   },
   {
+   "id": "lime-green-cz",
+   "name": "Lime Green CZ",
+   "swatch": "#5cdb12",
+   "shape": "Marquise",
+   "finish": "",
+   "size": "3x5mm",
+   "image": "",
+   "note": "",
+   "available": true
+  },
+  {
    "id": "moonstone",
    "name": "Moonstone CZ",
    "swatch": "#5b3fb8",
