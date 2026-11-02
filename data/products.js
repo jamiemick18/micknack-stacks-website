@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-02T20:06:49.958Z",
+  "synced_at": "2026-11-02T20:29:38.761Z",
   "listings": [
     {
       "listing_id": "4608450426",
@@ -12,7 +12,10 @@ window.MICKNACK_PRODUCTS = {
       "url": "https://www.etsy.com/listing/4608450426/stack-staple-18k-gold-plated-huggie",
       "description": "Stack Staple ✨\n\nThe cute little huggie earring pair SHOULD be in every girl&#39;s inventory.\n\nStack Staple is a pair of petite gold huggie earrings, each finished with three clear marquise CZ stones cascading in a slim, sparkling line. They’re simple enough for everyday wear, but the movement and shine give them just enough personality to keep your stack from feeling flat.\n\nwww.micknackstacks.com\n\nThese cute little huggie earrings are incredibly easy to style and stack. Wear the pair as your main lobe earrings, split them between stacked lobes, or pair them with chains, studs, and smaller hoops when you want a little movement without adding too much.\n\nClean, sparkly, and basically impossible to style wrong. ✨\n\nWhy you’ll love it:\nSold as a pair of 2 earrings\nPetite gold huggie hoops\nThree clear marquise CZ stones on each earring\nSix marquise CZ stones total\n18K Gold Plated\nSlim cascading dangle design\nDelicate movement and sparkle\nEasy everyday styling\nWorks beautifully with minimal or layered ear stacks\nThe kind of pair you’ll keep reaching for\nPerfect foundation piece for building a stack\n\nStyle it your way\n\nStack Staple was made to be exactly that — a staple meant to be easily included in every mix.\n\nWear the pair together for an easy polished look, use one in each stacked lobe, or mix them with your favorite flatbacks, chains, studs, and tiny hoops.\n\nThe clear CZ stones keep them neutral enough to work with practically anything, while the vertical dangles add just enough length and texture to make the whole ear feel more finished.\n\nPerfect for:\nEveryday wear • Lobe piercings • Stacked lobes • Curated ears • Minimal stacks • Mixed hoop and stud styling\n\nEvery stack needs that one cute little huggie pair that just works AND\nThis is it. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/4b2ce6/8833898147/il_fullxfull.8833898147_fo8o.jpg"
+        "https://i.etsystatic.com/67609393/r/il/124e06/8834008575/il_fullxfull.8834008575_1z3i.jpg",
+        "https://i.etsystatic.com/67609393/r/il/4b2ce6/8833898147/il_fullxfull.8833898147_fo8o.jpg",
+        "https://i.etsystatic.com/67609393/r/il/f992da/8834008615/il_fullxfull.8834008615_cmt3.jpg",
+        "https://i.etsystatic.com/67609393/r/il/49e61d/8834019827/il_fullxfull.8834019827_b161.jpg"
       ],
       "video": "",
       "tags": [
