@@ -133,17 +133,6 @@
    "available": true
   },
   {
-   "id": "moonstone",
-   "name": "Moonstone CZ",
-   "swatch": "#5b3fb8",
-   "shape": "Round",
-   "finish": "ab",
-   "size": "4mm",
-   "image": "",
-   "note": "Deep blue to violet flash",
-   "available": true
-  },
-  {
    "id": "purple-cz",
    "name": "Purple CZ",
    "swatch": "#6f4bA8",
