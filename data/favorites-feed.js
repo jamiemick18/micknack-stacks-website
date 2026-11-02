@@ -274,7 +274,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 1,
    "at": "2026-11-02T01:22:52.179Z"
+  },
+  {
+   "id": "4571494427",
+   "title": "Drizzle Chain Ear Connector | 5A CZ Raindrop Earring Chain | Dainty Gold Ear Chain | Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/51e709/8495611182/il_fullxfull.8495611182_5rxg.jpg",
+   "gained": 1,
+   "total": 8,
+   "at": "2026-11-02T09:04:56.137Z"
+  },
+  {
+   "id": "4579868601",
+   "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
+   "image": "https://i.etsystatic.com/67609393/r/il/8841bd/8557802610/il_fullxfull.8557802610_oea8.jpg",
+   "gained": 1,
+   "total": 17,
+   "at": "2026-11-02T09:04:56.137Z"
   }
  ],
- "updated_at": "2026-11-02T01:22:52.179Z"
+ "updated_at": "2026-11-02T09:04:56.137Z"
 };
