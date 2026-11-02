@@ -287,6 +287,15 @@
 
   var stonePhoto = null;
 
+  var CUTS = ["Round", "Oval", "Marquise", "Pear", "Diamond", "Kite", "Trillion", "Baguette", "Heart", "Star"];
+
+  function pickedCuts() {
+    var boxes = document.querySelectorAll("#st-shape input[type=checkbox]");
+    var out = [];
+    for (var i = 0; i < boxes.length; i++) if (boxes[i].checked) out.push(boxes[i].value);
+    return out.join(", ");
+  }
+
   var editingStone = null;
   var editingChain = null;
 
@@ -405,7 +414,15 @@
       "<option value='ab'" + (s.finish === "ab" ? " selected" : "") + ">Iridescent (AB)</option>" +
       "<option value='opal'" + (s.finish === "opal" ? " selected" : "") + ">Opal / moonstone glow</option>" +
       "</select>";
-    h += "<label for='st-shape'>Shape</label><input id='st-shape' value='" + esc(s.shape || "") + "' placeholder='Round' />";
+    // A stone can be cut several ways, so this is a tick list rather than a
+    // dropdown. Typing the cut in meant a typo became a shape nothing could draw.
+    var have = String(s.shape || "").toLowerCase().split(",").map(function (b) { return b.trim(); });
+    h += "<label>Shape</label><div class='cuts' id='st-shape'>";
+    for (var ci = 0; ci < CUTS.length; ci++) {
+      h += "<label><input type='checkbox' value='" + CUTS[ci] + "'" +
+        (have.indexOf(CUTS[ci].toLowerCase()) > -1 ? " checked" : "") + " /> <span>" + CUTS[ci] + "</span></label>";
+    }
+    h += "</div>";
     h += "<label for='st-size'>Size</label><input id='st-size' value='" + esc(s.size || "") + "' placeholder='4mm' />";
     h += "<label for='st-note'>One line about it</label><input id='st-note' value='" + esc(s.note || "") + "' />";
     h += "<label class='tick'><input type='checkbox' id='st-on'" + (s.available === false ? "" : " checked") +
@@ -451,7 +468,7 @@
         name: document.getElementById("st-name").value,
         swatch: document.getElementById("st-swatch").value,
         finish: document.getElementById("st-finish").value,
-        shape: document.getElementById("st-shape").value,
+        shape: pickedCuts(),
         size: document.getElementById("st-size").value,
         note: document.getElementById("st-note").value,
         available: document.getElementById("st-on").checked,

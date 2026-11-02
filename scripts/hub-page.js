@@ -229,6 +229,10 @@ export function page() {
   .stone .acts button { font-size: .68rem; padding: 4px 9px; }
   .stone-form input[type=color] { height: 38px; padding: 3px; }
   #s-finish { margin-top: 6px; }
+  .cuts { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 4px 10px; }
+  .cuts label { display: flex; align-items: center; gap: 6px; font-size: .8rem;
+    letter-spacing: 0; text-transform: none; color: inherit; margin: 0; }
+  .cuts input { width: auto; }
   .from-form { margin-top: 18px; }
   .from-form input { max-width: 120px; display: inline-block; margin-right: 8px; }
   .tick { display: flex; align-items: center; gap: 8px; font-size: .82rem; }
@@ -372,16 +376,21 @@ export function page() {
       </div>
       <div class="two">
         <div>
-          <label for="s-shape">Shape <em>comma separated if more than one</em></label>
-          <input type="text" id="s-shape" list="shapes" placeholder="Round, Marquise" />
+          <label>Shape <em>tick every cut you have it in</em></label>
+          <div class="cuts" id="s-shape">
+            <label><input type="checkbox" value="Round" /> <span>Round</span></label>
+            <label><input type="checkbox" value="Oval" /> <span>Oval</span></label>
+            <label><input type="checkbox" value="Marquise" /> <span>Marquise</span></label>
+            <label><input type="checkbox" value="Pear" /> <span>Pear</span></label>
+            <label><input type="checkbox" value="Diamond" /> <span>Diamond</span></label>
+            <label><input type="checkbox" value="Kite" /> <span>Kite</span></label>
+            <label><input type="checkbox" value="Trillion" /> <span>Trillion</span></label>
+            <label><input type="checkbox" value="Baguette" /> <span>Baguette</span></label>
+            <label><input type="checkbox" value="Heart" /> <span>Heart</span></label>
+            <label><input type="checkbox" value="Star" /> <span>Star</span></label>
+          </div>
           <label for="s-size" style="margin-top:8px">Size</label>
           <input type="text" id="s-size" placeholder="4mm" />
-          <datalist id="shapes">
-            <option>Round</option><option>Marquise</option><option>Pear</option>
-            <option>Oval</option><option>Diamond</option><option>Kite</option>
-            <option>Trillion</option><option>Baguette</option><option>Heart</option>
-            <option>Star</option>
-          </datalist>
         </div>
         <div>
           <label for="s-note">One line about it <em>optional</em></label>
@@ -1069,12 +1078,38 @@ document.getElementById("s-photo").addEventListener("change", function () {
   reader.readAsDataURL(file);
 });
 
+// The shape is stored as a comma separated list because a stone really can
+// be cut several ways, and a shopper choosing between a round and a marquise
+// of the same colour is choosing between two different pieces.
+function cutBoxes() {
+  return document.querySelectorAll("#s-shape input[type=checkbox]");
+}
+
+function setCuts(value) {
+  var want = String(value || "")
+    .toLowerCase()
+    .split(",")
+    .map(function (bit) { return bit.trim(); })
+    .filter(Boolean);
+  var boxes = cutBoxes();
+  for (var i = 0; i < boxes.length; i++) {
+    boxes[i].checked = want.indexOf(boxes[i].value.toLowerCase()) > -1;
+  }
+}
+
+function getCuts() {
+  var out = [];
+  var boxes = cutBoxes();
+  for (var i = 0; i < boxes.length; i++) if (boxes[i].checked) out.push(boxes[i].value);
+  return out.join(", ");
+}
+
 function stoneAddMode() {
   stonePhoto = null;
   document.getElementById("stone-form").reset();
   document.getElementById("s-id").value = "";
   document.getElementById("s-swatch").value = "#cccccc";
-  document.getElementById("s-shape").value = "";
+  setCuts("");
   document.getElementById("s-finish").value = "";
   document.getElementById("s-size").value = "4mm";
   document.getElementById("s-available").checked = true;
@@ -1088,7 +1123,7 @@ function stoneEdit(stone) {
   document.getElementById("s-id").value = stone.id;
   document.getElementById("s-name").value = stone.name || "";
   document.getElementById("s-swatch").value = /^#[0-9a-f]{6}$/i.test(stone.swatch || "") ? stone.swatch : "#cccccc";
-  document.getElementById("s-shape").value = stone.shape || "";
+  setCuts(stone.shape || "");
   document.getElementById("s-finish").value = stone.finish || "";
   document.getElementById("s-size").value = stone.size || "";
   document.getElementById("s-note").value = stone.note || "";
@@ -1271,7 +1306,7 @@ document.getElementById("stone-form").addEventListener("submit", function (e) {
       id: document.getElementById("s-id").value,
       name: document.getElementById("s-name").value,
       swatch: document.getElementById("s-swatch").value,
-      shape: document.getElementById("s-shape").value,
+      shape: getCuts(),
       finish: document.getElementById("s-finish").value,
       size: document.getElementById("s-size").value,
       note: document.getElementById("s-note").value,
