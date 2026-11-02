@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-02T09:04:56.137Z",
+  "synced_at": "2026-11-02T19:52:31.011Z",
   "listings": [
     {
       "listing_id": "4566277207",
@@ -139,7 +139,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-10-15T22:11:01.000Z",
       "views": 133,
-      "num_favorers": 15,
+      "num_favorers": 16,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
     },
@@ -676,7 +676,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-09-01T21:11:50.000Z",
       "views": 154,
-      "num_favorers": 13,
+      "num_favorers": 15,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1412,38 +1412,6 @@ window.MICKNACK_PRODUCTS = {
       "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
-      "listing_id": "4573443638",
-      "title": "Mountain Fox Threadless Flatback Earring | Gold Fox Cartilage Stud | Titanium Labret Post | Woodland Animal Jewelry",
-      "price": "16.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4573443638/mountain-fox-threadless-flatback-earring",
-      "description": "Inspired by the clever, quiet beauty of the fox, Mountain Fox brings a little woodland charm to your ear stack.\n\nThis delicate design features a sparkling fox face with marquise-cut stones that catch the light beautifully, giving the piece a soft, glimmering look while still feeling playful and refined. It’s dainty, eye-catching, and perfect for anyone who loves nature-inspired jewelry with a polished finish.\n\nClean, feminine, and easy to style, this piece adds a subtle outdoorsy touch without overpowering the rest of your stack.\n\nWhy you’ll love it\nFox-inspired design\nDainty but eye-catching sparkle\nNature-meets-polished styling\nEasy to mix into curated ear stacks\nPerfect for everyday wear\nA playful woodland touch with a refined look\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nA little wild, a little sparkly, and made to stand out in your stack. 🦊\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/58ab30/8509748036/il_fullxfull.8509748036_909l.jpg"
-      ],
-      "video": "",
-      "tags": [
-        "threadless earring",
-        "push pin earring",
-        "titanium labret",
-        "flatback earring",
-        "cartilage earring",
-        "dainty gold earring",
-        "cute ear stack",
-        "curated ear",
-        "minimalist stud",
-        "fox earring",
-        "mountain fox",
-        "woodland jewelry"
-      ],
-      "quantity": 2,
-      "created": "2026-09-11T17:06:43.000Z",
-      "views": 16,
-      "num_favorers": 0,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
       "listing_id": "4573438832",
       "title": "Alpen Glow Threadless Flatback Earring | Dainty Mountain Stud | Gold Cartilage Earring | Minimal Sparkle Helix Jewelry",
       "price": "16.99",
@@ -1544,6 +1512,40 @@ window.MICKNACK_PRODUCTS = {
       "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4573443638",
+      "title": "Mountain Fox Threadless Flatback Earring | Gold Fox Cartilage Stud | Titanium Labret Post | Woodland Animal Jewelry",
+      "price": "16.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4573443638/mountain-fox-threadless-flatback-earring",
+      "description": "Inspired by the clever, quiet beauty of the fox, Mountain Fox brings a little woodland charm to your ear stack.\n\nThis delicate design features a sparkling fox face with marquise-cut stones that catch the light beautifully, giving the piece a soft, glimmering look while still feeling playful and refined. It’s dainty, eye-catching, and perfect for anyone who loves nature-inspired jewelry with a polished finish.\n\nClean, feminine, and easy to style, this piece adds a subtle outdoorsy touch without overpowering the rest of your stack.\n\nWhy you’ll love it\nFox-inspired design\nDainty but eye-catching sparkle\nNature-meets-polished styling\nEasy to mix into curated ear stacks\nPerfect for everyday wear\nA playful woodland touch with a refined look\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nA little wild, a little sparkly, and made to stand out in your stack. 🦊\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/58ab30/8509748036/il_fullxfull.8509748036_909l.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "threadless earring",
+        "push pin earring",
+        "titanium labret",
+        "flatback earring",
+        "cartilage earring",
+        "dainty gold earring",
+        "cute ear stack",
+        "curated ear",
+        "minimalist stud",
+        "fox earring",
+        "mountain fox",
+        "woodland jewelry"
+      ],
+      "quantity": 0,
+      "created": "2026-09-11T17:06:43.000Z",
+      "views": 16,
+      "num_favorers": 0,
+      "etsy_active": false,
+      "added_at": "2026-09-30T19:35:47.289Z",
+      "etsy_state": "sold_out",
+      "left_etsy_at": "2026-11-02T19:52:31.011Z"
     },
     {
       "listing_id": "4573481130",

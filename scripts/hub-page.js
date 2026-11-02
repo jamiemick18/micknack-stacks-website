@@ -218,7 +218,11 @@ export function page() {
     padding: 10px; text-align: center;
   }
   .stone.off { opacity: .45; }
+  .stone { position: relative; }
   .stone .gemwrap { width: 58px; margin: 2px auto 8px; line-height: 0; }
+  .shotlink { position: absolute; top: 6px; right: 6px; font-size: .58rem;
+    letter-spacing: .06em; text-transform: uppercase; padding: 2px 6px;
+    border-radius: 999px; background: rgba(0,0,0,.6); color: #fff; text-decoration: none; }
   .stone .gemwrap svg { display: block; }
   .gem .facet { fill: none; stroke: rgba(255,255,255,.55); stroke-width: .7; }
   .stone .bead {
@@ -1146,19 +1150,23 @@ document.getElementById("s-cancel").addEventListener("click", stoneAddMode);
 // A photo is the stone itself. Failing that it is drawn as its actual cut,
 // by the same code the website uses — see js/gems.js, served at /gems.js.
 function stoneFace(card, stone) {
-  if (stone.image) {
-    var bead = document.createElement("div");
-    bead.className = "bead";
-    bead.style.backgroundImage = "url('/" + stone.image + "')";
-    card.appendChild(bead);
-    return;
-  }
   var holder = document.createElement("div");
   holder.className = "gemwrap";
-  holder.innerHTML = window.MICKNACK_GEM
-    ? window.MICKNACK_GEM.one(stone, null, 58)
-    : "";
+  holder.innerHTML = window.MICKNACK_GEM ? window.MICKNACK_GEM.one(stone, null, 58) : "";
   card.appendChild(holder);
+
+  // The drawing is the standard view here too, so this page matches the
+  // shelf a customer sees. The photograph itself is in the edit form.
+  if (stone.image) {
+    var tag = document.createElement("a");
+    tag.className = "shotlink";
+    tag.href = "/" + stone.image;
+    tag.target = "_blank";
+    tag.rel = "noopener";
+    tag.textContent = "photo";
+    tag.title = "Open the photo";
+    card.appendChild(tag);
+  }
 }
 
 function chainAddMode() {

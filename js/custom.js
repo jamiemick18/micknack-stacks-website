@@ -25,6 +25,16 @@
     return c && c.available !== false && c.name;
   });
 
+  // A stone's photo is a file in this repo, stored as "assets/stones/x.jpg".
+  // That is right from the shop at /, but this dialog is on every page
+  // including the share pages under /p/, where the browser would go looking
+  // for /p/assets/... and find nothing.
+  function photoUrl(path) {
+    var value = String(path || "");
+    if (!value || /^(https?:)?\/\//i.test(value) || value[0] === "/") return value;
+    return location.pathname.indexOf("/p/") === 0 ? "/" + value : value;
+  }
+
   var rings = ((window.MICKNACK_CUSTOM || {}).rings || "").trim();
 
   function escapeHtml(value) {
@@ -116,9 +126,17 @@
               '<button type="button" class="stone-pick" data-stone="' + escapeHtml(stone.id) + '"' +
               ' data-shape="' + escapeHtml(cut) + '"' +
               ' title="' + escapeHtml([stone.name, cut, stone.note].filter(Boolean).join(" — ")) + '">' +
+              '<span class="stone-gem">' + GEM.one(stone, cut, 44) + "</span>" +
+              // The drawing is the standard view, so a shelf of stones reads
+              // as one set rather than a mix of drawings and snapshots. Where
+              // there is a real photograph it is a tap away, which is where
+              // someone wants it: when they have narrowed it down to one.
               (stone.image
-                ? '<span class="stone-bead" style="' + face + '"></span>'
-                : '<span class="stone-gem">' + GEM.one(stone, cut, 44) + "</span>") +
+                ? '<span class="stone-photo" data-photo="' + escapeHtml(photoUrl(stone.image)) +
+                  '" data-photo-name="' + escapeHtml(stone.name) +
+                  '" role="button" tabindex="0" aria-label="See a photo of ' +
+                  escapeHtml(stone.name) + '" title="See the real stone">photo</span>'
+                : "") +
               '<span class="stone-name">' + escapeHtml(stone.name) + "</span>" +
               '<span class="stone-note">' + escapeHtml([cut, stone.size].filter(Boolean).join(" · ")) + "</span>" +
               "</button>"
@@ -261,6 +279,41 @@
       }
     }
   }
+
+  // Tapping the little "photo" tag shows the real stone, full size, without
+  // adding it to the chain — the tag sits inside the button, so the click has
+  // to be stopped from reaching it.
+  var lightbox = null;
+  function showPhoto(src, name) {
+    if (!lightbox) {
+      lightbox = document.createElement("div");
+      lightbox.className = "stone-lightbox";
+      lightbox.innerHTML =
+        '<button type="button" class="stone-lightbox-close" aria-label="Close">&times;</button>' +
+        '<figure><img alt="" /><figcaption></figcaption></figure>';
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox || event.target.className === "stone-lightbox-close") {
+          lightbox.classList.remove("on");
+        }
+      });
+      dialog.appendChild(lightbox);
+    }
+    lightbox.querySelector("img").src = src;
+    lightbox.querySelector("figcaption").textContent = name;
+    lightbox.classList.add("on");
+  }
+
+  dialog.querySelectorAll(".stone-photo").forEach(function (tag) {
+    function open(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      showPhoto(tag.dataset.photo, tag.dataset.photoName);
+    }
+    tag.addEventListener("click", open);
+    tag.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") open(event);
+    });
+  });
 
   dialog.querySelectorAll(".stone-pick").forEach(function (button) {
     button.addEventListener("click", function () {

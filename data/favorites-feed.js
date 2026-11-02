@@ -290,7 +290,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 17,
    "at": "2026-11-02T09:04:56.137Z"
+  },
+  {
+   "id": "4596333038",
+   "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+   "gained": 1,
+   "total": 16,
+   "at": "2026-11-02T19:52:31.011Z"
+  },
+  {
+   "id": "4566919003",
+   "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg",
+   "gained": 2,
+   "total": 15,
+   "at": "2026-11-02T19:52:31.011Z"
   }
  ],
- "updated_at": "2026-11-02T09:04:56.137Z"
+ "updated_at": "2026-11-02T19:52:31.011Z"
 };

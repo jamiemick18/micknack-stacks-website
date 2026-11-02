@@ -9,7 +9,7 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-02T09:04:56.137Z
+// Last read from Etsy: 2026-11-02T19:52:31.011Z
 
 window.MICKNACK_VARIATIONS = {
   // Everyday 18g G23 ASTM F136 Titanium Gold Clicker Hoop | 18K 
@@ -50,8 +50,6 @@ window.MICKNACK_VARIATIONS = {
   "4573472494": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Cosmic Supernova Threadless Flatback Earring | Gold Starburs
   "4573443165": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
-  // Mountain Fox Threadless Flatback Earring | Gold Fox Cartilag
-  "4573443638": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Alpen Glow Threadless Flatback Earring | Dainty Mountain Stu
   "4573438832": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
 };

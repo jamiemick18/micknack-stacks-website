@@ -75,7 +75,9 @@ var SHAPES = {
 
   // Pointed at both ends, widest across the middle.
   marquise: function (r) {
-    var w = r * 0.62, h = r * 1.42;
+    // A 3x5mm marquise is three wide and five long, so the width is six
+    // tenths of the length. Drawn narrower than that it reads as a sliver.
+    var h = r * 1.4, w = h * 0.6;
     return '<path d="M0 ' + -h + ' Q' + w + ' 0 0 ' + h + ' Q' + -w + ' 0 0 ' + -h + ' Z"/>' +
       '<g class="facet"><path d="M0 ' + -h * 0.52 + ' Q' + w * 0.52 + ' 0 0 ' + h * 0.52 +
       ' Q' + -w * 0.52 + ' 0 0 ' + -h * 0.52 + ' Z"/>' +

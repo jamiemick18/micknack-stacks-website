@@ -301,10 +301,9 @@
 
   // A photo is the stone itself. Failing that it is drawn as its actual cut,
   // by the same code the website uses — see js/gems.js.
+  // The drawing is the standard view, matching the shelf a customer sees.
+  // The photograph itself is in the edit form, a tap away.
   function stoneFace(stone) {
-    if (stone.image) {
-      return "<span class='bead' style=\"background-image:url('/" + esc(stone.image) + "')\"></span>";
-    }
     return window.MICKNACK_GEM
       ? window.MICKNACK_GEM.one(stone, null, 46)
       : "<span class='bead' style='background:" + esc(stone.swatch || "#ddd") + "'></span>";
@@ -326,6 +325,7 @@
         h += stoneFace(st);
         h += "<b>" + esc(st.name) + "</b>";
         if (st.shape || st.size) h += "<small>" + esc([st.shape, st.size].filter(Boolean).join(" · ")) + "</small>";
+        if (st.image) h += "<small>has a photo</small>";
         if (st.available === false) h += "<small>off the shelf</small>";
         h += "</button>";
       }
