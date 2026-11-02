@@ -94,7 +94,7 @@ function customCard() {
   return `
     <article class="product-card custom-card">
       <button type="button" class="thumb custom-thumb" data-open-custom>
-        <img src="assets/products/custom-ear-chain.jpg"
+        <img src="assets/products/custom-ear-chain.jpg?v=20261102f"
              alt="Custom ear chain — pick your stones, chain and length" loading="lazy" />
       </button>
       <div class="card-body">
