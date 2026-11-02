@@ -84,36 +84,18 @@ function toCard(item, { key, buttonLabel, badge }) {
 // ---- the custom piece, pinned first ----
 
 function customCard() {
-  const stones = (window.MICKNACK_STONES || []).filter((s) => s && s.available !== false);
   // "Price varies" is true but unhelpful; a number stops people arriving
   // with a figure in mind that was never going to be possible.
   const from = ((window.MICKNACK_CUSTOM || {}).from || "").trim();
-  // Real beads from the real shelf, so the card shows what is actually
-  // stocked rather than a decorative guess.
-  const beads = stones
-    .slice(0, 8)
-    .map((stone) => {
-      const face = stone.image
-        ? `background-image:url('${escapeHtml(stone.image)}')`
-        : `background:${
-            stone.finish === "ab"
-              ? `conic-gradient(from 210deg, ${stone.swatch || "#ddd"}, #bfe6ff, #ffd9f2, #fff0b8, #c9f7d8, ${stone.swatch || "#ddd"})`
-              : stone.finish === "opal"
-              ? `radial-gradient(circle at 30% 24%, #ffffff 0%, #b9a7ef 22%, ${stone.swatch || "#ddd"} 46%, #3fae96 70%, #16296b 100%)`
-              : stone.swatch || "#ddd"
-          }`;
-      return `<span class="custom-bead" style="${face}"></span>`;
-    })
-    .join("");
 
+  // Jamie's own artwork, which says what the piece is far better than a row
+  // of beads did. It is the one card in the grid with no photograph of a
+  // finished piece, because there is no finished piece yet.
   return `
     <article class="product-card custom-card">
       <button type="button" class="thumb custom-thumb" data-open-custom>
-        <span class="custom-thumb-inner">
-          <span class="custom-beads">${beads}</span>
-          <span class="custom-thumb-word">Made for you</span>
-        </span>
-        <span class="card-badge">Custom</span>
+        <img src="assets/products/custom-ear-chain.jpg"
+             alt="Custom ear chain — pick your stones, chain and length" loading="lazy" />
       </button>
       <div class="card-body">
         <h3 class="card-title">Custom Ear Chain</h3>
