@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-01T22:22:27.936Z",
+  "generated_at": "2026-11-02T20:31:00.442Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -534,6 +534,16 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UX71d680JvUCS8JNuxXgtYB",
       "price_id": "price_1UX71d680JvUCS8JJZvHt8Wz",
       "product_id": "prod_VYDSHisp9DM77M"
+    },
+    "4608450426": {
+      "url": "https://buy.stripe.com/6oUeV6gPL3flcS13l2aZi1T",
+      "name": "Stack Staple - 18K Gold Plated Huggie Earrings Pair | Clear Marquise CZ Dangles | Everyday Ear Stack Earrings | Dainty Stacking Jewelry",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UXRse680JvUCS8JspfsAKSx",
+      "price_id": "price_1UXRsd680JvUCS8JOxmF8xkx",
+      "product_id": "prod_VYZ0OOTXxb3AWQ"
     }
   }
 };

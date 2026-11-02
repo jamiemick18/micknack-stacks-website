@@ -93,19 +93,16 @@ function customCard() {
   // finished piece, because there is no finished piece yet.
   return `
     <article class="product-card custom-card">
-      <button type="button" class="thumb custom-thumb" data-open-custom>
-        <img src="assets/products/custom-ear-chain.jpg?v=20261102f"
+      <button type="button" class="thumb custom-thumb" data-open-custom
+              aria-label="Custom Ear Chain — build your own">
+        <img src="assets/products/custom-ear-chain.jpg?v=20261102g"
              alt="Custom ear chain — pick your stones, chain and length" loading="lazy" />
       </button>
       <div class="card-body">
-        <h3 class="card-title">Custom Ear Chain</h3>
         <p class="card-price">${
           from ? `Starting at $${escapeHtml(from)}` : "Price varies"
         }</p>
         <p class="card-desc">Pick your stones, chain and length — I will quote you before anything is made.</p>
-        <div class="card-actions">
-          <button type="button" class="btn btn-primary" data-open-custom>Start yours</button>
-        </div>
       </div>
     </article>`;
 }
