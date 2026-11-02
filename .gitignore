@@ -11,3 +11,7 @@ data/stock-counts.json
 
 # Which of your own orders have gone out. Private, like the counts.
 data/shipped.json
+
+# wrangler keeps a local cache with the account name in it. Not secret, but
+# not something a public repo needs either.
+.wrangler/

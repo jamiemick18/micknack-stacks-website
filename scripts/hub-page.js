@@ -378,8 +378,9 @@ export function page() {
           <input type="text" id="s-size" placeholder="4mm" />
           <datalist id="shapes">
             <option>Round</option><option>Marquise</option><option>Pear</option>
-            <option>Teardrop</option><option>Heart</option><option>Star</option>
-            <option>Oval</option><option>Baguette</option>
+            <option>Oval</option><option>Diamond</option><option>Kite</option>
+            <option>Trillion</option><option>Baguette</option><option>Heart</option>
+            <option>Star</option>
           </datalist>
         </div>
         <div>

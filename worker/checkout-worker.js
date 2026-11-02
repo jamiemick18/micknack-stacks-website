@@ -707,6 +707,61 @@ async function ghWrite(env, path, text, sha, message) {
   return res.json();
 }
 
+const PHOTO_TYPES = { jpg: "jpg", jpeg: "jpg", png: "png", webp: "webp", gif: "gif" };
+
+// A photo arrives from the phone already base64, which is exactly what the
+// GitHub API wants, so it goes up without ever being decoded here.
+//
+// It is filed under the stone's id, so re-photographing a stone replaces its
+// picture rather than littering the folder with orphans. A photo saved in a
+// different format leaves the old file behind, so that one is deleted.
+async function ghWriteBinary(env, path, base64, message) {
+  const existing = await ghRead(env, path).catch(() => ({ sha: null }));
+  const res = await fetch(`${GH_API}/repos/${ghRepo(env)}/contents/${path}`, {
+    method: "PUT",
+    headers: { ...ghHeaders(env), "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message,
+      content: base64,
+      sha: existing.sha || undefined,
+      branch: ghBranch(env),
+    }),
+  });
+  if (!res.ok) {
+    const why = await res.text();
+    throw new Error(`GitHub would not save the photo (${res.status}) ${why.slice(0, 160)}`);
+  }
+  return res.json();
+}
+
+async function ghDelete(env, path, message) {
+  const existing = await ghRead(env, path).catch(() => ({ sha: null }));
+  if (!existing.sha) return;
+  await fetch(`${GH_API}/repos/${ghRepo(env)}/contents/${path}`, {
+    method: "DELETE",
+    headers: { ...ghHeaders(env), "Content-Type": "application/json" },
+    body: JSON.stringify({ message, sha: existing.sha, branch: ghBranch(env) }),
+  });
+}
+
+async function savePhoto(env, id, photo) {
+  const ext = PHOTO_TYPES[String(photo.name || "").split(".").pop().toLowerCase()];
+  if (!ext) throw new Error("That photo needs to be a jpg, png, webp or gif.");
+  const base64 = String(photo.data || "").replace(/\s/g, "");
+  // Roughly 6MB once decoded. The phone shrinks pictures before sending, so
+  // anything near this is a sign something went wrong rather than a big photo.
+  if (base64.length > 8e6) throw new Error("That photo is too big.");
+
+  const path = `assets/stones/${id}.${ext}`;
+  await ghWriteBinary(env, path, base64, `Photo of ${id}`);
+
+  for (const other of ["jpg", "png", "webp", "gif"]) {
+    if (other === ext) continue;
+    await ghDelete(env, `assets/stones/${id}.${other}`, `Replaced the photo of ${id}`).catch(() => {});
+  }
+  return path;
+}
+
 // ---- the stone shelf, as the worker sees it ----
 
 const EMPTY_SHELF = { stones: [], chains: [], custom: { from: "", rings: "" } };
@@ -832,6 +887,10 @@ async function handleShelf(env, body) {
     if (body.size !== undefined) stone.size = String(body.size || "").trim();
     if (body.note !== undefined) stone.note = String(body.note || "").trim();
     if (body.available !== undefined) stone.available = body.available !== false;
+    // The photo goes up first. If it fails, nothing has been said about it in
+    // the shelf, so the stone keeps the picture it already had.
+    if (body.photo && body.photo.data) stone.image = await savePhoto(env, key, body.photo);
+    if (body.clearPhoto) stone.image = "";
     await shelfWrite(env, data, sha, `Stone: ${stone.name}`);
     return { ok: true, message: "Saved. The website has it in a minute or two." };
   }
@@ -839,6 +898,8 @@ async function handleShelf(env, body) {
   if (what === "stone-remove") {
     const key = String(body.id || "").trim();
     if (!data.stones.some((s) => String(s.id) === key)) return { error: "No such stone." };
+    const going = data.stones.find((s) => String(s.id) === key);
+    if (going && going.image) await ghDelete(env, going.image, "Removed a stone").catch(() => {});
     data.stones = data.stones.filter((s) => String(s.id) !== key);
     await shelfWrite(env, data, sha, "Removed a stone");
     return { ok: true, message: "Taken off the shelf." };

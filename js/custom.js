@@ -54,32 +54,132 @@
   // ORDER and the COLOUR; pretending to show them the finished piece would
   // promise a likeness nobody can honestly make from a dropdown.
 
+  // Each cut is drawn as an outline plus the facet lines that make it read as
+  // a cut stone rather than a coloured blob. The facets are strokes over the
+  // same fill, so an AB gradient still shows through them.
+  //
+  // A mock-up, not a photograph: it shows the SHAPE and the COLOUR, which is
+  // what someone choosing stones is choosing between.
+
+  function poly(points) {
+    return points.map(function (p) { return p[0].toFixed(2) + "," + p[1].toFixed(2); }).join(" ");
+  }
+
   var SHAPES = {
-    round: function (r) { return '<circle cx="0" cy="0" r="' + r + '"/>'; },
-    oval: function (r) { return '<ellipse cx="0" cy="0" rx="' + r * 0.78 + '" ry="' + r * 1.15 + '"/>'; },
+    // A brilliant seen face on: the table in the middle, facets radiating out.
+    round: function (r) {
+      var table = r * 0.46;
+      var spokes = "";
+      for (var i = 0; i < 8; i++) {
+        var a = (Math.PI / 4) * i + Math.PI / 8;
+        spokes += '<line x1="' + (Math.cos(a) * table).toFixed(2) + '" y1="' + (Math.sin(a) * table).toFixed(2) +
+          '" x2="' + (Math.cos(a) * r).toFixed(2) + '" y2="' + (Math.sin(a) * r).toFixed(2) + '"/>';
+      }
+      var ring = [];
+      for (var k = 0; k < 8; k++) {
+        var b = (Math.PI / 4) * k + Math.PI / 8;
+        ring.push([Math.cos(b) * table, Math.sin(b) * table]);
+      }
+      return '<circle cx="0" cy="0" r="' + r + '"/>' +
+        '<g class="facet"><polygon points="' + poly(ring) + '"/>' + spokes + "</g>";
+    },
+
+    oval: function (r) {
+      var rx = r * 0.76, ry = r * 1.12;
+      return '<ellipse cx="0" cy="0" rx="' + rx + '" ry="' + ry + '"/>' +
+        '<g class="facet"><ellipse cx="0" cy="0" rx="' + rx * 0.5 + '" ry="' + ry * 0.5 + '"/>' +
+        '<line x1="' + -rx * 0.5 + '" y1="0" x2="' + -rx + '" y2="0"/>' +
+        '<line x1="' + rx * 0.5 + '" y1="0" x2="' + rx + '" y2="0"/>' +
+        '<line x1="0" y1="' + -ry * 0.5 + '" x2="0" y2="' + -ry + '"/>' +
+        '<line x1="0" y1="' + ry * 0.5 + '" x2="0" y2="' + ry + '"/></g>';
+    },
+
+    // Pointed at both ends, widest across the middle.
     marquise: function (r) {
-      var w = r * 0.72, h = r * 1.5;
-      return '<path d="M0 ' + -h + ' Q' + w + ' 0 0 ' + h + ' Q' + -w + ' 0 0 ' + -h + ' Z"/>';
+      var w = r * 0.62, h = r * 1.42;
+      return '<path d="M0 ' + -h + ' Q' + w + ' 0 0 ' + h + ' Q' + -w + ' 0 0 ' + -h + ' Z"/>' +
+        '<g class="facet"><path d="M0 ' + -h * 0.52 + ' Q' + w * 0.52 + ' 0 0 ' + h * 0.52 +
+        ' Q' + -w * 0.52 + ' 0 0 ' + -h * 0.52 + ' Z"/>' +
+        '<line x1="0" y1="' + -h + '" x2="0" y2="' + h + '"/>' +
+        '<line x1="' + -w + '" y1="0" x2="' + w + '" y2="0"/></g>';
     },
+
+    // One point, one round end.
     pear: function (r) {
-      var h = r * 1.45;
-      return '<path d="M0 ' + -h + ' Q' + r * 0.95 + ' ' + r * 0.25 + ' 0 ' + h +
-        ' Q' + -r * 0.95 + ' ' + r * 0.25 + ' 0 ' + -h + ' Z"/>';
+      var w = r * 0.86, h = r * 1.4;
+      return '<path d="M0 ' + -h + ' C' + w + ' ' + -h * 0.1 + ' ' + w + ' ' + h + ' 0 ' + h +
+        ' C' + -w + ' ' + h + ' ' + -w + ' ' + -h * 0.1 + ' 0 ' + -h + ' Z"/>' +
+        '<g class="facet"><ellipse cx="0" cy="' + h * 0.24 + '" rx="' + w * 0.46 + '" ry="' + h * 0.4 + '"/>' +
+        '<line x1="0" y1="' + -h + '" x2="0" y2="' + -h * 0.16 + '"/>' +
+        '<line x1="' + -w * 0.46 + '" y1="' + h * 0.1 + '" x2="' + -w * 0.92 + '" y2="' + h * 0.1 + '"/>' +
+        '<line x1="' + w * 0.46 + '" y1="' + h * 0.1 + '" x2="' + w * 0.92 + '" y2="' + h * 0.1 + '"/></g>';
     },
+
+    // A princess cut: square, with facets to the corners.
+    diamond: function (r) {
+      var a = r * 0.88;
+      var box = [[-a, -a], [a, -a], [a, a], [-a, a]];
+      var table = [[-a * 0.5, -a * 0.5], [a * 0.5, -a * 0.5], [a * 0.5, a * 0.5], [-a * 0.5, a * 0.5]];
+      return '<polygon points="' + poly(box) + '"/>' +
+        '<g class="facet"><polygon points="' + poly(table) + '"/>' +
+        '<line x1="' + -a + '" y1="' + -a + '" x2="' + -a * 0.5 + '" y2="' + -a * 0.5 + '"/>' +
+        '<line x1="' + a + '" y1="' + -a + '" x2="' + a * 0.5 + '" y2="' + -a * 0.5 + '"/>' +
+        '<line x1="' + a + '" y1="' + a + '" x2="' + a * 0.5 + '" y2="' + a * 0.5 + '"/>' +
+        '<line x1="' + -a + '" y1="' + a + '" x2="' + -a * 0.5 + '" y2="' + a * 0.5 + '"/></g>';
+    },
+
+    // A kite: four sides, long point down.
+    kite: function (r) {
+      var w = r * 0.82, up = r * 1.05, down = r * 1.42;
+      var outline = [[0, -up], [w, 0], [0, down], [-w, 0]];
+      return '<polygon points="' + poly(outline) + '"/>' +
+        '<g class="facet"><polygon points="' +
+        poly([[0, -up * 0.46], [w * 0.46, 0], [0, down * 0.46], [-w * 0.46, 0]]) + '"/>' +
+        '<line x1="0" y1="' + -up + '" x2="0" y2="' + down + '"/>' +
+        '<line x1="' + -w + '" y1="0" x2="' + w + '" y2="0"/></g>';
+    },
+
+    // The classic gem silhouette: a trillion, point up, flat base.
+    trillion: function (r) {
+      var a = r * 1.12;
+      var pts = [[0, -a], [a * 0.92, a * 0.62], [-a * 0.92, a * 0.62]];
+      return '<polygon points="' + poly(pts) + '"/>' +
+        '<g class="facet"><polygon points="' +
+        poly([[0, -a * 0.44], [a * 0.42, a * 0.3], [-a * 0.42, a * 0.3]]) + '"/>' +
+        '<line x1="0" y1="' + -a + '" x2="0" y2="' + -a * 0.44 + '"/>' +
+        '<line x1="' + a * 0.92 + '" y1="' + a * 0.62 + '" x2="' + a * 0.42 + '" y2="' + a * 0.3 + '"/>' +
+        '<line x1="' + -a * 0.92 + '" y1="' + a * 0.62 + '" x2="' + -a * 0.42 + '" y2="' + a * 0.3 + '"/></g>';
+    },
+
+    // A long rectangle with step facets, like a baguette.
+    baguette: function (r) {
+      var w = r * 0.56, h = r * 1.3;
+      return '<rect x="' + -w + '" y="' + -h + '" width="' + w * 2 + '" height="' + h * 2 + '" rx="1"/>' +
+        '<g class="facet"><rect x="' + -w * 0.56 + '" y="' + -h * 0.72 + '" width="' + w * 1.12 +
+        '" height="' + h * 1.44 + '" rx="1"/></g>';
+    },
+
     heart: function (r) {
-      var k = r * 1.1;
+      var k = r * 1.05;
       return '<path d="M0 ' + k * 0.95 + ' C' + -k * 1.5 + ' ' + -k * 0.15 + ' ' + -k * 0.72 + ' ' + -k * 1.25 +
         ' 0 ' + -k * 0.42 + ' C' + k * 0.72 + ' ' + -k * 1.25 + ' ' + k * 1.5 + ' ' + -k * 0.15 +
-        ' 0 ' + k * 0.95 + ' Z"/>';
+        ' 0 ' + k * 0.95 + ' Z"/>' +
+        '<g class="facet"><line x1="0" y1="' + -k * 0.42 + '" x2="0" y2="' + k * 0.95 + '"/>' +
+        '<line x1="' + -k * 0.62 + '" y1="' + -k * 0.52 + '" x2="0" y2="' + k * 0.1 + '"/>' +
+        '<line x1="' + k * 0.62 + '" y1="' + -k * 0.52 + '" x2="0" y2="' + k * 0.1 + '"/></g>';
     },
+
     star: function (r) {
       var pts = [];
+      var inner = [];
       for (var i = 0; i < 10; i++) {
         var rad = (Math.PI / 5) * i - Math.PI / 2;
-        var len = i % 2 ? r * 0.46 : r * 1.25;
-        pts.push((Math.cos(rad) * len).toFixed(2) + "," + (Math.sin(rad) * len).toFixed(2));
+        var len = i % 2 ? r * 0.48 : r * 1.22;
+        pts.push([Math.cos(rad) * len, Math.sin(rad) * len]);
+        if (i % 2 === 0) inner.push([Math.cos(rad) * r * 0.42, Math.sin(rad) * r * 0.42]);
       }
-      return '<polygon points="' + pts.join(" ") + '"/>';
+      return '<polygon points="' + poly(pts) + '"/>' +
+        '<g class="facet"><polygon points="' + poly(inner) + '"/></g>';
     },
   };
 
@@ -87,8 +187,14 @@
   // so the arrangement carries the shape alongside the stone.
   function shapeKey(word) {
     var w = String(word || "").toLowerCase();
-    if (w.indexOf("marquise") > -1) return "marquise";
-    if (w.indexOf("pear") > -1 || w.indexOf("teardrop") > -1) return "pear";
+    if (w.indexOf("marquise") > -1 || w.indexOf("navette") > -1) return "marquise";
+    if (w.indexOf("pear") > -1 || w.indexOf("teardrop") > -1 || w.indexOf("drop") > -1) return "pear";
+    if (w.indexOf("kite") > -1) return "kite";
+    // "Princess" and "square" are the same silhouette as a diamond cut here;
+    // "diamond shaped" is what most people say for it.
+    if (w.indexOf("diamond") > -1 || w.indexOf("princess") > -1 || w.indexOf("square") > -1) return "diamond";
+    if (w.indexOf("trillion") > -1 || w.indexOf("triangle") > -1) return "trillion";
+    if (w.indexOf("baguette") > -1 || w.indexOf("bar") > -1 || w.indexOf("rectang") > -1) return "baguette";
     if (w.indexOf("heart") > -1) return "heart";
     if (w.indexOf("star") > -1) return "star";
     if (w.indexOf("oval") > -1) return "oval";
@@ -187,7 +293,7 @@
       var r = radiusOf(stone);
       svg +=
         '<g transform="translate(' + point.x.toFixed(1) + "," + (point.y + 15).toFixed(1) + ')" ' +
-        'fill="' + fill + '" stroke="rgba(15,13,11,.22)" stroke-width="0.8">' +
+        'fill="' + fill + '" stroke="rgba(15,13,11,.28)" stroke-width="0.7">' +
         '<line x1="0" y1="' + -r + '" x2="0" y2="-5" stroke="#c9a227" stroke-width="1.6"/>' +
         draw(r) +
         "</g>";

@@ -257,6 +257,36 @@
   // Photos are not here yet: they need the file itself, which is the next
   // piece of work. Everything else a stone has can be set from here.
 
+  // A phone camera makes a four thousand pixel photograph. A stone on the
+  // shelf is drawn at forty six pixels across. Sending the original would be
+  // several megabytes through the worker to show a bead, so it is shrunk here
+  // before it goes anywhere.
+  function shrinkPhoto(file) {
+    return new Promise(function (resolve, reject) {
+      var reader = new FileReader();
+      reader.onerror = function () { reject(new Error("Could not read that photo.")); };
+      reader.onload = function () {
+        var img = new Image();
+        img.onerror = function () { reject(new Error("That did not look like a photo.")); };
+        img.onload = function () {
+          var max = 600;
+          var scale = Math.min(1, max / Math.max(img.width, img.height));
+          var w = Math.round(img.width * scale);
+          var h = Math.round(img.height * scale);
+          var canvas = document.createElement("canvas");
+          canvas.width = w; canvas.height = h;
+          canvas.getContext("2d").drawImage(img, 0, 0, w, h);
+          var out = canvas.toDataURL("image/jpeg", 0.86);
+          resolve({ name: "photo.jpg", data: out.split(",")[1], preview: out });
+        };
+        img.src = String(reader.result);
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  var stonePhoto = null;
+
   var editingStone = null;
   var editingChain = null;
 
@@ -380,19 +410,44 @@
     h += "<label for='st-note'>One line about it</label><input id='st-note' value='" + esc(s.note || "") + "' />";
     h += "<label class='tick'><input type='checkbox' id='st-on'" + (s.available === false ? "" : " checked") +
       " /> <span>On the shelf</span></label>";
-    if (stone && stone.image) h += "<p class='meta'>Its photo stays as it is — photos are set from the desktop for now.</p>";
+    h += "<label for='st-photo'>Photo</label>";
+    h += "<input type='file' id='st-photo' accept='image/*' />";
+    h += "<img id='st-shot' alt='' style='display:" + (stone && stone.image ? "block" : "none") +
+      ";max-width:120px;border-radius:6px;margin-top:8px' src='" +
+      (stone && stone.image ? "/" + esc(stone.image) : "") + "' />";
+    if (stone && stone.image) {
+      h += "<label class='tick'><input type='checkbox' id='st-nophoto' /> <span>Remove its photo</span></label>";
+    }
     h += "<div class='foot'><button class='act' data-do='save'>Save</button><button class='act ghost' data-do='back'>Never mind</button>";
     if (stone) h += "<button class='act danger' data-do='remove'>Remove</button>";
     h += "</div></div>";
     host.innerHTML = h;
 
+    stonePhoto = null;
     host.querySelector("button[data-do=back]").addEventListener("click", renderShelf);
+
+    var photoInput = document.getElementById("st-photo");
+    photoInput.addEventListener("change", function () {
+      var file = this.files && this.files[0];
+      if (!file) { stonePhoto = null; return; }
+      say("Getting that photo ready…");
+      shrinkPhoto(file).then(function (shot) {
+        stonePhoto = { name: shot.name, data: shot.data };
+        var preview = document.getElementById("st-shot");
+        preview.src = shot.preview;
+        preview.style.display = "block";
+        say("");
+      }).catch(function (err) { stonePhoto = null; say(err.message, true); });
+    });
 
     host.querySelector("button[data-do=save]").addEventListener("click", function () {
       say("Saving…");
+      var drop = document.getElementById("st-nophoto");
       ask("shelf", {
         what: "stone",
         id: stone ? stone.id : "",
+        photo: stonePhoto,
+        clearPhoto: Boolean(drop && drop.checked),
         name: document.getElementById("st-name").value,
         swatch: document.getElementById("st-swatch").value,
         finish: document.getElementById("st-finish").value,

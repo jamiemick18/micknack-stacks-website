@@ -1882,6 +1882,10 @@ img {
 .chain-preview { margin: 4px 0; }
 .chain-svg { width: 100%; height: auto; display: block; }
 
+/* Facet lines sit over the stone's own colour, so they are stroked and never
+   filled - a filled facet would flatten an iridescent stone to one shade. */
+.chain-svg .facet { fill: none; stroke: rgba(255, 255, 255, 0.55); stroke-width: 0.7; }
+
 .chain-seq {
   margin: 4px 0 12px;
   font-size: 0.82rem;
