@@ -9,7 +9,7 @@
 // welcome". They cannot ask for what they do not know you have.
 
 window.MICKNACK_STONES = [
-  { id: "ab-crystal", name: "AB Crystal", swatch: "#dfe8f2", shape: "Round", finish: "ab", size: "4mm", image: "", note: "", available: true },
+  { id: "ab-crystal", name: "AB Crystal CZ", swatch: "#dfe8f2", shape: "Round", finish: "ab", size: "4mm", image: "", note: "", available: true },
   { id: "purple-cz", name: "Amethyst CZ", swatch: "#47006e", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
   { id: "baby-pink-cz", name: "Baby Pink CZ", swatch: "#f6c3d0", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
   { id: "black-cz", name: "Black CZ", swatch: "#2a2a2e", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
