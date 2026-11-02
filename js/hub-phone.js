@@ -299,18 +299,15 @@
   var editingStone = null;
   var editingChain = null;
 
-  function beadFace(stone) {
-    var base = stone.swatch || "#ddd";
-    if (stone.image) return "background-image:url('/" + esc(stone.image) + "')";
-    if (stone.finish === "ab") {
-      return "background:conic-gradient(from 210deg, " + base +
-        ", #bfe6ff, #ffd9f2, #fff0b8, #c9f7d8, " + base + ")";
+  // A photo is the stone itself. Failing that it is drawn as its actual cut,
+  // by the same code the website uses — see js/gems.js.
+  function stoneFace(stone) {
+    if (stone.image) {
+      return "<span class='bead' style=\"background-image:url('/" + esc(stone.image) + "')\"></span>";
     }
-    if (stone.finish === "opal") {
-      return "background:radial-gradient(circle at 30% 24%, #ffffff 0%, #b9a7ef 22%, " +
-        base + " 46%, #3fae96 70%, #16296b 100%)";
-    }
-    return "background:" + base;
+    return window.MICKNACK_GEM
+      ? window.MICKNACK_GEM.one(stone, null, 46)
+      : "<span class='bead' style='background:" + esc(stone.swatch || "#ddd") + "'></span>";
   }
 
   function renderShelf() {
@@ -326,7 +323,7 @@
         var st = d.stones[i];
         h += "<button class='bead-card" + (st.available === false ? " off" : "") +
           "' data-stone='" + esc(st.id) + "'>";
-        h += "<span class='bead' style='" + beadFace(st) + "'></span>";
+        h += stoneFace(st);
         h += "<b>" + esc(st.name) + "</b>";
         if (st.shape || st.size) h += "<small>" + esc([st.shape, st.size].filter(Boolean).join(" · ")) + "</small>";
         if (st.available === false) h += "<small>off the shelf</small>";

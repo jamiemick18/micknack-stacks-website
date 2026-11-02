@@ -1884,7 +1884,12 @@ img {
 
 /* Facet lines sit over the stone's own colour, so they are stroked and never
    filled - a filled facet would flatten an iridescent stone to one shade. */
-.chain-svg .facet { fill: none; stroke: rgba(255, 255, 255, 0.55); stroke-width: 0.7; }
+.chain-svg .facet,
+.gem .facet { fill: none; stroke: rgba(255, 255, 255, 0.55); stroke-width: 0.7; }
+
+/* A stone on the shelf is drawn as its cut, so the button is the shape. */
+.stone-gem { display: block; line-height: 0; }
+.stone-gem .gem { display: block; }
 
 .chain-seq {
   margin: 4px 0 12px;

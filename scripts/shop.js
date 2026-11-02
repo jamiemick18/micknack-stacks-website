@@ -1282,6 +1282,20 @@ const server = createServer(async (req, res) => {
       });
     }
 
+    // The website's own gem drawings, so the HUB shows a marquise as a
+    // marquise rather than keeping a third copy of the same shapes.
+    if (req.url.split("?")[0] === "/gems.js" && req.method === "GET") {
+      const file = join(ROOT, "js", "gems.js");
+      if (existsSync(file)) {
+        res.writeHead(200, {
+          "Content-Type": "text/javascript; charset=utf-8",
+          "Cache-Control": "no-store",
+        });
+        res.end(readFileSync(file));
+        return;
+      }
+    }
+
     // The bear, for the tab and the page's own header.
     if (req.url === "/icon.ico" || req.url === "/icon.png") {
       const file = req.url.endsWith(".ico")

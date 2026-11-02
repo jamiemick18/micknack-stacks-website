@@ -218,6 +218,9 @@ export function page() {
     padding: 10px; text-align: center;
   }
   .stone.off { opacity: .45; }
+  .stone .gemwrap { width: 58px; margin: 2px auto 8px; line-height: 0; }
+  .stone .gemwrap svg { display: block; }
+  .gem .facet { fill: none; stroke: rgba(255,255,255,.55); stroke-width: .7; }
   .stone .bead {
     width: 64px; height: 64px; border-radius: 50%; margin: 2px auto 8px;
     background-size: cover; background-position: center;
@@ -290,6 +293,7 @@ export function page() {
     .two { grid-template-columns: 1fr; }
   }
 </style>
+<script src="/gems.js"></script>
 </head>
 <body>
 <header>
@@ -1139,18 +1143,22 @@ function stoneEdit(stone) {
 
 document.getElementById("s-cancel").addEventListener("click", stoneAddMode);
 
-// How a stone is drawn when there is no photo of it yet. An iridescent stone
-// is not one colour, so AB and opal are built as a shift around the base
-// rather than a flat disc that tells a shopper nothing.
-function beadFace(stone) {
-  var base = stone.swatch || "#ddd";
-  if (stone.finish === "ab") {
-    return "conic-gradient(from 210deg, " + base + ", #bfe6ff, #ffd9f2, #fff0b8, #c9f7d8, " + base + ")";
+// A photo is the stone itself. Failing that it is drawn as its actual cut,
+// by the same code the website uses — see js/gems.js, served at /gems.js.
+function stoneFace(card, stone) {
+  if (stone.image) {
+    var bead = document.createElement("div");
+    bead.className = "bead";
+    bead.style.backgroundImage = "url('/" + stone.image + "')";
+    card.appendChild(bead);
+    return;
   }
-  if (stone.finish === "opal") {
-    return "radial-gradient(circle at 30% 24%, #ffffff 0%, #b9a7ef 22%, " + base + " 46%, #3fae96 70%, #16296b 100%)";
-  }
-  return base;
+  var holder = document.createElement("div");
+  holder.className = "gemwrap";
+  holder.innerHTML = window.MICKNACK_GEM
+    ? window.MICKNACK_GEM.one(stone, null, 58)
+    : "";
+  card.appendChild(holder);
 }
 
 function chainAddMode() {
@@ -1222,15 +1230,10 @@ function loadStones() {
       var st = list[i];
       var card = document.createElement("div");
       card.className = "stone" + (st.available === false ? " off" : "");
-      var bead = document.createElement("div");
-      bead.className = "bead";
-      // A photo is the real thing; the colour is what stands in until there
-      // is one, so it is never shown over the top of a photo.
-      if (st.image) bead.style.backgroundImage = "url('/" + st.image + "')";
-      else bead.style.background = beadFace(st);
+      stoneFace(card, st);
       var nm = document.createElement("b");
       nm.textContent = st.name;
-      card.appendChild(bead); card.appendChild(nm);
+      card.appendChild(nm);
       var spec = [st.shape, st.size].filter(Boolean).join(" · ");
       if (spec) { var shp = document.createElement("small"); shp.textContent = spec; card.appendChild(shp); }
       if (st.note) { var note = document.createElement("small"); note.textContent = st.note; card.appendChild(note); }
