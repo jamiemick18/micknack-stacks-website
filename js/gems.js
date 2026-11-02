@@ -76,8 +76,12 @@ var SHAPES = {
   // Pointed at both ends, widest across the middle.
   marquise: function (r) {
     // A 3x5mm marquise is three wide and five long, so the width is six
-    // tenths of the length. Drawn narrower than that it reads as a sliver.
-    var h = r * 1.4, w = h * 0.6;
+    // tenths of the length.
+    //
+    // The control point is NOT the width: a quadratic curve only reaches
+    // half way to its control, so a control at 0.6h drew a stone 0.3 wide
+    // and it looked like a sliver. Double it to get the width asked for.
+    var h = r * 1.4, w = h * 0.6 * 2;
     return '<path d="M0 ' + -h + ' Q' + w + ' 0 0 ' + h + ' Q' + -w + ' 0 0 ' + -h + ' Z"/>' +
       '<g class="facet"><path d="M0 ' + -h * 0.52 + ' Q' + w * 0.52 + ' 0 0 ' + h * 0.52 +
       ' Q' + -w * 0.52 + ' 0 0 ' + -h * 0.52 + ' Z"/>' +

@@ -86,10 +86,17 @@
       '<circle cx="' + left + '" cy="' + top + '" r="6" fill="none" stroke="#c9a227" stroke-width="2.2"/>' +
       '<circle cx="' + right + '" cy="' + top + '" r="6" fill="none" stroke="#c9a227" stroke-width="2.2"/>';
 
-    for (var i = 0; i < arrangement.length; i++) {
-      // Spread evenly, and kept away from the two end rings so nothing
-      // looks like it is hanging off the clasp.
-      var t = arrangement.length === 1 ? 0.5 : 0.17 + (0.66 * i) / (arrangement.length - 1);
+    // Stones sit together in the middle and grow outwards as more are added,
+    // the way you would actually lay them out. Spreading two to the far ends
+    // of the chain made a pair look like a mistake.
+    var SPAN = 0.66; // how much of the chain stones may ever occupy
+    var GAP = 0.11; // the gap between neighbours until the chain fills up
+    var count = arrangement.length;
+    var step = count > 1 ? Math.min(GAP, SPAN / (count - 1)) : 0;
+    var first = 0.5 - (step * (count - 1)) / 2;
+
+    for (var i = 0; i < count; i++) {
+      var t = count === 1 ? 0.5 : first + step * i;
       var point = at(t);
       var stone = arrangement[i].stone;
       var fill = stone.finish ? "url(#g" + i + ")" : stone.swatch || "#ddd";
