@@ -21,7 +21,6 @@ window.MICKNACK_STONES = [
   { id: "hot-pink-corundum", name: "Hot Pink Corundum", swatch: "#c7006d", shape: "Marquise", finish: "", size: "3x6mm", image: "", note: "", available: true },
   { id: "lavender-cz", name: "Lavender CZ", swatch: "#c9b6e4", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
   { id: "lime-green-cz", name: "Lime Green CZ", swatch: "#5cdb12", shape: "Marquise", finish: "", size: "3x5mm", image: "", note: "", available: true },
-  { id: "moonstone", name: "Moonstone CZ", swatch: "#5b3fb8", shape: "Round", finish: "ab", size: "4mm", image: "", note: "Deep blue to violet flash", available: true },
   { id: "purple-cz", name: "Purple CZ", swatch: "#6f4bA8", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
   { id: "ruby-cz", name: "Ruby CZ", swatch: "#9b1b30", shape: "Round", finish: "", size: "4mm", image: "", note: "", available: true },
 ];
