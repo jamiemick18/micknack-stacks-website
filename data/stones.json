@@ -100,6 +100,17 @@
    "available": true
   },
   {
+   "id": "hot-pink-corundum",
+   "name": "Hot Pink Corundum",
+   "swatch": "#ff00d5",
+   "shape": "Marquise",
+   "finish": "",
+   "size": "3x6mm",
+   "image": "",
+   "note": "",
+   "available": true
+  },
+  {
    "id": "lavender-cz",
    "name": "Lavender CZ",
    "swatch": "#c9b6e4",
