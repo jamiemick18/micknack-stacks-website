@@ -413,6 +413,7 @@ export function page() {
         <div></div>
       </div>
       <label class="tick"><input type="checkbox" id="s-available" checked /> <span>On the shelf</span></label>
+      <label class="tick" id="s-drop-wrap" hidden><input type="checkbox" id="s-drop" /> <span>Remove its photo</span></label>
       <img id="s-preview" alt="" />
       <div>
         <button type="submit" id="s-go">Add the stone</button>
@@ -1122,6 +1123,8 @@ function stoneAddMode() {
   document.getElementById("s-size").value = "4mm";
   document.getElementById("s-available").checked = true;
   document.getElementById("s-preview").style.display = "none";
+  document.getElementById("s-drop").checked = false;
+  document.getElementById("s-drop-wrap").hidden = true;
   document.getElementById("s-go").textContent = "Add the stone";
   document.getElementById("s-cancel").hidden = true;
 }
@@ -1140,6 +1143,8 @@ function stoneEdit(stone) {
   var preview = document.getElementById("s-preview");
   if (stone.image) { preview.src = "/" + stone.image; preview.style.display = "block"; }
   else preview.style.display = "none";
+  document.getElementById("s-drop").checked = false;
+  document.getElementById("s-drop-wrap").hidden = !stone.image;
   document.getElementById("s-go").textContent = "Save the change";
   document.getElementById("s-cancel").hidden = false;
   document.getElementById("stone-form").scrollIntoView({ block: "start", behavior: "smooth" });
@@ -1322,7 +1327,8 @@ document.getElementById("stone-form").addEventListener("submit", function (e) {
       size: document.getElementById("s-size").value,
       note: document.getElementById("s-note").value,
       available: document.getElementById("s-available").checked,
-      photo: stonePhoto
+      photo: stonePhoto,
+      clearPhoto: document.getElementById("s-drop").checked
     })
   }).then(function (r) { return r.json(); }).then(function (d) {
     btn.disabled = false;

@@ -890,7 +890,13 @@ async function handleShelf(env, body) {
     // The photo goes up first. If it fails, nothing has been said about it in
     // the shelf, so the stone keeps the picture it already had.
     if (body.photo && body.photo.data) stone.image = await savePhoto(env, key, body.photo);
-    if (body.clearPhoto) stone.image = "";
+    // Clearing a photo deletes the file too. Only unhooking it left the
+    // picture in the repository for good, which is how a folder fills up
+    // with photographs of stones nobody stocks any more.
+    if (body.clearPhoto && stone.image) {
+      await ghDelete(env, stone.image, `Removed the photo of ${stone.name}`).catch(() => {});
+      stone.image = "";
+    }
     await shelfWrite(env, data, sha, `Stone: ${stone.name}`);
     return { ok: true, message: "Saved. The website has it in a minute or two." };
   }

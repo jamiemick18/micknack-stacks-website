@@ -781,7 +781,7 @@ function removeChain(id) {
   return { id: key };
 }
 
-function saveStone({ id, name, swatch, shape, finish, size, note, available, photo }) {
+function saveStone({ id, name, swatch, shape, finish, size, note, available, photo, clearPhoto }) {
   if (!String(name || "").trim()) throw new Error("A stone needs a name.");
   const data = readStoneData();
 
@@ -818,6 +818,13 @@ function saveStone({ id, name, swatch, shape, finish, size, note, available, pho
   stone.note = String(note || "").trim();
   stone.available = available !== false;
   if (photo && photo.data) stone.image = writePhoto(key, photo, "stones");
+  // Clearing a photo deletes the file too, rather than leaving it orphaned
+  // in assets/stones for ever.
+  if (clearPhoto && stone.image) {
+    const file = join(ROOT, stone.image);
+    if (existsSync(file)) rmSync(file, { force: true });
+    stone.image = "";
+  }
 
   writeStoneData(data);
   return { id: key };
