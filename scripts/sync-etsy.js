@@ -176,14 +176,32 @@ function previousImagesFrom(previous) {
   return images;
 }
 
+// Etsy hands back titles and descriptions with HTML character codes in them,
+// so an apostrophe arrives as &#39; and lands on the page looking like that.
+// The site prints these as plain text, never as markup, so turning them back
+// into the characters they stand for is safe — and &amp; is done last, or
+// "&amp;#39;" would decode twice and lose the ampersand.
+function fromHtml(text) {
+  if (typeof text !== "string") return text;
+  return text
+    .replace(/&#(\d+);/g, (whole, code) => String.fromCharCode(Number(code)))
+    .replace(/&#x([0-9a-f]+);/gi, (whole, code) => String.fromCharCode(parseInt(code, 16)))
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&");
+}
+
 function normalizeListing(listing, images, video) {
   return {
     listing_id: String(listing.listing_id),
-    title: listing.title,
+    title: fromHtml(listing.title),
     price: (listing.price.amount / listing.price.divisor).toFixed(2),
     currency_code: listing.price.currency_code,
     url: listing.url,
-    description: listing.description,
+    description: fromHtml(listing.description),
     images: images.length ? images : ["assets/products/placeholder.svg"],
     video: video || "",
     tags: listing.tags || [],
