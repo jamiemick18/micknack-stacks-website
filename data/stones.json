@@ -23,6 +23,17 @@
    "available": true
   },
   {
+   "id": "purple-cz",
+   "name": "Amethyst CZ",
+   "swatch": "#47006e",
+   "shape": "Round",
+   "finish": "",
+   "size": "4mm",
+   "image": "",
+   "note": "",
+   "available": true
+  },
+  {
    "id": "baby-pink-cz",
    "name": "Baby Pink CZ",
    "swatch": "#f6c3d0",
@@ -128,17 +139,6 @@
    "shape": "Marquise",
    "finish": "",
    "size": "3x5mm",
-   "image": "",
-   "note": "",
-   "available": true
-  },
-  {
-   "id": "purple-cz",
-   "name": "Purple CZ",
-   "swatch": "#6f4bA8",
-   "shape": "Round",
-   "finish": "",
-   "size": "4mm",
    "image": "",
    "note": "",
    "available": true
