@@ -362,7 +362,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 7,
    "at": "2026-11-03T02:48:58.838Z"
+  },
+  {
+   "id": "4601255929",
+   "title": "Baby Pink CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/ada0aa/8773399497/il_fullxfull.8773399497_ysno.jpg",
+   "gained": 1,
+   "total": 2,
+   "at": "2026-11-03T18:17:49.103Z"
+  },
+  {
+   "id": "4579868601",
+   "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
+   "image": "https://i.etsystatic.com/67609393/r/il/8841bd/8557802610/il_fullxfull.8557802610_oea8.jpg",
+   "gained": 1,
+   "total": 19,
+   "at": "2026-11-03T18:17:49.103Z"
   }
  ],
- "updated_at": "2026-11-03T10:36:23.324Z"
+ "updated_at": "2026-11-03T18:17:49.103Z"
 };
