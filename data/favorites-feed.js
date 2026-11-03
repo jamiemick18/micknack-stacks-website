@@ -306,7 +306,63 @@ window.MICKNACK_FAVORITES = {
    "gained": 2,
    "total": 15,
    "at": "2026-11-02T19:52:31.011Z"
+  },
+  {
+   "id": "4576033359",
+   "title": "Lilac Drop Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/3f3f24/8577000729/il_fullxfull.8577000729_f2zn.jpg",
+   "gained": 2,
+   "total": 6,
+   "at": "2026-11-03T02:48:58.838Z"
+  },
+  {
+   "id": "4601338080",
+   "title": "Hot Mess Pink  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Hot Pink Marquise Dangle | Dainty Cartilage Chain Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/d0159d/8773871911/il_fullxfull.8773871911_5ixs.jpg",
+   "gained": 1,
+   "total": 3,
+   "at": "2026-11-03T02:48:58.838Z"
+  },
+  {
+   "id": "4601276860",
+   "title": "Clementine CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/52c9f0/8725531238/il_fullxfull.8725531238_owcc.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-03T02:48:58.838Z"
+  },
+  {
+   "id": "4601250009",
+   "title": "Periodt Green CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/0dada6/8773351701/il_fullxfull.8773351701_r2eh.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-03T02:48:58.838Z"
+  },
+  {
+   "id": "4579868601",
+   "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
+   "image": "https://i.etsystatic.com/67609393/r/il/8841bd/8557802610/il_fullxfull.8557802610_oea8.jpg",
+   "gained": 1,
+   "total": 18,
+   "at": "2026-11-03T02:48:58.838Z"
+  },
+  {
+   "id": "4573623947",
+   "title": "Honey Bear Threadless Flatback Earring | Gold Bear Cartilage Stud | Titanium Labret Post | Dainty Cute Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/d66115/8559014997/il_fullxfull.8559014997_qk6j.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-03T02:48:58.838Z"
+  },
+  {
+   "id": "4573472494",
+   "title": "Barely There Threadless Flatback Earring | Minimal Gold Cartilage Stud | ASTM F136 G23 Implant Grade Titanium | Dainty Two Stone Earring",
+   "image": "https://i.etsystatic.com/67609393/r/il/3e57de/8557813877/il_fullxfull.8557813877_cfpb.jpg",
+   "gained": 1,
+   "total": 7,
+   "at": "2026-11-03T02:48:58.838Z"
   }
  ],
- "updated_at": "2026-11-02T20:35:15.872Z"
+ "updated_at": "2026-11-03T02:48:58.838Z"
 };

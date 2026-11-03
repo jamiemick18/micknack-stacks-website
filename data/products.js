@@ -2,8 +2,38 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-02T20:35:15.872Z",
+  "synced_at": "2026-11-03T02:48:58.838Z",
   "listings": [
+    {
+      "listing_id": "4599803201",
+      "title": "Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain | ASTM F136 Threadless Connector | 40mm Emerald Green CZ Dangle",
+      "price": "25.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4599803201/green-with-envy-g23-titanium-labret-to",
+      "description": "Green With Envy 💚✨\n\nBright, bold, and absolutely not trying to blend in.\n\nGreen With Envy is a 40 mm GOLD FILLED chain / labret-to-earring chain connector finished with five individually dangling emerald green CZ stones. All jump rings are also gold filled. The saturated green gives your stack a rich pop of color, while the delicate chain lets each stone move and catch the light on its own.\n\nwww.micknackstacks.com⁠\n\nOne end is attached to a threadless G23 titanium labret while the opposite end connects to a compatible hoop or earring, creating a soft drape between two piercings.\n\nA little luxe. A little bratty. Very hard not to stare at. 💚\n\nWhy you’ll love it:\n40 mm labret-to-earring chain\nFive individually dangling emerald-green CZ stones\nRich jewel-tone color\nDelicate movement and sparkle\nAdds depth without making your stack feel bulky\nEasy statement piece for an otherwise minimal ear\nDesigned to connect two piercings in one cohesive look\n\n✨ Implant-grade specification: ASTM F136 is a recognized specification for titanium alloy used in implant applications and quality body jewelry.\n✨ Nickel-conscious: Titanium is commonly chosen by people who want to avoid jewelry made from nickel-containing alloys.\n✨ Lightweight: Titanium is naturally lightweight, making it especially nice for cartilage jewelry and chain styles.\n✨ Corrosion resistant: Titanium offers excellent resistance to corrosion and everyday moisture.\n✨ Threadless design: The pushpin-style connection means there are no exposed external screw threads passing through the piercing channel during insertion.\n✨ Star flatback: The post is finished with a tiny star-shaped flatback for a cute little detail behind the piercing. ⭐\n\nChoose your post length\n6 mm — for a more fitted, snug placement\n8 mm — for a little extra room\n\nEveryone’s anatomy and piercing placement are different, so the best fit will vary.\n\nSold individually\n\nPerfect for\nHelix-to-lobe • Cartilage-to-hoop • Multi-piercing stacks • Green ear stacks • Jewel-tone jewelry • Curated ears\nGreen with envy? As you should be. 💚✨\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/9ca196/8714086152/il_fullxfull.8714086152_8ky9.jpg",
+        "https://i.etsystatic.com/67609393/r/il/3f6057/8714068328/il_fullxfull.8714068328_gi0p.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/a54d/0a65c04a-b0b5-44c5-9e07-b4702dd1e919/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "ASTM F136",
+        "G23 Titanium"
+      ],
+      "quantity": 3,
+      "created": "2026-10-20T23:20:39.000Z",
+      "views": 18,
+      "num_favorers": 4,
+      "etsy_active": true,
+      "added_at": "2026-10-21T14:19:56.913Z"
+    },
     {
       "listing_id": "4608450426",
       "title": "Stack Staple - 18K Gold Plated Huggie Earrings Pair | Clear Marquise CZ Dangles | Everyday Ear Stack Earrings | Dainty Stacking Jewelry",
@@ -17,7 +47,7 @@ window.MICKNACK_PRODUCTS = {
         "https://i.etsystatic.com/67609393/r/il/f992da/8834008615/il_fullxfull.8834008615_cmt3.jpg",
         "https://i.etsystatic.com/67609393/r/il/49e61d/8834019827/il_fullxfull.8834019827_b161.jpg"
       ],
-      "video": "",
+      "video": "https://v.etsystatic.com/e/videos/bd14/247be181-88d2-43e9-828a-dc4e1b70f023/vid_v1.mp4",
       "tags": [
         "gold huggie earrings",
         "huggie earring pair",
@@ -105,7 +135,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 4,
       "created": "2026-09-15T20:48:41.000Z",
       "views": 64,
-      "num_favorers": 4,
+      "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -277,7 +307,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 2,
       "created": "2026-10-22T23:42:27.000Z",
       "views": 12,
-      "num_favorers": 2,
+      "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-10-23T01:20:53.342Z"
     },
@@ -448,7 +478,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-10-22T21:31:39.000Z",
       "views": 2,
-      "num_favorers": 0,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-10-22T22:07:53.714Z"
     },
@@ -482,7 +512,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-10-22T21:29:09.000Z",
       "views": 12,
-      "num_favorers": 0,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-10-22T21:34:24.555Z"
     },
@@ -585,39 +615,9 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-09-21T19:48:13.000Z",
       "views": 147,
-      "num_favorers": 17,
+      "num_favorers": 18,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4599803201",
-      "title": "Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain | ASTM F136 Threadless Connector | 40mm Emerald Green CZ Dangle",
-      "price": "25.00",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4599803201/green-with-envy-g23-titanium-labret-to",
-      "description": "Green With Envy 💚✨\n\nBright, bold, and absolutely not trying to blend in.\n\nGreen With Envy is a 40 mm GOLD FILLED chain / labret-to-earring chain connector finished with five individually dangling emerald green CZ stones. All jump rings are also gold filled. The saturated green gives your stack a rich pop of color, while the delicate chain lets each stone move and catch the light on its own.\n\nwww.micknackstacks.com⁠\n\nOne end is attached to a threadless G23 titanium labret while the opposite end connects to a compatible hoop or earring, creating a soft drape between two piercings.\n\nA little luxe. A little bratty. Very hard not to stare at. 💚\n\nWhy you’ll love it:\n40 mm labret-to-earring chain\nFive individually dangling emerald-green CZ stones\nRich jewel-tone color\nDelicate movement and sparkle\nAdds depth without making your stack feel bulky\nEasy statement piece for an otherwise minimal ear\nDesigned to connect two piercings in one cohesive look\n\n✨ Implant-grade specification: ASTM F136 is a recognized specification for titanium alloy used in implant applications and quality body jewelry.\n✨ Nickel-conscious: Titanium is commonly chosen by people who want to avoid jewelry made from nickel-containing alloys.\n✨ Lightweight: Titanium is naturally lightweight, making it especially nice for cartilage jewelry and chain styles.\n✨ Corrosion resistant: Titanium offers excellent resistance to corrosion and everyday moisture.\n✨ Threadless design: The pushpin-style connection means there are no exposed external screw threads passing through the piercing channel during insertion.\n✨ Star flatback: The post is finished with a tiny star-shaped flatback for a cute little detail behind the piercing. ⭐\n\nChoose your post length\n6 mm — for a more fitted, snug placement\n8 mm — for a little extra room\n\nEveryone’s anatomy and piercing placement are different, so the best fit will vary.\n\nSold individually\n\nPerfect for\nHelix-to-lobe • Cartilage-to-hoop • Multi-piercing stacks • Green ear stacks • Jewel-tone jewelry • Curated ears\nGreen with envy? As you should be. 💚✨\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/9ca196/8714086152/il_fullxfull.8714086152_8ky9.jpg",
-        "https://i.etsystatic.com/67609393/r/il/3f6057/8714068328/il_fullxfull.8714068328_gi0p.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/a54d/0a65c04a-b0b5-44c5-9e07-b4702dd1e919/vid_v1.mp4",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "ASTM F136",
-        "G23 Titanium"
-      ],
-      "quantity": 4,
-      "created": "2026-10-20T23:20:39.000Z",
-      "views": 18,
-      "num_favorers": 4,
-      "etsy_active": true,
-      "added_at": "2026-10-21T14:19:56.913Z"
     },
     {
       "listing_id": "4599690242",
@@ -1142,7 +1142,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 2,
       "created": "2026-09-11T23:20:43.000Z",
       "views": 14,
-      "num_favorers": 0,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1410,7 +1410,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T17:54:53.000Z",
       "views": 100,
-      "num_favorers": 6,
+      "num_favorers": 7,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
