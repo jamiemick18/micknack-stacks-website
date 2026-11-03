@@ -7,13 +7,20 @@
 // No names and no buyer photos: Etsy does not provide a name, and the photos
 // belong to the buyers who took them.
 //
-// Last read from Etsy: 2026-11-03T18:17:49.103Z
+// Last read from Etsy: 2026-11-03T23:54:32.049Z
 window.MICKNACK_REVIEWS = {
-  "count": 6,
-  "average": 4.83,
-  "five_star": 5,
+  "count": 7,
+  "average": 4.86,
+  "five_star": 6,
   "shop_reviews_url": "https://www.etsy.com/shop/MicknackStacks/reviews",
   "reviews": [
+    {
+      "rating": 5,
+      "text": "I love the piece so much cant wait to wear it",
+      "listing_id": "4573452050",
+      "piece": "Zephyr Threadless Flatback Earring",
+      "date": "2026-11-03"
+    },
     {
       "rating": 5,
       "text": "Love this piece I’m\nWearing another piece from the same company right now so I don’t have it in, but I love it and I’m definitely gonna be wearing it and ordering more from her store",
