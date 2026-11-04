@@ -378,7 +378,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 19,
    "at": "2026-11-03T18:17:49.103Z"
+  },
+  {
+   "id": "4573632540",
+   "title": "Double Diamond Run Threadless Flatback Earring | Gold Geometric Ear Climber | Titanium Labret Post | Ski Inspired Cartilage Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b7a185/8511085468/il_fullxfull.8511085468_qen4.jpg",
+   "gained": 1,
+   "total": 3,
+   "at": "2026-11-04T05:32:17.145Z"
+  },
+  {
+   "id": "4573616908",
+   "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
+   "gained": 1,
+   "total": 5,
+   "at": "2026-11-04T05:32:17.145Z"
   }
  ],
- "updated_at": "2026-11-03T23:54:32.049Z"
+ "updated_at": "2026-11-04T05:32:17.145Z"
 };
