@@ -394,7 +394,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 5,
    "at": "2026-11-04T05:32:17.145Z"
+  },
+  {
+   "id": "4596333038",
+   "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+   "gained": 1,
+   "total": 17,
+   "at": "2026-11-04T20:46:29.879Z"
+  },
+  {
+   "id": "4591313547",
+   "title": "Everyday 18g G23 ASTM F136 Titanium Gold Clicker Hoop | 18K PVD Implant Grade Cartilage Ring | Helix Conch Lobe 5mm–12mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/e158b3/8645167936/il_fullxfull.8645167936_hbuv.jpg",
+   "gained": 1,
+   "total": 3,
+   "at": "2026-11-04T20:46:29.879Z"
   }
  ],
- "updated_at": "2026-11-04T14:00:24.030Z"
+ "updated_at": "2026-11-04T20:46:29.879Z"
 };
