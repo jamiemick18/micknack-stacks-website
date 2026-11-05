@@ -410,7 +410,31 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 3,
    "at": "2026-11-04T20:46:29.879Z"
+  },
+  {
+   "id": "4574722466",
+   "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
+   "gained": 1,
+   "total": 18,
+   "at": "2026-11-05T17:55:18.750Z"
+  },
+  {
+   "id": "4566919003",
+   "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg",
+   "gained": 1,
+   "total": 16,
+   "at": "2026-11-05T17:55:18.750Z"
+  },
+  {
+   "id": "4573613361",
+   "title": "Cherry Crush Threadless Flatback Earring | Pink & Clear Heart CZ Stud | Gold Bow Cartilage Earring | Titanium Labret Post",
+   "image": "https://i.etsystatic.com/67609393/r/il/0dd077/8559046031/il_fullxfull.8559046031_qz6r.jpg",
+   "gained": 1,
+   "total": 9,
+   "at": "2026-11-05T17:55:18.750Z"
   }
  ],
- "updated_at": "2026-11-05T01:23:53.655Z"
+ "updated_at": "2026-11-05T17:55:18.750Z"
 };
