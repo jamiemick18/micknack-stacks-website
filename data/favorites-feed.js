@@ -466,7 +466,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 4,
    "at": "2026-11-06T20:22:50.330Z"
+  },
+  {
+   "id": "4608450426",
+   "title": "Stack Staple - 18K Gold Plated Huggie Earrings Pair | Clear Marquise CZ Dangles | Everyday Ear Stack Earrings | Dainty Stacking Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/124e06/8834008575/il_fullxfull.8834008575_1z3i.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-06T22:18:24.553Z"
   }
  ],
- "updated_at": "2026-11-06T20:22:50.330Z"
+ "updated_at": "2026-11-06T22:18:24.553Z"
 };

@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-02T20:31:00.442Z",
+  "generated_at": "2026-11-06T22:19:52.148Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -433,7 +433,7 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UTTeN680JvUCS8JKa1SWcvm",
       "price_id": "price_1UTTeN680JvUCS8JIslYgFYd",
       "product_id": "prod_VUSZ2k2j1fIC3B",
-      "name": "Ruby CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory"
+      "name": "Cherry Juice CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory"
     },
     "4599803201": {
       "url": "https://buy.stripe.com/fZu28k1URaHN19j9JqaZi1l",

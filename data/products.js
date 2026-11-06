@@ -2,8 +2,44 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-06T20:22:50.330Z",
+  "synced_at": "2026-11-06T22:18:24.553Z",
   "listings": [
+    {
+      "listing_id": "4601246993",
+      "title": "Cherry Juice CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4601246993/ruby-cz-earring-connector-chain-40mm",
+      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\n\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/c1cc04/8858822615/il_fullxfull.8858822615_b8u1.jpg",
+        "https://i.etsystatic.com/67609393/r/il/052d90/8773328647/il_fullxfull.8773328647_moyd.jpg",
+        "https://i.etsystatic.com/67609393/r/il/4c428e/8725498528/il_fullxfull.8725498528_skbk.jpg",
+        "https://i.etsystatic.com/67609393/r/il/4dfc8d/8858822631/il_fullxfull.8858822631_clr1.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/0cde/38ebf968-502d-4115-9b44-64a6f4f49f27/vid_v1.mp4",
+      "tags": [
+        "earring chain",
+        "earring connector",
+        "ear chain connector",
+        "connecting chain",
+        "earring stack chain",
+        "flatback chain",
+        "threadless earring",
+        "ear stack jewelry",
+        "curated ear jewelry",
+        "gold earring chain",
+        "flatback earrings",
+        "piercing chain",
+        "ear piercing chain"
+      ],
+      "quantity": 2,
+      "created": "2026-10-22T21:24:04.000Z",
+      "views": 7,
+      "num_favorers": 2,
+      "etsy_active": true,
+      "added_at": "2026-10-22T21:34:24.555Z"
+    },
     {
       "listing_id": "4599803201",
       "title": "Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain | ASTM F136 Threadless Connector | 40mm Emerald Green CZ Dangle",
@@ -66,7 +102,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 9,
       "created": "2026-11-02T19:50:28.000Z",
       "views": 7,
-      "num_favorers": 0,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-11-02T20:06:49.958Z"
     },
@@ -547,40 +583,6 @@ window.MICKNACK_PRODUCTS = {
       "created": "2026-10-22T21:27:09.000Z",
       "views": 10,
       "num_favorers": 0,
-      "etsy_active": true,
-      "added_at": "2026-10-22T21:34:24.555Z"
-    },
-    {
-      "listing_id": "4601246993",
-      "title": "Ruby CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4601246993/ruby-cz-earring-connector-chain-40mm",
-      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/052d90/8773328647/il_fullxfull.8773328647_moyd.jpg",
-        "https://i.etsystatic.com/67609393/r/il/4c428e/8725498528/il_fullxfull.8725498528_skbk.jpg"
-      ],
-      "video": "",
-      "tags": [
-        "earring chain",
-        "earring connector",
-        "ear chain connector",
-        "connecting chain",
-        "earring stack chain",
-        "flatback chain",
-        "threadless earring",
-        "ear stack jewelry",
-        "curated ear jewelry",
-        "gold earring chain",
-        "flatback earrings",
-        "piercing chain",
-        "ear piercing chain"
-      ],
-      "quantity": 3,
-      "created": "2026-10-22T21:24:04.000Z",
-      "views": 7,
-      "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-10-22T21:34:24.555Z"
     },
