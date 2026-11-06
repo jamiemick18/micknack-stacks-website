@@ -442,7 +442,31 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 18,
    "at": "2026-11-05T23:28:03.573Z"
+  },
+  {
+   "id": "4601250009",
+   "title": "Periodt Green CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/0dada6/8773351701/il_fullxfull.8773351701_r2eh.jpg",
+   "gained": 1,
+   "total": 2,
+   "at": "2026-11-06T20:22:50.330Z"
+  },
+  {
+   "id": "4601246993",
+   "title": "Ruby CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/052d90/8773328647/il_fullxfull.8773328647_moyd.jpg",
+   "gained": 1,
+   "total": 2,
+   "at": "2026-11-06T20:22:50.330Z"
+  },
+  {
+   "id": "4573601729",
+   "title": "Drip Threadless Flatback Earring | Dainty Gold Dangle | Titanium Labret Post | Minimal Cartilage Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/dd8fa7/8510995928/il_fullxfull.8510995928_1ert.jpg",
+   "gained": 1,
+   "total": 4,
+   "at": "2026-11-06T20:22:50.330Z"
   }
  ],
- "updated_at": "2026-11-06T13:58:06.718Z"
+ "updated_at": "2026-11-06T20:22:50.330Z"
 };
