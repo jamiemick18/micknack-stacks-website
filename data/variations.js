@@ -9,7 +9,7 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-06T05:49:14.999Z
+// Last read from Etsy: 2026-11-06T13:58:06.718Z
 
 window.MICKNACK_VARIATIONS = {
   // Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain
