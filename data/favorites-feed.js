@@ -490,7 +490,47 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 1,
    "at": "2026-11-07T06:54:47.849Z"
+  },
+  {
+   "id": "4601246993",
+   "title": "Cherry Juice CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/c1cc04/8858822615/il_fullxfull.8858822615_b8u1.jpg",
+   "gained": 1,
+   "total": 3,
+   "at": "2026-11-07T18:32:30.677Z"
+  },
+  {
+   "id": "4601338080",
+   "title": "Hot Mess Pink  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Hot Pink Marquise Dangle | Dainty Cartilage Chain Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/d0159d/8773871911/il_fullxfull.8773871911_5ixs.jpg",
+   "gained": 1,
+   "total": 4,
+   "at": "2026-11-07T18:32:30.677Z"
+  },
+  {
+   "id": "4573632540",
+   "title": "Double Diamond Run Threadless Flatback Earring | Gold Geometric Ear Climber | Titanium Labret Post | Ski Inspired Cartilage Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b7a185/8511085468/il_fullxfull.8511085468_qen4.jpg",
+   "gained": 1,
+   "total": 4,
+   "at": "2026-11-07T18:32:30.677Z"
+  },
+  {
+   "id": "4573616908",
+   "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
+   "gained": 1,
+   "total": 6,
+   "at": "2026-11-07T18:32:30.677Z"
+  },
+  {
+   "id": "4573472494",
+   "title": "Barely There Threadless Flatback Earring | Minimal Gold Cartilage Stud | ASTM F136 G23 Implant Grade Titanium | Dainty Two Stone Earring",
+   "image": "https://i.etsystatic.com/67609393/r/il/3e57de/8557813877/il_fullxfull.8557813877_cfpb.jpg",
+   "gained": 1,
+   "total": 8,
+   "at": "2026-11-07T18:32:30.677Z"
   }
  ],
- "updated_at": "2026-11-07T13:49:08.473Z"
+ "updated_at": "2026-11-07T18:32:30.677Z"
 };
