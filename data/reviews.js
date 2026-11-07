@@ -7,13 +7,27 @@
 // No names and no buyer photos: Etsy does not provide a name, and the photos
 // belong to the buyers who took them.
 //
-// Last read from Etsy: 2026-11-07T18:32:30.677Z
+// Last read from Etsy: 2026-11-07T22:33:52.184Z
 window.MICKNACK_REVIEWS = {
-  "count": 7,
-  "average": 4.86,
-  "five_star": 6,
+  "count": 9,
+  "average": 4.89,
+  "five_star": 8,
   "shop_reviews_url": "https://www.etsy.com/shop/MicknackStacks/reviews",
   "reviews": [
+    {
+      "rating": 5,
+      "text": "She is such an awesome person to work with! She customized the jewelry to a length that worked for me, and i got a freebie! My orders also vane quickly in the mail, and packaged with care!",
+      "listing_id": "4566277207",
+      "piece": "Pear CZ Earring Connector Chain",
+      "date": "2026-11-07"
+    },
+    {
+      "rating": 5,
+      "text": "She is such a great seller! I would 1000% recommend her shop to anyone looking for some unique pieces!",
+      "listing_id": "4573481130",
+      "piece": "Mini Chic Dangle Threadless Flatback Earring",
+      "date": "2026-11-07"
+    },
     {
       "rating": 5,
       "text": "I love the piece so much cant wait to wear it",
