@@ -578,7 +578,31 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 8,
    "at": "2026-11-08T02:08:57.615Z"
+  },
+  {
+   "id": "4574722466",
+   "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
+   "gained": 1,
+   "total": 19,
+   "at": "2026-11-08T09:58:59.116Z"
+  },
+  {
+   "id": "4579868601",
+   "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
+   "image": "https://i.etsystatic.com/67609393/r/il/8841bd/8557802610/il_fullxfull.8557802610_oea8.jpg",
+   "gained": 1,
+   "total": 20,
+   "at": "2026-11-08T09:58:59.116Z"
+  },
+  {
+   "id": "4576665382",
+   "title": "Sugar Sweet Baby Pink Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/74a9f5/8533758408/il_fullxfull.8533758408_s7uv.jpg",
+   "gained": 1,
+   "total": 11,
+   "at": "2026-11-08T09:58:59.116Z"
   }
  ],
- "updated_at": "2026-11-08T02:08:57.615Z"
+ "updated_at": "2026-11-08T09:58:59.116Z"
 };
