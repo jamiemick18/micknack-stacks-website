@@ -1540,23 +1540,27 @@ img {
 }
 
 .hero-review {
-  margin: 18px 0 0;
-  font-size: 0.86rem;
-  color: #6b6259;
-  letter-spacing: 0.01em;
+  margin: 26px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
 }
 
-.hero-review a {
+/* Lighter than the two shop buttons above it, so it reads as a second
+   errand rather than competing with the thing that sells. */
+.hero-review-btn {
+  background: #fff;
   color: var(--ink, #1a1613);
-  text-decoration: none;
-  border-bottom: 1px solid var(--gold);
-  padding-bottom: 2px;
-  margin-left: 4px;
-  white-space: nowrap;
+  border: 1px solid rgba(15, 13, 11, 0.18);
 }
 
-.hero-review a:hover { color: var(--gold); }
-.hero-review-stars { color: var(--gold); letter-spacing: 0.08em; font-size: 0.78rem; }
+.hero-review-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+.hero-review-note { font-size: 0.82rem; color: #6b6259; }
+
+/* In the top bar on every page, for anyone who arrives somewhere else. */
+.nav-review { color: var(--gold) !important; }
 
 .review-row {
   display: grid;

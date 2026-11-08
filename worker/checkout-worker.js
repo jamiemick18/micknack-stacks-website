@@ -441,7 +441,9 @@ async function handleReview(request, env, cors) {
   await env.STOCK.put(`review:${id}`, JSON.stringify(review));
   await notifyPhone(env, "review");
 
-  return json({ ok: true, message: "Thank you. Jamie reads every one before it goes up." }, 200, cors);
+  // Reviews are still read before they go up; the page just no longer says
+  // so, which was making the moment of thanks feel like a terms page.
+  return json({ ok: true, message: "Thank you — that means a lot." }, 200, cors);
 }
 
 // Approving, hiding and deleting all happen from the HUB, behind the same

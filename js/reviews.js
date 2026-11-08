@@ -100,8 +100,8 @@
       }
       <form class="review-form" id="review-form" hidden>
         <p class="review-form-note">
-          Bought something and want to say so? Jamie reads every review before
-          it goes up here.
+          A line or two is plenty. How it sits, how it wears, whether you
+          would reach for it again.
         </p>
 
         <fieldset class="review-stars">
