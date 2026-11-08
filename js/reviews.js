@@ -21,6 +21,11 @@
 
   const ENDPOINT = "https://micknack-checkout.jamie-mick18.workers.dev/reviews";
 
+  // review.html is nothing but this section, so it shows more of the quotes
+  // and opens the form without being asked. Everywhere else, Kind Words is
+  // one section among many and behaves as it always has.
+  const onReviewPage = Boolean(window.MICKNACK_REVIEW_PAGE);
+
   const data = window.MICKNACK_REVIEWS || {};
   const fromEtsy = (Array.isArray(data.reviews) ? data.reviews : [])
     .filter((review) => review.rating === 5 && review.text)
@@ -81,14 +86,18 @@
     const best = all.filter((review) => review.text);
     host.innerHTML = `
       <h2 class="section-heading">Kind words</h2>
-      ${best.length ? `<div class="review-row">${best.slice(0, 8).map(quote).join("")}</div>` : ""}
-      <div class="review-invite">
+      ${best.length ? `<div class="review-row">${best.slice(0, onReviewPage ? 12 : 8).map(quote).join("")}</div>` : ""}
+      ${
+        onReviewPage
+          ? `<p class="review-ask review-ask-page">Now tell people how yours wears.</p>`
+          : `<div class="review-invite">
         <p class="review-ask">Bought something? Tell people how it wears.</p>
         <button type="button" class="btn btn-primary review-open" id="review-open">
           <span class="review-open-stars" aria-hidden="true">★★★★★</span>
           Leave a review
         </button>
-      </div>
+      </div>`
+      }
       <form class="review-form" id="review-form" hidden>
         <p class="review-form-note">
           Bought something and want to say so? Jamie reads every review before
@@ -159,7 +168,9 @@
     const form = document.getElementById("review-form");
     const open = document.getElementById("review-open");
     const status = document.getElementById("review-status");
-    if (!form || !open) return;
+    // open is absent on review.html, where the form is the page and there is
+    // nothing to toggle it against.
+    if (!form) return;
 
     // Fill in every star up to the one chosen, the way a rating is read
     // everywhere else. CSS alone cannot look backwards along the row.
@@ -173,10 +184,34 @@
     });
     paintStars();
 
-    open.addEventListener("click", () => {
-      form.hidden = !form.hidden;
-      open.textContent = form.hidden ? "Leave a review" : "Never mind";
-      if (!form.hidden) form.querySelector("textarea").focus();
+    function openForm(focus) {
+      form.hidden = false;
+      if (open) open.textContent = "Never mind";
+      if (focus) form.querySelector("textarea").focus();
+    }
+
+    if (open) {
+      open.addEventListener("click", () => {
+        if (form.hidden) {
+          openForm(true);
+        } else {
+          form.hidden = true;
+          open.textContent = "Leave a review";
+        }
+      });
+    }
+
+    // Arriving at #review means they came here to write one, so the form is
+    // already open. The textarea is NOT focused: on a phone that throws the
+    // keyboard up over the thing they were trying to read.
+    if (onReviewPage || location.hash === "#review") openForm(false);
+
+    // And for the prompt at the top of the page, tapped while already here.
+    window.addEventListener("hashchange", () => {
+      if (location.hash === "#review") {
+        openForm(false);
+        jumpHere();
+      }
     });
 
     form.addEventListener("submit", async (event) => {
@@ -203,7 +238,7 @@
         const body = await res.json();
         if (!res.ok) throw new Error(body.error || "That did not send.");
         form.hidden = true;
-        open.hidden = true;
+        if (open) open.hidden = true;
         status.hidden = false;
         status.textContent = body.message || "Thank you.";
         status.className = "review-status good";

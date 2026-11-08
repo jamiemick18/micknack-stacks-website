@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leave a review | Micknack Stacks</title>
+  <meta name="description" content="Tell people how your Micknack Stacks piece wears." />
+  <link rel="stylesheet" href="css/style.css?v=20261108c" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Micknack Stacks</a>
+      <nav>
+        <div class="nav-main">
+          <a href="index.html#shop">Shop</a>
+
+          <div class="nav-social">
+            <button type="button" class="nav-social-toggle" id="social-toggle"
+                    aria-expanded="false" aria-haspopup="true" aria-controls="social-menu">
+              Social <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="social-menu" id="social-menu" role="menu" hidden>
+              <a role="menuitem" href="https://www.instagram.com/micknackstacks/" target="_blank" rel="noopener">Instagram</a>
+              <a role="menuitem" href="https://www.tiktok.com/@micknack.stacks" target="_blank" rel="noopener">TikTok</a>
+              <a role="menuitem" href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Etsy Shop</a>
+              <a role="menuitem" href="#reviews">Kind words</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="nav-utility">
+          <a class="nav-saved" href="saved.html" id="saved-link" hidden>Favorites</a>
+          <a class="nav-cart" href="cart.html" id="cart-link">Cart</a>
+        </div>
+      </nav>
+    </div>
+      <a class="custom-band" href="#" id="custom-open">
+        <span class="custom-band-mark" aria-hidden="true">&#10022;</span>
+        <span class="custom-band-text">
+          <b>Custom pieces are welcome</b>
+          <span>Tell me what you are imagining and I will make it</span>
+        </span>
+        <span class="custom-band-go" aria-hidden="true">Ask &rsaquo;</span>
+      </a>
+  </header>
+
+  <main id="top">
+    <section class="shop-section" style="padding-top:44px;padding-bottom:0;">
+      <div class="wrap" style="max-width:680px;text-align:center;">
+        <p class="about-eyebrow">Thank you</p>
+        <h1 class="section-heading">How does it wear?</h1>
+        <p class="about-lede">
+          If something of mine arrived at your door, I would love to know how
+          it sits, how it wears, and whether you would reach for it again.
+        </p>
+        <p style="color:#6b6259;font-size:.9rem;">
+          Here is what other people have said. Yours goes at the bottom.
+        </p>
+      </div>
+    </section>
+
+    <section class="shop-section reviews-section" id="reviews" hidden></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div data-newsletter></div>
+      <img class="emblem" src="assets/emblem-bear-moon.png" alt="" />
+      <h2>Find Us on Etsy</h2>
+      <div class="foot-links">
+        <a href="https://www.etsy.com/shop/MicknackStacks" target="_blank" rel="noopener">Etsy Shop</a>
+        <a href="https://www.instagram.com/micknackstacks/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@micknack.stacks" target="_blank" rel="noopener">TikTok</a>
+        <a href="about.html">About</a>
+        <button type="button" class="foot-link-btn" id="contact-open">Email Us</button>
+        <a href="index.html#shop">Shop This Site</a>
+      </div>
+      <p class="view-count" data-view-line hidden>
+        <span id="view-count"></span> people have looked at these pieces, here and on Etsy.
+      </p>
+      <p class="fine-print">© <span id="year"></span> Micknack Stacks. Designed in Colorado.</p>
+    </div>
+  </footer>
+
+  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title">
+    <div class="contact-card">
+      <h2 id="contact-title">Get in touch</h2>
+      <p>Questions about a piece, sizing, or an order? Send an email and I'll get back to you.</p>
+      <a class="email" id="contact-email" href="#">…</a>
+      <div class="contact-actions">
+        <a class="btn btn-primary" id="contact-mailto" href="mailto:micknackstacks@gmail.com">Email me</a>
+        <button type="button" class="btn btn-secondary" id="contact-copy">Copy address</button>
+        <button type="button" class="btn btn-secondary" data-close>Close</button>
+      </div>
+      <span class="contact-copied" id="contact-copied" hidden></span>
+    </div>
+  </dialog>
+
+  <script>window.MICKNACK_REVIEW_PAGE = true;</script>
+  <script src="data/reviews.js"></script>
+  <script src="data/stones.js"></script>
+  <script src="js/hearts.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="data/newsletter.js"></script>
+  <script src="js/newsletter.js"></script>
+  <script src="js/newsletter-popup.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/gems.js?v=20261108c"></script>
+  <script src="js/custom.js?v=20261108c"></script>
+  <script src="js/views.js"></script>
+</body>
+</html>
