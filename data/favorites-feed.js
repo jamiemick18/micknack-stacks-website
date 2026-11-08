@@ -554,7 +554,31 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 7,
    "at": "2026-11-07T22:33:52.184Z"
+  },
+  {
+   "id": "4596333038",
+   "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+   "gained": 1,
+   "total": 20,
+   "at": "2026-11-08T02:08:57.615Z"
+  },
+  {
+   "id": "4601338080",
+   "title": "Hot Mess Pink  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Hot Pink Marquise Dangle | Dainty Cartilage Chain Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/d0159d/8773871911/il_fullxfull.8773871911_5ixs.jpg",
+   "gained": 1,
+   "total": 6,
+   "at": "2026-11-08T02:08:57.615Z"
+  },
+  {
+   "id": "4571571883",
+   "title": "Sprinkle Chain | 3×5mm Pear CZ Ear Connector Chain | 2mm Dainty Gold Earring Chain | Helix Conch Lobe Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b6fe06/8496164574/il_fullxfull.8496164574_o4lp.jpg",
+   "gained": 1,
+   "total": 8,
+   "at": "2026-11-08T02:08:57.615Z"
   }
  ],
- "updated_at": "2026-11-07T22:33:52.184Z"
+ "updated_at": "2026-11-08T02:08:57.615Z"
 };
