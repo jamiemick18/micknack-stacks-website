@@ -1533,13 +1533,22 @@ img {
 
 .review-row {
   display: grid;
-  /* Three across, so six quotes read as two even rows rather than a row of
-     four and a stranded pair. */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Four across, so eight quotes read as two even rows. auto-fit would give
+     three on a narrow desktop and strand the eighth on its own, so the count
+     is fixed here and stepped down by hand below. */
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
   max-width: var(--max-width);
   margin: 26px auto 0;
   padding: 0 24px;
+}
+
+@media (max-width: 1000px) {
+  .review-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .review-row { grid-template-columns: 1fr; }
 }
 
 .review {
