@@ -610,7 +610,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 4,
    "at": "2026-11-08T16:37:07.615Z"
+  },
+  {
+   "id": "4573623776",
+   "title": "Midnight Battie Threadless Flatback Earring | Gold Bat Cartilage Stud | Titanium Labret Post | Sparkly Gothic Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/810a99/8511022266/il_fullxfull.8511022266_fl1z.jpg",
+   "gained": 1,
+   "total": 4,
+   "at": "2026-11-08T20:59:45.591Z"
   }
  ],
- "updated_at": "2026-11-08T20:06:18.693Z"
+ "updated_at": "2026-11-08T20:59:45.591Z"
 };
