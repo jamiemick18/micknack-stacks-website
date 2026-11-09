@@ -1575,6 +1575,11 @@ async function handleCheckout(request, env, cors, origin) {
       mode: "payment",
       line_items: lines,
       metadata,
+      // Puts the "Add promotion code" box on Stripe's payment page, so the
+      // codes Jamie runs alongside Etsy's work here too. Stripe decides what
+      // a code is worth and whether it has expired; the shop only advertises
+      // it (data/promo.js). No code, no discount — the box is just ignored.
+      allow_promotion_codes: true,
       shipping_address_collection: { allowed_countries: ["US"] },
       shipping_options: [
         {

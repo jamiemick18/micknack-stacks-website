@@ -24,6 +24,22 @@ function money(amount) {
   return "$" + Number(amount).toFixed(2);
 }
 
+// The discount is applied by Stripe on the payment page, not here, so the
+// total above is honest and the code is mentioned right where it gets typed.
+// Says nothing at all when no offer is running — see data/promo.js.
+function promoLine() {
+  const promo = window.MICKNACK_PROMO;
+  if (!promo || !promo.code) return "";
+  const now = Date.now();
+  const starts = promo.starts ? Date.parse(promo.starts) : NaN;
+  const ends = promo.ends ? Date.parse(promo.ends) : NaN;
+  if (!isNaN(starts) && now < starts) return "";
+  if (!isNaN(ends) && now >= ends) return "";
+  return `<p class="cart-promo">Have a code? Enter <b>${escapeHtml(promo.code)}</b> at checkout for ${Number(
+    promo.percent
+  )}% off.</p>`;
+}
+
 function availableFor(id) {
   if (!stockMap || typeof stockMap[id] !== "number") return null; // untracked
   return stockMap[id];
@@ -185,6 +201,7 @@ function renderCartPage() {
       <div class="cart-row"><span>Shipping</span><span>${money(SHIPPING)}</span></div>
       <div class="cart-row cart-total"><span>Total</span><span>${money(subtotal + SHIPPING)}</span></div>
       <p class="cart-note">One flat $5 shipping charge, however many pieces you order. Ships from Colorado.</p>
+      ${promoLine()}
       <button type="button" class="btn btn-primary btn-lg" id="checkout"${problems.length ? " disabled" : ""}>Checkout</button>
       <p class="cart-error" id="checkout-error" hidden></p>
       <a class="cart-keep" href="index.html#shop">Keep shopping</a>
