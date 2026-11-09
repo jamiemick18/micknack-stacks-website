@@ -1,21 +1,24 @@
 // ---------------------------------------------------------------------------
-// The offer that is running, if one is.
+// The offer the shop ANNOUNCES, if it announces one.
 // ---------------------------------------------------------------------------
 //
-// Etsy keeps its own copy of this; the code itself lives on Stripe as a
-// promotion code. This file is only what the SHOP SAYS about it, so the bar at
-// the top of the page and the note in the cart agree with each other and with
-// the till.
+// Nothing here switches a code on or off. The codes themselves live on Stripe
+// and work whether or not this file mentions them — so WUAN1 still takes its
+// 5% off for anyone Jamie hands it to, it is simply not shown to every passer
+// by. That is the difference between a sale and a thank-you.
 //
-// To end an offer early, set `code` to "". To run a new one: make the matching
-// promotion code on Stripe first, then change these four lines. `ends` is when
-// it stops — the bar takes itself down on its own, so a dead code never sits
-// on the page promising a discount that no longer works.
+// An empty `code` means the shop says nothing at all: no bar above the header,
+// no line in the cart. The box to type a code into is still on the payment
+// page, which is where a code someone was given gets used.
+//
+// To announce an offer: make the promotion code on Stripe first, then fill
+// these in. `ends` is when the shop stops mentioning it — it takes itself
+// down, so a dead code never sits on the page promising money off.
 window.MICKNACK_PROMO = {
-  code: "WUAN1",
-  percent: 5,
-  starts: "2026-11-08T17:00:00-07:00",
-  ends: "2027-01-01T00:00:00-07:00",
+  code: "",
+  percent: 0,
+  starts: "",
+  ends: "",
   // Shown on the bar. Short — it has to fit on a phone.
-  note: "Holiday treat",
+  note: "",
 };
