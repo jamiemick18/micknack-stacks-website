@@ -9,7 +9,7 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-08T20:59:45.591Z
+// Last read from Etsy: 2026-11-09T00:45:31.355Z
 
 window.MICKNACK_VARIATIONS = {
   // Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain
@@ -26,6 +26,8 @@ window.MICKNACK_VARIATIONS = {
   "4581913102": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Alpenglow Labret to Earring Connector | Gold CZ Ear Chain | 
   "4579820434": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
+  // SLIMED Green CZ Ear Chain | 40mm Apple Green Marquise Cartil
+  "4579741852": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Pikes Peak Summit Threadless Flatback Earring | Gold CZ Chai
   "4573640401": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Soft Bow Threadless Flatback Earring | Minimal Gold Bow Stud

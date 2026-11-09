@@ -618,7 +618,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 4,
    "at": "2026-11-08T20:59:45.591Z"
+  },
+  {
+   "id": "4599690242",
+   "title": "Soft Spark G23 Titanium Labret to Sterling Silver Ear Chain | ASTM F136 Threadless Connector | 40mm Pink Lavender Clear CZ Dangle",
+   "image": "https://i.etsystatic.com/67609393/r/il/5469bc/8760832607/il_fullxfull.8760832607_8ypb.jpg",
+   "gained": 1,
+   "total": 2,
+   "at": "2026-11-09T00:45:31.355Z"
   }
  ],
- "updated_at": "2026-11-08T20:59:45.591Z"
+ "updated_at": "2026-11-09T00:45:31.355Z"
 };

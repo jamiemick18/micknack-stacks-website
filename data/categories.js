@@ -6,7 +6,7 @@
 // put corrections in data/category-overrides.json, which wins over the
 // titles and survives the next sync.
 //
-// Last worked out: 2026-11-08T20:59:45.591Z
+// Last worked out: 2026-11-09T00:45:31.355Z
 
 window.MICKNACK_CATEGORIES = [
   {
@@ -50,6 +50,7 @@ window.MICKNACK_CATEGORY_OF = {
   "4581913102": "chains",
   "4579820434": "chains",
   "4576742876": "chains",
+  "4579741852": "chains",
   "4577301519": "chains",
   "4576665382": "chains",
   "4575212975": "hoops",
@@ -75,7 +76,6 @@ window.MICKNACK_CATEGORY_OF = {
   "4573422828": "studs",
   "4573651300": "studs",
   "4573638523": "studs",
-  "4579741852": "chains",
   "4573433368": "hoops",
   "starfall-double-drape-ear-chain-1-5mm-gold-cable": "chains",
   "starfall-cz-ear-chain-45mm-18k-gold-pvd-satellit": "chains"

@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-08T20:59:45.591Z",
+  "synced_at": "2026-11-09T00:45:31.355Z",
   "listings": [
     {
       "listing_id": "4601246993",
@@ -647,7 +647,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 5,
       "created": "2026-10-20T19:38:15.000Z",
       "views": 29,
-      "num_favorers": 1,
+      "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-10-21T14:19:56.913Z"
     },
@@ -913,6 +913,40 @@ window.MICKNACK_PRODUCTS = {
       "created": "2026-09-16T20:46:30.000Z",
       "views": 173,
       "num_favorers": 14,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4579741852",
+      "title": "SLIMED Green CZ Ear Chain | 40mm Apple Green Marquise Cartilage Chain Connector",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4579741852/slimed-apple-green-cz-ear-chain-g23",
+      "description": "SLIMED 💚✨\n\nLooks toxic. Is actually just really cute.\n\nSLIMED features a delicate 40 mm gold chain finished with five bright apple-green marquise CZ stones. Each stone hangs individually from the chain, giving the piece plenty of movement while the sharp marquise shape makes that electric green color hit even harder.\n\nMore styles and options available on\nwww.micknackstacks.com\n\nThe chain gives a little radioactive-looking chaos to your stack. Bright, sharp, and absolutely not interested in blending in. 💚\n\nWhy you’ll love it:\n40 mm earring chain\nFive apple-green marquise CZ stones\n3 × 5 mm stones\nIndividually dangling CZs for movement\nBright electric green color\nEasy way to add a bold pop of color to a curated ear stack.\n\nWear it from helix to lobe, cartilage to hoop, or anywhere your piercing placement allows for a soft 40 mm drape.\n\nThe vivid green stones make it an easy statement piece, while the delicate chain keeps the overall look light and wearable.\n\nPerfect for:\nHelix-to-lobe styling • Cartilage stacks • Green ear stacks • Alt jewelry • Curated ears • Statement chain styling\n\nFive little drops of radioactive bad decisions. 💚✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/be1136/8822145238/il_fullxfull.8822145238_t7lq.jpg",
+        "https://i.etsystatic.com/67609393/r/il/83621e/8604612151/il_fullxfull.8604612151_8yxk.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/ed49/a71df198-bf5d-4e42-b7b9-5376283860a0/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "piercing chain",
+        "ASTM F136",
+        "G23 Titanium",
+        "Threadless flatback",
+        "Pushpin",
+        "Flatback"
+      ],
+      "quantity": 5,
+      "created": "2026-09-21T16:04:05.000Z",
+      "views": 0,
+      "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1761,42 +1795,6 @@ window.MICKNACK_PRODUCTS = {
       "added_at": "2026-09-30T19:35:47.289Z",
       "etsy_state": "inactive",
       "left_etsy_at": "2026-10-29T19:51:07.524Z"
-    },
-    {
-      "listing_id": "4579741852",
-      "title": "SLIMED | Apple Green CZ Ear Chain | ASTM F136 G23 Titanium Threadless Flat Back | Marquise Drip Chain | Spooky Ear Stack",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4579741852/slimed-apple-green-cz-ear-chain-g23",
-      "description": "SLIMED 💚👻\n\nDrippy. Gooey. Radioactive, and still cute.\nThree juicy 3×6mm apple green marquise CZ stones drip from a dainty 30mm gold chain, giving full-on freshly slimed ectoplasm energy. 🫠✨\n\nBright, weird, sparkly and just a little unhinged, SLIMED was made for the ear stack that refuses to behave.\n\nAnd the details are just as good from the back. SLIMED sits on a 6mm solid G23 titanium post with a star-shaped flat back and comfortable threadless pushpin closure.\n\n💚 Three 3×6mm apple green marquise CZ stones\n🫠 30mm drippy gold chain\n👻 6mm or 8mm solid ASTM F136 G23 titanium post\n⭐ Star-shaped flat back\n✨ Threadless pushpin style\n🍏 Bright apple green sparkle\n🖤 Sold individually\n\nThe goo is fake. The sparkle is VERY real.\nGet SLIMED. Stay sparkly. 💚👻",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/60261b/8556752050/il_fullxfull.8556752050_5lnq.jpg",
-        "https://i.etsystatic.com/67609393/r/il/83621e/8604612151/il_fullxfull.8604612151_8yxk.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/d6a9/5fb3c098-fc41-41a0-b1aa-1ffd2aaaf7ec/vid_v1.mp4",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "piercing chain",
-        "ASTM F136",
-        "G23 Titanium",
-        "Threadless flatback",
-        "Pushpin",
-        "Flatback"
-      ],
-      "quantity": 5,
-      "created": "2026-09-21T16:04:05.000Z",
-      "views": 24,
-      "num_favorers": 0,
-      "etsy_active": false,
-      "added_at": "2026-09-30T19:35:47.289Z",
-      "left_etsy_at": "2026-10-23T01:20:53.342Z",
-      "etsy_state": "inactive"
     },
     {
       "listing_id": "4573433368",
