@@ -9,7 +9,7 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-09T00:45:31.355Z
+// Last read from Etsy: 2026-11-09T07:46:05.251Z
 
 window.MICKNACK_VARIATIONS = {
   // Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain
@@ -36,8 +36,6 @@ window.MICKNACK_VARIATIONS = {
   "4573623947": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Double Diamond Run Threadless Flatback Earring | Gold Geomet
   "4573632540": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
-  // Cherry Crush Threadless Flatback Earring | Pink & Clear Hear
-  "4573613361": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Mountain Climber Love Threadless Flatback Earring | Gold CZ 
   "4573609723": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Midnight Battie Threadless Flatback Earring | Gold Bat Carti

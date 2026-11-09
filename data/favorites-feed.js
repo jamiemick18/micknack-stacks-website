@@ -626,7 +626,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 2,
    "at": "2026-11-09T00:45:31.355Z"
+  },
+  {
+   "id": "4591313547",
+   "title": "Everyday 18g G23 ASTM F136 Titanium Gold Clicker Hoop | 18K PVD Implant Grade Cartilage Ring | Helix Conch Lobe 5mm–12mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/e158b3/8645167936/il_fullxfull.8645167936_hbuv.jpg",
+   "gained": 1,
+   "total": 5,
+   "at": "2026-11-09T07:46:05.251Z"
+  },
+  {
+   "id": "4573472494",
+   "title": "Barely There Threadless Flatback Earring | Minimal Gold Cartilage Stud | ASTM F136 G23 Implant Grade Titanium | Dainty Two Stone Earring",
+   "image": "https://i.etsystatic.com/67609393/r/il/3e57de/8557813877/il_fullxfull.8557813877_cfpb.jpg",
+   "gained": 1,
+   "total": 9,
+   "at": "2026-11-09T07:46:05.251Z"
   }
  ],
- "updated_at": "2026-11-09T00:45:31.355Z"
+ "updated_at": "2026-11-09T07:46:05.251Z"
 };

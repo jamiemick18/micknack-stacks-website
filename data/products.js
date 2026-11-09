@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-09T00:45:31.355Z",
+  "synced_at": "2026-11-09T07:46:05.251Z",
   "listings": [
     {
       "listing_id": "4601246993",
@@ -101,7 +101,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 9,
       "created": "2026-11-02T19:50:28.000Z",
-      "views": 15,
+      "views": 20,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-11-02T20:06:49.958Z"
@@ -206,7 +206,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-08T19:59:35.000Z",
-      "views": 79,
+      "views": 84,
       "num_favorers": 8,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -220,7 +220,8 @@ window.MICKNACK_PRODUCTS = {
       "description": "Golden Hour ✨🥂\n\nWarm, glowy, and catching the light like the last few minutes before sunset.\nGolden Hour features a delicate gold chain with five individually dangling CZ stones — three round champagne-colored stones alternating with two clear kite-shaped stones. The mix of warm champagne sparkle and crisp clear facets gives the piece dimension without making it feel overly busy.\n\nwww.micknackstacks.com⁠\n\nWhy you’ll love it:\nFive individually dangling CZ stones\nThree round champagne CZ stones\nTwo clear kite-shaped CZ stones\nAlternating stone shapes for extra texture\nWarm, neutral sparkle that pairs easily with gold jewelry and delicate movement as the stones catch the light\nAdds depth without overpowering the rest of your stack\n\nGolden Hour is a chain connector only, designed to attach between compatible hoops, earrings, or flatback jewelry you already own.\n\nDrape it between two piercings for a soft layered look, pair it with simple gold hoops, or work it into a fuller curated stack.\n\nThe champagne stones give off a warm, honey-toned glow while the clear kite stones break up the color with brighter flashes of light.\n\nMaterials & Details:\nGold-tone chain, 40mm long\nFive dangling CZ stones\n3 round champagne CZ stones\n2 clear kite-shaped CZ stones\nConnector loops at both ends\nChain connector only\nEarrings and labret posts not included\nSold individually\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Curated ears • Neutral ear stacks • Dainty chain styling\nWarm light. Tiny sparkle. Golden Hour, whenever you want it. ✨🥂\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
       "images": [
         "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
-        "https://i.etsystatic.com/67609393/r/il/65ce53/8732822721/il_fullxfull.8732822721_qf7t.jpg"
+        "https://i.etsystatic.com/67609393/r/il/65ce53/8732822721/il_fullxfull.8732822721_qf7t.jpg",
+        "https://i.etsystatic.com/67609393/r/il/61a9ae/8822185426/il_fullxfull.8822185426_kbf6.jpg"
       ],
       "video": "https://v.etsystatic.com/e/videos/c7af/ae7878a4-a901-4713-a0e2-336e6f03415c/vid_v1.mp4",
       "tags": [
@@ -240,7 +241,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-10-15T22:11:01.000Z",
-      "views": 186,
+      "views": 198,
       "num_favorers": 20,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
@@ -274,8 +275,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 19,
       "created": "2026-10-08T17:47:55.000Z",
-      "views": 49,
-      "num_favorers": 4,
+      "views": 51,
+      "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-10-08T19:10:48.816Z"
     },
@@ -308,7 +309,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-13T21:39:50.000Z",
-      "views": 216,
+      "views": 217,
       "num_favorers": 19,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -342,7 +343,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-10-22T23:42:27.000Z",
-      "views": 26,
+      "views": 27,
       "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-10-23T01:20:53.342Z"
@@ -458,10 +459,10 @@ window.MICKNACK_PRODUCTS = {
       "url": "https://www.etsy.com/listing/4601255929/baby-pink-cz-earring-connector-chain",
       "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/ada0aa/8773399497/il_fullxfull.8773399497_ysno.jpg",
+        "https://i.etsystatic.com/67609393/r/il/387ab7/8870084295/il_fullxfull.8870084295_ekyd.jpg",
         "https://i.etsystatic.com/67609393/r/il/8b99d6/8773399583/il_fullxfull.8773399583_6o5t.jpg"
       ],
-      "video": "",
+      "video": "https://v.etsystatic.com/e/videos/5cb2/d9d9b6b4-2195-4f28-9be3-bd7935282e89/vid_v1.mp4",
       "tags": [
         "earring chain",
         "earring connector",
@@ -646,21 +647,21 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-10-20T19:38:15.000Z",
-      "views": 29,
+      "views": 30,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-10-21T14:19:56.913Z"
     },
     {
       "listing_id": "4596261114",
-      "title": "Sterling Silver Drizzle Ear Chain | 30mm Earring Connector | 3x5mm CZ Drop Dangles | Dainty Cartilage Chain Jewelry",
+      "title": "Sterling Silver Drizzle Ear Chain | 40mm Earring Connector | 3x5mm CZ Drop Dangles | Dainty Cartilage Chain Jewelry",
       "price": "19.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4596261114/sterling-silver-drizzle-ear-chain-30mm",
-      "description": "Sterling Silver Drizzle 💧\nA little rainfall for your ear stack.\n\nSterling Silver Drizzle features a delicate 30 mm sterling silver chain finished with five 3 × 5 mm drop-shaped CZ stones that move and catch the light like tiny raindrops.\n\nThe cool silver tone gives this piece a clean, icy feel while the five dangling stones add soft movement and sparkle. It’s delicate enough for an everyday stack, but detailed enough to completely change the look of your earrings.\n\nwww.micknackstacks.com⁠\n\nWhy you’ll love it:\n30 mm ear-chain connector\nDelicate 1.5 mm sterling silver chain\nFive 3 × 5 mm drop-shaped CZ stones\nSterling silver jump rings\nSoft dangling movement\nCool, bright silver finish\nLightweight, delicate \n\nSterling Silver Drizzle is a chain connector only, designed to attach between compatible earrings, hoops, or flatback jewelry you already own.\n\nDrape it between two piercings for a soft waterfall effect, pair it with simple silver hoops for a clean look, or layer it into a more detailed curated stack.\n\nMaterials & Details:\nChain length: 30 mm\nChain width: 1.5 mm\nChain: Sterling silver\nJump rings: Sterling silver\nStones: Five clear CZ\nStone size: 3 × 5 mm\nStone shape: Drop / pear-shaped\nConnector loops at both ends\n\nChain connector only\nEarrings and labret posts not included\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Silver ear stacks • Curated ears • Dainty chain styling\nFive little drops. Zero chance of staying unnoticed. 💧\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "description": "Sterling Silver Drizzle 💧\nA little rainfall for your ear stack.\n\nSterling Silver Drizzle features a delicate 40 mm sterling silver chain finished with five 3 × 5 mm drop-shaped CZ stones that move and catch the light like tiny raindrops.\n\nThe cool silver tone gives this piece a clean, icy feel while the five dangling stones add soft movement and sparkle. It’s delicate enough for an everyday stack, but detailed enough to completely change the look of your earrings.\n\nwww.micknackstacks.com⁠\n\nWhy you’ll love it:\n40 mm ear-chain connector\nDelicate 1.5 mm sterling silver chain\nFive 3 × 5 mm drop-shaped CZ stones\nSterling silver jump rings\nSoft dangling movement\nCool, bright silver finish\nLightweight, delicate \n\nSterling Silver Drizzle is a chain connector only, designed to attach between compatible earrings, hoops, or flatback jewelry you already own.\n\nDrape it between two piercings for a soft waterfall effect, pair it with simple silver hoops for a clean look, or layer it into a more detailed curated stack.\n\nMaterials & Details:\nChain length: 40 mm\nChain width: 1.5 mm\nChain: Sterling silver\nJump rings: Sterling silver\nStones: Five clear CZ\nStone size: 3 × 5 mm\nStone shape: Drop / pear-shaped\nConnector loops at both ends\n\nChain connector only\nEarrings and labret posts not included\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Silver ear stacks • Curated ears • Dainty chain styling\nFive little drops. Zero chance of staying unnoticed. 💧\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
       "images": [
         "https://i.etsystatic.com/67609393/r/il/6f0f7e/8684444088/il_fullxfull.8684444088_n3z3.jpg",
-        "https://i.etsystatic.com/67609393/r/il/6d93b3/8684444098/il_fullxfull.8684444098_p4i5.jpg"
+        "https://i.etsystatic.com/67609393/r/il/7b8a8d/8870071363/il_fullxfull.8870071363_h8d2.jpg"
       ],
       "video": "https://v.etsystatic.com/e/videos/0b04/b0854f94-8688-489d-bce7-22a650080aa7/vid_v1.mp4",
       "tags": [
@@ -678,9 +679,9 @@ window.MICKNACK_PRODUCTS = {
         "multiple piercings",
         "sterling silver"
       ],
-      "quantity": 3,
+      "quantity": 5,
       "created": "2026-10-15T20:06:48.000Z",
-      "views": 23,
+      "views": 25,
       "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
@@ -713,7 +714,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-01T21:11:50.000Z",
-      "views": 172,
+      "views": 175,
       "num_favorers": 16,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -781,7 +782,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-30T21:01:07.000Z",
-      "views": 36,
+      "views": 37,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-10-01T13:17:40.579Z"
@@ -1014,7 +1015,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-16T18:47:42.000Z",
-      "views": 82,
+      "views": 85,
       "num_favorers": 11,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1111,7 +1112,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-12T00:05:44.000Z",
-      "views": 15,
+      "views": 21,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1144,7 +1145,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T23:40:39.000Z",
-      "views": 17,
+      "views": 18,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1177,7 +1178,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T23:20:43.000Z",
-      "views": 24,
+      "views": 27,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1212,39 +1213,6 @@ window.MICKNACK_PRODUCTS = {
       "created": "2026-09-11T22:59:05.000Z",
       "views": 36,
       "num_favorers": 4,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4573613361",
-      "title": "Cherry Crush Threadless Flatback Earring | Pink & Clear Heart CZ Stud | Gold Bow Cartilage Earring | Titanium Labret Post",
-      "price": "16.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4573613361/pinkie-bow-threadless-flatback-earring",
-      "description": "Cherry Crush 🍒\n\nCherry Crush features two heart-shaped CZ stones styled like a tiny pair of cherries, with one sparkling clear CZ and one pink CZ for a fun mismatched pop of color. Finished with a petite gold bow detail, it gives your ear stack a cute romantic touch without feeling overdone.\n\nIt’s dainty, feminine, and perfect for anyone who likes their jewelry to be a little sweet treat.\n\nWhy you’ll love it:\nTwo heart-shaped CZ “cherries”\nOne clear CZ and one pink CZ\nPetite gold bow detail\nDainty, playful design\nAdds a soft pop of color\nEasy to mix into curated ear stacks\nPerfect for everyday wear\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the cute, detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nOne pink heart-shaped CZ\nOne clear heart-shaped CZ\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nTwo little hearts. One serious crush. 🍒💗\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/0dd077/8559046031/il_fullxfull.8559046031_qz6r.jpg"
-      ],
-      "video": "",
-      "tags": [
-        "gold bow earring",
-        "bow flatback",
-        "threadless earring",
-        "push pin earring",
-        "titanium labret",
-        "flatback earring",
-        "cartilage earring",
-        "helix earring",
-        "tragus earring",
-        "dainty gold earring",
-        "gold cartilage",
-        "cherry earring",
-        "cherry flatback"
-      ],
-      "quantity": 1,
-      "created": "2026-09-11T22:53:41.000Z",
-      "views": 66,
-      "num_favorers": 9,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1311,7 +1279,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-09-11T22:37:16.000Z",
       "views": 40,
-      "num_favorers": 4,
+      "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1344,7 +1312,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T22:25:35.000Z",
-      "views": 35,
+      "views": 37,
       "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1378,7 +1346,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T22:21:13.000Z",
-      "views": 81,
+      "views": 86,
       "num_favorers": 7,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1445,8 +1413,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T17:54:53.000Z",
-      "views": 129,
-      "num_favorers": 8,
+      "views": 138,
+      "num_favorers": 9,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1584,6 +1552,41 @@ window.MICKNACK_PRODUCTS = {
       "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4573613361",
+      "title": "Cherry Crush Threadless Flatback Earring | Pink & Clear Heart CZ Stud | Gold Bow Cartilage Earring | Titanium Labret Post",
+      "price": "16.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4573613361/pinkie-bow-threadless-flatback-earring",
+      "description": "Cherry Crush 🍒\n\nCherry Crush features two heart-shaped CZ stones styled like a tiny pair of cherries, with one sparkling clear CZ and one pink CZ for a fun mismatched pop of color. Finished with a petite gold bow detail, it gives your ear stack a cute romantic touch without feeling overdone.\n\nIt’s dainty, feminine, and perfect for anyone who likes their jewelry to be a little sweet treat.\n\nWhy you’ll love it:\nTwo heart-shaped CZ “cherries”\nOne clear CZ and one pink CZ\nPetite gold bow detail\nDainty, playful design\nAdds a soft pop of color\nEasy to mix into curated ear stacks\nPerfect for everyday wear\nWhat makes this piece a little different?\n\nThe post that actually sits inside your piercing is implant-grade titanium.\n\nI intentionally paired this decorative 316L surgical steel top with a gold PVD implant-grade titanium flatback post to give you the cute, detailed designs you want while keeping a high-quality material inside the piercing channel.\n\nWhy a titanium post?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nDecorative top: 316L surgical steel\nFlatback post: Implant-grade titanium\nFinish: Gold PVD\nOne pink heart-shaped CZ\nOne clear heart-shaped CZ\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nTwo little hearts. One serious crush. 🍒💗\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/0dd077/8559046031/il_fullxfull.8559046031_qz6r.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "gold bow earring",
+        "bow flatback",
+        "threadless earring",
+        "push pin earring",
+        "titanium labret",
+        "flatback earring",
+        "cartilage earring",
+        "helix earring",
+        "tragus earring",
+        "dainty gold earring",
+        "gold cartilage",
+        "cherry earring",
+        "cherry flatback"
+      ],
+      "quantity": 1,
+      "created": "2026-09-11T22:53:41.000Z",
+      "views": 66,
+      "num_favorers": 9,
+      "etsy_active": false,
+      "added_at": "2026-09-30T19:35:47.289Z",
+      "etsy_state": "inactive",
+      "left_etsy_at": "2026-11-09T07:46:05.251Z"
     },
     {
       "listing_id": "4573443638",
