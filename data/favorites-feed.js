@@ -674,7 +674,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 3,
    "at": "2026-11-09T16:51:57.875Z"
+  },
+  {
+   "id": "4566919003",
+   "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg",
+   "gained": 1,
+   "total": 17,
+   "at": "2026-11-09T18:31:54.544Z"
+  },
+  {
+   "id": "4576665382",
+   "title": "Sugar Sweet Baby Pink Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/74a9f5/8533758408/il_fullxfull.8533758408_s7uv.jpg",
+   "gained": 1,
+   "total": 12,
+   "at": "2026-11-09T18:31:54.544Z"
   }
  ],
- "updated_at": "2026-11-09T16:51:57.875Z"
+ "updated_at": "2026-11-09T18:31:54.544Z"
 };
