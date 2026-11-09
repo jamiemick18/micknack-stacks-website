@@ -642,7 +642,39 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 9,
    "at": "2026-11-09T07:46:05.251Z"
+  },
+  {
+   "id": "4574722466",
+   "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
+   "gained": 1,
+   "total": 20,
+   "at": "2026-11-09T16:51:57.875Z"
+  },
+  {
+   "id": "4573601729",
+   "title": "Drip Threadless Flatback Earring | Dainty Gold Dangle | Titanium Labret Post | Minimal Cartilage Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/dd8fa7/8510995928/il_fullxfull.8510995928_1ert.jpg",
+   "gained": 1,
+   "total": 5,
+   "at": "2026-11-09T16:51:57.875Z"
+  },
+  {
+   "id": "4573616908",
+   "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
+   "gained": 1,
+   "total": 8,
+   "at": "2026-11-09T16:51:57.875Z"
+  },
+  {
+   "id": "4573443165",
+   "title": "Cosmic Supernova Threadless Flatback Earring | Gold Starburst Cartilage Stud | ASTM F136 G23 Implant Grade Titanium | Celestial Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/ec8a54/8509879106/il_fullxfull.8509879106_hrg2.jpg",
+   "gained": 1,
+   "total": 3,
+   "at": "2026-11-09T16:51:57.875Z"
   }
  ],
- "updated_at": "2026-11-09T07:46:05.251Z"
+ "updated_at": "2026-11-09T16:51:57.875Z"
 };
