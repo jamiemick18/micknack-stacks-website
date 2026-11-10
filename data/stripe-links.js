@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-10T20:13:55.188Z",
+  "generated_at": "2026-11-10T21:59:26.199Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -574,6 +574,16 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UaLQV680JvUCS8J7GFfy5DK",
       "price_id": "price_1UaLQU680JvUCS8JwSZWCohu",
       "product_id": "prod_VbYXBB6r4zBUOb"
+    },
+    "4614342317": {
+      "url": "https://buy.stripe.com/5kQ14g2YV7vB3hr7BiaZi1X",
+      "name": "Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | G23 ASTM F136 Titanium Cartilage Jewelry",
+      "price": "24.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UaN4c680JvUCS8JdoEqjbyp",
+      "price_id": "price_1UaN4b680JvUCS8Jmi7UApg9",
+      "product_id": "prod_VbaFHJlRvQRtoa"
     }
   }
 };

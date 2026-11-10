@@ -102,13 +102,23 @@ async function findShopId(shopName) {
   return data.results[0].shop_id;
 }
 
-async function fetchAllActiveListings(shopId) {
+// Two endpoints return the same thing, but not at the same time.
+//
+// The public /listings/active one reads from Etsy's search index, which can be
+// an hour or more behind the shop. A piece posted minutes ago is live on Etsy
+// and simply missing here, so a sync run right after listing something quietly
+// did nothing. The owner endpoint reads the shop itself and has the piece
+// immediately, so it's used whenever we managed to sign in, and the public one
+// is only the fallback for a run without a token.
+async function fetchAllActiveListings(shopId, signedIn) {
   const listings = [];
   const limit = 100;
   let offset = 0;
   while (true) {
     const page = await etsyGet(
-      `/shops/${shopId}/listings/active?limit=${limit}&offset=${offset}`
+      signedIn
+        ? `/shops/${shopId}/listings?state=active&limit=${limit}&offset=${offset}`
+        : `/shops/${shopId}/listings/active?limit=${limit}&offset=${offset}`
     );
     listings.push(...page.results);
     if (page.results.length < limit) break;
@@ -246,7 +256,7 @@ async function main() {
   const shopId = await findShopId(SHOP_NAME);
 
   console.log(`Fetching active listings for shop_id ${shopId}...`);
-  const rawListings = await fetchAllActiveListings(shopId);
+  const rawListings = await fetchAllActiveListings(shopId, Boolean(accessToken));
   console.log(`Found ${rawListings.length} active listing(s).`);
 
   console.log("Fetching listing photos and videos...");

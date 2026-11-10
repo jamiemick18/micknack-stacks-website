@@ -2,8 +2,29 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-10T19:22:00.541Z",
+  "synced_at": "2026-11-10T21:58:04.731Z",
   "listings": [
+    {
+      "listing_id": "4614342317",
+      "title": "Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | G23 ASTM F136 Titanium Cartilage Jewelry",
+      "price": "24.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4614342317/delicate-ridgeline-18g-threadless",
+      "description": "Delicate Ridgeline ✨\n\nA tiny line of sparkle inspired by the shape of a mountain ridge.\n\nDelicate Ridgeline is an ultra-dainty 18G threadless flatback featuring a gentle curve of clear CZ stones. The low-profile shape follows the ear beautifully, giving you a subtle little shimmer that feels polished without taking over your stack.\n\nMore styles avail on\nwww.micknackstacks.com\n\nThe entire piece is manufactured from G23 titanium to ASTM F136 implant-grade specifications, giving you a lightweight, corrosion-resistant material throughout the jewelry.\n\nClean, minimal, and just a little Colorado-inspired. ✨\n\nWhy titanium?\n\nTitanium is naturally lightweight, highly corrosion resistant, and widely used in quality body jewelry. It’s also a popular choice for people who are mindful of nickel-containing jewelry.\n\nThe smooth flatback sits comfortably behind the ear without the bulk or poking of a traditional butterfly backing, while the threadless pushpin design means there are no exposed external screw threads passing through the piercing channel during insertion.\n\nDetails:\n\n18 gauge / 1.0 mm\nG23 titanium\nASTM F136 implant-grade specification\nThreadless pushpin design\nClear CZ stones\nCurved ridgeline silhouette\nFlatback labret style\nTitanium silver finish\n\nStyle it your way\n\nDelicate Ridgeline was made for the quieter spaces in your stack.\n\nWear it along a helix, flat, or lobe to create a tiny sparkling curve, pair it with simple gold hoops for a clean everyday look, or use it as the delicate finishing detail in a more layered ear.\n\nThe curved shape gives it just enough presence while still keeping that barely-there feel.\n\nPerfect for:\nHelix • Flat • Lobe • Cartilage • Minimal ear stacks • Mountain-inspired stacks • Curated ears\n\nA little ridgeline. A little sparkle. A tiny piece of the mountains. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/ec95dc/8881840317/il_fullxfull.8881840317_83jn.jpg",
+        "https://i.etsystatic.com/67609393/r/il/c239f3/8881825789/il_fullxfull.8881825789_5tbl.jpg",
+        "https://i.etsystatic.com/67609393/r/il/3d76cf/8834028424/il_fullxfull.8834028424_of0h.jpg"
+      ],
+      "video": "",
+      "tags": [],
+      "quantity": 5,
+      "created": "2026-11-10T21:33:23.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-11-10T21:58:04.731Z"
+    },
     {
       "listing_id": "4613750630",
       "title": "Leaf Me Alone 18G Threadless Flatback Earring | Clear Marquise CZ Leaf Stud | G23 ASTM F136 Titanium Cartilage Jewelry",
@@ -1353,7 +1374,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T22:25:35.000Z",
       "views": 40,
-      "num_favorers": 5,
+      "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },

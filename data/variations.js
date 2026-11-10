@@ -9,9 +9,11 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-10T19:22:00.541Z
+// Last read from Etsy: 2026-11-10T21:58:04.731Z
 
 window.MICKNACK_VARIATIONS = {
+  // Delicate Ridgeline 18G Threadless Flatback Earring | Clear C
+  "4614342317": [{ name: "Post Length", options: ["8 mm", "6 mm"] }],
   // Leaf Me Alone 18G Threadless Flatback Earring | Clear Marqui
   "4613750630": [{ name: "Post Length", options: ["8 mm", "6 mm"] }],
   // Tiny Hummingbird Threadless Flatback Earring | 18G - G23 AST
