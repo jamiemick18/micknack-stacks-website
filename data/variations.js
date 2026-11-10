@@ -9,9 +9,11 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-09T18:31:54.544Z
+// Last read from Etsy: 2026-11-10T01:55:33.616Z
 
 window.MICKNACK_VARIATIONS = {
+  // Tiny Hummingbird Threadless Flatback Earring | 18G - G23 AST
+  "4613628567": [{ name: "Post Length", options: ["8 mm", "6 mm"] }],
   // Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain
   "4599803201": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Everyday 18g G23 ASTM F136 Titanium Gold Clicker Hoop | 18K 

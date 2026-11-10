@@ -2,8 +2,28 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-09T18:31:54.544Z",
+  "synced_at": "2026-11-10T01:55:33.616Z",
   "listings": [
+    {
+      "listing_id": "4613628567",
+      "title": "Tiny Hummingbird Threadless Flatback Earring | 18G - G23 ASTM F136 Titanium | Dainty CZ Cartilage Stud | 6mm 8mm",
+      "price": "20.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4613628567/tiny-hummingbird-threadless-flatback",
+      "description": "Tiny Hummingbird ✨\n\nTiny enough to disappear into your stack. Pretty enough to make you look twice.\n\nTiny Hummingbird is an 18G ultra-delicate threadless flatback featuring a miniature hummingbird design with a sparkling clear CZ body. The tiny scale keeps it subtle and refined, making it perfect for anyone who loves detailed jewelry without a bulky look.\n\nFor more styles:\nwww.micknackstacks.com\n\nThe entire piece is manufactured from G23 titanium to ASTM F136 implant-grade specifications, giving you a lightweight, corrosion-resistant material throughout the jewelry.\n\nWhy titanium?\n\nTitanium is naturally lightweight, highly corrosion resistant, and widely used in quality body jewelry. It’s also a popular choice for people who are mindful of nickel-containing jewelry.\n\nThe smooth flatback sits comfortably behind the ear without the bulk or poking of a traditional butterfly backing, while the threadless pushpin design means there are no exposed external screw threads passing through the piercing channel during insertion.\n\nPost length options:\n6 mm — for a closer, more fitted look\n8 mm — for a little extra room\n\nEveryone’s anatomy and piercing placement are different, so the best length will vary.\n\nStyle it your way\n\nTiny Hummingbird was made for the little spaces in your stack.\n\nTuck it into a helix, flat, tragus, or lobe when you want a tiny detail that adds personality without competing with everything around it. Pair it with simple hoops for a clean look or mix it into a fuller curated ear for one little hidden surprise.\n\nPerfect for:\nHelix • Flat • Tragus • Lobe • Cartilage • Minimal ear stacks • Nature-inspired stacks • Curated ears\n\nTiny bird. Tiny sparkle. Just enough magic. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/4df252/8875945257/il_fullxfull.8875945257_tj6f.jpg",
+        "https://i.etsystatic.com/67609393/r/il/7f28a7/8875945175/il_fullxfull.8875945175_563k.jpg"
+      ],
+      "video": "",
+      "tags": [],
+      "quantity": 4,
+      "created": "2026-11-09T23:42:00.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-11-10T01:55:33.616Z"
+    },
     {
       "listing_id": "4601246993",
       "title": "Cherry Juice CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
@@ -276,7 +296,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 19,
       "created": "2026-10-08T17:47:55.000Z",
       "views": 51,
-      "num_favorers": 5,
+      "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-10-08T19:10:48.816Z"
     },
@@ -1414,7 +1434,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T17:54:53.000Z",
       "views": 138,
-      "num_favorers": 9,
+      "num_favorers": 10,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
