@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-06T22:19:52.148Z",
+  "generated_at": "2026-11-10T20:07:34.840Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -383,7 +383,7 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1US3Bj680JvUCS8JJitnXbM1",
       "price_id": "price_1US3Bj680JvUCS8JTDyuszFE",
       "product_id": "prod_VSzAKgQb1j4raf",
-      "name": "Sterling Silver Drizzle Ear Chain | 30mm Earring Connector | 3x5mm CZ Drop Dangles | Dainty Cartilage Chain Jewelry"
+      "name": "Sterling Silver Drizzle Ear Chain | 40mm Earring Connector | 3x5mm CZ Drop Dangles | Dainty Cartilage Chain Jewelry"
     },
     "4591313547": {
       "url": "https://buy.stripe.com/00wdR25737vBaJTf3KaZi1f",
@@ -544,6 +544,26 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UXRse680JvUCS8JspfsAKSx",
       "price_id": "price_1UXRsd680JvUCS8JOxmF8xkx",
       "product_id": "prod_VYZ0OOTXxb3AWQ"
+    },
+    "4613750630": {
+      "url": "https://buy.stripe.com/cNiaEQ9nj039cS18FmaZi1U",
+      "name": "Leaf Me Alone 18G Threadless Flatback Earring | Clear Marquise CZ Leaf Stud | G23 ASTM F136 Titanium Cartilage Jewelry",
+      "price": "24.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UaLKL680JvUCS8JumBNqznJ",
+      "price_id": "price_1UaLKL680JvUCS8JrL441kUT",
+      "product_id": "prod_VbYRMmMVWeIhwF"
+    },
+    "4613628567": {
+      "url": "https://buy.stripe.com/fZu00c5736rxg4d2gYaZi1V",
+      "name": "Tiny Hummingbird Threadless Flatback Earring | 18G - G23 ASTM F136 Titanium | Dainty CZ Cartilage Stud | 6mm 8mm",
+      "price": "24.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UaLKM680JvUCS8J1XCdqdv7",
+      "price_id": "price_1UaLKM680JvUCS8JkKJTAQIw",
+      "product_id": "prod_VbYRgmcJJJsXJa"
     }
   }
 };

@@ -191,6 +191,27 @@ function markNew(cards) {
   });
 }
 
+// The newest pieces come first, straight after the custom card.
+//
+// Etsy hands its listings back in an order of its own that is close to newest
+// first but not actually it, so a piece listed this morning could sit fifth
+// behind one from October. Someone who already knows the shop is here to see
+// what is new; they should not have to go looking for it.
+//
+// A new piece that has already sold goes with the rest. Leading the page with
+// something nobody can buy is a worse welcome than leading with nothing.
+// Everything after the new ones keeps the order it already had.
+function leadWithNew(cards) {
+  const rank = (card) => (card.isNew && !card.soldOut ? 0 : 1);
+  cards.sort((a, b) => {
+    if (rank(a) !== rank(b)) return rank(a) - rank(b);
+    // Among the new ones, newest first. Array.prototype.sort is stable, so
+    // everything else keeps the order Etsy gave it.
+    if (rank(a) === 0) return new Date(b.listedAt) - new Date(a.listedAt);
+    return 0;
+  });
+}
+
 function renderProducts(etsyData, extras) {
   const etsyListings = (etsyData && etsyData.listings) || [];
 
@@ -220,6 +241,7 @@ function renderProducts(etsyData, extras) {
   }
 
   markNew(cards);
+  leadWithNew(cards);
 
   // Arriving on #about or #shop scrolls before these cards exist, so the page
   // grows under the browser and leaves you short of where you asked to be.
