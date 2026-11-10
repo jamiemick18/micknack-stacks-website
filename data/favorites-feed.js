@@ -706,7 +706,31 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 10,
    "at": "2026-11-10T01:55:33.616Z"
+  },
+  {
+   "id": "4599803201",
+   "title": "Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain | ASTM F136 Threadless Connector | 40mm Emerald Green CZ Dangle",
+   "image": "https://i.etsystatic.com/67609393/r/il/9ca196/8714086152/il_fullxfull.8714086152_8ky9.jpg",
+   "gained": 1,
+   "total": 5,
+   "at": "2026-11-10T09:28:47.828Z"
+  },
+  {
+   "id": "4576665382",
+   "title": "Sugar Sweet Baby Pink Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/74a9f5/8533758408/il_fullxfull.8533758408_s7uv.jpg",
+   "gained": 1,
+   "total": 13,
+   "at": "2026-11-10T09:28:47.828Z"
+  },
+  {
+   "id": "4573443165",
+   "title": "Cosmic Supernova Threadless Flatback Earring | Gold Starburst Cartilage Stud | ASTM F136 G23 Implant Grade Titanium | Celestial Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/ec8a54/8509879106/il_fullxfull.8509879106_hrg2.jpg",
+   "gained": 1,
+   "total": 4,
+   "at": "2026-11-10T09:28:47.828Z"
   }
  ],
- "updated_at": "2026-11-10T01:55:33.616Z"
+ "updated_at": "2026-11-10T09:28:47.828Z"
 };

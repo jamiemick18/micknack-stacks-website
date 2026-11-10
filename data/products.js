@@ -2,12 +2,32 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-10T01:55:33.616Z",
+  "synced_at": "2026-11-10T09:28:47.828Z",
   "listings": [
+    {
+      "listing_id": "4613750630",
+      "title": "Leaf Me Alone 18G Threadless Flatback Earring | Clear Marquise CZ Leaf Stud | G23 ASTM F136 Titanium Cartilage Jewelry",
+      "price": "24.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4613750630/leaf-me-alone-18g-threadless-flatback",
+      "description": "Leaf Me Alone 🌿✨\n\nTiny leaves. Zero social battery.\n\nLeaf Me Alone is an ultra-delicate 18G threadless flatback earring featuring a tiny gold botanical design accented with sparkling clear marquise CZ stones.\n\nThe entire piece is manufactured from G23 titanium to ASTM F136 implant-grade specifications, giving you a lightweight, corrosion-resistant material throughout the jewelry.\n\nDetails:\n18 gauge / 1.0 mm\nG23 titanium\nASTM F136 implant-grade specification\nThreadless pushpin design\nClear marquise CZ stones\nGold finish\nFlatback labret style\n\nPost length options:\n6 mm — for a closer, more fitted look\n8 mm — for a little extra room\n\nEveryone’s anatomy and piercing placement are different, so the best length will vary.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/a09657/8876804435/il_fullxfull.8876804435_qrww.jpg",
+        "https://i.etsystatic.com/67609393/r/il/15d522/8828992200/il_fullxfull.8828992200_5qfv.jpg"
+      ],
+      "video": "",
+      "tags": [],
+      "quantity": 5,
+      "created": "2026-11-10T03:03:13.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-11-10T09:28:47.828Z"
+    },
     {
       "listing_id": "4613628567",
       "title": "Tiny Hummingbird Threadless Flatback Earring | 18G - G23 ASTM F136 Titanium | Dainty CZ Cartilage Stud | 6mm 8mm",
-      "price": "20.00",
+      "price": "24.99",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4613628567/tiny-hummingbird-threadless-flatback",
       "description": "Tiny Hummingbird ✨\n\nTiny enough to disappear into your stack. Pretty enough to make you look twice.\n\nTiny Hummingbird is an 18G ultra-delicate threadless flatback featuring a miniature hummingbird design with a sparkling clear CZ body. The tiny scale keeps it subtle and refined, making it perfect for anyone who loves detailed jewelry without a bulky look.\n\nFor more styles:\nwww.micknackstacks.com\n\nThe entire piece is manufactured from G23 titanium to ASTM F136 implant-grade specifications, giving you a lightweight, corrosion-resistant material throughout the jewelry.\n\nWhy titanium?\n\nTitanium is naturally lightweight, highly corrosion resistant, and widely used in quality body jewelry. It’s also a popular choice for people who are mindful of nickel-containing jewelry.\n\nThe smooth flatback sits comfortably behind the ear without the bulk or poking of a traditional butterfly backing, while the threadless pushpin design means there are no exposed external screw threads passing through the piercing channel during insertion.\n\nPost length options:\n6 mm — for a closer, more fitted look\n8 mm — for a little extra room\n\nEveryone’s anatomy and piercing placement are different, so the best length will vary.\n\nStyle it your way\n\nTiny Hummingbird was made for the little spaces in your stack.\n\nTuck it into a helix, flat, tragus, or lobe when you want a tiny detail that adds personality without competing with everything around it. Pair it with simple hoops for a clean look or mix it into a fuller curated ear for one little hidden surprise.\n\nPerfect for:\nHelix • Flat • Tragus • Lobe • Cartilage • Minimal ear stacks • Nature-inspired stacks • Curated ears\n\nTiny bird. Tiny sparkle. Just enough magic. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -86,7 +106,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-10-20T23:20:39.000Z",
       "views": 24,
-      "num_favorers": 4,
+      "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-10-21T14:19:56.913Z"
     },
@@ -121,7 +141,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 9,
       "created": "2026-11-02T19:50:28.000Z",
-      "views": 20,
+      "views": 29,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-11-02T20:06:49.958Z"
@@ -154,7 +174,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-08-31T21:52:58.000Z",
-      "views": 51,
+      "views": 52,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -190,7 +210,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-09-15T20:48:41.000Z",
-      "views": 75,
+      "views": 79,
       "num_favorers": 7,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -226,7 +246,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-08T19:59:35.000Z",
-      "views": 84,
+      "views": 86,
       "num_favorers": 8,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -261,7 +281,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-10-15T22:11:01.000Z",
-      "views": 198,
+      "views": 213,
       "num_favorers": 20,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
@@ -295,7 +315,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 19,
       "created": "2026-10-08T17:47:55.000Z",
-      "views": 51,
+      "views": 55,
       "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-10-08T19:10:48.816Z"
@@ -329,7 +349,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-13T21:39:50.000Z",
-      "views": 217,
+      "views": 233,
       "num_favorers": 20,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -363,7 +383,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-10-22T23:42:27.000Z",
-      "views": 27,
+      "views": 29,
       "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-10-23T01:20:53.342Z"
@@ -568,7 +588,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-10-22T21:29:09.000Z",
-      "views": 17,
+      "views": 19,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-10-22T21:34:24.555Z"
@@ -637,7 +657,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-21T19:48:13.000Z",
-      "views": 174,
+      "views": 177,
       "num_favorers": 20,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -734,7 +754,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-01T21:11:50.000Z",
-      "views": 175,
+      "views": 178,
       "num_favorers": 17,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -966,7 +986,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-21T16:04:05.000Z",
-      "views": 0,
+      "views": 26,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1036,7 +1056,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-16T18:47:42.000Z",
       "views": 85,
-      "num_favorers": 12,
+      "num_favorers": 13,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1065,7 +1085,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-14T17:51:28.000Z",
-      "views": 21,
+      "views": 23,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1099,7 +1119,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-09-13T21:26:03.000Z",
-      "views": 16,
+      "views": 17,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1132,7 +1152,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-12T00:05:44.000Z",
-      "views": 21,
+      "views": 22,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1332,7 +1352,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T22:25:35.000Z",
-      "views": 37,
+      "views": 40,
       "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1366,7 +1386,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T22:21:13.000Z",
-      "views": 86,
+      "views": 90,
       "num_favorers": 8,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1399,7 +1419,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T22:07:53.000Z",
-      "views": 39,
+      "views": 40,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1433,7 +1453,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T17:54:53.000Z",
-      "views": 138,
+      "views": 142,
       "num_favorers": 10,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1467,7 +1487,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T17:34:10.000Z",
       "views": 45,
-      "num_favorers": 3,
+      "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1568,7 +1588,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-03T19:48:22.000Z",
-      "views": 36,
+      "views": 39,
       "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"

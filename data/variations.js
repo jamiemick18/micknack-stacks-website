@@ -9,9 +9,11 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-10T01:55:33.616Z
+// Last read from Etsy: 2026-11-10T09:28:47.828Z
 
 window.MICKNACK_VARIATIONS = {
+  // Leaf Me Alone 18G Threadless Flatback Earring | Clear Marqui
+  "4613750630": [{ name: "Post Length", options: ["8 mm", "6 mm"] }],
   // Tiny Hummingbird Threadless Flatback Earring | 18G - G23 AST
   "4613628567": [{ name: "Post Length", options: ["8 mm", "6 mm"] }],
   // Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain
