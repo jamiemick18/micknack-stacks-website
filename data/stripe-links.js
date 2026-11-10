@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-10T20:07:34.840Z",
+  "generated_at": "2026-11-10T20:13:55.188Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -564,6 +564,16 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UaLKM680JvUCS8J1XCdqdv7",
       "price_id": "price_1UaLKM680JvUCS8JkKJTAQIw",
       "product_id": "prod_VbYRgmcJJJsXJa"
+    },
+    "4579741852": {
+      "url": "https://buy.stripe.com/cNi28k8jf5ntaJT08QaZi1W",
+      "name": "SLIMED Green CZ Ear Chain | 40mm Apple Green Marquise Cartilage Chain Connector",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UaLQV680JvUCS8J7GFfy5DK",
+      "price_id": "price_1UaLQU680JvUCS8JwSZWCohu",
+      "product_id": "prod_VbYXBB6r4zBUOb"
     }
   }
 };

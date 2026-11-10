@@ -2318,3 +2318,56 @@ img {
 }
 
 .newsletter { scroll-margin-top: 90px; }
+
+/* ---------------------------------------------------------------------------
+   Kind words in the rail — one review at a time
+   --------------------------------------------------------------------------- */
+
+/* Every quote is stacked in the same place and only one is shown, so the box
+   is as tall as the longest from the start and the rail never jumps when it
+   turns over. The stage is the grid; each quote is the single cell. */
+.kind-stage {
+  display: grid;
+}
+
+.kind-stage .kind-quote {
+  grid-area: 1 / 1;
+}
+
+.kind-quote {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: #3b352e;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease;
+}
+
+.kind-quote.is-on {
+  opacity: 1;
+  visibility: visible;
+}
+
+.kind-quote::before { content: "\201C"; }
+.kind-quote::after { content: "\201D"; }
+
+.kind-more {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.kind-more:hover { text-decoration: underline; }
+
+/* Nobody should watch a quote fade in and out if they have asked the system
+   to stop animating things. It still changes; it just cuts. */
+@media (prefers-reduced-motion: reduce) {
+  .kind-quote { transition: none; }
+}

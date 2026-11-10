@@ -1,6 +1,11 @@
 // "What people are loving" — the rail down the right of the collection.
 //
-// Two things, in order of usefulness to a shopper:
+// Three things, in order of usefulness to a shopper:
+//
+//   Kind words       one real Etsy review at a time, changing every few
+//                    seconds. A shopper deciding whether to trust a small
+//                    shop wants to hear from someone who already did, and
+//                    the full Kind words section is far down the page.
 //
 //   Recently loved   pieces that gained favourites on Etsy since the last
 //                    sync, newest first. Etsy publishes no event and no
@@ -24,7 +29,6 @@
   const products = window.MICKNACK_PRODUCTS || {};
   const feed = (window.MICKNACK_FAVORITES || {}).events || [];
   const listings = (products.listings || []).filter((l) => l.etsy_active !== false);
-  if (!listings.length) return;
 
   const inventory = window.MICKNACK_INVENTORY || {};
   const visible = (id) => !(inventory[id] && inventory[id].hidden);
@@ -48,6 +52,76 @@
           <span class="loved-when">${escapeHtml(piece.note)}</span>
         </span>
       </a>`;
+  }
+
+  // ---- kind words ----
+  //
+  // One review at a time. A wall of them beside the grid competes with the
+  // pieces; one, changing, reads like someone leaning over and saying it.
+  //
+  // Four seconds is long enough to read a short quote and not so long that a
+  // shopper scrolling past never sees a second one. The box is sized to the
+  // longest quote up front so the rail does not jump every time it turns
+  // over, and the whole thing holds still while it is hovered or focused,
+  // because a quote that moves while you are reading it is worse than none.
+  const SHOW_MS = 4000;
+
+  // Five stars only, and nothing so long it needs its own paragraph: this is
+  // a glance, not the Kind words section.
+  const quotes = ((window.MICKNACK_REVIEWS || {}).reviews || [])
+    .filter((r) => Number(r.rating) === 5 && r.text && r.text.trim().length <= 200)
+    .map((r) => r.text.trim());
+
+  function reviewBlock() {
+    if (quotes.length < 2) {
+      // One quote cannot rotate, and none is nothing to say. A single review
+      // still deserves showing; it just sits still.
+      return quotes.length
+        ? `<div class="loved-block kind-spot">
+             <h3>Kind words</h3>
+             <blockquote class="kind-quote is-on">${escapeHtml(quotes[0])}</blockquote>
+           </div>`
+        : "";
+    }
+    return `
+      <div class="loved-block kind-spot" id="kind-spot">
+        <h3>Kind words</h3>
+        <div class="kind-stage">
+          ${quotes
+            .map(
+              (text, i) =>
+                `<blockquote class="kind-quote${i === 0 ? " is-on" : ""}">${escapeHtml(text)}</blockquote>`
+            )
+            .join("")}
+        </div>
+        <a class="kind-more" href="review.html">Read them all</a>
+      </div>`;
+  }
+
+  // Every quote is in the DOM at once, stacked, with only one visible. That
+  // is what lets the box be as tall as the longest one from the start, and it
+  // means turning over is a class change rather than a re-render.
+  function startRotating() {
+    const spot = document.getElementById("kind-spot");
+    if (!spot) return;
+    const slides = [...spot.querySelectorAll(".kind-quote")];
+    if (slides.length < 2) return;
+
+    let at = 0;
+    let held = false;
+    spot.addEventListener("mouseenter", () => { held = true; });
+    spot.addEventListener("mouseleave", () => { held = false; });
+    spot.addEventListener("focusin", () => { held = true; });
+    spot.addEventListener("focusout", () => { held = false; });
+
+    setInterval(() => {
+      // Someone reading it, or a tab in the background where the animation
+      // would just pile up unseen.
+      if (held || document.hidden) return;
+      slides[at].classList.remove("is-on");
+      at = (at + 1) % slides.length;
+      slides[at].classList.add("is-on");
+    }, SHOW_MS);
   }
 
   // ---- recently loved ----
@@ -86,9 +160,11 @@
       note: count(l.num_favorers || 0),
     }));
 
-  if (!recent.length && !most.length) return;
+  const kind = reviewBlock();
+  if (!kind && !recent.length && !most.length) return;
 
   host.innerHTML = `
+    ${kind}
     ${
       recent.length
         ? `<div class="loved-block">
@@ -107,4 +183,5 @@
     }
   `;
   host.classList.add("on");
+  startRotating();
 })();

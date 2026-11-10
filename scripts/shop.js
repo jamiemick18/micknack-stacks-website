@@ -201,6 +201,12 @@ function save(items) {
     const flags = [];
     if (item.hidden) flags.push("hidden: true");
     else if (Number(item.qty) <= 0) flags.push("sold_out: true");
+    // A piece that sold out and came back is new again to anyone who missed
+    // it the first time, so the shop sorts it by the day it returned rather
+    // than the day it was first listed. Only useful while it is in stock.
+    if (item.back_at && !item.hidden && Number(item.qty) > 0) {
+      flags.push(`back_at: ${JSON.stringify(item.back_at)}`);
+    }
     if (!flags.length) continue;
     // Six months from now the useful question is not which pieces are hidden
     // but why each one is, so the note travels with the entry.
@@ -223,6 +229,9 @@ function save(items) {
 //
 //   sold_out: true   Shows a Sold Out label. No Buy button.
 //   hidden: true     Not shown on the site at all.
+//   back_at: "..."   The day it was restocked. The Collection sorts by it
+//                    instead of the listing date, and the card says
+//                    "Back in stock".
 //
 // A piece with no entry is treated as in stock.
 
@@ -970,6 +979,9 @@ function addPiece({ title, price, qty, description, badge, photo }) {
     description: String(description || "").trim(),
     images: imagePath ? [imagePath] : [],
     badge: String(badge || "").trim(),
+    // The Collection is ordered by when a piece went up, so a piece added
+    // here has to say when that was or it sorts to the bottom of the shop.
+    added_at: new Date().toISOString(),
   });
   writeExtras(extras);
 

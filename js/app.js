@@ -38,6 +38,11 @@ function toCard(item, { key, buttonLabel, badge }) {
   const stock = window.MICKNACK_STOCK.of(key);
   const shelf = (window.MICKNACK_CATEGORY_OF || {})[key] || "";
   const listedAt = item.created || item.added_at || null;
+  // A piece that sold out and came back is new again to anyone who missed it,
+  // so the shop treats the day it returned as its date. Set by the HUB in
+  // data/inventory.js, never by the Etsy sync — Etsy has no idea a piece was
+  // ever away.
+  const backAt = (window.MICKNACK_INVENTORY || {})[key]?.back_at || "";
   // Taken off Etsy: the piece stays here, but its Etsy link does not. The
   // listing is gone, so the button would land on "this item is unavailable".
   const url = item.etsy_active === false ? "" : item.url || "";
@@ -53,6 +58,9 @@ function toCard(item, { key, buttonLabel, badge }) {
     hasOptions: variations.length > 0,
     shelf,
     listedAt,
+    backAt,
+    // What the grid orders by: the later of listed and restocked.
+    sortAt: backAt && (!listedAt || new Date(backAt) > new Date(listedAt)) ? backAt : listedAt,
     // A piece on its way out should never be announced as new.
     retired: item.etsy_active === false,
     id: key,
@@ -68,7 +76,9 @@ function toCard(item, { key, buttonLabel, badge }) {
     etsyUrl,
     // With no link there's nothing to buy yet, so don't promise a purchase.
     buttonLabel: item.button_label || (url ? buttonLabel : "Coming soon"),
-    badge: stock.soldOut ? "Sold out" : item.badge || badge || "",
+    badge: stock.soldOut
+      ? "Sold out"
+      : item.badge || badge || (backAt ? "Back in stock" : ""),
     // Searched against, never displayed on the card.
     keywords: [item.title, item.description, (item.tags || []).join(" ")]
       .filter(Boolean)
@@ -187,29 +197,29 @@ function markNew(cards) {
   cards.forEach((card) => {
     const listed = card.listedAt ? new Date(card.listedAt).getTime() : 0;
     card.isNew =
-      Boolean(listed) && !card.retired && (listed > cutoff || newest.has(card.id));
+      Boolean(listed) &&
+      !card.retired &&
+      !card.backAt &&
+      (listed > cutoff || newest.has(card.id));
   });
 }
 
-// The newest pieces come first, straight after the custom card.
+// Newest first, all the way down, straight after the custom card.
 //
 // Etsy hands its listings back in an order of its own that is close to newest
-// first but not actually it, so a piece listed this morning could sit fifth
-// behind one from October. Someone who already knows the shop is here to see
-// what is new; they should not have to go looking for it.
+// first but is not actually it, and pieces only sold here were pushed to the
+// front whatever their age. So the grid is sorted by the one thing that
+// matches how Jamie thinks about the shop: when she posted it.
 //
-// A new piece that has already sold goes with the rest. Leading the page with
-// something nobody can buy is a worse welcome than leading with nothing.
-// Everything after the new ones keeps the order it already had.
-function leadWithNew(cards) {
-  const rank = (card) => (card.isNew && !card.soldOut ? 0 : 1);
-  cards.sort((a, b) => {
-    if (rank(a) !== rank(b)) return rank(a) - rank(b);
-    // Among the new ones, newest first. Array.prototype.sort is stable, so
-    // everything else keeps the order Etsy gave it.
-    if (rank(a) === 0) return new Date(b.listedAt) - new Date(a.listedAt);
-    return 0;
-  });
+// A piece with no date sorts to the bottom rather than the top, because an
+// unknown date is far more likely to be an old piece nobody recorded than
+// something listed this morning.
+function newestFirst(cards) {
+  const when = (card) => {
+    const at = card.sortAt ? new Date(card.sortAt).getTime() : NaN;
+    return isNaN(at) ? -Infinity : at;
+  };
+  cards.sort((a, b) => when(b) - when(a));
 }
 
 function renderProducts(etsyData, extras) {
@@ -241,7 +251,7 @@ function renderProducts(etsyData, extras) {
   }
 
   markNew(cards);
-  leadWithNew(cards);
+  newestFirst(cards);
 
   // Arriving on #about or #shop scrolls before these cards exist, so the page
   // grows under the browser and leaves you short of where you asked to be.
