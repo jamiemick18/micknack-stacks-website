@@ -2,8 +2,30 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-10T21:58:04.731Z",
+  "synced_at": "2026-11-10T22:59:42.874Z",
   "listings": [
+    {
+      "listing_id": "4614386350",
+      "title": "Golden Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | 18K Gold Plated G23 Titanium Cartilage Jewelry",
+      "price": "24.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4614386350/golden-delicate-ridgeline-18g-threadless",
+      "description": "Golden Delicate Ridgeline ✨\n\nA tiny golden ridgeline with just enough sparkle.\n\nMore styles at\nwww.micknackstacks.com\n\nDelicate Ridgeline is an ultra-dainty 18G threadless flatback featuring a soft curved line of clear CZ stones. The subtle arc follows the ear beautifully, giving your stack a tiny flash of sparkle without taking over everything around it.\n\nThis version is crafted from G23 titanium manufactured to ASTM F136 implant-grade specifications and finished in 18K gold plating for a warm polished look.\n\nMinimal, delicate, and a little Colorado-inspired. ✨\n\nWhy titanium?\n\nTitanium is lightweight, highly corrosion resistant, and widely used in quality body jewelry. It’s also a popular option for people who are mindful of nickel-containing jewelry.\n\nThe flatback design sits smoothly behind the ear, while the threadless pushpin style avoids exposed external screw threads passing through the piercing channel during insertion.\n\nDetails:\n\n18 gauge / 1.0 mm\nG23 titanium\nASTM F136 implant-grade specification\n18K gold-plated finish\nThreadless pushpin design\nClear CZ stones\nCurved ridgeline silhouette\nFlatback labret style\n\nStyle it your way\n\nDelicate Ridgeline is made for those tiny spaces in a curated ear that need just a little something.\n\nLet the curve follow a contra conch, flat, helix, or lobe, pair it with simple gold pieces for an understated stack, or tuck it between bolder jewelry as a delicate little line of sparkle.\n\nPerfect for:\nContra conch • Helix • Flat • Lobe • Cartilage stacks • Gold ear stacks • Mountain-inspired jewelry • Curated ears\n\nA little ridgeline. A little gold. A tiny piece of the mountains. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/41a191/8882068177/il_fullxfull.8882068177_flr6.jpg",
+        "https://i.etsystatic.com/67609393/r/il/9d8285/8834262610/il_fullxfull.8834262610_bbhk.jpg",
+        "https://i.etsystatic.com/67609393/r/il/58e7f1/8834262612/il_fullxfull.8834262612_ff1g.jpg",
+        "https://i.etsystatic.com/67609393/r/il/584750/8834262592/il_fullxfull.8834262592_fc5o.jpg"
+      ],
+      "video": "",
+      "tags": [],
+      "quantity": 5,
+      "created": "2026-11-10T22:20:42.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-11-10T22:59:42.874Z"
+    },
     {
       "listing_id": "4614342317",
       "title": "Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | G23 ASTM F136 Titanium Cartilage Jewelry",
