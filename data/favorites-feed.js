@@ -818,7 +818,31 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 4,
    "at": "2026-11-11T10:31:54.498Z"
+  },
+  {
+   "id": "4576742876",
+   "title": "Alpenglow Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/af4b6c/8534298038/il_fullxfull.8534298038_jq78.jpg",
+   "gained": 1,
+   "total": 16,
+   "at": "2026-11-11T18:29:26.025Z"
+  },
+  {
+   "id": "4573601729",
+   "title": "Drip Threadless Flatback Earring | Dainty Gold Dangle | Titanium Labret Post | Minimal Cartilage Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/dd8fa7/8510995928/il_fullxfull.8510995928_1ert.jpg",
+   "gained": 1,
+   "total": 8,
+   "at": "2026-11-11T18:29:26.025Z"
+  },
+  {
+   "id": "4573594151",
+   "title": "Lotus Glow Threadless Flatback Earring | Gold Lotus Cartilage Stud | Titanium Labret Post | Dainty Marquise CZ Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/c181d3/8558805011/il_fullxfull.8558805011_n75x.jpg",
+   "gained": 1,
+   "total": 3,
+   "at": "2026-11-11T18:29:26.025Z"
   }
  ],
- "updated_at": "2026-11-11T10:31:54.498Z"
+ "updated_at": "2026-11-11T18:29:26.025Z"
 };
