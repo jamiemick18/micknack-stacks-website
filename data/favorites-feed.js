@@ -762,7 +762,55 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 6,
    "at": "2026-11-10T21:55:14.068Z"
+  },
+  {
+   "id": "4601246993",
+   "title": "Cherry Juice CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/c1cc04/8858822615/il_fullxfull.8858822615_b8u1.jpg",
+   "gained": 1,
+   "total": 4,
+   "at": "2026-11-11T02:43:27.488Z"
+  },
+  {
+   "id": "4571494427",
+   "title": "Drizzle Chain Ear Connector | 5A CZ Raindrop Earring Chain | Dainty Gold Ear Chain | Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/51e709/8495611182/il_fullxfull.8495611182_5rxg.jpg",
+   "gained": 1,
+   "total": 9,
+   "at": "2026-11-11T02:43:27.488Z"
+  },
+  {
+   "id": "4596333038",
+   "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+   "gained": 1,
+   "total": 21,
+   "at": "2026-11-11T02:43:27.488Z"
+  },
+  {
+   "id": "4601255929",
+   "title": "Baby Pink CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/387ab7/8870084295/il_fullxfull.8870084295_ekyd.jpg",
+   "gained": 1,
+   "total": 3,
+   "at": "2026-11-11T02:43:27.488Z"
+  },
+  {
+   "id": "4576742876",
+   "title": "Alpenglow Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/af4b6c/8534298038/il_fullxfull.8534298038_jq78.jpg",
+   "gained": 1,
+   "total": 15,
+   "at": "2026-11-11T02:43:27.488Z"
+  },
+  {
+   "id": "4573601729",
+   "title": "Drip Threadless Flatback Earring | Dainty Gold Dangle | Titanium Labret Post | Minimal Cartilage Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/dd8fa7/8510995928/il_fullxfull.8510995928_1ert.jpg",
+   "gained": 1,
+   "total": 7,
+   "at": "2026-11-11T02:43:27.488Z"
   }
  ],
- "updated_at": "2026-11-10T22:59:42.874Z"
+ "updated_at": "2026-11-11T02:43:27.488Z"
 };
