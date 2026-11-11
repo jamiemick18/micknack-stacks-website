@@ -810,7 +810,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 7,
    "at": "2026-11-11T02:43:27.488Z"
+  },
+  {
+   "id": "4596261114",
+   "title": "Sterling Silver Drizzle Ear Chain | 40mm Earring Connector | 3x5mm CZ Drop Dangles | Dainty Cartilage Chain Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/6f0f7e/8684444088/il_fullxfull.8684444088_n3z3.jpg",
+   "gained": 1,
+   "total": 4,
+   "at": "2026-11-11T10:31:54.498Z"
   }
  ],
- "updated_at": "2026-11-11T02:43:27.488Z"
+ "updated_at": "2026-11-11T10:31:54.498Z"
 };
