@@ -842,7 +842,39 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 3,
    "at": "2026-11-11T18:29:26.025Z"
+  },
+  {
+   "id": "4571494427",
+   "title": "Drizzle Chain Ear Connector | 5A CZ Raindrop Earring Chain | Dainty Gold Ear Chain | Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/51e709/8495611182/il_fullxfull.8495611182_5rxg.jpg",
+   "gained": 1,
+   "total": 10,
+   "at": "2026-11-12T01:24:08.882Z"
+  },
+  {
+   "id": "4579868601",
+   "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
+   "image": "https://i.etsystatic.com/67609393/r/il/8841bd/8557802610/il_fullxfull.8557802610_oea8.jpg",
+   "gained": 1,
+   "total": 21,
+   "at": "2026-11-12T01:24:08.882Z"
+  },
+  {
+   "id": "4566919003",
+   "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg",
+   "gained": 1,
+   "total": 18,
+   "at": "2026-11-12T01:24:08.882Z"
+  },
+  {
+   "id": "4576742876",
+   "title": "Alpenglow Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/af4b6c/8534298038/il_fullxfull.8534298038_jq78.jpg",
+   "gained": 1,
+   "total": 17,
+   "at": "2026-11-12T01:24:08.882Z"
   }
  ],
- "updated_at": "2026-11-11T18:29:26.025Z"
+ "updated_at": "2026-11-12T01:24:08.882Z"
 };

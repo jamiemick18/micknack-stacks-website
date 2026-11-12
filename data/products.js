@@ -2,8 +2,74 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-11T18:29:26.025Z",
+  "synced_at": "2026-11-12T01:24:08.882Z",
   "listings": [
+    {
+      "listing_id": "4615185157",
+      "title": "Pearly Palomino Clear AB Ear Chain | 40mm 18K Gold Plated Chain | 6 Iridescent CZ Earring Connector | Curated Ear Jewelry",
+      "price": "25.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4615185157/pearly-palomino-clear-ab-ear-chain-40mm",
+      "description": "Pearly Palomino ✨🐎\n\nSoft, pearly, and catching every little bit of light.\n\nPearly Palomino features six individually dangling 4 mm Clear AB CZ stones suspended from a delicate 40 mm gold chain. The stones shift through soft flashes of pink, blue, green, violet, and gold depending on the light, giving the whole piece a dreamy, almost pearlescent glow.\n\nThe 1.5 mm chain is finished in 18K gold plating, keeping the look light and delicate while the clear AB stones add just enough rainbow shimmer.\n\nA little horse-girl magic. A little rainbow light. ✨\n\nDetails:\n\n40 mm chain length\n1.5 mm delicate chain\n18K gold-plated finish\nSix individually dangling 4 mm round CZ stones\nClear AB iridescent finish\nColor-shifting rainbow effect\nChain connector only\n\nStyle it your way\n\nPearly Palomino is designed to connect between compatible earrings or piercings you already own.\n\nDrape it between two lobes, style it helix-to-lobe, or work it into a layered stack when you want something light, bright, and a little whimsical.\n\nEach Clear AB stone catches the light from a slightly different angle, creating a soft rainbow shimmer as you move.\n\nPerfect for:\nHelix-to-lobe styling • Double lobes • Cartilage stacks • Iridescent ear stacks • Horse-girl jewelry • Curated ears\n\nSoft glow. Rainbow shimmer. Pearly Palomino. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/d8ede2/8840852328/il_fullxfull.8840852328_m53s.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/a292/be8d8dc2-4193-4e53-803f-5f1f5f22e108/vid_v1.mp4",
+      "tags": [
+        "moonstone ab",
+        "ab ear chain",
+        "ear chain connector",
+        "iridescent jewelry",
+        "gold ear chain",
+        "helix chain",
+        "cartilage chain",
+        "ear stack jewelry",
+        "piercing connector",
+        "celestial jewelry",
+        "alt jewelry",
+        "curated ear",
+        "dainty ear chain"
+      ],
+      "quantity": 5,
+      "created": "2026-11-11T22:39:37.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-11-12T01:24:08.882Z"
+    },
+    {
+      "listing_id": "4615037352",
+      "title": "Moonlit Mischief Moonstone AB Ear Chain | 40mm 18K Gold Plated Chain | 6 Iridescent CZ Earring Connector | Curated Ear Jewelry",
+      "price": "25.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4615037352/moonlit-mischief-moonstone-ab-ear-chain",
+      "description": "Moonlit Mischief 🌙✨\n\nLooks innocent until the light hits.\n\nMoonlit Mischief features six 4 mm Moonstone AB CZ stones suspended along a delicate 40 mm gold chain. Each stone flashes shifting tones of purple, blue, green, and soft iridescent light depending on the angle.\n\nThe 1.5 mm chain is finished in 18K gold plating, keeping the whole piece dainty while letting those color-shifting stones steal the attention.\n\nDetails:\n\n40 mm chain length\nDainty 1.5 mm chain\n18K gold-plated finish\nSix 4 mm round CZ stones\nMoonstone AB color effect\nIridescent flashes of purple, blue, green + more\n\nChain connector only\n\nStyle it your way\n\nMoonlit Mischief is designed to connect between compatible earrings or piercings you already own.\n\nDrape it between two lobes, connect a helix to a lobe, or work it into a layered stack when you want a little movement and an unexpected flash of color.\n\nThe AB finish changes constantly with the light, so no two angles look quite the same.\n\nPerfect for:\nHelix-to-lobe styling • Double lobes • Cartilage stacks • Celestial stacks • Alternative jewelry • Curated ears\n\nPretty in the shadows. Trouble in the light. 🌙✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/c64912/8839526634/il_fullxfull.8839526634_6ji8.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/2620/d89909ed-bfcb-4c67-9b9a-64cdde46e1ac/vid_v1.mp4",
+      "tags": [
+        "moonstone ab",
+        "ab ear chain",
+        "ear chain connector",
+        "iridescent jewelry",
+        "gold ear chain",
+        "helix chain",
+        "cartilage chain",
+        "ear stack jewelry",
+        "piercing connector",
+        "celestial jewelry",
+        "alt jewelry",
+        "curated ear",
+        "dainty ear chain"
+      ],
+      "quantity": 5,
+      "created": "2026-11-11T18:55:30.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-11-12T01:24:08.882Z"
+    },
     {
       "listing_id": "4614386350",
       "title": "Golden Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | 18K Gold Plated G23 Titanium Cartilage Jewelry",
@@ -290,7 +356,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 5,
       "created": "2026-09-08T19:59:35.000Z",
       "views": 87,
-      "num_favorers": 9,
+      "num_favorers": 10,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -701,7 +767,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-09-21T19:48:13.000Z",
       "views": 178,
-      "num_favorers": 20,
+      "num_favorers": 21,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -798,7 +864,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-09-01T21:11:50.000Z",
       "views": 185,
-      "num_favorers": 17,
+      "num_favorers": 18,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -996,7 +1062,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-09-16T20:46:30.000Z",
       "views": 176,
-      "num_favorers": 16,
+      "num_favorers": 17,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
