@@ -9,7 +9,7 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-12T01:24:08.882Z
+// Last read from Etsy: 2026-11-12T09:30:32.731Z
 
 window.MICKNACK_VARIATIONS = {
   // Golden Delicate Ridgeline 18G Threadless Flatback Earring | 
