@@ -813,11 +813,34 @@ img {
     gap: clamp(26px, 2.6vw, 36px) clamp(18px, 2vw, 28px);
   }
 
+  /* Pinned, and no taller than the screen it is pinned to.
+
+     Without the cap the rail was simply taller than the window: being stuck
+     to the top, it never moved, so whatever hung past the bottom edge could
+     not be reached by scrolling the page or the rail. Capping it to the
+     space below the header and letting it scroll inside makes the last of
+     Recently loved and all of Most loved reachable again. Scrolling past
+     its end carries on down the page as usual. */
   .loved.on {
     display: block;
     position: sticky;
     top: 104px;
+    max-height: calc(100vh - 128px);
+    overflow-y: auto;
+    padding-right: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #d4cabb transparent;
   }
+
+  .loved.on::-webkit-scrollbar { width: 6px; }
+  .loved.on::-webkit-scrollbar-track { background: transparent; }
+
+  .loved.on::-webkit-scrollbar-thumb {
+    background: #d4cabb;
+    border-radius: 3px;
+  }
+
+  .loved.on:hover::-webkit-scrollbar-thumb { background: #bdb09d; }
 }
 
 .loved-block { margin-bottom: 26px; }
