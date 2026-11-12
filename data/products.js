@@ -2,8 +2,72 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-12T18:00:06.523Z",
+  "synced_at": "2026-11-12T20:36:32.110Z",
   "listings": [
+    {
+      "listing_id": "4615880727",
+      "title": "Polar Flare Threadless Flatback Earring | Tiny CZ Starburst Titanium Stud | Silver or 18K Gold Plated | Single Cartilage Earring",
+      "price": "25.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4615880727/polar-flare-threadless-flatback-earring",
+      "description": "Polar Flare ✨\n\nA tiny burst of light for your ear stack.\n\nwww.micknackstacks.com\n\nPolar Flare is a delicate threadless flatback featuring a tiny four-point clear CZ cluster that catches the light like a little starburst.\n\nAvailable in polished silver titanium or 18K gold-plated titanium, it’s small enough to tuck into almost any stack while still giving you that perfect little flash of sparkle.\n\nMinimal. Celestial. Just bright enough to get noticed.\n\nPLEASE NOTE: This listing is for ONE earring.\n\nChoose either:\nSilver Titanium\nOR\n18K Gold-Plated Titanium\n\nDetails:\n\nSingle earring\nTitanium construction\nSilver titanium or 18K gold-plated titanium\nClear CZ stones\nFour-point starburst design\nThreadless pushpin\nFlatback labret style\nDainty, low-profile fit\n\nStyle it your way\n\nPolar Flare is made for the little spaces in your stack that need one extra spark.\n\nWear it in a lobe, helix, flat, or cartilage piercing, pair it with other celestial pieces, or use it as a tiny bright accent between larger jewelry.\n\nPerfect for:\nLobes • Helix • Flat • Cartilage • Celestial stacks • Minimal ear stacks • Curated ears\n\nTiny star. Big little glow. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/4d6f93/8846716694/il_fullxfull.8846716694_9wv8.jpg",
+        "https://i.etsystatic.com/67609393/r/il/a2d1d7/8894491207/il_fullxfull.8894491207_h9ov.jpg",
+        "https://i.etsystatic.com/67609393/r/il/ae91a6/8894491213/il_fullxfull.8894491213_1wcj.jpg",
+        "https://i.etsystatic.com/67609393/r/il/616950/8846716692/il_fullxfull.8846716692_fo98.jpg"
+      ],
+      "video": "",
+      "tags": [],
+      "quantity": 4,
+      "created": "2026-11-12T20:29:03.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-11-12T20:36:32.110Z"
+    },
+    {
+      "listing_id": "4615880970",
+      "title": "Love Bug Threadless Flatback Earring | Tiny Heart CZ Titanium Stud | Silver or 18K Gold Plated Cartilage Jewelry | Single Earring",
+      "price": "22.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4615880970/love-bug-threadless-flatback-earring",
+      "description": "Love Bug ♡✨\n\nA tiny heart with a little extra sparkle.\n\nwww.micknackstacks.com\n\nLove Bug is a delicate threadless flatback featuring a sweet solid heart paired with a single clear CZ stone. Small, simple, and just sparkly enough to tuck into almost any ear stack.\n\nChoose between polished silver titanium or 18K gold-plated titanium for the finish that fits your stack best.\n\nPLEASE NOTE: This listing is for ONE earring.\nChoose either Silver Titanium OR 18K Gold-Plated Titanium.\n\nDetails:\n\nSingle earring\nTitanium construction\nSilver titanium or 18K gold-plated titanium\nSolid heart detail\nOne clear CZ stone\nThreadless pushpin design\nFlatback labret style\nDainty, low-profile design\n\nStyle it your way\n\nLove Bug is tiny enough to work almost anywhere your stack needs a little softness.\n\nWear it in a lobe, helix, flat, or cartilage piercing, pair it with simple studs, or mix it into a more layered stack for one tiny little heart moment.\n\nPerfect for:\nLobes • Helix • Flat • Cartilage • Minimal stacks • Heart jewelry • Curated ears\n\nJust a little Love Bug. ♡\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/f76125/8894437871/il_fullxfull.8894437871_6kve.jpg",
+        "https://i.etsystatic.com/67609393/r/il/4d59e5/8894437927/il_fullxfull.8894437927_2v3s.jpg",
+        "https://i.etsystatic.com/67609393/r/il/9057f8/8846664246/il_fullxfull.8846664246_ow7t.jpg"
+      ],
+      "video": "",
+      "tags": [],
+      "quantity": 4,
+      "created": "2026-11-12T20:10:55.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-11-12T20:36:32.110Z"
+    },
+    {
+      "listing_id": "4615873918",
+      "title": "Baby Brick Threadless Flatback Earring | 3 CZ Titanium Stud | Silver or 18K Gold Plated | 6mm or 8mm Cartilage Jewelry",
+      "price": "22.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4615873918/baby-brick-threadless-flatback-earring-3",
+      "description": "Baby Brick ✨\n\nThree tiny CZs. One very little brick.\n\n** Listing is for ONE earring in either silver or gold. **\n\nwww.micknackstacks.com\n\nBaby Brick is a super-dainty threadless flatback featuring three tiny clear CZ stones lined up in a clean little geometric row.\n\nAvailable in either polished titanium silver or 18K gold-plated titanium, it’s the kind of tiny piece that slips into basically any ear stack without fighting for attention.\n\nSmall. Sparkly. Weirdly adorable for something called a brick. 🧱✨\n\nDetails:\n\nTitanium construction\nAvailable in silver or 18K gold-plated titanium\nThree clear CZ stones\nThreadless pushpin design\nFlatback labret style\nChoose 6 mm or 8 mm post length\nTiny geometric bar design\n\nStyle it your way\n\nBaby Brick is made for those little gaps in your stack that need something simple.\n\nWear it in a lobe, helix, flat, or cartilage piercing, pair it with bigger statement pieces, or use it as a tiny sparkly spacer between your favorites.\n\nPerfect for:\nLobes • Helix • Flat • Cartilage • Minimal stacks • Mixed-metal stacks • Curated ears\n\nTiny brick. Tiny sparkle. Very serious architecture. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/6b5208/8846562768/il_fullxfull.8846562768_er8e.jpg",
+        "https://i.etsystatic.com/67609393/r/il/4d31cb/8846562750/il_fullxfull.8846562750_ng3d.jpg",
+        "https://i.etsystatic.com/67609393/r/il/27c1f5/8894337667/il_fullxfull.8894337667_e7cs.jpg"
+      ],
+      "video": "",
+      "tags": [],
+      "quantity": 4,
+      "created": "2026-11-12T20:01:01.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-11-12T20:36:32.110Z"
+    },
     {
       "listing_id": "4615185157",
       "title": "Pearly Palomino Clear AB Ear Chain | 40mm 18K Gold Plated Chain | 6 Iridescent CZ Earring Connector | Curated Ear Jewelry",
@@ -73,7 +137,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4614386350",
       "title": "Golden Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | 18K Gold Plated G23 Titanium Cartilage Jewelry",
-      "price": "25.00",
+      "price": "22.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4614386350/golden-delicate-ridgeline-18g-threadless",
       "description": "Golden Delicate Ridgeline ✨\n\nA tiny golden ridgeline with just enough sparkle.\n\nMore styles at\nwww.micknackstacks.com\n\nDelicate Ridgeline is an ultra-dainty 18G threadless flatback featuring a soft curved line of clear CZ stones. The subtle arc follows the ear beautifully, giving your stack a tiny flash of sparkle without taking over everything around it.\n\nThis version is crafted from G23 titanium manufactured to ASTM F136 implant-grade specifications and finished in 18K gold plating for a warm polished look.\n\nMinimal, delicate, and a little Colorado-inspired. ✨\n\nWhy titanium?\n\nTitanium is lightweight, highly corrosion resistant, and widely used in quality body jewelry. It’s also a popular option for people who are mindful of nickel-containing jewelry.\n\nThe flatback design sits smoothly behind the ear, while the threadless pushpin style avoids exposed external screw threads passing through the piercing channel during insertion.\n\nDetails:\n\n18 gauge / 1.0 mm\nG23 titanium\nASTM F136 implant-grade specification\n18K gold-plated finish\nThreadless pushpin design\nClear CZ stones\nCurved ridgeline silhouette\nFlatback labret style\n\nStyle it your way\n\nDelicate Ridgeline is made for those tiny spaces in a curated ear that need just a little something.\n\nLet the curve follow a contra conch, flat, helix, or lobe, pair it with simple gold pieces for an understated stack, or tuck it between bolder jewelry as a delicate little line of sparkle.\n\nPerfect for:\nContra conch • Helix • Flat • Lobe • Cartilage stacks • Gold ear stacks • Mountain-inspired jewelry • Curated ears\n\nA little ridgeline. A little gold. A tiny piece of the mountains. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -95,7 +159,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4614342317",
       "title": "Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | G23 ASTM F136 Titanium Cartilage Jewelry",
-      "price": "25.00",
+      "price": "22.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4614342317/delicate-ridgeline-18g-threadless",
       "description": "Delicate Ridgeline ✨\n\nA tiny line of sparkle inspired by the shape of a mountain ridge.\n\nDelicate Ridgeline is an ultra-dainty 18G threadless flatback featuring a gentle curve of clear CZ stones. The low-profile shape follows the ear beautifully, giving you a subtle little shimmer that feels polished without taking over your stack.\n\nMore styles avail on\nwww.micknackstacks.com\n\nThe entire piece is manufactured from G23 titanium to ASTM F136 implant-grade specifications, giving you a lightweight, corrosion-resistant material throughout the jewelry.\n\nClean, minimal, and just a little Colorado-inspired. ✨\n\nWhy titanium?\n\nTitanium is naturally lightweight, highly corrosion resistant, and widely used in quality body jewelry. It’s also a popular choice for people who are mindful of nickel-containing jewelry.\n\nThe smooth flatback sits comfortably behind the ear without the bulk or poking of a traditional butterfly backing, while the threadless pushpin design means there are no exposed external screw threads passing through the piercing channel during insertion.\n\nDetails:\n\n18 gauge / 1.0 mm\nG23 titanium\nASTM F136 implant-grade specification\nThreadless pushpin design\nClear CZ stones\nCurved ridgeline silhouette\nFlatback labret style\nTitanium silver finish\n\nStyle it your way\n\nDelicate Ridgeline was made for the quieter spaces in your stack.\n\nWear it along a helix, flat, or lobe to create a tiny sparkling curve, pair it with simple gold hoops for a clean everyday look, or use it as the delicate finishing detail in a more layered ear.\n\nThe curved shape gives it just enough presence while still keeping that barely-there feel.\n\nPerfect for:\nHelix • Flat • Lobe • Cartilage • Minimal ear stacks • Mountain-inspired stacks • Curated ears\n\nA little ridgeline. A little sparkle. A tiny piece of the mountains. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -126,7 +190,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "video": "",
       "tags": [],
-      "quantity": 5,
+      "quantity": 4,
       "created": "2026-11-10T03:03:13.000Z",
       "views": 0,
       "num_favorers": 0,
@@ -356,7 +420,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 5,
       "created": "2026-09-08T19:59:35.000Z",
       "views": 91,
-      "num_favorers": 10,
+      "num_favorers": 9,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -698,7 +762,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-10-22T21:29:09.000Z",
       "views": 19,
-      "num_favorers": 1,
+      "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-10-22T21:34:24.555Z"
     },
@@ -864,7 +928,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-09-01T21:11:50.000Z",
       "views": 188,
-      "num_favorers": 18,
+      "num_favorers": 19,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },

@@ -898,7 +898,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 18,
    "at": "2026-11-12T15:18:10.987Z"
+  },
+  {
+   "id": "4601250009",
+   "title": "Periodt Green CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/0dada6/8773351701/il_fullxfull.8773351701_r2eh.jpg",
+   "gained": 1,
+   "total": 2,
+   "at": "2026-11-12T20:36:32.110Z"
+  },
+  {
+   "id": "4566919003",
+   "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg",
+   "gained": 1,
+   "total": 19,
+   "at": "2026-11-12T20:36:32.110Z"
   }
  ],
- "updated_at": "2026-11-12T18:00:06.523Z"
+ "updated_at": "2026-11-12T20:36:32.110Z"
 };

@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-12T15:45:03.273Z",
+  "generated_at": "2026-11-12T20:37:38.201Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -576,14 +576,14 @@ window.MICKNACK_STRIPE_LINKS = {
       "product_id": "prod_VcEExXtf3eFkdr"
     },
     "4614342317": {
-      "url": "https://buy.stripe.com/14AbIUdDzg2719j08QaZi24",
+      "url": "https://buy.stripe.com/9B66oA42Z9DJ6tD9JqaZi2c",
       "name": "Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | G23 ASTM F136 Titanium Cartilage Jewelry",
-      "price": "25.00",
+      "price": "22.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1Ub0BL680JvUCS8JUfA0Txog",
-      "price_id": "price_1Ub0BK680JvUCS8JxefdRvF2",
-      "product_id": "prod_VcEeG3lr7qY8nu"
+      "link_id": "plink_1Ub4kX680JvUCS8Jh7m5795Y",
+      "price_id": "price_1Ub4kX680JvUCS8J2x4zw3Q2",
+      "product_id": "prod_VcJNWAU6knDINj"
     },
     "4615185157": {
       "url": "https://buy.stripe.com/3cI7sE2YV2bh5pz1cUaZi1Y",
@@ -606,14 +606,44 @@ window.MICKNACK_STRIPE_LINKS = {
       "product_id": "prod_VcEEu1JX3MlA1E"
     },
     "4614386350": {
-      "url": "https://buy.stripe.com/28EbIU42Z7vB05fbRyaZi23",
+      "url": "https://buy.stripe.com/4gMeV60QNg2705f3l2aZi2b",
       "name": "Golden Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | 18K Gold Plated G23 Titanium Cartilage Jewelry",
+      "price": "22.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1Ub4kW680JvUCS8JGWfffDoz",
+      "price_id": "price_1Ub4kV680JvUCS8JPFk3s0gJ",
+      "product_id": "prod_VcJNH3L8Ks6WYk"
+    },
+    "4615880727": {
+      "url": "https://buy.stripe.com/14A5kwgPL4jpaJTg7OaZi28",
+      "name": "Polar Flare Threadless Flatback Earring | Tiny CZ Starburst Titanium Stud | Silver or 18K Gold Plated | Single Cartilage Earring",
       "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1Ub0BJ680JvUCS8JQLVTBjYC",
-      "price_id": "price_1Ub0BJ680JvUCS8Jzte2Zd0Q",
-      "product_id": "prod_VcEe0J7nfjNZAW"
+      "link_id": "plink_1Ub4kS680JvUCS8JJ2fvjbFs",
+      "price_id": "price_1Ub4kS680JvUCS8JSP5enqgz",
+      "product_id": "prod_VcJNphkMnYn6wq"
+    },
+    "4615880970": {
+      "url": "https://buy.stripe.com/28E00ceHD8zF4lv8FmaZi29",
+      "name": "Love Bug Threadless Flatback Earring | Tiny Heart CZ Titanium Stud | Silver or 18K Gold Plated Cartilage Jewelry | Single Earring",
+      "price": "22.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1Ub4kT680JvUCS8Jv6iKGdeI",
+      "price_id": "price_1Ub4kT680JvUCS8JlyKgvLsf",
+      "product_id": "prod_VcJNM5iiEy9pk3"
+    },
+    "4615873918": {
+      "url": "https://buy.stripe.com/5kQeV60QN7vB4lvdZGaZi2a",
+      "name": "Baby Brick Threadless Flatback Earring | 3 CZ Titanium Stud | Silver or 18K Gold Plated | 6mm or 8mm Cartilage Jewelry",
+      "price": "22.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1Ub4kV680JvUCS8JBdEwLL28",
+      "price_id": "price_1Ub4kU680JvUCS8Jt3ViJ4gK",
+      "product_id": "prod_VcJNW441846YTA"
     }
   }
 };
