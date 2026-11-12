@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-10T21:59:26.199Z",
+  "generated_at": "2026-11-12T15:19:01.333Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -366,14 +366,14 @@ window.MICKNACK_STRIPE_LINKS = {
       "name": "Badd Mommi Black CZ Ear Chain | 1.5mm Gold Earring Connector | 4mm Black Stone Cartilage Chain | Edgy Curated Ear Jewelry"
     },
     "4596333038": {
-      "url": "https://buy.stripe.com/3cI00c0QNg275pzcVCaZi1d",
-      "price": "19.99",
+      "url": "https://buy.stripe.com/00wcMY8jfeY37xHcVCaZi21",
+      "name": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+      "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1US3Bj680JvUCS8JRz9IZJrA",
-      "price_id": "price_1US3Bi680JvUCS8Jo9jTeIlk",
-      "product_id": "prod_VSzAYsEYH2jqA6",
-      "name": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry"
+      "link_id": "plink_1UazmB680JvUCS8JVoQW3ABX",
+      "price_id": "price_1UazmB680JvUCS8JWpWFzVNq",
+      "product_id": "prod_VcEEZu6DVFKUIh"
     },
     "4596261114": {
       "url": "https://buy.stripe.com/dRm5kwczv6rx6tDdZGaZi1e",
@@ -566,14 +566,14 @@ window.MICKNACK_STRIPE_LINKS = {
       "product_id": "prod_VbYRgmcJJJsXJa"
     },
     "4579741852": {
-      "url": "https://buy.stripe.com/cNi28k8jf5ntaJT08QaZi1W",
+      "url": "https://buy.stripe.com/6oU00c1UR5nt19jaNuaZi22",
       "name": "SLIMED Green CZ Ear Chain | 40mm Apple Green Marquise Cartilage Chain Connector",
-      "price": "19.99",
+      "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1UaLQV680JvUCS8J7GFfy5DK",
-      "price_id": "price_1UaLQU680JvUCS8JwSZWCohu",
-      "product_id": "prod_VbYXBB6r4zBUOb"
+      "link_id": "plink_1UazmC680JvUCS8JllzyN5XJ",
+      "price_id": "price_1UazmC680JvUCS8JzTpfn281",
+      "product_id": "prod_VcEExXtf3eFkdr"
     },
     "4614342317": {
       "url": "https://buy.stripe.com/5kQ14g2YV7vB3hr7BiaZi1X",
@@ -584,6 +584,36 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UaN4c680JvUCS8JdoEqjbyp",
       "price_id": "price_1UaN4b680JvUCS8Jmi7UApg9",
       "product_id": "prod_VbaFHJlRvQRtoa"
+    },
+    "4615185157": {
+      "url": "https://buy.stripe.com/3cI7sE2YV2bh5pz1cUaZi1Y",
+      "name": "Pearly Palomino Clear AB Ear Chain | 40mm 18K Gold Plated Chain | 6 Iridescent CZ Earring Connector | Curated Ear Jewelry",
+      "price": "25.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1Uazm8680JvUCS8JKEEBRvCh",
+      "price_id": "price_1Uazm8680JvUCS8JZwAYzTOk",
+      "product_id": "prod_VcEEzyRQOaPrP8"
+    },
+    "4615037352": {
+      "url": "https://buy.stripe.com/9B628kczv6rxg4d4p6aZi1Z",
+      "name": "Moonlit Mischief Moonstone AB Ear Chain | 40mm 18K Gold Plated Chain | 6 Iridescent CZ Earring Connector | Curated Ear Jewelry",
+      "price": "25.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1Uazm9680JvUCS8JbYJPv18i",
+      "price_id": "price_1Uazm9680JvUCS8JzMYirV3E",
+      "product_id": "prod_VcEEu1JX3MlA1E"
+    },
+    "4614386350": {
+      "url": "https://buy.stripe.com/cNi4gsgPLaHN6tDdZGaZi20",
+      "name": "Golden Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | 18K Gold Plated G23 Titanium Cartilage Jewelry",
+      "price": "24.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UazmA680JvUCS8Jg7H7OklF",
+      "price_id": "price_1UazmA680JvUCS8JW4aNBAIx",
+      "product_id": "prod_VcEEcNeihHckhr"
     }
   }
 };

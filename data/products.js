@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-12T09:30:32.731Z",
+  "synced_at": "2026-11-12T15:18:10.987Z",
   "listings": [
     {
       "listing_id": "4615185157",
@@ -363,7 +363,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4596333038",
       "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
-      "price": "19.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4596333038/golden-hour-ear-chain-champagne-clear-cz",
       "description": "Golden Hour ✨🥂\n\nWarm, glowy, and catching the light like the last few minutes before sunset.\nGolden Hour features a delicate gold chain with five individually dangling CZ stones — three round champagne-colored stones alternating with two clear kite-shaped stones. The mix of warm champagne sparkle and crisp clear facets gives the piece dimension without making it feel overly busy.\n\nwww.micknackstacks.com⁠\n\nWhy you’ll love it:\nFive individually dangling CZ stones\nThree round champagne CZ stones\nTwo clear kite-shaped CZ stones\nAlternating stone shapes for extra texture\nWarm, neutral sparkle that pairs easily with gold jewelry and delicate movement as the stones catch the light\nAdds depth without overpowering the rest of your stack\n\nGolden Hour is a chain connector only, designed to attach between compatible hoops, earrings, or flatback jewelry you already own.\n\nDrape it between two piercings for a soft layered look, pair it with simple gold hoops, or work it into a fuller curated stack.\n\nThe champagne stones give off a warm, honey-toned glow while the clear kite stones break up the color with brighter flashes of light.\n\nMaterials & Details:\nGold-tone chain, 40mm long\nFive dangling CZ stones\n3 round champagne CZ stones\n2 clear kite-shaped CZ stones\nConnector loops at both ends\nChain connector only\nEarrings and labret posts not included\nSold individually\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Curated ears • Neutral ear stacks • Dainty chain styling\nWarm light. Tiny sparkle. Golden Hour, whenever you want it. ✨🥂\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
@@ -1062,14 +1062,14 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-09-16T20:46:30.000Z",
       "views": 178,
-      "num_favorers": 17,
+      "num_favorers": 18,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4579741852",
       "title": "SLIMED Green CZ Ear Chain | 40mm Apple Green Marquise Cartilage Chain Connector",
-      "price": "19.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4579741852/slimed-apple-green-cz-ear-chain-g23",
       "description": "SLIMED 💚✨\n\nLooks toxic. Is actually just really cute.\n\nSLIMED features a delicate 40 mm gold chain finished with five bright apple-green marquise CZ stones. Each stone hangs individually from the chain, giving the piece plenty of movement while the sharp marquise shape makes that electric green color hit even harder.\n\nMore styles and options available on\nwww.micknackstacks.com\n\nThe chain gives a little radioactive-looking chaos to your stack. Bright, sharp, and absolutely not interested in blending in. 💚\n\nWhy you’ll love it:\n40 mm earring chain\nFive apple-green marquise CZ stones\n3 × 5 mm stones\nIndividually dangling CZs for movement\nBright electric green color\nEasy way to add a bold pop of color to a curated ear stack.\n\nWear it from helix to lobe, cartilage to hoop, or anywhere your piercing placement allows for a soft 40 mm drape.\n\nThe vivid green stones make it an easy statement piece, while the delicate chain keeps the overall look light and wearable.\n\nPerfect for:\nHelix-to-lobe styling • Cartilage stacks • Green ear stacks • Alt jewelry • Curated ears • Statement chain styling\n\nFive little drops of radioactive bad decisions. 💚✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
