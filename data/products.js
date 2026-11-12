@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-12T15:18:10.987Z",
+  "synced_at": "2026-11-12T15:44:13.556Z",
   "listings": [
     {
       "listing_id": "4615185157",
@@ -73,7 +73,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4614386350",
       "title": "Golden Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | 18K Gold Plated G23 Titanium Cartilage Jewelry",
-      "price": "24.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4614386350/golden-delicate-ridgeline-18g-threadless",
       "description": "Golden Delicate Ridgeline ✨\n\nA tiny golden ridgeline with just enough sparkle.\n\nMore styles at\nwww.micknackstacks.com\n\nDelicate Ridgeline is an ultra-dainty 18G threadless flatback featuring a soft curved line of clear CZ stones. The subtle arc follows the ear beautifully, giving your stack a tiny flash of sparkle without taking over everything around it.\n\nThis version is crafted from G23 titanium manufactured to ASTM F136 implant-grade specifications and finished in 18K gold plating for a warm polished look.\n\nMinimal, delicate, and a little Colorado-inspired. ✨\n\nWhy titanium?\n\nTitanium is lightweight, highly corrosion resistant, and widely used in quality body jewelry. It’s also a popular option for people who are mindful of nickel-containing jewelry.\n\nThe flatback design sits smoothly behind the ear, while the threadless pushpin style avoids exposed external screw threads passing through the piercing channel during insertion.\n\nDetails:\n\n18 gauge / 1.0 mm\nG23 titanium\nASTM F136 implant-grade specification\n18K gold-plated finish\nThreadless pushpin design\nClear CZ stones\nCurved ridgeline silhouette\nFlatback labret style\n\nStyle it your way\n\nDelicate Ridgeline is made for those tiny spaces in a curated ear that need just a little something.\n\nLet the curve follow a contra conch, flat, helix, or lobe, pair it with simple gold pieces for an understated stack, or tuck it between bolder jewelry as a delicate little line of sparkle.\n\nPerfect for:\nContra conch • Helix • Flat • Lobe • Cartilage stacks • Gold ear stacks • Mountain-inspired jewelry • Curated ears\n\nA little ridgeline. A little gold. A tiny piece of the mountains. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -95,7 +95,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4614342317",
       "title": "Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | G23 ASTM F136 Titanium Cartilage Jewelry",
-      "price": "24.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4614342317/delicate-ridgeline-18g-threadless",
       "description": "Delicate Ridgeline ✨\n\nA tiny line of sparkle inspired by the shape of a mountain ridge.\n\nDelicate Ridgeline is an ultra-dainty 18G threadless flatback featuring a gentle curve of clear CZ stones. The low-profile shape follows the ear beautifully, giving you a subtle little shimmer that feels polished without taking over your stack.\n\nMore styles avail on\nwww.micknackstacks.com\n\nThe entire piece is manufactured from G23 titanium to ASTM F136 implant-grade specifications, giving you a lightweight, corrosion-resistant material throughout the jewelry.\n\nClean, minimal, and just a little Colorado-inspired. ✨\n\nWhy titanium?\n\nTitanium is naturally lightweight, highly corrosion resistant, and widely used in quality body jewelry. It’s also a popular choice for people who are mindful of nickel-containing jewelry.\n\nThe smooth flatback sits comfortably behind the ear without the bulk or poking of a traditional butterfly backing, while the threadless pushpin design means there are no exposed external screw threads passing through the piercing channel during insertion.\n\nDetails:\n\n18 gauge / 1.0 mm\nG23 titanium\nASTM F136 implant-grade specification\nThreadless pushpin design\nClear CZ stones\nCurved ridgeline silhouette\nFlatback labret style\nTitanium silver finish\n\nStyle it your way\n\nDelicate Ridgeline was made for the quieter spaces in your stack.\n\nWear it along a helix, flat, or lobe to create a tiny sparkling curve, pair it with simple gold hoops for a clean everyday look, or use it as the delicate finishing detail in a more layered ear.\n\nThe curved shape gives it just enough presence while still keeping that barely-there feel.\n\nPerfect for:\nHelix • Flat • Lobe • Cartilage • Minimal ear stacks • Mountain-inspired stacks • Curated ears\n\nA little ridgeline. A little sparkle. A tiny piece of the mountains. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -116,7 +116,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4613750630",
       "title": "Leaf Me Alone 18G Threadless Flatback Earring | Clear Marquise CZ Leaf Stud | G23 ASTM F136 Titanium Cartilage Jewelry",
-      "price": "24.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4613750630/leaf-me-alone-18g-threadless-flatback",
       "description": "Leaf Me Alone 🌿✨\n\nTiny leaves. Zero social battery.\n\nLeaf Me Alone is an ultra-delicate 18G threadless flatback earring featuring a tiny gold botanical design accented with sparkling clear marquise CZ stones.\n\nThe entire piece is manufactured from G23 titanium to ASTM F136 implant-grade specifications, giving you a lightweight, corrosion-resistant material throughout the jewelry.\n\nDetails:\n18 gauge / 1.0 mm\nG23 titanium\nASTM F136 implant-grade specification\nThreadless pushpin design\nClear marquise CZ stones\nGold finish\nFlatback labret style\n\nPost length options:\n6 mm — for a closer, more fitted look\n8 mm — for a little extra room\n\nEveryone’s anatomy and piercing placement are different, so the best length will vary.",
@@ -136,7 +136,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4613628567",
       "title": "Tiny Hummingbird Threadless Flatback Earring | 18G - G23 ASTM F136 Titanium | Dainty CZ Cartilage Stud | 6mm 8mm",
-      "price": "24.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4613628567/tiny-hummingbird-threadless-flatback",
       "description": "Tiny Hummingbird ✨\n\nTiny enough to disappear into your stack. Pretty enough to make you look twice.\n\nTiny Hummingbird is an 18G ultra-delicate threadless flatback featuring a miniature hummingbird design with a sparkling clear CZ body. The tiny scale keeps it subtle and refined, making it perfect for anyone who loves detailed jewelry without a bulky look.\n\nFor more styles:\nwww.micknackstacks.com\n\nThe entire piece is manufactured from G23 titanium to ASTM F136 implant-grade specifications, giving you a lightweight, corrosion-resistant material throughout the jewelry.\n\nWhy titanium?\n\nTitanium is naturally lightweight, highly corrosion resistant, and widely used in quality body jewelry. It’s also a popular choice for people who are mindful of nickel-containing jewelry.\n\nThe smooth flatback sits comfortably behind the ear without the bulk or poking of a traditional butterfly backing, while the threadless pushpin design means there are no exposed external screw threads passing through the piercing channel during insertion.\n\nPost length options:\n6 mm — for a closer, more fitted look\n8 mm — for a little extra room\n\nEveryone’s anatomy and piercing placement are different, so the best length will vary.\n\nStyle it your way\n\nTiny Hummingbird was made for the little spaces in your stack.\n\nTuck it into a helix, flat, tragus, or lobe when you want a tiny detail that adds personality without competing with everything around it. Pair it with simple hoops for a clean look or mix it into a fuller curated ear for one little hidden surprise.\n\nPerfect for:\nHelix • Flat • Tragus • Lobe • Cartilage • Minimal ear stacks • Nature-inspired stacks • Curated ears\n\nTiny bird. Tiny sparkle. Just enough magic. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
@@ -1103,7 +1103,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4577301519",
       "title": "Purple Problem Triple Ear Chain | 18K PVD Gold Drape Chain | Amethyst & Clear CZ Connector | Curated Ear Jewelry",
-      "price": "19.99",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4577301519/purple-problem-triple-ear-chain-18k-pvd",
       "description": "Purple Problem Triple Ear Chain 💜✨\n\nPurple Problem features a dainty 1.5 mm 18K PVD gold chain with layered drapes and 4 mm amethyst and clear CZ stones for extra movement, shine, and a little trouble.\nThe first drape measures 30 mm and the second measures 40 mm, creating a soft layered effect that gives your stack more depth without feeling heavy.\n\nThree connection points let you style it across multiple piercings for that fully-curated, slightly chaotic, very cool-girl finish.\n\nDetails\n1.5 mm chain\n18K PVD gold finish\n4 mm CZ stones\nAmethyst + clear color mix\n30 mm first drape\n40 mm second drape\nTriple-point ear chain design\nLightweight layered styling\n\nPerfect for:\nHelix • Lobe • Cartilage • Multi-piercing stacks • Curated ear styling\n\nPretty girl jewelry with a little menace. 💜\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",

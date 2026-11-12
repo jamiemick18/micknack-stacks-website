@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-12T15:19:01.333Z",
+  "generated_at": "2026-11-12T15:45:03.273Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -66,14 +66,14 @@ window.MICKNACK_STRIPE_LINKS = {
       "product_id": "prod_VWJ31DIqaNCN3S"
     },
     "4577301519": {
-      "url": "https://buy.stripe.com/28EaEQ2YVg276tDcVCaZi0I",
-      "price": "19.99",
+      "url": "https://buy.stripe.com/7sY28karncPVcS16xeaZi27",
+      "name": "Purple Problem Triple Ear Chain | 18K PVD Gold Drape Chain | Amethyst & Clear CZ Connector | Curated Ear Jewelry",
+      "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1ULSct680JvUCS8JfFuXr02W",
-      "price_id": "price_1ULSct680JvUCS8JP81pCRWE",
-      "product_id": "prod_VMAy5lQaEZzwdF",
-      "name": "Purple Problem Triple Ear Chain | 18K PVD Gold Drape Chain | Amethyst & Clear CZ Connector | Curated Ear Jewelry"
+      "link_id": "plink_1Ub0BO680JvUCS8JavOa6s3X",
+      "price_id": "price_1Ub0BO680JvUCS8JdM2pTFA3",
+      "product_id": "prod_VcEeMy3Ww9gfnL"
     },
     "4576665382": {
       "url": "https://buy.stripe.com/8x200c1UR9DJaJT2gYaZi0J",
@@ -546,24 +546,24 @@ window.MICKNACK_STRIPE_LINKS = {
       "product_id": "prod_VYZ0OOTXxb3AWQ"
     },
     "4613750630": {
-      "url": "https://buy.stripe.com/cNiaEQ9nj039cS18FmaZi1U",
+      "url": "https://buy.stripe.com/5kQ7sE5735nt19jaNuaZi25",
       "name": "Leaf Me Alone 18G Threadless Flatback Earring | Clear Marquise CZ Leaf Stud | G23 ASTM F136 Titanium Cartilage Jewelry",
-      "price": "24.99",
+      "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1UaLKL680JvUCS8JumBNqznJ",
-      "price_id": "price_1UaLKL680JvUCS8JrL441kUT",
-      "product_id": "prod_VbYRMmMVWeIhwF"
+      "link_id": "plink_1Ub0BM680JvUCS8JpE7uHjxu",
+      "price_id": "price_1Ub0BL680JvUCS8JUuQ20tsI",
+      "product_id": "prod_VcEeCaDOdpXqy2"
     },
     "4613628567": {
-      "url": "https://buy.stripe.com/fZu00c5736rxg4d2gYaZi1V",
+      "url": "https://buy.stripe.com/4gM4gs8jf0397xHaNuaZi26",
       "name": "Tiny Hummingbird Threadless Flatback Earring | 18G - G23 ASTM F136 Titanium | Dainty CZ Cartilage Stud | 6mm 8mm",
-      "price": "24.99",
+      "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1UaLKM680JvUCS8J1XCdqdv7",
-      "price_id": "price_1UaLKM680JvUCS8JkKJTAQIw",
-      "product_id": "prod_VbYRgmcJJJsXJa"
+      "link_id": "plink_1Ub0BN680JvUCS8JbksRuFzz",
+      "price_id": "price_1Ub0BN680JvUCS8JcmCEQDbI",
+      "product_id": "prod_VcEeM4iMA0UKVa"
     },
     "4579741852": {
       "url": "https://buy.stripe.com/6oU00c1UR5nt19jaNuaZi22",
@@ -576,14 +576,14 @@ window.MICKNACK_STRIPE_LINKS = {
       "product_id": "prod_VcEExXtf3eFkdr"
     },
     "4614342317": {
-      "url": "https://buy.stripe.com/5kQ14g2YV7vB3hr7BiaZi1X",
+      "url": "https://buy.stripe.com/14AbIUdDzg2719j08QaZi24",
       "name": "Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | G23 ASTM F136 Titanium Cartilage Jewelry",
-      "price": "24.99",
+      "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1UaN4c680JvUCS8JdoEqjbyp",
-      "price_id": "price_1UaN4b680JvUCS8Jmi7UApg9",
-      "product_id": "prod_VbaFHJlRvQRtoa"
+      "link_id": "plink_1Ub0BL680JvUCS8JUfA0Txog",
+      "price_id": "price_1Ub0BK680JvUCS8JxefdRvF2",
+      "product_id": "prod_VcEeG3lr7qY8nu"
     },
     "4615185157": {
       "url": "https://buy.stripe.com/3cI7sE2YV2bh5pz1cUaZi1Y",
@@ -606,14 +606,14 @@ window.MICKNACK_STRIPE_LINKS = {
       "product_id": "prod_VcEEu1JX3MlA1E"
     },
     "4614386350": {
-      "url": "https://buy.stripe.com/cNi4gsgPLaHN6tDdZGaZi20",
+      "url": "https://buy.stripe.com/28EbIU42Z7vB05fbRyaZi23",
       "name": "Golden Delicate Ridgeline 18G Threadless Flatback Earring | Clear CZ Curved Stud | 18K Gold Plated G23 Titanium Cartilage Jewelry",
-      "price": "24.99",
+      "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1UazmA680JvUCS8Jg7H7OklF",
-      "price_id": "price_1UazmA680JvUCS8JW4aNBAIx",
-      "product_id": "prod_VcEEcNeihHckhr"
+      "link_id": "plink_1Ub0BJ680JvUCS8JQLVTBjYC",
+      "price_id": "price_1Ub0BJ680JvUCS8Jzte2Zd0Q",
+      "product_id": "prod_VcEe0J7nfjNZAW"
     }
   }
 };
