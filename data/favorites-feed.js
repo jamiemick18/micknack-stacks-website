@@ -914,7 +914,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 19,
    "at": "2026-11-12T20:36:32.110Z"
+  },
+  {
+   "id": "4613628567",
+   "title": "Tiny Hummingbird Threadless Flatback Earring | 18G - G23 ASTM F136 Titanium | Dainty CZ Cartilage Stud | 6mm 8mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/4df252/8875945257/il_fullxfull.8875945257_tj6f.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-12T23:30:53.054Z"
+  },
+  {
+   "id": "4601338080",
+   "title": "Hot Mess Pink  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Hot Pink Marquise Dangle | Dainty Cartilage Chain Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/d0159d/8773871911/il_fullxfull.8773871911_5ixs.jpg",
+   "gained": 1,
+   "total": 8,
+   "at": "2026-11-12T23:30:53.054Z"
   }
  ],
- "updated_at": "2026-11-12T20:36:32.110Z"
+ "updated_at": "2026-11-12T23:30:53.054Z"
 };

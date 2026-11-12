@@ -9,7 +9,7 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-12T20:36:32.110Z
+// Last read from Etsy: 2026-11-12T23:30:53.054Z
 
 window.MICKNACK_VARIATIONS = {
   // Polar Flare Threadless Flatback Earring | Tiny CZ Starburst 
