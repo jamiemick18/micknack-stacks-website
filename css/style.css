@@ -786,10 +786,39 @@ img {
 
 .shop-layout { display: block; }
 
-/* The rail only appears once there is room for it WITHOUT costing a column
-   of pieces. Four across is the shape of the collection; a sidebar that
-   quietly turns it into three is a bad trade, so below this width the rail
-   simply does not appear and the grid keeps its usual 1180px.
+/* From a normal desktop window up, the rail appears alongside the grid.
+   It used to wait for 1500px so that four cards across were never at risk,
+   but that put it out of reach of most screens, and a rail nobody sees is
+   worth less than a fourth column.
+
+   So it pays for itself out of the grid's own slack instead of a fixed
+   column count: the section is allowed to use the window up to 1400px, the
+   cards may sit a little narrower, and auto-fill works out how many fit.
+   A 1400px-plus window still gets four across; a 1280px one gets three and
+   the rail, which is the trade worth making at that size. */
+@media (min-width: 1200px) {
+  #shop .wrap { max-width: 1400px; }
+
+  .shop-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 224px;
+    gap: 28px;
+    align-items: start;
+  }
+
+  .shop-layout .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+
+  .loved.on {
+    display: block;
+    position: sticky;
+    top: 104px;
+  }
+}
+
+/* Once there is genuinely room for both, the rail and the cards go back to
+   their full widths.
 
    1500 = 1460 of content and padding, less the 248 rail and its 34 gap,
    leaving 1130 for the grid: enough for four 260px cards and their gaps. */
@@ -797,16 +826,12 @@ img {
   #shop .wrap { max-width: 1460px; }
 
   .shop-layout {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) 248px;
     gap: 34px;
-    align-items: start;
   }
 
-  .loved.on {
-    display: block;
-    position: sticky;
-    top: 104px;
+  .shop-layout .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   }
 }
 
