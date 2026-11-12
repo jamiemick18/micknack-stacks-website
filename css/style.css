@@ -786,23 +786,23 @@ img {
 
 .shop-layout { display: block; }
 
-/* From a normal desktop window up, the rail appears alongside the grid —
-   and the collection still runs four across, which is the shape of the shop
-   and not something the rail gets to take.
+/* From a desktop window up, the rail sits beside the grid and the
+   collection runs four across. Both, always — the rail is not allowed to
+   cost a column, and the column is not allowed to keep the rail off the
+   screen.
 
-   It used to wait for 1500px, which put it out of reach of most screens. So
-   instead of asking for a width that guarantees four 260px cards, the grid
-   is told to make four columns of whatever is left and the cards fit
-   themselves to it: about 233px on a 1280 window, growing from there. The
-   rail and the gaps are a little tighter here than they are on a wide
-   screen, which is where the room for the fourth card comes from. */
-@media (min-width: 1280px) {
-  #shop .wrap { max-width: 1400px; }
+   The room comes out of the widths instead. The grid is told to make four
+   columns of whatever is left and the cards fit themselves to it, while the
+   rail and the gaps taper with the window: full size on a wide screen,
+   drawn in on a narrow one. Cards run about 190px at 1100, 230 at 1280 and
+   260 once there is room, which is where they have always been. */
+@media (min-width: 1100px) {
+  #shop .wrap { max-width: 1460px; }
 
   .shop-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 216px;
-    gap: 22px;
+    grid-template-columns: minmax(0, 1fr) clamp(196px, 15vw, 248px);
+    gap: clamp(20px, 2.2vw, 34px);
     align-items: start;
   }
 
@@ -810,31 +810,13 @@ img {
      settle on three the moment the cards' minimum stopped fitting. */
   .shop-layout .product-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 30px 22px;
+    gap: clamp(26px, 2.6vw, 36px) clamp(18px, 2vw, 28px);
   }
 
   .loved.on {
     display: block;
     position: sticky;
     top: 104px;
-  }
-}
-
-/* Once there is genuinely room for both, the rail and the cards go back to
-   their full widths.
-
-   1500 = 1460 of content and padding, less the 248 rail and its 34 gap,
-   leaving 1130 for the grid: enough for four 260px cards and their gaps. */
-@media (min-width: 1500px) {
-  #shop .wrap { max-width: 1460px; }
-
-  .shop-layout {
-    grid-template-columns: minmax(0, 1fr) 248px;
-    gap: 34px;
-  }
-
-  .shop-layout .product-grid {
-    gap: 36px 28px;
   }
 }
 
