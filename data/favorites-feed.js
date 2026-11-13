@@ -938,7 +938,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 2,
    "at": "2026-11-13T05:50:33.701Z"
+  },
+  {
+   "id": "4573472494",
+   "title": "Barely There Threadless Flatback Earring | Minimal Gold Cartilage Stud | ASTM F136 G23 Implant Grade Titanium | Dainty Two Stone Earring",
+   "image": "https://i.etsystatic.com/67609393/r/il/3e57de/8557813877/il_fullxfull.8557813877_cfpb.jpg",
+   "gained": 1,
+   "total": 11,
+   "at": "2026-11-13T14:16:37.893Z"
   }
  ],
- "updated_at": "2026-11-13T05:50:33.701Z"
+ "updated_at": "2026-11-13T14:16:37.893Z"
 };

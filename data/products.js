@@ -2,8 +2,106 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-13T05:50:33.701Z",
+  "synced_at": "2026-11-13T14:16:37.893Z",
   "listings": [
+    {
+      "listing_id": "4566919003",
+      "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+      "price": "15.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4566919003/triple-drip-earring-connector-chain-18k",
+      "description": "This dainty gold chain features a unique flattened lip-link texture with a soft drape and three cascading chain dangles on one end for a little extra detail. The 4mm hoops make it easy to connect between earrings, hoops, or compatible flatback jewelry to create a stack that feels completely your own.\n\nDETAILS • 40mm main connector chain\n• Approx. 2mm wide lip-link chain\n• 4mm connecting hoop on each end\n• Three cascading dangle chains on one end\n• 18K gold plated\n• Non-tarnish + water resistant\n• Lightweight for comfortable stacking\n\nEach chain is sold individually so you can style it however you want — connect two piercings, add it to a hoop, layer it with other chains, or use it as the statement piece in your current stack.\nBecause ear anatomy and piercing placement vary, the way the chain drapes will be unique to you.\n\n✨ MIX. CONNECT. STACK.\nBuild an ear stack that feels like you.\nPlease note: “Lip Link” refers to the style/shape of the chain links — this piece is designed as an earring connector chain.\n\nMicknack Stacks\nDesigned for creative ears + unapologetically personal stacks.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/a491/538b1183-d64b-4292-9f39-0bdc7e2da50c/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ],
+      "quantity": 2,
+      "created": "2026-09-01T21:11:50.000Z",
+      "views": 195,
+      "num_favorers": 19,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4573616908",
+      "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
+      "price": "16.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4573616908/little-orbit-threadless-flatback-earring",
+      "description": "A tiny little universe for your ear stack.\n\nLittle Orbit features a polished gold center surrounded by a curved cluster of four sparkling CZ stones, creating the look of tiny stars orbiting around their own little golden planet.\n\nPetite, playful, and beautifully minimal, this piece adds just enough celestial sparkle to make your stack interesting without taking over.\n\nWhy you’ll love it\nPetite celestial-inspired design\nPolished gold center\nFour sparkling CZ accents\nDainty, minimal silhouette\nEasy to mix into curated ear stacks\nPerfect for everyday wear\n\nWhy ASTM F136 G23 titanium?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nImplant-grade titanium\nFinish: Gold PVD\nFour clear CZ stones\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nTiny orbit. Little sparkle. Big ear-stack energy. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
+        "https://i.etsystatic.com/67609393/r/il/a10d00/8558847061/il_fullxfull.8558847061_siin.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "threadless earring",
+        "push pin earring",
+        "titanium labret",
+        "flatback earring",
+        "cartilage earring",
+        "tragus earring",
+        "hidden helix",
+        "cosmic earring",
+        "star earring",
+        "barely there earring",
+        "minimal flatback",
+        "dainty flatback",
+        "simple ear stack"
+      ],
+      "quantity": 1,
+      "created": "2026-09-11T22:21:13.000Z",
+      "views": 116,
+      "num_favorers": 10,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4584458361",
+      "title": "Checkered Black & Clear CZ Ear Chain | 30mm Gold Connector Chain | ASTM F136 Titanium Labret Option | 6mm or 8mm Flatback",
+      "price": "25.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4584458361/checkered-black-clear-cz-ear-chain-30mm",
+      "description": "Checkered 🏁✨\n\nCheckered features a dainty gold chain accented with alternating 4 mm black and clear CZ stones, creating a bold black-and-white contrast with plenty of movement and shine.\n\nThe chain comes attached to a gold PVD ASTM F136 implant-grade titanium flatback labret, so the piece is ready to wear as a single piercing chain dangle. Choose between a 6 mm or 8 mm post depending on your preferred fit and anatomy.\n\nWhy you’ll love it\nFive 4 mm black and clear CZ stones\nAlternating checkered-inspired color pattern\nDainty gold chain with subtle movement\nEdgy without feeling heavy\nFlatback labret design\nAvailable with 6 mm or 8 mm post\nEasy statement piece for a curated ear stack\n\nWhy ASTM F136 titanium?\nThe post sitting inside your piercing is ASTM F136 implant-grade titanium with a gold PVD finish.\n✨ Implant-grade material: ASTM F136 is a recognized specification for titanium alloy used in surgical implants and quality body jewelry.\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear.\n✨ Nickel-conscious: Titanium is commonly chosen by people concerned about sensitivity to nickel-containing jewelry.\n✨ Corrosion resistant: Titanium is highly resistant to corrosion and holds up well against everyday moisture and wear.\n✨ Smooth flatback: No traditional butterfly backing poking behind your ear. The flat disk creates a clean, low-profile fit.\n✨ Threadless pushpin: No exposed external screw threads pass through the piercing channel during insertion.\n\nMaterials:\nFlatback labret: ASTM F136 implant-grade titanium\nStones: 4 mm black and clear CZ\nThreadless / pushpin design\nPost options: 6 mm or 8 mm\n\nPerfect for\nHelix • Flat • Lobe • Cartilage • Curated Ear Stacks\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/405dec/8592403532/il_fullxfull.8592403532_kp37.jpg",
+        "https://i.etsystatic.com/67609393/r/il/d315f5/8592403518/il_fullxfull.8592403518_loqn.jpg",
+        "https://i.etsystatic.com/67609393/r/il/8e41af/8640247141/il_fullxfull.8640247141_2zxl.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/262e/7992ccca-9919-4fea-bd1f-29d39095f619/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "ASTM F136",
+        "G23 Titanium"
+      ],
+      "quantity": 2,
+      "created": "2026-09-28T18:23:41.000Z",
+      "views": 42,
+      "num_favorers": 1,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
     {
       "listing_id": "4616052816",
       "title": "The Maddix, Pink Ear Chain with Titanium Labret | Corundum & CZ Dangle Connector | 6mm or 8mm Star Flatback | Dainty Cartilage Jewelry",
@@ -121,7 +219,7 @@ window.MICKNACK_PRODUCTS = {
       "tags": [],
       "quantity": 4,
       "created": "2026-11-12T20:01:01.000Z",
-      "views": 0,
+      "views": 1,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-11-12T20:36:32.110Z"
@@ -230,7 +328,7 @@ window.MICKNACK_PRODUCTS = {
       "tags": [],
       "quantity": 5,
       "created": "2026-11-10T21:33:23.000Z",
-      "views": 0,
+      "views": 1,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-11-10T21:58:04.731Z"
@@ -270,7 +368,7 @@ window.MICKNACK_PRODUCTS = {
       "tags": [],
       "quantity": 4,
       "created": "2026-11-09T23:42:00.000Z",
-      "views": 13,
+      "views": 17,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-11-10T01:55:33.616Z"
@@ -372,7 +470,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 9,
       "created": "2026-11-02T19:50:28.000Z",
-      "views": 32,
+      "views": 36,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-11-02T20:06:49.958Z"
@@ -405,7 +503,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-08-31T21:52:58.000Z",
-      "views": 53,
+      "views": 54,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -441,7 +539,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-09-15T20:48:41.000Z",
-      "views": 84,
+      "views": 89,
       "num_favorers": 7,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -477,7 +575,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-08T19:59:35.000Z",
-      "views": 91,
+      "views": 99,
       "num_favorers": 9,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -512,7 +610,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-10-15T22:11:01.000Z",
-      "views": 230,
+      "views": 239,
       "num_favorers": 23,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
@@ -546,7 +644,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 19,
       "created": "2026-10-08T17:47:55.000Z",
-      "views": 63,
+      "views": 65,
       "num_favorers": 7,
       "etsy_active": true,
       "added_at": "2026-10-08T19:10:48.816Z"
@@ -580,7 +678,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-13T21:39:50.000Z",
-      "views": 238,
+      "views": 247,
       "num_favorers": 20,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -614,7 +712,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-10-22T23:42:27.000Z",
-      "views": 30,
+      "views": 32,
       "num_favorers": 7,
       "etsy_active": true,
       "added_at": "2026-10-23T01:20:53.342Z"
@@ -819,7 +917,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-10-22T21:29:09.000Z",
-      "views": 19,
+      "views": 21,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-10-22T21:34:24.555Z"
@@ -888,7 +986,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-21T19:48:13.000Z",
-      "views": 178,
+      "views": 183,
       "num_favorers": 21,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -918,7 +1016,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-10-20T19:38:15.000Z",
-      "views": 30,
+      "views": 31,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-10-21T14:19:56.913Z"
@@ -952,43 +1050,10 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-10-15T20:06:48.000Z",
-      "views": 29,
+      "views": 34,
       "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
-    },
-    {
-      "listing_id": "4566919003",
-      "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
-      "price": "15.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4566919003/triple-drip-earring-connector-chain-18k",
-      "description": "This dainty gold chain features a unique flattened lip-link texture with a soft drape and three cascading chain dangles on one end for a little extra detail. The 4mm hoops make it easy to connect between earrings, hoops, or compatible flatback jewelry to create a stack that feels completely your own.\n\nDETAILS • 40mm main connector chain\n• Approx. 2mm wide lip-link chain\n• 4mm connecting hoop on each end\n• Three cascading dangle chains on one end\n• 18K gold plated\n• Non-tarnish + water resistant\n• Lightweight for comfortable stacking\n\nEach chain is sold individually so you can style it however you want — connect two piercings, add it to a hoop, layer it with other chains, or use it as the statement piece in your current stack.\nBecause ear anatomy and piercing placement vary, the way the chain drapes will be unique to you.\n\n✨ MIX. CONNECT. STACK.\nBuild an ear stack that feels like you.\nPlease note: “Lip Link” refers to the style/shape of the chain links — this piece is designed as an earring connector chain.\n\nMicknack Stacks\nDesigned for creative ears + unapologetically personal stacks.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/a491/538b1183-d64b-4292-9f39-0bdc7e2da50c/vid_v1.mp4",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "gold ear chain",
-        "double drape chain",
-        "piercing chain",
-        "cartilage chain",
-        "non tarnish jewelry",
-        "multiple piercings"
-      ],
-      "quantity": 3,
-      "created": "2026-09-01T21:11:50.000Z",
-      "views": 188,
-      "num_favorers": 19,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4589894700",
@@ -1053,41 +1118,10 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-30T21:01:07.000Z",
-      "views": 37,
+      "views": 39,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-10-01T13:17:40.579Z"
-    },
-    {
-      "listing_id": "4584458361",
-      "title": "Checkered Black & Clear CZ Ear Chain | 30mm Gold Connector Chain | ASTM F136 Titanium Labret Option | 6mm or 8mm Flatback",
-      "price": "25.00",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4584458361/checkered-black-clear-cz-ear-chain-30mm",
-      "description": "Checkered 🏁✨\n\nCheckered features a dainty gold chain accented with alternating 4 mm black and clear CZ stones, creating a bold black-and-white contrast with plenty of movement and shine.\n\nThe chain comes attached to a gold PVD ASTM F136 implant-grade titanium flatback labret, so the piece is ready to wear as a single piercing chain dangle. Choose between a 6 mm or 8 mm post depending on your preferred fit and anatomy.\n\nWhy you’ll love it\nFive 4 mm black and clear CZ stones\nAlternating checkered-inspired color pattern\nDainty gold chain with subtle movement\nEdgy without feeling heavy\nFlatback labret design\nAvailable with 6 mm or 8 mm post\nEasy statement piece for a curated ear stack\n\nWhy ASTM F136 titanium?\nThe post sitting inside your piercing is ASTM F136 implant-grade titanium with a gold PVD finish.\n✨ Implant-grade material: ASTM F136 is a recognized specification for titanium alloy used in surgical implants and quality body jewelry.\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear.\n✨ Nickel-conscious: Titanium is commonly chosen by people concerned about sensitivity to nickel-containing jewelry.\n✨ Corrosion resistant: Titanium is highly resistant to corrosion and holds up well against everyday moisture and wear.\n✨ Smooth flatback: No traditional butterfly backing poking behind your ear. The flat disk creates a clean, low-profile fit.\n✨ Threadless pushpin: No exposed external screw threads pass through the piercing channel during insertion.\n\nMaterials:\nFlatback labret: ASTM F136 implant-grade titanium\nStones: 4 mm black and clear CZ\nThreadless / pushpin design\nPost options: 6 mm or 8 mm\n\nPerfect for\nHelix • Flat • Lobe • Cartilage • Curated Ear Stacks\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/405dec/8592403532/il_fullxfull.8592403532_kp37.jpg",
-        "https://i.etsystatic.com/67609393/r/il/d315f5/8592403518/il_fullxfull.8592403518_loqn.jpg",
-        "https://i.etsystatic.com/67609393/r/il/8e41af/8640247141/il_fullxfull.8640247141_2zxl.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/262e/7992ccca-9919-4fea-bd1f-29d39095f619/vid_v1.mp4",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "ASTM F136",
-        "G23 Titanium"
-      ],
-      "quantity": 3,
-      "created": "2026-09-28T18:23:41.000Z",
-      "views": 40,
-      "num_favorers": 1,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4581913102",
@@ -1120,7 +1154,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-24T17:00:41.000Z",
-      "views": 48,
+      "views": 50,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1217,7 +1251,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-21T16:04:05.000Z",
-      "views": 26,
+      "views": 28,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1251,7 +1285,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-17T17:55:02.000Z",
-      "views": 59,
+      "views": 60,
       "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1383,7 +1417,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-12T00:05:44.000Z",
-      "views": 22,
+      "views": 27,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1449,7 +1483,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T23:20:43.000Z",
-      "views": 30,
+      "views": 32,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1583,42 +1617,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T22:25:35.000Z",
-      "views": 43,
+      "views": 44,
       "num_favorers": 8,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4573616908",
-      "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
-      "price": "16.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4573616908/little-orbit-threadless-flatback-earring",
-      "description": "A tiny little universe for your ear stack.\n\nLittle Orbit features a polished gold center surrounded by a curved cluster of four sparkling CZ stones, creating the look of tiny stars orbiting around their own little golden planet.\n\nPetite, playful, and beautifully minimal, this piece adds just enough celestial sparkle to make your stack interesting without taking over.\n\nWhy you’ll love it\nPetite celestial-inspired design\nPolished gold center\nFour sparkling CZ accents\nDainty, minimal silhouette\nEasy to mix into curated ear stacks\nPerfect for everyday wear\n\nWhy ASTM F136 G23 titanium?\n\n✨ More piercing-friendly: Implant-grade titanium is widely used in professional body jewelry and is a popular choice for people who are sensitive to many traditional jewelry metals.\n\n✨ Nickel-conscious: Titanium is especially popular for those concerned about nickel sensitivity.\n\n✨ Lightweight: Titanium is naturally lightweight, making it comfortable for everyday wear and especially nice for cartilage piercings.\n\n✨ Smooth flatback comfort: No traditional butterfly backing poking behind your ear. The flat disk sits comfortably against the back of the piercing for a smooth, low-profile fit.\n\n✨ Threadless design: The pushpin-style top means there are no external screw threads traveling through the piercing channel during insertion.\n\nMaterials\nImplant-grade titanium\nFinish: Gold PVD\nFour clear CZ stones\nThreadless / pushpin design\nFlatback labret style\nPost Length Options\n6 mm for a more snug fit\n8 mm for a little extra room\n\nBecause everyone’s anatomy and piercing placement are different, the best post length will vary.\n\nPerfect for\n\nHelix • Flat • Lobe • Tragus • Cartilage • Curated Ear Stacks\n\nTiny orbit. Little sparkle. Big ear-stack energy. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
-        "https://i.etsystatic.com/67609393/r/il/a10d00/8558847061/il_fullxfull.8558847061_siin.jpg"
-      ],
-      "video": "",
-      "tags": [
-        "threadless earring",
-        "push pin earring",
-        "titanium labret",
-        "flatback earring",
-        "cartilage earring",
-        "tragus earring",
-        "hidden helix",
-        "cosmic earring",
-        "star earring",
-        "barely there earring",
-        "minimal flatback",
-        "dainty flatback",
-        "simple ear stack"
-      ],
-      "quantity": 2,
-      "created": "2026-09-11T22:21:13.000Z",
-      "views": 108,
-      "num_favorers": 10,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1650,7 +1650,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T22:07:53.000Z",
-      "views": 44,
+      "views": 45,
       "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1684,8 +1684,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T17:54:53.000Z",
-      "views": 160,
-      "num_favorers": 10,
+      "views": 176,
+      "num_favorers": 11,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1717,7 +1717,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T17:34:10.000Z",
-      "views": 47,
+      "views": 48,
       "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1750,7 +1750,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T16:58:37.000Z",
-      "views": 16,
+      "views": 17,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1785,7 +1785,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-08T22:16:35.000Z",
-      "views": 82,
+      "views": 85,
       "num_favorers": 8,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1819,7 +1819,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-03T19:48:22.000Z",
-      "views": 39,
+      "views": 40,
       "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"

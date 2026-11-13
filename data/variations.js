@@ -9,9 +9,13 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-13T05:50:33.701Z
+// Last read from Etsy: 2026-11-13T14:16:37.893Z
 
 window.MICKNACK_VARIATIONS = {
+  // Little Orbit Threadless Flatback Earring | Gold Celestial Ca
+  "4573616908": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
+  // Checkered Black & Clear CZ Ear Chain | 30mm Gold Connector C
+  "4584458361": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // The Maddix, Pink Ear Chain with Titanium Labret | Corundum &
   "4616052816": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // The Aspyn, Purple Ear Chain with Titanium Labret | 31mm Viol
@@ -38,8 +42,6 @@ window.MICKNACK_VARIATIONS = {
   "4579868601": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Soft Spark G23 Titanium Labret to Sterling Silver Ear Chain 
   "4599690242": [{ name: "Post Length", options: ["6 mm", "8 mm"] }, { name: "Stone Color", options: ["Baby Pink CZ", "Lavendar CZ", "Crystal Clear CZ"] }],
-  // Checkered Black & Clear CZ Ear Chain | 30mm Gold Connector C
-  "4584458361": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Prism Spell Double Draped Ear Chain | ASTM F136 G23 Titanium
   "4581913102": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Alpenglow Labret to Earring Connector | Gold CZ Ear Chain | 
@@ -60,8 +62,6 @@ window.MICKNACK_VARIATIONS = {
   "4573623776": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Drip Threadless Flatback Earring | Dainty Gold Dangle | Tita
   "4573601729": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
-  // Little Orbit Threadless Flatback Earring | Gold Celestial Ca
-  "4573616908": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Lotus Glow Threadless Flatback Earring | Gold Lotus Cartilag
   "4573594151": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Barely There Threadless Flatback Earring | Minimal Gold Cart

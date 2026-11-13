@@ -6,7 +6,7 @@
 // put corrections in data/category-overrides.json, which wins over the
 // titles and survives the next sync.
 //
-// Last worked out: 2026-11-13T05:50:33.701Z
+// Last worked out: 2026-11-13T14:16:37.893Z
 
 window.MICKNACK_CATEGORIES = [
   {
@@ -23,6 +23,9 @@ window.MICKNACK_CATEGORIES = [
   }
 ];
 window.MICKNACK_CATEGORY_OF = {
+  "4566919003": "chains",
+  "4573616908": "studs",
+  "4584458361": "chains",
   "4616052816": "chains",
   "4616034803": "chains",
   "4615880727": "studs",
@@ -54,10 +57,8 @@ window.MICKNACK_CATEGORY_OF = {
   "4579868601": "chains",
   "4599690242": "chains",
   "4596261114": "chains",
-  "4566919003": "chains",
   "4589894700": "chains",
   "4586013046": "chains",
-  "4584458361": "chains",
   "4581913102": "chains",
   "4579820434": "chains",
   "4576742876": "chains",
@@ -73,7 +74,6 @@ window.MICKNACK_CATEGORY_OF = {
   "4573609723": "studs",
   "4573623776": "studs",
   "4573601729": "studs",
-  "4573616908": "studs",
   "4573594151": "studs",
   "4573472494": "studs",
   "4573443165": "studs",
