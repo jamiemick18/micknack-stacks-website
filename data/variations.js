@@ -9,9 +9,13 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-12T23:30:53.054Z
+// Last read from Etsy: 2026-11-13T05:50:33.701Z
 
 window.MICKNACK_VARIATIONS = {
+  // The Maddix, Pink Ear Chain with Titanium Labret | Corundum &
+  "4616052816": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
+  // The Aspyn, Purple Ear Chain with Titanium Labret | 31mm Viol
+  "4616034803": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Polar Flare Threadless Flatback Earring | Tiny CZ Starburst 
   "4615880727": [{ name: "Post Length", options: ["8 mm", "6 mm"] }, { name: "Primary color", options: ["Titanium Silver", "18K Gold Plated"] }],
   // Love Bug Threadless Flatback Earring | Tiny Heart CZ Titaniu

@@ -2,8 +2,66 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-12T23:30:53.054Z",
+  "synced_at": "2026-11-13T05:50:33.701Z",
   "listings": [
+    {
+      "listing_id": "4616052816",
+      "title": "The Maddix, Pink Ear Chain with Titanium Labret | Corundum & CZ Dangle Connector | 6mm or 8mm Star Flatback | Dainty Cartilage Jewelry",
+      "price": "30.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4616052816/the-maddix-pink-ear-chain-with-titanium",
+      "description": "The Maddix 💗✨\n\nTiny, bright, and absolutely full of personality.\n\nwww.micknackstacks.com\n\nThe Maddix is a super-dainty ear chain finished with alternating bright pink corundum stones and soft light pink CZ stones. The mix gives it that perfect contrast between bold and sweet, with tiny flashes of color that move and sparkle along the chain.\n\nThis one is for the girls who love animals more than most people, laugh with their whole body, know exactly what they want, and somehow notice absolutely everything happening around them.\n\nIndependent, curious, and strong spirited, but also the first one ready for a cuddle, fiercely loving of her people, and sweeter than a strawberry.\n\nThe delicate chain is finished with a titanium threadless labret and tiny star-shaped flatback, with your choice of a 6 mm or 8 mm post length.\n\nDetails:\n\nSuper-dainty petite ear chain\nBright pink corundum stones\nLight pink CZ stones\nAlternating pink color pattern\nTiny individually dangling stones\nTitanium threadless labret\nTiny star-shaped flatback\nAvailable in 6 mm or 8 mm post length\nLightweight movement and sparkle\nLabret-to-earring connector design\n\nStyle it your way\n\nThe Maddix was made for stacks with personality.\n\nLet the little pink stones dance between a helix and lobe, pair it with simple gold pieces so the color gets all the attention, or mix it into a louder stack that’s every bit as expressive as she is.\n\nSweet enough for cuddles. Wild enough to keep things interesting.\n\nPerfect for:\nHelix-to-lobe styling • Double lobes • Petite ear stacks • Pink lovers • Playful stacks • Animal lovers • Curated ears\n\nA little pink. A lot of personality. My whole heart 💗\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/890a5f/8895780003/il_fullxfull.8895780003_sgep.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/4128/89ccef7a-2b4d-458a-b648-0ff64c032b0d/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "ASTM F136",
+        "G23 Titanium"
+      ],
+      "quantity": 4,
+      "created": "2026-11-13T00:57:10.000Z",
+      "views": 0,
+      "num_favorers": 1,
+      "etsy_active": true,
+      "added_at": "2026-11-13T05:50:33.701Z"
+    },
+    {
+      "listing_id": "4616034803",
+      "title": "The Aspyn, Purple Ear Chain with Titanium Labret | 31mm Violet & Lavender CZ Connector | 6mm or 8mm Star Flatback",
+      "price": "30.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4616034803/the-aspyn-purple-ear-chain-with-titanium",
+      "description": "The Aspyn 💜✨\n\nTiny, curious, and full of beauty.\n\nwww.micknackstacks.com\n\nThe Aspyn is a super-dainty 31 mm ear chain finished with alternating violet and light lavender 3 mm stones. The soft purple tones feel a little like tiny gemstones collected from a secret garden.. delicate, colorful, and just magical enough.\n\nThere’s something sweet and thoughtful about this one. It feels bright without being loud, gentle without disappearing, and like the kind of piece that makes everything around it a little better.\n\nFor the girls who love learning something new, noticing every pretty stone on the ground, wandering outside just to see what they can find, and choosing purple every single time.\n\nThe chain is finished with a titanium threadless labret featuring a tiny star-shaped flatback, available in either a 6 mm or 8 mm post length so you can choose the fit that works best for your piercing.\n\nDetails:\n\n31 mm chain length\nTiny 3 mm stones\nAlternating violet + light lavender\nTitanium threadless labret\nTiny star-shaped flatback\nAvailable in 6 mm or 8 mm post length\nUltra-dainty, petite design\nDelicate movement\n\nStyle it your way:\nThe Aspyn was made for soft, thoughtful stacks.\n\nDrape the chain between the included labret and a compatible earring for a tiny wash of purple, pair it with simple gold pieces, or tuck it beside your favorite gemstones and let the colors quietly work together.\n\nPerfect for:\nHelix-to-lobe styling • Double lobes • Petite ear stacks • Purple lovers • Gemstone-inspired stacks • Nature-inspired jewelry • Curated ears\n\nA little purple. A whole lot of my heart. 💜\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/894619/8847948070/il_fullxfull.8847948070_hjzb.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/b7d1/6997d8de-0428-439c-abdf-0b7fadfa0c4a/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "ASTM F136",
+        "G23 Titanium"
+      ],
+      "quantity": 4,
+      "created": "2026-11-13T00:44:35.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-11-13T05:50:33.701Z"
+    },
     {
       "listing_id": "4615880727",
       "title": "Polar Flare Threadless Flatback Earring | Tiny CZ Starburst Titanium Stud | Silver or 18K Gold Plated | Single Cartilage Earring",
@@ -315,7 +373,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 9,
       "created": "2026-11-02T19:50:28.000Z",
       "views": 32,
-      "num_favorers": 1,
+      "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-11-02T20:06:49.958Z"
     },
@@ -557,7 +615,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 2,
       "created": "2026-10-22T23:42:27.000Z",
       "views": 30,
-      "num_favorers": 8,
+      "num_favorers": 7,
       "etsy_active": true,
       "added_at": "2026-10-23T01:20:53.342Z"
     },
