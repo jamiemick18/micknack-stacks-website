@@ -946,7 +946,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 11,
    "at": "2026-11-13T14:16:37.893Z"
+  },
+  {
+   "id": "4574722466",
+   "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
+   "gained": 1,
+   "total": 21,
+   "at": "2026-11-13T21:18:12.506Z"
   }
  ],
- "updated_at": "2026-11-13T14:16:37.893Z"
+ "updated_at": "2026-11-13T21:18:12.506Z"
 };
