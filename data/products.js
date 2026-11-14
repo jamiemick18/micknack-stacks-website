@@ -2,8 +2,41 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-13T21:18:12.506Z",
+  "synced_at": "2026-11-14T02:04:36.493Z",
   "listings": [
+    {
+      "listing_id": "4615037352",
+      "title": "Moonlit Mischief Moonstone AB Ear Chain | 40mm 18K Gold Plated Chain | 6 Iridescent CZ Earring Connector | Curated Ear Jewelry",
+      "price": "25.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4615037352/moonlit-mischief-moonstone-ab-ear-chain",
+      "description": "Moonlit Mischief 🌙✨\n\nLooks innocent until the light hits.\n\nMoonlit Mischief features six 4 mm Moonstone AB CZ stones suspended along a delicate 40 mm gold chain. Each stone flashes shifting tones of purple, blue, green, and soft iridescent light depending on the angle.\n\nThe 1.5 mm chain is finished in 18K gold plating, keeping the whole piece dainty while letting those color-shifting stones steal the attention.\n\nDetails:\n\n40 mm chain length\nDainty 1.5 mm chain\n18K gold-plated finish\nSix 4 mm round CZ stones\nMoonstone AB color effect\nIridescent flashes of purple, blue, green + more\n\nChain connector only\n\nStyle it your way\n\nMoonlit Mischief is designed to connect between compatible earrings or piercings you already own.\n\nDrape it between two lobes, connect a helix to a lobe, or work it into a layered stack when you want a little movement and an unexpected flash of color.\n\nThe AB finish changes constantly with the light, so no two angles look quite the same.\n\nPerfect for:\nHelix-to-lobe styling • Double lobes • Cartilage stacks • Celestial stacks • Alternative jewelry • Curated ears\n\nPretty in the shadows. Trouble in the light. 🌙✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/c64912/8839526634/il_fullxfull.8839526634_6ji8.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/2620/d89909ed-bfcb-4c67-9b9a-64cdde46e1ac/vid_v1.mp4",
+      "tags": [
+        "moonstone ab",
+        "ab ear chain",
+        "ear chain connector",
+        "iridescent jewelry",
+        "gold ear chain",
+        "helix chain",
+        "cartilage chain",
+        "ear stack jewelry",
+        "piercing connector",
+        "celestial jewelry",
+        "alt jewelry",
+        "curated ear",
+        "dainty ear chain"
+      ],
+      "quantity": 4,
+      "created": "2026-11-11T18:55:30.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-11-12T01:24:08.882Z"
+    },
     {
       "listing_id": "4566919003",
       "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
@@ -252,39 +285,6 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-11-11T22:39:37.000Z",
-      "views": 0,
-      "num_favorers": 0,
-      "etsy_active": true,
-      "added_at": "2026-11-12T01:24:08.882Z"
-    },
-    {
-      "listing_id": "4615037352",
-      "title": "Moonlit Mischief Moonstone AB Ear Chain | 40mm 18K Gold Plated Chain | 6 Iridescent CZ Earring Connector | Curated Ear Jewelry",
-      "price": "25.00",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4615037352/moonlit-mischief-moonstone-ab-ear-chain",
-      "description": "Moonlit Mischief 🌙✨\n\nLooks innocent until the light hits.\n\nMoonlit Mischief features six 4 mm Moonstone AB CZ stones suspended along a delicate 40 mm gold chain. Each stone flashes shifting tones of purple, blue, green, and soft iridescent light depending on the angle.\n\nThe 1.5 mm chain is finished in 18K gold plating, keeping the whole piece dainty while letting those color-shifting stones steal the attention.\n\nDetails:\n\n40 mm chain length\nDainty 1.5 mm chain\n18K gold-plated finish\nSix 4 mm round CZ stones\nMoonstone AB color effect\nIridescent flashes of purple, blue, green + more\n\nChain connector only\n\nStyle it your way\n\nMoonlit Mischief is designed to connect between compatible earrings or piercings you already own.\n\nDrape it between two lobes, connect a helix to a lobe, or work it into a layered stack when you want a little movement and an unexpected flash of color.\n\nThe AB finish changes constantly with the light, so no two angles look quite the same.\n\nPerfect for:\nHelix-to-lobe styling • Double lobes • Cartilage stacks • Celestial stacks • Alternative jewelry • Curated ears\n\nPretty in the shadows. Trouble in the light. 🌙✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/c64912/8839526634/il_fullxfull.8839526634_6ji8.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/2620/d89909ed-bfcb-4c67-9b9a-64cdde46e1ac/vid_v1.mp4",
-      "tags": [
-        "moonstone ab",
-        "ab ear chain",
-        "ear chain connector",
-        "iridescent jewelry",
-        "gold ear chain",
-        "helix chain",
-        "cartilage chain",
-        "ear stack jewelry",
-        "piercing connector",
-        "celestial jewelry",
-        "alt jewelry",
-        "curated ear",
-        "dainty ear chain"
-      ],
-      "quantity": 5,
-      "created": "2026-11-11T18:55:30.000Z",
       "views": 0,
       "num_favorers": 0,
       "etsy_active": true,
@@ -987,7 +987,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-09-21T19:48:13.000Z",
       "views": 183,
-      "num_favorers": 21,
+      "num_favorers": 22,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1618,7 +1618,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T22:25:35.000Z",
       "views": 44,
-      "num_favorers": 8,
+      "num_favorers": 9,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
