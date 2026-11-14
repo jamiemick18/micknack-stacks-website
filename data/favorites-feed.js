@@ -978,7 +978,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 2,
    "at": "2026-11-14T09:57:07.700Z"
+  },
+  {
+   "id": "4573601729",
+   "title": "Drip Threadless Flatback Earring | Dainty Gold Dangle | Titanium Labret Post | Minimal Cartilage Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/dd8fa7/8510995928/il_fullxfull.8510995928_1ert.jpg",
+   "gained": 1,
+   "total": 10,
+   "at": "2026-11-14T16:30:08.621Z"
   }
  ],
- "updated_at": "2026-11-14T09:57:07.700Z"
+ "updated_at": "2026-11-14T16:30:08.621Z"
 };
