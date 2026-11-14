@@ -970,7 +970,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 9,
    "at": "2026-11-14T02:04:36.493Z"
+  },
+  {
+   "id": "4613628567",
+   "title": "Tiny Hummingbird Threadless Flatback Earring | 18G - G23 ASTM F136 Titanium | Dainty CZ Cartilage Stud | 6mm 8mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/4df252/8875945257/il_fullxfull.8875945257_tj6f.jpg",
+   "gained": 1,
+   "total": 2,
+   "at": "2026-11-14T09:57:07.700Z"
   }
  ],
- "updated_at": "2026-11-14T02:04:36.493Z"
+ "updated_at": "2026-11-14T09:57:07.700Z"
 };
