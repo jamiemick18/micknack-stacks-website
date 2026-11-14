@@ -986,7 +986,31 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 10,
    "at": "2026-11-14T16:30:08.621Z"
+  },
+  {
+   "id": "4615037352",
+   "title": "Moonlit Mischief Moonstone AB Ear Chain | 40mm 18K Gold Plated Chain | 6 Iridescent CZ Earring Connector | Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/c64912/8839526634/il_fullxfull.8839526634_6ji8.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-14T21:13:04.275Z"
+  },
+  {
+   "id": "4566919003",
+   "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg",
+   "gained": 1,
+   "total": 20,
+   "at": "2026-11-14T21:13:04.275Z"
+  },
+  {
+   "id": "4613628567",
+   "title": "Tiny Hummingbird Threadless Flatback Earring | 18G - G23 ASTM F136 Titanium | Dainty CZ Cartilage Stud | 6mm 8mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/4df252/8875945257/il_fullxfull.8875945257_tj6f.jpg",
+   "gained": 1,
+   "total": 3,
+   "at": "2026-11-14T21:13:04.275Z"
   }
  ],
- "updated_at": "2026-11-14T16:30:08.621Z"
+ "updated_at": "2026-11-14T21:13:04.275Z"
 };

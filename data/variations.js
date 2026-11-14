@@ -9,7 +9,7 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-14T16:30:08.621Z
+// Last read from Etsy: 2026-11-14T21:13:04.275Z
 
 window.MICKNACK_VARIATIONS = {
   // Little Orbit Threadless Flatback Earring | Gold Celestial Ca
