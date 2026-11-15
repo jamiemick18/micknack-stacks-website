@@ -1010,7 +1010,55 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 3,
    "at": "2026-11-14T21:13:04.275Z"
+  },
+  {
+   "id": "4615880970",
+   "title": "Love Bug Threadless Flatback Earring | Tiny Heart CZ Titanium Stud | Silver or 18K Gold Plated Cartilage Jewelry | Single Earring",
+   "image": "https://i.etsystatic.com/67609393/r/il/f76125/8894437871/il_fullxfull.8894437871_6kve.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-15T01:36:31.776Z"
+  },
+  {
+   "id": "4574722466",
+   "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
+   "gained": 1,
+   "total": 22,
+   "at": "2026-11-15T01:36:31.776Z"
+  },
+  {
+   "id": "4586013046",
+   "title": "Badd Mommi Black CZ Ear Chain | 1.5mm Gold Earring Connector | 4mm Black Stone Cartilage Chain | Edgy Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/05859e/8651994183/il_fullxfull.8651994183_4av3.jpg",
+   "gained": 1,
+   "total": 3,
+   "at": "2026-11-15T01:36:31.776Z"
+  },
+  {
+   "id": "4573623776",
+   "title": "Midnight Battie Threadless Flatback Earring | Gold Bat Cartilage Stud | Titanium Labret Post | Sparkly Gothic Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/810a99/8511022266/il_fullxfull.8511022266_fl1z.jpg",
+   "gained": 1,
+   "total": 4,
+   "at": "2026-11-15T01:36:31.776Z"
+  },
+  {
+   "id": "4573601729",
+   "title": "Drip Threadless Flatback Earring | Dainty Gold Dangle | Titanium Labret Post | Minimal Cartilage Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/dd8fa7/8510995928/il_fullxfull.8510995928_1ert.jpg",
+   "gained": 1,
+   "total": 11,
+   "at": "2026-11-15T01:36:31.776Z"
+  },
+  {
+   "id": "4573594151",
+   "title": "Lotus Glow Threadless Flatback Earring | Gold Lotus Cartilage Stud | Titanium Labret Post | Dainty Marquise CZ Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/c181d3/8558805011/il_fullxfull.8558805011_n75x.jpg",
+   "gained": 1,
+   "total": 4,
+   "at": "2026-11-15T01:36:31.776Z"
   }
  ],
- "updated_at": "2026-11-14T21:13:04.275Z"
+ "updated_at": "2026-11-15T01:36:31.776Z"
 };
