@@ -1090,7 +1090,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 5,
    "at": "2026-11-15T08:58:33.052Z"
+  },
+  {
+   "id": "4576742876",
+   "title": "Alpenglow Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/af4b6c/8534298038/il_fullxfull.8534298038_jq78.jpg",
+   "gained": 1,
+   "total": 19,
+   "at": "2026-11-15T21:32:09.180Z"
   }
  ],
- "updated_at": "2026-11-15T16:16:12.746Z"
+ "updated_at": "2026-11-15T21:32:09.180Z"
 };
