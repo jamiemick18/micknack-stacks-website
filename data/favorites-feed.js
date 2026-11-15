@@ -1058,7 +1058,39 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 4,
    "at": "2026-11-15T01:36:31.776Z"
+  },
+  {
+   "id": "4601246993",
+   "title": "Cherry Juice CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/c1cc04/8858822615/il_fullxfull.8858822615_b8u1.jpg",
+   "gained": 1,
+   "total": 5,
+   "at": "2026-11-15T08:58:33.052Z"
+  },
+  {
+   "id": "4596333038",
+   "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+   "gained": 2,
+   "total": 25,
+   "at": "2026-11-15T08:58:33.052Z"
+  },
+  {
+   "id": "4579868601",
+   "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
+   "image": "https://i.etsystatic.com/67609393/r/il/8841bd/8557802610/il_fullxfull.8557802610_oea8.jpg",
+   "gained": 1,
+   "total": 23,
+   "at": "2026-11-15T08:58:33.052Z"
+  },
+  {
+   "id": "4596261114",
+   "title": "Sterling Silver Drizzle Ear Chain | 40mm Earring Connector | 3x5mm CZ Drop Dangles | Dainty Cartilage Chain Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/6f0f7e/8684444088/il_fullxfull.8684444088_n3z3.jpg",
+   "gained": 1,
+   "total": 5,
+   "at": "2026-11-15T08:58:33.052Z"
   }
  ],
- "updated_at": "2026-11-15T01:36:31.776Z"
+ "updated_at": "2026-11-15T08:58:33.052Z"
 };
