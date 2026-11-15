@@ -2,8 +2,29 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-15T08:58:33.052Z",
+  "synced_at": "2026-11-15T16:16:12.746Z",
   "listings": [
+    {
+      "listing_id": "4615880970",
+      "title": "Love Bug Threadless Flatback Earring | Tiny Heart CZ Titanium Stud | Silver or 18K Gold Plated Cartilage Jewelry | Single Earring",
+      "price": "22.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4615880970/love-bug-threadless-flatback-earring",
+      "description": "Love Bug ♡✨\n\nA tiny heart with a little extra sparkle.\n\nwww.micknackstacks.com\n\nLove Bug is a delicate threadless flatback featuring a sweet solid heart paired with a single clear CZ stone. Small, simple, and just sparkly enough to tuck into almost any ear stack.\n\nChoose between polished silver titanium or 18K gold-plated titanium for the finish that fits your stack best.\n\nPLEASE NOTE: This listing is for ONE earring.\nChoose either Silver Titanium OR 18K Gold-Plated Titanium.\n\nDetails:\n\nSingle earring\nTitanium construction\nSilver titanium or 18K gold-plated titanium\nSolid heart detail\nOne clear CZ stone\nThreadless pushpin design\nFlatback labret style\nDainty, low-profile design\n\nStyle it your way\n\nLove Bug is tiny enough to work almost anywhere your stack needs a little softness.\n\nWear it in a lobe, helix, flat, or cartilage piercing, pair it with simple studs, or mix it into a more layered stack for one tiny little heart moment.\n\nPerfect for:\nLobes • Helix • Flat • Cartilage • Minimal stacks • Heart jewelry • Curated ears\n\nJust a little Love Bug. ♡\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/f76125/8894437871/il_fullxfull.8894437871_6kve.jpg",
+        "https://i.etsystatic.com/67609393/r/il/4d59e5/8894437927/il_fullxfull.8894437927_2v3s.jpg",
+        "https://i.etsystatic.com/67609393/r/il/9057f8/8846664246/il_fullxfull.8846664246_ow7t.jpg"
+      ],
+      "video": "",
+      "tags": [],
+      "quantity": 3,
+      "created": "2026-11-12T20:10:55.000Z",
+      "views": 0,
+      "num_favorers": 1,
+      "etsy_active": true,
+      "added_at": "2026-11-12T20:36:32.110Z"
+    },
     {
       "listing_id": "4615037352",
       "title": "Moonlit Mischief Moonstone AB Ear Chain | 40mm 18K Gold Plated Chain | 6 Iridescent CZ Earring Connector | Curated Ear Jewelry",
@@ -213,27 +234,6 @@ window.MICKNACK_PRODUCTS = {
       "created": "2026-11-12T20:29:03.000Z",
       "views": 0,
       "num_favorers": 0,
-      "etsy_active": true,
-      "added_at": "2026-11-12T20:36:32.110Z"
-    },
-    {
-      "listing_id": "4615880970",
-      "title": "Love Bug Threadless Flatback Earring | Tiny Heart CZ Titanium Stud | Silver or 18K Gold Plated Cartilage Jewelry | Single Earring",
-      "price": "22.00",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4615880970/love-bug-threadless-flatback-earring",
-      "description": "Love Bug ♡✨\n\nA tiny heart with a little extra sparkle.\n\nwww.micknackstacks.com\n\nLove Bug is a delicate threadless flatback featuring a sweet solid heart paired with a single clear CZ stone. Small, simple, and just sparkly enough to tuck into almost any ear stack.\n\nChoose between polished silver titanium or 18K gold-plated titanium for the finish that fits your stack best.\n\nPLEASE NOTE: This listing is for ONE earring.\nChoose either Silver Titanium OR 18K Gold-Plated Titanium.\n\nDetails:\n\nSingle earring\nTitanium construction\nSilver titanium or 18K gold-plated titanium\nSolid heart detail\nOne clear CZ stone\nThreadless pushpin design\nFlatback labret style\nDainty, low-profile design\n\nStyle it your way\n\nLove Bug is tiny enough to work almost anywhere your stack needs a little softness.\n\nWear it in a lobe, helix, flat, or cartilage piercing, pair it with simple studs, or mix it into a more layered stack for one tiny little heart moment.\n\nPerfect for:\nLobes • Helix • Flat • Cartilage • Minimal stacks • Heart jewelry • Curated ears\n\nJust a little Love Bug. ♡\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/f76125/8894437871/il_fullxfull.8894437871_6kve.jpg",
-        "https://i.etsystatic.com/67609393/r/il/4d59e5/8894437927/il_fullxfull.8894437927_2v3s.jpg",
-        "https://i.etsystatic.com/67609393/r/il/9057f8/8846664246/il_fullxfull.8846664246_ow7t.jpg"
-      ],
-      "video": "",
-      "tags": [],
-      "quantity": 4,
-      "created": "2026-11-12T20:10:55.000Z",
-      "views": 0,
-      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-11-12T20:36:32.110Z"
     },

@@ -9,9 +9,11 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-15T08:58:33.052Z
+// Last read from Etsy: 2026-11-15T16:16:12.746Z
 
 window.MICKNACK_VARIATIONS = {
+  // Love Bug Threadless Flatback Earring | Tiny Heart CZ Titaniu
+  "4615880970": [{ name: "Post Length", options: ["8 mm", "6 mm"] }, { name: "Primary color", options: ["Titanium Silver", "18K Gold Plated"] }],
   // Little Orbit Threadless Flatback Earring | Gold Celestial Ca
   "4573616908": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Checkered Black & Clear CZ Ear Chain | 30mm Gold Connector C
@@ -22,8 +24,6 @@ window.MICKNACK_VARIATIONS = {
   "4616034803": [{ name: "Post Length", options: ["6 mm", "8 mm"] }],
   // Polar Flare Threadless Flatback Earring | Tiny CZ Starburst 
   "4615880727": [{ name: "Post Length", options: ["8 mm", "6 mm"] }, { name: "Primary color", options: ["Titanium Silver", "18K Gold Plated"] }],
-  // Love Bug Threadless Flatback Earring | Tiny Heart CZ Titaniu
-  "4615880970": [{ name: "Post Length", options: ["8 mm", "6 mm"] }, { name: "Primary color", options: ["Titanium Silver", "18K Gold Plated"] }],
   // Baby Brick Threadless Flatback Earring | 3 CZ Titanium Stud 
   "4615873918": [{ name: "Post Length", options: ["8 mm", "6 mm"] }, { name: "Primary color", options: ["Titanium Silver", "18K Gold Plated"] }],
   // Golden Delicate Ridgeline 18G Threadless Flatback Earring | 
