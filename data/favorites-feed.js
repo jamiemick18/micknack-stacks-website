@@ -1106,7 +1106,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 11,
    "at": "2026-11-16T01:40:38.352Z"
+  },
+  {
+   "id": "4576665382",
+   "title": "Sugar Sweet Baby Pink Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/74a9f5/8533758408/il_fullxfull.8533758408_s7uv.jpg",
+   "gained": 1,
+   "total": 14,
+   "at": "2026-11-16T09:13:59.645Z"
   }
  ],
- "updated_at": "2026-11-16T01:40:38.352Z"
+ "updated_at": "2026-11-16T09:13:59.645Z"
 };
