@@ -7,7 +7,7 @@
 // No names and no buyer photos: Etsy does not provide a name, and the photos
 // belong to the buyers who took them.
 //
-// Last read from Etsy: 2026-11-16T09:13:59.645Z
+// Last read from Etsy: 2026-11-16T19:32:23.407Z
 window.MICKNACK_REVIEWS = {
   "count": 9,
   "average": 4.89,
@@ -18,7 +18,7 @@ window.MICKNACK_REVIEWS = {
       "rating": 5,
       "text": "She is such an awesome person to work with! She customized the jewelry to a length that worked for me, and i got a freebie! My orders also vane quickly in the mail, and packaged with care!",
       "listing_id": "4566277207",
-      "piece": "Pear CZ Earring Connector Chain",
+      "piece": "Midnight Ember Black CZ Ear Chain",
       "date": "2026-11-07"
     },
     {
@@ -46,7 +46,7 @@ window.MICKNACK_REVIEWS = {
       "rating": 5,
       "text": "Most beautiful piece of jewelry iv bought ill definitely be buying from her again . Great quality",
       "listing_id": "4599803201",
-      "piece": "Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain",
+      "piece": "Green With Envy G23 Titanium Labret to Ear Chain",
       "date": "2026-10-28"
     },
     {

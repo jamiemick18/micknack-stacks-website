@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-16T09:13:59.645Z",
+  "synced_at": "2026-11-16T19:32:23.407Z",
   "listings": [
     {
       "listing_id": "4615880970",
@@ -412,11 +412,11 @@ window.MICKNACK_PRODUCTS = {
     },
     {
       "listing_id": "4599803201",
-      "title": "Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain | ASTM F136 Threadless Connector | 40mm Emerald Green CZ Dangle",
+      "title": "Green With Envy G23 Titanium Labret to Ear Chain | ASTM F136 Threadless Connector | 40mm Emerald Green CZ Dangle",
       "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4599803201/green-with-envy-g23-titanium-labret-to",
-      "description": "Green With Envy 💚✨\n\nBright, bold, and absolutely not trying to blend in.\n\nGreen With Envy is a 40 mm GOLD FILLED chain / labret-to-earring chain connector finished with five individually dangling emerald green CZ stones. All jump rings are also gold filled. The saturated green gives your stack a rich pop of color, while the delicate chain lets each stone move and catch the light on its own.\n\nwww.micknackstacks.com⁠\n\nOne end is attached to a threadless G23 titanium labret while the opposite end connects to a compatible hoop or earring, creating a soft drape between two piercings.\n\nA little luxe. A little bratty. Very hard not to stare at. 💚\n\nWhy you’ll love it:\n40 mm labret-to-earring chain\nFive individually dangling emerald-green CZ stones\nRich jewel-tone color\nDelicate movement and sparkle\nAdds depth without making your stack feel bulky\nEasy statement piece for an otherwise minimal ear\nDesigned to connect two piercings in one cohesive look\n\n✨ Implant-grade specification: ASTM F136 is a recognized specification for titanium alloy used in implant applications and quality body jewelry.\n✨ Nickel-conscious: Titanium is commonly chosen by people who want to avoid jewelry made from nickel-containing alloys.\n✨ Lightweight: Titanium is naturally lightweight, making it especially nice for cartilage jewelry and chain styles.\n✨ Corrosion resistant: Titanium offers excellent resistance to corrosion and everyday moisture.\n✨ Threadless design: The pushpin-style connection means there are no exposed external screw threads passing through the piercing channel during insertion.\n✨ Star flatback: The post is finished with a tiny star-shaped flatback for a cute little detail behind the piercing. ⭐\n\nChoose your post length\n6 mm — for a more fitted, snug placement\n8 mm — for a little extra room\n\nEveryone’s anatomy and piercing placement are different, so the best fit will vary.\n\nSold individually\n\nPerfect for\nHelix-to-lobe • Cartilage-to-hoop • Multi-piercing stacks • Green ear stacks • Jewel-tone jewelry • Curated ears\nGreen with envy? As you should be. 💚✨\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "description": "Green With Envy 💚✨\n\nBright, bold, and absolutely not trying to blend in.\n\nGreen With Envy is a 40 mm 18k gold plated chain / labret-to-earring chain connector finished with five individually dangling emerald green CZ stones. All jump rings are also gold filled. The saturated green gives your stack a rich pop of color, while the delicate chain lets each stone move and catch the light on its own.\n\nwww.micknackstacks.com⁠\n\nOne end is attached to a threadless G23 titanium labret while the opposite end connects to a compatible hoop or earring, creating a soft drape between two piercings.\n\nA little luxe. A little bratty. Very hard not to stare at. 💚\n\nWhy you’ll love it:\n40 mm labret-to-earring chain\nFive individually dangling emerald-green CZ stones\nRich jewel-tone color\nDelicate movement and sparkle\nAdds depth without making your stack feel bulky\nEasy statement piece for an otherwise minimal ear\nDesigned to connect two piercings in one cohesive look\n\n✨ Implant-grade specification: ASTM F136 is a recognized specification for titanium alloy used in implant applications and quality body jewelry.\n✨ Nickel-conscious: Titanium is commonly chosen by people who want to avoid jewelry made from nickel-containing alloys.\n✨ Lightweight: Titanium is naturally lightweight, making it especially nice for cartilage jewelry and chain styles.\n✨ Corrosion resistant: Titanium offers excellent resistance to corrosion and everyday moisture.\n✨ Threadless design: The pushpin-style connection means there are no exposed external screw threads passing through the piercing channel during insertion.\n✨ Star flatback: The post is finished with a tiny star-shaped flatback for a cute little detail behind the piercing. ⭐\n\nChoose your post length\n6 mm — for a more fitted, snug placement\n8 mm — for a little extra room\n\nEveryone’s anatomy and piercing placement are different, so the best fit will vary.\n\nSold individually\n\nPerfect for\nHelix-to-lobe • Cartilage-to-hoop • Multi-piercing stacks • Green ear stacks • Jewel-tone jewelry • Curated ears\nGreen with envy? As you should be. 💚✨\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
       "images": [
         "https://i.etsystatic.com/67609393/r/il/9ca196/8714086152/il_fullxfull.8714086152_8ky9.jpg",
         "https://i.etsystatic.com/67609393/r/il/3f6057/8714068328/il_fullxfull.8714068328_gi0p.jpg"
@@ -478,15 +478,15 @@ window.MICKNACK_PRODUCTS = {
     },
     {
       "listing_id": "4566277207",
-      "title": "Pear CZ Earring Connector Chain | 33mm Dainty Gold Ear Chain | Double Gemstone Dangle Chain | 2mm Jewelry Chain | Ear Stack Accessory",
-      "price": "19.99",
+      "title": "Midnight Ember Black CZ Ear Chain | 32mm Gold Earring Connector | 4mm Black CZ Dangles | 3mm End Loops | Curated Ear Jewelry",
+      "price": "22.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4566277207/18k-gold-plated-earring-connecting-chain",
-      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\nDetails:\nChain length: 33mm\nChain width: 2mm\nEnd jump hoops: 3mm\nStones: 3mm pear-shaped CZ\nTwo dangling gemstone drops\nLightweight, dainty design\nMade for mixing and styling with flatbacks and hoops\nEarrings shown separately unless otherwise noted\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+      "description": "Midnight Ember 🖤✨\n\nDark little stones with a flicker of gold.\n\nwww.micknackstacks.com\n\nMidnight Ember is a petite 32 mm ear chain featuring two deep black 4 mm CZ stones mixed with tiny geometric accents. The contrast gives it that perfect dark and delicate feel.. moody at first glance, with little flashes of warmth when the light hits.\n\nThe chain is finished with 3 mm connector loops on each end, making it easy to work into a compatible ear stack without overwhelming the jewelry around it.\n\nDetails:\n32 mm chain length\n3 mm connector loops on both ends\nTwo 4 mm black CZ stones\nGold-toned geometric charms\nDelicate dangling movement\nChain connector only\nPetite, lightweight design\n\nStyle it your way\nDrape Midnight Ember between two compatible earrings for a dark little line of movement, pair it with simple gold pieces, or tuck it into a more layered stack when you want something moody without going heavy.\n\nThe black-and-gold contrast makes it especially good for alternative, gothic, and celestial-inspired stacks.\n\nPerfect for:\nHelix-to-lobe styling • Double lobes • Dark ear stacks • Black and gold jewelry • Alternative jewelry • Curated ears\n\nDark as midnight. Warm as an ember. 🖤✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/f5e586/8477015756/il_fullxfull.8477015756_phwu.jpg"
+        "https://i.etsystatic.com/67609393/r/il/bc8166/8870820040/il_fullxfull.8870820040_88ej.jpg"
       ],
-      "video": "https://v.etsystatic.com/e/videos/1d66/154a6be8-e211-45f4-a883-38187da38c79/vid_v1.mp4",
+      "video": "https://v.etsystatic.com/e/videos/7313/107d0d1c-7755-4759-a783-8d1050fe8f14/vid_v1.mp4",
       "tags": [
         "earring chain",
         "earring connector",
@@ -503,7 +503,7 @@ window.MICKNACK_PRODUCTS = {
         "ear piercing chain"
       ],
       "quantity": 4,
-      "created": "2026-08-31T21:52:58.000Z",
+      "created": "2026-11-16T00:00:00.000Z",
       "views": 54,
       "num_favorers": 2,
       "etsy_active": true,

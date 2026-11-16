@@ -204,6 +204,29 @@ function fromHtml(text) {
     .replace(/&amp;/g, "&");
 }
 
+// When a piece went up, for listings where Etsy's date is the wrong answer —
+// an old listing reused for something new. Keys starting with _ are notes.
+function loadListedOverrides() {
+  const path = join(ROOT, "data", "listed-overrides.json");
+  if (!existsSync(path)) return {};
+  try {
+    const raw = JSON.parse(readFileSync(path, "utf8"));
+    const dates = {};
+    for (const [id, when] of Object.entries(raw)) {
+      if (id.startsWith("_") || typeof when !== "string") continue;
+      if (isNaN(new Date(when).getTime())) {
+        console.log(`::warning::listed-overrides.json: ${id} has an unreadable date; ignoring it.`);
+        continue;
+      }
+      dates[String(id)] = new Date(when).toISOString();
+    }
+    return dates;
+  } catch (err) {
+    console.log("::warning::listed-overrides.json could not be read; ignoring it.");
+    return {};
+  }
+}
+
 function normalizeListing(listing, images, video) {
   return {
     listing_id: String(listing.listing_id),
@@ -295,17 +318,30 @@ async function main() {
   // Etsy (sold out, expired, retired) stay in the catalog and are simply
   // marked etsy_active: false, so nothing ever disappears from the site.
   const now = new Date().toISOString();
+  const listedOverrides = loadListedOverrides();
   const merged = [];
   const seen = new Set();
 
   for (const listing of listings) {
     const prior = previous.get(listing.listing_id);
+    const listedOn = listedOverrides[listing.listing_id];
     merged.push({
       ...listing,
+      // Etsy never changes a listing's creation date, so a listing reused for
+      // a different piece carries the old piece's date and the new one lands
+      // at the bottom of the shop. data/listed-overrides.json says otherwise
+      // for those few.
+      ...(listedOn ? { created: listedOn } : {}),
       etsy_active: true,
       added_at: (prior && prior.added_at) || now,
     });
     seen.add(listing.listing_id);
+  }
+  const usedOverrides = listings.filter((l) => listedOverrides[l.listing_id]).length;
+  if (usedOverrides) {
+    console.log(
+      `${usedOverrides} listing(s) dated from data/listed-overrides.json rather than Etsy.`
+    );
   }
 
   // A piece that sells its last one on Etsy does not appear in the active

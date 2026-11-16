@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-12T20:37:38.201Z",
+  "generated_at": "2026-11-16T19:33:10.278Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -346,14 +346,14 @@ window.MICKNACK_STRIPE_LINKS = {
       "name": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm"
     },
     "4566277207": {
-      "url": "https://buy.stripe.com/5kQ28k8jfcPVaJT3l2aZi1P",
-      "name": "Pear CZ Earring Connector Chain | 33mm Dainty Gold Ear Chain | Double Gemstone Dangle Chain | 2mm Jewelry Chain | Ear Stack Accessory",
-      "price": "19.99",
+      "url": "https://buy.stripe.com/5kQ3co1URdTZaJT5taaZi2g",
+      "name": "Midnight Ember Black CZ Ear Chain | 32mm Gold Earring Connector | 4mm Black CZ Dangles | 3mm End Loops | Curated Ear Jewelry",
+      "price": "22.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1UX6pd680JvUCS8JXaVYQtUy",
-      "price_id": "price_1UX6pd680JvUCS8JjmfxGuhk",
-      "product_id": "prod_VYDGHpLGCoov4g"
+      "link_id": "plink_1UcVeM680JvUCS8JZyyd01nb",
+      "price_id": "price_1UcVeL680JvUCS8Jlqcrx2nd",
+      "product_id": "prod_VdnE2NFMkdsohJ"
     },
     "4586013046": {
       "url": "https://buy.stripe.com/9B67sE5738zF19j3l2aZi1c",
@@ -443,7 +443,7 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UTTeO680JvUCS8JyqDQNtV8",
       "price_id": "price_1UTTeO680JvUCS8JT8MzTyfh",
       "product_id": "prod_VUSZLyFmVh7QUB",
-      "name": "Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain | ASTM F136 Threadless Connector | 40mm Emerald Green CZ Dangle"
+      "name": "Green With Envy G23 Titanium Labret to Ear Chain | ASTM F136 Threadless Connector | 40mm Emerald Green CZ Dangle"
     },
     "4599690242": {
       "url": "https://buy.stripe.com/5kQaEQ2YV17d3hr8FmaZi1m",
@@ -644,6 +644,36 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1Ub4kV680JvUCS8JBdEwLL28",
       "price_id": "price_1Ub4kU680JvUCS8Jt3ViJ4gK",
       "product_id": "prod_VcJNW441846YTA"
+    },
+    "pear-cz-ear-connector-chain-33mm": {
+      "url": "https://buy.stripe.com/8x29AM7fb4jpcS1cVCaZi2d",
+      "name": "Pear CZ Earring Connector Chain | 33mm Dainty Gold Ear Chain | Double Gemstone Dangle Chain | 2mm Jewelry Chain | Ear Stack Accessory",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UcVeI680JvUCS8J73bk9IQ3",
+      "price_id": "price_1UcVeI680JvUCS8JXgk20YgB",
+      "product_id": "prod_VdnEmiQHzXgtEY"
+    },
+    "4616052816": {
+      "url": "https://buy.stripe.com/8x26oAfLH9DJ8BLg7OaZi2e",
+      "name": "The Maddix, Pink Ear Chain with Titanium Labret | Corundum & CZ Dangle Connector | 6mm or 8mm Star Flatback | Dainty Cartilage Jewelry",
+      "price": "30.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UcVeJ680JvUCS8J15JfvSQl",
+      "price_id": "price_1UcVeJ680JvUCS8J1zMNDDD1",
+      "product_id": "prod_VdnEvznzIuqTKb"
+    },
+    "4616034803": {
+      "url": "https://buy.stripe.com/9B614g9nj5ntg4d6xeaZi2f",
+      "name": "The Aspyn, Purple Ear Chain with Titanium Labret | 31mm Violet & Lavender CZ Connector | 6mm or 8mm Star Flatback",
+      "price": "30.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UcVeK680JvUCS8JI0kHNDC2",
+      "price_id": "price_1UcVeK680JvUCS8JgsSvvFMH",
+      "product_id": "prod_VdnEHjD8XKIS8r"
     }
   }
 };

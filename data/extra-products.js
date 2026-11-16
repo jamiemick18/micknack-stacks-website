@@ -18,6 +18,8 @@
 //   price        Optional. Just the number, no dollar sign. Leave out to hide.
 //   description  Optional. First ~110 characters show on the card.
 //   images       Optional. "assets/products/your-photo.jpg" or a web link.
+//   video        Optional. "assets/products/your-clip.mp4" or a web link.
+//                It leads the gallery on the piece's own page.
 //   url          Optional. Where the button goes (a Stripe checkout link,
 //                an Instagram post, anything). Leave as "" for no button.
 //   button_label Optional. Button wording. Defaults to "Buy Now".
@@ -58,6 +60,23 @@ window.MICKNACK_EXTRA_PRODUCTS = [
     images: ["assets/products/starfall-cz-ear-chain-45mm-18k-gold-pvd-satellit.png"],
     url: "",
     added_at: "2026-11-01T21:53:11.000Z",
+  },
+  // Was Etsy listing 4566277207 until 16 November 2026, when that listing was
+  // reused for Midnight Ember. The piece itself is still made and still for
+  // sale, so it lives here now. Its photo and video were pulled down from
+  // Etsy into assets/products first: the originals sit under a listing that
+  // is no longer about this piece, and Etsy is free to tidy them away.
+  {
+    id: "pear-cz-ear-connector-chain-33mm",
+    title: "Pear CZ Earring Connector Chain | 33mm Dainty Gold Ear Chain | Double Gemstone Dangle Chain | 2mm Jewelry Chain | Ear Stack Accessory",
+    price: "19.99",
+    description: "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\nDetails:\nChain length: 33mm\nChain width: 2mm\nEnd jump hoops: 3mm\nStones: 3mm pear-shaped CZ\nTwo dangling gemstone drops\nLightweight, dainty design\nMade for mixing and styling with flatbacks and hoops\nEarrings shown separately unless otherwise noted\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+    images: ["assets/products/pear-cz-ear-connector-chain-33mm.jpg"],
+    video: "assets/products/pear-cz-ear-connector-chain-33mm.mp4",
+    url: "",
+    // The day it first went up on Etsy, so it keeps its place in the order
+    // rather than pretending to be new.
+    added_at: "2026-08-31T21:52:58.000Z",
   },
   // Add your items here, between the brackets.
 ];

@@ -1,0 +1,22 @@
+{
+  "_README": [
+    "When a piece went up, for the handful of listings where Etsy's own date is",
+    "wrong. The Collection is ordered newest first, and it reads this date.",
+    "",
+    "Etsy stamps a listing with the day it was first created and never changes",
+    "it. Reusing an old listing for a brand new piece — swapping the photos,",
+    "title and description rather than starting a fresh one — therefore leaves",
+    "the new piece buried at the bottom of the shop with the date of whatever",
+    "used to be there. Naming it here sets the record straight.",
+    "",
+    "Only for that. A listing Jamie merely retitled or reworded keeps its real",
+    "date: an edit is not a new piece.",
+    "",
+    "Format: \"<etsy listing id>\": \"<ISO date>\". Lines starting with _ are",
+    "ignored.",
+    "",
+    "The Etsy sync reads this file. Nothing ever writes to it."
+  ],
+
+  "4566277207": "2026-11-16T00:00:00.000Z"
+}

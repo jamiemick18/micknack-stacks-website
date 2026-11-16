@@ -53,7 +53,9 @@ function findProduct(id) {
       currency_code: extra.currency_code,
       description: extra.description,
       images: (extra.images || []).map(asset),
-      video: extra.video || "",
+      // Same for a clip kept in the repo: the photos were already put through
+      // asset(), and a video file needs it just as much.
+      video: asset(extra.video),
       variations: Array.isArray(extra.variations) ? extra.variations : [],
       tags: extra.tags || [],
       etsyUrl: extra.url || "",
