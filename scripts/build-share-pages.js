@@ -48,7 +48,7 @@ function blurb(piece) {
     .trim();
   const sentence = text.split(/(?<=[.!?])\s/)[0] || text;
   const short = sentence.length > 160 ? sentence.slice(0, 157).trim() + "…" : sentence;
-  return short || "Draped chain ear cuffs and stacking jewelry, designed and loved from Colorado.";
+  return short || "Your ear stack's bad influence. Dainty ear chains, comfortable flatbacks and a bit of sparkly chaos, made in Colorado.";
 }
 
 // The share page lives in /p/, so every relative path in the template has to

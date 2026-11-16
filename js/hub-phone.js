@@ -574,6 +574,12 @@
       h += row("Views", s.views.etsy);
       h += "</div>";
 
+      // The link in her bio, one tap away. Everything else she opens from
+      // her phone all day is reachable from somewhere; this was not.
+      h += "<h2>Links</h2><div class='card'>" +
+        "<a href='https://linktr.ee/micknackstacks' target='_blank' rel='noopener'>" +
+        "Linktree &#8599;</a></div>";
+
       h += "<h2>Notifications</h2><div class='card' id='push-card'>" +
         "<p class='meta'>Checking…</p></div>";
 

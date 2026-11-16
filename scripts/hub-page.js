@@ -357,6 +357,9 @@ export function page() {
       <a class="door out" href="https://micknackstacks.com" target="_blank" rel="noopener">
         <b>Your shop &#8599;</b><span>See it the way a customer does</span>
       </a>
+      <a class="door out" href="https://linktr.ee/micknackstacks" target="_blank" rel="noopener">
+        <b>Linktree &#8599;</b><span>The link in your bio</span>
+      </a>
     </div>
   </section>
 
