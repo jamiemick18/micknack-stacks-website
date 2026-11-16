@@ -1098,7 +1098,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 19,
    "at": "2026-11-15T21:32:09.180Z"
+  },
+  {
+   "id": "4573616908",
+   "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
+   "gained": 1,
+   "total": 11,
+   "at": "2026-11-16T01:40:38.352Z"
   }
  ],
- "updated_at": "2026-11-15T21:32:09.180Z"
+ "updated_at": "2026-11-16T01:40:38.352Z"
 };
