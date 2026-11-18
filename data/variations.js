@@ -9,7 +9,7 @@
 // Stock counts the PIECE, not each option: choosing 6 mm or 8 mm draws on the
 // same count. All options of a piece share its price.
 //
-// Last read from Etsy: 2026-11-18T03:26:57.964Z
+// Last read from Etsy: 2026-11-18T12:47:47.969Z
 
 window.MICKNACK_VARIATIONS = {
   // Love Bug Threadless Flatback Earring | Tiny Heart CZ Titaniu

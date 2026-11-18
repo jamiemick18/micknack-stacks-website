@@ -1130,7 +1130,39 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 12,
    "at": "2026-11-17T12:55:00.963Z"
+  },
+  {
+   "id": "4596333038",
+   "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+   "gained": 1,
+   "total": 26,
+   "at": "2026-11-18T12:47:47.969Z"
+  },
+  {
+   "id": "4591313547",
+   "title": "Everyday 18g G23 ASTM F136 Titanium Gold Clicker Hoop | 18K PVD Implant Grade Cartilage Ring | Helix Conch Lobe 5mm–12mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/e158b3/8645167936/il_fullxfull.8645167936_hbuv.jpg",
+   "gained": 1,
+   "total": 8,
+   "at": "2026-11-18T12:47:47.969Z"
+  },
+  {
+   "id": "4574722466",
+   "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
+   "gained": 1,
+   "total": 23,
+   "at": "2026-11-18T12:47:47.969Z"
+  },
+  {
+   "id": "4573472494",
+   "title": "Barely There Threadless Flatback Earring | Minimal Gold Cartilage Stud | ASTM F136 G23 Implant Grade Titanium | Dainty Two Stone Earring",
+   "image": "https://i.etsystatic.com/67609393/r/il/3e57de/8557813877/il_fullxfull.8557813877_cfpb.jpg",
+   "gained": 1,
+   "total": 12,
+   "at": "2026-11-18T12:47:47.969Z"
   }
  ],
- "updated_at": "2026-11-18T03:26:57.964Z"
+ "updated_at": "2026-11-18T12:47:47.969Z"
 };
