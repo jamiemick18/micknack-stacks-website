@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-18T12:47:47.969Z",
+  "synced_at": "2026-11-18T21:12:26.897Z",
   "listings": [
     {
       "listing_id": "4615880970",
@@ -88,7 +88,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 2,
       "created": "2026-09-01T21:11:50.000Z",
       "views": 211,
-      "num_favorers": 20,
+      "num_favorers": 21,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -122,7 +122,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T22:21:13.000Z",
       "views": 144,
-      "num_favorers": 12,
+      "num_favorers": 13,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -612,7 +612,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-10-15T22:11:01.000Z",
       "views": 273,
-      "num_favorers": 26,
+      "num_favorers": 27,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
     },
@@ -1292,41 +1292,6 @@ window.MICKNACK_PRODUCTS = {
       "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
-      "listing_id": "4576665382",
-      "title": "Sugar Sweet Baby Pink Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4576665382/sugar-sweet-baby-pink-ear-chain-30mm",
-      "description": "Sugar Sweet Baby Pink Ear Chain 💕✨\n\nSoft pink sparkle with a little extra attitude.\nSugar Sweet features a dainty gold chain with baby pink CZ drops that catch the light as they move. The draped design adds depth, texture, and a soft pop of color to your ear stack without feeling heavy or overdone.\n\nMaterials\n2 mm gold chain\n30 mm center chain\nFour 5 mm amethyst-colored CZ stones\nGold-tone 3mm connecting loops\nMulti-point draped design\n\nPerfect for:\nHelix-to-lobe styling • Curated ear stacks • Dainty chain looks • Purple jewelry lovers\n\nSoft lilac sparkle with a little movement in every angle. 💜",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/74a9f5/8533758408/il_fullxfull.8533758408_s7uv.jpg",
-        "https://i.etsystatic.com/67609393/r/il/9fe69a/8533758412/il_fullxfull.8533758412_fxey.jpg",
-        "https://i.etsystatic.com/67609393/r/il/c8b461/8533758406/il_fullxfull.8533758406_hob2.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/f378/9047c56a-cf1f-4841-b86c-ce00949b26fc/vid_v1.mp4",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "gold ear chain",
-        "double drape chain",
-        "piercing chain",
-        "cartilage chain",
-        "non tarnish jewelry",
-        "multiple piercings"
-      ],
-      "quantity": 1,
-      "created": "2026-09-16T18:47:42.000Z",
-      "views": 99,
-      "num_favorers": 14,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
       "listing_id": "4575212975",
       "title": "G23 Titanium Clicker Hoop, 18G 6mm Silver Cartilage Ring, Tiny Hinged Hoop for Helix, Tragus, Daith or Septum Piercing",
       "price": "14.99",
@@ -1824,6 +1789,43 @@ window.MICKNACK_PRODUCTS = {
       "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4576665382",
+      "title": "Sugar Sweet Baby Pink Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4576665382/sugar-sweet-baby-pink-ear-chain-30mm",
+      "description": "Sugar Sweet Baby Pink Ear Chain 💕✨\n\nSoft pink sparkle with a little extra attitude.\nSugar Sweet features a dainty gold chain with baby pink CZ drops that catch the light as they move. The draped design adds depth, texture, and a soft pop of color to your ear stack without feeling heavy or overdone.\n\nMaterials\n2 mm gold chain\n30 mm center chain\nFour 5 mm amethyst-colored CZ stones\nGold-tone 3mm connecting loops\nMulti-point draped design\n\nPerfect for:\nHelix-to-lobe styling • Curated ear stacks • Dainty chain looks • Purple jewelry lovers\n\nSoft lilac sparkle with a little movement in every angle. 💜",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/74a9f5/8533758408/il_fullxfull.8533758408_s7uv.jpg",
+        "https://i.etsystatic.com/67609393/r/il/9fe69a/8533758412/il_fullxfull.8533758412_fxey.jpg",
+        "https://i.etsystatic.com/67609393/r/il/c8b461/8533758406/il_fullxfull.8533758406_hob2.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/f378/9047c56a-cf1f-4841-b86c-ce00949b26fc/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ],
+      "quantity": 0,
+      "created": "2026-09-16T18:47:42.000Z",
+      "views": 99,
+      "num_favorers": 14,
+      "etsy_active": false,
+      "added_at": "2026-09-30T19:35:47.289Z",
+      "etsy_state": "sold_out",
+      "left_etsy_at": "2026-11-18T21:12:26.897Z"
     },
     {
       "listing_id": "4573613361",

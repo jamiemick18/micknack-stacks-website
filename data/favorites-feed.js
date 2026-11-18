@@ -1162,7 +1162,31 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 12,
    "at": "2026-11-18T12:47:47.969Z"
+  },
+  {
+   "id": "4566919003",
+   "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg",
+   "gained": 1,
+   "total": 21,
+   "at": "2026-11-18T21:12:26.897Z"
+  },
+  {
+   "id": "4573616908",
+   "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
+   "gained": 1,
+   "total": 13,
+   "at": "2026-11-18T21:12:26.897Z"
+  },
+  {
+   "id": "4596333038",
+   "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+   "gained": 1,
+   "total": 27,
+   "at": "2026-11-18T21:12:26.897Z"
   }
  ],
- "updated_at": "2026-11-18T12:47:47.969Z"
+ "updated_at": "2026-11-18T21:12:26.897Z"
 };
