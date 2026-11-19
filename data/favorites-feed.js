@@ -1186,7 +1186,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 27,
    "at": "2026-11-18T21:12:26.897Z"
+  },
+  {
+   "id": "4613628567",
+   "title": "Tiny Hummingbird Threadless Flatback Earring | 18G - G23 ASTM F136 Titanium | Dainty CZ Cartilage Stud | 6mm 8mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/4df252/8875945257/il_fullxfull.8875945257_tj6f.jpg",
+   "gained": 1,
+   "total": 5,
+   "at": "2026-11-19T03:00:08.223Z"
+  },
+  {
+   "id": "4579868601",
+   "title": "Unicorn Chaos Labret to Earring Connector | ASTM F136 G23 Titanium Flatback | AB Stone Ear Chain | Gold Cartilage Connecto",
+   "image": "https://i.etsystatic.com/67609393/r/il/8841bd/8557802610/il_fullxfull.8557802610_oea8.jpg",
+   "gained": 1,
+   "total": 24,
+   "at": "2026-11-19T03:00:08.223Z"
   }
  ],
- "updated_at": "2026-11-18T21:12:26.897Z"
+ "updated_at": "2026-11-19T03:00:08.223Z"
 };
