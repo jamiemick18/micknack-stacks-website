@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-20T11:05:57.015Z",
+  "synced_at": "2026-11-20T19:48:30.048Z",
   "listings": [
     {
       "listing_id": "4601255929",
@@ -31,7 +31,7 @@ window.MICKNACK_PRODUCTS = {
         "piercing chain",
         "ear piercing chain"
       ],
-      "quantity": 2,
+      "quantity": 4,
       "created": "2026-10-22T21:40:02.000Z",
       "views": 38,
       "num_favorers": 3,
@@ -156,7 +156,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T22:21:13.000Z",
       "views": 163,
-      "num_favorers": 15,
+      "num_favorers": 16,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1253,7 +1253,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 5,
       "created": "2026-09-21T16:04:05.000Z",
       "views": 32,
-      "num_favorers": 0,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
