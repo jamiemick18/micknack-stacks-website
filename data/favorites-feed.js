@@ -1218,7 +1218,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 14,
    "at": "2026-11-19T20:15:13.085Z"
+  },
+  {
+   "id": "4573616908",
+   "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
+   "gained": 1,
+   "total": 15,
+   "at": "2026-11-20T02:08:30.178Z"
+  },
+  {
+   "id": "4576742876",
+   "title": "Alpenglow Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/af4b6c/8534298038/il_fullxfull.8534298038_jq78.jpg",
+   "gained": 1,
+   "total": 20,
+   "at": "2026-11-20T02:08:30.178Z"
   }
  ],
- "updated_at": "2026-11-19T20:15:13.085Z"
+ "updated_at": "2026-11-20T02:08:30.178Z"
 };
