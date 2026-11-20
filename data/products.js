@@ -2,8 +2,42 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-20T02:08:30.178Z",
+  "synced_at": "2026-11-20T11:05:57.015Z",
   "listings": [
+    {
+      "listing_id": "4601255929",
+      "title": "Baby Pink CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4601255929/baby-pink-cz-earring-connector-chain",
+      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/387ab7/8870084295/il_fullxfull.8870084295_ekyd.jpg",
+        "https://i.etsystatic.com/67609393/r/il/8b99d6/8773399583/il_fullxfull.8773399583_6o5t.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/5cb2/d9d9b6b4-2195-4f28-9be3-bd7935282e89/vid_v1.mp4",
+      "tags": [
+        "earring chain",
+        "earring connector",
+        "ear chain connector",
+        "connecting chain",
+        "earring stack chain",
+        "flatback chain",
+        "threadless earring",
+        "ear stack jewelry",
+        "curated ear jewelry",
+        "gold earring chain",
+        "flatback earrings",
+        "piercing chain",
+        "ear piercing chain"
+      ],
+      "quantity": 2,
+      "created": "2026-10-22T21:40:02.000Z",
+      "views": 38,
+      "num_favorers": 3,
+      "etsy_active": true,
+      "added_at": "2026-10-22T22:07:53.714Z"
+    },
     {
       "listing_id": "4615880970",
       "title": "Love Bug Threadless Flatback Earring | Tiny Heart CZ Titanium Stud | Silver or 18K Gold Plated Cartilage Jewelry | Single Earring",
@@ -87,7 +121,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-01T21:11:50.000Z",
-      "views": 216,
+      "views": 217,
       "num_favorers": 21,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -121,7 +155,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T22:21:13.000Z",
-      "views": 152,
+      "views": 163,
       "num_favorers": 15,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -287,7 +321,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 5,
       "created": "2026-11-11T22:39:37.000Z",
       "views": 2,
-      "num_favorers": 0,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-11-12T01:24:08.882Z"
     },
@@ -369,7 +403,7 @@ window.MICKNACK_PRODUCTS = {
       "tags": [],
       "quantity": 4,
       "created": "2026-11-09T23:42:00.000Z",
-      "views": 55,
+      "views": 59,
       "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-11-10T01:55:33.616Z"
@@ -435,7 +469,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-10-20T23:20:39.000Z",
-      "views": 30,
+      "views": 33,
       "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-10-21T14:19:56.913Z"
@@ -471,7 +505,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 9,
       "created": "2026-11-02T19:50:28.000Z",
-      "views": 49,
+      "views": 50,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-11-02T20:06:49.958Z"
@@ -576,7 +610,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-09-08T19:59:35.000Z",
-      "views": 118,
+      "views": 119,
       "num_favorers": 9,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -611,7 +645,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-10-15T22:11:01.000Z",
-      "views": 280,
+      "views": 282,
       "num_favorers": 27,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
@@ -645,7 +679,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 19,
       "created": "2026-10-08T17:47:55.000Z",
-      "views": 78,
+      "views": 83,
       "num_favorers": 8,
       "etsy_active": true,
       "added_at": "2026-10-08T19:10:48.816Z"
@@ -679,7 +713,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-13T21:39:50.000Z",
-      "views": 261,
+      "views": 263,
       "num_favorers": 23,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -818,40 +852,6 @@ window.MICKNACK_PRODUCTS = {
       "created": "2026-10-22T21:41:06.000Z",
       "views": 10,
       "num_favorers": 1,
-      "etsy_active": true,
-      "added_at": "2026-10-22T22:07:53.714Z"
-    },
-    {
-      "listing_id": "4601255929",
-      "title": "Baby Pink CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4601255929/baby-pink-cz-earring-connector-chain",
-      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/387ab7/8870084295/il_fullxfull.8870084295_ekyd.jpg",
-        "https://i.etsystatic.com/67609393/r/il/8b99d6/8773399583/il_fullxfull.8773399583_6o5t.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/5cb2/d9d9b6b4-2195-4f28-9be3-bd7935282e89/vid_v1.mp4",
-      "tags": [
-        "earring chain",
-        "earring connector",
-        "ear chain connector",
-        "connecting chain",
-        "earring stack chain",
-        "flatback chain",
-        "threadless earring",
-        "ear stack jewelry",
-        "curated ear jewelry",
-        "gold earring chain",
-        "flatback earrings",
-        "piercing chain",
-        "ear piercing chain"
-      ],
-      "quantity": 3,
-      "created": "2026-10-22T21:40:02.000Z",
-      "views": 38,
-      "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-10-22T22:07:53.714Z"
     },
@@ -1219,7 +1219,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-09-16T20:46:30.000Z",
       "views": 191,
-      "num_favorers": 20,
+      "num_favorers": 21,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1316,7 +1316,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-14T17:51:28.000Z",
-      "views": 30,
+      "views": 31,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1583,7 +1583,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T22:25:35.000Z",
-      "views": 45,
+      "views": 46,
       "num_favorers": 11,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1616,7 +1616,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T22:07:53.000Z",
-      "views": 55,
+      "views": 57,
       "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1650,7 +1650,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T17:54:53.000Z",
-      "views": 189,
+      "views": 206,
       "num_favorers": 12,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1683,7 +1683,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T17:34:10.000Z",
-      "views": 48,
+      "views": 49,
       "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1752,7 +1752,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 5,
       "created": "2026-09-08T22:16:35.000Z",
       "views": 98,
-      "num_favorers": 8,
+      "num_favorers": 9,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },

@@ -1234,7 +1234,31 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 20,
    "at": "2026-11-20T02:08:30.178Z"
+  },
+  {
+   "id": "4615185157",
+   "title": "Pearly Palomino Clear AB Ear Chain | 40mm 18K Gold Plated Chain | 6 Iridescent CZ Earring Connector | Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/d8ede2/8840852328/il_fullxfull.8840852328_m53s.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-20T11:05:57.015Z"
+  },
+  {
+   "id": "4576742876",
+   "title": "Alpenglow Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/af4b6c/8534298038/il_fullxfull.8534298038_jq78.jpg",
+   "gained": 1,
+   "total": 21,
+   "at": "2026-11-20T11:05:57.015Z"
+  },
+  {
+   "id": "4571571883",
+   "title": "Sprinkle Chain | 3×5mm Pear CZ Ear Connector Chain | 2mm Dainty Gold Earring Chain | Helix Conch Lobe Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b6fe06/8496164574/il_fullxfull.8496164574_o4lp.jpg",
+   "gained": 1,
+   "total": 9,
+   "at": "2026-11-20T11:05:57.015Z"
   }
  ],
- "updated_at": "2026-11-20T02:08:30.178Z"
+ "updated_at": "2026-11-20T11:05:57.015Z"
 };
