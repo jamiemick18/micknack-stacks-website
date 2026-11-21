@@ -1282,7 +1282,31 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 17,
    "at": "2026-11-21T09:25:39.748Z"
+  },
+  {
+   "id": "4615037352",
+   "title": "Moonlit Mischief Moonstone AB Ear Chain | 40mm 18K Gold Plated Chain | 6 Iridescent CZ Earring Connector | Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/c64912/8839526634/il_fullxfull.8839526634_6ji8.jpg",
+   "gained": 1,
+   "total": 2,
+   "at": "2026-11-21T22:55:20.887Z"
+  },
+  {
+   "id": "4596333038",
+   "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+   "gained": 1,
+   "total": 28,
+   "at": "2026-11-21T22:55:20.887Z"
+  },
+  {
+   "id": "4579820434",
+   "title": "Alpenglow Labret to Earring Connector | Gold CZ Ear Chain | ASTM F136 G23 Titanium Flatback Connector | Pink Lavender Cartilage Chain",
+   "image": "https://i.etsystatic.com/67609393/r/il/949235/8557324058/il_fullxfull.8557324058_npvr.jpg",
+   "gained": 1,
+   "total": 2,
+   "at": "2026-11-21T22:55:20.887Z"
   }
  ],
- "updated_at": "2026-11-21T17:13:59.766Z"
+ "updated_at": "2026-11-21T22:55:20.887Z"
 };
