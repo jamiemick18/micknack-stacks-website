@@ -13,7 +13,7 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { createContext, runInContext } from "node:vm";
 import { getAccessToken, fetchVariations, renderVariationsFile } from "./etsy-variations.js";
 import { categoryOf, CATEGORIES } from "./categorize.js";
-import { fetchReviews, tidyReviews, renderReviewsFile } from "./etsy-reviews.js";
+import { fetchReviews, mirrorReviewPhotos, tidyReviews, renderReviewsFile } from "./etsy-reviews.js";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -476,10 +476,20 @@ async function syncReviews(shopId, listings, now) {
         (listing.title || "").split("|")[0].trim(),
       ])
     );
-    const reviews = tidyReviews(await fetchReviews(shopId, API_KEY), titles);
+    const raw = await fetchReviews(shopId, API_KEY);
+    // Photos first: a review can only point at one once it is on disk.
+    const photos = await mirrorReviewPhotos(raw, ROOT);
+    const reviews = tidyReviews(raw, titles, photos.paths);
     writeFileSync(join(ROOT, "data", "reviews.js"), renderReviewsFile(reviews, { syncedAt: now }));
     const five = reviews.filter((review) => review.rating === 5).length;
     console.log(`${reviews.length} review(s) on Etsy, ${five} of them five star.`);
+    if (photos.total || photos.failed) {
+      console.log(
+        `${photos.total} review photo(s) mirrored` +
+          (photos.fetched ? `, ${photos.fetched} newly fetched` : ", none new") +
+          (photos.failed ? `, ${photos.failed} could not be fetched` : "")
+      );
+    }
   } catch (err) {
     console.log(`::warning::Could not read Etsy reviews: ${err.message}`);
   }

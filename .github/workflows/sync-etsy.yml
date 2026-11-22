@@ -110,7 +110,7 @@ jobs:
           #
           # The private files (stock counts, which orders have gone out) are
           # gitignored, so this cannot publish them.
-          git add -A data p
+          git add -A data p assets/reviews
           if git diff --cached --quiet; then
             echo "No listing changes — nothing to commit."
           else

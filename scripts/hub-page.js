@@ -66,6 +66,16 @@ export function page() {
   button.ghost { background: none; color: var(--ink); }
   button:disabled { opacity: .4; cursor: default; }
 
+  /* The link Jamie reaches for most, checking how a change actually looks.
+     Gold rather than ink, so it never reads as one more Save button. */
+  .view-site {
+    font-size: .82rem; border-radius: 999px; padding: 9px 18px;
+    text-decoration: none; white-space: nowrap;
+    background: var(--gold); color: var(--paper);
+    border: 1px solid var(--gold);
+  }
+  .view-site:hover { background: #a1732c; border-color: #a1732c; color: var(--paper); }
+
   #note { padding: 10px 22px 0; color: var(--muted); font-size: .85rem; min-height: 20px; }
   #note.bad { color: var(--bad); }
   main { padding: 16px 22px 70px; }
@@ -304,6 +314,7 @@ export function page() {
   <div class="bar">
     <h1 class="brand"><img src="/icon.png" alt="" />Micknack Stacks HUB</h1>
     <span class="spacer"></span>
+    <a class="view-site" href="https://micknackstacks.com" target="_blank" rel="noopener">View site &#8599;</a>
     <button class="ghost" id="revert">Undo</button>
     <button id="save">Save</button>
     <button id="publish">Save &amp; publish</button>

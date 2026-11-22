@@ -64,6 +64,13 @@
   }
   .top img { width: 24px; height: 24px; border-radius: 3px; }
   .top .out { background: none; border: 0; color: var(--muted); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; padding: 6px; }
+  /* The link Jamie reaches for most. Gold, so it stands out from Lock and
+     from the tabs under it. */
+  .top .see {
+    background: var(--gold); color: #fff; text-decoration: none;
+    font-size: .66rem; letter-spacing: .1em; text-transform: uppercase;
+    padding: 7px 12px; border-radius: 999px; white-space: nowrap;
+  }
   nav { display: flex; gap: 2px; margin-top: 10px; overflow-x: auto; }
   nav button {
     background: none; border: 0; border-bottom: 2px solid transparent;
@@ -197,6 +204,7 @@
     <div class="top">
       <img src="assets/emblem-bear-moon.png" alt="" />
       <h1>HUB</h1>
+      <a class="see" href="https://micknackstacks.com" target="_blank" rel="noopener">Site &#8599;</a>
       <button class="out" id="lock">Lock</button>
     </div>
     <nav>
@@ -223,7 +231,7 @@
   </main>
 </div>
 
-<script src="js/gems.js?v=20261116b"></script>
-<script src="js/hub-phone.js?v=20261116b"></script>
+<script src="js/gems.js?v=20261122a"></script>
+<script src="js/hub-phone.js?v=20261122a"></script>
 </body>
 </html>

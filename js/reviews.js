@@ -6,8 +6,8 @@
 // and that is not the moment to hand them the door to another shopfront.
 //
 // Etsy gives no buyer name, so a quote from there is attributed to a verified
-// Etsy buyer and the piece it was left on. Buyers' own photos are not
-// republished.
+// Etsy buyer and the piece it was left on. Where a buyer attached a photo it
+// is shown, mirrored into assets/reviews by the sync.
 //
 // Reviews written on this site come from the checkout worker and only ever
 // arrive approved — Jamie reads each one first. They are attributed to the
@@ -33,6 +33,7 @@
       text: review.text,
       piece: review.piece,
       date: review.date,
+      photo: review.photo || "",
       who: "Verified Etsy buyer",
     }));
 
@@ -51,9 +52,27 @@
 
   const stars = '<span class="stars" aria-label="Five stars">★★★★★</span>';
 
+  // A photo in a shop's own folder, written as a plain relative path. Pages
+  // under /p/ would otherwise go looking for /p/assets/... and find nothing.
+  function asset(path) {
+    const value = String(path || "");
+    if (!value || /^(https?:)?\/\//i.test(value) || value[0] === "/") return value;
+    return location.pathname.startsWith("/p/") ? "/" + value : value;
+  }
+
+  // The buyer's own photo, when they left one. It carries no caption of its
+  // own: the quote underneath is the caption, and alt text describing someone
+  // else's photograph would be a guess.
+  function photo(review) {
+    if (!review.photo) return "";
+    return `<img class="review-photo" src="${escapeHtml(asset(review.photo))}" alt=""
+                 loading="lazy" decoding="async" />`;
+  }
+
   function quote(review) {
     return `
-      <figure class="review">
+      <figure class="review${review.photo ? " has-photo" : ""}">
+        ${photo(review)}
         ${stars}
         <blockquote>${escapeHtml(review.text)}</blockquote>
         <figcaption>
