@@ -2,8 +2,38 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-22T18:21:32.345Z",
+  "synced_at": "2026-11-22T21:30:13.545Z",
   "listings": [
+    {
+      "listing_id": "4623368643",
+      "title": "Snowy Smooch Vertical Helix Earring | 4mm AB CZ Dangle | G23 Titanium Threadless Labret | 6mm or 8mm Post",
+      "price": "25.00",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4623368643/snowy-smooch-vertical-helix-earring-4mm",
+      "description": "Snowy Smooch ❄️✨\n\nA tiny little kiss of winter for your vertical helix.\n\nwww.micknackstacks.com\n\nSnowy Smooch is a delicate vertical helix earring featuring a 4 mm round AB CZ stone that flashes soft icy tones as it catches the light.\n\nThe tiny dangle gives the piece just enough movement to feel playful, while the gold-toned detail keeps it warm and polished against the frosty sparkle.\n\nThe piece is finished with a G23 titanium threadless labret and is available with either a 6 mm or 8 mm post length so you can choose the fit that works best for your piercing.\n\nIcicle Sparkles ❄️\n\nDetails:\n\n4 mm round AB CZ stone\nVertical helix design\nG23 titanium threadless labret\nAvailable in 6 mm or 8 mm post length\nDelicate dangling movement\nGold-toned finish\nFlatback labret style\nPetite, lightweight design\n\nStyle it your way\n\nSnowy Smooch was made for a vertical helix, where the little AB stone can hang freely and catch the light from every angle.\n\nPair it with simple gold pieces for a soft wintery stack, mix it with celestial jewelry, or let it be the tiny icy detail that finishes everything off.\n\nPerfect for:\nVertical helix • Cartilage stacks • Winter-inspired jewelry • AB sparkle • Gold ear stacks • Curated ears\n\nA little snow. A little sparkle. One tiny smooch. ❄️✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/16a271/8908587310/il_fullxfull.8908587310_k0cu.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/7796/1ddea800-cf84-4dfb-9010-bde6bf3767a7/vid_v1.mp4",
+      "tags": [
+        "verticle helix",
+        "g23 titanium",
+        "AB Cubic Zirconia",
+        "Ear Stack",
+        "Ear Curation",
+        "Labret",
+        "helix",
+        "threadless",
+        "push pin earring",
+        "earring"
+      ],
+      "quantity": 4,
+      "created": "2026-11-22T21:15:38.000Z",
+      "views": 0,
+      "num_favorers": 0,
+      "etsy_active": true,
+      "added_at": "2026-11-22T21:30:13.545Z"
+    },
     {
       "listing_id": "4601255929",
       "title": "Baby Pink CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
@@ -34,7 +64,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 4,
       "created": "2026-10-22T21:40:02.000Z",
       "views": 43,
-      "num_favorers": 3,
+      "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-10-22T22:07:53.714Z"
     },

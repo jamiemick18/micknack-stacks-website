@@ -1338,7 +1338,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 18,
    "at": "2026-11-22T18:21:32.345Z"
+  },
+  {
+   "id": "4601255929",
+   "title": "Baby Pink CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/387ab7/8870084295/il_fullxfull.8870084295_ekyd.jpg",
+   "gained": 1,
+   "total": 4,
+   "at": "2026-11-22T21:30:13.545Z"
   }
  ],
- "updated_at": "2026-11-22T18:21:32.345Z"
+ "updated_at": "2026-11-22T21:30:13.545Z"
 };
