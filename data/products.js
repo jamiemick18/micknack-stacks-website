@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-21T22:55:20.887Z",
+  "synced_at": "2026-11-22T02:54:57.710Z",
   "listings": [
     {
       "listing_id": "4601255929",
@@ -122,7 +122,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 2,
       "created": "2026-09-01T21:11:50.000Z",
       "views": 218,
-      "num_favorers": 21,
+      "num_favorers": 22,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -506,7 +506,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 9,
       "created": "2026-11-02T19:50:28.000Z",
       "views": 53,
-      "num_favorers": 2,
+      "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-11-02T20:06:49.958Z"
     },

@@ -1306,7 +1306,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 2,
    "at": "2026-11-21T22:55:20.887Z"
+  },
+  {
+   "id": "4566919003",
+   "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg",
+   "gained": 1,
+   "total": 22,
+   "at": "2026-11-22T02:54:57.710Z"
+  },
+  {
+   "id": "4608450426",
+   "title": "Stack Staple - 18K Gold Plated Huggie Earrings Pair | Clear Marquise CZ Dangles | Everyday Ear Stack Earrings | Dainty Stacking Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/124e06/8834008575/il_fullxfull.8834008575_1z3i.jpg",
+   "gained": 1,
+   "total": 3,
+   "at": "2026-11-22T02:54:57.710Z"
   }
  ],
- "updated_at": "2026-11-21T22:55:20.887Z"
+ "updated_at": "2026-11-22T02:54:57.710Z"
 };
