@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-22T21:39:57.835Z",
+  "generated_at": "2026-11-22T21:49:38.966Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -346,14 +346,14 @@ window.MICKNACK_STRIPE_LINKS = {
       "name": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm"
     },
     "4566277207": {
-      "url": "https://buy.stripe.com/5kQ3co1URdTZaJT5taaZi2g",
+      "url": "https://buy.stripe.com/fZu4gsfLH6rx05f3l2aZi2j",
       "name": "Midnight Ember Black CZ Ear Chain | 32mm Gold Earring Connector | 4mm Black CZ Dangles | 3mm End Loops | Curated Ear Jewelry",
-      "price": "22.00",
+      "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1UcVeM680JvUCS8JZyyd01nb",
-      "price_id": "price_1UcVeL680JvUCS8Jlqcrx2nd",
-      "product_id": "prod_VdnE2NFMkdsohJ"
+      "link_id": "plink_1Ueidi680JvUCS8JrMNB2nb0",
+      "price_id": "price_1Ueidh680JvUCS8JkVp0lbVf",
+      "product_id": "prod_Vg4nKONq4JO3xm"
     },
     "4586013046": {
       "url": "https://buy.stripe.com/9B67sE5738zF19j3l2aZi1c",

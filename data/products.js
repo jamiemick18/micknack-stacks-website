@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-22T21:39:23.774Z",
+  "synced_at": "2026-11-22T21:49:05.508Z",
   "listings": [
     {
       "listing_id": "4623368643",
@@ -543,7 +543,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4566277207",
       "title": "Midnight Ember Black CZ Ear Chain | 32mm Gold Earring Connector | 4mm Black CZ Dangles | 3mm End Loops | Curated Ear Jewelry",
-      "price": "22.00",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4566277207/18k-gold-plated-earring-connecting-chain",
       "description": "Midnight Ember 🖤✨\n\nDark little stones with a flicker of gold.\n\nwww.micknackstacks.com\n\nMidnight Ember is a petite 32 mm ear chain featuring two deep black 4 mm CZ stones mixed with tiny geometric accents. The contrast gives it that perfect dark and delicate feel.. moody at first glance, with little flashes of warmth when the light hits.\n\nThe chain is finished with 3 mm connector loops on each end, making it easy to work into a compatible ear stack without overwhelming the jewelry around it.\n\nDetails:\n32 mm chain length\n3 mm connector loops on both ends\nTwo 4 mm black CZ stones\nGold-toned geometric charms\nDelicate dangling movement\nChain connector only\nPetite, lightweight design\n\nStyle it your way\nDrape Midnight Ember between two compatible earrings for a dark little line of movement, pair it with simple gold pieces, or tuck it into a more layered stack when you want something moody without going heavy.\n\nThe black-and-gold contrast makes it especially good for alternative, gothic, and celestial-inspired stacks.\n\nPerfect for:\nHelix-to-lobe styling • Double lobes • Dark ear stacks • Black and gold jewelry • Alternative jewelry • Curated ears\n\nDark as midnight. Warm as an ember. 🖤✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
