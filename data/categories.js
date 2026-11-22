@@ -6,7 +6,7 @@
 // put corrections in data/category-overrides.json, which wins over the
 // titles and survives the next sync.
 //
-// Last worked out: 2026-11-22T21:49:05.508Z
+// Last worked out: 2026-11-22T22:00:56.165Z
 
 window.MICKNACK_CATEGORIES = [
   {
@@ -92,5 +92,6 @@ window.MICKNACK_CATEGORY_OF = {
   "starfall-double-drape-ear-chain-1-5mm-gold-cable": "chains",
   "starfall-cz-ear-chain-45mm-18k-gold-pvd-satellit": "chains",
   "pear-cz-ear-connector-chain-33mm": "chains",
-  "brat-cz-corundum-ear-chain-18k-gold-pvd": "chains"
+  "brat-cz-corundum-ear-chain-18k-gold-pvd": "chains",
+  "purple-problem-triple-ear-chain-18k-gold-pvd": "chains"
 };

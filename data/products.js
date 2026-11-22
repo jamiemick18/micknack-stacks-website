@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-22T21:49:05.508Z",
+  "synced_at": "2026-11-22T22:00:56.165Z",
   "listings": [
     {
       "listing_id": "4623368643",
@@ -1287,16 +1287,15 @@ window.MICKNACK_PRODUCTS = {
     },
     {
       "listing_id": "4577301519",
-      "title": "Purple Problem Triple Ear Chain | 18K PVD Gold Drape Chain | Amethyst & Clear CZ Connector | Curated Ear Jewelry",
+      "title": "Lime Light Neon Green 32mm Ear Chain | Gold Earring Connector | Bright Green Stone & Gold Charm Dangles | Curated Ear Jewelry",
       "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4577301519/purple-problem-triple-ear-chain-18k-pvd",
-      "description": "Purple Problem Triple Ear Chain 💜✨\n\nPurple Problem features a dainty 1.5 mm 18K PVD gold chain with layered drapes and 4 mm amethyst and clear CZ stones for extra movement, shine, and a little trouble.\nThe first drape measures 30 mm and the second measures 40 mm, creating a soft layered effect that gives your stack more depth without feeling heavy.\n\nThree connection points let you style it across multiple piercings for that fully-curated, slightly chaotic, very cool-girl finish.\n\nDetails\n1.5 mm chain\n18K PVD gold finish\n4 mm CZ stones\nAmethyst + clear color mix\n30 mm first drape\n40 mm second drape\nTriple-point ear chain design\nLightweight layered styling\n\nPerfect for:\nHelix • Lobe • Cartilage • Multi-piercing stacks • Curated ear styling\n\nPretty girl jewelry with a little menace. 💜\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "description": "Lime Light 💚✨\n\nBright enough to steal the whole stack.\n\nwww.micknackstacks.com\n\nLime Light is a playful gold ear chain featuring two vivid lime-green stones, polished gold ball accents, and a sleek little center bar charm.\n\nThe neon green gives the piece that electric pop of color, while the gold details keep it polished and easy to mix into the rest of your stack. Every dangling detail moves independently, catching the light without making the piece feel heavy or overdone.\n\nTiny chain. Loud color. Main-character behavior. 💚\n\nDetails:\n32mm Chain\nBright lime-green stones\nPolished gold ball accents\nGold center bar charm\nDelicate gold-tone chain\nIndividually dangling details\nPetite, lightweight design\nChain connector only\n\nStyle it your way\n\nLime Light was made for stacks that need one unexpected hit of color.\n\nDrape it between two compatible earrings, pair it with simple gold pieces and let the green do all the talking, or mix it into a colorful stack when subtle just isn’t happening today.\n\nPerfect for:\nHelix-to-lobe styling • Double lobes • Bright ear stacks • Green jewelry • Gold ear stacks • Alternative jewelry • Curated ears\n\nLime Light. 💚✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/76221a/8538576258/il_fullxfull.8538576258_aqwo.jpg",
-        "https://i.etsystatic.com/67609393/r/il/016f71/8538574230/il_fullxfull.8538574230_ne6z.jpg"
+        "https://i.etsystatic.com/67609393/r/il/7037ce/8956596675/il_fullxfull.8956596675_ed3k.jpg"
       ],
-      "video": "",
+      "video": "https://v.etsystatic.com/e/videos/09b8/9df17261-39fc-4480-b471-af9babc9ac79/vid_v1.mp4",
       "tags": [
         "earring connector",
         "earring chain",
@@ -1312,8 +1311,8 @@ window.MICKNACK_PRODUCTS = {
         "non tarnish jewelry",
         "multiple piercings"
       ],
-      "quantity": 1,
-      "created": "2026-09-17T17:55:02.000Z",
+      "quantity": 5,
+      "created": "2026-11-22T00:00:00.000Z",
       "views": 64,
       "num_favorers": 5,
       "etsy_active": true,

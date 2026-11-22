@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-22T21:49:38.966Z",
+  "generated_at": "2026-11-22T22:01:30.513Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -67,7 +67,7 @@ window.MICKNACK_STRIPE_LINKS = {
     },
     "4577301519": {
       "url": "https://buy.stripe.com/7sY28karncPVcS16xeaZi27",
-      "name": "Purple Problem Triple Ear Chain | 18K PVD Gold Drape Chain | Amethyst & Clear CZ Connector | Curated Ear Jewelry",
+      "name": "Lime Light Neon Green 32mm Ear Chain | Gold Earring Connector | Bright Green Stone & Gold Charm Dangles | Curated Ear Jewelry",
       "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
@@ -694,6 +694,16 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UeiUL680JvUCS8JyuCboDI2",
       "price_id": "price_1UeiUK680JvUCS8Jx71lvXDj",
       "product_id": "prod_Vg4d9PDVLdyzJI"
+    },
+    "purple-problem-triple-ear-chain-18k-gold-pvd": {
+      "url": "https://buy.stripe.com/00wcMY1URaHN5pz8FmaZi2k",
+      "name": "Purple Problem Triple Ear Chain | 18K PVD Gold Drape Chain | Amethyst & Clear CZ Connector | Curated Ear Jewelry",
+      "price": "25.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UeipB680JvUCS8Jo8KwByzs",
+      "price_id": "price_1UeipB680JvUCS8JRZy6QPpk",
+      "product_id": "prod_Vg4zXd7kGjCyaR"
     }
   }
 };

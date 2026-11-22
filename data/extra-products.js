@@ -92,5 +92,17 @@ window.MICKNACK_EXTRA_PRODUCTS = [
     // The day it first went up on Etsy, so it keeps its place in the order.
     added_at: "2026-10-22T23:16:42.000Z",
   },
+  // Was Etsy listing 4577301519 until 22 November 2026, when that listing was
+  // reused for Lime Light. This piece is still made and still for sale, so it
+  // lives here now, with its photos and video saved into assets/products.
+  {
+    id: "purple-problem-triple-ear-chain-18k-gold-pvd",
+    title: "Purple Problem Triple Ear Chain | 18K PVD Gold Drape Chain | Amethyst & Clear CZ Connector | Curated Ear Jewelry",
+    price: "25.00",
+    description: "Purple Problem Triple Ear Chain 💜✨\n\nPurple Problem features a dainty 1.5 mm 18K PVD gold chain with layered drapes and 4 mm amethyst and clear CZ stones for extra movement, shine, and a little trouble.\nThe first drape measures 30 mm and the second measures 40 mm, creating a soft layered effect that gives your stack more depth without feeling heavy.\n\nThree connection points let you style it across multiple piercings for that fully-curated, slightly chaotic, very cool-girl finish.\n\nDetails\n1.5 mm chain\n18K PVD gold finish\n4 mm CZ stones\nAmethyst + clear color mix\n30 mm first drape\n40 mm second drape\nTriple-point ear chain design\nLightweight layered styling\n\nPerfect for:\nHelix • Lobe • Cartilage • Multi-piercing stacks • Curated ear styling\n\nPretty girl jewelry with a little menace. 💜\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+    images: ["assets/products/purple-problem-triple-ear-chain-18k-gold-pvd-1.jpg","assets/products/purple-problem-triple-ear-chain-18k-gold-pvd-2.jpg"],
+    url: "",
+    added_at: "2026-09-17T17:55:02.000Z",
+  },
   // Add your items here, between the brackets.
 ];
