@@ -7,13 +7,20 @@
 // No names and no buyer photos: Etsy does not provide a name, and the photos
 // belong to the buyers who took them.
 //
-// Last read from Etsy: 2026-11-22T10:54:58.062Z
+// Last read from Etsy: 2026-11-22T18:21:32.345Z
 window.MICKNACK_REVIEWS = {
-  "count": 9,
-  "average": 4.89,
-  "five_star": 8,
+  "count": 10,
+  "average": 4.9,
+  "five_star": 9,
   "shop_reviews_url": "https://www.etsy.com/shop/MicknackStacks/reviews",
   "reviews": [
+    {
+      "rating": 5,
+      "text": "Absolutely loved the items! Pieces were absolutely beautiful and as described. Will buy more pieces from the seller as the quality of the items is excellent. Fit is perfect and overall look, adorable!",
+      "listing_id": "4615880970",
+      "piece": "Love Bug Threadless Flatback Earring",
+      "date": "2026-11-22"
+    },
     {
       "rating": 5,
       "text": "She is such an awesome person to work with! She customized the jewelry to a length that worked for me, and i got a freebie! My orders also vane quickly in the mail, and packaged with care!",
