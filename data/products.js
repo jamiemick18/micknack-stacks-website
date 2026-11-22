@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-22T21:30:13.545Z",
+  "synced_at": "2026-11-22T21:39:23.774Z",
   "listings": [
     {
       "listing_id": "4623368643",
@@ -784,17 +784,15 @@ window.MICKNACK_PRODUCTS = {
     },
     {
       "listing_id": "4601327168",
-      "title": "Brat CZ &  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Baby Pink, Hot Pink 4mm CZ | Dainty Cartilage Chain Jewelry",
+      "title": "Bubblegum Babe Pink Corundum Ear Chain | 32mm Gold Earring Connector | Hot Pink Stone & Gold Ball Dangles | Curated Ear Jewelry",
       "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4601327168/brat-cz-ear-chain-18k-gold-pvd-earring",
-      "description": "Brat 💗✨\n\nBrat is a dainty gold ear-chain connector dripping with three 4 mm soft pink CZ stones and 2 high quality  Corundum Stones in a mix.\n\nThe alternating shades give it that perfect sweet-meets-spicy look...  feminine enough to be pretty, bright enough to get noticed, and just bratty enough to earn the name.\n\nEach stone hangs individually from a delicate 1.5 mm flat cable chain, adding movement and flashes of pink every time you turn your head.\n\nWhy you’ll love it\nThree 4 mm round soft pink CZ stones\nTwo 4mm high quality  Corundum Stones\nMix of baby pink + hot pink\nDelicate 1.5 mm flat cable chain\nIndividual dangling stones for extra movement\nBright two-tone pink color\nLightweight, playful look\nEasy to add to an existing curated ear stack\n\nStyle it your way\nBrat is a chain connector only, designed to attach between compatible hoops, flatbacks, or earrings you already own.\nDrape it between two piercings for an easy pop of pink, pair it with simple gold hoops, or throw it into an already-stacked ear when you need just a little more chaos.\n\nMaterials & Details\nChain width: 1.5 mm\nChain style: Flat cable chain\nFinish: 18K gold PVD plated\nColors: Baby pink + hot pink\nConnector loops at both ends\nChain connector only\nSold individually\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Pink ear stacks • Curated ears • Dainty chain styling\nCute enough to fool you. Bratty enough to warn you. 💗\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
+      "description": "Bubblegum Babe 💗✨\n\nHot pink, little gold bubbles, and absolutely no interest in being subtle.\n\nwww.micknackstacks.com\n\nBubblegum Babe is a petite 32 mm ear chain featuring three bright pink corundum stones mixed with two tiny polished gold ball charms.\n\nThe contrast between the vivid pink stones and smooth gold details gives the whole piece a playful, bubbly feel without making it too busy. Each little charm moves independently, adding just enough swing and sparkle to catch the light as you move.\n\nSweet, bright, and a little extra. Exactly as intended. 💗\n\nDetails:\n\n32 mm chain length\nThree bright pink corundum stones\nTwo polished gold ball charms\nDelicate gold-tone chain\nIndividually dangling details\nPetite, lightweight design\nChain connector only\n\nStyle it your way\n\nBubblegum Babe is made for ear stacks that could use a little pop of color.\n\nDrape it between two compatible earrings, pair it with simple gold pieces to let the pink take over, or mix it into a colorful stack when subtle just isn’t the assignment.\n\nPerfect for:\nHelix-to-lobe styling • Double lobes • Pink ear stacks • Gold jewelry • Playful stacks • Curated ears\n\nBubblegum pink. Golden bubbles. Babe behavior. 💗✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/dc74da/8773785101/il_fullxfull.8773785101_tq4u.jpg",
-        "https://i.etsystatic.com/67609393/r/il/94be9e/8725958720/il_fullxfull.8725958720_kjz9.jpg",
-        "https://i.etsystatic.com/67609393/r/il/aec218/8725961896/il_fullxfull.8725961896_36pi.jpg"
+        "https://i.etsystatic.com/67609393/r/il/0854d7/8908701940/il_fullxfull.8908701940_dkos.jpg"
       ],
-      "video": "https://v.etsystatic.com/e/videos/c187/85c99d1a-0347-4607-8577-92ae59d2ece5/vid_v1.mp4",
+      "video": "https://v.etsystatic.com/e/videos/f2ca/3ca81f99-3a50-42d6-bd14-ebe60ac9ea98/vid_v1.mp4",
       "tags": [
         "earring chain",
         "earring connector",
@@ -810,8 +808,8 @@ window.MICKNACK_PRODUCTS = {
         "piercing chain",
         "ear piercing chain"
       ],
-      "quantity": 3,
-      "created": "2026-10-22T23:16:42.000Z",
+      "quantity": 5,
+      "created": "2026-11-22T00:00:00.000Z",
       "views": 21,
       "num_favorers": 0,
       "etsy_active": true,

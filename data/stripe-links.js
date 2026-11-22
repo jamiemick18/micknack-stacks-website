@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-16T19:33:10.278Z",
+  "generated_at": "2026-11-22T21:39:57.835Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -513,7 +513,7 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UTlqH680JvUCS8JEbKPxljR",
       "price_id": "price_1UTlqH680JvUCS8JyvzEWTzw",
       "product_id": "prod_VUlNOkgMxNtQpk",
-      "name": "Brat CZ &  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Baby Pink, Hot Pink 4mm CZ | Dainty Cartilage Chain Jewelry"
+      "name": "Bubblegum Babe Pink Corundum Ear Chain | 32mm Gold Earring Connector | Hot Pink Stone & Gold Ball Dangles | Curated Ear Jewelry"
     },
     "starfall-cz-ear-chain-45mm-18k-gold-pvd-satellit": {
       "url": "https://buy.stripe.com/14AdR2arn4jp2dn4p6aZi1O",
@@ -674,6 +674,26 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UcVeK680JvUCS8JI0kHNDC2",
       "price_id": "price_1UcVeK680JvUCS8JgsSvvFMH",
       "product_id": "prod_VdnEHjD8XKIS8r"
+    },
+    "brat-cz-corundum-ear-chain-18k-gold-pvd": {
+      "url": "https://buy.stripe.com/aFa6oAdDz5nt3hrf3KaZi2h",
+      "name": "Brat CZ & Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Baby Pink, Hot Pink 4mm CZ | Dainty Cartilage Chain Jewelry",
+      "price": "25.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UeiUK680JvUCS8Ja27zr4ub",
+      "price_id": "price_1UeiUJ680JvUCS8JFB9AQWxC",
+      "product_id": "prod_Vg4dZ81jAsIcFo"
+    },
+    "4623368643": {
+      "url": "https://buy.stripe.com/bJe6oA9njbLRcS1g7OaZi2i",
+      "name": "Snowy Smooch Vertical Helix Earring | 4mm AB CZ Dangle | G23 Titanium Threadless Labret | 6mm or 8mm Post",
+      "price": "25.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UeiUL680JvUCS8JyuCboDI2",
+      "price_id": "price_1UeiUK680JvUCS8Jx71lvXDj",
+      "product_id": "prod_Vg4d9PDVLdyzJI"
     }
   }
 };

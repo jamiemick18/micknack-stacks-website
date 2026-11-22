@@ -78,5 +78,19 @@ window.MICKNACK_EXTRA_PRODUCTS = [
     // rather than pretending to be new.
     added_at: "2026-08-31T21:52:58.000Z",
   },
+  // Was Etsy listing 4601327168 until 22 November 2026, when that listing was
+  // reused for Bubblegum Babe. Brat is still made and still for sale, so it
+  // lives here now, with its photos and video saved into assets/products.
+  {
+    id: "brat-cz-corundum-ear-chain-18k-gold-pvd",
+    title: "Brat CZ & Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Baby Pink, Hot Pink 4mm CZ | Dainty Cartilage Chain Jewelry",
+    price: "25.00",
+    description: "Brat 💗✨\n\nBrat is a dainty gold ear-chain connector dripping with three 4 mm soft pink CZ stones and 2 high quality  Corundum Stones in a mix.\n\nThe alternating shades give it that perfect sweet-meets-spicy look...  feminine enough to be pretty, bright enough to get noticed, and just bratty enough to earn the name.\n\nEach stone hangs individually from a delicate 1.5 mm flat cable chain, adding movement and flashes of pink every time you turn your head.\n\nWhy you’ll love it\nThree 4 mm round soft pink CZ stones\nTwo 4mm high quality  Corundum Stones\nMix of baby pink + hot pink\nDelicate 1.5 mm flat cable chain\nIndividual dangling stones for extra movement\nBright two-tone pink color\nLightweight, playful look\nEasy to add to an existing curated ear stack\n\nStyle it your way\nBrat is a chain connector only, designed to attach between compatible hoops, flatbacks, or earrings you already own.\nDrape it between two piercings for an easy pop of pink, pair it with simple gold hoops, or throw it into an already-stacked ear when you need just a little more chaos.\n\nMaterials & Details\nChain width: 1.5 mm\nChain style: Flat cable chain\nFinish: 18K gold PVD plated\nColors: Baby pink + hot pink\nConnector loops at both ends\nChain connector only\nSold individually\n\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Pink ear stacks • Curated ears • Dainty chain styling\nCute enough to fool you. Bratty enough to warn you. 💗\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
+    images: ["assets/products/brat-cz-corundum-ear-chain-18k-gold-pvd-1.jpg", "assets/products/brat-cz-corundum-ear-chain-18k-gold-pvd-2.jpg", "assets/products/brat-cz-corundum-ear-chain-18k-gold-pvd-3.jpg"],
+    video: "assets/products/brat-cz-corundum-ear-chain-18k-gold-pvd.mp4",
+    url: "",
+    // The day it first went up on Etsy, so it keeps its place in the order.
+    added_at: "2026-10-22T23:16:42.000Z",
+  },
   // Add your items here, between the brackets.
 ];
