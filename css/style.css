@@ -1652,24 +1652,6 @@ img {
 
 .review-when { display: block; opacity: 0.8; text-transform: none; letter-spacing: 0.04em; }
 
-/* A buyer's own photo, where they left one.
-
-   Fixed height rather than natural, because these arrive at whatever shape
-   and size a phone took them: left alone, one portrait shot would make its
-   card twice the height of the row and pull the whole grid out of line. The
-   photo sits flush to the top corners, so the card reads as a picture with
-   words under it rather than a picture dropped into a box. */
-.review-photo {
-  display: block;
-  width: calc(100% + 40px);
-  margin: -22px -20px 4px;
-  height: 190px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 4px 4px 0 0;
-  background: #f1ece4;
-}
-
 /* ---- Custom pieces, said out loud ---- */
 
 /* Jamie makes custom work and almost nobody knew, because it was a line
