@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-22T22:00:56.165Z",
+  "synced_at": "2026-11-22T22:26:07.193Z",
   "listings": [
     {
       "listing_id": "4623368643",
@@ -1086,17 +1086,15 @@ window.MICKNACK_PRODUCTS = {
     },
     {
       "listing_id": "4589894700",
-      "title": "Sweet Little Thing Pink CZ Ear Chain | 18K Gold Plated Earring Connector | Dainty Cartilage Jewelry",
-      "price": "19.99",
+      "title": "Peachy Keen 32mm Peach Ear Chain | Gold Earring Connector | Peach Stone & Chunky Gold Donut Dangles | Curated Ear Jewelry",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4589894700/sweet-little-thing-pink-cz-ear-chain-18k",
-      "description": "Sweet Little Thing 💕✨\nSoft, sparkly, and sweeter than she has any business being.\n\nSweet Little Thing is a dainty ear-chain connector made with a 1.5 mm 18K gold-plated chain and a mix of baby-pink and clear CZ drops. Three 4 mm round pink CZ stones alternate with two 3 × 5 mm clear pear-shaped CZ stones, giving the chain a soft little pattern of color, shape, and movement.\n\nThe round pink stones bring the sweetness; the clear pear drops add just enough contrast to keep it from getting too innocent. 😌\n\nWhy you’ll love it:\nDainty 1.5 mm 18K gold-plated chain\nThree 4 mm round pink CZ stones\nTwo 3 × 5 mm clear pear-shaped CZ stones\nFive individually dangling stones\nSoft pink + clear color combination\nLightweight movement and sparkle\nConnector loops at both ends\nEasy way to add depth to a curated ear stack\n\nStyle it your way:\nSweet Little Thing is a chain connector only, designed to attach between compatible earrings, hoops, or flatback jewelry you already own.\n\nConnect it between two piercings for a soft drape, mix it into a colorful stack, or pair it with simple gold jewelry and let the pink stones do the talking.\n\nEarrings and labret posts are not included.\n\nMaterials & Details:\nChain: 1.5 mm\nFinish: 18K gold plated\nPink stones: 4 mm round CZ\nClear stones: 3 × 5 mm pear-shaped CZ\nThree pink round stones\nTwo clear pear stones\nConnector loops at both ends\nSold individually\n\nPerfect for:\nHelix-to-lobe styling • Cartilage stacks • Double-lobe piercings • Curated ears • Pink ear stacks • Dainty chain styling\nSweet little thing. Potentially a terrible influence. 💕✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+      "description": "Peachy Keen 🍑✨\n\nSoft peach sparkle with a little golden glow.\n\nwww.micknackstacks.com\n\nPeachy Keen is a delicate 32 mm gold ear chain featuring three warm peach-toned round stones mixed with two little chunky textured gold donut charms.\n\nThe soft peach color gives the piece a warm, glowy feel, while the gold donuts add just enough texture and weight to make the whole chain feel a little more playful.\n\nSweet, polished, and very easy on the eyes.\n\nDetails:\n\n32 mm chain length\nThree peach-toned round stones\nTwo chunky textured gold donut charms\nDelicate gold-tone chain\nIndividually dangling details\nPetite, lightweight design\nChain connector only\n\nStyle it your way\n\nPeachy Keen is made for soft, warm stacks.\n\nDrape it between two compatible earrings, pair it with simple gold pieces, or mix it into a neutral stack when you want a little color without going bright.\n\nPerfect for:\nHelix-to-lobe styling • Double lobes • Peach jewelry • Warm gold stacks • Soft colorful stacks • Curated ears\n\nA little peach. A little gold. Everything’s Peachy Keen. 🍑✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/c8d7c8/8634052158/il_fullxfull.8634052158_l3t9.jpg",
-        "https://i.etsystatic.com/67609393/r/il/d08aaa/8634052232/il_fullxfull.8634052232_cylc.jpg",
-        "https://i.etsystatic.com/67609393/r/il/245477/8681876255/il_fullxfull.8681876255_gq1n.jpg"
+        "https://i.etsystatic.com/67609393/r/il/d7b6e3/8956727321/il_fullxfull.8956727321_t5qp.jpg"
       ],
-      "video": "https://v.etsystatic.com/e/videos/2b4b/4e9e19fa-b0ee-4aff-8510-5673388b6347/vid_v1.mp4",
+      "video": "https://v.etsystatic.com/e/videos/792d/2040044f-1e14-484d-899f-460c8fa9fdae/vid_v1.mp4",
       "tags": [
         "ear chain connector",
         "earring connector",
@@ -1112,8 +1110,8 @@ window.MICKNACK_PRODUCTS = {
         "curated ear",
         "multi piercing"
       ],
-      "quantity": 4,
-      "created": "2026-10-06T18:38:59.000Z",
+      "quantity": 5,
+      "created": "2026-11-22T00:00:00.000Z",
       "views": 28,
       "num_favorers": 1,
       "etsy_active": true,

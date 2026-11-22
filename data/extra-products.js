@@ -104,5 +104,25 @@ window.MICKNACK_EXTRA_PRODUCTS = [
     url: "",
     added_at: "2026-09-17T17:55:02.000Z",
   },
+  // Was Etsy listing 4589894700 until 22 November 2026, when that listing was
+  // reused for Peachy Keen. Same story as the Pear above: the piece is still
+  // made and still for sale, so it lives here, and its photos and video were
+  // pulled down into assets/products rather than left hanging off a listing
+  // that is no longer about it.
+  {
+    id: "sweet-little-thing-pink-cz-ear-chain",
+    title: "Sweet Little Thing Pink CZ Ear Chain | 18K Gold Plated Earring Connector | Dainty Cartilage Jewelry",
+    price: "19.99",
+    description: "Sweet Little Thing 💕✨\nSoft, sparkly, and sweeter than she has any business being.\n\nSweet Little Thing is a dainty ear-chain connector made with a 1.5 mm 18K gold-plated chain and a mix of baby-pink and clear CZ drops. Three 4 mm round pink CZ stones alternate with two 3 × 5 mm clear pear-shaped CZ stones, giving the chain a soft little pattern of color, shape, and movement.\n\nThe round pink stones bring the sweetness; the clear pear drops add just enough contrast to keep it from getting too innocent. 😌\n\nWhy you’ll love it:\nDainty 1.5 mm 18K gold-plated chain\nThree 4 mm round pink CZ stones\nTwo 3 × 5 mm clear pear-shaped CZ stones\nFive individually dangling stones\nSoft pink + clear color combination\nLightweight movement and sparkle\nConnector loops at both ends\nEasy way to add depth to a curated ear stack\n\nStyle it your way:\nSweet Little Thing is a chain connector only, designed to attach between compatible earrings, hoops, or flatback jewelry you already own.\n\nConnect it between two piercings for a soft drape, mix it into a colorful stack, or pair it with simple gold jewelry and let the pink stones do the talking.\n\nEarrings and labret posts are not included.\n\nMaterials & Details:\nChain: 1.5 mm\nFinish: 18K gold plated\nPink stones: 4 mm round CZ\nClear stones: 3 × 5 mm pear-shaped CZ\nThree pink round stones\nTwo clear pear stones\nConnector loops at both ends\nSold individually\n\nPerfect for:\nHelix-to-lobe styling • Cartilage stacks • Double-lobe piercings • Curated ears • Pink ear stacks • Dainty chain styling\nSweet little thing. Potentially a terrible influence. 💕✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
+    images: [
+      "assets/products/sweet-little-thing-pink-cz-ear-chain-1.jpg",
+      "assets/products/sweet-little-thing-pink-cz-ear-chain-2.jpg",
+      "assets/products/sweet-little-thing-pink-cz-ear-chain-3.jpg",
+    ],
+    video: "assets/products/sweet-little-thing-pink-cz-ear-chain.mp4",
+    url: "",
+    // The day it first went up on Etsy, so it keeps its place in the order.
+    added_at: "2026-10-06T18:38:59.000Z",
+  },
   // Add your items here, between the brackets.
 ];

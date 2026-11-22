@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-22T22:01:30.513Z",
+  "generated_at": "2026-11-22T22:26:41.522Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -396,14 +396,14 @@ window.MICKNACK_STRIPE_LINKS = {
       "name": "Everyday 18g G23 ASTM F136 Titanium Gold Clicker Hoop | 18K PVD Implant Grade Cartilage Ring | Helix Conch Lobe 5mm–12mm"
     },
     "4589894700": {
-      "url": "https://buy.stripe.com/cNi4gsfLH4jp8BLbRyaZi1g",
-      "price": "19.99",
+      "url": "https://buy.stripe.com/bJe6oAczv17d4lv5taaZi2m",
+      "name": "Peachy Keen 32mm Peach Ear Chain | Gold Earring Connector | Peach Stone & Chunky Gold Donut Dangles | Curated Ear Jewelry",
+      "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1US3Bl680JvUCS8J5wlVzBzV",
-      "price_id": "price_1US3Bk680JvUCS8JgS6iKrD5",
-      "product_id": "prod_VSzAOIuC08EoZ5",
-      "name": "Sweet Little Thing Pink CZ Ear Chain | 18K Gold Plated Earring Connector | Dainty Cartilage Jewelry"
+      "link_id": "plink_1UejDZ680JvUCS8JhjTYFFPQ",
+      "price_id": "price_1UejDY680JvUCS8JSkbXR6oY",
+      "product_id": "prod_Vg5O4XHVFdwGmq"
     },
     "4601250009": {
       "url": "https://buy.stripe.com/aFabIUgPL17d05fg7OaZi1h",
@@ -704,6 +704,16 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UeipB680JvUCS8Jo8KwByzs",
       "price_id": "price_1UeipB680JvUCS8JRZy6QPpk",
       "product_id": "prod_Vg4zXd7kGjCyaR"
+    },
+    "sweet-little-thing-pink-cz-ear-chain": {
+      "url": "https://buy.stripe.com/4gM5kwarn3fl8BL2gYaZi2l",
+      "name": "Sweet Little Thing Pink CZ Ear Chain | 18K Gold Plated Earring Connector | Dainty Cartilage Jewelry",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UejDX680JvUCS8J3pqAMH1Z",
+      "price_id": "price_1UejDX680JvUCS8JenUdiIsY",
+      "product_id": "prod_Vg5Os6B8JhPBpi"
     }
   }
 };
