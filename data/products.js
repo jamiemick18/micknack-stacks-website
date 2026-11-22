@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-22T22:26:07.193Z",
+  "synced_at": "2026-11-22T23:14:59.740Z",
   "listings": [
     {
       "listing_id": "4623368643",
@@ -1348,16 +1348,15 @@ window.MICKNACK_PRODUCTS = {
     },
     {
       "listing_id": "4574696395",
-      "title": "Midnight Amethyst Ear Chain Connector | Purple Synthetic Corundum Sapphire Dangle Chain | Dainty Gold Earring Chain | Ear Stack Jewelry",
+      "title": "Periwinkle 32mm Purple Ear Chain | Gold Earring Connector | Purple Stone & Gold Bar Dangles | Curated Ear Jewelry",
       "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4574696395/grape-drizzle-chain-ear-connector-5a-cz",
-      "description": "Midnight Amethyst 💜\n\nA dainty gold connector chain finished with five sparkling 5A  Corundum Stone drops in alternating shades of deep and medium amethyst purple. The mix of moody jewel tones gives this piece a little midnight magic while still feeling delicate enough for an everyday ear stack.\n\nDrape it between two flatback earrings, hoops, or cartilage piercings to add movement, color, and a little extra sparkle to your curation.\n\nDETAILS:\n• Approximately 42 mm long\n• Dainty 1.5 mm gold chain\n• Five 3 mm single-drilled Synthetic Corundum Sapphire stones\n• Alternating deep and light amethyst-purple tones\n• 3 mm connecting loops on each end\n\nMade to connect between earrings, hoops, or piercing jewelry.\n\nBeautiful for conch, helix, cartilage, and other curated ear-stack combinations.\n\nThe stones move freely with the chain, creating a soft little shimmer with every turn.\n\nPlease note: This listing is for one chain.",
+      "description": "Periwinkle 💜✨\n\nSoft purple sparkle with a little golden edge.\n\nwww.micknackstacks.com\n\nPeriwinkle is a delicate 32 mm gold ear chain featuring three soft purple stones paired with two slim gold bar charms.\n\nThe mix of cool violet tones and warm gold gives it a clean, polished look while the dangling details add just enough movement to keep it playful.\n\nPretty, petite, and quietly different.\n\nDetails:\n\n32 mm chain length\nThree soft purple round stones\nTwo slim gold bar charms\nDelicate gold-tone chain\nIndividually dangling details\nPetite, lightweight design\nChain connector only\n\nStyle it your way\n\nPeriwinkle is made for stacks that want a little color without going loud.\n\nDrape it between two compatible earrings, pair it with simple gold pieces, or mix it into a purple-toned stack for a soft little pop of color.\n\nPerfect for:\nHelix-to-lobe styling • Double lobes • Purple ear stacks • Gold jewelry • Dainty colorful stacks • Curated ears\n\nSoft purple. Clean gold. Periwinkle. 💜✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/44be7f/8567054973/il_fullxfull.8567054973_ftoj.jpg",
-        "https://i.etsystatic.com/67609393/r/il/fb151c/8519182858/il_fullxfull.8519182858_r6j8.jpg"
+        "https://i.etsystatic.com/67609393/r/il/156a44/8909185306/il_fullxfull.8909185306_8aoc.jpg"
       ],
-      "video": "",
+      "video": "https://v.etsystatic.com/e/videos/a6f5/470041ee-de08-4ac0-8a04-f878239cd564/vid_v1.mp4",
       "tags": [
         "earring connector",
         "earring chain",
@@ -1373,8 +1372,8 @@ window.MICKNACK_PRODUCTS = {
         "non tarnish jewelry",
         "multiple piercings"
       ],
-      "quantity": 4,
-      "created": "2026-09-13T21:26:03.000Z",
+      "quantity": 5,
+      "created": "2026-11-22T00:00:00.000Z",
       "views": 19,
       "num_favorers": 1,
       "etsy_active": true,

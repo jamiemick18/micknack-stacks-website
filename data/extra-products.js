@@ -124,5 +124,22 @@ window.MICKNACK_EXTRA_PRODUCTS = [
     // The day it first went up on Etsy, so it keeps its place in the order.
     added_at: "2026-10-06T18:38:59.000Z",
   },
+  // Was Etsy listing 4574696395 until 22 November 2026, when that listing was
+  // reused for Periwinkle. Still made, still for sale, so it lives here, with
+  // its photos pulled down into assets/products rather than left hanging off
+  // a listing that is no longer about it. No video on this one.
+  {
+    id: "midnight-amethyst-ear-chain-connector",
+    title: "Midnight Amethyst Ear Chain Connector | Purple Synthetic Corundum Sapphire Dangle Chain | Dainty Gold Earring Chain | Ear Stack Jewelry",
+    price: "25.00",
+    description: "Midnight Amethyst 💜\n\nA dainty gold connector chain finished with five sparkling 5A  Corundum Stone drops in alternating shades of deep and medium amethyst purple. The mix of moody jewel tones gives this piece a little midnight magic while still feeling delicate enough for an everyday ear stack.\n\nDrape it between two flatback earrings, hoops, or cartilage piercings to add movement, color, and a little extra sparkle to your curation.\n\nDETAILS:\n• Approximately 42 mm long\n• Dainty 1.5 mm gold chain\n• Five 3 mm single-drilled Synthetic Corundum Sapphire stones\n• Alternating deep and light amethyst-purple tones\n• 3 mm connecting loops on each end\n\nMade to connect between earrings, hoops, or piercing jewelry.\n\nBeautiful for conch, helix, cartilage, and other curated ear-stack combinations.\n\nThe stones move freely with the chain, creating a soft little shimmer with every turn.\n\nPlease note: This listing is for one chain.",
+    images: [
+      "assets/products/midnight-amethyst-ear-chain-connector-1.jpg",
+      "assets/products/midnight-amethyst-ear-chain-connector-2.jpg",
+    ],
+    url: "",
+    // The day it first went up on Etsy, so it keeps its place in the order.
+    added_at: "2026-09-13T21:26:03.000Z",
+  },
   // Add your items here, between the brackets.
 ];

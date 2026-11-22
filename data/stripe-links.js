@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-22T22:26:41.522Z",
+  "generated_at": "2026-11-22T23:15:33.808Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -133,7 +133,7 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UTlqJ680JvUCS8JCCpCPzYb",
       "price_id": "price_1UTlqJ680JvUCS8JSRSaSsXi",
       "product_id": "prod_VUlNaEcpDqKxYn",
-      "name": "Midnight Amethyst Ear Chain Connector | Purple Synthetic Corundum Sapphire Dangle Chain | Dainty Gold Earring Chain | Ear Stack Jewelry"
+      "name": "Periwinkle 32mm Purple Ear Chain | Gold Earring Connector | Purple Stone & Gold Bar Dangles | Curated Ear Jewelry"
     },
     "4573640401": {
       "url": "https://buy.stripe.com/dRmfZa9nj9DJ4lv7BiaZi1B",
@@ -714,6 +714,16 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1UejDX680JvUCS8J3pqAMH1Z",
       "price_id": "price_1UejDX680JvUCS8JenUdiIsY",
       "product_id": "prod_Vg5Os6B8JhPBpi"
+    },
+    "midnight-amethyst-ear-chain-connector": {
+      "url": "https://buy.stripe.com/fZu3co6b7bLRcS18FmaZi2n",
+      "name": "Midnight Amethyst Ear Chain Connector | Purple Synthetic Corundum Sapphire Dangle Chain | Dainty Gold Earring Chain | Ear Stack Jewelry",
+      "price": "25.00",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1Uejyr680JvUCS8JEP6rtTxd",
+      "price_id": "price_1Uejyq680JvUCS8JulCunU0N",
+      "product_id": "prod_Vg6B0P3dEZ1KwX"
     }
   }
 };
