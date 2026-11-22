@@ -3,7 +3,7 @@
 // from test links on localhost only. Live links show everywhere.
 window.MICKNACK_STRIPE_LINKS = {
   "mode": "live",
-  "generated_at": "2026-11-22T23:15:33.808Z",
+  "generated_at": "2026-11-22T23:28:25.279Z",
   "links": {
     "4584458361": {
       "url": "https://buy.stripe.com/7sYeV66b7dTZf09dZGaZi1s",
@@ -406,14 +406,14 @@ window.MICKNACK_STRIPE_LINKS = {
       "product_id": "prod_Vg5O4XHVFdwGmq"
     },
     "4601250009": {
-      "url": "https://buy.stripe.com/aFabIUgPL17d05fg7OaZi1h",
-      "price": "19.99",
+      "url": "https://buy.stripe.com/00w8wI7fb0394lvbRyaZi2p",
+      "name": "Geode Dust 32mm AB CZ Ear Chain | Gold Earring Connector | Iridescent Stone & Geometric Charm Dangles | Curated Ear Jewelry",
+      "price": "25.00",
       "shipping_cents": 500,
       "config": 2,
-      "link_id": "plink_1UTTeM680JvUCS8Jk3RsrMIX",
-      "price_id": "price_1UTTeL680JvUCS8JWwDeidLs",
-      "product_id": "prod_VUSZKIMh9jZTP0",
-      "name": "Periodt Green CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory"
+      "link_id": "plink_1UekBI680JvUCS8JGMstN4h4",
+      "price_id": "price_1UekBI680JvUCS8JRIp5QFbE",
+      "product_id": "prod_Vg6ONCxUQNbwHx"
     },
     "4601274406": {
       "url": "https://buy.stripe.com/4gM00c573aHN05faNuaZi1i",
@@ -724,6 +724,16 @@ window.MICKNACK_STRIPE_LINKS = {
       "link_id": "plink_1Uejyr680JvUCS8JEP6rtTxd",
       "price_id": "price_1Uejyq680JvUCS8JulCunU0N",
       "product_id": "prod_Vg6B0P3dEZ1KwX"
+    },
+    "periodt-green-cz-ear-connector-chain": {
+      "url": "https://buy.stripe.com/28EaEQdDz0397xHdZGaZi2o",
+      "name": "Periodt Green CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+      "price": "19.99",
+      "shipping_cents": 500,
+      "config": 2,
+      "link_id": "plink_1UekBH680JvUCS8JrXRHxRpI",
+      "price_id": "price_1UekBH680JvUCS8JBEclQ67t",
+      "product_id": "prod_Vg6ONiNz5zPFE4"
     }
   }
 };

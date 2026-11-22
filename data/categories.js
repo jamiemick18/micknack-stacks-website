@@ -6,7 +6,7 @@
 // put corrections in data/category-overrides.json, which wins over the
 // titles and survives the next sync.
 //
-// Last worked out: 2026-11-22T23:14:59.740Z
+// Last worked out: 2026-11-22T23:27:50.070Z
 
 window.MICKNACK_CATEGORIES = [
   {
@@ -95,5 +95,6 @@ window.MICKNACK_CATEGORY_OF = {
   "brat-cz-corundum-ear-chain-18k-gold-pvd": "chains",
   "purple-problem-triple-ear-chain-18k-gold-pvd": "chains",
   "sweet-little-thing-pink-cz-ear-chain": "chains",
-  "midnight-amethyst-ear-chain-connector": "chains"
+  "midnight-amethyst-ear-chain-connector": "chains",
+  "periodt-green-cz-ear-connector-chain": "chains"
 };

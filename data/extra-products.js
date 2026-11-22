@@ -141,5 +141,22 @@ window.MICKNACK_EXTRA_PRODUCTS = [
     // The day it first went up on Etsy, so it keeps its place in the order.
     added_at: "2026-09-13T21:26:03.000Z",
   },
+  // Was Etsy listing 4601250009 until 22 November 2026, when that listing was
+  // reused for Geode Dust. Still made, still for sale, so it lives here, with
+  // its photos pulled down into assets/products rather than left hanging off a
+  // listing that is no longer about it.
+  {
+    id: "periodt-green-cz-ear-connector-chain",
+    title: "Periodt Green CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+    price: "19.99",
+    description: "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+    images: [
+      "assets/products/periodt-green-cz-ear-connector-chain-1.jpg",
+      "assets/products/periodt-green-cz-ear-connector-chain-2.jpg",
+    ],
+    url: "",
+    // The day it first went up on Etsy, so it keeps its place in the order.
+    added_at: "2026-10-22T21:29:09.000Z",
+  },
   // Add your items here, between the brackets.
 ];

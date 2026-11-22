@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-22T23:14:59.740Z",
+  "synced_at": "2026-11-22T23:27:50.070Z",
   "listings": [
     {
       "listing_id": "4623368643",
@@ -919,16 +919,15 @@ window.MICKNACK_PRODUCTS = {
     },
     {
       "listing_id": "4601250009",
-      "title": "Periodt Green CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
-      "price": "19.99",
+      "title": "Geode Dust 32mm AB CZ Ear Chain | Gold Earring Connector | Iridescent Stone & Geometric Charm Dangles | Curated Ear Jewelry",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4601250009/periodt-green-cz-earring-connector-chain",
-      "description": "Add a little movement and sparkle to your ear stack with this dainty double-drop connector chain.\nDesigned with two tiny pear-shaped CZ stones, this piece gives your stack a delicate draped look while still keeping everything lightweight and minimal. Connect it between two studs, a stud and hoop, or anywhere your stack needs a little extra detail.\n\nDetails:\nChain length: 40mm\nChain width: 1.5 mm\nEnd jump hoops: 3mm\nStones: 4mm round-shaped CZ\n\nLightweight, dainty design.\nMade for mixing and styling with flatbacks and hoops.\n\nEach chain can be styled a little differently depending on your piercing placement, making it an easy way to create a stack that feels completely your own.\n\nMicknack Stacks\nTiny details. Delicate energy. Made for stacks that are anything but boring.",
+      "description": "Geode Dust ✨\n\nTiny little mineral magic for your ear stack.\n\nwww.micknackstacks.com\n\nGeode Dust is a delicate 32 mm gold ear chain featuring two round AB CZ stones mixed with three tiny geometric gold charms.\n\nThe AB stones throw soft flashes of pink, blue, violet, and gold as they catch the light, while the little angular charms give the whole piece that scattered-crystal, found-treasure feel.\n\nDainty, earthy, and just a little bit magical.\n\nDetails:\n\n32 mm chain length\nTwo round AB CZ stones\nThree tiny geometric gold charms\nDelicate gold-tone chain\nIndividually dangling details\nPetite, lightweight design\nChain connector only\n\nStyle it your way\n\nGeode Dust is made for stacks that like a little sparkle without going full glitter bomb.\n\nDrape it between two compatible earrings, pair it with warm gold pieces, or tuck it into a gemstone-inspired stack for a soft little flash of color and texture.\n\nPerfect for:\nHelix-to-lobe styling • Double lobes • Gemstone-inspired stacks • Gold ear stacks • Iridescent jewelry • Curated ears\n\nTiny facets. Soft sparkle. A little Geode Dust. ✨\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado.",
       "images": [
-        "https://i.etsystatic.com/67609393/r/il/0dada6/8773351701/il_fullxfull.8773351701_r2eh.jpg",
-        "https://i.etsystatic.com/67609393/r/il/0b4e60/8725521842/il_fullxfull.8725521842_iplc.jpg"
+        "https://i.etsystatic.com/67609393/r/il/c50ae7/8909245982/il_fullxfull.8909245982_fjp9.jpg"
       ],
-      "video": "",
+      "video": "https://v.etsystatic.com/e/videos/236e/41ebc7da-b176-4ef0-a2bb-bfbb486193a1/vid_v1.mp4",
       "tags": [
         "earring chain",
         "earring connector",
@@ -944,8 +943,8 @@ window.MICKNACK_PRODUCTS = {
         "piercing chain",
         "ear piercing chain"
       ],
-      "quantity": 3,
-      "created": "2026-10-22T21:29:09.000Z",
+      "quantity": 5,
+      "created": "2026-11-22T00:00:00.000Z",
       "views": 22,
       "num_favorers": 2,
       "etsy_active": true,
