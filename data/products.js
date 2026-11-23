@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-23T00:05:15.684Z",
+  "synced_at": "2026-11-23T08:44:27.508Z",
   "listings": [
     {
       "listing_id": "4623368643",
@@ -29,7 +29,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-11-22T21:15:38.000Z",
-      "views": 0,
+      "views": 1,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-11-22T21:30:13.545Z"
@@ -63,7 +63,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-10-22T21:40:02.000Z",
-      "views": 43,
+      "views": 45,
       "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-10-22T22:07:53.714Z"
@@ -118,7 +118,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-11-11T18:55:30.000Z",
-      "views": 26,
+      "views": 29,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-11-12T01:24:08.882Z"
@@ -151,7 +151,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-01T21:11:50.000Z",
-      "views": 219,
+      "views": 221,
       "num_favorers": 22,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -185,8 +185,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T22:21:13.000Z",
-      "views": 179,
-      "num_favorers": 18,
+      "views": 182,
+      "num_favorers": 19,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -296,7 +296,7 @@ window.MICKNACK_PRODUCTS = {
       "tags": [],
       "quantity": 4,
       "created": "2026-11-12T20:29:03.000Z",
-      "views": 1,
+      "views": 2,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-11-12T20:36:32.110Z"
@@ -317,7 +317,7 @@ window.MICKNACK_PRODUCTS = {
       "tags": [],
       "quantity": 4,
       "created": "2026-11-12T20:01:01.000Z",
-      "views": 7,
+      "views": 9,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-11-12T20:36:32.110Z"
@@ -372,7 +372,7 @@ window.MICKNACK_PRODUCTS = {
       "tags": [],
       "quantity": 5,
       "created": "2026-11-10T22:20:42.000Z",
-      "views": 0,
+      "views": 1,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-11-10T22:59:42.874Z"
@@ -393,7 +393,7 @@ window.MICKNACK_PRODUCTS = {
       "tags": [],
       "quantity": 5,
       "created": "2026-11-10T21:33:23.000Z",
-      "views": 4,
+      "views": 5,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-11-10T21:58:04.731Z"
@@ -413,7 +413,7 @@ window.MICKNACK_PRODUCTS = {
       "tags": [],
       "quantity": 4,
       "created": "2026-11-10T03:03:13.000Z",
-      "views": 0,
+      "views": 2,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-11-10T09:28:47.828Z"
@@ -433,8 +433,8 @@ window.MICKNACK_PRODUCTS = {
       "tags": [],
       "quantity": 4,
       "created": "2026-11-09T23:42:00.000Z",
-      "views": 61,
-      "num_favorers": 5,
+      "views": 72,
+      "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-11-10T01:55:33.616Z"
     },
@@ -470,7 +470,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 2,
       "created": "2026-10-22T21:24:04.000Z",
       "views": 25,
-      "num_favorers": 5,
+      "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-10-22T21:34:24.555Z"
     },
@@ -535,7 +535,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 9,
       "created": "2026-11-02T19:50:28.000Z",
-      "views": 56,
+      "views": 57,
       "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-11-02T20:06:49.958Z"
@@ -568,7 +568,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-11-16T00:00:00.000Z",
-      "views": 61,
+      "views": 62,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -604,7 +604,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 4,
       "created": "2026-09-15T20:48:41.000Z",
-      "views": 100,
+      "views": 101,
       "num_favorers": 7,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -675,8 +675,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-10-15T22:11:01.000Z",
-      "views": 298,
-      "num_favorers": 30,
+      "views": 305,
+      "num_favorers": 29,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
     },
@@ -743,7 +743,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-13T21:39:50.000Z",
-      "views": 264,
+      "views": 265,
       "num_favorers": 23,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -751,7 +751,7 @@ window.MICKNACK_PRODUCTS = {
     {
       "listing_id": "4601338080",
       "title": "Hot Mess Pink  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Hot Pink Marquise Dangle | Dainty Cartilage Chain Jewelry",
-      "price": "30.00",
+      "price": "25.00",
       "currency_code": "USD",
       "url": "https://www.etsy.com/listing/4601338080/hot-mess-pink-cz-ear-chain-18k-gold-pvd",
       "description": "Hot Mess 💗🔥\n\nPretty, pink, and making questionable.\n\nHot Mess is a bold little ear-chain connector featuring five dangling hot-pink marquise  Corundum stones on a delicate gold chain. The pointed stones catch the light from every angle, giving the piece plenty of movement, color, and just enough drama.\nShe’s bright. She’s extra. She absolutely did not come here to be subtle.\n\nWhy you’ll love it\nFive hot-pink marquise-cut high quality Corundum stone \n\nIndividually dangling stones for extra movement\nDelicate gold chain\nVivid fuchsia-pink color\nLightweight, draped styling\nEasy way to add color to an existing ear stack\n\nStyle it your way\nHot Mess is a chain connector only, designed to attach between compatible hoops, flatbacks, or earrings you already own.\n\nDrape it between two piercings for a bold pop of pink, pair it with simple gold hoops, or add it to a stacked ear when “one more thing” is clearly the correct answer.\n\nEarrings and labret posts are not included.\n\nMaterials & Details\nChain width: 1.5 mm\nChain style: Flat cable chain\nFinish: 18K gold PVD\nStones: Five hot-pink marquise Corundum Stone \nConnector loops at both ends\n\nChain connector only\n\nSold individually\nPerfect for\nHelix-to-lobe styling • Double-lobe piercings • Cartilage stacks • Pink ear stacks • Curated ears • Alt-girly jewelry\nCute? Definitely. Together? Debatable. 💗🔥\n\nMicknack Stacks\nCurated ear jewelry with love from Colorado",
@@ -777,7 +777,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-10-22T23:42:27.000Z",
-      "views": 40,
+      "views": 41,
       "num_favorers": 7,
       "etsy_active": true,
       "added_at": "2026-10-23T01:20:53.342Z"
@@ -810,8 +810,8 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-11-22T00:00:00.000Z",
-      "views": 21,
-      "num_favorers": 0,
+      "views": 22,
+      "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-10-23T01:20:53.342Z"
     },
@@ -1014,7 +1014,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-21T19:48:13.000Z",
-      "views": 193,
+      "views": 194,
       "num_favorers": 24,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1111,7 +1111,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-11-22T00:00:00.000Z",
-      "views": 28,
+      "views": 30,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-10-06T18:49:33.238Z"
@@ -1144,7 +1144,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-30T21:01:07.000Z",
-      "views": 43,
+      "views": 45,
       "num_favorers": 3,
       "etsy_active": true,
       "added_at": "2026-10-01T13:17:40.579Z"
@@ -1243,7 +1243,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 3,
       "created": "2026-09-16T20:46:30.000Z",
-      "views": 195,
+      "views": 197,
       "num_favorers": 21,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1310,7 +1310,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 5,
       "created": "2026-11-22T00:00:00.000Z",
-      "views": 64,
+      "views": 65,
       "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1340,7 +1340,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-14T17:51:28.000Z",
-      "views": 31,
+      "views": 33,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1406,7 +1406,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-12T00:05:44.000Z",
-      "views": 29,
+      "views": 30,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1439,7 +1439,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T23:40:39.000Z",
-      "views": 20,
+      "views": 22,
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1472,7 +1472,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T23:20:43.000Z",
-      "views": 37,
+      "views": 38,
       "num_favorers": 1,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1606,7 +1606,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T22:25:35.000Z",
-      "views": 46,
+      "views": 49,
       "num_favorers": 11,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1639,7 +1639,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 2,
       "created": "2026-09-11T22:07:53.000Z",
-      "views": 60,
+      "views": 62,
       "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1673,7 +1673,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T17:54:53.000Z",
-      "views": 212,
+      "views": 213,
       "num_favorers": 12,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
@@ -1739,7 +1739,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "quantity": 1,
       "created": "2026-09-11T16:58:37.000Z",
-      "views": 19,
+      "views": 20,
       "num_favorers": 0,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"

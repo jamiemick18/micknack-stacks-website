@@ -1346,7 +1346,39 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 4,
    "at": "2026-11-22T21:30:13.545Z"
+  },
+  {
+   "id": "4573616908",
+   "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
+   "gained": 1,
+   "total": 19,
+   "at": "2026-11-23T08:44:27.508Z"
+  },
+  {
+   "id": "4613628567",
+   "title": "Tiny Hummingbird Threadless Flatback Earring | 18G - G23 ASTM F136 Titanium | Dainty CZ Cartilage Stud | 6mm 8mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/4df252/8875945257/il_fullxfull.8875945257_tj6f.jpg",
+   "gained": 1,
+   "total": 6,
+   "at": "2026-11-23T08:44:27.508Z"
+  },
+  {
+   "id": "4601246993",
+   "title": "Cherry Juice CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/c1cc04/8858822615/il_fullxfull.8858822615_b8u1.jpg",
+   "gained": 1,
+   "total": 6,
+   "at": "2026-11-23T08:44:27.508Z"
+  },
+  {
+   "id": "4601327168",
+   "title": "Bubblegum Babe Pink Corundum Ear Chain | 32mm Gold Earring Connector | Hot Pink Stone & Gold Ball Dangles | Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/0854d7/8908701940/il_fullxfull.8908701940_dkos.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-23T08:44:27.508Z"
   }
  ],
- "updated_at": "2026-11-23T00:05:15.684Z"
+ "updated_at": "2026-11-23T08:44:27.508Z"
 };
