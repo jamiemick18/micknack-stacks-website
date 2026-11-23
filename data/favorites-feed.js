@@ -1378,7 +1378,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 1,
    "at": "2026-11-23T08:44:27.508Z"
+  },
+  {
+   "id": "4608450426",
+   "title": "Stack Staple - 18K Gold Plated Huggie Earrings Pair | Clear Marquise CZ Dangles | Everyday Ear Stack Earrings | Dainty Stacking Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/124e06/8834008575/il_fullxfull.8834008575_1z3i.jpg",
+   "gained": 1,
+   "total": 4,
+   "at": "2026-11-23T20:59:59.435Z"
+  },
+  {
+   "id": "4596333038",
+   "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+   "gained": 1,
+   "total": 30,
+   "at": "2026-11-23T20:59:59.435Z"
   }
  ],
- "updated_at": "2026-11-23T08:44:27.508Z"
+ "updated_at": "2026-11-23T20:59:59.435Z"
 };
