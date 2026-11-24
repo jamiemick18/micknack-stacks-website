@@ -1394,7 +1394,63 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 30,
    "at": "2026-11-23T20:59:59.435Z"
+  },
+  {
+   "id": "4601255929",
+   "title": "Baby Pink CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/387ab7/8870084295/il_fullxfull.8870084295_ekyd.jpg",
+   "gained": 1,
+   "total": 5,
+   "at": "2026-11-24T05:16:25.464Z"
+  },
+  {
+   "id": "4573616908",
+   "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
+   "gained": 2,
+   "total": 21,
+   "at": "2026-11-24T05:16:25.464Z"
+  },
+  {
+   "id": "4608450426",
+   "title": "Stack Staple - 18K Gold Plated Huggie Earrings Pair | Clear Marquise CZ Dangles | Everyday Ear Stack Earrings | Dainty Stacking Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/124e06/8834008575/il_fullxfull.8834008575_1z3i.jpg",
+   "gained": 1,
+   "total": 5,
+   "at": "2026-11-24T05:16:25.464Z"
+  },
+  {
+   "id": "4596261114",
+   "title": "Sterling Silver Drizzle Ear Chain | 40mm Earring Connector | 3x5mm CZ Drop Dangles | Dainty Cartilage Chain Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/6f0f7e/8684444088/il_fullxfull.8684444088_n3z3.jpg",
+   "gained": 1,
+   "total": 6,
+   "at": "2026-11-24T05:16:25.464Z"
+  },
+  {
+   "id": "4573601729",
+   "title": "Drip Threadless Flatback Earring | Dainty Gold Dangle | Titanium Labret Post | Minimal Cartilage Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/dd8fa7/8510995928/il_fullxfull.8510995928_1ert.jpg",
+   "gained": 1,
+   "total": 12,
+   "at": "2026-11-24T05:16:25.464Z"
+  },
+  {
+   "id": "4573472494",
+   "title": "Barely There Threadless Flatback Earring | Minimal Gold Cartilage Stud | ASTM F136 G23 Implant Grade Titanium | Dainty Two Stone Earring",
+   "image": "https://i.etsystatic.com/67609393/r/il/3e57de/8557813877/il_fullxfull.8557813877_cfpb.jpg",
+   "gained": 2,
+   "total": 14,
+   "at": "2026-11-24T05:16:25.464Z"
+  },
+  {
+   "id": "4573443165",
+   "title": "Cosmic Supernova Threadless Flatback Earring | Gold Starburst Cartilage Stud | ASTM F136 G23 Implant Grade Titanium | Celestial Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/ec8a54/8509879106/il_fullxfull.8509879106_hrg2.jpg",
+   "gained": 1,
+   "total": 5,
+   "at": "2026-11-24T05:16:25.464Z"
   }
  ],
- "updated_at": "2026-11-23T20:59:59.435Z"
+ "updated_at": "2026-11-24T05:16:25.464Z"
 };

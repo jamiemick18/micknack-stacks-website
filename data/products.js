@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-23T20:59:59.435Z",
+  "synced_at": "2026-11-24T05:16:25.464Z",
   "listings": [
     {
       "listing_id": "4623368643",
@@ -64,7 +64,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 4,
       "created": "2026-10-22T21:40:02.000Z",
       "views": 45,
-      "num_favorers": 4,
+      "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-10-22T22:07:53.714Z"
     },
@@ -186,7 +186,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T22:21:13.000Z",
       "views": 182,
-      "num_favorers": 19,
+      "num_favorers": 21,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -536,7 +536,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 9,
       "created": "2026-11-02T19:50:28.000Z",
       "views": 57,
-      "num_favorers": 4,
+      "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-11-02T20:06:49.958Z"
     },
@@ -1079,7 +1079,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 5,
       "created": "2026-10-15T20:06:48.000Z",
       "views": 48,
-      "num_favorers": 5,
+      "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-10-16T17:12:22.208Z"
     },
@@ -1607,7 +1607,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T22:25:35.000Z",
       "views": 49,
-      "num_favorers": 11,
+      "num_favorers": 12,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1674,7 +1674,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T17:54:53.000Z",
       "views": 213,
-      "num_favorers": 12,
+      "num_favorers": 14,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1707,7 +1707,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T17:34:10.000Z",
       "views": 50,
-      "num_favorers": 4,
+      "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
