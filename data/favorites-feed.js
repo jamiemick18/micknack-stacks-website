@@ -1506,7 +1506,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 16,
    "at": "2026-11-25T12:20:31.638Z"
+  },
+  {
+   "id": "4573616908",
+   "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
+   "gained": 1,
+   "total": 22,
+   "at": "2026-11-25T22:14:23.122Z"
+  },
+  {
+   "id": "4616052816",
+   "title": "The Maddix, Pink Ear Chain with Titanium Labret | Corundum & CZ Dangle Connector | 6mm or 8mm Star Flatback | Dainty Cartilage Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/890a5f/8895780003/il_fullxfull.8895780003_sgep.jpg",
+   "gained": 1,
+   "total": 2,
+   "at": "2026-11-25T22:14:23.122Z"
   }
  ],
- "updated_at": "2026-11-25T12:20:31.638Z"
+ "updated_at": "2026-11-25T22:14:23.122Z"
 };
