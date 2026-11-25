@@ -1458,7 +1458,39 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 15,
    "at": "2026-11-24T17:15:04.877Z"
+  },
+  {
+   "id": "4613628567",
+   "title": "Tiny Hummingbird Threadless Flatback Earring | 18G - G23 ASTM F136 Titanium | Dainty CZ Cartilage Stud | 6mm 8mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/4df252/8875945257/il_fullxfull.8875945257_tj6f.jpg",
+   "gained": 1,
+   "total": 7,
+   "at": "2026-11-25T02:02:51.591Z"
+  },
+  {
+   "id": "4596333038",
+   "title": "Golden Hour Ear Chain | Champagne & Clear CZ Earring Connector | Gold Cartilage Chain | Dainty Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/7af1d9/8685010060/il_fullxfull.8685010060_6un0.jpg",
+   "gained": 1,
+   "total": 31,
+   "at": "2026-11-25T02:02:51.591Z"
+  },
+  {
+   "id": "4574722466",
+   "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
+   "gained": 1,
+   "total": 24,
+   "at": "2026-11-25T02:02:51.591Z"
+  },
+  {
+   "id": "4601274406",
+   "title": "The Blues CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/b19289/8725511806/il_fullxfull.8725511806_p0lj.jpg",
+   "gained": 1,
+   "total": 1,
+   "at": "2026-11-25T02:02:51.591Z"
   }
  ],
- "updated_at": "2026-11-24T17:15:04.877Z"
+ "updated_at": "2026-11-25T02:02:51.591Z"
 };

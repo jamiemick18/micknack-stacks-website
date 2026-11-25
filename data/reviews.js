@@ -7,13 +7,20 @@
 // No names and no buyer photos: Etsy does not provide a name, and the photos
 // belong to the buyers who took them.
 //
-// Last read from Etsy: 2026-11-24T17:15:04.877Z
+// Last read from Etsy: 2026-11-25T02:02:51.591Z
 window.MICKNACK_REVIEWS = {
-  "count": 10,
-  "average": 4.9,
-  "five_star": 9,
+  "count": 11,
+  "average": 4.91,
+  "five_star": 10,
   "shop_reviews_url": "https://www.etsy.com/shop/MicknackStacks/reviews",
   "reviews": [
+    {
+      "rating": 5,
+      "text": "So so cute and looks very high quality, it arrived quickly and is such a fun way to add color to my earring stack🤍 I will be wearing it everyday",
+      "listing_id": "4576665382",
+      "piece": "Sugar Sweet Baby Pink Ear Chain",
+      "date": "2026-11-24"
+    },
     {
       "rating": 5,
       "text": "Absolutely loved the items! Pieces were absolutely beautiful and as described. Will buy more pieces from the seller as the quality of the items is excellent. Fit is perfect and overall look, adorable!",
