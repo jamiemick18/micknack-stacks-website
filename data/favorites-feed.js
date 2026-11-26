@@ -1522,7 +1522,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 2,
    "at": "2026-11-25T22:14:23.122Z"
+  },
+  {
+   "id": "4601255929",
+   "title": "Baby Pink CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
+   "image": "https://i.etsystatic.com/67609393/r/il/387ab7/8870084295/il_fullxfull.8870084295_ekyd.jpg",
+   "gained": 1,
+   "total": 6,
+   "at": "2026-11-26T04:47:09.665Z"
+  },
+  {
+   "id": "4591313547",
+   "title": "Everyday 18g G23 ASTM F136 Titanium Gold Clicker Hoop | 18K PVD Implant Grade Cartilage Ring | Helix Conch Lobe 5mm–12mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/e158b3/8645167936/il_fullxfull.8645167936_hbuv.jpg",
+   "gained": 1,
+   "total": 9,
+   "at": "2026-11-26T04:47:09.665Z"
   }
  ],
- "updated_at": "2026-11-25T22:14:23.122Z"
+ "updated_at": "2026-11-26T04:47:09.665Z"
 };
