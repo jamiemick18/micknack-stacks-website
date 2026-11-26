@@ -1538,7 +1538,55 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 9,
    "at": "2026-11-26T04:47:09.665Z"
+  },
+  {
+   "id": "4573616908",
+   "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
+   "gained": 1,
+   "total": 23,
+   "at": "2026-11-26T23:35:20.298Z"
+  },
+  {
+   "id": "4591313547",
+   "title": "Everyday 18g G23 ASTM F136 Titanium Gold Clicker Hoop | 18K PVD Implant Grade Cartilage Ring | Helix Conch Lobe 5mm–12mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/e158b3/8645167936/il_fullxfull.8645167936_hbuv.jpg",
+   "gained": 1,
+   "total": 10,
+   "at": "2026-11-26T23:35:20.298Z"
+  },
+  {
+   "id": "4574722466",
+   "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
+   "gained": 1,
+   "total": 25,
+   "at": "2026-11-26T23:35:20.298Z"
+  },
+  {
+   "id": "4577301519",
+   "title": "Lime Light Neon Green 32mm Ear Chain | Gold Earring Connector | Bright Green Stone & Gold Charm Dangles | Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/7037ce/8956596675/il_fullxfull.8956596675_ed3k.jpg",
+   "gained": 1,
+   "total": 6,
+   "at": "2026-11-26T23:35:20.298Z"
+  },
+  {
+   "id": "4573632540",
+   "title": "Double Diamond Run Threadless Flatback Earring | Gold Geometric Ear Climber | Titanium Labret Post | Ski Inspired Cartilage Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b7a185/8511085468/il_fullxfull.8511085468_qen4.jpg",
+   "gained": 1,
+   "total": 4,
+   "at": "2026-11-26T23:35:20.298Z"
+  },
+  {
+   "id": "4573609723",
+   "title": "Mountain Climber Love Threadless Flatback Earring | Gold CZ Ear Climber | Titanium Labret Post | Dainty Cartilage Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/81999a/8511051188/il_fullxfull.8511051188_q5qo.jpg",
+   "gained": 1,
+   "total": 5,
+   "at": "2026-11-26T23:35:20.298Z"
   }
  ],
- "updated_at": "2026-11-26T14:50:32.995Z"
+ "updated_at": "2026-11-26T23:35:20.298Z"
 };

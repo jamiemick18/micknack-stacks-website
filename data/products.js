@@ -2,7 +2,7 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-26T14:50:32.995Z",
+  "synced_at": "2026-11-26T23:35:20.298Z",
   "listings": [
     {
       "listing_id": "4623368643",
@@ -186,7 +186,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T22:21:13.000Z",
       "views": 212,
-      "num_favorers": 22,
+      "num_favorers": 23,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -431,7 +431,7 @@ window.MICKNACK_PRODUCTS = {
       ],
       "video": "",
       "tags": [],
-      "quantity": 4,
+      "quantity": 3,
       "created": "2026-11-09T23:42:00.000Z",
       "views": 75,
       "num_favorers": 7,
@@ -710,7 +710,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 19,
       "created": "2026-10-08T17:47:55.000Z",
       "views": 88,
-      "num_favorers": 9,
+      "num_favorers": 10,
       "etsy_active": true,
       "added_at": "2026-10-08T19:10:48.816Z"
     },
@@ -744,7 +744,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 2,
       "created": "2026-09-13T21:39:50.000Z",
       "views": 270,
-      "num_favorers": 24,
+      "num_favorers": 25,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1311,37 +1311,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 5,
       "created": "2026-11-22T00:00:00.000Z",
       "views": 67,
-      "num_favorers": 5,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4575212975",
-      "title": "G23 Titanium Clicker Hoop, 18G 6mm Silver Cartilage Ring, Tiny Hinged Hoop for Helix, Tragus, Daith or Septum Piercing",
-      "price": "14.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4575212975/g23-titanium-clicker-hoop-18g-6mm-silver",
-      "description": "Small, simple and made for a snug fit. This minimalist clicker hoop is crafted from lightweight G23 titanium with a smooth silver finish. The hinged closure clicks securely into place, making it easy to open and close without tools.\n\nPerfect for creating a clean, minimal ear stack or adding one of our connector chains and charms.\n\nDetails\nMaterial: G23 titanium\nColor: Silver\nGauge: 18G, approximately 1 mm thick\nInner diameter: 6 mm\nStyle: Hinged clicker hoop\nLightweight and corrosion resistant\nSold individually\n\nJewelry only; chains and charms sold separately\n\nPossible Placements\nHelix, forward helix, tragus, rook, daith, septum and other cartilage piercings, depending on your anatomy and healed piercing placement.\n\nBecause 6 mm is a petite diameter, please measure your current jewelry or consult your piercer before ordering. Suitable placement and fit vary by anatomy",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/89cd3e/8570981975/il_fullxfull.8570981975_bgd0.jpg"
-      ],
-      "video": "",
-      "tags": [
-        "g23 titanium",
-        "clicker",
-        "18g clicker hoop",
-        "6mm hoop",
-        "cartilage hoop",
-        "dainty hoop",
-        "minimalost hoop",
-        "ear stack jewelry",
-        "hinged hoop",
-        "tragus hoop"
-      ],
-      "quantity": 1,
-      "created": "2026-09-14T17:51:28.000Z",
-      "views": 33,
-      "num_favorers": 2,
+      "num_favorers": 6,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1506,7 +1476,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T22:59:05.000Z",
       "views": 37,
-      "num_favorers": 3,
+      "num_favorers": 4,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1539,7 +1509,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 1,
       "created": "2026-09-11T22:44:39.000Z",
       "views": 32,
-      "num_favorers": 4,
+      "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
@@ -1812,6 +1782,38 @@ window.MICKNACK_PRODUCTS = {
       "num_favorers": 5,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4575212975",
+      "title": "G23 Titanium Clicker Hoop, 18G 6mm Silver Cartilage Ring, Tiny Hinged Hoop for Helix, Tragus, Daith or Septum Piercing",
+      "price": "14.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4575212975/g23-titanium-clicker-hoop-18g-6mm-silver",
+      "description": "Small, simple and made for a snug fit. This minimalist clicker hoop is crafted from lightweight G23 titanium with a smooth silver finish. The hinged closure clicks securely into place, making it easy to open and close without tools.\n\nPerfect for creating a clean, minimal ear stack or adding one of our connector chains and charms.\n\nDetails\nMaterial: G23 titanium\nColor: Silver\nGauge: 18G, approximately 1 mm thick\nInner diameter: 6 mm\nStyle: Hinged clicker hoop\nLightweight and corrosion resistant\nSold individually\n\nJewelry only; chains and charms sold separately\n\nPossible Placements\nHelix, forward helix, tragus, rook, daith, septum and other cartilage piercings, depending on your anatomy and healed piercing placement.\n\nBecause 6 mm is a petite diameter, please measure your current jewelry or consult your piercer before ordering. Suitable placement and fit vary by anatomy",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/89cd3e/8570981975/il_fullxfull.8570981975_bgd0.jpg"
+      ],
+      "video": "",
+      "tags": [
+        "g23 titanium",
+        "clicker",
+        "18g clicker hoop",
+        "6mm hoop",
+        "cartilage hoop",
+        "dainty hoop",
+        "minimalost hoop",
+        "ear stack jewelry",
+        "hinged hoop",
+        "tragus hoop"
+      ],
+      "quantity": 0,
+      "created": "2026-09-14T17:51:28.000Z",
+      "views": 33,
+      "num_favorers": 2,
+      "etsy_active": false,
+      "added_at": "2026-09-30T19:35:47.289Z",
+      "etsy_state": "sold_out",
+      "left_etsy_at": "2026-11-26T23:35:20.298Z"
     },
     {
       "listing_id": "4576665382",
