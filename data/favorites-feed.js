@@ -4,22 +4,6 @@
 window.MICKNACK_FAVORITES = {
  "events": [
   {
-   "id": "4577301519",
-   "title": "Purple Problem Triple Ear Chain | 18K PVD Gold Drape Chain | Amethyst & Clear CZ Connector | Curated Ear Jewelry",
-   "image": "https://i.etsystatic.com/67609393/r/il/76221a/8538576258/il_fullxfull.8538576258_aqwo.jpg",
-   "gained": 1,
-   "total": 4,
-   "at": "2026-10-28T14:01:31.739Z"
-  },
-  {
-   "id": "4576665382",
-   "title": "Sugar Sweet Baby Pink Ear Chain | 30mm Gold Connector Chain | 4mm Amethyst CZ Dangles | Dainty Draped Ear Stack Jewelry",
-   "image": "https://i.etsystatic.com/67609393/r/il/74a9f5/8533758408/il_fullxfull.8533758408_s7uv.jpg",
-   "gained": 1,
-   "total": 8,
-   "at": "2026-10-28T14:01:31.739Z"
-  },
-  {
    "id": "4573452050",
    "title": "Zephyr Threadless Flatback Earring | Hidden Helix Dangle | Gold Ear Climber | Titanium Labret Post | Marquise Cartilage Jewelry",
    "image": "https://i.etsystatic.com/67609393/r/il/772551/8557657689/il_fullxfull.8557657689_6ngn.jpg",
@@ -1594,7 +1578,15 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 32,
    "at": "2026-11-27T07:32:35.048Z"
+  },
+  {
+   "id": "4613628567",
+   "title": "Tiny Hummingbird Threadless Flatback Earring | 18G - G23 ASTM F136 Titanium | Dainty CZ Cartilage Stud | 6mm 8mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/4df252/8875945257/il_fullxfull.8875945257_tj6f.jpg",
+   "gained": 1,
+   "total": 8,
+   "at": "2026-11-27T17:57:30.384Z"
   }
  ],
- "updated_at": "2026-11-27T07:32:35.048Z"
+ "updated_at": "2026-11-27T17:57:30.384Z"
 };

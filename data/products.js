@@ -2,8 +2,76 @@
 window.MICKNACK_PRODUCTS = {
   "shop_name": "MicknackStacks",
   "shop_url": "https://www.etsy.com/shop/MicknackStacks",
-  "synced_at": "2026-11-27T07:32:35.048Z",
+  "synced_at": "2026-11-27T17:57:30.384Z",
   "listings": [
+    {
+      "listing_id": "4566919003",
+      "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+      "price": "15.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4566919003/triple-drip-earring-connector-chain-18k",
+      "description": "This dainty gold chain features a unique flattened lip-link texture with a soft drape and three cascading chain dangles on one end for a little extra detail. The 4mm hoops make it easy to connect between earrings, hoops, or compatible flatback jewelry to create a stack that feels completely your own.\n\nDETAILS • 40mm main connector chain\n• Approx. 2mm wide lip-link chain\n• 4mm connecting hoop on each end\n• Three cascading dangle chains on one end\n• 18K gold plated\n• Non-tarnish + water resistant\n• Lightweight for comfortable stacking\n\nEach chain is sold individually so you can style it however you want — connect two piercings, add it to a hoop, layer it with other chains, or use it as the statement piece in your current stack.\nBecause ear anatomy and piercing placement vary, the way the chain drapes will be unique to you.\n\n✨ MIX. CONNECT. STACK.\nBuild an ear stack that feels like you.\nPlease note: “Lip Link” refers to the style/shape of the chain links — this piece is designed as an earring connector chain.\n\nMicknack Stacks\nDesigned for creative ears + unapologetically personal stacks.",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/a491/538b1183-d64b-4292-9f39-0bdc7e2da50c/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ],
+      "quantity": 1,
+      "created": "2026-09-01T21:11:50.000Z",
+      "views": 230,
+      "num_favorers": 22,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
+    {
+      "listing_id": "4571571883",
+      "title": "Sprinkle Chain | 3×5mm Pear CZ Ear Connector Chain | 2mm Dainty Gold Earring Chain | Helix Conch Lobe Ear Stack Jewelry",
+      "price": "19.99",
+      "currency_code": "USD",
+      "url": "https://www.etsy.com/listing/4571571883/sprinkle-chain-o-35mm-pear-cz-ear",
+      "description": "Light, delicate, and just a little playful..\n\nThis dainty ear connector features a 2mm chain accented with three 3×5mm pear shaped CZ gemstones, giving your ear stack a soft little cascade of sparkle without feeling heavy or overdone.\n\nDetails\n2mm dainty chain\n3 pear-shaped CZ gemstones\nGemstone size: 3×5mm\nClear sparkling CZ\n\nLightweight, delicate design\nConnector loops at each end\nDesigned to pair with compatible studs, hoops, helix, conch, or lobe jewelry\n\nStyle it between two piercings, connect it to a hoop, or layer it into a curated stack for a little movement and sparkle.\n\nPlease note: Listing is for the Sprinkle Chain only. Earrings shown in styling photos are not included\n\n**Non-returnable due to sanitary concern",
+      "images": [
+        "https://i.etsystatic.com/67609393/r/il/b6fe06/8496164574/il_fullxfull.8496164574_o4lp.jpg",
+        "https://i.etsystatic.com/67609393/r/il/e20641/8544053133/il_fullxfull.8544053133_hlvc.jpg",
+        "https://i.etsystatic.com/67609393/r/il/7cb97f/8496165540/il_fullxfull.8496165540_coun.jpg"
+      ],
+      "video": "https://v.etsystatic.com/e/videos/2905/44d66692-5a0c-457d-82f4-ddde203bf6f7/vid_v1.mp4",
+      "tags": [
+        "earring connector",
+        "earring chain",
+        "ear chain connector",
+        "double earring chain",
+        "earring stack",
+        "ear stack jewelry",
+        "chain earring",
+        "gold ear chain",
+        "double drape chain",
+        "piercing chain",
+        "cartilage chain",
+        "non tarnish jewelry",
+        "multiple piercings"
+      ],
+      "quantity": 4,
+      "created": "2026-09-08T22:16:35.000Z",
+      "views": 110,
+      "num_favorers": 9,
+      "etsy_active": true,
+      "added_at": "2026-09-30T19:35:47.289Z"
+    },
     {
       "listing_id": "4623368643",
       "title": "Snowy Smooch Vertical Helix Earring | 4mm AB CZ Dangle | G23 Titanium Threadless Labret | 6mm or 8mm Post",
@@ -122,39 +190,6 @@ window.MICKNACK_PRODUCTS = {
       "num_favorers": 2,
       "etsy_active": true,
       "added_at": "2026-11-12T01:24:08.882Z"
-    },
-    {
-      "listing_id": "4566919003",
-      "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
-      "price": "15.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4566919003/triple-drip-earring-connector-chain-18k",
-      "description": "This dainty gold chain features a unique flattened lip-link texture with a soft drape and three cascading chain dangles on one end for a little extra detail. The 4mm hoops make it easy to connect between earrings, hoops, or compatible flatback jewelry to create a stack that feels completely your own.\n\nDETAILS • 40mm main connector chain\n• Approx. 2mm wide lip-link chain\n• 4mm connecting hoop on each end\n• Three cascading dangle chains on one end\n• 18K gold plated\n• Non-tarnish + water resistant\n• Lightweight for comfortable stacking\n\nEach chain is sold individually so you can style it however you want — connect two piercings, add it to a hoop, layer it with other chains, or use it as the statement piece in your current stack.\nBecause ear anatomy and piercing placement vary, the way the chain drapes will be unique to you.\n\n✨ MIX. CONNECT. STACK.\nBuild an ear stack that feels like you.\nPlease note: “Lip Link” refers to the style/shape of the chain links — this piece is designed as an earring connector chain.\n\nMicknack Stacks\nDesigned for creative ears + unapologetically personal stacks.",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/a491/538b1183-d64b-4292-9f39-0bdc7e2da50c/vid_v1.mp4",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "gold ear chain",
-        "double drape chain",
-        "piercing chain",
-        "cartilage chain",
-        "non tarnish jewelry",
-        "multiple piercings"
-      ],
-      "quantity": 2,
-      "created": "2026-09-01T21:11:50.000Z",
-      "views": 230,
-      "num_favorers": 22,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
     },
     {
       "listing_id": "4573616908",
@@ -434,7 +469,7 @@ window.MICKNACK_PRODUCTS = {
       "quantity": 3,
       "created": "2026-11-09T23:42:00.000Z",
       "views": 76,
-      "num_favorers": 7,
+      "num_favorers": 8,
       "etsy_active": true,
       "added_at": "2026-11-10T01:55:33.616Z"
     },
@@ -1711,41 +1746,6 @@ window.MICKNACK_PRODUCTS = {
       "created": "2026-09-11T16:58:37.000Z",
       "views": 21,
       "num_favorers": 0,
-      "etsy_active": true,
-      "added_at": "2026-09-30T19:35:47.289Z"
-    },
-    {
-      "listing_id": "4571571883",
-      "title": "Sprinkle Chain | 3×5mm Pear CZ Ear Connector Chain | 2mm Dainty Gold Earring Chain | Helix Conch Lobe Ear Stack Jewelry",
-      "price": "19.99",
-      "currency_code": "USD",
-      "url": "https://www.etsy.com/listing/4571571883/sprinkle-chain-o-35mm-pear-cz-ear",
-      "description": "Light, delicate, and just a little playful..\n\nThis dainty ear connector features a 2mm chain accented with three 3×5mm pear shaped CZ gemstones, giving your ear stack a soft little cascade of sparkle without feeling heavy or overdone.\n\nDetails\n2mm dainty chain\n3 pear-shaped CZ gemstones\nGemstone size: 3×5mm\nClear sparkling CZ\n\nLightweight, delicate design\nConnector loops at each end\nDesigned to pair with compatible studs, hoops, helix, conch, or lobe jewelry\n\nStyle it between two piercings, connect it to a hoop, or layer it into a curated stack for a little movement and sparkle.\n\nPlease note: Listing is for the Sprinkle Chain only. Earrings shown in styling photos are not included\n\n**Non-returnable due to sanitary concern",
-      "images": [
-        "https://i.etsystatic.com/67609393/r/il/b6fe06/8496164574/il_fullxfull.8496164574_o4lp.jpg",
-        "https://i.etsystatic.com/67609393/r/il/e20641/8544053133/il_fullxfull.8544053133_hlvc.jpg",
-        "https://i.etsystatic.com/67609393/r/il/7cb97f/8496165540/il_fullxfull.8496165540_coun.jpg"
-      ],
-      "video": "https://v.etsystatic.com/e/videos/2905/44d66692-5a0c-457d-82f4-ddde203bf6f7/vid_v1.mp4",
-      "tags": [
-        "earring connector",
-        "earring chain",
-        "ear chain connector",
-        "double earring chain",
-        "earring stack",
-        "ear stack jewelry",
-        "chain earring",
-        "gold ear chain",
-        "double drape chain",
-        "piercing chain",
-        "cartilage chain",
-        "non tarnish jewelry",
-        "multiple piercings"
-      ],
-      "quantity": 5,
-      "created": "2026-09-08T22:16:35.000Z",
-      "views": 110,
-      "num_favorers": 9,
       "etsy_active": true,
       "added_at": "2026-09-30T19:35:47.289Z"
     },
