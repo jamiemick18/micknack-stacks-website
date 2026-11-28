@@ -4,22 +4,6 @@
 window.MICKNACK_FAVORITES = {
  "events": [
   {
-   "id": "4573452050",
-   "title": "Zephyr Threadless Flatback Earring | Hidden Helix Dangle | Gold Ear Climber | Titanium Labret Post | Marquise Cartilage Jewelry",
-   "image": "https://i.etsystatic.com/67609393/r/il/772551/8557657689/il_fullxfull.8557657689_6ngn.jpg",
-   "gained": 1,
-   "total": 8,
-   "at": "2026-10-29T19:51:07.524Z"
-  },
-  {
-   "id": "4574722466",
-   "title": "Pink Poppies 18K Gold-Plated Ear Chain | Pink Synthetic Corundum Sapphire Connector Chain | Dainty Gold Ear Stack Jewelry",
-   "image": "https://i.etsystatic.com/67609393/r/il/b9c543/8519229418/il_fullxfull.8519229418_4nel.jpg",
-   "gained": 1,
-   "total": 14,
-   "at": "2026-10-29T19:51:07.524Z"
-  },
-  {
    "id": "4601338080",
    "title": "Hot Mess Pink  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Hot Pink Marquise Dangle | Dainty Cartilage Chain Jewelry",
    "image": "https://i.etsystatic.com/67609393/r/il/d0159d/8773871911/il_fullxfull.8773871911_5ixs.jpg",
@@ -1586,7 +1570,39 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 8,
    "at": "2026-11-27T17:57:30.384Z"
+  },
+  {
+   "id": "4566919003",
+   "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg",
+   "gained": 1,
+   "total": 23,
+   "at": "2026-11-28T01:20:48.430Z"
+  },
+  {
+   "id": "4571571883",
+   "title": "Sprinkle Chain | 3×5mm Pear CZ Ear Connector Chain | 2mm Dainty Gold Earring Chain | Helix Conch Lobe Ear Stack Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/b6fe06/8496164574/il_fullxfull.8496164574_o4lp.jpg",
+   "gained": 1,
+   "total": 10,
+   "at": "2026-11-28T01:20:48.430Z"
+  },
+  {
+   "id": "4615037352",
+   "title": "Moonlit Mischief Moonstone AB Ear Chain | 40mm 18K Gold Plated Chain | 6 Iridescent CZ Earring Connector | Curated Ear Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/c64912/8839526634/il_fullxfull.8839526634_6ji8.jpg",
+   "gained": 1,
+   "total": 3,
+   "at": "2026-11-28T01:20:48.430Z"
+  },
+  {
+   "id": "4573616908",
+   "title": "Little Orbit Threadless Flatback Earring | Gold Celestial Cartilage Stud | ASTM F136 G23 Implant Grade Titanium  | Dainty CZ Helix Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/12b397/8558847219/il_fullxfull.8558847219_78so.jpg",
+   "gained": 1,
+   "total": 24,
+   "at": "2026-11-28T01:20:48.430Z"
   }
  ],
- "updated_at": "2026-11-27T17:57:30.384Z"
+ "updated_at": "2026-11-28T01:20:48.430Z"
 };
