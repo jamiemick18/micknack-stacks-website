@@ -4,22 +4,6 @@
 window.MICKNACK_FAVORITES = {
  "events": [
   {
-   "id": "4601338080",
-   "title": "Hot Mess Pink  Corundum Stone Ear Chain | 18K Gold PVD Earring Connector | Hot Pink Marquise Dangle | Dainty Cartilage Chain Jewelry",
-   "image": "https://i.etsystatic.com/67609393/r/il/d0159d/8773871911/il_fullxfull.8773871911_5ixs.jpg",
-   "gained": 1,
-   "total": 1,
-   "at": "2026-10-29T19:51:07.524Z"
-  },
-  {
-   "id": "4601246993",
-   "title": "Ruby CZ Earring Connector Chain | 40mm Dainty Gold Ear Chain | Gemstone Dangle Chain | Ear Stack Accessory",
-   "image": "https://i.etsystatic.com/67609393/r/il/052d90/8773328647/il_fullxfull.8773328647_moyd.jpg",
-   "gained": 1,
-   "total": 1,
-   "at": "2026-10-29T19:51:07.524Z"
-  },
-  {
    "id": "4599803201",
    "title": "Green With Envy G23 Titanium Labret to Ear GOLD Filled Chain | ASTM F136 Threadless Connector | 40mm Emerald Green CZ Dangle",
    "image": "https://i.etsystatic.com/67609393/r/il/9ca196/8714086152/il_fullxfull.8714086152_8ky9.jpg",
@@ -1602,7 +1586,23 @@ window.MICKNACK_FAVORITES = {
    "gained": 1,
    "total": 24,
    "at": "2026-11-28T01:20:48.430Z"
+  },
+  {
+   "id": "4566919003",
+   "title": "Triple Drip Earring Connector Chain, 18K Gold Plated Non Tarnish Ear Chain, 40mm",
+   "image": "https://i.etsystatic.com/67609393/r/il/f4861b/8463678850/il_fullxfull.8463678850_svri.jpg",
+   "gained": 1,
+   "total": 24,
+   "at": "2026-11-28T09:58:23.883Z"
+  },
+  {
+   "id": "4608450426",
+   "title": "Stack Staple - 18K Gold Plated Huggie Earrings Pair | Clear Marquise CZ Dangles | Everyday Ear Stack Earrings | Dainty Stacking Jewelry",
+   "image": "https://i.etsystatic.com/67609393/r/il/124e06/8834008575/il_fullxfull.8834008575_1z3i.jpg",
+   "gained": 1,
+   "total": 7,
+   "at": "2026-11-28T09:58:23.883Z"
   }
  ],
- "updated_at": "2026-11-28T01:20:48.430Z"
+ "updated_at": "2026-11-28T09:58:23.883Z"
 };
